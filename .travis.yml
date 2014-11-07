@@ -1,9 +1,11 @@
 language: ruby
 
+install: bundle install --without development --without production --deployment --jobs=3 --retry=3
 addons:
   postgresql: "9.3"
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
+  - cp config/application.yml.travis config/application.yml
 
 script: CODECLIMATE_REPO_TOKEN=a54bff63ca06db29496c808d7f1cb351ac1e013dcfdc5e737c2a8f1da6574c6b bundle exec rake

@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+
 Style/LineLength:
   Description: 'Limit lines to 130 characters.'
   Max: 130

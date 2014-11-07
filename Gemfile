@@ -42,8 +42,10 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'guard-livereload'
 
+  # Test gems
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'database_cleaner', '~> 1.3.0'
   gem 'capybara', '~> 2.4.4'
   gem 'launchy'
   gem 'guard-rspec'

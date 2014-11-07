@@ -1,0 +1,2 @@
+# Copy this file into application.yml and set env variables as necessary.
+DEVISE_SECRET_KEY: a97e4eb39c26abb99a9756351156bcfbb916916f9ca7fcc0994b8cbcb24390310e78806e29c052fd1f77ed4c1a6d0285b0440563242ff417acc9fea1e2b7e332

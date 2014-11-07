@@ -24,6 +24,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'slim-rails', '~> 2.1.5'
 gem 'autoprefixer-rails', '~> 3.1.2'
 
+gem 'bourbon'
+gem 'neat'
+
 # Error logging - requires setup with service
 gem 'rollbar'
 

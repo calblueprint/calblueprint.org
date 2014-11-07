@@ -1,11 +1,12 @@
 AllCops:
   Exclude:
-    - db/schema.rb
+    - app/views/**
+    - app/helpers/ApplicationHelper
     - bin/*
     - config/initializers/*
-    - Guardfile
-    - app/helpers/ApplicationHelper
+    - db/schema.rb
     - spec/spec_helper.rb
+    - Guardfile
 
 Metrics/LineLength:
   Description: 'Limit lines to 110 characters.'

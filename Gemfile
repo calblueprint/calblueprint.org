@@ -26,6 +26,7 @@ gem 'autoprefixer-rails', '~> 3.1.2'
 
 gem 'bourbon'
 gem 'neat'
+gem 'bitters'
 
 # Error logging - requires setup with service
 gem 'rollbar'

@@ -45,6 +45,10 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bitters (0.10.1)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -306,6 +310,7 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
+  bitters
   bourbon
   capybara (~> 2.4.4)
   codeclimate-test-reporter

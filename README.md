@@ -2,7 +2,7 @@ Rails Base App
 ====
 
 A starter app for development using Ruby on Rails. It comes with gems that a
-widely used across most apps and many handy development gems.
+widely used across most apps and many handy development and test gems.
 
 Ruby version: 2.1.4 <br>
 Rails version: 4.1.7
@@ -42,9 +42,33 @@ change the settings for the database names and your postgres credentials.
 5. Copy over ```config/application.yml.sample``` into ```config/application.yml```
 and add any environment variables as necessary (figaro loads them for you).
 
-6. Run ```rake db:create``` and ```rake db:migrate```.
+6. In ```config/application.rb```, change the line
 
-7. Fire up the server with ```rails s``` and see the app working!
+        module RailsBaseApp
+
+    to
+
+        module <your app name>
+
+    In ```/config/initializers/session_store.rb```, change the key name to your
+    app name.
+
+7. Run ```rake db:create``` and ```rake db:migrate```.
+
+## Developing
+Have one terminal tab open for each of:
+
+- ```rails s```
+- ```guard```
+- ```bash```
+
+Happy developing!
+
+## Deploying
+Deploying to Heroku is the same as any other application. However, since we have
+figaro, to set your environment variables on Heroku you can just run
+
+    figaro heroku:set -e production
 
 ## Contributing
 

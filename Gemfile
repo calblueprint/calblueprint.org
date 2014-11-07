@@ -59,4 +59,3 @@ group :production do
   gem 'rails_12factor'
   gem 'heroku-deflater'
 end
-

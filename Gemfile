@@ -15,7 +15,6 @@ gem 'devise', '~> 3.4.1'
 gem 'simple_form', '~> 3.0.2'
 gem 'gon', '~> 5.2.3'
 gem 'kaminari', '~> 0.16.1'
-gem 'newrelic_rpm'
 
 # Frontend
 gem 'sass-rails', '~> 4.0.3'
@@ -24,6 +23,10 @@ gem 'jquery-rails', '~> 3.1.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'slim-rails', '~> 2.1.5'
 gem 'autoprefixer-rails', '~> 3.1.2'
+
+# Analytics and error logging - requires setup with service
+gem 'rollbar'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'annotate'

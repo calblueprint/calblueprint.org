@@ -24,9 +24,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'slim-rails', '~> 2.1.5'
 gem 'autoprefixer-rails', '~> 3.1.2'
 
-# Analytics and error logging - requires setup with service
+# Error logging - requires setup with service
 gem 'rollbar'
-gem 'newrelic_rpm'
 
 group :development do
   gem 'annotate'
@@ -60,4 +59,7 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'heroku-deflater'
+
+  # Analytics - requires setup
+  gem 'newrelic_rpm'
 end

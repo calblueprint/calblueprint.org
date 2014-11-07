@@ -42,7 +42,7 @@ group :development, :test do
   gem 'guard-livereload'
 
   gem 'rspec-rails', '~> 3.1.0'
-  gem 'factory_girl_rails'. '~> 4.5.0'
+  gem 'factory_girl_rails', '~> 4.5.0'
   gem 'capybara', '~> 2.4.4'
   gem 'launchy'
   gem 'guard-rspec'

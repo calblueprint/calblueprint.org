@@ -54,6 +54,7 @@ and add any environment variables as necessary (figaro loads them for you).
     app name.
 
 7. Run ```rake db:create``` and ```rake db:migrate```.
+8. Run ```rspec``` to make sure that rspec works.
 
 ## Developing
 Have one terminal tab open for each of:

@@ -113,6 +113,9 @@ GEM
     guard-rspec (4.3.1)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
+    guard-rubocop (1.2.0)
+      guard (~> 2.0)
+      rubocop (~> 0.20)
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
@@ -299,6 +302,7 @@ DEPENDENCIES
   gon (~> 5.2.3)
   guard-livereload
   guard-rspec
+  guard-rubocop
   heroku-deflater
   jbuilder (~> 2.0)
   jquery-rails (~> 3.1.2)

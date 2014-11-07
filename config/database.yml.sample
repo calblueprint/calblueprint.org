@@ -1,0 +1,18 @@
+# Change the development/test database, username, and password as necessary
+# and then copy the file into database.yml
+
+postgres_defaults: &postgres_defaults
+  adapter:   postgresql
+  encoding:  utf8
+  username:  <your username>
+  password:  <your password>
+  pool:      5
+  timeout:   5000
+
+development:
+  <<: *postgres_defaults
+  database: <your app name>_development
+
+test:
+  <<: *postgres_defaults
+  database: <your app name>_test

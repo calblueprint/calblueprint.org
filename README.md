@@ -1,21 +1,21 @@
 Rails Base App
 ====
 
-A starter app for development using Ruby on Rails. It comes with gems that a
+A starter app for development using Ruby on Rails. It comes with gems that are
 widely used across most apps and many handy development and test gems.
 
-Ruby version: 2.1.4 <br>
-Rails version: 4.1.7
+Ruby version: ```2.1.4``` <br>
+Rails version: ```4.1.7```
 
 Core gems:
 
-- thin server
-- pg for database
-- figaro for env config on development/Heroku
-- devise for authentication
-- simple_form for forms
-- gon for javascript variables
-- kaminari for pagination
+- ```thin``` for server
+- ```pg``` for database
+- ```figaro``` for env config on development/Heroku
+- ```devise``` for authentication
+- ```simple_form``` for forms
+- ```gon``` for javascript variables
+- ```kaminari``` for pagination
 - SASS, Coffeescript, Slim, and autoprefixer for frontend
 
 

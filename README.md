@@ -70,6 +70,16 @@ figaro, to set your environment variables on Heroku you can just run
 
     figaro heroku:set -e production
 
+The base app also comes with ```rollbar```, which is an error logging service
+for Rails. [After setting it up](https://rollbar.com/), you can fill in the
+tokens in your ```config/application.yml``` file.
+
+The New Relic gem is also installed, and you can follow the instructions after
+starting the service on Heroku.
+
+To use Google Analytics, edit the keys in ```config/application.yml```
+once it's set up.
+
 ## Contributing
 
 Feel free to open issues or send pull requests with improvements. Thanks in

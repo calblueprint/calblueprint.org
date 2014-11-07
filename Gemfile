@@ -32,6 +32,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'rubocop'
 end
 

@@ -1,7 +1,11 @@
 require "rails_helper"
 
-RSpec.describe "The app works..." do
-  it "or at least 1 == 1" do
-    expect(1).to eq(1)
+RSpec.describe "The app works" do
+  describe "if the home page" do
+    before { visit root_path }
+
+    it "works" do
+      expect(page).to have_content "Hello world!"
+    end
   end
 end

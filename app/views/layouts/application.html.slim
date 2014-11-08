@@ -21,6 +21,7 @@ html
     = csrf_meta_tags
   body
     .container
-      = yield
+      .content
+        = yield
 
     = render 'shared/ga_boiler'

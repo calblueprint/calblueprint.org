@@ -1,2 +1,11 @@
 .container
   +outer-container
+
+.content
+  +span-columns(12)
+  padding: 40px 20px
+
+  +media($medium-screen)
+    +span-columns(8)
+    +shift(2)
+

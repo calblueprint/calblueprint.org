@@ -1,6 +1,6 @@
 AllCops:
   Exclude:
-    - app/views/**
+    - app/views/**/*
     - app/helpers/ApplicationHelper
     - bin/*
     - config/initializers/*

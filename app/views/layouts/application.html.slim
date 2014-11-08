@@ -22,6 +22,8 @@ html
   body
     .container
       .content
+        = render 'shared/flash'
+
         = yield
 
     = render 'shared/ga_boiler'

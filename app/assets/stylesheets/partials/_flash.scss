@@ -1,0 +1,33 @@
+$flash-red: #fbe3e4;
+$flash-yellow: #fff6bf;
+$flash-green: #e6efc2;
+
+%flash-base {
+  display: block;
+  font-weight: bold;
+  margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 2;
+}
+
+// No maps in this version of SASS :(
+$flashes: alert $flash-yellow, error $flash-red, notice lighten($base-accent-color, 40), success $flash-green;
+
+@each $flash-pair in $flashes {
+  $flash: nth($flash-pair, 1);
+  $color: nth($flash-pair, 2);
+
+  .flash-#{$flash} {
+    @extend %flash-base;
+    background: $color;
+    color: darken($color, 60);
+
+    a {
+      color: darken($color, 70);
+      border-bottom: 1px solid transparentize(darken($color, 70), .7);
+
+      &:hover {
+        color: darken($color, 90);
+      }
+    }
+  }
+}

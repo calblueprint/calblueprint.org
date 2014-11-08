@@ -1,0 +1,13 @@
+.container {
+  @include outer-container;
+}
+
+.content {
+  @include span-columns(12);
+  padding: $base-spacing $base-spacing / 2;
+
+  @include media($medium-screen) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}

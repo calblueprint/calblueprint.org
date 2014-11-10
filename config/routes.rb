@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#home'
+
+  devise_for :users
+
+  namespace :admin do
+    resource :dashboard, only: [:show], controller: 'dashboard'
+  end
 end

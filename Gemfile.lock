@@ -57,6 +57,7 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    cancancan (1.9.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -317,6 +318,7 @@ DEPENDENCIES
   binding_of_caller
   bitters
   bourbon
+  cancancan (~> 1.9.2)
   capybara (~> 2.4.4)
   codeclimate-test-reporter
   coffee-rails (~> 4.0.0)

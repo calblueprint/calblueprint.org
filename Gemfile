@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.1'
 gem 'devise_invitable', '~> 1.4.0'
+gem 'cancancan', '~> 1.9.2'
 gem 'simple_form', '~> 3.0.2'
 gem 'gon', '~> 5.2.3'
 gem 'kaminari', '~> 0.16.1'

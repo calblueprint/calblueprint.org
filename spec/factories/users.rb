@@ -22,7 +22,17 @@
 
 FactoryGirl.define do
   factory :user do
+    first_name "Sam"
+    last_name "Lau"
+    sequence(:email) { |n| "sam#{n}@sam.com" }
+    password "password"
 
+    factory :member do
+      role User.roles[:member]
+    end
+
+    factory :admin do
+      role User.roles[:admin]
+    end
   end
-
 end

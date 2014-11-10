@@ -1,12 +1,12 @@
 module Admin
   class BaseController < ApplicationController
     before_action :authenticate_user!
-    before_filter :verify_logged_in_admin
+    before_action :authorize_admin!
 
     private
 
-    def verify_logged_in_admin
-      deny_access_if! !current_user.admin?
+    def authorize_admin!
+      authorize! :manage, :admin_dashboard
     end
   end
 end

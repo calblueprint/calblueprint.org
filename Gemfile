@@ -51,6 +51,7 @@ group :development, :test do
 
   # Test gems
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'database_cleaner', '~> 1.3.0'
   gem 'capybara', '~> 2.4.4'

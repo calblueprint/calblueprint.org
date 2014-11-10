@@ -16,6 +16,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Handle CanCan access denied
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, flash: { error: exception.message }
+  end
+
   private
 
   def configure_permitted_parameters
@@ -23,8 +28,8 @@ class ApplicationController < ActionController::Base
   end
 
   # Helper for authorization
-  def deny_access_if!(condition, message = nil)
-    message ||= t('access_denied')
-    redirect_to root_path, flash: { error: message } if condition
-  end
+  # def deny_access_if!(condition, message = nil)
+  #   message ||= t('access_denied')
+  #   fail CanCan::AccessDenied.new(message) if condition
+  # end
 end

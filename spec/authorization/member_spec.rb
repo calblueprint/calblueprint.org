@@ -9,7 +9,7 @@ RSpec.describe "A member", type: :feature do
   describe "cannot see the" do
     describe "admin dashboard page" do
       before { visit admin_dashboard_path }
-      it { should have_content t("access_denied") }
+      it { should have_content t("unauthorized.default") }
     end
   end
 end

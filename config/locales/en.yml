@@ -23,4 +23,5 @@ en:
   pages:
     home:
       title: "Hello world"
-  access_denied: "You aren't allowed to view that page!"
+  unauthorized:
+    default: "You aren't allowed to view that page."

@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  pages:
+    home:
+      title: "Hello world"
   access_denied: "You aren't allowed to view that page!"

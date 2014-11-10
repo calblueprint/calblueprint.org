@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
 
   def deny_access_if!(condition, message = nil)
     message ||= t('access_denied')
-    redirect_to root_path, error: message if condition
+    redirect_to root_path, flash: { error: message } if condition
   end
 end

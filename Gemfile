@@ -26,6 +26,7 @@ gem 'slim-rails', '~> 2.1.5'
 gem 'autoprefixer-rails', '~> 3.1.2'
 
 gem 'flutie'
+gem 'title'
 
 gem 'bourbon'
 gem 'neat'

@@ -5,7 +5,7 @@ RSpec.describe "The app works" do
     before { visit root_path }
 
     it "works" do
-      expect(page).to have_content t("pages.home.title")
+      expect(page).to have_content t("pages.home.headline")
     end
   end
 end

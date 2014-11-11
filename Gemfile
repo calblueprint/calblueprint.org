@@ -9,8 +9,6 @@ gem 'figaro', '~> 1.0.0'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.1'
 gem 'devise_invitable', '~> 1.4.0'
 gem 'cancancan', '~> 1.9.2'
@@ -25,6 +23,8 @@ gem 'jquery-rails', '~> 3.1.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'slim-rails', '~> 2.1.5'
 gem 'autoprefixer-rails', '~> 3.1.2'
+
+gem 'flutie'
 
 gem 'bourbon'
 gem 'neat'

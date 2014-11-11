@@ -13,10 +13,10 @@
  *= require_self
  */
 
-@import "vendor/bourbon/bourbon";
 @import "vendor/normalize";
+@import "bourbon";
 @import "vendor/base/grid-settings";
-@import "vendor/neat/neat";
+@import "neat";
 @import "vendor/base/base";
 
 @import "partials/flash";

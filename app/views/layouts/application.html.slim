@@ -7,11 +7,7 @@ html
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="Build technology that improves the world. Cal Blueprint pairs motivated teams with local non-profits to create solutions for social good, pro bono." name="description"
 
-    meta property="og:url" content="http://www.calblueprint.org"
-    meta property="og:title" content="Cal Blueprint"
-    meta property="og:type" content="website"
-    meta property="og:description" content="Build technology that improves the world. Cal Blueprint pairs motivated teams with local non-profits to create solutions for social good, pro bono."
-    meta property="og:image" content="https://raw.githubusercontent.com/calblueprint/calblueprint.org.old/master/app/assets/images/banner-facebook.png"
+    = render "fb_meta_tags"
 
     = include_gon
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true

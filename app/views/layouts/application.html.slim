@@ -24,8 +24,8 @@ html
         .header
           = link_to "Sign in", new_user_session_path
           = link_to "Sign out", destroy_user_session_path, method: :delete
-        = render "shared/flash"
+        = render "flash"
 
         = yield
 
-    = render "shared/ga_boiler"
+    = render "ga_boiler"

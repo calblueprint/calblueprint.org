@@ -43,6 +43,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'rubocop'
   gem 'guard-rubocop'
+  gem 'i18n-tasks'
 end
 
 group :development, :test do

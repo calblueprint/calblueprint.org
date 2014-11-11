@@ -2,17 +2,17 @@
 # and then copy the file into database.yml
 
 postgres_defaults: &postgres_defaults
+
+
+development: &default
   adapter:   postgresql
   encoding:  utf8
   username:  <your username>
   password:  <your password>
-  pool:      5
+  pool:      2
   timeout:   5000
-
-development:
-  <<: *postgres_defaults
   database: <your app name>_development
 
 test:
-  <<: *postgres_defaults
+  <<: *default
   database: <your app name>_test

@@ -15,6 +15,7 @@ gem 'cancancan', '~> 1.9.2'
 gem 'simple_form', '~> 3.0.2'
 gem 'gon', '~> 5.2.3'
 gem 'kaminari', '~> 0.16.1'
+gem 'recipient_interceptor'
 
 # Frontend
 gem 'sass-rails', '~> 4.0.3'
@@ -43,6 +44,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'rubocop'
   gem 'guard-rubocop'
+  gem 'guard-livereload'
   gem 'i18n-tasks'
 end
 
@@ -50,12 +52,13 @@ group :development, :test do
   gem 'awesome_print'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'guard-livereload'
 
-  # Test gems
   gem 'rspec-rails', '~> 3.1.0'
-  gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails', '~> 4.5.0'
+end
+
+group :test do
+  gem 'shoulda-matchers', require: false
   gem 'database_cleaner', '~> 1.3.0'
   gem 'capybara', '~> 2.4.4'
   gem 'launchy'
@@ -64,9 +67,8 @@ group :development, :test do
   gem "codeclimate-test-reporter", require: nil
 end
 
-group :production do
+group :staging, :production do
   gem 'rails_12factor'
-  gem 'heroku-deflater'
 
   # Analytics - requires setup
   gem 'newrelic_rpm'

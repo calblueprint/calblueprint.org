@@ -135,8 +135,6 @@ GEM
     guard-rubocop (1.2.0)
       guard (~> 2.0)
       rubocop (~> 0.20)
-    heroku-deflater (0.5.3)
-      rack (>= 1.4.5)
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
@@ -223,6 +221,8 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    recipient_interceptor (0.1.2)
+      mail
     request_store (1.1.0)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
@@ -345,7 +345,6 @@ DEPENDENCIES
   guard-livereload
   guard-rspec
   guard-rubocop
-  heroku-deflater
   i18n-tasks
   jquery-rails (~> 3.1.2)
   kaminari (~> 0.16.1)
@@ -358,6 +357,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.1.7)
   rails_12factor
+  recipient_interceptor
   rollbar
   rspec-rails (~> 3.1.0)
   rubocop

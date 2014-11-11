@@ -5,18 +5,16 @@ ruby '2.1.4'
 gem 'rails', '4.1.7'
 gem 'thin', '~> 1.6.3'
 gem 'pg', '~> 0.17.1'
-gem 'figaro', '~> 1.0.0'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.1'
 gem 'devise_invitable', '~> 1.4.0'
 gem 'cancancan', '~> 1.9.2'
 gem 'simple_form', '~> 3.0.2'
 gem 'gon', '~> 5.2.3'
 gem 'kaminari', '~> 0.16.1'
+gem 'recipient_interceptor'
 
 # Frontend
 gem 'sass-rails', '~> 4.0.3'
@@ -25,6 +23,9 @@ gem 'jquery-rails', '~> 3.1.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'slim-rails', '~> 2.1.5'
 gem 'autoprefixer-rails', '~> 3.1.2'
+
+gem 'flutie'
+gem 'title'
 
 gem 'bourbon'
 gem 'neat'
@@ -43,18 +44,22 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'rubocop'
   gem 'guard-rubocop'
+  gem 'guard-livereload'
 end
 
 group :development, :test do
   gem 'awesome_print'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'guard-livereload'
+  gem 'figaro', '~> 1.0.0'
 
-  # Test gems
   gem 'rspec-rails', '~> 3.1.0'
-  gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'i18n-tasks'
+end
+
+group :test do
+  gem 'shoulda-matchers', require: false
   gem 'database_cleaner', '~> 1.3.0'
   gem 'capybara', '~> 2.4.4'
   gem 'launchy'
@@ -63,9 +68,8 @@ group :development, :test do
   gem "codeclimate-test-reporter", require: nil
 end
 
-group :production do
+group :staging, :production do
   gem 'rails_12factor'
-  gem 'heroku-deflater'
 
   # Analytics - requires setup
   gem 'newrelic_rpm'

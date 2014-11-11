@@ -3,7 +3,7 @@ html
   head
     meta charset="utf-8"
     meta content="IE=edge" http-equiv="X-UA-Compatible"
-    title Cal Blueprint
+    title= title
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="Build technology that improves the world. Cal Blueprint pairs motivated teams with local non-profits to create solutions for social good, pro bono." name="description"
 
@@ -18,14 +18,14 @@ html
     / = javascript_include_tag "vendor/modernizr", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-  body
+  body class="#{body_class}"
     .container
       .content
         .header
-          = link_to 'Sign in', new_user_session_path
-          = link_to 'Sign out', destroy_user_session_path, method: :delete
-        = render 'shared/flash'
+          = link_to "Sign in", new_user_session_path
+          = link_to "Sign out", destroy_user_session_path, method: :delete
+        = render "flash"
 
         = yield
 
-    = render 'shared/ga_boiler'
+    = render "ga_boiler"

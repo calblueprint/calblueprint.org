@@ -17,9 +17,7 @@ Rails.application.configure do
   # ActionMailer config
   config.action_mailer.default_url_options = { host: "calblueprint.org" }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default charset: "utf-8"
+  config.action_mailer.smtp_settings = SMTP_SETTINGS
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -28,6 +26,9 @@ Rails.application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
+
+  # Enable deflate / gzip compression of controller-generated responses
+  config.middleware.use Rack::Deflater
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier

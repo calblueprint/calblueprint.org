@@ -1,9 +1,6 @@
 # Change the development/test database, username, and password as necessary
 # and then copy the file into database.yml
 
-postgres_defaults: &postgres_defaults
-
-
 development: &default
   adapter:   postgresql
   encoding:  utf8

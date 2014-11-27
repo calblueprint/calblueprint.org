@@ -6,6 +6,10 @@ html
     title= title
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="Build technology that improves the world. Cal Blueprint pairs motivated teams with local non-profits to create solutions for social good, pro bono." name="description"
+    
+    <!-- Vanilla HTML. Sorry. -Kevin -->
+    <link rel="icon" type="image/png" href="http://goo.gl/CWz0qC">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     = render "fb_meta_tags"
 
@@ -17,9 +21,14 @@ html
   body class="#{body_class}"
     .container
       .content
-        .header
-          = link_to "Sign in", new_user_session_path
-          = link_to "Sign out", destroy_user_session_path, method: :delete
+        <!-- Vanilla HTML. Sorry. -Kevin -->
+        <div class="header">
+          <a class="header-tab header-button" href="#"> Apply </a>
+          <a class="header-tab" href="#"> Contact </a>
+          <a class="header-tab" href="#"> Blog </a>
+          <a class="header-tab" href="#"> Projects </a>
+          <a class="header-tab" href="#"> About </a>
+        </div>
         = render "flash"
 
         = yield

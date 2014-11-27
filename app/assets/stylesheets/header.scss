@@ -1,0 +1,32 @@
+.header {
+  height: 100%;
+  overflow: auto;
+}
+
+.header-tab {
+  float: right;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 700;
+  color: $medium-gray;
+}
+
+.header-tab:hover {
+  color: $dark-gray;
+}
+
+.header-button {
+  padding: 10px 25px;
+  border-radius: 6px;
+  background: $blue;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.header-button:hover {
+  color: #fff;
+  cursor: pointer;
+  background: darken($blue, 20);
+}

@@ -10,10 +10,10 @@
 @import "bourbon";
 @import "neat";
 @import "vendor/base/base";
-
 @import "vendor/grid";
-@import "partials/flash";
 
-@import "general";
+@import "shared/general";
+@import "shared/flash";
+@import "shared/header";
+
 @import "home";
-@import "header";

@@ -36,7 +36,6 @@ gem 'rollbar'
 
 group :development do
   gem 'annotate'
-  gem 'ffaker'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
@@ -55,6 +54,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'i18n-tasks'
+  gem 'ffaker'
 end
 
 group :test do

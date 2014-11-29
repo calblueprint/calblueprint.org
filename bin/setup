@@ -1,0 +1,46 @@
+#!/usr/bin/env sh
+
+# Set up Rails app. Run this script immediately after cloning the codebase.
+
+# Set up Ruby dependencies via Bundler
+bundle --version &> /dev/null || gem install bundler --no-document
+bundle install
+
+failed=false
+
+# Setup application.yml
+echo "\nChecking for config/application.yml"
+tput setaf 2
+if [ -f config/application.yml ]; then
+  echo "application.yml exists, no changes made"
+else
+  echo "Copying over application.yml.sample into application.yml"
+  cp config/application.yml.sample config/application.yml
+fi
+tput sgr0
+
+# Setup database
+echo "\nRunning rake db:create ; rake db:migrate"
+if ! [ -f config/database.yml ]; then
+  failed=1
+  tput setaf 1
+  echo "\nconfig/database.yml not set up!"
+  echo "Copy over config/database.yml.sample and change your username/password"
+  tput sgr0
+else
+  rake db:create
+  rake db:migrate
+  tput setaf 2; echo "Database set up!"; tput sgr0
+fi
+
+if $failed; then
+  tput setaf 1
+  echo "\nA command failed! Make the changes suggested and run this script again."
+  tput sgr0
+else
+  tput setaf 2
+  echo "\nDone! Make sure to have guard running :)"
+  echo "Sam recommends installing the LiveReload chrome extension to make developing"
+  echo "awesome (it only works when guard is running)."
+  tput sgr0
+fi

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20141129080303) do
     t.string   "name"
     t.string   "email"
     t.string   "subject"
-    t.string   "message"
+    t.text     "message"
   end
 
   create_table "users", force: true do |t|

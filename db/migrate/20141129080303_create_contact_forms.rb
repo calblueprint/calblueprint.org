@@ -6,7 +6,7 @@ class CreateContactForms < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :subject
-      t.string :message
+      t.text :message
     end
   end
 end

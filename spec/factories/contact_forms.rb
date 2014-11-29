@@ -8,7 +8,7 @@
 #  name       :string(255)
 #  email      :string(255)
 #  subject    :string(255)
-#  message    :string(255)
+#  message    :text
 #
 
 FactoryGirl.define do

@@ -28,5 +28,5 @@
 .header-button:hover {
   color: #fff;
   cursor: pointer;
-  background: darken($blue, 20);
+  background: $hover-button-color;
 }

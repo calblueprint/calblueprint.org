@@ -4,7 +4,7 @@ RSpec.describe "A visitor", type: :feature do
   subject { page }
 
   describe "can see the" do
-    pending "home page" do
+    describe "home page" do
       before { visit root_path }
       it { should have_content t("pages.home.headline") }
     end

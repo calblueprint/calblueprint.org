@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title><%= title %></title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Build technology that improves the world. Cal Blueprint pairs motivated teams with local non-profits to create solutions for social good, pro bono." name="description">
+
+    <!-- Temp favicon -->
+    <link rel="icon" type="image/png" href="http://goo.gl/CWz0qC">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+
+    <%= render "fb_meta_tags" %>
+
+    <%= include_gon %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%# javascript_include_tag "vendor/modernizr", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class=<%= body_class %>>
+    <div class="container">
+      <div class="content">
+        <div class="header">
+          <a class="header-tab header-button" href="#"> Apply </a>
+          <a class="header-tab" href="#"> Contact </a>
+          <a class="header-tab" href="#"> Blog </a>
+          <a class="header-tab" href="#"> Projects </a>
+          <a class="header-tab" href="#"> About </a>
+        </div>
+
+        <%= render "flash" %>
+
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render "ga_boiler" %>
+  </body>
+</html>

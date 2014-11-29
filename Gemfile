@@ -5,6 +5,7 @@ ruby '2.1.4'
 gem 'rails', '4.1.7'
 gem 'thin', '~> 1.6.3'
 gem 'pg', '~> 0.17.1'
+gem 'figaro', '~> 1.0.0'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
@@ -50,7 +51,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'figaro', '~> 1.0.0'
 
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.5.0'

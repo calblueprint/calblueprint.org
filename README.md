@@ -6,7 +6,7 @@ The Blueprint Website
 
 ## Contributing
 
-Undergoing active development! Contact Sam if you'd like to work on it.
+Run ```bin/setup``` from the project root to get everything set up.
 
 ## Cal Blueprint
 ![bp](http://bptech.berkeley.edu/assets/logo-full-large-d6419503b443e360bc6c404a16417583.png "BP Banner")

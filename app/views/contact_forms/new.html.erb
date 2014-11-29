@@ -1,0 +1,29 @@
+<div class="banner">
+  <div class="banner-text">
+    <h1 class="h0">Contact Us</h1>
+    <p class="subtitle">
+      To get the gears turning.
+    </p>
+  </div>
+</div>
+
+<%= simple_form_for @contact_form do |f| %>
+  <div class="row">
+    <div class="medium-5 medium-offset-1 columns">
+      <%= f.input :subject %>
+      <div class="spacer-small"></div>
+      <%= f.input :name %>
+      <div class="spacer-small"></div>
+      <%= f.input :email %>
+      <div class="spacer-small"></div>
+    </div>
+    <div class="medium-5 end columns">
+      <%= f.input :message %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="contact_form_submit">
+      <%= f.button :submit, 'Submit!' %>
+    </div>
+  </div>
+<% end %>

@@ -16,4 +16,6 @@ class ContactForm < ActiveRecord::Base
   validates :email, presence: true, email: true
   validates :subject, presence: true, length: { maximum: 80 }
   validates :message, presence: true
+
+  # TODO: ContactForm should email team on creation.
 end

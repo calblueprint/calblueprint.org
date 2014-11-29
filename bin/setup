@@ -20,17 +20,21 @@ fi
 tput sgr0
 
 # Setup database
-echo "\nRunning rake db:create ; rake db:migrate"
+echo "\nSetting up database"
 if ! [ -f config/database.yml ]; then
-  failed=1
+  failed=true
   tput setaf 1
-  echo "\nconfig/database.yml not set up!"
+  echo "config/database.yml doesn't exist!"
   echo "Copy over config/database.yml.sample and change your username/password"
   tput sgr0
 else
-  rake db:create
-  rake db:migrate
-  tput setaf 2; echo "Database set up!"; tput sgr0
+  tput setaf 2
+  echo "Running rake db:reset"
+  tput sgr0
+  rake db:reset
+  tput setaf 2
+  echo "Database set up!"
+  tput sgr0
 fi
 
 if $failed; then

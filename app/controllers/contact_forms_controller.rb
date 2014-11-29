@@ -6,8 +6,8 @@ class ContactFormsController < ApplicationController
   def create
     @contact_form = ContactForm.new contact_form_params
     if @contact_form.save
-      flash[:success] = t 'contact_forms.create.success'
-      redirect_to root_path
+      SendContactFormEmail.execute @contact_form
+      redirect_to root_path, flash: { success: t("contact_forms.create.success") }
     else
       render :new
     end

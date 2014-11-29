@@ -13,7 +13,9 @@
 
 FactoryGirl.define do
   factory :contact_form do
-    
+    name Faker::Name.name
+    email Faker::Internet.email
+    subject Faker::Lorem.word
+    message Faker::Lorem.paragraph
   end
-
 end

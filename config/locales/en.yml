@@ -20,15 +20,21 @@ en:
     home:
       headline: Jeremy Shu-How Lin
 
+  contact_forms:
+    create:
+      success: Message sent! We'll get back to you shortly.
+
   titles:
     application: Cal Blueprint
     pages:
-      home: Home - Cal Blueprint
+      home: Home | Cal Blueprint
+    contact_forms:
+      default: Contact Us | Cal Blueprint
     devise:
       sessions:
-        new: Log In
+        new: Log In | Cal Blueprint
       passwords:
-        new: Forgot Password
+        new: Forgot Password | Cal Blueprint
 
   unauthorized:
     default: You aren't allowed to view that page.

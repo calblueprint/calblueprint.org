@@ -17,6 +17,7 @@ module CalBlueprintOrgApp
       generate.stylesheets false
       generate.test_framework :rspec
       generate.view_specs false
+      generate.controller_specs false
     end
 
     # Raise error when any param isn't permitted

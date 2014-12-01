@@ -6,6 +6,7 @@ gem 'rails', '4.1.7'
 gem 'thin', '~> 1.6.3'
 gem 'pg', '~> 0.17.1'
 gem 'figaro', '~> 1.0.0'
+gem 'sucker_punch', '~> 1.3.1'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'

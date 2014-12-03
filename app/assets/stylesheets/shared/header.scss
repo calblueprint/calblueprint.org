@@ -30,3 +30,23 @@
   cursor: pointer;
   background: $hover-button-color;
 }
+
+.header-logo {
+  float: left;
+  display: block;
+  margin: 9px;
+  height: 46px;
+  width: 46px;
+  background: url(asset_path("paw.png"));
+  background-size: cover;
+  webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header-logo:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}

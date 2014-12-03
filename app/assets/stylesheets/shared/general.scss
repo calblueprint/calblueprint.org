@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+*:focus {
+  outline: none;
+}
+
 .banner {
   width: 100%;
 }
@@ -42,20 +46,21 @@
 }
 
 .button {
-  display: inline-block;
-  margin: auto;
-  padding: 15px 25px;
-  text-decoration: none;
-  font-size: 1.1em;
-  border-radius: 6px;
-  font-weight: 700;
-  background: $blue;
-  color: #fff;
-  border: none;
+  display: inline-block !important;
+  margin: auto !important;
+  padding: 15px 25px !important;
+  text-decoration: none !important;
+  font-size: 1.1em !important;
+  line-height: 1.5 !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  background: $blue !important;
+  color: #fff !important;
+  border: none !important;
 }
 
 .button:hover {
   color: #fff;
   cursor: pointer;
-  background: darken($blue, 20);
+  background: darken($blue, 20) !important;
 }

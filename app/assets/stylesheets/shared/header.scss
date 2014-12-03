@@ -30,3 +30,13 @@
   cursor: pointer;
   background: $hover-button-color;
 }
+
+.header-logo {
+  float: left;
+  display: block;
+  margin: 9px;
+  height: 46px;
+  width: 46px;
+  background: url(asset_path("paw.png"));
+  background-size: cover;
+}

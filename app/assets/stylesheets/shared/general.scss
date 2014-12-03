@@ -16,7 +16,12 @@ GENERAL COMMENTS:
 2) Text in headlines and paragraphs should be mostly centered by using the center class when neccesary. When writing the actual text, try to write it so that the middle part extends further than the top and bottoms, like a barrel.
 3) Outside of banners, of which you should only be using one a page at most, images should have padding between each other.
 4) 
-5) For now let's stay away from JS and CSS transitions (except when used for something we've specifically designated for animation). We'll add in effects later but it's important to have a solid layout first. */
+5) For now let's stay away from JS and CSS transitions (except when used for something we've specifically designated for animation). We'll add in effects later but it's important to have a solid layout first.
+
+GRID SYSTEM:
+Grid: http://foundation.zurb.com/docs/components/grid.html
+Block Grid: http://foundation.zurb.com/docs/components/block_grid.html (use for arranging multiple items evenly quickly)
+*/
 
 /* Resets default margin and padding */
 * {

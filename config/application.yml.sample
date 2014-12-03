@@ -11,21 +11,21 @@ SMTP_USERNAME: <user_name>
 
 # Contact Us email
 TEAM_EMAIL: <your_email_here>
-production:
-  TEAM_EMAIL: <bp_eteam_email>
 
 # Staging will send emails to this address
 EMAIL_RECIPIENTS: ~
-staging:
-  EMAIL_RECIPIENTS: <your_email_here>
 
 # Rollbar access token; change both to match your own rollbar project
-ROLLBAR_ACCESS_TOKEN: fa8ec8c5060949a6ac7016e2a80d9b6f
-production:
-  ROLLBAR_ACCESS_TOKEN: fa8ec8c5060949a6ac7016e2a80d9b6f
+ROLLBAR_ACCESS_TOKEN: <your_rollbar_api_key>
 
 # Google analytics key; update once you set it up
 # Disabled in development and test
 GA_KEY: ~
+
 production:
+  TEAM_EMAIL: <team_email>
+  ROLLBAR_ACCESS_TOKEN: <your_production_rollbar_api_key>
   GA_KEY: UA-XXXXXXX-X
+
+staging:
+  EMAIL_RECIPIENTS: <your_email>

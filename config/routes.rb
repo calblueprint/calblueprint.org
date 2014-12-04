@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  get 'about' => 'pages#about'
+  get '/about', to: 'pages#about'
+  get '/sponsors', to: 'pages#sponsors'
 
   devise_for :users, controllers: { invitations: 'users/invitations' }
 

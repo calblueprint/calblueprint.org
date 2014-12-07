@@ -20,6 +20,9 @@ en:
     home:
       headline: Jeremy Shu-How Lin
 
+    about:
+      headline: butts
+
   contact_forms:
     new:
       banner: Contact Us
@@ -31,6 +34,7 @@ en:
     application: Cal Blueprint
     pages:
       home: Home | Cal Blueprint
+      home: About | Cal Blueprint
     contact_forms:
       default: Contact Us | Cal Blueprint
     devise:

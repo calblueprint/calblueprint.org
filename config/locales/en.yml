@@ -52,7 +52,7 @@ en:
     application: Cal Blueprint
     pages:
       home: Home | Cal Blueprint
-      home: About | Cal Blueprint
+      about: About | Cal Blueprint
     contact_forms:
       default: Contact Us | Cal Blueprint
     devise:

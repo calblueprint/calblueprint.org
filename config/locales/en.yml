@@ -21,7 +21,25 @@ en:
       headline: Jeremy Shu-How Lin
 
     about:
-      headline: butts
+      headline: About Us
+      mission: Blueprint's mission is to make beautiful engineering accessible and useful for those who create communities and promote public welfare.
+      values:
+        craft:
+          title: Craft
+          description: Our projects are carefully constructed from the first contact with the nonprofit to project deployment and use in production. We are meticulous about our design, our process, and our code.
+        culture:
+          title: Culture
+          description: Bluepers work hard and play hard. When we’re not developing, we eat together, play sports together, and volunteer together. We think that life is best enjoyed with laughter, fun, and a sound foundation of friends.
+        heart:
+          title: Heart
+          description: We believe that our abilities should be used for good. Our motivation pushes us to constantly learn, work hard, and find solutions where others have not looked.
+      team:
+          title: Meet Our Team
+          description: Blueprint is made up of innovative designers, diligent hackers, and thoughtful leaders. We know that the individual might be talented but only a team has the power to take on the challenges we face as an organization.
+      sponsors:
+          title: Our Sponsors
+
+
 
   contact_forms:
     new:

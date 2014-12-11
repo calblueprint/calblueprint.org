@@ -16,8 +16,8 @@ gem 'cancancan', '~> 1.9.2'
 gem 'simple_form', '~> 3.0.2'
 gem 'gon', '~> 5.2.3'
 gem 'kaminari', '~> 0.16.1'
-gem 'email_validator'
-gem 'recipient_interceptor'
+gem 'email_validator', '~> 1.4.0'
+gem 'recipient_interceptor', '~> 0.1.2'
 
 # Frontend
 gem 'sass-rails', '~> 4.0.3'
@@ -26,12 +26,12 @@ gem 'jquery-rails', '~> 3.1.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'autoprefixer-rails', '~> 3.1.2'
 
-gem 'flutie'
-gem 'title'
+gem 'flutie', '~> 2.0.0'
+gem 'title', '~> 0.0.5'
 
-gem 'bourbon'
-gem 'neat'
-gem 'bitters'
+gem 'bourbon', '~> 3.2.3'
+gem 'neat', '~> 1.5.1'
+gem 'bitters', '~> 0.10.1'
 
 # Error logging - requires setup with service
 gem 'rollbar'

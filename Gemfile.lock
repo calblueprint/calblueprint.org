@@ -326,8 +326,8 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
-  bitters
-  bourbon
+  bitters (~> 0.10.1)
+  bourbon (~> 3.2.3)
   cancancan (~> 1.9.2)
   capybara (~> 2.4.4)
   codeclimate-test-reporter
@@ -335,11 +335,11 @@ DEPENDENCIES
   database_cleaner (~> 1.3.0)
   devise (~> 3.4.1)
   devise_invitable (~> 1.4.0)
-  email_validator
+  email_validator (~> 1.4.0)
   factory_girl_rails (~> 4.5.0)
   ffaker
   figaro (~> 1.0.0)
-  flutie
+  flutie (~> 2.0.0)
   gon (~> 5.2.3)
   guard-livereload
   guard-rspec
@@ -348,7 +348,7 @@ DEPENDENCIES
   jquery-rails (~> 3.1.2)
   kaminari (~> 0.16.1)
   launchy
-  neat
+  neat (~> 1.5.1)
   newrelic_rpm
   pg (~> 0.17.1)
   pry-byebug
@@ -356,7 +356,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.1.7)
   rails_12factor
-  recipient_interceptor
+  recipient_interceptor (~> 0.1.2)
   rollbar
   rspec-rails (~> 3.1.0)
   rubocop
@@ -367,6 +367,6 @@ DEPENDENCIES
   spring-commands-rspec
   sucker_punch (~> 1.3.1)
   thin (~> 1.6.3)
-  title
+  title (~> 0.0.5)
   turbolinks (~> 2.5.1)
   uglifier (>= 1.3.0)

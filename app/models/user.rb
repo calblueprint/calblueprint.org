@@ -26,7 +26,7 @@
 class User < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :recoverable, :rememberable, :validatable
 
-  enum role: %w(member admin)
+  enum role: %w(applicant member admin)
 
   validates :first_name, presence: true
   validates :last_name, presence: true

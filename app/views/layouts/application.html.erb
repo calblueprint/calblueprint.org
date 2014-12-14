@@ -23,14 +23,7 @@
   <body class="<%= body_class %>">
     <div class="container">
       <div class="content">
-        <div class="header">
-          <a class="header-tab header-button" href="#"> Apply </a>
-          <%= link_to "Contact", new_contact_form_path, class: "header-tab" %>
-          <a class="header-tab" href="#"> Blog </a>
-          <a class="header-tab" href="#"> Projects </a>
-          <%= link_to "About", about_path, class: "header-tab" %>
-          <%= link_to "", root_path, class: "header-logo" %>
-        </div>
+        <%= render "header" %>
 
         <%= render "flash" %>
 

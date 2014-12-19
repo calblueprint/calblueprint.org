@@ -11,6 +11,8 @@ module DeviseSettings
       admin_dashboard_path
     elsif user.member?
       root_path
+    elsif user.applicant?
+      root_path
     else
       fail 'Bad user!'
     end

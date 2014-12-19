@@ -30,6 +30,10 @@ FactoryGirl.define do
     sequence(:email) { |n| "sam#{n}@sam.com" }
     password "password"
 
+    factory :applicant do
+      role User.roles[:applicant]
+    end
+
     factory :member do
       role User.roles[:member]
     end

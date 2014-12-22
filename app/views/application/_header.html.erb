@@ -1,5 +1,5 @@
 <div class="header">
-  <a class="header-tab header-button" href="#"> Apply </a>
+  <%= link_to "Apply", apply_index_path, class: "header-tab header-button" %>
 
   <% if !current_user %>
     <%= link_to "Log in", new_user_session_path, class: "header-tab" %>

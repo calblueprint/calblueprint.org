@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :apply, only: [:index]
   scope '/apply' do
     get 'students', to: 'apply#students'
+    get 'nonprofits', to: 'apply#nonprofits'
   end
 end

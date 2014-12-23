@@ -1,3 +1,29 @@
+.panel {
+  height: 100vh;
+  text-align:center;
+  width:100%;
+}
+
+.nonprofits-bg {
+  background:
+  -webkit-linear-gradient(
+  rgba(255, 255, 255, 0.3),
+  rgba(255, 255, 255, 0.3)
+  ),
+  url(<%= image_path 'apply/nonprofits/nonprofits.jpg' %>);
+  background-size:cover;
+}
+
+.students-bg {
+  background:
+  -webkit-linear-gradient(
+  rgba(27, 117, 188, 0.3),
+  rgba(27, 117, 188, 0.3)
+  ),
+  url(<%= image_path 'apply/students/students.jpg' %>);
+  background-size:cover;
+}
+
 #left-panel, #right-panel {
     height: 100vh;
     text-align:center;
@@ -9,24 +35,10 @@
 
 #left-panel {
     float: left;
-    background:
-        -webkit-linear-gradient(
-            rgba(255, 255, 255, 0.3),
-            rgba(255, 255, 255, 0.3)
-        ),
-        url(<%= image_path 'apply/nonprofits/nonprofits.jpg' %>);
-    background-size:cover;
 }
 
 #right-panel {
     float: right;
-    background:
-        -webkit-linear-gradient(
-            rgba(27, 117, 188, 0.3),
-            rgba(27, 117, 188, 0.3)
-        ),
-        url(<%= image_path 'apply/students/students.jpg' %>);
-    background-size:cover;
 }
 
 #left-title, #right-title {

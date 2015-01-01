@@ -67,6 +67,9 @@
   padding: 25px 10px;
   background-color: $blue;
   color:#fff;
+  &.text-center {
+    text-align:center;
+  }
   q {
     color:#fff;
     font-size: 1.8em;
@@ -76,4 +79,15 @@
     text-align:right;
     padding: 0 10px;
   }
+}
+
+.faq {
+  p, h4 {
+    text-align: left;
+  }
+}
+
+.white-button {
+  @extend button;
+  border: 1px solid #fff;
 }

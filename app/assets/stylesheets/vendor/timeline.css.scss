@@ -7,12 +7,37 @@ $timeline: $blue;
 $outline: #333;
 $text: #000;
 $center: rgba(255, 255, 255, 1);
+$development-steps: 5;
+
+@mixin timeline-p {
+  margin: 0 0 15px;
+  text-align: justify;
+  word-break: break-word;
+  max-height: 200px;
+  color: $text;
+}
+
+@mixin timeline-title {
+  color: $text;
+  position: absolute;
+  z-index: 100;
+}
+
+@mixin circle {
+  width: 20px;
+  height: 20px;
+  background: $center;
+  border: 5px solid $timeline;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
 
 /* -------------------------------------
  * timeline
  * ------------------------------------- */
 
-#timeline {
+@mixin timeline-vertical {
   list-style: none;
   margin: 50px 0 30px 120px;
   padding-left: 30px;
@@ -20,9 +45,6 @@ $center: rgba(255, 255, 255, 1);
   li {
     margin: 40px 0;
     position: relative;
-  }
-  p {
-    margin: 0 0 15px
   }
   .date {
     margin-top: -10px;
@@ -35,13 +57,7 @@ $center: rgba(255, 255, 255, 1);
     margin-top: -10px;
     top: 50%;
     left: -44px;
-    width: 20px;
-    height: 20px;
-    background: $center;
-    border: 5px solid $timeline;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
+    @include circle;
   }
   .timeline-content {
     max-height: 180px;
@@ -49,20 +65,86 @@ $center: rgba(255, 255, 255, 1);
     padding: 40px 0 0;
     position: relative;
     p {
-      text-align: justify;
-      word-break: break-word;
-      hyphens: auto;
-      max-height: 200px;
-      color: $text;
+      @include timeline-p;
     }
   }
 
-  h5.timeline {
-    color: $text;
-    position: absolute;
-    z-index: 100;
-    cursor: pointer;
+  h5.title {
     top: 5px;
-    transition: transform 0.2s linear;
+    @include timeline-title;
+  }
+}
+
+.timeline-vertical {
+  @include timeline-vertical;
+}
+
+
+@media only screen and (max-width: 64.063em) {
+  .timeline-horizontal {
+    @include timeline-vertical;
+    margin-left: 10px;
+    .timeline-content {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  .timeline-horizontal {
+    width: 100%;
+    max-width: 100%;
+    list-style: none;
+    margin: 120px 0 0;
+    padding: 0 0 165px;
+    border-top: 8px solid $timeline;
+    display: table;
+    border-spacing: 30px 0;
+    li {
+      display: table-cell;
+      width: (100% / $development-steps);
+      .relative {
+        position: relative;
+      }
+      .date {
+        text-align: center;
+        top: -55px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        color: $text;
+      }
+      .circle {
+        margin: 0 auto;
+        top: -14px;
+        left: 0;
+        right: 0;
+        @include circle;
+      }
+      .timeline-content {
+        width: 130%;
+        max-height: 0;
+        margin: 0px -30px;
+        vertical-align: top;
+        position: relative;
+        p {
+          @include timeline-p;
+          text-align:center;
+        }
+      }
+    }
+    li:nth-child(even) {
+      .date {
+        top: initial;
+        bottom: -45px;
+      }
+      .timeline-content {
+        top: -75px;
+      }
+      p {
+        vertical-align: bottom;
+      }
+    }
   }
 }

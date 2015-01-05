@@ -1,0 +1,44 @@
+#left-panel, #right-panel {
+    height: 100vh;
+    text-align:center;
+    width: 50%;
+    @media only screen and (max-width: 45em) {
+        width: 100%;
+    }
+}
+
+#left-panel {
+    float: left;
+    background:
+        -webkit-linear-gradient(
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.3)
+        ),
+        url(<%= image_path 'apply/nonprofits/nonprofits.jpg' %>);
+    background-size:cover;
+}
+
+#right-panel {
+    float: right;
+    background:
+        -webkit-linear-gradient(
+            rgba(27, 117, 188, 0.3),
+            rgba(27, 117, 188, 0.3)
+        ),
+        url(<%= image_path 'apply/students/students.jpg' %>);
+    background-size:cover;
+}
+
+#left-title, #right-title {
+    padding-top: 200px;
+}
+
+#left-subtitle, #right-subtitle {
+    margin: 0 auto;
+    width: 75%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 400;
+}

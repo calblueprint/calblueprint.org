@@ -13,9 +13,9 @@
 
 FactoryGirl.define do
   factory :contact_form do
-    name Faker::Name.name
-    email Faker::Internet.email
-    subject Faker::Lorem.word
-    message Faker::Lorem.paragraph
+    sequence(:name) { |n| "Person #{n}" }
+    sequence(:email) { "contact_form_sender@gmail.com" }
+    sequence(:subject) { |n| "Contact Form #{n}" }
+    sequence(:message) { "Lorem ipsum" }
   end
 end

@@ -1,5 +1,6 @@
+$block-height: 200px;
+
 .projects-columns {
-  line-height: 0;
   width:100%;
 
   .project-block {
@@ -7,22 +8,25 @@
     @extend .small-12;
     @extend .medium-6;
     @extend .large-4;
-    height: 200px;
+    height: $block-height;
     border: 10px solid rgba(255, 255, 255, 1);
+    padding:0px;
     background-color:$blue;
+    background-size:cover;
     display:inline-block;
     position:relative;
     box-shadow:0px -45px 85px 0px rgba(0, 0, 0, 0.4) inset;
     cursor:pointer;
     transition-duration:0.3s;
+    overflow:hidden;
 
-    .project-text {
+    .project-title {
       position:absolute;
       bottom:0px;
-      padding:5px 20px;
+      padding:5px 15px;
       width:100%;
+      transition-duration:0.3s;
       h3 {
-        transition-duration:0.2s;
         color: white;
         text-align:right;
       }
@@ -31,10 +35,27 @@
       }
     }
 
+    .project-text {
+      position:absolute;
+      top:100%;
+      height:100%;
+      width:100%;
+      display:block;
+      overflow:hidden;
+      background-color:rgba(0, 0, 0, 0.7);
+      transition-duration:0.3s;
+      color:#fff;
+      padding: 5px;
+
+    }
+
     &:hover {
       box-shadow:0px -50px 95px 0px rgba(0, 0, 0, 0.5) inset;
-      h3 {
-        margin-bottom:5px;
+      .project-title {
+        bottom:$block-height;
+      }
+      .project-text {
+        top:0px;
       }
     }
   }
@@ -49,7 +70,7 @@
   margin: 40px 0px 25px;
 
   .label {
-    background-color:white;
+    background-color:#fff;
     border:1px solid #999;
     color:#333;
     height: 24px;

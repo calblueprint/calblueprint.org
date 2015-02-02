@@ -15,4 +15,6 @@ Rails.application.routes.draw do
     get "students"
     get "nonprofits"
   end
+
+  resource :projects, only: [:show]
 end

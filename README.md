@@ -6,7 +6,11 @@ The Blueprint Website
 
 ## Contributing
 
-Run ```bin/setup``` from the project root to get everything set up.
+Dependencies:
+- `rvm` (https://rvm.io/)
+- Ruby `v2.1.4` (run `rvm install 2.1.4` to install)
+
+Run ```cd . && bin/setup``` from the project root to get everything set up.
 
 ## Cal Blueprint
 ![bp](http://bptech.berkeley.edu/assets/logo-full-large-d6419503b443e360bc6c404a16417583.png "BP Banner")

@@ -25,7 +25,9 @@ if ! [ -f config/database.yml ]; then
   failed=true
   tput setaf 1
   echo "config/database.yml doesn't exist!"
-  echo "Copy over config/database.yml.sample and change your username/password"
+  echo "Copying over database.yml.sample into database.yml"
+  cp config/database.yml.sample config/database.yml
+  echo "Change your username/password in config/database.yml"
   tput sgr0
 else
   tput setaf 2

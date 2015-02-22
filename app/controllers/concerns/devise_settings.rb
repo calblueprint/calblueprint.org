@@ -5,6 +5,7 @@ module DeviseSettings
     # Allow more params through devise
     before_filter :configure_permitted_parameters, if: :devise_controller?
     helper_method :current_user
+    helper_method :destroy_user_session_path
   end
 
   # Lets cancancan grab user

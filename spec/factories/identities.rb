@@ -14,6 +14,6 @@ FactoryGirl.define do
   factory :identity do
     applicant
     provider "provider"
-    uid "uid"
+    sequence(:uid) { |n| "#{n}" }
   end
 end

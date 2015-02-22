@@ -6,3 +6,9 @@ def sign_in(user)
   fill_in "Password", with: user.password
   click_button "Log in"
 end
+
+def auth(identity)
+  auth = double("identity")
+  allow(auth).to receive_messages uid: identity.uid, provider: identity.provider
+  auth
+end

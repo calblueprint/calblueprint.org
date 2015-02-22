@@ -6,6 +6,10 @@ module DeviseSettings
     before_filter :configure_permitted_parameters, if: :devise_controller?
   end
 
+  def current_user
+    current_admin
+  end
+
   def after_sign_in_path_for(user)
     if user.admin?
       admin_dashboard_path

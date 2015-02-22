@@ -1,7 +1,7 @@
 <div class="header">
   <%= link_to "Apply", apply_path, class: "header-tab header-button" %>
 
-  <% if !current_admin %>
+  <% if !current_user %>
     <%= link_to "Log in", new_admin_session_path, class: "header-tab" %>
   <% else %>
     <%= link_to "Log out", destroy_admin_session_path, class: "header-tab", method: :delete %>

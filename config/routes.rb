@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/sponsors", to: "pages#sponsors"
 
   devise_for :admins, controllers: { invitations: "admins/invitations" }
+  devise_for :applicants, controllers: { omniauth_callbacks: "applicants/omniauth_callbacks" }
 
   resources :contact_forms, only: [:new, :create]
 

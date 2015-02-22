@@ -1,4 +1,4 @@
-class ContactFormMailerWorker
+class ContactFormMailerJob
   include SuckerPunch::Job
 
   def perform(contact_form)

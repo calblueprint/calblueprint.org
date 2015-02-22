@@ -1,10 +1,11 @@
 <div class="header">
   <%= link_to "Apply", apply_path, class: "header-tab header-button" %>
 
-  <% if !current_admin %>
+  <% if !current_user %>
+    <!-- Temporary log in link -->
     <%= link_to "Log in", new_admin_session_path, class: "header-tab" %>
   <% else %>
-    <%= link_to "Log out", destroy_admin_session_path, class: "header-tab", method: :delete %>
+    <%= link_to "Log out", destroy_user_session_path, class: "header-tab", method: :delete %>
   <% end %>
   <%= link_to "Contact", new_contact_form_path, class: "header-tab" %>
   <%= link_to "Blog", '#', class: "header-tab" %>

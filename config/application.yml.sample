@@ -9,6 +9,12 @@ SMTP_DOMAIN: calblueprint.org
 SMTP_PASSWORD: <api_key>
 SMTP_USERNAME: <user_name>
 
+# Omniauth keys
+FACEBOOK_KEY: <api_key>
+FACEBOOK_SECRET: <api_secret>
+GOOGLE_CLIENT_ID: <api_key>
+GOOGLE_CLIENT_SECRET: <api_secret>
+
 # Contact Us email
 TEAM_EMAIL: <your_email_here>
 

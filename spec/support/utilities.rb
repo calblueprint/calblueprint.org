@@ -6,3 +6,7 @@ def sign_in(user)
   fill_in "Password", with: user.password
   click_button "Log in"
 end
+
+def auth_from_identity(identity)
+  create :auth, uid: identity.uid, provider: identity.provider
+end

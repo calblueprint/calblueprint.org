@@ -23,18 +23,18 @@ RSpec.describe Identity, type: :model do
       let(:identity) { create :identity }
 
       it "returns existing identity" do
-        expect(Identity.find_for_oauth auth(identity)).to eql identity
+        expect(Identity.find_for_oauth auth_from_identity(identity)).to eql identity
       end
     end
 
     context "when identity does not exist" do
       let(:identity) { build :identity }
       it "returns new identity" do
-        expect(Identity.find_for_oauth auth(identity)).not_to be_persisted
+        expect(Identity.find_for_oauth auth_from_identity(identity)).not_to be_persisted
       end
 
       it "returns identity with given attributes" do
-        id = Identity.find_for_oauth auth(identity)
+        id = Identity.find_for_oauth auth_from_identity(identity)
         expect(id.provider).to eql identity.provider
         expect(id.uid).to eql identity.uid
       end

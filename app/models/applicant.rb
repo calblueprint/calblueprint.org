@@ -12,8 +12,6 @@
 #
 
 class Applicant < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :rememberable, :validatable
+  devise :database_authenticatable, :rememberable, :validatable, :omniauthable
   validates :name, presence: true
 end

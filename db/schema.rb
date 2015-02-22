@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150222022116) do
+ActiveRecord::Schema.define(version: 20150222033520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,12 @@ ActiveRecord::Schema.define(version: 20150222022116) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "email",               default: "", null: false
+    t.string   "encrypted_password",  default: "", null: false
+    t.datetime "remember_created_at"
   end
+
+  add_index "applicants", ["email"], name: "index_applicants_on_email", unique: true, using: :btree
 
   create_table "contact_forms", force: true do |t|
     t.datetime "created_at"

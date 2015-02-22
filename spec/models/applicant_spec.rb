@@ -14,5 +14,6 @@
 require 'rails_helper'
 
 RSpec.describe Applicant, type: :model do
+  it { should have_many :identities }
   it { should validate_presence_of :name }
 end

@@ -13,5 +13,8 @@
 
 class Applicant < ActiveRecord::Base
   devise :database_authenticatable, :rememberable, :validatable, :omniauthable
+
+  has_many :identities
+
   validates :name, presence: true
 end

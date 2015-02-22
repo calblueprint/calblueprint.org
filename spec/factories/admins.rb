@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: admins
 #
 #  id                     :integer          not null, primary key
 #  created_at             :datetime
@@ -24,22 +24,10 @@
 #
 
 FactoryGirl.define do
-  factory :user do
+  factory :admin do
     first_name "Sam"
     last_name "Lau"
     sequence(:email) { |n| "sam#{n}@sam.com" }
     password "password"
-
-    factory :applicant do
-      role User.roles[:applicant]
-    end
-
-    factory :member do
-      role User.roles[:member]
-    end
-
-    factory :admin do
-      role User.roles[:admin]
-    end
   end
 end

@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   get "/about", to: "pages#about"
   get "/sponsors", to: "pages#sponsors"
 
-  devise_for :users, controllers: { invitations: "users/invitations" }
+  devise_for :admins, controllers: { invitations: "admins/invitations" }
 
   resources :contact_forms, only: [:new, :create]
 
-  namespace :admin do
+  namespace :admins, as: :admin do
     resource :dashboard, only: [:show], controller: "dashboard"
   end
 

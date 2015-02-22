@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: admins
 #
 #  id                     :integer          not null, primary key
 #  created_at             :datetime
@@ -23,10 +23,8 @@
 #  invitations_count      :integer          default(0)
 #
 
-class User < ActiveRecord::Base
+class Admin < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :recoverable, :rememberable, :validatable
-
-  enum role: %w(applicant member admin)
 
   validates :first_name, presence: true
   validates :last_name, presence: true

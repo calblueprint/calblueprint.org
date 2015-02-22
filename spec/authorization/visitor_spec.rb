@@ -10,7 +10,7 @@ RSpec.describe "A visitor", type: :feature do
     end
 
     describe "log in page" do
-      before { visit new_user_session_path }
+      before { visit new_admin_session_path }
       it { should have_content "Log in" }
     end
 

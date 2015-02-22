@@ -16,4 +16,8 @@ class Identity < ActiveRecord::Base
   validates :applicant_id, presence: true
   validates :provider, presence: true
   validates :uid, presence: true
+
+  def self.find_for_oauth(auth)
+    where(uid: auth.uid, provider: auth.provider).first_or_initialize
+  end
 end

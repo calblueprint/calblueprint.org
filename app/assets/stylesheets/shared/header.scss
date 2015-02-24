@@ -1,15 +1,15 @@
 .header {
-  height: 64px;
+  height: 48px;
   overflow: hidden;
 }
 
 .header-tab {
   float: right;
   display: block;
-  margin: 10px;
-  padding: 10px;
+  margin: 8px 8px;
+  padding: 4px 12px;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
   color: $medium-gray;
 }
 
@@ -18,11 +18,11 @@
 }
 
 .header-button {
-  padding: 10px 25px;
-  border-radius: 6px;
+  padding: 4px 16px;
+  border-radius: 4px;
   background: $blue;
   color: #fff;
-  margin-left: 20px;
+  margin: 8px 20px;
 }
 
 .header-button:hover {
@@ -34,9 +34,9 @@
 .header-logo {
   float: left;
   display: block;
-  margin: 9px;
-  height: 46px;
-  width: 46px;
+  height: 36px;
+  width: 36px;
+  margin: 6px 8px 6px 20px;
   background: url(asset_path("paw.png"));
   background-size: cover;
   webkit-transition: 1s;

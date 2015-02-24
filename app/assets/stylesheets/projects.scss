@@ -61,6 +61,17 @@ $block-height: 200px;
   }
 }
 
+.projects-banner {
+  background-image: url("projects/projects-banner.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 230px;
+}
+.projects-banner-text {
+  line-height: 230px;
+}
+
 .divider {
   height:1px;
   border-bottom:1px solid #999;

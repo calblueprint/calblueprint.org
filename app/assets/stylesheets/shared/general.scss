@@ -80,6 +80,13 @@ Block Grid: http://foundation.zurb.com/docs/components/block_grid.html
   background: rgba(0, 0, 0, 0.2);
 }
 
+/* A darker version of darken . */
+.blacken {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 
 /* If h1 isn't big enough to satisfy your needs, then use h0! Probably use for banners in
    combination with the white class. */

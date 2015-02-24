@@ -21,11 +21,14 @@ Rails.application.routes.draw do
   # Contact
   resources :contact_forms, only: [:new, :create]
 
+  # Users
+  devise_for :users, controllers: { invitations: "users/invitations" }
+
   # Admin
   namespace :admin do
-    resource :projects
     resource :dashboard, only: [:show], controller: "dashboard"
     resources :apps, only: [:index]
+    resource :projects
   end
 
 end

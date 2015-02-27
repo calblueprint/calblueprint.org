@@ -1,17 +1,24 @@
-<div class="about-banner"></div>
+<div class="small-spacer"></div>
 
-<div class="spacer"></div>
+<div class="about-title">
+  <div class="row">
+    <div class="small-10 small-centered columns">
+      <h1 class="about-title"><%=t ".headline" %></h1>
+      <div class="spacer-small"></div>
+  </div>
+</div>
+
+<div class="about-banner"></div>
 
 <div class="about-mission-block">
   <div class="row">
     <div class="small-10 small-centered columns">
-      <h1 class="about-title"><%= t ".headline" %></h1>
       <div class="spacer-small"></div>
       <p class="mission"><%= t ".mission" %></p>
+      <div class="spacer-small"></div>
     </div>
   </div>
 </div>
-
 
 <div class="about-detail-block">
   <div class="row">
@@ -27,7 +34,25 @@
         </div>
         <h2><%= t ".values.craft.title" %></h2>
         <div class="spacer-small"></div>
+      </div>
+    </div>
+    <div class="medium-8 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+        <div class="spacer-small"></div>
         <p><%= t ".values.craft.description" %></p>
+        <div class="spacer-small"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-8 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+      <div class="spacer-small"></div>
+        <p><%= t ".values.culture.description" %></p>
+        <div class="spacer-small"></div>
       </div>
     </div>
     <div class="medium-4 columns">
@@ -42,9 +67,11 @@
         </div>
         <h2><%= t ".values.culture.title" %></h2>
         <div class="spacer-small"></div>
-        <p><%= t ".values.culture.description" %></p>
       </div>
     </div>
+  </div>
+
+  <div class="row">
     <div class="medium-4 columns">
       <div class="spacer"></div>
       <div class="about-value">
@@ -57,10 +84,18 @@
         </div>
         <h2><%= t ".values.heart.title" %></h2>
         <div class="spacer-small"></div>
+      </div>
+    </div>
+    <div class="medium-8 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+        <div class="spacer-small"></div>
         <p><%= t ".values.heart.description" %></p>
+        <div class="spacer-small"></div>
       </div>
     </div>
   </div>
+  <div class="spacer"></div>
 </div>
 
 <div class="spacer"></div>
@@ -76,14 +111,14 @@
   <div class="spacer-small"></div>
   <div class="row">
     <div class="small-12 small-centered columns">
-      <ul class="team-pictures medium-block-grid-6 small-block-grid-3">
-        <% (1..30).each do |i| %>
+      <ul class="team-pictures medium-block-grid-4 small-block-grid-2">
+        <% (1..28).each do |i| %>
           <li class="team-picture-item">
         <a href="#">
           <%= image_tag("about/wonjun.jpg") %>
           <div class="member-description">
             <div class="name">
-              Wonjun Jeong
+              WONJUN JEONG
             </div>
             <div class="position">
               President
@@ -106,42 +141,42 @@
       <div class="spacer-small"></div>
       <ul class="sponsor-list large-block-grid-4 medium-block-grid-2 small-block-grid-1">
         <li class="sponsor-item ">
-        <a href="#">
+        <a href="https://www.palantir.com/">
           <%= image_tag("about/logo-palantir.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
+        <a href="https://github.com/">
           <%= image_tag("about/logo-github.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
+        <a href="https://www.atlassian.com/">
           <%= image_tag("about/logo-atlassian.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
+        <a href="https://www.heroku.com/">
           <%= image_tag("about/logo-heroku.jpg") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
+        <a href="http://www.intel.com/content/www/us/en/homepage.html">
           <%= image_tag("about/logo-intel.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
+        <a href="http://www.microsoft.com/en-us/default.aspx">
           <%= image_tag("about/logo-microsoft.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
+        <a href="http://www.salesforce.com/">
           <%= image_tag("about/logo-salesforce.jpg") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
+        <a href="https://www.indiegogo.com/">
           <%= image_tag("about/logo-indiegogo.png") %>
         </a>
         </li>

@@ -8,5 +8,7 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
-App.create! last_name: 'Shieh', first_name: 'Kevin', email: 'kevin@bp.com', year: '2015'
-App.create! last_name: 'Dog', first_name: 'Banana', email: 'banana@bp.com', year: '1999'
+applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
+
+applicant.apps.create! last_name: 'Shieh', first_name: 'Kevin', email: 'kevin@bp.com', year: '2015'
+applicant.apps.create! last_name: 'Dog', first_name: 'Banana', email: 'banana@bp.com', year: '1999'

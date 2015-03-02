@@ -5,8 +5,4 @@ class ApplicationController < ActionController::Base
 
   include DeviseSettings
   include AuthorizationHelpers
-
-  def authorize_admin
-    redirect_to root_path if !current_admin
-  end
 end

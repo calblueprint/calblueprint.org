@@ -9,9 +9,9 @@
 #  applicant_id :integer
 #
 
-class App < ActiveRecord::Base
-  belongs_to :applicant
-
-  validates :year, presence: true
-  validates :applicant_id, presence: true
+FactoryGirl.define do
+  factory :app do
+    year "2017"
+    applicant
+  end
 end

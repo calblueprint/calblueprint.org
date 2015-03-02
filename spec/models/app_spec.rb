@@ -9,9 +9,10 @@
 #  applicant_id :integer
 #
 
-class App < ActiveRecord::Base
-  belongs_to :applicant
+require 'rails_helper'
 
-  validates :year, presence: true
-  validates :applicant_id, presence: true
+RSpec.describe App, :type => :model do
+  it { should belong_to :applicant }
+  it { should validate_presence_of :year }
+  it { should validate_presence_of :applicant_id }
 end

@@ -1,9 +1,8 @@
 <table border="1">
     <% @apps.each do |app| %>
     <tr>
-        <td><%= app.last_name %></td>
-        <td><%= app.first_name %></td>
-        <td><%= app.email %></td>
+        <td><%= app.applicant.name %></td>
+        <td><%= app.applicant.email %></td>
         <td><%= app.year %></td>
         <td><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
     </tr>

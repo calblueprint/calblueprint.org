@@ -1,45 +1,79 @@
+.card-style {
+  background-color: white;
+  box-shadow: 0 0 5px 2px #ddd;
+  border: 1px solid #bbb;
+}
+
 .panel {
+  top: 0;
   height: 100vh;
-  text-align:center;
   width:100%;
   min-height:500px;
+  position: fixed;
+  z-index: -1;
+
+  .panel-container-left &, .panel-container-right & {
+    width: 50%;
+    @media only screen and (max-width: 45em) {
+      position: absolute;
+      top: initial;
+      width: 100%;
+    }
+  }
+
+  .panel-container-left & {
+    float: left;
+  }
+
+  .panel-container-right & {
+    float: right;
+  }
+}
+
+.panel-container{
+  @extend .panel;
+  text-align:center;
+  position: static;
+  z-index: 0;
+}
+
+.panel-container-left, .panel-container-right {
+  @extend .panel-container;
+  width: 50%;
+  
+  @media only screen and (max-width: 45em) {
+    width: 100%;
+  }
+}
+
+.panel-container-left {
+  float: left;
+}
+
+.panel-container-right {
+  float: right;
 }
 
 .nonprofits-bg {
-  background:
-  -webkit-linear-gradient(
-  rgba(255, 255, 255, 0.3),
-  rgba(255, 255, 255, 0.3)
+  @include background-image(
+  linear-gradient(
+  rgba(150, 150, 150, 0.4),
+  rgba(150, 150, 150, 0.4)
   ),
-  url(<%= image_path 'apply/nonprofits/nonprofits.jpg' %>);
+  url(<%= image_path 'apply/nonprofits/nonprofits.jpg' %>));
   background-size:cover;
+  left: 0;
 }
 
 .students-bg {
-  background:
-  -webkit-linear-gradient(
-  rgba(27, 117, 188, 0.3),
-  rgba(27, 117, 188, 0.3)
+  @include background-image(
+  linear-gradient(
+  rgba(27, 117, 188, 0.4),
+  rgba(27, 117, 188, 0.4)
   ),
-  url(<%= image_path 'apply/students/students.jpg' %>);
+  url(<%= image_path 'apply/students/students.jpg' %>));
   background-size:cover;
-}
-
-#left-panel, #right-panel {
-    height: 100vh;
-    text-align:center;
-    width: 50%;
-    @media only screen and (max-width: 45em) {
-        width: 100%;
-    }
-}
-
-#left-panel {
-    float: left;
-}
-
-#right-panel {
-    float: right;
+  right: 0;
 }
 
 #left-title, #right-title {
@@ -90,4 +124,8 @@
 .white-button {
   @extend button;
   border: 1px solid #fff;
+}
+
+.white-bg {
+  background-color: white;
 }

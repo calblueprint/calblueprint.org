@@ -26,6 +26,7 @@ end
 
 RSpec.describe Applicant, type: :model do
   it { should have_many :identities }
+  it { should have_many :apps }
   it { should validate_presence_of :name }
 
   describe ".find_for_oauth" do

@@ -12,3 +12,7 @@ applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', pass
 
 applicant.apps.create! year: '2015'
 applicant.apps.create! year: '1999'
+
+Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com'
+Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com'
+Member.create! first_name: 'holy', last_name: 'breeze', email: 'hb@gmail.com'

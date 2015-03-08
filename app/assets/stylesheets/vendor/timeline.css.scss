@@ -6,7 +6,7 @@
 $timeline: $blue;
 $outline: #333;
 $text: #000;
-$center: rgba(255, 255, 255, 1);
+$center: #ECECEC;
 $development-steps: 5;
 
 @mixin timeline-p {
@@ -78,7 +78,6 @@ $development-steps: 5;
 .timeline-vertical {
   @include timeline-vertical;
 }
-
 
 @media only screen and (max-width: 64.063em) {
   .timeline-horizontal {

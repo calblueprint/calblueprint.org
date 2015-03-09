@@ -1,14 +1,12 @@
 .about-banner {
   @extend .banner;
   height: 500px;
-  /**background: url(<%= image_path 'about/about.jpg' %>);
-  background-size: cover; */
   background:
   -webkit-linear-gradient(
   rgba(255, 255, 255, 0.3),
   rgba(255, 255, 255, 0.3)
   ),
-  url(<%= image_path 'about/about.jpg' %>);
+  image-url('about/about.jpg');
   background-size:cover;
   background-repeat: no-repeat; 
   background-position-y: 25%;
@@ -47,12 +45,12 @@
 }
 
 @-webkit-keyframes FadeIn {
-    0% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .about-team-block {
@@ -152,7 +150,7 @@
 .nav-circlepop .icon-wrap {
   position: relative;
   display: block;
-  margin: 32% 0 0 32%;
+  margin: 32% 0 0 33%;
   width: 80%;
   height: 80%;
 }

@@ -4,6 +4,7 @@
       <td><%= member.last_name %></td>
       <td><%= member.first_name %></td>
       <td><%= member.email %></td>
+      <td><%= button_to "Delete", "members/#{member.id}", method: :delete %></td>
     </tr>
   <% end %>
 </table>

@@ -18,6 +18,19 @@ module Admins
       end
     end
 
+    def edit
+      @member = Member.find(params[:id])
+    end
+
+    def update
+      @member = Member.find(params[:id])
+      if @member.update_attributes(member_params)
+        redirect_to action: 'index'
+      else
+        render 'edit'
+      end
+    end
+
     def destroy
       Member.find_by(id: params[:id]).destroy
       redirect_to action: 'index'

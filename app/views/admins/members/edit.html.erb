@@ -1,0 +1,6 @@
+<%= form_for [:admin, @member], url: { action: "update" } do |f| %>
+  Last name : <%= f.text_field :last_name %><br />
+  First name: <%= f.text_field :first_name %><br />
+  Email : <%= f.text_field :email %><br />
+  <%= f.submit "Save Changes" %>
+<% end %>

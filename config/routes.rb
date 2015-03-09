@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :admins, as: :admin do
     resource :dashboard, only: [:show], controller: "dashboard"
     resources :apps, only: [:index]
-    resources :members, only: [:new, :create, :edit, :update, :destroy, :index]
+    resources :members, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   end
 
   resource :apply, only: [:show], controller: "apply" do

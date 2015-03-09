@@ -6,6 +6,7 @@
       <td><%= member.last_name %></td>
       <td><%= member.first_name %></td>
       <td><%= member.email %></td>
+      <td><%= button_to "View", "members/#{member.id}", method: :get %></td>
       <td><%= button_to "Edit", "members/#{member.id}/edit", method: :get %></td>
       <td><%= button_to "Delete", "members/#{member.id}", method: :delete %></td>
     </tr>

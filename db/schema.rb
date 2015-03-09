@@ -82,4 +82,15 @@ ActiveRecord::Schema.define(version: 20150302054404) do
 
   add_index "identities", ["applicant_id"], name: "index_identities_on_applicant_id", using: :btree
 
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.string   "short_summary"
+    t.string   "overview"
+    t.string   "problem"
+    t.string   "solution"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

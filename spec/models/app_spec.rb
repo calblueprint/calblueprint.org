@@ -11,7 +11,7 @@
 
 require 'rails_helper'
 
-RSpec.describe App, :type => :model do
+RSpec.describe App, type: :model do
   it { should belong_to :applicant }
   it { should validate_presence_of :year }
   it { should validate_presence_of :applicant_id }

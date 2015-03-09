@@ -1,0 +1,7 @@
+LOG:  database system was interrupted; last known up at 2015-02-26 22:59:18 PST
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  could not open directory "pg_snapshots": No such file or directory
+LOG:  record with zero length at 0/1ABF608
+LOG:  redo is not required
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections

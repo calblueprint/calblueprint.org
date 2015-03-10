@@ -1,4 +1,4 @@
-<%= simple_form_for [:admin, @member], url: { action: "create" } do |f| %>
+<%= simple_form_for [:admin, @member] do |f| %>
   <%= f.input :first_name, label: 'First name:', required: true %><br />
   <%= f.input :last_name, label: 'Last name:', required: true %><br />
   <%= f.input :email, label: 'Email:', required: true %><br />

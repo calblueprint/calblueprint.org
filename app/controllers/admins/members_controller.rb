@@ -17,7 +17,6 @@ module Admins
       if @member.save
         redirect_to admin_members_path
       else
-        # TODO: add banner describing why form was invalid
         render 'new'
       end
     end

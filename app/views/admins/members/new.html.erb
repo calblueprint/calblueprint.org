@@ -1,6 +1,6 @@
-<%= form_for [:admin, @member], url: { action: "create" } do |f| %>
-  Last name : <%= f.text_field :last_name %><br />
-  First name: <%= f.text_field :first_name %><br />
-  Email : <%= f.text_field :email %><br />
-  <%= f.submit "Create" %>
+<%= simple_form_for [:admin, @member], url: { action: "create" } do |f| %>
+  <%= f.input :first_name, label: 'First name:', required: true %><br />
+  <%= f.input :last_name, label: 'Last name:', required: true %><br />
+  <%= f.input :email, label: 'Email:', required: true %><br />
+  <%= f.submit 'Create' %>
 <% end %>

@@ -1,4 +1,4 @@
-<h1><%= link_to "New Member", "members/new", method: :get %></h1>
+<h1><%= link_to "New Member", new_admin_member_path, method: :get %></h1>
 
 <table border="1">
   <% @members.each do |member| %>
@@ -6,9 +6,9 @@
       <td><%= member.last_name %></td>
       <td><%= member.first_name %></td>
       <td><%= member.email %></td>
-      <td><%= button_to "View", "members/#{member.id}", method: :get %></td>
-      <td><%= button_to "Edit", "members/#{member.id}/edit", method: :get %></td>
-      <td><%= button_to "Delete", "members/#{member.id}", method: :delete %></td>
+      <td><%= button_to "View", admin_member_path(member), method: :get %></td>
+      <td><%= button_to "Edit", edit_admin_member_path(member), method: :get %></td>
+      <td><%= button_to "Delete", admin_member_path(member), method: :delete %></td>
     </tr>
   <% end %>
 </table>

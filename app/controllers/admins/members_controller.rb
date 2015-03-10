@@ -5,7 +5,7 @@ module Admins
     end
 
     def show
-      @member = Member.find(params[:id])
+      @member = Member.find params[:id]
     end
 
     def new
@@ -13,31 +13,31 @@ module Admins
     end
 
     def create
-      @member = Member.new(member_params)
+      @member = Member.new member_params
       if @member.save
-        redirect_to action: 'index'
+        redirect_to admin_members_path
       else
         # TODO: add banner describing why form was invalid
-        redirect_to action: 'new'
+        render 'new'
       end
     end
 
     def edit
-      @member = Member.find(params[:id])
+      @member = Member.find params[:id]
     end
 
     def update
-      @member = Member.find(params[:id])
-      if @member.update_attributes(member_params)
-        redirect_to action: 'index'
+      @member = Member.find params[:id]
+      if @member.update_attributes member_params
+        redirect_to admin_members_path
       else
         render 'edit'
       end
     end
 
     def destroy
-      Member.find_by(id: params[:id]).destroy
-      redirect_to action: 'index'
+      Member.destroy params[:id]
+      redirect_to admin_members_path
     end
 
     private

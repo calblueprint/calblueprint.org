@@ -6,9 +6,9 @@
       <td><%= member.last_name %></td>
       <td><%= member.first_name %></td>
       <td><%= member.email %></td>
-      <td><%= button_to "View", admin_member_path(member), method: :get %></td>
-      <td><%= button_to "Edit", edit_admin_member_path(member), method: :get %></td>
-      <td><%= button_to "Delete", admin_member_path(member), method: :delete %></td>
+      <td><%= link_to "View", admin_member_path(member), class: 'button' %></td>
+      <td><%= link_to "Edit", edit_admin_member_path(member), class: 'button' %></td>
+      <td><%= link_to "Delete", admin_member_path(member), method: :delete, class: 'button' %></td>
     </tr>
   <% end %>
 </table>

@@ -1,6 +1,7 @@
 .about-banner {
   @extend .banner;
   height: 500px;
+  /*@include background-image(url("about/about.jpg"), linear-gradient(white 30%, white 30%, transparent 0));*/
   background:
   -webkit-linear-gradient(
   rgba(255, 255, 255, 0.3),
@@ -10,9 +11,16 @@
   background-size:cover;
   background-repeat: no-repeat; 
   background-position-y: 25%;
-  -webkit-animation-name: FadeIn;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-duration: 1s;
+  @include animation(FadeIn 2.0s ease-in);
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .about-mission-block {
@@ -42,15 +50,6 @@
 
 .about-title {
   padding-top: 30px;
-}
-
-@-webkit-keyframes FadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
 }
 
 .about-team-block {

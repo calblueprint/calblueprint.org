@@ -1,7 +1,7 @@
 .about-banner {
   @extend .banner;
   height: 500px;
-  /*@include background-image(url("about/about.jpg"), linear-gradient(white 30%, white 30%, transparent 0));*/
+  /*@include background(url("/about/about.jpg"), linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)));*/
   background:
   -webkit-linear-gradient(
   rgba(255, 255, 255, 0.3),
@@ -140,10 +140,9 @@
   background: #fff;
   content: '';
   opacity: 0;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+  @include transition(transform 0.3s);
+  @include transition(opacity 0.3s);
+  @include transform(scale(0.9));
 }
 
 .nav-circlepop .icon-wrap {
@@ -155,8 +154,7 @@
 }
 
 .nav-circlepop a.next .icon-wrap {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  @include transform(rotate(90deg));
 }
 
 .nav-circlepop .icon-wrap::before,
@@ -167,31 +165,25 @@
   height: 50%;
   background: #fff;
   content: '';
-  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
-  transition: transform 0.3s, background-color 0.3s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  @include transition(transform 0.3s);
+  @include transition-property(background-color 0.3s);
+  @include backface-visibility(hidden);
 }
 
 .nav-circlepop .icon-wrap::before {
-  -webkit-transform: translateX(-50%) rotate(-60deg);
-  transform: translateX(-50%) rotate(-60deg);
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
+  @include transform(translateX(-50%) rotate(-60deg));
+  @include transform-origin(0 100%);
 }
 
 .nav-circlepop .icon-wrap::after {
   top: 50%;
-  -webkit-transform: translateX(-50%) rotate(-120deg);
-  transform: translateX(-50%) rotate(-120deg);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
+  @include transform(translateX(-50%) rotate(-120deg));
+  @include transform-origin(0 0);
 }
 
 .nav-circlepop a:hover::before {
   opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  @include transform(scale(1));
 }
 
 .nav-circlepop a:hover .icon-wrap::before,
@@ -200,13 +192,11 @@
 }
 
 .nav-circlepop a:hover .icon-wrap::before {
-  -webkit-transform: translateX(-50%) rotate(-45deg);
-  transform: translateX(-50%) rotate(-45deg);
+  @include transform(translateX(-50%) rotate(-45deg));
 }
 
 .nav-circlepop a:hover .icon-wrap::after {
-  -webkit-transform: translateX(-50%) rotate(-135deg);
-  transform: translateX(-50%) rotate(-135deg);
+  @include transform(translateX(-50%) rotate(-135deg));
 }
 
 nav a {
@@ -216,8 +206,7 @@ nav a {
   outline: none;
   text-align: left;
   z-index: 1000;
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
+  @include transform(translateY(-100%));
 }
 
 nav a.prev {
@@ -246,4 +235,10 @@ nav a svg {
   position: relative;
   padding-left: 45%;
   padding-top: 27%;
+}
+
+@media only screen and (max-width: 64.063em) {
+  .nav-arrow {
+    display: none;
+  }
 }

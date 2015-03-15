@@ -1,8 +1,9 @@
 class Semester < ActiveRecord::Base
+  extend Enumerize
+
   has_many :apps
   has_many :projects
 
-  enum seasons: [:fall, :spring]
-  validates :season, presence: true, inclusion: { in: Semester.seasons.keys }
+  enumerize :season, in: [:fall, :spring]
   validates :year, presence: true
 end

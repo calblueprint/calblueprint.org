@@ -1,6 +1,8 @@
 .header {
   height: 48px;
   overflow: hidden;
+  background-color: white;
+  z-index: 1;
 }
 
 .header-tab {
@@ -39,7 +41,7 @@
   margin: 6px 8px 6px 20px;
   background: url(asset_path("paw.png"));
   background-size: cover;
-  webkit-transition: 1s;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 

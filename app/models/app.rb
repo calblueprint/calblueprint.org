@@ -5,8 +5,8 @@
 #  id           :integer          not null, primary key
 #  created_at   :datetime
 #  updated_at   :datetime
-#  year         :string(255)
 #  applicant_id :integer
+#  semester_id  :integer
 #
 
 class App < ActiveRecord::Base

@@ -13,7 +13,6 @@ class App < ActiveRecord::Base
   belongs_to :applicant
   belongs_to :semester
 
-  validates :year, presence: true
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
 end

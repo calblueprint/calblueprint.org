@@ -12,8 +12,8 @@ semester = Semester.create! season: 'spring', year: '2015'
 
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
-applicant.apps.create! year: '2015', semester: semester
-applicant.apps.create! year: '1999', semester: semester
+applicant.apps.create! semester: semester
+applicant.apps.create! semester: semester
 
 Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com'
 Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com'

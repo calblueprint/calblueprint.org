@@ -15,4 +15,5 @@ class App < ActiveRecord::Base
 
   validates :year, presence: true
   validates :applicant_id, presence: true
+  validates :semester_id, presence: true
 end

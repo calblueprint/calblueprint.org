@@ -15,4 +15,6 @@
 
 class Project < ActiveRecord::Base
   belongs_to :semester
+
+  validates :semester_id, presence: true
 end

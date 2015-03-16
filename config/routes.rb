@@ -27,5 +27,6 @@ Rails.application.routes.draw do
     resource :projects
     resources :apps, only: [:index]
     resources :members
+    resources :semesters
   end
 end

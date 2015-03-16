@@ -6,16 +6,16 @@
 
 .panel {
   top: 0;
-  width:100%;
+  width:100vw;
   height:500px;
   position: fixed;
   z-index: -1;
 
   .panel-container-left &, .panel-container-right & {
-    width: 50%;
+    width: 50vw;
     height: 100vh;
-    @media only screen and (max-width: 45em) {
-      position: absolute;
+    position: absolute;
+    @media only screen and (max-width: $medium-screen) {
       top: initial;
       width: 100%;
     }
@@ -31,8 +31,9 @@
 }
 
 .panel-container{
-  @extend .panel;
+  width:100%;
   margin-top: -48px;
+  height: 350px;
   text-align:center;
   position: static;
   z-index: 0;
@@ -40,15 +41,16 @@
   .title {
     @extend .h0;
     color: #FFFFFF;
-    padding-top: 200px;
+    padding-top: 150px;
   }
 }
 
 .panel-container-left, .panel-container-right {
   @extend .panel-container;
   width: 50%;
+  min-height: 100vh;
 
-  @media only screen and (max-width: 45em) {
+  @media only screen and (max-width: $medium-screen) {
     width: 100%;
   }
 }
@@ -63,24 +65,24 @@
 
 .nonprofits-bg {
   @include background-image(
-  linear-gradient(
-  rgba(50, 50, 50, 0.4),
-  rgba(50, 50, 50, 0.4)
-  ),
-  url(<%= image_path 'apply/nonprofits/nonprofits.jpg' %>));
+    linear-gradient(
+      rgba(50, 50, 50, 0.4),
+      rgba(50, 50, 50, 0.4)
+    ),
+    image-url('apply/nonprofits/nonprofits.jpg')
+  );
   background-size:cover;
-  left: 0;
 }
 
 .students-bg {
   @include background-image(
-  linear-gradient(
-  rgba(27, 117, 188, 0.4),
-  rgba(27, 117, 188, 0.4)
-  ),
-  url(<%= image_path 'apply/students/students.jpg' %>));
+    linear-gradient(
+      rgba(27, 117, 188, 0.4),
+      rgba(27, 117, 188, 0.4)
+    ),
+    image-url('apply/students/students.jpg')
+  );
   background-size:cover;
-  right: 0;
 }
 
 #left-title, #right-title {
@@ -142,7 +144,7 @@
     text-align: right;
   }
 
-  @media only screen and (max-width: em(640)) {
+  @media only screen and (max-width: $medium-screen) {
     text-align: center;
     h1 {
       text-align: center;
@@ -163,7 +165,7 @@
     text-align: left;
   }
 
-  @media only screen and (max-width: em(640)) {
+  @media only screen and (max-width: $medium-screen) {
     border: none;
     border-top: 1px solid #CCC;
   }

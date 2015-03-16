@@ -1,0 +1,5 @@
+<%= simple_form_for [:admin, @semester] do |f| %>
+  <%= f.input :season, label: 'Season:' %><br />
+  <%= f.input :year, label: 'Year:' %><br />
+  <%= f.submit submit_text %>
+<% end %>

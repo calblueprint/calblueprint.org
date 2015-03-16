@@ -1,0 +1,12 @@
+<h1><%= link_to "New Semester", new_admin_semester_path %></h1>
+
+<table border="1">
+  <% @semesters.each do |semester| %>
+    <tr>
+      <td><%= semester.season %></td>
+      <td><%= semester.year %></td>
+      <td><%= link_to "View", admin_semester_path(semester), class: 'button' %></td>
+      <td><%= link_to "Edit", edit_admin_semester_path(semester), class: 'button' %></td>
+    </tr>
+  <% end %>
+</table>

@@ -11,7 +11,7 @@
 
 FactoryGirl.define do
   factory :app do
-    year "2017"
     applicant
+    semester
   end
 end

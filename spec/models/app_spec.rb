@@ -13,6 +13,7 @@ require 'rails_helper'
 
 RSpec.describe App, type: :model do
   it { should belong_to :applicant }
-  it { should validate_presence_of :year }
+  it { should belong_to :semester }
   it { should validate_presence_of :applicant_id }
+  it { should validate_presence_of :semester_id }
 end

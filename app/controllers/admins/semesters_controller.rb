@@ -34,6 +34,8 @@ module Admins
       end
     end
 
+    # Destroy is only allowed if the semester has no apps or projects
+    # Otherwise, admin should reassign apps and projects and then delete
     def destroy
       @semester = Semester.find params[:id]
       if @semester.apps.exists? || @semester.projects.exists?

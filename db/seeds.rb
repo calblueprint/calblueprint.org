@@ -8,7 +8,7 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
-semester = Semester.create! season: 'spring', year: '2015', is_current_semester: true
+semester = Semester.create! season: 'spring', year: '2013', is_current_semester: true
 
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 

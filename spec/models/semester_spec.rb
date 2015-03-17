@@ -16,4 +16,5 @@ RSpec.describe Semester, type: :model do
   it { should have_many :apps }
   it { should enumerize(:season).in(:fall, :spring) }
   it { should validate_presence_of :year }
+  it { should validate_uniqueness_of(:year).scoped_to(:season) }
 end

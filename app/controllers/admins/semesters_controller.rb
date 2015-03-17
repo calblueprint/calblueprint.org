@@ -37,9 +37,8 @@ module Admins
     end
 
     def clear_current_semester
-      if member_params[:is_current_semester]
-        Semester.where('is_current_semester').update_all("is_current_semester = 'false'")
-      end
+      return unless member_params[:is_current_semester]
+      Semester.where('is_current_semester').update_all("is_current_semester = 'false'")
     end
 
     # Destroy is only allowed if the semester has no apps or projects

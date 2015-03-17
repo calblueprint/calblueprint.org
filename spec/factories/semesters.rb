@@ -13,7 +13,7 @@
 FactoryGirl.define do
   factory :semester do
     season "spring"
-    year "2015"
+    sequence(:year) { |n| "#{n}" }
     is_current_semester false
   end
 end

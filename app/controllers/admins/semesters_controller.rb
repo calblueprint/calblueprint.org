@@ -34,11 +34,14 @@ module Admins
       end
     end
 
-    # TODO: Only destroy if semester has no apps or projects
-    #       Otherwise, reassign those to different semester before deleting
     def destroy
-      # Semester.destroy params[:id]
-      # redirect_to admin_semesters_path
+      @semester = Semester.find params[:id]
+      if @semester.apps.exists? || @semester.projects.exists?
+        # TODO: display 'cannot delete' error
+      else
+        @semester.destroy
+      end
+      redirect_to admin_semesters_path
     end
 
     private

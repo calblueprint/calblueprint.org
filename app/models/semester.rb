@@ -16,7 +16,5 @@ class Semester < ActiveRecord::Base
   has_many :projects
 
   enumerize :season, in: [:fall, :spring]
-  # TODO: Need to make sure all years are the same between apps and semesters
-  #       Probably remove year from apps
   validates :year, presence: true
 end

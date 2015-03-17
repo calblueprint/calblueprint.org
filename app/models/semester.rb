@@ -2,11 +2,12 @@
 #
 # Table name: semesters
 #
-#  id         :integer          not null, primary key
-#  created_at :datetime
-#  updated_at :datetime
-#  season     :string(255)
-#  year       :string(255)
+#  id                  :integer          not null, primary key
+#  created_at          :datetime
+#  updated_at          :datetime
+#  season              :string(255)
+#  year                :string(255)
+#  is_current_semester :boolean          default(FALSE)
 #
 
 class Semester < ActiveRecord::Base

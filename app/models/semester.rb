@@ -18,4 +18,5 @@ class Semester < ActiveRecord::Base
 
   enumerize :season, in: [:fall, :spring]
   validates :year, presence: true
+  validates_uniqueness_of :is_current_semester, if: :is_current_semester
 end

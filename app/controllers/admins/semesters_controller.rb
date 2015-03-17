@@ -49,7 +49,7 @@ module Admins
     private
 
     def member_params
-      params.require(:semester).permit(:season, :year)
+      params.require(:semester).permit(:season, :year, :is_current_semester)
     end
   end
 end

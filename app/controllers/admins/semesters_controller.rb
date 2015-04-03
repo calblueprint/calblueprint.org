@@ -14,7 +14,7 @@ module Admins
 
     def create
       @semester = Semester.new member_params
-      clear_current_semester
+      @semester.clear_current_semester if member_params[:is_current_semester]
       if @semester.save
         redirect_to admin_semesters_path
       else
@@ -28,7 +28,7 @@ module Admins
 
     def update
       @semester = Semester.find params[:id]
-      clear_current_semester
+      @semester.clear_current_semester if member_params[:is_current_semester]
       if @semester.update_attributes member_params
         redirect_to admin_semesters_path
       else
@@ -36,16 +36,11 @@ module Admins
       end
     end
 
-    def clear_current_semester
-      return unless member_params[:is_current_semester]
-      Semester.where('is_current_semester').update_all("is_current_semester = 'false'")
-    end
-
     # Destroy is only allowed if the semester has no apps or projects
     # Otherwise, admin should reassign apps and projects and then delete
     def destroy
       @semester = Semester.find params[:id]
-      if @semester.apps.exists? || @semester.projects.exists?
+      if @semester.can_be_destroyed?
         # TODO: display 'cannot delete' error
       else
         @semester.destroy

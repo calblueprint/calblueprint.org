@@ -12,10 +12,18 @@
 
 class Semester < ActiveRecord::Base
   extend Enumerize
+  enumerize :season, in: [:fall, :spring]
 
   has_many :apps
   has_many :projects
 
-  enumerize :season, in: [:fall, :spring]
   validates :year, uniqueness: { scope: [:season] }, presence: true
+
+  def can_be_destroyed?
+    apps.exists? || projects.exists?
+  end
+
+  def clear_current_semester
+    Semester.where('is_current_semester').update_all("is_current_semester = 'false'")
+  end
 end

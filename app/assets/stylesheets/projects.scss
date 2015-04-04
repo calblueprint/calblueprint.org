@@ -12,50 +12,49 @@ $block-height: 300px;
 }
 
 .project {
-  padding: 48px 0px 0px;
   @extend .row;
 
-  .projects-image {
+  .project-image {
     @extend .columns;
     @extend .small-12;
     @extend .medium-4;
     @extend .large-5;
     height: $block-height;
     background-size: cover;
-    box-shadow: 3px 3px 2px #CCCCCC;
+    box-shadow: 2px 2px 1px #CCCCCC;
     border-radius: 2px 0px 0px 2px;
   }
 
-  .projects-card {
+  .project-card {
     @extend .columns;
     @extend .small-12;
     @extend .medium-8;
     @extend .large-7;
     height: $block-height;
     background-color: white;
-    box-shadow: 3px 3px 2px #CCCCCC;
+    box-shadow: 2px 2px 1px #CCCCCC;
     border-radius: 0px 2px 2px 0px;
 
-    .projects-card-text {
+    .project-card-text {
       color: #565a5c;
       text-align: left;
     }
-    .projects-title {
-      @extend .projects-card-text;
+    .project-title {
+      @extend .project-card-text;
       padding: 0px 8px;
       height: 57px;
       line-height: 57px;
       overflow: hidden;
     }
-    .projects-description {
-      @extend .projects-card-text;
+    .project-description {
+      @extend .project-card-text;
       font-size: 16px;
       line-height: 16px;
       padding: 0px 8px;
       height: 48px;
     }
-    .projects-subtitle {
-      @extend.projects-card-text;
+    .project-subtitle {
+      @extend.project-card-text;
       font-size: 14px;
       line-height:14px;
       padding: 12px 8px 12px;
@@ -72,11 +71,11 @@ $block-height: 300px;
       background-color: $blue;
       margin: 4px 4px;
     }
-    .projects-progress {
+    .project-progress {
       margin-left: 8px;
     }
 
-    .projects-progress-scope {
+    .project-progress-scope {
       display: inline-block;
       height: 8px;
       width: 20%;

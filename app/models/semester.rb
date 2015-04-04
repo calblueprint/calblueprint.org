@@ -20,10 +20,10 @@ class Semester < ActiveRecord::Base
   validates :year, uniqueness: { scope: [:season] }, presence: true
 
   def can_be_destroyed?
-    apps.exists? || projects.exists?
+    ! (apps.exists? || projects.exists?)
   end
 
-  def clear_current_semester
+  def self.clear_current_semester
     Semester.where('is_current_semester').update_all("is_current_semester = 'false'")
   end
 end

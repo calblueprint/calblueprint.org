@@ -14,7 +14,7 @@ module Admins
 
     def create
       @semester = Semester.new member_params
-      @semester.clear_current_semester if member_params[:is_current_semester]
+      Semester.clear_current_semester if member_params[:is_current_semester]
       if @semester.save
         redirect_to admin_semesters_path
       else
@@ -28,7 +28,7 @@ module Admins
 
     def update
       @semester = Semester.find params[:id]
-      @semester.clear_current_semester if member_params[:is_current_semester]
+      Semester.clear_current_semester if member_params[:is_current_semester]
       if @semester.update_attributes member_params
         redirect_to admin_semesters_path
       else
@@ -41,9 +41,9 @@ module Admins
     def destroy
       @semester = Semester.find params[:id]
       if @semester.can_be_destroyed?
-        # TODO: display 'cannot delete' error
-      else
         @semester.destroy
+      else
+        # TODO: display 'cannot delete' error
       end
       redirect_to admin_semesters_path
     end

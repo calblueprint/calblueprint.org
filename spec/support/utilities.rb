@@ -10,3 +10,10 @@ end
 def auth_from_identity(identity)
   create :auth, uid: identity.uid, provider: identity.provider
 end
+
+def fill_in_semester(season, year, is_current_semester=false)
+  visit new_admin_semester_path
+  select season, from: "Season:"
+  fill_in "Year", with: year
+  check "Current Semester" if is_current_semester
+end

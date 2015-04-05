@@ -6,8 +6,10 @@
       <td><%= semester.season %></td>
       <td><%= semester.year %></td>
       <td><%= link_to "View", admin_semester_path(semester), class: 'button' %></td>
-      <td><%= link_to "Edit", edit_admin_semester_path(semester), class: 'button' %></td>
-      <td><%= link_to "Delete", admin_semester_path(semester), method: :delete, class: 'button' %></td>
+      <td><%= link_to "Edit", edit_admin_semester_path(semester), class: 'button',
+          id: "edit-" + semester.season + "-" + semester.year %></td>
+      <td><%= link_to "Delete", admin_semester_path(semester), method: :delete, class: 'button',
+          id: "delete-" + semester.season + "-" + semester.year %></td>
     </tr>
   <% end %>
 </table>

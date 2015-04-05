@@ -3,6 +3,7 @@ $block-height: 300px;
 .projects-background { 
   width: 100%;
   background-color: #eaeaea;
+  height: 1500px;
 }
 
 .projects-section {
@@ -42,6 +43,7 @@ $block-height: 300px;
   @extend .row;
 
   .project-expand {
+    display: none;
     overflow: hidden;
     width: 100%;
     padding-bottom: 32px;
@@ -106,6 +108,7 @@ $block-height: 300px;
     @extend .small-12;
     @extend .medium-8;
     @extend .large-8;
+    position: relative;
     height: $block-height;
     background-color: white;
     border-radius: 0px 2px 2px 0px;
@@ -164,6 +167,19 @@ $block-height: 300px;
       margin: 0px 2px 4px 0px;
       background-color: #FF7E79;
     }
+  }
+  .project-see-more {
+    position: absolute;
+    bottom: 24px;
+    right: 20px; 
+    height: 24px;
+    width: 24px;
+    background-size: cover;
+    background-image: image-url("projects/see-more.png");
+    opacity: .5;
+  }
+  .project-see-more:hover{
+    opacity: 1.0;
   }
 }
 .projects-banner {

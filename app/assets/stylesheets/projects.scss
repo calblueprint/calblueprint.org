@@ -11,29 +11,109 @@ $block-height: 300px;
   @extend .small-centered;
 }
 
+/* start da css for da buttons */
+.demo-btn {
+  display: block;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 22px;
+  color: #fff;
+  width: 75%;
+  margin: 48px auto;
+}
+
+.demo-btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.demo-btn-color {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.demo-btn-color:hover {
+  background-color: #6FC6FF;
+  color: #fff;
+}
+
 .project {
   @extend .row;
 
+  .project-expand {
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 32px;
+    background-color: #F6F7F8;
+    border-color: #D0D1D5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-right-width: 1px;
+    border-right-style: solid;
+
+    .project-expand-section {
+      @extend .columns;
+      @extend .small-12;
+      @extend .medium-4;
+      @extend .large-4;
+
+      .project-expand-section-icon {
+        background-size: cover;
+        height: 32px;
+        width: 32px;
+        margin: 24px auto 12px;
+      }
+      .project-expand-section-text {
+        color: #565a5c;
+        text-align: justify;
+        text-indent: 16px;
+        width: 80%;
+        line-height: 20px;
+        font-size: 14px;
+        margin: 0px auto;
+      }
+
+      .problem-icon {
+        @extend .project-expand-section-icon;
+        background-image: image-url("projects/problem.png");
+      }
+      .solution-icon {
+        @extend .project-expand-section-icon;
+        background-image: image-url("projects/solution.png");
+      }
+      .demo-icon {
+        @extend .project-expand-section-icon;
+        background-image: image-url("projects/demo.png");
+      }
+    }
+  } 
   .project-image {
     @extend .columns;
     @extend .small-12;
     @extend .medium-4;
-    @extend .large-5;
+    @extend .large-4;
     height: $block-height;
     background-size: cover;
-    box-shadow: 2px 2px 1px #CCCCCC;
     border-radius: 2px 0px 0px 2px;
+    border-color: #D0D1D5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
   }
 
   .project-card {
     @extend .columns;
     @extend .small-12;
     @extend .medium-8;
-    @extend .large-7;
+    @extend .large-8;
     height: $block-height;
     background-color: white;
-    box-shadow: 2px 2px 1px #CCCCCC;
     border-radius: 0px 2px 2px 0px;
+    border-color: #D0D1D5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-right-width: 1px;
+    border-right-style: solid;
 
     .project-card-text {
       color: #565a5c;
@@ -64,6 +144,8 @@ $block-height: 300px;
       margin-left: 4px;
     }
     .project-member-image {
+      background-image: image-url("projects/wonjun.jpg");
+      background-size: cover;
       display: inline-block;
       height: 48px;
       width: 48px;

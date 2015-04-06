@@ -13,6 +13,7 @@
   <%= link_to "About", about_path, class: "header-tab" %>
   <% if current_admin %>
     <%= link_to "Applications", admin_apps_path, class: "header-tab" %>
+    <%= link_to "Members", admin_members_path, class: "header-tab" %>
   <% end %>
   <%= link_to "", root_path, class: "header-logo" %>
 </div>

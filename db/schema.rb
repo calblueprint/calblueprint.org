@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308033616) do
+ActiveRecord::Schema.define(version: 20150317010432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,11 +57,12 @@ ActiveRecord::Schema.define(version: 20150308033616) do
   create_table "apps", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "year"
     t.integer  "applicant_id"
+    t.integer  "semester_id"
   end
 
   add_index "apps", ["applicant_id"], name: "index_apps_on_applicant_id", using: :btree
+  add_index "apps", ["semester_id"], name: "index_apps_on_semester_id", using: :btree
 
   create_table "contact_forms", force: true do |t|
     t.datetime "created_at"
@@ -99,6 +100,17 @@ ActiveRecord::Schema.define(version: 20150308033616) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "semester_id"
+  end
+
+  add_index "projects", ["semester_id"], name: "index_projects_on_semester_id", using: :btree
+
+  create_table "semesters", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "season"
+    t.string   "year"
+    t.boolean  "is_current_semester", default: false
   end
 
 end

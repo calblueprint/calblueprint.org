@@ -8,10 +8,12 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
+semester = Semester.create! season: 'spring', year: '2013', is_current_semester: true
+
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
-applicant.apps.create! year: '2015'
-applicant.apps.create! year: '1999'
+applicant.apps.create! semester: semester
+applicant.apps.create! semester: semester
 
 Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com'
 Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com'

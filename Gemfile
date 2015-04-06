@@ -20,6 +20,7 @@ gem 'gon', '~> 5.2.3'
 gem 'kaminari', '~> 0.16.1'
 gem 'email_validator', '~> 1.4.0'
 gem 'recipient_interceptor', '~> 0.1.2'
+gem 'enumerize'
 
 # Frontend
 gem 'sass-rails', '~> 4.0.3'

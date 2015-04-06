@@ -1,10 +1,20 @@
 .about-banner {
   @extend .banner;
-  height: 350px;
-  background: url(<%= image_path 'about/about.jpg' %>);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 40%;
+  height: 500px;
+  @include background(linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("about/about.jpg"));
+  background-size:cover;
+  background-repeat: no-repeat; 
+  background-position-y: 25%;
+  @include animation(FadeIn 2.0s ease-in);
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .about-mission-block {
@@ -18,10 +28,13 @@
 }
 
 .about-detail-block {
+  background: $light-gray;
   .about-value {
     @extend .center;
     .icon-wrapper {
       color: $blue;
+      width: 80%;
+      margin: auto;
     }
     p {
       margin: 0;
@@ -29,13 +42,16 @@
   }
 }
 
+.about-title {
+  padding-top: 30px;
+}
+
 .about-team-block {
   @extend .center;
   ul.team-pictures {
-    padding: 0;
-    margin: 0;
     li {
-      padding: 2px;
+      padding-bottom: 0px;
+      padding-left: 0px;
       a {
         height: 100%;
         display: inline-block;
@@ -50,7 +66,6 @@
         }
         &:hover {
           .member-description {
-            text-shadow: 0 0 4px #000000;
             color: #FFFFFF;
           }
         }
@@ -60,15 +75,17 @@
 }
 
 .about-sponsor-block {
+  background: #666;
   h2.sponsor-title {
     @extend .center;
+    color: $light-gray;
   }
 
   ul.sponsor-list {
     padding: 0;
     li.sponsor-item {
       @extend .center;
-      padding: 0;
+      padding: 15px;
       display: inline-block;
       height: 150px;
       font: 0/0 a;
@@ -88,6 +105,200 @@
         }
       }
     }
+  }
+
+}
+
+.hover-icon {
+  position:relative;
+}
+
+.hover-icon img {
+  position: absolute;
+  left: 0;
+  @include transition(opacity 0.3s ease-in-out);
+}
+
+.hover-icon img.icon-top:hover {
+  opacity: 0;
+}
+
+/** NAVIGATION ARROWS */
+
+.nav-circlepop {
+  position: relative;
+}
+
+.nav-circlepop a {
+  margin: 0 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-circlepop a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fff;
+  content: '';
+  opacity: 0;
+  @include transition(transform 0.3s);
+  @include transition(opacity 0.3s);
+  @include transform(scale(0.9));
+}
+
+.nav-circlepop .icon-wrap {
+  position: relative;
+  display: block;
+  margin: 32% 0 0 33%;
+  width: 80%;
+  height: 80%;
+}
+
+.nav-circlepop a.next .icon-wrap {
+  @include transform(rotate(90deg));
+}
+
+.nav-circlepop .icon-wrap::before,
+.nav-circlepop .icon-wrap::after {
+  position: absolute;
+  left: 25%;
+  width: 3px;
+  height: 50%;
+  background: #fff;
+  content: '';
+  @include transition(transform 0.3s);
+  @include transition-property(background-color 0.3s);
+  @include backface-visibility(hidden);
+}
+
+.nav-circlepop .icon-wrap::before {
+  @include transform(translateX(-50%) rotate(-60deg));
+  @include transform-origin(0 100%);
+}
+
+.nav-circlepop .icon-wrap::after {
+  top: 50%;
+  @include transform(translateX(-50%) rotate(-120deg));
+  @include transform-origin(0 0);
+}
+
+.nav-circlepop a:hover::before {
+  opacity: 1;
+  @include transform(scale(1));
+}
+
+.nav-circlepop a:hover .icon-wrap::before,
+.nav-circlepop a:hover .icon-wrap::after {
+  background: $blue;
+}
+
+.nav-circlepop a:hover .icon-wrap::before {
+  @include transform(translateX(-50%) rotate(-45deg));
+}
+
+.nav-circlepop a:hover .icon-wrap::after {
+  @include transform(translateX(-50%) rotate(-135deg));
+}
+
+nav a {
+  position: absolute;
+  top: 50%;
+  display: block;
+  outline: none;
+  text-align: left;
+  z-index: 1000;
+  @include transform(translateY(-100%));
+}
+
+nav a.prev {
+  left: 0;
+}
+
+nav a.next {
+  right: 0;
+}
+
+nav a svg {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/** SADIE EFFECTS TEST */
+
+figure.effect-sadie figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include background(linear-gradient(top, rgba(71,125,202,0.5) 0%, rgba(71,125,202,0.5) 75%));
+  content: '';
+  opacity: 0;
+}
+
+figure.effect-sadie figcaption::before,
+figure.effect-sadie .member-description {
+  @include transition(opacity 0.35s, transform 0.35s);
+}
+
+figure.effect-sadie .member-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  @include transform(translate3d(0,10px,0));
+}
+
+figure.effect-sadie:hover .member-description {
+  color: #ffffff;
+  @include transform(translate3d(0,-50%,0) translate3d(0,-40px,0));
+}
+
+figure.effect-sadie:hover figcaption::before ,
+figure.effect-sadie:hover .member-description {
+  opacity: 1;
+  @include transform(translate3d(0,0,0));
+}
+
+
+/* SVG wrap */
+.svg-wrap {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+.nav-arrow {
+  position: relative;
+  padding-left: 45%;
+  padding-top: 27%;
+}
+
+@media only screen and (max-width: 64.063em) {
+  .nav-arrow {
+    display: none;
+  }
+  figure.effect-sadie figcaption {
+    display: none;
+  }
+
+  .hover-icon img {
+    position: relative;
+    left: 0;
+  }
+  .hover-icon .icon-bottom {
+    display: none;
+  }
+  .hover-icon img.icon-top:hover {
+    opacity: 1;
   }
 
 }

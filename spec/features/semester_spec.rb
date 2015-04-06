@@ -1,9 +1,19 @@
 require "rails_helper"
 
+def fill_in_semester(season, year, is_current_semester=false)
+  visit new_admin_semester_path
+  select season, from: "Season:"
+  fill_in "Year", with: year
+  check "Current Semester" if is_current_semester
+end
+
 RSpec.describe "Semester" do
+  let(:app) { create :app }
+  let!(:semester_empty) { create :semester, season: "spring", year: "test_empty", is_current_semester: true }
+  let!(:semester_nonempty) { create :semester, season: "spring", year: "test_nonempty", is_current_semester: true, apps: [app] }
+
   before do
-    admin = FactoryGirl.create(:admin, first_name: 'Kevin',
-      last_name: 'Admin', email: 'kevin@admin.com', password: 'password')
+    admin = create :admin
     sign_in admin
     expect(page).to have_content "Signed in successfully."
   end
@@ -13,84 +23,60 @@ RSpec.describe "Semester" do
   describe "without filling in semester details" do
     before { visit new_admin_semester_path }
     it "renders back form with errors" do
-      click_button "Create Semester"
+      expect { click_button "Create Semester" }.not_to change { Semester.count }
       expect(page).to have_content "can't be blank"
     end
   end
 
   describe "after filling in semester details" do
-    before { fill_in_semester("Spring", "test1") }
+    before { fill_in_semester "Spring", "test_new" }
     it "redirects to semesters page on submit" do
-      click_button "Create Semester"
-      expect(page).to have_content "test1"
+      expect { click_button "Create Semester" }.to change { Semester.count }.by 1
+      expect(page).to have_content "test_new"
     end
   end
 
   describe "after creating a duplicate semester" do
-    before do
-      fill_in_semester("Spring", "test2")
-      click_button "Create Semester"
-      fill_in_semester("Spring", "test2")
-    end
-
+    before { fill_in_semester "Spring", "test_nonempty", true }
     it "renders back form with errors" do
-      click_button "Create Semester"
+      expect { click_button "Create Semester" }.not_to change { Semester.count }
       expect(page).to have_content "has already been taken"
     end
   end
 
-  describe "after delete attempt on non-empty semester" do
-    before do
-      app = build :app
-      semester = create :semester
-      semester.year = "test3"
-      semester.apps << app
-      semester.save
-      visit admin_semesters_path
+  describe "after delete" do
+    context "non-empty semester" do
+      before { visit admin_semesters_path }
+      it "renders back page with nothing" do
+        expect { click_link "delete-spring-test_nonempty" }.not_to change { Semester.count }
+      end
     end
 
-    it "renders back page with nothing" do
-      expect(page).to have_content "test3"
-      click_link "delete-spring-test3"
-      expect(page).to have_content "test3"
-    end
-  end
-
-  describe "after delete attempt on empty semester" do
-    before do
-      fill_in_semester("Spring", "test4")
-      click_button "Create Semester"
-      visit admin_semesters_path
-    end
-
-    it "renders back page without deleted semester" do
-      expect(page).to have_content "test4"
-      click_link "delete-spring-test4"
-      expect(page).not_to have_content "test4"
+    context "empty semester" do
+      before { visit admin_semesters_path }
+      it "renders back page without deleted semester" do
+        expect { click_link "delete-spring-test_empty" }.to change { Semester.count }.by -1
+      end
     end
   end
 
   describe "after creating new current semester" do
     before do
       visit new_admin_semester_path
-      fill_in_semester("Spring", "test5", true)
-      click_button "Create Semester"
-
-      visit new_admin_semester_path
-      fill_in_semester("Spring", "test6", true)
+      fill_in_semester "Spring", "test_current", true
       click_button "Create Semester"
     end
 
     it "checks new current semester" do
       visit admin_semesters_path
-      click_link "edit-spring-test6"
+      click_link "edit-spring-test_current"
       box = find_by_id "is_current_semester"
       expect(box.checked?).to eq "checked"
     end
 
     it "unchecks old current semester" do
       visit admin_semesters_path
-      click_link "edit-spring-test5"
+      click_link "edit-spring-test_nonempty"
       box = find_by_id "is_current_semester"
       expect(box.checked?).to eq nil
     end

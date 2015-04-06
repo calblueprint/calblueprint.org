@@ -1,7 +1,7 @@
 <div class="small-spacer"></div>
 
 <div class="about-banner">
-  <h1 class="white h0 about-title">About Us</h1>
+  <h1 class="white h0 about-title"><%= t ".headline" %></h1>
   <div class="nav-arrow">
     <nav class="nav-circlepop">
       <a class="prev" href="#linkto-traits">
@@ -112,18 +112,18 @@
       <ul class="team-pictures medium-block-grid-4 small-block-grid-2">
         <% (1..28).each do |i| %>
           <li class="team-picture-item">
-          <a href="#">
-          <%= image_tag("about/wonjun.jpg") %>
-          <div class="member-description">
-            <div class="name">
-              WONJUN JEONG
-            </div>
-            <div class="position">
-              President
-            </div>
-          </div>
-        </a>
-        </li>
+            <figure class="effect-sadie"> 
+              <a href="#">
+              <%= image_tag("about/wonjun.jpg") %>
+              <figcaption>
+                <div class="member-description">
+                  <div class="name"><b>WONJUN JEONG</b></div>
+                  <div class="position">President</div>
+                </div>
+              </figcaption>
+              </a>
+            </figure>
+          </li>
       <% end %>
       </ul>
     </div>

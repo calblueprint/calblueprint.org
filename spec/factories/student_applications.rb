@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: apps
+# Table name: student_applications
 #
 #  id           :integer          not null, primary key
 #  created_at   :datetime
@@ -10,7 +10,7 @@
 #
 
 FactoryGirl.define do
-  factory :app do
+  factory :student_application do
     applicant
     semester
   end

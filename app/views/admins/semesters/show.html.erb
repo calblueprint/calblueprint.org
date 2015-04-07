@@ -3,7 +3,7 @@
 
 <h1>Apps</h1>
 <table border="1">
-  <% @semester.apps.each do |app| %>
+  <% @semester.student_applications.each do |app| %>
     <tr>
       <td><%= app.applicant.name %></td>
       <td><%= app.applicant.email %></td>

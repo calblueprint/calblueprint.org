@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   namespace :admins, as: :admin do
     resource :dashboard, only: [:show], controller: "dashboard"
     resource :projects
-    resources :apps, only: [:index]
+    resources :student_applications, only: [:index]
     resources :members
     resources :semesters
   end

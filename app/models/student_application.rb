@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: apps
+# Table name: student_applications
 #
 #  id           :integer          not null, primary key
 #  created_at   :datetime
@@ -9,7 +9,7 @@
 #  semester_id  :integer
 #
 
-class App < ActiveRecord::Base
+class StudentApplication < ActiveRecord::Base
   belongs_to :applicant
   belongs_to :semester
 

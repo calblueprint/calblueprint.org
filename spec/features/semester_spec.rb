@@ -1,6 +1,6 @@
 require "rails_helper"
 
-def fill_in_semester(season, year, is_current_semester=false)
+def fill_in_semester(season, year, is_current_semester = false)
   visit new_admin_semester_path
   select season, from: "Season:"
   fill_in "Year", with: year
@@ -8,9 +8,9 @@ def fill_in_semester(season, year, is_current_semester=false)
 end
 
 RSpec.describe "Semester" do
-  let(:app) { create :app }
+  let(:student_application) { create :student_application }
   let!(:semester_empty) { create :semester, season: "spring", year: "test_empty", is_current_semester: true }
-  let!(:semester_nonempty) { create :semester, season: "spring", year: "test_nonempty", is_current_semester: true, apps: [app] }
+  let!(:semester_nonempty) { create :semester, season: "spring", year: "test_nonempty", is_current_semester: true, student_applications: [student_application] }
 
   before do
     admin = create :admin
@@ -55,7 +55,7 @@ RSpec.describe "Semester" do
     context "empty semester" do
       before { visit admin_semesters_path }
       it "renders back page without deleted semester" do
-        expect { click_link "delete-spring-test_empty" }.to change { Semester.count }.by -1
+        expect { click_link "delete-spring-test_empty" }.to change { Semester.count }.by (-1)
       end
     end
   end

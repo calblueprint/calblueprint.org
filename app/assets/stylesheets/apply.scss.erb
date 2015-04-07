@@ -1,45 +1,88 @@
+.card-style {
+  background-color: white;
+  box-shadow: 0 0 5px 2px #ddd;
+  border: 1px solid #bbb;
+}
+
 .panel {
-  height: 100vh;
-  text-align:center;
+  top: 0;
+  width:100vw;
+  height:500px;
+  position: fixed;
+  z-index: -1;
+
+  .panel-container-left &, .panel-container-right & {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    @media only screen and (max-width: $medium-screen) {
+      top: initial;
+      width: 100%;
+    }
+  }
+
+  .panel-container-left & {
+    float: left;
+  }
+
+  .panel-container-right & {
+    float: right;
+  }
+}
+
+.panel-container{
   width:100%;
-  min-height:500px;
+  margin-top: -48px;
+  height: 350px;
+  text-align:center;
+  position: static;
+  z-index: 0;
+
+  .title {
+    @extend .h0;
+    color: #FFFFFF;
+    padding-top: 150px;
+  }
+}
+
+.panel-container-left, .panel-container-right {
+  @extend .panel-container;
+  width: 50%;
+  min-height: 100vh;
+
+  @media only screen and (max-width: $medium-screen) {
+    width: 100%;
+  }
+}
+
+.panel-container-left {
+  float: left;
+}
+
+.panel-container-right {
+  float: right;
 }
 
 .nonprofits-bg {
-  background:
-  -webkit-linear-gradient(
-  rgba(255, 255, 255, 0.3),
-  rgba(255, 255, 255, 0.3)
-  ),
-  url(<%= image_path 'apply/nonprofits/nonprofits.jpg' %>);
+  @include background-image(
+    linear-gradient(
+      rgba(50, 50, 50, 0.4),
+      rgba(50, 50, 50, 0.4)
+    ),
+    image-url('apply/nonprofits/nonprofits.jpg')
+  );
   background-size:cover;
 }
 
 .students-bg {
-  background:
-  -webkit-linear-gradient(
-  rgba(27, 117, 188, 0.3),
-  rgba(27, 117, 188, 0.3)
-  ),
-  url(<%= image_path 'apply/students/students.jpg' %>);
+  @include background-image(
+    linear-gradient(
+      rgba(27, 117, 188, 0.4),
+      rgba(27, 117, 188, 0.4)
+    ),
+    image-url('apply/students/students.jpg')
+  );
   background-size:cover;
-}
-
-#left-panel, #right-panel {
-    height: 100vh;
-    text-align:center;
-    width: 50%;
-    @media only screen and (max-width: 45em) {
-        width: 100%;
-    }
-}
-
-#left-panel {
-    float: left;
-}
-
-#right-panel {
-    float: right;
 }
 
 #left-title, #right-title {
@@ -56,38 +99,127 @@
     font-weight: 400;
 }
 
-.decision-criteria {
-  padding-left:50px;
-  p, h4 {
-    text-align:left;
+#hook {
+  text-align: left;
+}
+
+#apply-button {
+  text-align: center;
+}
+
+.submenu {
+  list-style:none;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0;
+    border-left: 1px solid #AAA;
+    border-bottom: 5px solid rgba($blue, 0);
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:first-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: #DDDDDD;
+      border-bottom: 5px solid rgba($blue, 1);
+    }
   }
 }
 
-.blue-block {
-  padding: 25px 10px;
-  background-color: $blue;
-  color:#fff;
-  &.text-center {
-    text-align:center;
+.title-column {
+  @extend .large-3;
+  @extend .medium-4;
+  @extend .small-12;
+  @extend .columns;
+  text-align: right;
+
+  h1 {
+    text-align: right;
   }
+
+  @media only screen and (max-width: $medium-screen) {
+    text-align: center;
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.content-column {
+  @extend .large-9;
+  @extend .medium-8;
+  @extend .small-12;
+  @extend .columns;
+  border-left: 1px solid #CCC;
+  text-align: left;
+  padding-left: 50px;
+
+  p, h4, h5 {
+    text-align: left;
+  }
+
+  @media only screen and (max-width: $medium-screen) {
+    border: none;
+    border-top: 1px solid #CCC;
+  }
+
+  .timeline-vertical {
+    margin-left: 60px;
+  }
+}
+
+.quote-block {
+  padding: 25px 15px;
+  background-color: #E5E5E5;
+  border: 1px solid #CCC;
+
   q {
-    color:#fff;
-    font-size: 1.8em;
+    font-size: 1.4em;
     padding: 0 15px;
   }
+
   .reference {
     text-align:right;
+    font-style: italic;
     padding: 0 10px;
+    margin-top: 10px;
   }
 }
 
-.faq {
-  p, h4 {
-    text-align: left;
+.timeline-slim {
+  @include timeline-vertical;
+  margin: 10px 10px;
+
+  .timeline-content {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+#faq {
+  h5 {
+    cursor: pointer;
+    line-height:2.3em;
   }
 }
 
 .white-button {
   @extend button;
   border: 1px solid #fff;
+}
+
+.white-bg {
+  background-color: #FFFFFF;
+}
+
+.gray-bg {
+  background-color: #ECECEC;
+  border-top: 1px solid #CCC;
 }

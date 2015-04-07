@@ -1,66 +1,98 @@
-<div class="about-banner"></div>
+<div class="small-spacer"></div>
 
-<div class="spacer"></div>
+<div class="about-banner">
+  <h1 class="white h0 about-title"><%= t ".headline" %></h1>
+  <div class="nav-arrow">
+    <nav class="nav-circlepop">
+      <a class="prev" href="#linkto-traits">
+        <span class="icon-wrap"></span>
+      </a>
+    </nav>
+  </div>
+</div>
 
 <div class="about-mission-block">
   <div class="row">
     <div class="small-10 small-centered columns">
-      <h1 class="about-title"><%= t ".headline" %></h1>
       <div class="spacer-small"></div>
-      <p class="mission"><%= t ".mission" %></p>
+      <p class="mission">Blueprint's mission is to make <span style="color:#477DCA">beautiful engineering</span> accessible and useful for those who create communities and promote public welfare.</p>
+      <div class="spacer-small"></div>
     </div>
   </div>
 </div>
 
-
 <div class="about-detail-block">
+  <a class="prev" id="linkto-traits"></a>
   <div class="row">
     <div class="medium-4 columns">
       <div class="spacer"></div>
       <div class="about-value">
         <div class="icon-wrapper">
-          <p>
-            BANGIN<br>
-            ICON<br>
-            HERE
-          </p>
+          <div class="hover-icon">
+            <%= image_tag("about/craft-hover.png", class: "icon-bottom") %>
+            <%= image_tag("about/craft.png", class: "icon-top") %>
+          </div>
         </div>
-        <h2><%= t ".values.craft.title" %></h2>
         <div class="spacer-small"></div>
+      </div>
+    </div>
+    <div class="medium-8 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+        <div class="spacer"></div>
         <p><%= t ".values.craft.description" %></p>
-      </div>
-    </div>
-    <div class="medium-4 columns">
-      <div class="spacer"></div>
-      <div class="about-value">
-        <div class="icon-wrapper">
-          <p>
-            BANGIN<br>
-            ICON<br>
-            HERE
-          </p>
-        </div>
-        <h2><%= t ".values.culture.title" %></h2>
         <div class="spacer-small"></div>
-        <p><%= t ".values.culture.description" %></p>
-      </div>
-    </div>
-    <div class="medium-4 columns">
-      <div class="spacer"></div>
-      <div class="about-value">
-        <div class="icon-wrapper">
-          <p>
-            BANGIN<br>
-            ICON<br>
-            HERE
-          </p>
-        </div>
-        <h2><%= t ".values.heart.title" %></h2>
-        <div class="spacer-small"></div>
-        <p><%= t ".values.heart.description" %></p>
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="medium-8 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+      <div class="spacer"></div>
+        <p><%= t ".values.culture.description" %></p>
+        <div class="spacer"></div>
+      </div>
+    </div>
+    <div class="medium-4 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+        <div class="icon-wrapper">
+          <div class="hover-icon">
+            <%= image_tag("about/culture-hover.png", class: "icon-bottom") %>
+            <%= image_tag("about/culture.png", class: "icon-top") %>
+          </div>
+        </div>
+        <div class="spacer-small"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-4 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+        <div class="icon-wrapper">
+          <div class="hover-icon">
+            <%= image_tag("about/heart-hover.png", class: "icon-bottom") %>
+            <%= image_tag("about/heart.png", class: "icon-top") %>
+          </div>
+        </div>
+        <div class="spacer-small"></div>
+      </div>
+    </div>
+    <div class="medium-8 columns">
+      <div class="spacer"></div>
+      <div class="about-value">
+        <div class="spacer"></div>
+        <p><%= t ".values.heart.description" %></p>
+        <div class="spacer-small"></div>
+      </div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
 </div>
 
 <div class="spacer"></div>
@@ -76,21 +108,21 @@
   <div class="spacer-small"></div>
   <div class="row">
     <div class="small-12 small-centered columns">
-      <ul class="team-pictures medium-block-grid-6 small-block-grid-3">
-        <% (1..30).each do |i| %>
+      <ul class="team-pictures medium-block-grid-4 small-block-grid-2">
+        <% (1..28).each do |i| %>
           <li class="team-picture-item">
-        <a href="#">
-          <%= image_tag("about/wonjun.jpg") %>
-          <div class="member-description">
-            <div class="name">
-              Wonjun Jeong
-            </div>
-            <div class="position">
-              President
-            </div>
-          </div>
-        </a>
-        </li>
+            <figure class="effect-sadie"> 
+              <a href="#">
+              <%= image_tag("about/wonjun.jpg") %>
+              <figcaption>
+                <div class="member-description">
+                  <div class="name"><b>WONJUN JEONG</b></div>
+                  <div class="position">President</div>
+                </div>
+              </figcaption>
+              </a>
+            </figure>
+          </li>
       <% end %>
       </ul>
     </div>
@@ -102,53 +134,50 @@
 <div class="about-sponsor-block">
   <div class="row">
     <div class="small-12 small-centered columns">
-      <h2 class="sponsor-title"><%= t ".sponsors.title" %></h2>
-      <div class="spacer-small"></div>
-      <ul class="sponsor-list large-block-grid-4 medium-block-grid-2 small-block-grid-1">
+      <div class="spacer-small"></div>    
+      <!-- <h2 class="sponsor-title"><%= t ".sponsors.title" %></h2> -->
+      <ul class="sponsor-list large-block-grid-8 medium-block-grid-4 small-block-grid-1">
         <li class="sponsor-item ">
-        <a href="#">
-          <%= image_tag("about/logo-palantir.png") %>
+        <a href="https://www.palantir.com/">
+          <%= image_tag("about/logo-palantir-bw.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
-          <%= image_tag("about/logo-github.png") %>
+        <a href="https://github.com/">
+          <%= image_tag("about/logo-github-bw.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
-          <%= image_tag("about/logo-atlassian.png") %>
+        <a href="https://www.atlassian.com/">
+          <%= image_tag("about/logo-atlassian-bw.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
-          <%= image_tag("about/logo-heroku.jpg") %>
+        <a href="https://www.heroku.com/">
+          <%= image_tag("about/logo-heroku-bw.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
-          <%= image_tag("about/logo-intel.png") %>
+        <a href="http://www.intel.com/content/www/us/en/homepage.html">
+          <%= image_tag("about/logo-intel-bw.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
-          <%= image_tag("about/logo-microsoft.png") %>
+        <a href="http://www.microsoft.com/en-us/default.aspx">
+          <%= image_tag("about/logo-microsoft-bw.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
-          <%= image_tag("about/logo-salesforce.jpg") %>
+        <a href="http://www.salesforce.com/">
+          <%= image_tag("about/logo-salesforce-bw.png") %>
         </a>
         </li>
         <li class="sponsor-item">
-        <a href="#">
-          <%= image_tag("about/logo-indiegogo.png") %>
+        <a href="https://www.indiegogo.com/">
+          <%= image_tag("about/logo-indiegogo-bw.png") %>
         </a>
         </li>
       </ul>
     </div>
   </div>
 </div>
-
-<div class="spacer"></div>
-

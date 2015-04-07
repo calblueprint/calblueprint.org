@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150302054404) do
+ActiveRecord::Schema.define(version: 20150407023813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,15 +54,6 @@ ActiveRecord::Schema.define(version: 20150302054404) do
 
   add_index "applicants", ["email"], name: "index_applicants_on_email", unique: true, using: :btree
 
-  create_table "apps", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "year"
-    t.integer  "applicant_id"
-  end
-
-  add_index "apps", ["applicant_id"], name: "index_apps_on_applicant_id", using: :btree
-
   create_table "contact_forms", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -82,6 +73,14 @@ ActiveRecord::Schema.define(version: 20150302054404) do
 
   add_index "identities", ["applicant_id"], name: "index_identities_on_applicant_id", using: :btree
 
+  create_table "members", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "email"
+  end
+
   create_table "projects", force: true do |t|
     t.string   "title"
     t.string   "short_summary"
@@ -91,6 +90,27 @@ ActiveRecord::Schema.define(version: 20150302054404) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "semester_id"
   end
+
+  add_index "projects", ["semester_id"], name: "index_projects_on_semester_id", using: :btree
+
+  create_table "semesters", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "season"
+    t.string   "year"
+    t.boolean  "is_current_semester", default: false
+  end
+
+  create_table "student_applications", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "applicant_id"
+    t.integer  "semester_id"
+  end
+
+  add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree
+  add_index "student_applications", ["semester_id"], name: "index_student_applications_on_semester_id", using: :btree
 
 end

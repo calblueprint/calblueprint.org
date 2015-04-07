@@ -1,0 +1,14 @@
+<h1><%= link_to "New Member", new_admin_member_path %></h1>
+
+<table border="1">
+  <% @members.each do |member| %>
+    <tr>
+      <td><%= member.last_name %></td>
+      <td><%= member.first_name %></td>
+      <td><%= member.email %></td>
+      <td><%= link_to "View", admin_member_path(member), class: 'button' %></td>
+      <td><%= link_to "Edit", edit_admin_member_path(member), class: 'button' %></td>
+      <td><%= link_to "Delete", admin_member_path(member), method: :delete, class: 'button' %></td>
+    </tr>
+  <% end %>
+</table>

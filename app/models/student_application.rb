@@ -10,6 +10,8 @@
 #
 
 class StudentApplication < ActiveRecord::Base
+  include AssignToCurrentSemester
+
   belongs_to :applicant
   belongs_to :semester
 

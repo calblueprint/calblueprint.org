@@ -1,7 +1,7 @@
 module Admins
-  class AppsController < BaseController
+  class StudentApplicationsController < BaseController
     def index
-      @apps = App.all
+      @student_applications = StudentApplication.all
     end
   end
 end

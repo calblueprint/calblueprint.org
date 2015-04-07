@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: apps
+# Table name: student_applications
 #
 #  id           :integer          not null, primary key
 #  created_at   :datetime
@@ -11,7 +11,7 @@
 
 require 'rails_helper'
 
-RSpec.describe App, type: :model do
+RSpec.describe StudentApplication, type: :model do
   it { should belong_to :applicant }
   it { should belong_to :semester }
   it { should validate_presence_of :applicant_id }

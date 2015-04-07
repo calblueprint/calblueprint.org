@@ -72,6 +72,7 @@ RSpec.describe "Semester" do
       click_link "edit-spring-test_current"
       box = find_by_id "is_current_semester"
       expect(box.checked?).to eq "checked"
+      expect(Semester.current_semester.year).to eq "test_current"
     end
 
     it "unchecks old current semester" do

@@ -15,6 +15,8 @@
 #
 
 class Project < ActiveRecord::Base
+  include AssignToCurrentSemester
+
   belongs_to :semester
 
   validates :semester_id, presence: true

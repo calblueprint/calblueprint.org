@@ -23,6 +23,10 @@ class Semester < ActiveRecord::Base
     ! (student_applications.exists? || projects.exists?)
   end
 
+  def self.current_semester
+    Semester.where("is_current_semester = 'true'").first
+  end
+
   def self.clear_current_semester
     Semester.where('is_current_semester').update_all("is_current_semester = 'false'")
   end

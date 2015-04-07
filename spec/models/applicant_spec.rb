@@ -13,6 +13,7 @@
 
 require 'rails_helper'
 
+# rubocop:disable Metrics/AbcSize
 def it_returns_applicant_hit
   it "returns the applicant" do
     expect(Applicant.find_for_oauth(create(:auth), applicant)).to eql applicant

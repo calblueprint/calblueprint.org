@@ -1,0 +1,11 @@
+<%= simple_form_for @student_application do |f| %>
+  <div class="row">
+    <%= f.input :why_join %>
+    <div class="spacer-small"></div>
+  </div>
+  <div class="row">
+    <div class="submit">
+      <%= f.button :submit, 'Submit!' %>
+    </div>
+  </div>
+<% end %>

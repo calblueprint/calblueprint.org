@@ -7,11 +7,13 @@
 #  updated_at   :datetime
 #  applicant_id :integer
 #  semester_id  :integer
+#  why_join     :text
 #
 
 FactoryGirl.define do
   factory :student_application do
     applicant
     semester
+    why_join "I love Blueprint"
   end
 end

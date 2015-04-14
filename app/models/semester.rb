@@ -23,6 +23,10 @@ class Semester < ActiveRecord::Base
     ! (student_applications.exists? || projects.exists?)
   end
 
+  def application_exists(applicant)
+    student_applications.where(applicant: applicant).present?
+  end
+
   def self.current_semester
     where(is_current_semester: true).first
   end

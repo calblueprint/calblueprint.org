@@ -19,6 +19,9 @@ class Applicant < ActiveRecord::Base
 
   validates :name, presence: true
 
+  def applied_for?(semester)
+    student_applications.where(semester: semester).present?
+  end
   # http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/
   def self.find_for_oauth(auth, signed_in_resource = nil)
     # Get the identity if exists

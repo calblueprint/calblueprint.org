@@ -2,7 +2,7 @@ module AssignToCurrentSemester
   extend ActiveSupport::Concern
 
   included do
-    before_create :assign_to_current_semester
+    before_validation :assign_to_current_semester, on: :create
   end
 
   def assign_to_current_semester

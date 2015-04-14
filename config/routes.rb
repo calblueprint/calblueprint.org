@@ -28,5 +28,12 @@ Rails.application.routes.draw do
     resources :student_applications, only: [:index]
     resources :members
     resources :semesters
+
+    resources :final_decisions, shallow: true, only: [] do
+      member do
+        post :approve
+        post :reject
+      end
+    end
   end
 end

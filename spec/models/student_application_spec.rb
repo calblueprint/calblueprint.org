@@ -12,8 +12,17 @@
 require 'rails_helper'
 
 RSpec.describe StudentApplication, type: :model do
+  it { should have_one :final_decision }
   it { should belong_to :applicant }
   it { should belong_to :semester }
   it { should validate_presence_of :applicant_id }
   it { should validate_presence_of :semester_id }
+
+  describe "on create" do
+    let(:student_application) { create :student_application }
+
+    it "also creates a final decision" do
+      expect(student_application.final_decision).not_to be nil
+    end
+  end
 end

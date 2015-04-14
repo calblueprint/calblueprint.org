@@ -43,7 +43,7 @@ module Admins
       if @semester.can_be_destroyed?
         @semester.destroy
       else
-        # TODO: display 'cannot delete' error
+        flash[:warning] = "Cannot delete semester"
       end
       redirect_to admin_semesters_path
     end

@@ -1,11 +1,33 @@
-<table border="1">
-  <% @student_applications.each do |app| %>
-    <tr>
-      <td><%= app.applicant.name %></td>
-      <td><%= app.applicant.email %></td>
-      <td><%= app.semester.season %></td>
-      <td><%= app.semester.year %></td>
-      <td><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Semester</th>
+          <th>Year</th>
+          <th>Actions</th>
+          <th>Decision</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @student_applications.each do |app| %>
+          <tr>
+            <td><%= app.applicant.name %></td>
+            <td><%= app.applicant.email %></td>
+            <td><%= app.semester.season %></td>
+            <td><%= app.semester.year %></td>
+            <td><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
+            <td>
+              <%= link_to "Accept", approve_admin_final_decision_path(app.final_decision), method: :post, class: "decision-button" %>
+              <div class="spacer-small"></div>
+              <%= link_to "Reject", reject_admin_final_decision_path(app.final_decision), method: :post, class: "decision-button" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div> 
+</div>
+  

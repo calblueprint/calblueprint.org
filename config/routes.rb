@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     resource :projects
     resources :student_applications, only: [:index]
     resources :members
+    resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters
   end
 end

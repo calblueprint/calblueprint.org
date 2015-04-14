@@ -49,6 +49,7 @@ RSpec.describe "Semester" do
       before { visit admin_semesters_path }
       it "renders back page with nothing" do
         expect { click_link "delete-spring-nonempty" }.not_to change { Semester.count }
+        expect(page).to have_content "Cannot delete semester if the semester has applications or projects."
       end
     end
 

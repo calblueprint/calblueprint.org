@@ -48,6 +48,7 @@ RSpec.describe "Member Role" do
       before { visit admin_member_roles_path }
       it "renders back page with no changes" do
         expect { click_link "delete-nonempty_role" }.not_to change { MemberRole.count }
+        expect(page).to have_content "Cannot delete member role if the role has members."
       end
     end
 

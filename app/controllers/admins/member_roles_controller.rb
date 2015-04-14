@@ -22,7 +22,8 @@ module Admins
       if @member_role.can_be_destroyed?
         @member_role.destroy
       else
-        # TODO: display 'cannot delete' error
+        flash[:error] = "Cannot delete member role if the role has members. "\
+          "Please reassign members before deleting this member role."
       end
       redirect_to admin_member_roles_path
     end

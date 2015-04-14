@@ -43,8 +43,8 @@ module Admins
       if @semester.can_be_destroyed?
         @semester.destroy
       else
-        # TODO: display 'cannot delete' error
-      end
+        flash[:error] = "Cannot delete semester if the semester has applications or projects. "\
+          "Please reassign applications and projects before deleting this semester."      end
       redirect_to admin_semesters_path
     end
 

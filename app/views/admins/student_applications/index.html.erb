@@ -20,9 +20,10 @@
             <td><%= app.semester.year %></td>
             <td><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
             <td>
-              <%= link_to "Accept", approve_admin_final_decision_path(app.final_decision), method: :post, class: "decision-button" %>
+
+              <%= link_to "Accept", approve_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.admitted)] %>
               <div class="spacer-small"></div>
-              <%= link_to "Reject", reject_admin_final_decision_path(app.final_decision), method: :post, class: "decision-button" %>
+              <%= link_to "Reject", reject_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.admitted == false)] %>
             </td>
           </tr>
         <% end %>

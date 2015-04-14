@@ -3,4 +3,14 @@ module ApplicationHelper
     gravatar_hash = Digest::MD5.hexdigest(email).downcase
     "http://gravatar.com/avatar/#{gravatar_hash}.png"
   end
+
+  def class_if?(klass, exp)
+    exp ? klass : nil
+  end
+
+
+
+  def selected_if?(exp)
+    class_if? "selected", exp
+  end
 end

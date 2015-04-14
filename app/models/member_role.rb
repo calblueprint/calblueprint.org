@@ -19,6 +19,6 @@ class MemberRole < ActiveRecord::Base
   end
 
   def can_be_destroyed?
-    ! members.exists?
+    !members.exists?
   end
 end

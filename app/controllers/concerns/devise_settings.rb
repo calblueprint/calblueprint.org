@@ -10,7 +10,7 @@ module DeviseSettings
 
   # Lets cancancan grab user
   def current_user
-    current_admin || current_applicant
+    current_admin || current_applicant || current_nonprofit
   end
 
   def destroy_user_session_path
@@ -18,6 +18,8 @@ module DeviseSettings
       destroy_admin_session_path
     elsif current_applicant
       destroy_applicant_session_path
+    elsif current_nonprofit
+      destroy_nonprofit_session_path
     end
   end
 
@@ -26,6 +28,8 @@ module DeviseSettings
       admin_dashboard_path
     elsif user.is_a? Applicant
       students_apply_path
+    elsif user.is_a? Nonprofit
+      nonprofits_apply_path
     else
       fail 'Bad user!'
     end

@@ -4,7 +4,11 @@
   <p class="white subtitle" id="left-subtitle">
       Partnering with Blueprint is a fantastic way to build the perfect application to suit your organization's needs.
   </p>
-  <div class="button" id="right-button">Apply Now</div>
+  <% if nonprofit_signed_in? %>
+    <%= link_to "Apply Now", nonprofits_apply_path, class: "button", id: "right-button" %>
+  <% else %>
+    <%= link_to "Apply Now", new_nonprofit_registration_path, class: "button", id: "right-button" %>
+  <% end %>
   <%= link_to "Learn More", nonprofits_apply_path, class: "button" %>
 </div>
 

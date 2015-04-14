@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :nonprofits
   root to: "pages#home"
 
   # Static pages

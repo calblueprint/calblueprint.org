@@ -15,6 +15,7 @@ class Semester < ActiveRecord::Base
   enumerize :season, in: [:fall, :spring]
 
   has_many :student_applications
+  has_many :nonprofit_applications
   has_many :projects
 
   validates :year, uniqueness: { scope: [:season] }, presence: true

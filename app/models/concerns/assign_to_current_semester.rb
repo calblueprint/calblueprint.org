@@ -6,6 +6,6 @@ module AssignToCurrentSemester
   end
 
   def assign_to_current_semester
-    self.semester = Semester.current_semester
+    self.semester = Semester.current_semester unless semester.present?
   end
 end

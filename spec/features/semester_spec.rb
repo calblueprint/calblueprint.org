@@ -55,7 +55,7 @@ RSpec.describe "Semester" do
     context "empty semester" do
       before { visit admin_semesters_path }
       it "renders back page without deleted semester" do
-        expect { click_link "delete-spring-test_empty" }.to change { Semester.count }.by (-1)
+        expect { click_link "delete-spring-test_empty" }.to change { Semester.count }.by(-1)
       end
     end
   end

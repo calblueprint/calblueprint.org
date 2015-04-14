@@ -8,7 +8,6 @@ class StudentApplicationsController < ApplicationController
 
   def create
     @student_application = current_user.student_applications.create student_application_params
-    @student_application.save!
     if @student_application.save
       redirect_to students_apply_path, flash: { success: "You have"\
         " successfully submitted an application. You will receive an email shortly." }

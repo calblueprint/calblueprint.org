@@ -17,4 +17,5 @@ class Member < ActiveRecord::Base
   validates :last_name, presence: true
   validates :first_name, presence: true
   validates :email, presence: true
+  validates :member_role_id, presence: true
 end

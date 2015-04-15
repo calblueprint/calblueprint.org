@@ -16,5 +16,6 @@ FactoryGirl.define do
     sequence(:last_name) { |n| "#{n}" }
     sequence(:email) { |n| "member#{n}@gmail.com" }
     first_name "Member"
+    member_role
   end
 end

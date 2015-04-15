@@ -10,6 +10,6 @@
 
 FactoryGirl.define do
   factory :member_role do
-    role "Factory Role"
+    sequence(:role) { |n| "Factory Role #{n}" }
   end
 end

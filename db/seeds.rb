@@ -8,6 +8,8 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
+role = MemberRole.create! role: "Role"
+
 semester = Semester.create! season: 'spring', year: '2013', is_current_semester: true
 
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
@@ -15,6 +17,6 @@ applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', pass
 applicant.student_applications.create! semester: semester
 applicant.student_applications.create! semester: semester
 
-Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com'
-Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com'
-Member.create! first_name: 'holy', last_name: 'breeze', email: 'hb@gmail.com'
+Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com', member_role: role
+Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com', member_role: role
+Member.create! first_name: 'holy', last_name: 'breeze', email: 'hb@gmail.com', member_role: role

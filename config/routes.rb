@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     get "nonprofits"
   end
 
+  # Nonprofits
+  resources :nonprofit_applications, only: [:new, :create]
+
   # Projects
   resources :projects, only: [:show, :index]
 

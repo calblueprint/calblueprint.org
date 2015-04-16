@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407023813) do
+ActiveRecord::Schema.define(version: 20150414012527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,16 @@ ActiveRecord::Schema.define(version: 20150407023813) do
 
   add_index "applicants", ["email"], name: "index_applicants_on_email", unique: true, using: :btree
 
+  create_table "apps", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "applicant_id"
+    t.integer  "semester_id"
+  end
+
+  add_index "apps", ["applicant_id"], name: "index_apps_on_applicant_id", using: :btree
+  add_index "apps", ["semester_id"], name: "index_apps_on_semester_id", using: :btree
+
   create_table "contact_forms", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -73,13 +83,22 @@ ActiveRecord::Schema.define(version: 20150407023813) do
 
   add_index "identities", ["applicant_id"], name: "index_identities_on_applicant_id", using: :btree
 
+  create_table "member_roles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "role"
+  end
+
   create_table "members", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "last_name"
     t.string   "first_name"
     t.string   "email"
+    t.integer  "member_role_id"
   end
+
+  add_index "members", ["member_role_id"], name: "index_members_on_member_role_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "title"

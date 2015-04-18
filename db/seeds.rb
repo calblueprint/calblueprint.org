@@ -8,13 +8,13 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
-semester = Semester.create! season: 'spring', year: '2013', is_current_semester: true
-
+Semester.create! season: 'spring', year: '2013', is_current_semester: true
+role = MemberRole.create! role: "Role"
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
-applicant.student_applications.create! semester: semester
-applicant.student_applications.create! semester: semester
+applicant.student_applications.create! why_join: "I'm awesome"
+applicant.student_applications.create! why_join: "I'm awesome"
 
-Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com'
-Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com'
-Member.create! first_name: 'holy', last_name: 'breeze', email: 'hb@gmail.com'
+Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com', member_role: role
+Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com', member_role: role
+Member.create! first_name: 'holy', last_name: 'breeze', email: 'hb@gmail.com', member_role: role

@@ -27,4 +27,7 @@ class Nonprofit < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   has_many :nonprofit_applications
+
+  validates :name, presence: true
+  validates :phone_number, presence: true
 end

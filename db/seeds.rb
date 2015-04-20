@@ -18,3 +18,9 @@ applicant.student_applications.create! semester: semester
 Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com'
 Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com'
 Member.create! first_name: 'holy', last_name: 'breeze', email: 'hb@gmail.com'
+
+# Update with nonprofit/apps seeds
+Nonprofit.create! name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.com', phone_number: '1234567890', password: 'password'
+Nonprofit.create! name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com', phone_number: '1234567890', password: 'password'
+NonprofitApplication.create! purpose: 'To rule the world.', nonprofit: Nonprofit.find(1)
+NonprofitApplication.create! purpose: 'To combat illiteracy.', nonprofit: Nonprofit.find(2)

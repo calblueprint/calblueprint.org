@@ -73,13 +73,22 @@ ActiveRecord::Schema.define(version: 20150420062504) do
 
   add_index "identities", ["applicant_id"], name: "index_identities_on_applicant_id", using: :btree
 
+  create_table "member_roles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "role"
+  end
+
   create_table "members", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "last_name"
     t.string   "first_name"
     t.string   "email"
+    t.integer  "member_role_id"
   end
+
+  add_index "members", ["member_role_id"], name: "index_members_on_member_role_id", using: :btree
 
   create_table "nonprofit_applications", force: true do |t|
     t.integer  "nonprofit_id"
@@ -137,6 +146,7 @@ ActiveRecord::Schema.define(version: 20150420062504) do
     t.datetime "updated_at"
     t.integer  "applicant_id"
     t.integer  "semester_id"
+    t.text     "why_join"
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

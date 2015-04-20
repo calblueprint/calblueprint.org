@@ -42,7 +42,7 @@ module Admins
     private
 
     def member_params
-      params.require(:member).permit(:last_name, :first_name, :email)
+      params.require(:member).permit(:last_name, :first_name, :email, :member_role_id)
     end
   end
 end

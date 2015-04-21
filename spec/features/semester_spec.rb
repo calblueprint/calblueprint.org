@@ -4,13 +4,13 @@ def fill_in_semester(season, year, is_current_semester = false)
   visit new_admin_semester_path
   select season, from: "Season:"
   fill_in "Year", with: year
-  check "Current Semester" if is_current_semester
 end
 
 RSpec.describe "Semester" do
   let(:student_application) { create :student_application }
-  let!(:semester_empty) { create :semester, year: "empty", is_current_semester: true }
+  let!(:semester_empty) { create :semester, year: "empty" }
   let!(:semester_nonempty) { create :semester, year: "nonempty", student_applications: [student_application] }
+  let(:settings) { create :settings }
 
   before do
     admin = create :admin
@@ -62,25 +62,18 @@ RSpec.describe "Semester" do
   end
 
   describe "after creating new current semester" do
-    before do
-      visit new_admin_semester_path
-      fill_in_semester "Spring", "current", true
-      click_button "Create Semester"
-    end
-
     it "checks new current semester" do
       visit admin_semesters_path
-      click_link "edit-spring-current"
-      box = find_by_id "is_current_semester"
-      expect(box.checked?).to eq "checked"
-      expect(Semester.current_semester.year).to eq "current"
+      click_link "set_as_current_semester-spring-empty"
+      visit admin_settings_path
+      expect(page).to have_content "spring empty"
     end
 
-    it "unchecks old current semester" do
+    it "checks another current semester" do
       visit admin_semesters_path
-      click_link "edit-spring-nonempty"
-      box = find_by_id "is_current_semester"
-      expect(box.checked?).to eq nil
+      click_link "set_as_current_semester-spring-nonempty"
+      visit admin_settings_path
+      expect(page).to have_content "spring nonempty"
     end
   end
 end

@@ -4,14 +4,6 @@ module Admins
   class SettingsController < BaseController
     include Singleton
 
-    def show
-      @settings
-    end
-
-    def edit
-      @settings
-    end
-
     def update
       if @settings.update_attributes settings_params
         redirect_to admin_settings_path

@@ -1,6 +1,7 @@
-<%= simple_form_for @student_application do |f| %>
+<%= simple_form_for @student_application, url: student_applications_path do |f| %>
   <div class="row">
     <%= f.input :why_join %>
+    <%= f.input :resume, as: :file %>
     <div class="spacer-small"></div>
   </div>
   <div class="row">

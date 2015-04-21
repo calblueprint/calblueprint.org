@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   end
 
   resources :student_applications, only: [:new, :create], path: "apply/students"
-
   # Projects
   resources :projects, only: [:show, :index]
 
@@ -27,7 +26,9 @@ Rails.application.routes.draw do
   namespace :admins, as: :admin do
     resource :dashboard, only: [:show], controller: "dashboard"
     resource :projects
-    resources :student_applications, only: [:index]
+    resources :student_applications, only: [:index] do
+      collection { post :import }
+    end
     resources :members
     resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters

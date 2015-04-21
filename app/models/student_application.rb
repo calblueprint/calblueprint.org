@@ -24,4 +24,10 @@ class StudentApplication < ActiveRecord::Base
   after_create :create_final_decision
 
   validates :why_join, presence: true
+
+  def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row|
+      StudentApplication.create! row.to_hash
+    end
+  end
 end

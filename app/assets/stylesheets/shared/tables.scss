@@ -98,7 +98,7 @@
         padding: 0.3em 1em;
         width: 100%;
 
-        @include media($medium-screen) {
+        @media only screen and (max-width: 64.063em) {
           margin-bottom: 0;
           width: auto;
         }
@@ -110,7 +110,7 @@
 .decision-button {
   display: inline-block;
   margin: auto;
-  padding: 15px 25px;
+  padding: 7px 38px;
   text-decoration: none;
   font-size: 1.1em;
   line-height: 1.5;
@@ -119,9 +119,17 @@
   background: $medium-gray;;
   color: #fff;;
   border: none;
+  @media only screen and (max-width: 64.063em) {
+    margin-bottom: 0;
+    width: auto;
+  }
 }
 
 .selected {
   background: $blue; 
+}
+
+.download-csv {
+  float: right;
 }
 

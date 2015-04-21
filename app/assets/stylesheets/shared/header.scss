@@ -53,30 +53,33 @@
   transform: rotate(360deg);
 }
 
-.header-admin ul {
-  border-radius: 10px;
-  list-style: none;
-  position: relative;
-  display: inline-table;
-  background: 0x000000;
-}
 
-.header-admin ul li a {
-  color: $medium-gray;
-}
+.header-admin {
+  ul {
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    background: 0x000000;
 
-.header-admin ul li {
-  display: inline-table;
-}
+    ul {
+      display: none;
+      background: #ffffff; border-radius: 0px; padding: 0;
+      position: absolute; top: 100%;
+      border-style: solid;
+      border-color: $medium-gray;
+    }
 
-.header-admin ul ul {
-  display: none;
-  background: #ffffff; border-radius: 0px; padding: 0;
-  position: absolute; top: 100%;
-  border-style: solid;
-  border-color: $medium-gray;
-}
+    li {
+      display: inline-table;
 
-.header-admin ul li:hover > ul {
-  display: block;
+      a {
+      color: $medium-gray;
+      }
+    }
+
+    li:hover > ul {
+      display: block;
+    }
+  }
 }

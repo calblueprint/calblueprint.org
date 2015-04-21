@@ -8,8 +8,8 @@
     <th>Current Semester ID</th>
   </tr>
   <tr>
-    <td><%= @settings.npo_status %></td>
-    <td><%= @settings.student_status %></td>
+    <td><%= @settings.npo_app_open %></td>
+    <td><%= @settings.student_app_open %></td>
     <td><%= @settings.id %></td>
     <td><%= Semester.find(@settings.current_semester_id).season_with_year %></td>
   </tr>

@@ -21,7 +21,7 @@ module Admins
     private
 
     def settings_params
-      params.require(:settings).permit(:npo_status, :student_status, :current_semester_id)
+      params.require(:settings).permit(:npo_app_open, :student_app_open, :current_semester_id)
     end
   end
 end

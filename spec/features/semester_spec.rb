@@ -1,6 +1,6 @@
 require "rails_helper"
 
-def fill_in_semester(season, year, is_current_semester = false)
+def fill_in_semester(season, year)
   visit new_admin_semester_path
   select season, from: "Season:"
   fill_in "Year", with: year
@@ -37,7 +37,7 @@ RSpec.describe "Semester" do
   end
 
   describe "after creating a duplicate semester" do
-    before { fill_in_semester "Spring", "nonempty", true }
+    before { fill_in_semester "Spring", "nonempty" }
     it "renders back form with errors" do
       expect { click_button "Create Semester" }.not_to change { Semester.count }
       expect(page).to have_content "has already been taken"

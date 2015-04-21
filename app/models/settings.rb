@@ -13,8 +13,8 @@
 
 class Settings < ActiveRecord::Base
   validates_numericality_of :singleton_guard, equal: 0
-  validates :npo_status, presence: true
-  validates :student_status, presence: true
+  validates :npo_app_open, inclusion: { in: [true, false] }
+  validates :student_app_open, inclusion: { in: [true, false] }
   validates :current_semester_id, presence: true
 
   # source: http://stackoverflow.com/questions/399447/how-to-implement-a-singleton-model

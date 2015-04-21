@@ -21,4 +21,4 @@ Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com',
 Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com', member_role: role
 Member.create! first_name: 'holy', last_name: 'breeze', email: 'hb@gmail.com', member_role: role
 
-Settings.create! current_semester_id: 1, npo_status: "open", student_status: "open", singleton_guard: 0
+Settings.create! current_semester_id: 1, npo_app_open: false, student_app_open: false, singleton_guard: 0

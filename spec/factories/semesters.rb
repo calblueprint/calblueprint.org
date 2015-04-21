@@ -14,6 +14,5 @@ FactoryGirl.define do
   factory :semester do
     season "spring"
     sequence(:year) { |n| "#{n}" }
-    is_current_semester true
   end
 end

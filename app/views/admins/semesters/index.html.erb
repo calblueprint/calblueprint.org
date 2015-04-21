@@ -10,6 +10,9 @@
           id: "edit-" + semester.season + "-" + semester.year %></td>
       <td><%= link_to "Delete", admin_semester_path(semester), method: :delete, class: 'button',
           id: "delete-" + semester.season + "-" + semester.year %></td>
+      <td><%= link_to "Set as Current Semester", set_current_semester_admin_settings_path(id: semester.id, setting_id: 1,
+          current_semester_id: semester.id), method: :post, class: 'button',
+          id: "set_as_current_semester-" + semester.season + "-" + semester.year %></td>
     </tr>
   <% end %>
 </table>

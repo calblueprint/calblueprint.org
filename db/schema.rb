@@ -54,16 +54,6 @@ ActiveRecord::Schema.define(version: 20150421052123) do
 
   add_index "applicants", ["email"], name: "index_applicants_on_email", unique: true, using: :btree
 
-  create_table "apps", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "applicant_id"
-    t.integer  "semester_id"
-  end
-
-  add_index "apps", ["applicant_id"], name: "index_apps_on_applicant_id", using: :btree
-  add_index "apps", ["semester_id"], name: "index_apps_on_semester_id", using: :btree
-
   create_table "contact_forms", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -138,6 +128,7 @@ ActiveRecord::Schema.define(version: 20150421052123) do
     t.datetime "updated_at"
     t.integer  "applicant_id"
     t.integer  "semester_id"
+    t.text     "why_join"
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

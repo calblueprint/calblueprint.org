@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     get "nonprofits"
   end
 
+  resources :student_applications, only: [:new, :create], path: "apply/students"
+
   # Projects
   resources :projects, only: [:show, :index]
 

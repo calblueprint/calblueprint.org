@@ -8,9 +8,9 @@ end
 
 RSpec.describe "Semester" do
   let(:student_application) { create :student_application }
+  let(:settings) { create :settings }
   let!(:semester_empty) { create :semester, year: "empty" }
   let!(:semester_nonempty) { create :semester, year: "nonempty", student_applications: [student_application] }
-  let(:settings) { create :settings }
 
   before do
     admin = create :admin

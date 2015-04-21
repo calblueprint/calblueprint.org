@@ -5,10 +5,10 @@
 #  id                  :integer          not null, primary key
 #  created_at          :datetime
 #  updated_at          :datetime
-#  npo_status          :string(255)
-#  student_status      :string(255)
 #  singleton_guard     :integer
 #  current_semester_id :integer
+#  npo_app_open        :boolean
+#  student_app_open    :boolean
 #
 
 class Settings < ActiveRecord::Base

@@ -9,9 +9,9 @@ end
 
 RSpec.describe "Semester" do
   let(:student_application) { create :student_application }
-  let!(:semester_empty) { create :semester, year: "test_empty", is_current_semester: true }
+  let!(:semester_empty) { create :semester, year: "empty", is_current_semester: true }
   let!(:semester_nonempty) do
-    create :semester, year: "test_nonempty", student_applications: [student_application]
+    create :semester, year: "nonempty", student_applications: [student_application]
   end
 
   before do
@@ -58,7 +58,7 @@ RSpec.describe "Semester" do
     context "empty semester" do
       before { visit admin_semesters_path }
       it "renders back page without deleted semester" do
-        expect { click_link "delete-spring-test_empty" }.to change { Semester.count }.by(-1)
+        expect { click_link "delete-spring-empty" }.to change { Semester.count }.by(-1)
       end
     end
   end

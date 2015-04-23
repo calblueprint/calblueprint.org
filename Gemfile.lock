@@ -119,6 +119,8 @@ GEM
     figaro (1.0.0)
       thor (~> 0.14)
     flutie (2.0.0)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.5)
     gon (5.2.3)
       actionpack (>= 2.3.0)
@@ -377,6 +379,7 @@ DEPENDENCIES
   ffaker
   figaro (~> 1.0.0)
   flutie (~> 2.0.0)
+  font-awesome-rails (~> 4.3.0)
   gon (~> 5.2.3)
   guard-livereload
   guard-rspec

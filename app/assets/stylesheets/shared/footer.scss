@@ -1,0 +1,75 @@
+.footer {
+  background-color: #333;
+  padding: 50px 10px 30px;
+  text-align:left;
+
+  h5 {
+    text-align: left;
+    color: white;
+  }
+
+  p {
+    text-align: left;
+    color: #CCC;
+  }
+
+  li {
+    padding: 5px;
+    a {
+      color: #AAA;
+      &:hover {
+        color: #FFF;
+      }
+    }
+  }
+
+  .fa, a .fa {
+    text-decoration:none;
+    color: #BBB;
+    font-size: 1.5em;
+    margin: 10px;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  .copyright {
+    color: #CCC;
+    text-align: left;
+  }
+
+  .icons {
+    text-align: right;
+  }
+
+  .general li {
+    display:inline-block;
+  }
+}
+
+.newsletter-form {
+  input {
+    display:inline-block;
+    width:80%;
+    margin: 0 -5px 0 0;
+    height: 40px;
+    vertical-align: top;
+    border-top-left-radius:$form-border-radius;
+    border-bottom-left-radius:$form-border-radius;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius:0px;
+  }
+
+  button {
+    display:inline-block;
+    width:20%;
+    margin: 0;
+    height: 40px;
+    vertical-align: top;
+    border-top-right-radius:$base-border-radius;
+    border-bottom-right-radius:$base-border-radius;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius:0px;
+  }
+}

@@ -1,0 +1,63 @@
+<div class="footer">
+  <div class="row">
+    <div class="medium-2 small-6 columns">
+      <div>
+        <h5>Students</h5>
+        <ul>
+          <li><%= link_to "Apply", apply_path %></li>
+          <li><%= link_to "FAQ", apply_path %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="medium-2 small-6 columns">
+      <div>
+        <h5>Nonprofits</h5>
+        <ul>
+          <li><%= link_to "Apply", apply_path %></li>
+          <li><%= link_to "Process", about_path %></li>
+          <li><%= link_to "FAQ", about_path %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="medium-2 small-6 columns">
+      <div>
+        <h5>Sponsors</h5>
+        <ul>
+          <li><%= link_to "Contribute", '#' %></li>
+          <li><%= link_to "Sponsors", '#' %></li>
+          <li><%= link_to "Team", about_path %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="medium-2 small-6 columns">
+      <div>
+        <h5>General</h5>
+        <ul>
+          <li><%= link_to "Contact", new_contact_form_path %></li>
+          <li><%= link_to "Blog", 'https://medium.com/@blueprint' %></li>
+          <li><%= link_to "Projects", projects_path %></li>
+          <li><%= link_to "About", about_path %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="medium-4 small-12 columns" style="text-align:right;">
+      <form>
+        <div class="newsletter-form">
+          <input type="text" placeholder="Email Address"></input>
+          <button type="submit">Go</button>
+        </div>
+      </form>
+      <p>Sign up for our newsletter to get updates about events, our work and applications!</p>
+      <!--<%= image_tag("logowhite.png", width: '200') %>-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="icons small-12 medium-9 medium-push-3 columns">
+      <a href="http://www.facebook.com/calblueprint"><i class="fa fa-facebook-f"></i></a>
+      <a href="https://twitter.com/calblueprint"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/calblueprint/"><i class="fa fa-github-alt"></i></a>
+      <a href="http://www.medium.com/@blueprint"><i class="fa fa-medium"></i></a>
+    </div>
+    <small class="copyright small-12 medium-3 medium-pull-9 columns">&copy; Blueprint 2015</small>
+  </div>
+</div>

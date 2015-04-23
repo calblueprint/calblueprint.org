@@ -14,7 +14,6 @@ RSpec.describe "Semester" do
     create :semester, year: "test_nonempty", student_applications: [student_application]
   end
 
-
   before do
     admin = create :admin
     sign_in admin

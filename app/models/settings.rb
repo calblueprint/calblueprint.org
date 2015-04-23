@@ -30,4 +30,8 @@ class Settings < ActiveRecord::Base
       row
     end
   end
+
+  def current_semester
+    Semester.find(current_semester_id)
+  end
 end

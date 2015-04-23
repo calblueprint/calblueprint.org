@@ -2,15 +2,13 @@
 
 <table border="1">
   <tr>
-    <th>NPO Status</th>
-    <th>Student Status</th>
-    <th>Settings ID</th>
-    <th>Current Semester ID</th>
+    <th>NPO Applications Open</th>
+    <th>Student Applications Open</th>
+    <th>Current Semester</th>
   </tr>
   <tr>
     <td><%= @settings.npo_app_open %></td>
     <td><%= @settings.student_app_open %></td>
-    <td><%= @settings.id %></td>
-    <td><%= Semester.find(@settings.current_semester_id).season_with_year %></td>
+    <td><%= @settings.current_semester %></td>
   </tr>
 </table>

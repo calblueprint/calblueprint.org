@@ -48,7 +48,7 @@ RSpec.describe "Semester" do
     context "non-empty semester" do
       before { visit admin_semesters_path }
       it "renders back page with nothing" do
-        expect { click_link "delete-spring-nonempty" }.not_to change { Semester.count }
+        expect { click_link dom_id(semester_nonempty, :delete) }.not_to change { Semester.count }
         expect(page).to have_content "Cannot delete semester if the semester has applications or projects."
       end
     end
@@ -56,7 +56,7 @@ RSpec.describe "Semester" do
     context "empty semester" do
       before { visit admin_semesters_path }
       it "renders back page without deleted semester" do
-        expect { click_link "delete-spring-empty" }.to change { Semester.count }.by(-1)
+        expect { click_link dom_id(semester_empty, :delete) }.to change { Semester.count }.by(-1)
       end
     end
   end
@@ -64,14 +64,14 @@ RSpec.describe "Semester" do
   describe "after creating new current semester" do
     it "checks new current semester" do
       visit admin_semesters_path
-      click_link "set_as_current_semester-spring-empty"
+      click_link dom_id(semester_empty, :set_as_current)
       visit admin_settings_path
       expect(page).to have_content "spring empty"
     end
 
     it "checks another current semester" do
       visit admin_semesters_path
-      click_link "set_as_current_semester-spring-nonempty"
+      click_link dom_id(semester_nonempty, :set_as_current)
       visit admin_settings_path
       expect(page).to have_content "spring nonempty"
     end

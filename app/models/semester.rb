@@ -22,7 +22,7 @@ class Semester < ActiveRecord::Base
     ! (student_applications.exists? || projects.exists?)
   end
 
-  def season_with_year
+  def to_s
     "#{season} #{year}"
   end
 end

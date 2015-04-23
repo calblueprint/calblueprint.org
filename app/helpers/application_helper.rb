@@ -8,8 +8,6 @@ module ApplicationHelper
     exp ? klass : nil
   end
 
-
-
   def selected_if?(exp)
     class_if? "selected", exp
   end

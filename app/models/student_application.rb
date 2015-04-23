@@ -26,11 +26,11 @@ class StudentApplication < ActiveRecord::Base
   validates :why_join, presence: true
 
   def self.to_csv(options = {})
-    headers = ['final_decision_id', 'name', 'email', 'admitted']
+    headers = %w(final_decision_id name email admitted)
     CSV.generate(options) do |csv|
       csv << headers
-      all.each do |student_app|
-        csv << [student_app.final_decision.id, student_app.applicant.name, student_app.applicant.email, student_app.final_decision.admitted]
+      all.each do |app|
+        csv << [app.final_decision.id, app.applicant.name, app.applicant.email, app.final_decision.admitted]
       end
     end
   end
@@ -41,18 +41,17 @@ class StudentApplication < ActiveRecord::Base
     (2...spreadsheet.last_row + 1).each do |i|
       row = Hash[[header, spreadsheet.row(i)].transpose]
       decision = find_by_id(row["final_decision_id"])
-      decision.final_decision.update_attribute(:admitted,row["admitted"])
+      decision.final_decision.update_attribute(:admitted, row["admitted"])
       decision.save!
     end
   end
 
   def self.open_spreadsheet(file)
     case File.extname(file.original_filename)
-      when ".csv" then Roo::Spreadsheet.open(file.path, extension: :csv)
-      ##when ".xls" then Roo::Excel.open(file.path)
-      ##when ".xlsx" then Roo::Excel.open(file.path)
-      else raise "Unknown file type: #{file.original_filename}"
+    when ".csv" then Roo::Spreadsheet.open(file.path, extension: :csv)
+      # when ".xls" then Roo::Excel.open(file.path)
+      # when ".xlsx" then Roo::Excel.open(file.path)
+    else fail "Unknown file type: #{file.original_filename}"
     end
   end
 end
-

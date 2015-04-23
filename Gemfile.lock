@@ -161,6 +161,7 @@ GEM
       slop (~> 3.5)
       term-ansicolor
       terminal-table
+    iconv (1.0.4)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -265,6 +266,13 @@ GEM
       railties (>= 3.2, < 4.2)
     rollbar (1.4.4)
       multi_json (~> 1.3)
+    roo (2.0.0beta1)
+      nokogiri (~> 1)
+      rubyzip (~> 1.1, < 2.0.0)
+    roo-xls (1.0.0)
+      nokogiri
+      roo (>= 2.0.0beta1, < 3)
+      spreadsheet (> 0.9.0)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -291,7 +299,9 @@ GEM
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
+    ruby-ole (1.2.11.8)
     ruby-progressbar (1.7.1)
+    rubyzip (1.1.7)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -310,6 +320,8 @@ GEM
       simplecov-html (~> 0.9.0)
     simplecov-html (0.9.0)
     slop (3.6.0)
+    spreadsheet (1.0.3)
+      ruby-ole (>= 1.0)
     spring (1.3.3)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -382,6 +394,7 @@ DEPENDENCIES
   guard-rspec
   guard-rubocop
   i18n-tasks
+  iconv (~> 1.0.3)
   jquery-rails (~> 3.1.2)
   kaminari (~> 0.16.1)
   launchy
@@ -397,6 +410,8 @@ DEPENDENCIES
   rails_12factor
   recipient_interceptor (~> 0.1.2)
   rollbar
+  roo (~> 2.0.0beta1)
+  roo-xls
   rspec-rails (~> 3.1.0)
   rubocop
   sass-rails (~> 4.0.3)

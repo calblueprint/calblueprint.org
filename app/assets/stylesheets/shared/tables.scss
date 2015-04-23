@@ -119,10 +119,6 @@
   background: $medium-gray;;
   color: #fff;;
   border: none;
-  @media only screen and (max-width: 64.063em) {
-    margin-bottom: 0;
-    width: auto;
-  }
 }
 
 .selected {
@@ -131,5 +127,17 @@
 
 .download-csv {
   float: right;
+}
+
+@media (max-width: 1000px) {
+  .column-remove-medium {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .column-remove-small {
+    display: none;
+  }
 }
 

@@ -25,9 +25,34 @@ class StudentApplication < ActiveRecord::Base
 
   validates :why_join, presence: true
 
-  def self.import(file)
-    CSV.foreach(file.path, headers: true) do |row|
-      StudentApplication.create! row.to_hash
+  def self.to_csv(options = {})
+    headers = ['final_decision_id', 'name', 'email', 'admitted']
+    CSV.generate(options) do |csv|
+      csv << headers
+      all.each do |student_app|
+        csv << [student_app.final_decision.id, student_app.applicant.name, student_app.applicant.email, student_app.final_decision.admitted]
+      end
+    end
+  end
+
+  def self.import_decision(file)
+    spreadsheet = open_spreadsheet(file)
+    header = spreadsheet.row(1)
+    (2...spreadsheet.last_row + 1).each do |i|
+      row = Hash[[header, spreadsheet.row(i)].transpose]
+      decision = find_by_id(row["final_decision_id"])
+      decision.final_decision.update_attribute(:admitted,row["admitted"])
+      decision.save!
+    end
+  end
+
+  def self.open_spreadsheet(file)
+    case File.extname(file.original_filename)
+      when ".csv" then Roo::Spreadsheet.open(file.path, extension: :csv)
+      ##when ".xls" then Roo::Excel.open(file.path)
+      ##when ".xlsx" then Roo::Excel.open(file.path)
+      else raise "Unknown file type: #{file.original_filename}"
     end
   end
 end
+

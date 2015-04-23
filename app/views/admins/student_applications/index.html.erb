@@ -4,15 +4,16 @@
       <%= file_field_tag :file %>
       <%= submit_tag "Import CSV" %>
     <% end %>
-    <%= link_to 'Download CSV list', admin_student_applications_path(format: :csv), class: "download-csv" %>
+    <%= link_to "Download CSV", admin_student_applications_path(format: "csv"), class: "download-csv" %>
+    <%# link_to 'Download CSV', admin_student_applications_path(format: :csv), class: "download-csv" %> 
     <table class="tables">
       <thead>
         <tr>
           <th>Name</th>
-          <th>Email</th>
-          <th>Semester</th>
-          <th>Year</th>
-          <th>Actions</th>
+          <th class="column-remove-small">Email</th>
+          <th class="column-remove-medium">Semester</th>
+          <th class="column-remove-medium">Year</th>
+          <th class="column-remove-medium">Actions</th>
           <th>Decision</th>
         </tr>
       </thead>
@@ -20,11 +21,12 @@
         <% @student_applications.each do |app| %>
           <tr>
             <td><%= app.applicant.name %></td>
-            <td><%= app.applicant.email %></td>
-            <td><%= app.semester.season %></td>
-            <td><%= app.semester.year %></td>
-            <td><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
+            <td class="column-remove-small"><%= app.applicant.email %></td>
+            <td class="column-remove-medium"><%= app.semester.season %></td>
+            <td class="column-remove-medium"><%= app.semester.year %></td>
+            <td class="column-remove-medium"><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
             <td>
+              <%# 1/0 %>
               <%= link_to "Accept", approve_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.admitted)] %>
               <div class="spacer-small"></div>
               <%= link_to "Reject", reject_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.admitted == false)] %>

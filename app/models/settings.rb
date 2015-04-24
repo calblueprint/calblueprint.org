@@ -20,21 +20,18 @@ class Settings < ActiveRecord::Base
   # source: http://stackoverflow.com/questions/399447/how-to-implement-a-singleton-model
   def self.instance
     # there will be only one row, and its ID must be '1'
-    begin
-      find(1)
-    rescue ActiveRecord::RecordNotFound
-      # slight race condition here, but it will only happen once
-      row = Settings.new npo_app_open: false, student_app_open:false, current_semester_id: nil
-      row.singleton_guard = 0
-      row.save
-      row
-    end
+    find(1)
+  rescue ActiveRecord::RecordNotFound
+    # slight race condition here, but it will only happen once
+    row = Settings.new npo_app_open: false, student_app_open: false, current_semester_id: 0
+    row.singleton_guard = 0
+    row.save
+    row
   end
 
   def current_semester
-    begin
-      Semester.find(current_semester_id)
-    rescue ActiveRecord::RecordNotFound
-    end
+    Semester.find(current_semester_id)
+  rescue ActiveRecord::RecordNotFound
+    throw "Current semester ID invalid!"
   end
 end

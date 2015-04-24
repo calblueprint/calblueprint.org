@@ -1,3 +1,10 @@
+.apply-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  width: 100%;
+}
+
 .card-style {
   background-color: white;
   box-shadow: 0 0 5px 2px #ddd;
@@ -10,16 +17,6 @@
   height:500px;
   position: fixed;
   z-index: -1;
-
-  .panel-container-left &, .panel-container-right & {
-    width: 50vw;
-    min-height: 100vh;
-    position: absolute;
-    @media only screen and (max-width: $medium-screen) {
-      top: initial;
-      width: 100%;
-    }
-  }
 }
 
 .panel-container{
@@ -37,8 +34,8 @@
   }
 }
 
-.panel-container-left, .panel-container-right {
-  @extend .panel-container;
+.panel-left, .panel-right {
+  text-align: center;
   width: 50%;
   min-height: 100vh;
 
@@ -70,17 +67,17 @@
 }
 
 #left-title, #right-title {
-    padding-top: 30vh;
+  padding-top: 30vh;
 }
 
 .subtitle {
-    margin: 0 auto;
-    width: 75%;
-    margin-top: -5px;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    font-weight: 400;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 400;
 }
 
 #hook {

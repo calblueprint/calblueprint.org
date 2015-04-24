@@ -46,13 +46,15 @@
   .general li {
     display:inline-block;
   }
+
 }
 
 .newsletter-form {
+  display: flex;
+  width: 100%;
+
   input {
-    display:inline-block;
-    width:80%;
-    margin: 0 -5px 0 0;
+    flex-grow:1;
     height: 40px;
     vertical-align: top;
     border-top-left-radius:$form-border-radius;
@@ -62,8 +64,7 @@
   }
 
   button {
-    display:inline-block;
-    width:20%;
+    display:table-cell;
     margin: 0;
     height: 40px;
     vertical-align: top;

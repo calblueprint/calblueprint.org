@@ -21,17 +21,20 @@ class Settings < ActiveRecord::Base
   def self.instance
     # there will be only one row, and its ID must be '1'
     begin
-      first
+      find(1)
     rescue ActiveRecord::RecordNotFound
       # slight race condition here, but it will only happen once
-      row = Settings.new
+      row = Settings.new npo_app_open: false, student_app_open:false, current_semester_id: nil
       row.singleton_guard = 0
-      row.save!
+      row.save
       row
     end
   end
 
   def current_semester
-    Semester.find(current_semester_id)
+    begin
+      Semester.find(current_semester_id)
+    rescue ActiveRecord::RecordNotFound
+    end
   end
 end

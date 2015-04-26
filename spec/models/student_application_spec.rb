@@ -12,6 +12,8 @@
 #  resume_content_type :string(255)
 #  resume_file_size    :integer
 #  resume_updated_at   :datetime
+#  phone               :string(255)
+#  year                :string(255)
 #
 
 require 'rails_helper'

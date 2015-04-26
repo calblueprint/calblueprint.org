@@ -12,6 +12,8 @@
 #  resume_content_type :string(255)
 #  resume_file_size    :integer
 #  resume_updated_at   :datetime
+#  phone               :string(255)
+#  year                :string(255)
 #
 
 class StudentApplication < ActiveRecord::Base
@@ -27,4 +29,6 @@ class StudentApplication < ActiveRecord::Base
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
   validates :why_join, presence: true
+  validates :phone, presence: true
+  validates :year, presence: true
 end

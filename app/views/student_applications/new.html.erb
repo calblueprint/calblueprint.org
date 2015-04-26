@@ -1,12 +1,35 @@
-<%= simple_form_for @student_application, url: student_applications_path do |f| %>
-  <div class="row">
-    <%= f.input :why_join %>
-    <%= f.input :resume, as: :file %>
-    <div class="spacer-small"></div>
-  </div>
-  <div class="row">
-    <div class="submit">
-      <%= f.button :submit, 'Submit!' %>
+<div class=gray-bg>
+  <div class="banner apply-students-banner">
+    <div class="darken">
+      <div class="spacer"></div>
+      <div class="banner-text">
+        <h1>Hey <%= current_user.first_name %>,</h1>
+        <p class="subtitle">
+          We're really excited to read your application.
+        </p>
+      </div>
     </div>
   </div>
-<% end %>
+  <div class="row">
+    <div class="spacer"></div>
+    <div class="medium-5 medium-offset-1 columns">
+      <%= simple_form_for @student_application, url: student_applications_path do |f| %>
+        <%= f.input :year, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ], label: "What year are you in?"%>
+        <%= f.input :phone, label: "What is your phone number?" %>
+        <%= f.input :why_join, label: "Why do you want to join Blueprint?" %>
+        <%= f.input :resume, as: :file, label: "Please attach your resume" %>
+      <div class="spacer-small"></div>
+    </div>
+    <div class="apply-info medium-4 medium-pull-1 columns">
+      <div class="info-header">Important Dates:</div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="submit center">
+        <%= f.button :submit, 'Submit' %>
+      <% end %>
+    </div>
+  </div>
+  <div class="spacer">
+</div>

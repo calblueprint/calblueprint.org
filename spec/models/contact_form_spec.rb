@@ -21,7 +21,7 @@ RSpec.describe ContactForm, type: :model do
   it { should_not allow_value('sam.com').for :email }
 
   it { should validate_presence_of :subject }
-  it { should ensure_length_of(:subject).is_at_most(80) }
+  it { should validate_length_of(:subject).is_at_most(80) }
 
   it { should validate_presence_of :message }
 end

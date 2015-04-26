@@ -75,7 +75,9 @@ RSpec.describe Applicant, type: :model do
     end
 
     it "returns true if applicant has applied for semester" do
-      applicant.student_applications = [create(:student_application, semester: semester)]
+      student_app = create(:student_application)
+      student_app.semester = semester
+      applicant.student_applications = [student_app]
       expect(applicant.applied_for? semester).to be true
     end
   end

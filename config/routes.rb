@@ -31,5 +31,8 @@ Rails.application.routes.draw do
     resources :members
     resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters
+    resource :settings, only: [:show, :edit, :update] do
+      post :set_current_semester
+    end
   end
 end

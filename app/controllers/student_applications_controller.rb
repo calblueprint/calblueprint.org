@@ -17,7 +17,7 @@ class StudentApplicationsController < ApplicationController
   end
 
   def student_application_params
-    params.require(:student_application).permit(:why_join)
+    params.require(:student_application).permit(:why_join, :applicant_id, :semester_id)
   end
 
   def verify_unique_semester_application

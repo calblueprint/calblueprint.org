@@ -14,7 +14,6 @@ module Admins
 
     def create
       @semester = Semester.new member_params
-      Semester.clear_current_semester if member_params[:is_current_semester]
       if @semester.save
         redirect_to admin_semesters_path
       else
@@ -28,7 +27,6 @@ module Admins
 
     def update
       @semester = Semester.find params[:id]
-      Semester.clear_current_semester if member_params[:is_current_semester]
       if @semester.update_attributes member_params
         redirect_to admin_semesters_path
       else
@@ -52,7 +50,7 @@ module Admins
     private
 
     def member_params
-      params.require(:semester).permit(:season, :year, :is_current_semester)
+      params.require(:semester).permit(:season, :year)
     end
   end
 end

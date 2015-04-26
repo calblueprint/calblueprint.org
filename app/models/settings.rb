@@ -20,7 +20,7 @@ class Settings < ActiveRecord::Base
   def self.instance
     Settings.first_or_create npo_app_open: true,
                              student_app_open: true,
-                             current_semester_id: Semester.create_current_semester.id
+                             current_semester_id: Semester.first.id
   end
 
   def current_semester

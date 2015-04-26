@@ -43,6 +43,8 @@ en:
       success: Message sent! We'll get back to you shortly.
 
   nonprofit_applications:
+    new:
+      banner: Nonprofit Application
     create:
       success: Application received! You should receive an email confirmation shortly.
 

@@ -18,6 +18,13 @@ class Semester < ActiveRecord::Base
 
   validates :year, uniqueness: { scope: [:season] }, presence: true
 
+  def self.create_current_semester
+    today = Date.today
+    year = today.year
+    season = today.month < 6 ? :spring : :fall
+    Semester.create year: year, season: season
+  end
+
   def can_be_destroyed?
     ! (student_applications.exists? || projects.exists?)
   end

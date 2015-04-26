@@ -2,11 +2,10 @@ module AssignToCurrentSemester
   extend ActiveSupport::Concern
 
   included do
-    before_validation :assign_to_current_semester, on: :create
+    before_create :assign_to_current_semester, unless: :semester_id
   end
 
   def assign_to_current_semester
-    # TODO: Settings are not initilized yet here
-    # self.semester = Semester.find(Settings.new.current_semester_id)
+    self.semester = Semester.find(Settings.instance.current_semester_id)
   end
 end

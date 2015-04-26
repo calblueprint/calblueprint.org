@@ -13,20 +13,14 @@
 
 class Settings < ActiveRecord::Base
   validates_numericality_of :singleton_guard, equal: 0
-  validates :npo_app_open, inclusion: { in: [true, false] }
-  validates :student_app_open, inclusion: { in: [true, false] }
+  validates :npo_app_open, inclusion: [true, false]
+  validates :student_app_open, inclusion: [true, false]
   validates :current_semester_id, presence: true
 
-  # source: http://stackoverflow.com/questions/399447/how-to-implement-a-singleton-model
   def self.instance
-    # there will be only one row, and its ID must be '1'
-    find(1)
-  rescue ActiveRecord::RecordNotFound
-    # slight race condition here, but it will only happen once
-    row = Settings.new npo_app_open: false, student_app_open: false, current_semester_id: 0
-    row.singleton_guard = 0
-    row.save
-    row
+    Settings.first_or_create npo_app_open: true,
+                             student_app_open: true,
+                             current_semester_id: Semester.create_current_semester.id
   end
 
   def current_semester

@@ -49,7 +49,7 @@ RSpec.describe "Semester" do
       before { visit admin_semesters_path }
       it "renders back page with nothing" do
         expect { click_link dom_id(semester_nonempty, :delete) }.not_to change { Semester.count }
-        expect(page).to have_content "Cannot delete semester if the semester has applications or projects."
+        expect(page).to have_content t("admin.semesters.destroy.error")
       end
     end
 

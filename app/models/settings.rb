@@ -18,9 +18,10 @@ class Settings < ActiveRecord::Base
   validates :current_semester_id, presence: true
 
   def self.instance
-    Settings.first_or_create npo_app_open: true,
-                             student_app_open: true,
-                             current_semester_id: Semester.first.id
+    first_or_create npo_app_open: true,
+                    student_app_open: true,
+                    current_semester_id: Semester.first.id,
+                    singleton_guard: 0
   end
 
   def current_semester

@@ -81,6 +81,7 @@ ignore_unused:
   - 'simple_form.{error_notification,required}.:'
   - 'date.*'
   - 'time.*'
+  - 'unauthorized.*'
 # - 'activerecord.attributes.*'
 
 ## Exclude these keys from `i18n-tasks eq-base' report

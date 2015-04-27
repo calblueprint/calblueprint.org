@@ -7,9 +7,14 @@
       <td><%= semester.year %></td>
       <td><%= link_to "View", admin_semester_path(semester), class: 'button' %></td>
       <td><%= link_to "Edit", edit_admin_semester_path(semester), class: 'button',
-          id: "edit-" + semester.season + "-" + semester.year %></td>
+          id: dom_id(semester, :edit) %></td>
       <td><%= link_to "Delete", admin_semester_path(semester), method: :delete, class: 'button',
-          id: "delete-" + semester.season + "-" + semester.year %></td>
+          id: dom_id(semester, :delete) %></td>
+      <td><%= link_to "Set as Current Semester",
+          set_current_semester_admin_settings_path(current_semester_id: semester.id),
+          method: :post,
+          class: 'button',
+          id: dom_id(semester, :set_as_current) %></td>
     </tr>
   <% end %>
 </table>

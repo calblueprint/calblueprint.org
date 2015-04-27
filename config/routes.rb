@@ -39,5 +39,8 @@ Rails.application.routes.draw do
         post :reject
       end
     end
+    resource :settings, only: [:show, :edit, :update] do
+      post :set_current_semester
+    end
   end
 end

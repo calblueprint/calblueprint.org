@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414020352) do
+ActiveRecord::Schema.define(version: 20150421052123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,8 +119,19 @@ ActiveRecord::Schema.define(version: 20150414020352) do
     t.datetime "updated_at"
     t.string   "season"
     t.string   "year"
-    t.boolean  "is_current_semester", default: false
   end
+
+  create_table "settings", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "singleton_guard"
+    t.integer  "current_semester_id"
+    t.boolean  "npo_app_open"
+    t.boolean  "student_app_open"
+  end
+
+  add_index "settings", ["current_semester_id"], name: "index_settings_on_current_semester_id", using: :btree
+  add_index "settings", ["singleton_guard"], name: "index_settings_on_singleton_guard", unique: true, using: :btree
 
   create_table "student_applications", force: true do |t|
     t.datetime "created_at"

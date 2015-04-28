@@ -26,9 +26,9 @@
             <td class="column-remove-medium"><%= app.semester.year %></td>
             <td class="column-remove-medium"><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
             <td>
-              <%= link_to "Accept", approve_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.admitted)] %>
+              <%= link_to "Accept", approve_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.accepted?)] %>
               <div class="spacer-small"></div>
-              <%= link_to "Reject", reject_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.admitted == false)] %>
+              <%= link_to "Reject", reject_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button", selected_if?(app.final_decision.rejected?)] %>
             </td>
           </tr>
         <% end %>

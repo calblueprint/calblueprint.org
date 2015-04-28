@@ -1,25 +1,29 @@
 module Admins
   class FinalDecisionsController < BaseController
+    before_filter :load_final_decision
+
     def reject
-      @final_decision = FinalDecision.find params[:id]
-      if @final_decision.admitted == false
-        @final_decision.admitted = nil
-      elsif @final_decision.admitted.nil? || @final_decision.admitted == true
-        @final_decision.admitted = false
+      if @final_decision.rejected?
+        @final_decision.remove_decision!
+      else
+        @final_decision.reject!
       end
-      @final_decision.save
       redirect_to admin_student_applications_path
     end
 
     def approve
-      @final_decision = FinalDecision.find params[:id]
-      if @final_decision.admitted == true
-        @final_decision.admitted = nil
-      elsif @final_decision.admitted.nil? || @final_decision.admitted == false
-        @final_decision.admitted = true
+      if @final_decision.accepted?
+        @final_decision.remove_decision!
+      else
+        @final_decision.accept!
       end
-      @final_decision.save
       redirect_to admin_student_applications_path
+    end
+
+    protected
+
+    def load_final_decision
+      @final_decision = FinalDecision.find params[:id]
     end
   end
 end

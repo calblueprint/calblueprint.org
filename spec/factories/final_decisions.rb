@@ -3,7 +3,7 @@
 # Table name: final_decisions
 #
 #  id                :integer          not null, primary key
-#  admitted          :boolean
+#  decision          :string(255)
 #  decisionable_id   :integer
 #  decisionable_type :string(255)
 #  created_at        :datetime
@@ -12,7 +12,7 @@
 
 FactoryGirl.define do
   factory :final_decision do
-    admitted false
+    decision :undecided
     association :decisionable, factory: :student_application
   end
 end

@@ -133,8 +133,8 @@ ActiveRecord::Schema.define(version: 20150424091505) do
     t.string   "resume_content_type"
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
-    t.string   "phone"
     t.string   "year"
+    t.string   "phone"
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

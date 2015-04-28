@@ -21,7 +21,7 @@ class StudentApplicationsController < ApplicationController
   end
 
   def verify_unique_semester_application
-    return true unless current_user.applied_for?(Semester.current_semester)
+    return true unless current_user.applied_for?(Settings.instance.current_semester)
     redirect_to students_apply_path, flash: { success: "You have already"\
       " submitted an application for this semester." }
   end

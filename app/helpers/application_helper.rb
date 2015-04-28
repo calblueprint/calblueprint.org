@@ -4,8 +4,8 @@ module ApplicationHelper
     "http://gravatar.com/avatar/#{gravatar_hash}.png"
   end
 
-  def class_if?(klass, exp)
-    exp ? klass : nil
+  def class_if?(class, exp)
+    exp ? class : nil
   end
 
   def selected_if?(exp)

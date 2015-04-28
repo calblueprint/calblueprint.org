@@ -22,8 +22,6 @@ gem 'kaminari', '~> 0.16.1'
 gem 'email_validator', '~> 1.4.0'
 gem 'recipient_interceptor', '~> 0.1.2'
 gem 'enumerize'
-gem 'roo', '~> 2.0.0beta1'
-gem 'roo-xls'
 gem "iconv", "~> 1.0.3"
 
 # Frontend

@@ -10,19 +10,39 @@
       </div>
     </div>
   </div>
+  <div class="apply-info">
+    <div class="row">
+      <div class="apply-info-section">
+        <div class="calendar-icon"></div>
+        <p class="apply-info-section-text">
+          Applications are due: <br>
+          September 4th 2015, 11:59PM
+        </p>
+      </div>
+
+      <div class="apply-info-section">
+        <div class="problem-icon"></div>
+        <p class="apply-info-section-text">
+          <%= link_to "Contact us", new_contact_form_path %>  <br>
+          if you have any questions
+        </p>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="spacer"></div>
     <div class="medium-5 medium-offset-1 columns">
       <%= simple_form_for @student_application, url: student_applications_path do |f| %>
-        <%= f.input :year, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ], label: "What year are you in?"%>
+        <%= f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ], label: "What year are you?"%>
+      <div class="spacer-small"></div>
         <%= f.input :phone, label: "What is your phone number?" %>
+      <div class="spacer-small"></div>
+   </div>
+    <div class="medium-4 medium-pull-1 columns">
         <%= f.input :why_join, label: "Why do you want to join Blueprint?" %>
+      <div class="spacer-small"></div>
         <%= f.input :resume, as: :file, label: "Please attach your resume" %>
       <div class="spacer-small"></div>
-    </div>
-    <div class="apply-info medium-4 medium-pull-1 columns">
-      <div class="info-header">Important Dates:</div>
-
     </div>
   </div>
   <div class="row">

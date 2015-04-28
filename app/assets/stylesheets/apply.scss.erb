@@ -220,10 +220,11 @@
 }
 
 .gray-bg {
-  background-color: #ECECEC;
+  background-color: #EAEAEA;
   border-top: 1px solid #CCC;
 }
 
+// Student Application Page CSS
 .apply-students-banner {
   background-image: image-url("apply/students/banner.png");
   background-size: cover;
@@ -233,13 +234,53 @@
 
 .apply-info {
   background-color: white;
-  height: 300px
+  height: 100%;
+  border-radius: 0px 2px 2px 0px;
+  border-color: #D0D1D5;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid;
 }
 
-.info-header {
-  padding: 12px;
-  font-style: bold;
-  font-size: 16px;
+.apply-info-section {
+  @extend .columns;
+  @extend .small-12;
+  @extend .medium-6;
+  @extend .large-6;
+  .apply-info-section-icon {
+    background-size: cover;
+    height: 32px;
+    width: 32px;
+    margin: 24px auto 12px;
+  }
+  .apply-info-section-text {
+    color: $dark-gray;
+    text-align: center;
+    width: 80%;
+    line-height: 20px;
+    font-size: 16px;
+    margin: 16px auto 52px;
+  }
+  .problem-icon {
+    @extend .apply-info-section-icon;
+    background-image: image-url("projects/problem.png");
+  }
+  .calendar-icon {
+    @extend .apply-info-section-icon;
+    background-image: image-url("apply/students/calendar.png");
+  }
+
+
 }
 
 
+.control-label {
+  color: black;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.student_applications-new, {
+  textarea { height: em(135px); }
+}

@@ -1,38 +1,48 @@
 <div class="banner" id="home-banner">
   <div class="darken">
-    <!-- As an example of how to use I18n. -->
-    <h1 class="white h0" id="home-title"> <%= t ".headline" %> </h1>
-    <p class="white" id="home-subtitle"> The honorary member of Blueprint Basketball People </p>
-  </div>
-</div>
-<div class="spacer"></div>
-<div class="row">
-  <div class="large-12 large-centered columns">
-    <h1> His Dark Past </h1>
-    <div class="spacer"></div>
-    <img src="http://goo.gl/vrfAyA">
+    <h1 class="white" id="home-title"> <%= t ".headline" %> </h1>
+    <p class="white" id="home-subtitle">We are UC Berkeley students who want to use technology to improve our community.</p>
+    <div id="laptop">
+      <div id="laptop-content-container">
+        <%= image_tag("home/laptop-content.png", id:"laptop-content") %>
+      </div>
+      <div id="laptop-bg-container">
+        <%= image_tag("home/macbook-bg.png", id:"laptop-bg") %>
+      </div>
+    </div>
   </div>
 </div>
 <div class="spacer"></div>
 <div class="row">
   <div class="large-7 large-centered columns center">
-    <p> After receiving no athletic scholarship offers out of high school and being undrafted out of Harvard University, Lin reached a partially guaranteed contract deal in 2010 with his hometown Golden State Warriors. He seldom played in his rookie season and was assigned to the NBA Development League (D-League) three times. </p>
+    <h1>What We Do</h1>
     <div class="spacer-small"></div>
-    <a class="button" href="http://www.jlin7.com/"> Learn More </a>
+    <p> Blueprint is a non-profit organization aimed at bringing technologies to local nonprofit organizations that are making social change. Each year, teams of five students work with non-profit organization to implement technologies like some of these application below: </p>
   </div>
 </div>
 <div class="spacer"></div>
 <div class="row">
   <div class="large-12 large-centered columns center">
-    <h1> Some Random Pictures </h1>
-    <div class="spacer"></div>
     <ul class="small-block-grid-3">
       <li><img src="http://goo.gl/EXVuUJ"></li>
       <li><img src="http://goo.gl/lrqEJC"></li>
       <li><img src="http://goo.gl/5sNrte"></li>
     </ul>
-    <div class="spacer"></div>
-    <a class="button" href="http://www.jlin7.com/"> See More </a>
+    <div class="spacer-small"></div>
+    <%= link_to "See More Work", projects_path, class:"button" %>
+  </div>
+</div>
+<div class="spacer-large"></div>
+<div class="row">
+  <div class="medium-6 small-12 columns center">
+    <h1>Nonprofits</h1>
+    <p>Find out more about working with Blueprint.</p>
+    <%= link_to "Learn More", nonprofits_apply_path, class: "button" %>
+  </div>
+  <div class="medium-5 small-12 columns center">
+    <h1>Students</h1>
+    <p>Learn about the club and how to join.</p>
+    <%= link_to "Learn More", students_apply_path, class: "button" %>
   </div>
 </div>
 <div class="spacer-large"></div>

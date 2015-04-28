@@ -1,6 +1,6 @@
 .header {
   height: 48px;
-  overflow: hidden;
+  overflow: visible;
   background-color: white;
   z-index: 1;
 }
@@ -51,4 +51,35 @@
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+
+
+.header-admin {
+  ul {
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    background: 0x000000;
+
+    ul {
+      display: none;
+      background: #ffffff; border-radius: 0px; padding: 0;
+      position: absolute; top: 100%;
+      border-style: solid;
+      border-color: $medium-gray;
+    }
+
+    li {
+      display: inline-table;
+
+      a {
+      color: $medium-gray;
+      }
+    }
+
+    li:hover > ul {
+      display: block;
+    }
+  }
 }

@@ -11,8 +11,6 @@
 #
 
 class NonprofitApplication < ActiveRecord::Base
-  include AssignToCurrentSemester
-
   belongs_to :nonprofit
   belongs_to :semester
 

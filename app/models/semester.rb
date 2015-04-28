@@ -2,12 +2,11 @@
 #
 # Table name: semesters
 #
-#  id                  :integer          not null, primary key
-#  created_at          :datetime
-#  updated_at          :datetime
-#  season              :string(255)
-#  year                :string(255)
-#  is_current_semester :boolean          default(FALSE)
+#  id         :integer          not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#  season     :string(255)
+#  year       :string(255)
 #
 
 class Semester < ActiveRecord::Base
@@ -21,14 +20,10 @@ class Semester < ActiveRecord::Base
   validates :year, uniqueness: { scope: [:season] }, presence: true
 
   def can_be_destroyed?
-    ! (student_applications.exists? || projects.exists?)
+    student_applications.none? && projects.none? && Semester.count > 1
   end
 
-  def self.current_semester
-    where(is_current_semester: true).first
-  end
-
-  def self.clear_current_semester
-    update_all(is_current_semester: false)
+  def to_s
+    "#{season} #{year}"
   end
 end

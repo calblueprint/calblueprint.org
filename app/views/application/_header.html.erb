@@ -12,8 +12,17 @@
   <%= link_to "Projects", projects_path, class: "header-tab" %>
   <%= link_to "About", about_path, class: "header-tab" %>
   <% if current_admin %>
-    <%= link_to "Applications", admin_student_applications_path, class: "header-tab" %>
-    <%= link_to "Members", admin_members_path, class: "header-tab" %>
+    <div class="header-tab header-admin">
+      <ul>
+        <li><a href="#">Admin</a>
+          <ul>
+            <%= link_to "Dashboard", admin_dashboard_path, class: "header-tab" %>
+            <%= link_to "Applications", admin_student_applications_path, class: "header-tab" %>
+            <%= link_to "Members", admin_members_path, class: "header-tab" %>
+          </ul>
+        </li>
+      </ul>
+    </div>
   <% end %>
   <%= link_to "", root_path, class: "header-logo" %>
 </div>

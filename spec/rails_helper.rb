@@ -30,4 +30,7 @@ RSpec.configure do |config|
 
   # Use t instead of I18n.t in tests
   config.include AbstractController::Translation
+
+  # For dom_id
+  config.include ActionView::RecordIdentifier
 end

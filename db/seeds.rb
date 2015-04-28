@@ -8,16 +8,18 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
-Semester.create! season: 'spring', year: '2013', is_current_semester: true
 role = MemberRole.create! role: "Role"
+semester = Semester.create! season: 'spring', year: '2013'
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
-applicant.student_applications.create! why_join: "I'm awesome"
-applicant.student_applications.create! why_join: "I'm awesome"
+applicant.student_applications.create! why_join: "I'm awesome", semester: semester
+applicant.student_applications.create! why_join: "I'm awesome", semester: semester
 
 # Update with nonprofit/apps seeds
-Nonprofit.create! name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.com', phone_number: '1234567890', password: 'password'
-Nonprofit.create! name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com', phone_number: '1234567890', password: 'password'
+Nonprofit.create! name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.com',
+                  phone_number: '1234567890', password: 'password'
+Nonprofit.create! name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com',
+                  phone_number: '1234567890', password: 'password'
 NonprofitApplication.create! purpose: 'To rule the world.', nonprofit: Nonprofit.find(1)
 NonprofitApplication.create! purpose: 'To combat illiteracy.', nonprofit: Nonprofit.find(2)
 

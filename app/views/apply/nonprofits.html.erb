@@ -28,11 +28,11 @@
 
 <div class="gray-bg">
 
-  <ul class="submenu">
-    <li>Our Services</li><li>
-        Application Process</li><li>
-        Project Timeline</li><li>
-        Previous Work</li><li>
+  <ul class="submenu" id="apply_nav">
+    <li data-target="services">Our Services</li><li data-target="process">
+        Application Process</li><li data-target="timeline">
+        Project Timeline</li><li data-target="previous_work">
+        Previous Work</li><li data-target="faq">
         FAQ</li>
   </ul>
 
@@ -40,7 +40,7 @@
 
   <div class="row">
     <div class="title-column">
-      <h1 class="title">
+      <h1 class="title" id="services">
         Our<br>
         Services
       </h1>
@@ -70,7 +70,7 @@
 
   <div class="row">
     <div class="title-column">
-      <h1>Application Process</h1>
+      <h1 id="process">Application Process</h1>
     </div>
 
     <div class="content-column">
@@ -181,7 +181,7 @@
 
   <div class="row">
     <div class="title-column">
-      <h1>Project Timeline</h1>
+      <h1 id="timeline">Project Timeline</h1>
     </div>
 
     <div class="content-column">
@@ -253,7 +253,7 @@
 
   <div class="row">
     <div class="title-column">
-      <h1> Previous Work </h1>
+      <h1 id="previous_work"> Previous Work </h1>
       <a href="http://www.jlin7.com/"><small><em>See More </em></small></a>
     </div>
     <div class="content-column">
@@ -272,20 +272,40 @@
 
   <div class="row">
     <div class="title-column">
-      <h1>FAQ</h1>
+      <h1 id="faq">FAQ</h1>
     </div>
     <div class="content-column">
       <div class="small-12 columns" id="faq">
-        <h5>What is Blueprint's project structure?  (+)</h5>
-        <h5>How are client team interactions conducted? (-)</h5>
-        <p>
-          The client and the project leader communicate on a weekly basis to ensure the
-          project’s progress. Meetings occur throughout the project engagement, beginning with
-          at least one mandatory project scoping meeting with the project leader at the onset.
-          A formal midpoint presentation will be given in Week 5 of the engagement, and the final
-          recommendation will be delivered at a final presentation in Week 10.
-        </p>
-        <h5>What resources does Blueprint have to ensure success? (+)</h5>
+        <div class="drawer">
+          <h5>What is Blueprint's project structure? <span>(+)</span></h5>
+          <p>
+            The client and the project leader communicate on a weekly basis to ensure the
+            project’s progress. Meetings occur throughout the project engagement, beginning with
+            at least one mandatory project scoping meeting with the project leader at the onset.
+            A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            recommendation will be delivered at a final presentation in Week 10.
+          </p>
+        </div>
+        <div class="drawer">
+          <h5>How are client team interactions conducted? <span>(+)</span></h5>
+          <p>
+            The client and the project leader communicate on a weekly basis to ensure the
+            project’s progress. Meetings occur throughout the project engagement, beginning with
+            at least one mandatory project scoping meeting with the project leader at the onset.
+            A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            recommendation will be delivered at a final presentation in Week 10.
+          </p>
+        </div>
+        <div class="drawer">
+          <h5>What resources does Blueprint have to ensure success? <span>(+)</span></h5>
+          <p>
+            The client and the project leader communicate on a weekly basis to ensure the
+            project’s progress. Meetings occur throughout the project engagement, beginning with
+            at least one mandatory project scoping meeting with the project leader at the onset.
+            A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            recommendation will be delivered at a final presentation in Week 10.
+          </p>
+        </div>
       </div>
     </div>
   </div>

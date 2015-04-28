@@ -21,5 +21,7 @@ FactoryGirl.define do
     applicant
     semester
     why_join "I love Blueprint"
+    phone "012-345-5678"
+    year "Freshman"
   end
 end

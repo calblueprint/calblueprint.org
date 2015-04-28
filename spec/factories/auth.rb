@@ -3,7 +3,7 @@ FactoryGirl.define do
   factory :auth, class: OmniAuth::AuthHash do
     skip_create
 
-    ignore do
+    transient do
       id { SecureRandom.random_number(1_000_000_000).to_s }
       name { "#{first_name} #{last_name}" }
       first_name "Joe"

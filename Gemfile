@@ -37,6 +37,7 @@ gem 'title', '~> 0.0.5'
 gem 'bourbon', '~> 3.2.3'
 gem 'neat', '~> 1.5.1'
 gem 'bitters', '~> 0.10.1'
+gem 'font-awesome-rails', '~> 4.3.0'
 
 # Error logging - requires setup with service
 gem 'rollbar'

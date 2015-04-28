@@ -9,12 +9,14 @@
 @import "vendor/normalize";
 @import "bourbon";
 @import "neat";
+@import "font-awesome.css";
 @import "vendor/base/base";
 @import "vendor/grid";
 
 @import "shared/general";
 @import "shared/flash";
 @import "shared/header";
+@import "shared/footer";
 
 @import "home";
 @import "about";

@@ -16,12 +16,16 @@ applicant.student_applications.create! why_join: "I'm great",
                                        phone: "11",
                                        year: "Other",
                                        semester: semester,
-                                       resume: File.new("#{Rails.root}/spec/support/fixtures/bops.pdf")
+                                       resume_file_name: 'test.pdf',
+                                       resume_content_type: 'application/pdf',
+                                       resume_file_size: 800
 applicant.student_applications.create! why_join: "I'm great",
                                        phone: "22",
                                        year: "Senior",
                                        semester: semester,
-                                       resume: File.new("#{Rails.root}/spec/support/fixtures/bops.pdf")
+                                       resume_file_name: 'test.pdf',
+                                       resume_content_type: 'application/pdf',
+                                       resume_file_size: 800
 
 Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com', member_role: role
 Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com', member_role: role

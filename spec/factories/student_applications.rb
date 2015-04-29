@@ -15,7 +15,6 @@
 #  phone               :string(255)
 #  year                :string(255)
 #
-
 FactoryGirl.define do
   factory :student_application do
     applicant
@@ -23,6 +22,8 @@ FactoryGirl.define do
     why_join "I love Blueprint"
     phone "012-345-5678"
     year "Freshman"
-    resume { File.new("#{Rails.root}/spec/support/fixtures/bops.pdf") }
+    resume_file_name { 'test.pdf' }
+    resume_content_type { 'application/pdf' }
+    resume_file_size 800
   end
 end

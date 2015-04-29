@@ -17,8 +17,6 @@
 #
 
 class StudentApplication < ActiveRecord::Base
-  include AssignToCurrentSemester
-
   belongs_to :applicant
   belongs_to :semester
   has_attached_file :resume
@@ -26,6 +24,7 @@ class StudentApplication < ActiveRecord::Base
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..1.megabytes }
 
+  validates_attachment_presence :resume
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
   validates :why_join, presence: true

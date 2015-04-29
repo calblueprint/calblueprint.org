@@ -65,3 +65,11 @@ en:
 
   unauthorized:
     default: You aren't allowed to view that page.
+
+  simple_form:
+    labels:
+      student_application:
+        year: What year are you in?
+        phone: What is your phone number?
+        why_join: Why do you want to join Blueprint?
+        resume: Please attach your resume.

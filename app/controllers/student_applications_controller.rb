@@ -7,7 +7,7 @@ class StudentApplicationsController < ApplicationController
   end
 
   def create
-    @student_application = current_user.student_applications.create student_application_params
+    @student_application = current_user.student_applications.build student_application_params
     if @student_application.save
       redirect_to students_apply_path, flash: { success: "You have"\
         " successfully submitted an application. You will receive an email shortly." }
@@ -17,7 +17,9 @@ class StudentApplicationsController < ApplicationController
   end
 
   def student_application_params
-    params.require(:student_application).permit(:why_join, :resume, :phone, :year, :applicant_id, :semester_id)
+    params.require(:student_application).permit(:why_join, :resume, :phone, :year, :applicant_id, :semester_id).merge(
+      semester: @settings.current_semester
+    )
   end
 
   def verify_unique_semester_application

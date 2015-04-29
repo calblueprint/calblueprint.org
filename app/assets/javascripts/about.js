@@ -1,5 +1,5 @@
 $(document).on('page:change', function() {
-    (function (jQuery) {
+  (function (jQuery) {
     jQuery.mark = {
       jump: function (options) {
         var defaults = {

@@ -1,6 +1,0 @@
-LOG:  database system was shut down at 2015-04-22 10:40:47 PDT
-LOG:  autovacuum launcher started
-LOG:  database system is ready to accept connections
-LOG:  received SIGHUP, reloading configuration files
-ERROR:  column "final_decision_id" does not exist at character 60
-STATEMENT:  SELECT  "final_decisions".* FROM "final_decisions"  WHERE (final_decision_id) LIMIT 1

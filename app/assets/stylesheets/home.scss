@@ -80,9 +80,42 @@ $laptop-width: 969px;
   }
 }
 
+#smartphone-bg-container {
+  position: relative;
+  z-index:2;
+  bottom: 0px;
+}
 
-@media only screen and (max-width: em(420)) {
-  #home-subtitle {
-      //font-size:0.5em;
+#smartphone-bg {
+  height: auto;
+  width: 100%;
+  max-width: $laptop-width;
+}
+
+#smartphone-content-container {
+  position: absolute;
+  width: 100%;
+  text-align:center;
+  z-index: 0;
+  padding-right: $gutter;
+  padding-bottom: 18%;
+  bottom: 0px;
+}
+
+#smartphone-content {
+  height: auto;
+  width: 71%;
+  max-width: 795px;
+}
+
+
+#our-projects {
+  text-align:left !important;
+  p {
+    text-align:left;
+  }
+
+  h1 {
+    text-align:left;
   }
 }

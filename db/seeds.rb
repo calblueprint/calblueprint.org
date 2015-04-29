@@ -12,8 +12,8 @@ role = MemberRole.create! role: "Role"
 semester = Semester.create! season: 'spring', year: '2013'
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
-applicant.student_applications.create! why_join: "I'm awesome", phone: "123", year: "Other", semester: semester
-applicant.student_applications.create! why_join: "I'm awesome", phone: "123", year: "Freshman", semester: semester
+applicant.student_applications.create! why_join: "I'm great", phone: "11", year: "Other", semester: semester
+applicant.student_applications.create! why_join: "I'm great", phone: "22", year: "Senior", semester: semester
 
 Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com', member_role: role
 Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com', member_role: role

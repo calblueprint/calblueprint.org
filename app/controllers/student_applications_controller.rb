@@ -9,22 +9,21 @@ class StudentApplicationsController < ApplicationController
   def create
     @student_application = current_user.student_applications.build student_application_params
     if @student_application.save
-      redirect_to students_apply_path, flash: { success: "You have"\
-        " successfully submitted an application. You will receive an email shortly." }
+      redirect_to students_apply_path, flash: { success: t('student_applications.create.success') }
     else
       render "new"
     end
   end
 
   def student_application_params
-    params.require(:student_application).permit(:why_join, :resume, :phone, :year, :applicant_id, :semester_id).merge(
-      semester: @settings.current_semester
-    )
+    params.require(:student_application).permit(
+      :why_join, :resume, :phone, :year, :applicant_id, :semester_id).merge(
+        semester: @settings.current_semester
+      )
   end
 
   def verify_unique_semester_application
     return true unless current_user.applied_for?(Settings.instance.current_semester)
-    redirect_to students_apply_path, flash: { success: "You have already"\
-      " submitted an application for this semester." }
+    redirect_to students_apply_path, flash: { success: t('student_applications.create.resubmit') }
   end
 end

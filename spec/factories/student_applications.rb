@@ -23,5 +23,6 @@ FactoryGirl.define do
     why_join "I love Blueprint"
     phone "012-345-5678"
     year "Freshman"
+    resume { File.new("#{Rails.root}/spec/support/fixtures/bops.pdf") }
   end
 end

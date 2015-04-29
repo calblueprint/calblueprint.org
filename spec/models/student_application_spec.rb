@@ -24,4 +24,7 @@ RSpec.describe StudentApplication, type: :model do
   it { should validate_presence_of :why_join }
   it { should validate_presence_of :applicant_id }
   it { should validate_presence_of :semester_id }
+  it { should validate_attachment_size(:resume).less_than(1.megabytes) }
+  it { should validate_attachment_presence(:resume) }
+  it { should validate_attachment_content_type(:resume).rejecting('image/png', 'text/plain', 'text/xml') }
 end

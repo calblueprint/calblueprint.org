@@ -5,7 +5,7 @@
       <div class="banner-text">
         <h1>Hey <%= current_user.first_name %>,</h1>
         <p class="subtitle">
-          We're really excited to read your application.
+          <%= t '.banner' %>
         </p>
       </div>
     </div>
@@ -15,8 +15,8 @@
       <div class="apply-info-section">
         <div class="calendar-icon"></div>
         <p class="apply-info-section-text">
-          Applications are due: <br>
-          September 4th 2015, 11:59PM
+          <%= t '.apps_due' %> <br>
+          September 4th, 2015, 11:59PM
         </p>
       </div>
 
@@ -24,7 +24,7 @@
         <div class="problem-icon"></div>
         <p class="apply-info-section-text">
           <%= link_to "Contact us", new_contact_form_path %>  <br>
-          if you have any questions
+          <%= t '.contact' %>
         </p>
       </div>
     </div>

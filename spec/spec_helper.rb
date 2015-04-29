@@ -17,6 +17,8 @@
 
 # Start CodeClimate
 require "codeclimate-test-reporter"
+require "paperclip/matchers"
+
 CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
@@ -43,6 +45,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
+  config.include Paperclip::Shoulda::Matchers
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

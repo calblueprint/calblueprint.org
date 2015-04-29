@@ -16,3 +16,6 @@ config/database.yml
 
 # Ignore application env variables
 config/application.yml
+
+# Ignore local paperclip uploads
+/public/system

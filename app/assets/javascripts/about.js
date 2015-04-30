@@ -1,3 +1,4 @@
+/** Scroll on page when you press the arrow on the about page. */
 $(document).on('page:change', function() {
   (function (jQuery) {
     jQuery.mark = {

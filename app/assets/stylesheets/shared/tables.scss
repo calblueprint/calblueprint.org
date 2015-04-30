@@ -125,11 +125,15 @@
   background: $blue; 
 }
 
-.download-csv {
+.float-right {
   float: right;
 }
 
-@media (max-width: 1000px) {
+.float-none {
+  float: none;
+}
+
+@media (max-width: $medium-screen) {
   .column-remove-medium {
     display: none;
   }

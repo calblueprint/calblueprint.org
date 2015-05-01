@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.1.0)
     actionmailer (4.1.7)
       actionpack (= 4.1.7)
       actionview (= 4.1.7)
@@ -175,6 +176,7 @@ GEM
       slop (~> 3.5)
       term-ansicolor
       terminal-table
+    iconv (1.0.4)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -377,6 +379,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm (~> 4.1.0)
   annotate
   autoprefixer-rails (~> 3.1.2)
   awesome_print
@@ -404,6 +407,7 @@ DEPENDENCIES
   guard-rspec
   guard-rubocop
   i18n-tasks
+  iconv (~> 1.0.3)
   jquery-rails (~> 3.1.2)
   kaminari (~> 0.16.1)
   launchy

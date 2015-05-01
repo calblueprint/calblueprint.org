@@ -1,11 +1,39 @@
-<table border="1">
-  <% @student_applications.each do |app| %>
-    <tr>
-      <td><%= app.applicant.name %></td>
-      <td><%= app.applicant.email %></td>
-      <td><%= app.semester.season %></td>
-      <td><%= app.semester.year %></td>
-      <td><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <%= form_tag import_admin_student_applications_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV" %>
+    <% end %>
+    <%= link_to "Download CSV", admin_student_applications_path(format: "csv"), class: "float-right" %>
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="column-remove-small">Email</th>
+          <th class="column-remove-medium">Semester</th>
+          <th class="column-remove-medium">Year</th>
+          <th class="column-remove-medium">Actions</th>
+          <th>Decision</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @student_applications.each do |app| %>
+          <tr>
+            <td><%= app.applicant.name %></td>
+            <td class="column-remove-small"><%= app.applicant.email %></td>
+            <td class="column-remove-medium"><%= app.semester.season %></td>
+            <td class="column-remove-medium"><%= app.semester.year %></td>
+            <td class="column-remove-medium"><%= link_to "Details", "URL TO DETAILS", class: "button" %></td>
+            <td>
+              <%= link_to "", approve_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button fa fa-check", selected_if?(app.final_decision.accepted?)] %>
+              <div class="spacer-small"></div>
+              <%= link_to "", reject_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button fa fa-times", selected_if?(app.final_decision.rejected?)] %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="spacer"></div>
+  </div> 
+</div>
+  

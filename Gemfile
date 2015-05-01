@@ -7,6 +7,7 @@ gem 'thin', '~> 1.6.3'
 gem 'pg', '~> 0.17.1'
 gem 'figaro', '~> 1.0.0'
 gem 'sucker_punch', '~> 1.3.1'
+gem 'aasm', '~> 4.1.0'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
@@ -23,6 +24,7 @@ gem 'recipient_interceptor', '~> 0.1.2'
 gem 'enumerize'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk', '~> 1.5.7'
+gem "iconv", "~> 1.0.3"
 
 # Frontend
 gem 'sass-rails', '~> 4.0.3'

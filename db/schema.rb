@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421052123) do
+ActiveRecord::Schema.define(version: 20150428030227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20150421052123) do
   end
 
   create_table "final_decisions", force: true do |t|
-    t.boolean  "admitted"
+    t.string   "decision"
     t.integer  "decisionable_id"
     t.string   "decisionable_type"
     t.datetime "created_at"

@@ -36,7 +36,7 @@ module Admins
 
     def destroy
       Member.destroy params[:id]
-      redirect_to admin_members_path
+      redirect_to admin_members_path, flash: { success: "Member deleted!" }
     end
 
     private

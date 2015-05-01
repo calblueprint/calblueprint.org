@@ -16,7 +16,12 @@ class StudentApplication < ActiveRecord::Base
   belongs_to :applicant
   belongs_to :semester
 
+  has_one :final_decision, as: :decisionable
+
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
+
+  after_create :create_final_decision
+
   validates :why_join, presence: true
 end

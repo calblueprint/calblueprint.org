@@ -22,6 +22,8 @@ gem 'kaminari', '~> 0.16.1'
 gem 'email_validator', '~> 1.4.0'
 gem 'recipient_interceptor', '~> 0.1.2'
 gem 'enumerize'
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk', '~> 1.5.7'
 gem "iconv", "~> 1.0.3"
 
 # Frontend

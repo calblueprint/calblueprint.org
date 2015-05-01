@@ -139,6 +139,12 @@ ActiveRecord::Schema.define(version: 20150428030227) do
     t.integer  "applicant_id"
     t.integer  "semester_id"
     t.text     "why_join"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
+    t.string   "year"
+    t.string   "phone"
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

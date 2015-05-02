@@ -8,6 +8,10 @@ end
 
 RSpec.describe "Semester" do
   let(:student_application) { create :student_application }
+  let!(:semester_empty) { create :semester, year: "empty", is_current_semester: true }
+  let!(:semester_nonempty) do
+    create :semester, year: "nonempty", student_applications: [student_application]
+  end
   let(:settings) { create :settings }
   let!(:semester_empty) { create :semester, year: "empty" }
   let!(:semester_nonempty) { create :semester, year: "nonempty", student_applications: [student_application] }

@@ -12,8 +12,20 @@ role = MemberRole.create! role: "Role"
 semester = Semester.create! season: 'spring', year: '2013'
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
-applicant.student_applications.create! why_join: "I'm awesome", semester: semester
-applicant.student_applications.create! why_join: "I'm awesome", semester: semester
+applicant.student_applications.create! why_join: "I'm great",
+                                       phone: "11",
+                                       year: "Other",
+                                       semester: semester,
+                                       resume_file_name: 'test.pdf',
+                                       resume_content_type: 'application/pdf',
+                                       resume_file_size: 800
+applicant.student_applications.create! why_join: "I'm great",
+                                       phone: "22",
+                                       year: "Senior",
+                                       semester: semester,
+                                       resume_file_name: 'test.pdf',
+                                       resume_content_type: 'application/pdf',
+                                       resume_file_size: 800
 
 # Update with nonprofit/apps seeds
 Nonprofit.create! name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.com',

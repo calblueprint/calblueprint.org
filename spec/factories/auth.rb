@@ -22,7 +22,7 @@ FactoryGirl.define do
       expires_at { SecureRandom.random_number(1.month).seconds.from_now }
     end
 
-    provider "facebook"
+    provider :facebook
     uid { id }
 
     info do

@@ -21,7 +21,6 @@ Rails.application.routes.draw do
 
   # Applicants
   resources :student_applications, only: [:new, :create], path: "apply/students"
-
   # Projects
   resources :projects, only: [:show, :index]
 
@@ -32,10 +31,19 @@ Rails.application.routes.draw do
   namespace :admins, as: :admin do
     resource :dashboard, only: [:show], controller: "dashboard"
     resource :projects
-    resources :student_applications, only: [:index]
+    resources :student_applications, only: [:index] do
+      collection { post :import }
+    end
     resources :members
     resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters
+
+    resources :final_decisions, shallow: true, only: [] do
+      member do
+        post :approve
+        post :reject
+      end
+    end
     resource :settings, only: [:show, :edit, :update] do
       post :set_current_semester
     end

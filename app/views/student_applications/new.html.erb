@@ -1,11 +1,55 @@
-<%= simple_form_for @student_application do |f| %>
-  <div class="row">
-    <%= f.input :why_join %>
-    <div class="spacer-small"></div>
-  </div>
-  <div class="row">
-    <div class="submit">
-      <%= f.button :submit, 'Submit!' %>
+<div class=gray-bg>
+  <div class="banner apply-students-banner">
+    <div class="darken">
+      <div class="spacer"></div>
+      <div class="banner-text">
+        <h1>Hey <%= current_user.first_name %>,</h1>
+        <p class="subtitle">
+          <%= t '.banner' %>
+        </p>
+      </div>
     </div>
   </div>
-<% end %>
+  <div class="apply-info">
+    <div class="row">
+      <div class="apply-info-section">
+        <div class="calendar-icon"></div>
+        <p class="apply-info-section-text">
+          <%= t '.apps_due' %> <br>
+          September 4th, 2015, 11:59PM
+        </p>
+      </div>
+
+      <div class="apply-info-section">
+        <div class="problem-icon"></div>
+        <p class="apply-info-section-text">
+          <%= link_to "Contact us", new_contact_form_path %>  <br>
+          <%= t '.contact' %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <%= simple_form_for @student_application, url: student_applications_path do |f| %>
+    <div class="row">
+    <div class="spacer"></div>
+    <div class="medium-5 medium-offset-1 columns">
+      <%= f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ] %>
+      <div class="spacer-small"></div>
+      <%= f.input :phone %>
+      <div class="spacer-small"></div>
+    </div>
+    <div class="medium-4 medium-pull-1 columns">
+      <%= f.input :why_join %>
+      <div class="spacer-small"></div>
+      <%= f.input :resume, as: :file %>
+      <div class="spacer-small"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="submit center">
+      <%= f.button :submit, 'Submit' %>
+    </div>
+  </div>
+  <% end %>
+  <div class="spacer"></div>
+</div>

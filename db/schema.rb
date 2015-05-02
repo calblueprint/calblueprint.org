@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421052123) do
+ActiveRecord::Schema.define(version: 20150428030227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,16 @@ ActiveRecord::Schema.define(version: 20150421052123) do
     t.string   "subject"
     t.text     "message"
   end
+
+  create_table "final_decisions", force: true do |t|
+    t.string   "decision"
+    t.integer  "decisionable_id"
+    t.string   "decisionable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "final_decisions", ["decisionable_id", "decisionable_type"], name: "index_final_decisions_on_decisionable_id_and_decisionable_type", using: :btree
 
   create_table "identities", force: true do |t|
     t.integer  "applicant_id"
@@ -158,6 +168,12 @@ ActiveRecord::Schema.define(version: 20150421052123) do
     t.integer  "applicant_id"
     t.integer  "semester_id"
     t.text     "why_join"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
+    t.string   "year"
+    t.string   "phone"
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

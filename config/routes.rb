@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Devise
   devise_for :admins, controllers: { invitations: "admins/invitations" }
   devise_for :applicants, controllers: { omniauth_callbacks: "applicants/omniauth_callbacks" }
+  devise_for :nonprofits
 
   # Apply
   resource :apply, only: [:show], controller: "apply" do
@@ -15,6 +16,10 @@ Rails.application.routes.draw do
     get "nonprofits"
   end
 
+  # Nonprofits
+  resources :nonprofit_applications, only: [:new, :create]
+
+  # Applicants
   resources :student_applications, only: [:new, :create], path: "apply/students"
   # Projects
   resources :projects, only: [:show, :index]

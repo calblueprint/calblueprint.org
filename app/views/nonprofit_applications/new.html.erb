@@ -1,0 +1,14 @@
+<div class="banner">
+  <div class="banner-text">
+    <h1 class="h0"><%= t '.banner' %></h1>
+  </div>
+</div>
+
+<%= simple_form_for @nonprofit_application do |f| %>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <%= f.input :purpose %>
+      <%= f.button :submit, 'Submit!' %>
+    </div>
+  </div>
+<% end %>

@@ -3,7 +3,7 @@ class StudentApplicationsController < ApplicationController
   before_action :verify_unique_semester_application
 
   def new
-    @student_application = current_user.student_applications.build
+    @student_application = current_applicant.student_applications.build
   end
 
   def create

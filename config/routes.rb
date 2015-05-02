@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :nonprofits
   root to: "pages#home"
 
   # Static pages
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
   # Devise
   devise_for :admins, controllers: { invitations: "admins/invitations" }
   devise_for :applicants, controllers: { omniauth_callbacks: "applicants/omniauth_callbacks" }
+  devise_for :nonprofits
 
   # Apply
   resource :apply, only: [:show], controller: "apply" do

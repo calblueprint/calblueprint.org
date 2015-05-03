@@ -9,6 +9,6 @@ module AuthorizationHelpers
   end
 
   def authorize_admin!
-    authorize! :manage, :all
+    authorize! :manage, :admin_dashboard
   end
 end

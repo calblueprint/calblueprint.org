@@ -68,6 +68,7 @@
       position: absolute; top: 100%;
       border-style: solid;
       border-color: $medium-gray;
+      z-index: 999;
     }
 
     li {

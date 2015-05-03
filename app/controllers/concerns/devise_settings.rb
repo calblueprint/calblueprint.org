@@ -25,7 +25,7 @@ module DeviseSettings
 
   def after_sign_in_path_for(user)
     if user.is_a? Admin
-      admin_dashboard_path
+      root_path
     elsif user.is_a? Applicant
       students_apply_path
     elsif user.is_a? Nonprofit

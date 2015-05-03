@@ -29,7 +29,6 @@ Rails.application.routes.draw do
 
   # Admin
   namespace :admins, as: :admin do
-    resource :dashboard, only: [:show], controller: "dashboard"
     resource :projects
     resources :student_applications, only: [:index] do
       collection { post :import }

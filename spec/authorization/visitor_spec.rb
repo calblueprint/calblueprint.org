@@ -9,11 +9,6 @@ RSpec.describe "A visitor", type: :feature do
       it { should have_content t("pages.home.headline") }
     end
 
-    describe "log in page" do
-      before { visit new_admin_session_path }
-      it { should have_content "Log in" }
-    end
-
     describe "contact us page" do
       before { visit new_contact_form_path }
       it { should have_content t("contact_forms.new.banner") }
@@ -21,8 +16,8 @@ RSpec.describe "A visitor", type: :feature do
   end
 
   describe "cannot see the" do
-    describe "admin dashboard" do
-      before { visit admin_dashboard_path }
+    describe "admin settings" do
+      before { visit admin_settings_path }
       it { should have_content t("devise.failure.unauthenticated") }
     end
   end

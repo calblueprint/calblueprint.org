@@ -23,7 +23,7 @@ class StudentApplicationsController < ApplicationController
   end
 
   def verify_unique_semester_application
-    return true unless current_user.applied_for?(Settings.instance.current_semester)
+    return true unless current_user.applied_for?(@settings.current_semester)
     redirect_to students_apply_path, flash: { success: t('student_applications.create.resubmit') }
   end
 end

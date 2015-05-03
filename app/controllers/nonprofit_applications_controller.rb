@@ -1,5 +1,6 @@
 class NonprofitApplicationsController < ApplicationController
   before_action :authenticate_nonprofit!
+  before_action :verify_npo_app_open
 
   def new
     @nonprofit_application = current_nonprofit.nonprofit_applications.build
@@ -21,5 +22,9 @@ class NonprofitApplicationsController < ApplicationController
     params.require(:nonprofit_application).permit(:purpose).merge(
       semester: @settings.current_semester
     )
+  end
+
+  def verify_student_app_open
+    redirect_to nonprofits_apply_path, flash: { error: t('nonprofit_applications.closed') } unless @settings.npo_app_open
   end
 end

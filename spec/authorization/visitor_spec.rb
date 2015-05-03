@@ -9,11 +9,6 @@ RSpec.describe "A visitor", type: :feature do
       it { should have_content t("pages.home.headline") }
     end
 
-    describe "log in page" do
-      before { visit new_admin_session_path }
-      it { should have_content "Log in" }
-    end
-
     describe "contact us page" do
       before { visit new_contact_form_path }
       it { should have_content t("contact_forms.new.banner") }

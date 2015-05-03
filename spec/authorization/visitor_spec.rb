@@ -21,8 +21,8 @@ RSpec.describe "A visitor", type: :feature do
   end
 
   describe "cannot see the" do
-    describe "admin dashboard" do
-      before { visit admin_dashboard_path }
+    describe "admin settings" do
+      before { visit admin_settings_path }
       it { should have_content t("devise.failure.unauthenticated") }
     end
   end

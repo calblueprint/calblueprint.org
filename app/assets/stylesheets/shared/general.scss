@@ -116,3 +116,12 @@ Block Grid: http://foundation.zurb.com/docs/components/block_grid.html
   cursor: pointer;
   background: darken($blue, 20) !important;
 }
+
+.white-bg {
+  background-color: #FFFFFF;
+}
+
+.gray-bg {
+  background-color: #ECECEC;
+  border-top: 1px solid #CCC;
+}

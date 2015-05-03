@@ -29,6 +29,7 @@ class StudentApplicationsController < ApplicationController
   end
 
   def verify_student_app_open
-    redirect_to students_apply_path, flash: { error: t('student_applications.closed') } unless @settings.student_app_open
+    return if @settings.student_app_open
+    redirect_to students_apply_path, flash: { error: t('student_applications.closed') }
   end
 end

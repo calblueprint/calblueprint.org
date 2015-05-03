@@ -69,7 +69,7 @@ en:
         You have successfully submitted an application. You will receive an email shortly.
       resubmit: >
         You have already submitted an application for this semester.
-      closed: Student applications are now closed for this semester. Thank you for your interest!
+    closed: Student applications are now closed for this semester. Thank you for your interest!
   titles:
     application: Cal Blueprint
     pages:

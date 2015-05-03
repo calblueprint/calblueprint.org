@@ -33,7 +33,9 @@ Nonprofit.create! name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.
 Nonprofit.create! name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com',
                   phone_number: '1234567890', password: 'password'
 NonprofitApplication.create! purpose: 'To rule the world.', nonprofit: Nonprofit.find(1), semester: semester
-NonprofitApplication.create! purpose: 'To combat illiteracy.', nonprofit: Nonprofit.find(2), semester: semester
+NonprofitApplication.create! purpose: 'To combat illiteracy.',
+                             nonprofit: Nonprofit.find(2),
+                             semester: semester
 
 Member.create! first_name: 'divine', last_name: 'cherry', email: 'dc@gmail.com', member_role: role
 Member.create! first_name: 'withered', last_name: 'wind', email: 'ww@gmail.com', member_role: role

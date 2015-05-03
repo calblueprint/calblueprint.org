@@ -24,7 +24,8 @@ class NonprofitApplicationsController < ApplicationController
     )
   end
 
-  def verify_student_app_open
-    redirect_to nonprofits_apply_path, flash: { error: t('nonprofit_applications.closed') } unless @settings.npo_app_open
+  def verify_npo_app_open
+    return if @settings.npo_app_open
+    redirect_to nonprofits_apply_path, flash: { error: t('nonprofit_applications.closed') }
   end
 end

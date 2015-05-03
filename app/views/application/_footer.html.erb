@@ -24,7 +24,7 @@
         <h5>Sponsors</h5>
         <ul>
           <li><%= link_to "Contribute", '#' %></li>
-          <li><%= link_to "Sponsors", '#' %></li>
+          <li><%= link_to "Sponsors", sponsors_path %></li>
           <li><%= link_to "Team", about_path %></li>
         </ul>
       </div>
@@ -34,7 +34,7 @@
         <h5>General</h5>
         <ul>
           <li><%= link_to "Contact", new_contact_form_path %></li>
-          <li><%= link_to "Blog", 'https://medium.com/@blueprint' %></li>
+          <li><%= link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank" %></li>
           <li><%= link_to "Projects", projects_path %></li>
           <li><%= link_to "About", about_path %></li>
         </ul>
@@ -52,10 +52,18 @@
   </div>
   <div class="row">
     <div class="icons small-12 medium-9 medium-push-3 columns">
-      <a href="http://www.facebook.com/calblueprint"><i class="fa fa-facebook-f"></i></a>
-      <a href="https://twitter.com/calblueprint"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/calblueprint/"><i class="fa fa-github-alt"></i></a>
-      <a href="http://www.medium.com/@blueprint"><i class="fa fa-medium"></i></a>
+      <%= link_to SocialMediaUrls::FACEBOOK, target: "_blank" do %>
+        <i class="fa fa-facebook-f"></i>
+      <% end %>
+      <%= link_to SocialMediaUrls::TWITTER, target: "_blank" do %>
+        <i class="fa fa-twitter"></i>
+      <% end %>
+      <%= link_to SocialMediaUrls::GITHUB, target: "_blank" do %>
+        <i class="fa fa-github-alt"></i>
+      <% end %>
+      <%= link_to SocialMediaUrls::MEDIUM, target: "_blank" do %>
+        <i class="fa fa-medium"></i>
+      <% end %>
     </div>
     <small class="copyright small-12 medium-3 medium-pull-9 columns">&copy; Blueprint 2015</small>
   </div>

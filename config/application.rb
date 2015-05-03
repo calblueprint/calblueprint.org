@@ -22,6 +22,9 @@ module CalBlueprintOrgApp
       generate.controller_specs false
     end
 
+    # Specify that errors should be handled by router
+    config.exceptions_app = self.routes
+
     # Raise error when any param isn't permitted
     config.action_controller.action_on_unpermitted_parameters = :raise
     # Settings in config/environments/* take precedence over those specified here.

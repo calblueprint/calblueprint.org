@@ -40,6 +40,7 @@ module Admins
       @semester = Semester.find params[:id]
       if @semester.can_be_destroyed?
         @semester.destroy
+        flash[:error] = "Semester has been successfully deleted"
       else
         flash[:error] = t("admin.semesters.destroy.error")
       end

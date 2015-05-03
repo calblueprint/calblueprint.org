@@ -4,8 +4,12 @@
   <%= link_to "Blog", '#', class: "header-tab" %>
   <%= link_to "Projects", projects_path, class: "header-tab" %>
   <%= link_to "About", about_path, class: "header-tab" %>
-  <% if current_admin %>
+
+  <% if current_user %>
     <%= link_to "Log out", destroy_user_session_path, class: "header-tab", method: :delete %>
+  <% end %>
+
+  <% if current_admin %>
     <div class="header-tab header-admin">
       <ul>
         <li><a href="#">Admin</a>

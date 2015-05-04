@@ -64,4 +64,13 @@
       text-shadow: $tooltip-shadow;
     }
   }
+
+  #newsletter-tooltip {
+    margin: 0 0 0 -21em;
+    bottom: 12em;
+  }
+  
+  #full-page-tooltip {
+    margin: 0 0 0 -28em;
+  }
 }

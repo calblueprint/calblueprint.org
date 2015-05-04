@@ -56,6 +56,8 @@ en:
           Cannot delete semester if the semester has applications or projects, or
           if there is only one semester left. Please reassign applications and projects before
           deleting this semester.
+        success: >
+          Semester has been successfully deleted!
 
   student_applications:
     new:

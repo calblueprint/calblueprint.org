@@ -20,17 +20,16 @@
 }
 
 .header-button {
+  @extend .button;
   padding: 4px 16px;
   border-radius: 4px;
   background: $blue;
   color: #fff;
   margin: 8px 20px;
-}
 
-.header-button:hover {
-  color: #fff;
-  cursor: pointer;
-  background: $hover-button-color;
+  &:hover {
+    color: $white;
+  }
 }
 
 .header-logo {

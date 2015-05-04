@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @members = Member.all
   end
 
   def sponsors

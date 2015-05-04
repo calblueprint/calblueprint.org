@@ -1,3 +1,15 @@
-inherit_from: ./.rubocop.yml
+ruby:
+  config_file: .rubocop.yml
+
+coffee_script:
+  config_file: .coffeelint.json
+
+javascript:
+  enabled: true
+  config_file: .javascript-style.json
+  ignore_file: .javascript_ignore
+
+scss:
+  config_file: .scss-style.yml
 
 ShowCopNames: true

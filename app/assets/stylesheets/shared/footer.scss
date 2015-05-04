@@ -1,3 +1,5 @@
+$greyed-out-color: #777;
+
 .footer {
   background-color: #333;
   padding: 50px 10px 30px;
@@ -24,7 +26,7 @@
   }
 
   .greyed-out {
-    color: #777;
+    color: $greyed-out-color;
   }
 
   .fa, a .fa {

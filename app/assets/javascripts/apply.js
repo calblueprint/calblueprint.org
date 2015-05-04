@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('page:change', function() {
   $apply_nav = $("#apply_nav");
   if ($apply_nav) {
     $apply_nav.children().each(function(id, child) {

@@ -21,11 +21,13 @@ $base-line-height: 1.5;
 $header-line-height: 1.25;
 
 // Other Sizes
-$base-border-radius: 3px;
+$base-border-radius: 2px;
 $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
+$button-font-size: 1.1em;
 
 // Colors
+$white: #FFFFFF;
 $blue: #477DCA;
 $dark-gray: #333;
 $medium-gray: #999;
@@ -45,7 +47,7 @@ $base-accent-color: $blue;
 $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
 $base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
+$hover-button-color: darken($base-button-color, 20);
 
 // Flash Colors
 $alert-color: $light-yellow;

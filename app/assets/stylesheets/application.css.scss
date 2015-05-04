@@ -4,11 +4,13 @@
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
  */
 
 @import "vendor/normalize";
 @import "bourbon";
 @import "neat";
+@import "sky-labels";
 @import "font-awesome.css";
 @import "vendor/base/base";
 @import "vendor/grid";

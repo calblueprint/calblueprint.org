@@ -68,6 +68,18 @@
   z-index: -1;
 }
 
+.gear-img-small {
+  background: image-url("apply/gears.svg");
+  background-size: cover;
+  bottom: -305px;
+  height: 779px;
+  left: -525px;
+  position: absolute;
+  width: 600px;
+  @include transform(scale(0.5, 0.5));
+  z-index: -1;
+}
+
 .authorize-icon {
   font-size: 3em;
   position: absolute;
@@ -127,9 +139,8 @@ label.remember-me {
 .subtitle {
   margin: 0 auto;
   width: 75%;
-  margin-top: -5px;
   margin-bottom: 10px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.5em;
   font-weight: 400;
 }

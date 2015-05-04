@@ -16,10 +16,10 @@ en:
         remember_me: "Keep me signed in"
         email: ~
         password: ~
-    placeholders:
-      defaults:
-        email: "Email"
-        password: "Password"
+    # placeholders:
+    #   defaults:
+    #     email: "Email"
+    #     password: "Password"
     #   user:
     #     new:
     #       email: 'E-mail to sign in.'

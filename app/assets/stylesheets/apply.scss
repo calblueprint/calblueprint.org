@@ -1,3 +1,4 @@
+
 .apply-container {
   display: flex;
   flex-flow: row wrap;
@@ -83,21 +84,21 @@
 }
 
 .fb-authorize-button {
-  background: #3B5998;
+  background: $facebook-blue;
   width: 100%;
 }
 
 .fb-authorize-button:hover {
-  background: #2F4779;
+  background: $facebook-hover;
 }
 
 .google-authorize-button {
-  background: #DD4B39;
+  background: $google-red;
   width: 100%;
 }
 
 .google-authorize-button:hover {
-  background: #B03C2D;
+  background: $google-hover;
 }
 
 label.remember-me {

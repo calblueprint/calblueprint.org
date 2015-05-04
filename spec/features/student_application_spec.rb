@@ -5,7 +5,7 @@ RSpec.describe "Student Application Form" do
     visit new_student_application_path
     expect(page).to have_content "You need to sign in"
     create_omniauth
-    click_link 'Sign in with Facebook'
+    click_link 'Log in with Facebook'
     visit new_student_application_path
   end
 

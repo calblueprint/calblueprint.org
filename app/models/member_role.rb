@@ -14,7 +14,7 @@ class MemberRole < ActiveRecord::Base
   validates :role, presence: true
   validates_uniqueness_of :role
 
-  def to_label
+  def to_s
     "#{role}"
   end
 

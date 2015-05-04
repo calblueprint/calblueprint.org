@@ -109,21 +109,21 @@
   <div class="row">
     <div class="small-12 small-centered columns">
       <ul class="team-pictures medium-block-grid-4 small-block-grid-2">
-        <% (1..28).each do |i| %>
+        <% @members.each do |member| %>
           <li class="team-picture-item">
-            <figure class="effect-sadie"> 
+            <figure class="effect-sadie">
               <a href="#">
-              <%= image_tag("about/wonjun.jpg") %>
+              <%= image_tag gravatar_url(member.email) %>
               <figcaption>
                 <div class="member-description">
-                  <div class="name"><b>WONJUN JEONG</b></div>
-                  <div class="position">President</div>
+                  <div class="name"><b><%= member %></b></div>
+                  <div class="position"><%= member.member_role %></div>
                 </div>
               </figcaption>
               </a>
             </figure>
           </li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -134,7 +134,7 @@
 <div class="about-sponsor-block">
   <div class="row">
     <div class="small-12 small-centered columns">
-      <div class="spacer-small"></div>    
+      <div class="spacer-small"></div>
       <ul class="sponsor-list large-block-grid-8 medium-block-grid-8 small-block-grid-4">
         <li class="sponsor-item ">
         <a href="https://www.palantir.com/">

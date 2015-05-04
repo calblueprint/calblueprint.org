@@ -1,7 +1,7 @@
 module ApplicationHelper
   def gravatar_url(email)
     gravatar_hash = Digest::MD5.hexdigest(email).downcase
-    "http://gravatar.com/avatar/#{gravatar_hash}.png"
+    "http://gravatar.com/avatar/#{gravatar_hash}?s=200"
   end
 
   def class_if?(css_class, exp)

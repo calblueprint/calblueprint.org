@@ -1,6 +1,7 @@
 class StudentApplicationsController < ApplicationController
   before_action :authenticate_applicant!
   before_action :verify_unique_semester_application
+  before_action :verify_student_app_open
 
   def new
     @student_application = current_applicant.student_applications.build
@@ -25,5 +26,10 @@ class StudentApplicationsController < ApplicationController
   def verify_unique_semester_application
     return true unless current_applicant.applied_for?(@settings.current_semester)
     redirect_to students_apply_path, flash: { success: t('student_applications.create.resubmit') }
+  end
+
+  def verify_student_app_open
+    return if @settings.student_app_open
+    redirect_to students_apply_path, flash: { error: t('student_applications.closed') }
   end
 end

@@ -8,19 +8,19 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
-#Create basic roles
+# Create basic roles
 president_role = MemberRole.create! role: "President"
 internal_role = MemberRole.create! role: "Internal VP"
 external_role = MemberRole.create! role: "External VP"
 tech_role = MemberRole.create! role: "VP of Technology"
-projects_role = MemberRole.create! role: "VP of Projects"
+# projects_role = MemberRole.create! role: "VP of Projects"
 leader_role = MemberRole.create! role: "Project Leader"
 developer_role = MemberRole.create! role: "Project Developer"
-alumni_relations_role = MemberRole.create! role: "Alumni Relations Director"
+# alumni_relations_role = MemberRole.create! role: "Alumni Relations Director"
 community_role = MemberRole.create! role: "Community Outreach Director"
-intersocietal_role = MemberRole.create! role: "Intersocietal Relations Director"
+# intersocietal_role = MemberRole.create! role: "Intersocietal Relations Director"
 media_role = MemberRole.create! role: "Media Director"
-corporate_role = MemberRole.create! role: "Corporate Relations Director"
+# corporate_role = MemberRole.create! role: "Corporate Relations Director"
 alumnus_role = MemberRole.create! role: "Alumnus"
 
 semester = Semester.create! season: 'spring', year: '2013'
@@ -51,8 +51,8 @@ NonprofitApplication.create! purpose: 'To rule the world.',
 NonprofitApplication.create! purpose: 'To combat illiteracy.',
                              nonprofit: Nonprofit.find(2), semester: semester
 
-#Seed all members with current roles
-Member.create! first_name: 'Sam', last_name: 'Lau', email: 'samlau95@gmail.com', 
+# Seed all members with current roles
+Member.create! first_name: 'Sam', last_name: 'Lau', email: 'samlau95@gmail.com',
                member_role: tech_role
 Member.create! first_name: 'Alice', last_name: 'Oh', email: 'missonederland@gmail.com',
                member_role: alumnus_role

@@ -1,0 +1,322 @@
+.apply-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  width: 100%;
+}
+
+.card-style {
+  background-color: white;
+  box-shadow: 0 0 5px 2px #ddd;
+  border: 1px solid #bbb;
+}
+
+.panel {
+  top: 0;
+  width:100vw;
+  height:500px;
+  position: fixed;
+  z-index: -1;
+}
+
+.panel-container{
+  width:100%;
+  margin-top: -48px;
+  height: 350px;
+  text-align:center;
+  position: static;
+  z-index: 0;
+
+  .title {
+    @extend .h0;
+    color: #FFFFFF;
+    padding-top: 150px;
+  }
+}
+
+.panel-left, .panel-right {
+  text-align: center;
+  width: 50%;
+  min-height: 100vh;
+
+  @media only screen and (max-width: $medium-screen) {
+    width: 100%;
+  }
+}
+
+.nonprofits-bg {
+  @include background-image(
+    linear-gradient(
+      rgba(50, 50, 50, 0.4),
+      rgba(50, 50, 50, 0.4)
+    ),
+    image-url('apply/nonprofits/nonprofits.jpg')
+  );
+  background-size:cover;
+}
+
+.gear-img {
+  background: image-url('apply/gears.svg');
+  background-size: cover;
+  height: 779px;
+  width: 600px;
+  position: absolute;
+  left: -500px;
+  bottom: -220px;
+  @include transform(scale(0.6,0.6));
+  z-index: -1;
+}
+
+label.remember-me {
+  color: $medium-gray;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.students-bg {
+  @include background-image(
+    linear-gradient(
+      rgba(27, 117, 188, 0.4),
+      rgba(27, 117, 188, 0.4)
+    ),
+    image-url('apply/students/students.jpg')
+  );
+  background-size: cover;
+}
+
+#left-title, #right-title {
+  padding-top: 30vh;
+}
+
+.subtitle {
+  margin: 0 auto;
+  width: 75%;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+#hook {
+  text-align: left;
+}
+
+#apply-button {
+  text-align: center;
+}
+
+.submenu {
+  list-style:none;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0;
+    border-left: 1px solid #AAA;
+    border-bottom: 5px solid rgba($blue, 0);
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:first-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: #DDDDDD;
+      border-bottom: 5px solid rgba($blue, 1);
+    }
+  }
+}
+
+.title-column {
+  @extend .large-3;
+  @extend .medium-4;
+  @extend .small-12;
+  @extend .columns;
+  text-align: right;
+
+  h1 {
+    text-align: right;
+  }
+
+  @media only screen and (max-width: $medium-screen) {
+    text-align: center;
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.content-column {
+  @extend .large-9;
+  @extend .medium-8;
+  @extend .small-12;
+  @extend .columns;
+  border-left: 1px solid #CCC;
+  text-align: left;
+  padding-left: 50px;
+
+  p, h4, h5 {
+    text-align: left;
+  }
+
+  @media only screen and (max-width: $medium-screen) {
+    border: none;
+    border-top: 1px solid #CCC;
+  }
+
+  .timeline-vertical {
+    margin-left: 60px;
+  }
+}
+
+.quote-block {
+  padding: 25px 15px;
+  background-color: #E5E5E5;
+  border: 1px solid #CCC;
+
+  q {
+    font-size: 1.4em;
+    padding: 0 15px;
+  }
+
+  .reference {
+    text-align:right;
+    font-style: italic;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+}
+
+.timeline-slim {
+  @include timeline-vertical;
+  margin: 10px 10px;
+
+  .timeline-content {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+#faq {
+  h5 {
+    cursor: pointer;
+    line-height:2.3em;
+  }
+
+  .drawer p {
+    display: none;
+    padding-left: 10px;
+  }
+
+  .drawer .active {
+    display:block;
+  }
+
+
+  .drawer h5 {
+    padding: 5px;
+    transition-duration: 0.3s;
+
+    &:hover {
+      background-color: #CCC;
+    }
+  }
+}
+
+.white-button {
+  @extend button;
+  border: 1px solid #fff;
+}
+
+.white-bg {
+  background-color: #FFFFFF;
+}
+
+.gray-bg {
+  background-color: #EAEAEA;
+  border-top: 1px solid #CCC;
+}
+
+// Student Application Page CSS
+.apply-students-banner {
+  background-image: image-url("apply/students/banner.png");
+  background-size: cover;
+  color: white;
+  height: 260px;
+}
+
+.apply-info {
+  background-color: white;
+  height: 100%;
+  border-radius: 0px 2px 2px 0px;
+  border-color: #D0D1D5;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+.apply-info-section {
+  @extend .columns;
+  @extend .small-12;
+  @extend .medium-6;
+  @extend .large-6;
+  .apply-info-section-icon {
+    background-size: cover;
+    height: 32px;
+    width: 32px;
+    margin: 24px auto 12px;
+  }
+  .apply-info-section-text {
+    color: $dark-gray;
+    text-align: center;
+    width: 80%;
+    line-height: 20px;
+    font-size: 16px;
+    margin: 16px auto 52px;
+  }
+  .problem-icon {
+    @extend .apply-info-section-icon;
+    background-image: image-url("projects/problem.png");
+  }
+  .calendar-icon {
+    @extend .apply-info-section-icon;
+    background-image: image-url("apply/students/calendar.png");
+  }
+
+
+}
+
+
+.control-label {
+  color: black;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.student_applications-new, {
+  textarea { height: em(135px); }
+}
+
+.applications-closed {
+  color: black;
+  background: #f5f5f5;
+  height: 100px;
+  width: 100%;
+  font-size: 90%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E6E6E6;
+  border-radius: 6px;
+}

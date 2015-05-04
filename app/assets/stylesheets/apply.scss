@@ -67,6 +67,39 @@
   z-index: -1;
 }
 
+.authorize-icon {
+  font-size: 3em;
+  position: absolute;
+}
+
+.fb-authorize-icon {
+  bottom: 156px;
+  left: 39px;
+}
+
+.google-authorize-icon {
+  bottom: 68px;
+  left: 39px;
+}
+.fb-authorize-button {
+  width: 100%;
+  background: #3b5998;
+}
+
+
+.fb-authorize-button:hover {
+  background: #0e1f5b;
+}
+
+.google-authorize-button {
+  width: 100%;
+  background: #dd4b39;
+}
+
+
+.google-authorize-button:hover {
+  background: #c64333;
+}
 label.remember-me {
   color: $medium-gray;
 }

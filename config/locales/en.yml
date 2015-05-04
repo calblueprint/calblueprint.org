@@ -19,19 +19,19 @@ en:
   pages:
     home:
       headline: Technology for Nonprofits
-      subtitle: We are UC Berkeley students who want to use technology to improve our community.
+      subtitle: We are a group of UC Berkeley students who want to use technology to improve our community.
       what_we_do: >
         Hey! We're Blueprint, a student organization using technology for social good.
         We build web and mobile applications for nonprofits pro bono and foster the use of technology
         for public welfare through events and discussions.
       our_projects: >
         Each year, teams of five students work with non-profit organizations on projects
-        to help them better serve their communities. The resulting applications have greatly funding
-        for classrooms, streamlined services for the homeless and much more.
+        to help them better serve their communities. We've built a crowdfunding application for
+        Berkeley's public schools, a professional development platform for digital literacy in Oakland, and
+        much more.
       get_involved: >
-        Are you a nonprofit looking to partner? Are you a student looking to join? Be sure to check
-        out the links below to find out how you can get involved in bringing technology to social good!
-        We are happy to answer any questions you may have.
+        Are you a nonprofit looking to partner? Are you a student looking to join? Find out how you can get
+        involved in bridging technology and social good!
 
     about:
       headline: About Us

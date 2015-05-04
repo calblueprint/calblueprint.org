@@ -19,14 +19,35 @@ en:
   pages:
     home:
       headline: Technology for Nonprofits
+      subtitle: We are UC Berkeley students who want to use technology to improve our community.
+      what_we_do: >
+        Hey! We're Blueprint, a student organization using technology for social good.
+        We build web and mobile applications for nonprofits pro bono and foster the use of technology
+        for public welfare through events and discussions.
+      our_projects: >
+        Each year, teams of five students work with non-profit organizations on projects
+        to help them better serve their communities. The resulting applications have greatly funding
+        for classrooms, streamlined services for the homeless and much more.
+      get_involved: >
+        Are you a nonprofit looking to partner? Are you a student looking to join? Be sure to check
+        out the links below to find out how you can get involved in bringing technology to social good!
+        We are happy to answer any questions you may have.
 
     about:
       headline: About Us
+      mission: >
+        Blueprint's mission is to make beautiful engineering accessible and useful
+        for those who create communities and promote public welfare.
       values:
         craft:
-          description: Our projects are carefully constructed from the first contact with the nonprofit to project deployment and use in production. We are meticulous about our design, our process, and our code.
+          description: >
+            Our projects are carefully constructed from the first contact with the nonprofit to project
+            deployment and use in production. We are meticulous about our design, our process, and our code.
         culture:
-          description: Bluepers work hard and play hard. When we’re not developing, we eat together, play sports together, and volunteer together. We think that life is best enjoyed with laughter, fun, and a sound foundation of friends.
+          description: >
+            Bluepers work hard and play hard. When we’re not developing, we eat, play,
+            and volunteer with each other. We think that life is best enjoyed with laughter,
+            fun, and a sound foundation of friends.
         heart:
           description: We believe that our abilities should be used for good. Our motivation pushes us to constantly learn, work hard, and find solutions where others have not looked.
       team:

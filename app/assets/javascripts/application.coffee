@@ -13,5 +13,6 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
+#= require sky-labels
 #= require shared/utilities
 #= require_tree .

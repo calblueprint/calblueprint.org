@@ -58,12 +58,12 @@
 .gear-img {
   background: image-url('apply/gears.svg');
   background-size: cover;
-  height: 779px;
-  width: 600px;
-  position: absolute;
-  left: -500px;
   bottom: -220px;
-  @include transform(scale(0.6,0.6));
+  height: 779px;
+  left: -500px;
+  position: absolute;
+  width: 600px;
+  @include transform(scale(0.6, 0.6));
   z-index: -1;
 }
 

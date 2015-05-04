@@ -22,7 +22,7 @@ $(document).on('page:change', function() {
     }
   })(jQuery);
 
-  jQuery(function(){  
+  jQuery(function(){
     jQuery.mark.jump();
   });
 

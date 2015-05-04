@@ -15,11 +15,12 @@ en:
       defaults:
         remember_me: "Keep me signed in"
         email: ~
-        password: ~
+        password:
     placeholders:
       defaults:
         email: "Email"
         password: "Password"
+        password_confirmation: "Re-type Password"
     #   user:
     #     new:
     #       email: 'E-mail to sign in.'

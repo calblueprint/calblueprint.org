@@ -5,7 +5,7 @@
         <h5>Students</h5>
         <ul>
           <li><%= link_to "Apply", apply_path %></li>
-          <li><%= link_to "FAQ", apply_path %></li>
+          <li><%= link_to "FAQ", students_apply_path(anchor: "faq") %></li>
         </ul>
       </div>
     </div>
@@ -14,8 +14,8 @@
         <h5>Nonprofits</h5>
         <ul>
           <li><%= link_to "Apply", apply_path %></li>
-          <li><%= link_to "Process", about_path %></li>
-          <li><%= link_to "FAQ", about_path %></li>
+          <li><%= link_to "Process", nonprofits_apply_path %></li>
+          <li><%= link_to "FAQ", nonprofits_apply_path(anchor: "faq") %></li>
         </ul>
       </div>
     </div>
@@ -23,9 +23,8 @@
       <div>
         <h5>Sponsors</h5>
         <ul>
-          <li><%= link_to "Contribute", '#' %></li>
-          <li><%= link_to "Sponsors", sponsors_path %></li>
-          <li><%= link_to "Team", about_path %></li>
+          <li><%= link_to "Contribute", sponsors_path %></li>
+          <li><%= link_to "Team", about_path(anchor: "team") %></li>
         </ul>
       </div>
     </div>

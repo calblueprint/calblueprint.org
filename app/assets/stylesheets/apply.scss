@@ -81,25 +81,25 @@
   bottom: 68px;
   left: 39px;
 }
+
 .fb-authorize-button {
+  background: #3B5998;
   width: 100%;
-  background: #3b5998;
 }
 
-
 .fb-authorize-button:hover {
-  background: #2f4779;
+  background: #2F4779;
 }
 
 .google-authorize-button {
+  background: #DD4B39;
   width: 100%;
-  background: #dd4b39;
 }
-
 
 .google-authorize-button:hover {
-  background: #b03c2d;
+  background: #B03C2D;
 }
+
 label.remember-me {
   color: $medium-gray;
 }

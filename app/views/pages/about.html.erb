@@ -109,7 +109,7 @@
   <div class="row">
     <div class="small-12 small-centered columns">
       <ul class="team-pictures medium-block-grid-4 small-block-grid-2">
-        <% Member.find_each do |member| %>
+        <% @members.each do |member| %>
           <li class="team-picture-item">
             <figure class="effect-sadie">
               <a href="#">

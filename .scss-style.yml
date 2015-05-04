@@ -1,4 +1,6 @@
 scss_files: "**/*.scss"
+exclude: "app/assets/stylesheets/vendor/**"
+
 linters:
   BangFormat:
     enabled: true

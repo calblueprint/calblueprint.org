@@ -21,11 +21,13 @@ $base-line-height: 1.5;
 $header-line-height: 1.25;
 
 // Other Sizes
-$base-border-radius: 3px;
+$base-border-radius: 2px;
 $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
+$button-font-size: 1.1em;
 
 // Colors
+$white: #FFFFFF;
 $blue: #477DCA;
 $dark-gray: #333;
 $medium-gray: #999;
@@ -33,6 +35,10 @@ $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+$facebook-blue: #3B5998;
+$facebook-hover: #2F4779;
+$google-red: #DD4B39;
+$google-hover: #B03C2D;
 
 // Background Color
 $base-background-color: white;
@@ -45,7 +51,7 @@ $base-accent-color: $blue;
 $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
 $base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
+$hover-button-color: darken($base-button-color, 20);
 
 // Flash Colors
 $alert-color: $light-yellow;

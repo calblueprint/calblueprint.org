@@ -11,9 +11,15 @@ en:
     error_notification:
       default_message: "Please review the problems below:"
     # Labels and hints examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
+    labels:
+      defaults:
+        remember_me: "Keep me signed in"
+        email: ~
+        password: ~
+    placeholders:
+      defaults:
+        email: "Email"
+        password: "Password"
     #   user:
     #     new:
     #       email: 'E-mail to sign in.'

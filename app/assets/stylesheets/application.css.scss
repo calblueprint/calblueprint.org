@@ -12,12 +12,14 @@
 @import "font-awesome.css";
 @import "vendor/base/base";
 @import "vendor/grid";
+@import 'vendor/toastr';
 
 @import "shared/general";
 @import "shared/flash";
 @import "shared/header";
 @import "shared/tables";
 @import "shared/footer";
+@import "shared/tooltips";
 
 @import "home";
 @import "about";

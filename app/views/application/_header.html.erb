@@ -1,5 +1,6 @@
 <div class="header">
   <%= link_to "Apply", apply_path, class: "header-tab header-button" %>
+
   <% if current_user %>
     <%= link_to "Log out", destroy_user_session_path, class: "header-tab", method: :delete %>
   <% end %>

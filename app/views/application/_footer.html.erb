@@ -5,7 +5,7 @@
         <h5>Students</h5>
         <ul>
           <li><%= link_to "Apply", apply_path %></li>
-          <li><%= link_to "FAQ", apply_path %></li>
+          <li><%= link_to "FAQ", students_apply_path(anchor: "faq") %></li>
         </ul>
       </div>
     </div>
@@ -14,8 +14,8 @@
         <h5>Nonprofits</h5>
         <ul>
           <li><%= link_to "Apply", apply_path %></li>
-          <li><%= link_to "Process", about_path %></li>
-          <li><%= link_to "FAQ", about_path %></li>
+          <li><%= link_to "Process", nonprofits_apply_path %></li>
+          <li><%= link_to "FAQ", nonprofits_apply_path(anchor: "faq") %></li>
         </ul>
       </div>
     </div>
@@ -23,9 +23,10 @@
       <div>
         <h5>Sponsors</h5>
         <ul>
-          <li><%= link_to "Contribute", '#' %></li>
-          <li><%= link_to "Sponsors", sponsors_path %></li>
-          <li><%= link_to "Team", about_path %></li>
+          <li class="tooltip-item greyed-out">Contribute
+            <div class="tooltip"><p>Pardon our dust, this is still under construction.</p></div>
+          </li>
+          <li><%= link_to "Team", about_path(anchor: "team") %></li>
         </ul>
       </div>
     </div>
@@ -42,12 +43,15 @@
     </div>
     <div class="large-4 medium-6 end small-12 columns" style="text-align:right;">
       <form>
-        <div class="newsletter-form">
-          <input type="text" placeholder="Email Address"></input>
-          <button type="submit">Go</button>
+        <div class="newsletter-form tooltip-item">
+          <input type="text" placeholder="Email Address" disabled></input>
+          <button type="submit" disabled>Go</button>
+          <div id="newsletter-tooltip" class="tooltip"><p>Pardon our dust, this is still under construction.</p></div>
         </div>
       </form>
-      <p>Sign up for our newsletter to get updates about events, our work and applications!</p>
+      <p class="greyed-out">
+        Sign up for our newsletter to get updates about events, our work and applications!
+      </p>
     </div>
   </div>
   <div class="row">

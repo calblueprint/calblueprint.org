@@ -6,10 +6,17 @@
     </p>
   </div>
 </div>
-
-<div class="spacer"></div>
+<div class="spacer-small"></div>
 <div class="row">
   <div class="medium-6 medium-centered columns center">
-    <%= render "applicants/shared/links" %>
+    <%= link_to omniauth_authorize_path(:applicant, :facebook), class: "button fb-authorize-button" do %>
+      <%= fa_icon "facebook", class: "fb-authorize-icon authorize-icon", text: "Log in with Facebook" %>
+    <% end %>
+    <div class="spacer-small"></div>
+    <%= link_to omniauth_authorize_path(:applicant, :google_oauth2), class: "button google-authorize-button" do %>
+      <%= fa_icon "google", class: "google-authorize-icon authorize-icon", text: "Log in with Google" %>
+    <% end %>
+  <div class="gear-img"></div>
+  <div class="spacer"></div>
   </div>
 </div>

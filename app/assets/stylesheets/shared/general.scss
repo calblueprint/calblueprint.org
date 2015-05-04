@@ -95,28 +95,6 @@ Block Grid: http://foundation.zurb.com/docs/components/block_grid.html
   font-size: 5em;
 }
 
-/* The general button class. Use for forms, links, actions, and all your hair care needs. */
-.button {
-  display: inline-block !important;
-  margin: auto !important;
-  padding: 15px 25px !important;
-  text-decoration: none !important;
-  font-size: 1.1em !important;
-  line-height: 1.5 !important;
-  border-radius: 6px !important;
-  font-weight: 700 !important;
-  background: $blue !important;
-  color: #fff !important;
-  border: none !important;
-}
-
-/* When you hover over buttons their background will darken */
-.button:hover {
-  color: #fff;
-  cursor: pointer;
-  background: darken($blue, 20) !important;
-}
-
 .white-bg {
   background-color: #FFFFFF;
 }

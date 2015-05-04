@@ -9,6 +9,11 @@
     <%= link_to "Log out", destroy_user_session_path, class: "header-tab", method: :delete %>
   <% end %>
 
+  <%= link_to "Contact", new_contact_form_path, class: "header-tab" %>
+  <%= link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "header-tab" %>
+  <%= link_to "Projects", projects_path, class: "header-tab" %>
+  <%= link_to "About", about_path, class: "header-tab" %>
+
   <% if current_admin %>
     <div class="header-tab header-admin">
       <ul>

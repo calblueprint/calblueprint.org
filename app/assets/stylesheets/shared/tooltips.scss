@@ -37,9 +37,9 @@
     font-size: 0.9em;
     // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
     line-height: 1.5em;
-    margin: 0 auto;
+    margin: 0 auto 0 -1em;
     max-width: $tooltip-max-width;
-    width: 11em;
+    width: 14em;
     opacity: 0;
     padding: 1em;
     text-align: center;
@@ -59,7 +59,7 @@
       color: $tooltip-background;
       content: '▼';
       font-size: 1.4em;
-      margin-left: -40px;
+      margin-left: -60px;
       text-align: center;
       text-shadow: $tooltip-shadow;
     }

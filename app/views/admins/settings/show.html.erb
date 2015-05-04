@@ -1,14 +1,30 @@
-<h1><%= link_to "Edit Settings", edit_admin_settings_path %></h1>
-
-<table border="1">
-  <tr>
-    <th>NPO Applications Open</th>
-    <th>Student Applications Open</th>
-    <th>Current Semester</th>
-  </tr>
-  <tr>
-    <td><%= @settings.npo_app_open %></td>
-    <td><%= @settings.student_app_open %></td>
-    <td><%= @settings.current_semester %></td>
-  </tr>
-</table>
+<div class="banner">
+  <div class="banner-text">
+    <h1 class="h0">Settings</h1>
+    <p class="subtitle">
+      What's the haps with BP? (Placeholder Setting subtitle)
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <%= link_to "Edit Settings", edit_admin_settings_path, class: "button"%>
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>NPO Applications Open</th>
+          <th>Student Applications Open</th>
+          <th>Current Semester</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @settings.npo_app_open %></td>
+          <td><%= @settings.student_app_open %></td>
+          <td><%= @settings.current_semester %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="spacer"></div>

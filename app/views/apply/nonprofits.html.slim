@@ -1,0 +1,229 @@
+.panel-container
+  .panel.nonprofits-bg
+  h1.title For Non-Profits
+  p.white.subtitle
+    | Partnering with Blueprint is a fantastic way to build the perfect application
+    | to suit your organization's needs.
+.white-bg
+  .spacer-small
+  .row
+    .small-12.medium-9.columns
+      p#hook
+        | We are an organization of passionate UC Berkeley students who
+        | develop web and mobile applications for non-profit organizations.
+        | As a partner, we will work closely with you to develop an application
+        | to best suit your needs. Best of all, everything we do is completely
+        | pro bono.
+    #apply-button.small-12.medium-3.columns
+      - if @settings.npo_app_open
+        = link_to "Apply Now", new_nonprofit_application_path, class: "button"
+      - else
+        .applications-closed
+          p Applications are now closed for this semester. Thank you for your interest!
+  .spacer-small
+.gray-bg
+  ul#apply_nav.submenu
+    li data-target="services" Our Services
+    li data-target="process" Application Process
+    li data-target="timeline" Project Timeline
+    li data-target="previous_work" Previous Work
+    li data-target="faq" FAQ
+  .spacer-large
+  .row
+    .title-column
+      h1#services.title
+        | Our
+        br/
+        | Services
+    .content-column
+      .row
+        .small-12.columns
+          p
+            strong Web Application Development
+            br/
+            | This is just random text to flragen flurgen lorem ipsum text here
+            | goes like there are actual workds
+        .small-12.columns
+          p
+            strong Mobile Application Development
+            br/
+            | This is just random text to flragen flurgen lorem ipsum text here
+            | goes like there are actual workds
+  .spacer-large
+  .row
+    .title-column
+      h1#process Application Process
+    .content-column
+      .small-12.columns
+        ul.timeline-vertical
+          li.work.timeline-row
+            .relative
+              h5.title Application Submission
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | Overview of the course and what you can expect.
+                | Work time will be setting up your environment.
+          li.work.timeline-row
+            .relative
+              h5.title First Round Cuts
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | Applications are reviewed by our VP of Projects and
+                | project leaders and preliminary cuts are made.
+          li.work.timeline-row
+            .relative
+              h5.title Organization Interviews
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | Remaining organizations will be interviewed to better
+                | understand the project proposal and determine feasability.
+          li.work.timeline-row
+            .relative
+              h5.title Final Decisions
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | The final organizations are determined with one per project leader.
+                | We will then go on to complete each application.
+      .small-12.columns.decision-criteria
+        .spacer-small
+        h4.title Decision Criteria
+        p
+          | If we could, we would accept every applicant but unfortunately we
+          | cannot manage the volume of people and administrative overhead while
+          | still fulfilling our mission to the best of our abilities. The following
+          | criteria are what we use to evaluate applicants.
+        ul
+          li
+            strong Feasability
+            p Is your project achievable given our skills?
+          li
+            strong Scope
+            p Is your project achievable within the alloted timeline?
+          li
+            strong Credibility
+            p Is there evidence or a proof of concept validating that your project will have an impact?
+          li
+            strong Impact
+            p How much will your project impact the community?
+          li
+            strong Necessity
+            p How vital is your project to your non-profit organization?
+          li
+            strong Alternatives
+            p Does your organization have alternate means to achieve the same goal?
+  .spacer
+  .row
+    .small-12.columns
+      .quote-block
+        q
+          | Some really awesome quote will go here from one of our previous satisfiied clients
+        h5.reference - Satisfied Client
+  .spacer
+  .row
+    .title-column
+      h1#timeline Project Timeline
+    .content-column
+      .small-12.columns
+        ul.timeline-slim
+          li.work.timeline-row
+            .relative
+              span.circle
+            .timeline-content
+              p
+                | Spec out the project and
+                | decide the goals and objectives.
+          li.work.timeline-row
+            .relative
+              span.circle
+            .timeline-content
+              p
+                | Begin development on top of base application.
+          li.work.timeline-row
+            .relative
+              span.circle
+            .timeline-content
+              p
+                | Midterm meeting to reevaluate remaining timeline
+                | and judge progress.
+          li.work.timeline-row
+            .relative
+              span.circle
+            .timeline-content
+              p
+                | Live user demos to ensure the application works
+                | well.
+          li.work.timeline-row
+            .relative
+              span.circle
+            .timeline-content
+              p
+                | Deliver final product and maintain.
+  .spacer-large
+  .row
+    .title-column
+      h1#previous_work Previous Work
+      a href="http://www.jlin7.com/"
+        small
+          em See More
+    .content-column
+      .small-12.small-centered.columns.center
+        .spacer-small
+        ul.small-block-grid-3
+          li
+            img src="http://goo.gl/EXVuUJ" /
+          li
+            img src="http://goo.gl/lrqEJC" /
+          li
+            img src="http://goo.gl/5sNrte" /
+  .spacer-large
+  .row
+    .title-column
+      h1#faq FAQ
+    .content-column
+      #faq.small-12.columns
+        .drawer
+          h5
+            ' What is Blueprint's project structure?
+            span
+              | (+)
+          p
+            | The client and the project leader communicate on a weekly basis to ensure the
+            | project’s progress. Meetings occur throughout the project engagement, beginning with
+            | at least one mandatory project scoping meeting with the project leader at the onset.
+            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            | recommendation will be delivered at a final presentation in Week 10.
+        .drawer
+          h5
+            ' How are client team interactions conducted?
+            span
+              | (+)
+          p
+            | The client and the project leader communicate on a weekly basis to ensure the
+            | project’s progress. Meetings occur throughout the project engagement, beginning with
+            | at least one mandatory project scoping meeting with the project leader at the onset.
+            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            | recommendation will be delivered at a final presentation in Week 10.
+        .drawer
+          h5
+            ' What resources does Blueprint have to ensure success?
+            span
+              | (+)
+          p
+            | The client and the project leader communicate on a weekly basis to ensure the
+            | project’s progress. Meetings occur throughout the project engagement, beginning with
+            | at least one mandatory project scoping meeting with the project leader at the onset.
+            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            | recommendation will be delivered at a final presentation in Week 10.
+  .spacer-small

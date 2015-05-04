@@ -1,5 +1,16 @@
-<% flash.each do |type, text| %>
-  <div class="flash-<%= type %>">
-    <%= text %>
-  </div>
+<% unless flash.empty? %>
+  <noscript type="text/css">
+    <% flash.each do |type, text| %>
+      <div class="flash-<%= type %>">
+        <%= text %>
+      </div>
+    <% end %>
+  </noscript>
+  <script type="text/javascript">
+    <% flash.each do |f| %>
+      <% type = f[0].gsub('alert', 'error').gsub('notice', 'info') %>
+      toastr['<%= type %>']('<%= f[1] %>');
+    <% end %>
+  </script>
 <% end %>
+

@@ -1,6 +1,6 @@
 $block-height: 300px;
 
-.projects-background { 
+.projects-background {
   width: 100%;
   background-color: #eaeaea;
   height: 100%;
@@ -88,7 +88,7 @@ $block-height: 300px;
         background-image: image-url("projects/demo.png");
       }
     }
-  } 
+  }
   .project-image {
     @extend .columns;
     @extend .small-12;
@@ -146,7 +146,6 @@ $block-height: 300px;
       margin-left: 4px;
     }
     .project-member-image {
-      background-image: image-url("projects/wonjun.jpg");
       background-size: cover;
       display: inline-block;
       height: 48px;
@@ -154,6 +153,9 @@ $block-height: 300px;
       border-radius: 24px;
       background-color: $blue;
       margin: 4px 4px;
+    }
+    .project-member-noimage {
+      background-color: $white;
     }
     .project-progress {
       margin-left: 8px;
@@ -170,12 +172,14 @@ $block-height: 300px;
   .project-see-more {
     position: absolute;
     bottom: 24px;
-    right: 20px; 
+    right: 20px;
     height: 24px;
     width: 24px;
     background-size: cover;
     background-image: image-url("projects/see-more.png");
     opacity: .5;
+    cursor: pointer;
+    cursor: hand;
   }
   .project-see-more:hover{
     opacity: 1.0;

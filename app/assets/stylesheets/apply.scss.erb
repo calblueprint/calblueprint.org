@@ -55,6 +55,26 @@
   background-size:cover;
 }
 
+.gear-img {
+  background: image-url('apply/gears.svg');
+  background-size: cover;
+  height: 779px;
+  width: 600px;
+  position: absolute;
+  left: -500px;
+  bottom: -220px;
+  @include transform(scale(0.6,0.6));
+  z-index: 1;
+}
+
+label.remember-me {
+  color: $medium-gray;
+}
+
+.login-button {
+  width: 100%;
+}
+
 .students-bg {
   @include background-image(
     linear-gradient(
@@ -63,7 +83,7 @@
     ),
     image-url('apply/students/students.jpg')
   );
-  background-size:cover;
+  background-size: cover;
 }
 
 #left-title, #right-title {

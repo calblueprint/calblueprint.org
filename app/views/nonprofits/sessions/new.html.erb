@@ -11,17 +11,18 @@
   <div class="medium-6 medium-centered columns center">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
-        <%= f.input :email, required: false, autofocus: true %>
-        <%= f.input :password, required: false %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%= f.input :email, label: false, placeholder: "Email", required: false, autofocus: true %>
+        <%= f.input :password, label: false, placeholder: "Password", required: false %>
+        <%= f.input :remember_me, label_html: { class: "remember-me" }, as: :boolean if devise_mapping.rememberable? %>
       </div>
-
+      <%= render "nonprofits/shared/links" %>  
+      <div class="spacer-small"></div>
       <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+        <%= f.button :submit, "Log in", class: "login-button" %>
       </div>
     <% end %>
-
-    <%= render "nonprofits/shared/links" %>    
+    <div class="gear-img"></div>
+  
   </div>
 </div>
 <div class="spacer"></div>

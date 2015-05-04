@@ -3,7 +3,7 @@
   height: 500px;
   @include background(linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), image-url("about/about.jpg"));
   background-size:cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position-y: 25%;
   @include animation(FadeIn 2.0s ease-in);
 }
@@ -58,9 +58,10 @@
         position: relative;
         .member-description {
           position: absolute;
+          top: 10px;
+          left: 10px;
+          width: 0;
           z-index: 10;
-          width: 100%;
-          bottom: 0;
           color: transparent;
           //@include transition-ease-all(0.5s);
         }
@@ -230,6 +231,10 @@ nav a svg {
 
 /** SADIE EFFECTS TEST */
 
+.effect-sadie {
+  margin: 0;
+}
+
 figure.effect-sadie figcaption::before {
   position: absolute;
   top: 0;
@@ -250,7 +255,7 @@ figure.effect-sadie .member-description {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 2em;
+  padding: 0;
   width: 100%;
   opacity: 0;
   @include transform(translate3d(0,10px,0));

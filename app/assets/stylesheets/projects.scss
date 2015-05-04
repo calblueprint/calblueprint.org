@@ -166,10 +166,10 @@ $block-height: 300px;
       height: 8px;
       width: 20%;
       margin: 0px 2px 4px 0px;
-      background-color: #FF7E79;
+      background-color: $progress-red;
     }
     .project-progress-green {
-      background-color: #4CB74C
+      background-color: $progress-green;
     }
   }
   .project-see-more {

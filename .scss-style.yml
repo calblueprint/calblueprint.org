@@ -36,7 +36,11 @@ linters:
     style: short
   HexNotation:
     enabled: true
+<<<<<<< HEAD
     style: uppercase
+=======
+    style: lowercase
+>>>>>>> Hound config
   HexValidation:
     enabled: true
   IdSelector:

@@ -60,7 +60,7 @@
           position: absolute;
           top: 10px;
           left: 10px;
-          width: 0px;
+          width: 0;
           z-index: 10;
           color: transparent;
           //@include transition-ease-all(0.5s);
@@ -231,7 +231,7 @@ nav a svg {
 
 /** SADIE EFFECTS TEST */
 
-figure.effect-sadie {
+.effect-sadie {
   margin: 0;
 }
 

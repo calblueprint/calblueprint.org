@@ -5,8 +5,8 @@ RSpec.describe "Nonprofit Application Form" do
 
   before do
     visit new_nonprofit_session_path
-    fill_in "Email", with: nonprofit.email
-    fill_in "Password", with: nonprofit.password
+    fill_in "nonprofit_email", with: nonprofit.email
+    fill_in "nonprofit_password", with: nonprofit.password
     click_button "Log in"
     visit new_nonprofit_application_path
   end

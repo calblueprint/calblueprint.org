@@ -41,6 +41,7 @@ gem 'bourbon', '~> 4.2.2'
 gem 'neat', '~> 1.7.2'
 gem 'bitters', '~> 1.0.0'
 gem 'font-awesome-rails', '~> 4.3.0'
+gem 'sky-labels-rails'
 
 # Error logging - requires setup with service
 gem 'rollbar'

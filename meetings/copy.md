@@ -1,4 +1,4 @@
-Blueprint Website Copy
+[Outdated] Blueprint Website Copy
 ======================
 
 Home

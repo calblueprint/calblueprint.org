@@ -10,6 +10,7 @@
   <div class="spacer-small"></div>
   <div class="row">
     <div class="medium-6 medium-centered columns center">
+      <%= render "form_errors", obj: resource %>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <div class="form-inputs">
         <%= f.input_field :organization_name, placeholder: "Organization Name" %>

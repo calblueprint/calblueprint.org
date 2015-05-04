@@ -53,12 +53,8 @@ en:
   admin:
     semesters:
       destroy:
-        error: >
-          Cannot delete semester if the semester has applications or projects, or
-          if there is only one semester left. Please reassign applications and projects before
-          deleting this semester.
-        success: >
-          Semester has been successfully deleted!
+        error: Cannot delete semester if the semester has applications or projects, or if there is only one semester left. Please reassign applications and projects before deleting this semester.
+        success: Semester has been successfully deleted!
 
   student_applications:
     new:
@@ -67,10 +63,8 @@ en:
         Applications are due:
       contact: if you have any questions
     create:
-      success: >
-        You have successfully submitted an application. You will receive an email shortly.
-      resubmit: >
-        You have already submitted an application for this semester.
+      success: You have successfully submitted an application. You will receive an email shortly.
+      resubmit: You have already submitted an application for this semester.
     closed: Student applications are now closed for this semester. Thank you for your interest!
   titles:
     application: Cal Blueprint

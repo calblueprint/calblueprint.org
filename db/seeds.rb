@@ -52,8 +52,14 @@ NonprofitApplication.create! purpose: 'To combat illiteracy.',
                              nonprofit: Nonprofit.find(2), semester: semester
 
 # Seed all members with current roles
+Member.create! first_name: 'Jessica', last_name: 'Lin', email: 'heyjaylin@gmail.com',
+               member_role: president_role
 Member.create! first_name: 'Sam', last_name: 'Lau', email: 'samlau95@gmail.com',
                member_role: tech_role
+Member.create! first_name: 'Howard', last_name: 'Chen', email: 'howardxchen@gmail.com',
+               member_role: internal_role
+Member.create! first_name: 'Vivek', last_name: 'Raghuram', email: 'vv9295@yahoo.com',
+               member_role: external_role
 Member.create! first_name: 'Alice', last_name: 'Oh', email: 'missonederland@gmail.com',
                member_role: alumnus_role
 Member.create! first_name: 'Eric', last_name: 'Shen', email: 'email.ericshen@gmail.com',
@@ -64,14 +70,10 @@ Member.create! first_name: 'Byron', last_name: 'Zhang', email: 'byron.yi.zhang@g
                member_role: leader_role
 Member.create! first_name: 'Harrison', last_name: 'Tsai', email: 'harrisontsai0123@gmail.com',
                member_role: alumnus_role
-Member.create! first_name: 'Vivek', last_name: 'Raghuram', email: 'vv9295@yahoo.com',
-               member_role: external_role
 Member.create! first_name: 'Erica', last_name: 'Yin', email: 'eriicaericaerica@gmail.com',
                member_role: developer_role
 Member.create! first_name: 'Soo', last_name: 'Song', email: 'soosong@berkeley.edu',
                member_role: media_role
-Member.create! first_name: 'Jessica', last_name: 'Lin', email: 'heyjaylin@gmail.com',
-               member_role: president_role
 Member.create! first_name: 'Quinton', last_name: 'Dang', email: 'quintonddang@gmail.com',
                member_role: developer_role
 Member.create! first_name: 'Max', last_name: 'Wolffe', email: 'max.alan.wolffe@gmail.com',
@@ -100,8 +102,6 @@ Member.create! first_name: 'Elizabeth', last_name: 'Lin', email: 'elizabethylin@
                member_role: alumnus_role
 Member.create! first_name: 'Andy', last_name: 'Qin', email: 'andrewlqin@gmail.com',
                member_role: developer_role
-Member.create! first_name: 'Howard', last_name: 'Chen', email: 'howardxchen@gmail.com',
-               member_role: internal_role
 Member.create! first_name: 'Jason', last_name: 'Won', email: 'jason.j.won@gmail.com',
                member_role: leader_role
 Member.create! first_name: 'Daniel', last_name: 'Li', email: 'danielmxli@gmail.com',

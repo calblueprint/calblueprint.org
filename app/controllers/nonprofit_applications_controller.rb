@@ -12,7 +12,7 @@ class NonprofitApplicationsController < ApplicationController
       SendNonprofitApplicationEmail.execute @nonprofit_application
       redirect_to nonprofits_apply_path, flash: { success: t("nonprofit_applications.create.success") }
     else
-      render :new
+      render 'new'
     end
   end
 

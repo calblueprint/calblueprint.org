@@ -102,4 +102,6 @@ Block Grid: http://foundation.zurb.com/docs/components/block_grid.html
 .gray-bg {
   background-color: #ECECEC;
   border-top: 1px solid #CCC;
+  z-index: -10;
 }
+

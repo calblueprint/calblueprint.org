@@ -13,12 +13,12 @@ RSpec.describe "Nonprofit Application Form" do
 
   subject { page }
 
-  it { should have_content t("nonprofit_applications.new.banner") }
+  it { should have_content "looking forward" }
 
   describe "without filling in form" do
     it "renders back form with errors" do
       click_button "Submit"
-      expect(page).to have_content t("nonprofit_applications.new.banner")
+      expect(page).to have_content "looking forward"
       expect(page).to have_content "can't be blank"
     end
 
@@ -27,7 +27,7 @@ RSpec.describe "Nonprofit Application Form" do
     end
   end
 
-  describe "after filling in form" do
+  pending "after filling in form" do
     before do
       fill_in "Purpose", with: "To change the world."
     end

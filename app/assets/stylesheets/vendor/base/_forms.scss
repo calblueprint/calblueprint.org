@@ -82,3 +82,13 @@ select {
   margin: 16px;
   position: relative;
 }
+
+.date-dropdown select{
+  width: 15%;
+  margin-right: 10px;
+  float: left;
+}
+
+.new-line {
+  clear: both;
+}

@@ -26,5 +26,6 @@ class Nonprofit < ActiveRecord::Base
 
   has_many :nonprofit_applications
 
+  validates :email, presence: true
   validates :organization_name, presence: true
 end

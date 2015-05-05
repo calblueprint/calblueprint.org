@@ -70,8 +70,6 @@ Member.create! first_name: 'Erica', last_name: 'Yin', email: 'eriicaericaerica@g
                member_role: developer_role
 Member.create! first_name: 'Soo', last_name: 'Song', email: 'soosong@berkeley.edu',
                member_role: media_role
-Member.create! first_name: 'Alton', last_name: 'Zheng', email: 'altonzheng@berkeley.edu',
-               member_role: developer_role
 Member.create! first_name: 'Jessica', last_name: 'Lin', email: 'heyjaylin@gmail.com',
                member_role: president_role
 Member.create! first_name: 'Quinton', last_name: 'Dang', email: 'quintonddang@gmail.com',
@@ -82,8 +80,6 @@ Member.create! first_name: 'Kevin', last_name: 'Shieh', email: 'kevshieh@gmail.c
                member_role: developer_role
 Member.create! first_name: 'Warren', last_name: 'Shen', email: 'warrenzshen@gmail.com',
                member_role: developer_role
-Member.create! first_name: 'Nikita', last_name: 'Rau', email: 'raun@berkeley.edu',
-               member_role: developer_role
 Member.create! first_name: 'Will', last_name: 'Tang', email: 'williamctang93@gmail.com',
                member_role: developer_role
 Member.create! first_name: 'Aleks', last_name: 'Kamko', email: 'aykamko@gmail.com',
@@ -92,10 +88,6 @@ Member.create! first_name: 'Varun', last_name: 'Rau', email: 'varun@berkeley.edu
                member_role: leader_role
 Member.create! first_name: 'Nishant', last_name: 'Desai', email: 'nish.sdesai@gmail.com',
                member_role: leader_role
-Member.create! first_name: 'John', last_name: 'Du', email: 'johnldu@gmail.com',
-               member_role: developer_role
-Member.create! first_name: 'Tina', last_name: 'Tseng', email: 'Tinawttseng@gmail.com',
-               member_role: community_role
 Member.create! first_name: 'Jordeen', last_name: 'Chang', email: 'jordeenchang@gmail.com',
                member_role: developer_role
 Member.create! first_name: 'Sameera', last_name: 'Vemulapalli', email: 'sameera.vemulapalli@gmail.com',

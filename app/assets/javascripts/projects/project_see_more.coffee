@@ -1,4 +1,4 @@
-project_see_more ->
+project_see_more = ->
   $('.project-see-more').click ->
     expand = $(this).parent().parent().children('.project-expand')
     if expand.is(':hidden')

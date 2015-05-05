@@ -13,17 +13,14 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :inet
 #  last_sign_in_ip        :inet
-#  name                   :string(255)
-#  address                :string(255)
-#  phone_number           :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  organization_name      :string(255)
 #
 
 require 'rails_helper'
 
 RSpec.describe Nonprofit, type: :model do
   it { should have_many :nonprofit_applications }
-  it { should validate_presence_of :name }
-  it { should validate_presence_of :phone_number }
+  it { should validate_presence_of :organization_name }
 end

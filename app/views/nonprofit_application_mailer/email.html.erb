@@ -5,7 +5,7 @@
 <body>
   <h3> <%= t("nonprofit_applications.email.subject") %> </h3>
   <p> 
-    <%= t("nonprofit_applications.email.message", :nonprofit => @nonprofit_application.nonprofit.name) %>
+    <%= t("nonprofit_applications.email.message", :nonprofit => @nonprofit_application.nonprofit.organization_name) %>
   </p>
 </body>
 </html>

@@ -13,11 +13,9 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :inet
 #  last_sign_in_ip        :inet
-#  name                   :string(255)
-#  address                :string(255)
-#  phone_number           :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  organization_name      :string(255)
 #
 
 class Nonprofit < ActiveRecord::Base

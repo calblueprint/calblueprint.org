@@ -140,6 +140,23 @@
   .spacer-large
   .row
     .title-column
+      h1#previous_work Previous Work
+      = link_to projects_path do
+        small
+          em See More
+    .content-column
+      .small-12.small-centered.columns.center
+        .spacer-small
+        ul.small-block-grid-3
+          li
+            = image_tag "apply/nonprofits/elevate-africa.png"
+          li
+            = image_tag "apply/nonprofits/food-shift.png"
+          li
+            = image_tag "apply/nonprofits/worldreader.jpeg"
+  .spacer-large
+  .row
+    .title-column
       h1#faq FAQ
     .content-column
       #faq.small-12.columns

@@ -42,10 +42,10 @@ applicant.student_applications.create! why_join: "I'm great",
                                        resume_file_size: 800
 
 # Update with nonprofit/apps seeds
-Nonprofit.create! name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.com',
-                  phone_number: '1234567890', password: 'password'
-Nonprofit.create! name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com',
-                  phone_number: '1234567890', password: 'password'
+Nonprofit.create! organization_name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.com',
+                  password: 'password'
+Nonprofit.create! organization_name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com',
+                  password: 'password'
 NonprofitApplication.create! purpose: 'To rule the world.',
                              nonprofit: Nonprofit.find(1), semester: semester
 NonprofitApplication.create! purpose: 'To combat illiteracy.',

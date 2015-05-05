@@ -1,3 +1,4 @@
+<%= render "form_errors", obj: @member %>
 <%= simple_form_for [:admin, @member] do |f| %>
   <%= f.input :first_name, label: 'First name:' %><br />
   <%= f.input :last_name, label: 'Last name:' %><br />

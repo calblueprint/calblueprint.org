@@ -29,6 +29,8 @@
       </div>
     </div>
   </div>
+
+  <%= render "form_errors", obj: @student_application %>
   <%= simple_form_for @student_application, url: student_applications_path do |f| %>
     <div class="row">
     <div class="spacer"></div>

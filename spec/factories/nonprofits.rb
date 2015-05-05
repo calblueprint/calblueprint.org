@@ -13,18 +13,15 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :inet
 #  last_sign_in_ip        :inet
-#  name                   :string(255)
-#  address                :string(255)
-#  phone_number           :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  organization_name      :string(255)
 #
 
 FactoryGirl.define do
   factory :nonprofit do
-    sequence(:name) { |n| "Nonprofit #{n}" }
     sequence(:email) { |n| "nonprofit#{n}@gmail.com" }
-    phone_number "1234567890"
+    organization_name "Blueprint"
     password "password"
   end
 end

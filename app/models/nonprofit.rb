@@ -13,11 +13,9 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :inet
 #  last_sign_in_ip        :inet
-#  name                   :string(255)
-#  address                :string(255)
-#  phone_number           :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  organization_name      :string(255)
 #
 
 class Nonprofit < ActiveRecord::Base
@@ -28,6 +26,5 @@ class Nonprofit < ActiveRecord::Base
 
   has_many :nonprofit_applications
 
-  validates :name, presence: true
-  validates :phone_number, presence: true
+  validates :organization_name, presence: true
 end

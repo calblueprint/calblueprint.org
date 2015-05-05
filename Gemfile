@@ -27,19 +27,21 @@ gem 'aws-sdk', '~> 1.5.7'
 gem "iconv", "~> 1.0.3"
 
 # Frontend
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.1.2'
+gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'autoprefixer-rails', '~> 3.1.2'
 
 gem 'flutie', '~> 2.0.0'
 gem 'title', '~> 0.0.5'
 
-gem 'bourbon', '~> 3.2.3'
-gem 'neat', '~> 1.5.1'
-gem 'bitters', '~> 0.10.1'
+gem 'bourbon', '~> 4.2.2'
+gem 'neat', '~> 1.7.2'
+gem 'bitters', '~> 1.0.0'
 gem 'font-awesome-rails', '~> 4.3.0'
+gem 'sky-labels-rails'
 
 # Error logging - requires setup with service
 gem 'rollbar'

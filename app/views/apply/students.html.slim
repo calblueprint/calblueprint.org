@@ -1,0 +1,146 @@
+.panel-container
+  .panel.students-bg
+  h1.title = t ".headline"
+  p.white.subtitle = t ".subtitle"
+.white-bg
+  .spacer-small
+  .row
+    .small-12.medium-9.columns
+      p#hook
+        | We are an organization of passionate UC Berkeley students
+        | who develop web and mobile applications for non-profit organizations.
+        | As a member, you will be able to join a family of likemineded students
+        | working to use our education and technological prowess to make the
+        | world a better place.
+    #apply-button.small-12.medium-3.columns
+      - if @settings.student_app_open
+        = link_to "Apply Now", new_student_application_path, class: "button"
+      - else
+        .applications-closed
+          p Applications are now closed for this semester. Thank you for your interest!
+  .spacer-small
+.gray-bg
+  .spacer-large
+  .row
+    .title-column
+      h1 Application Process
+    .content-column
+      .small-12.columns
+        ul.timeline-vertical
+          li.work.timeline-row
+            .relative
+              h5.title Infosessions
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | Come out and talk to us
+                | to learn more about Blueprint at one of our infosessions.
+          li.work.timeline-row
+            .relative
+              h5.title Applications Due
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | Fill out the online application. Our inital cuts will be based
+                | on the application and will be emailed out ASAP.
+          li.work.timeline-row
+            .relative
+              h5.title Blueprint Games
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | A fun little event for you guys
+                | to flex your problem solving muscles in a team of other applicants. Second round
+                | cuts will be based on this event.
+          li.work.timeline-row
+            .relative
+              h5.title Behavioral Interviews
+              span.date/
+              h5 TBA
+              span.circle
+            .timeline-content
+              p
+                | The final step in the applicaiton process, we really want to feel your passion for social good
+                | in person. Final decisions will be announced from this event.
+      .small-12.columns.decision-criteria
+        .spacer-small
+        h4.title Decision Criteria
+        p If we could, we would accept every applicant but unfortunately we cannot manage the volume of people and administrative overhead while still fulfilling our mission to the best of our abilities. The following criteria are what we use to evaluate applicants.
+        ul
+          li
+            strong Passion
+            p This is the single most important criteria. Do you demonstrate a genuine passion for social good?
+          li
+            strong Skill
+            p Do you have the necessary skills to productively contribute to the mission?
+          li
+            strong Experience
+            p Do you have relevant work experience? Volunteering experience?
+          li
+            strong Attitude
+            p Do you demonstrate positive, hard-working attitude?
+          li
+            strong Teamwork
+            p Do you display the ability to work well in a team?
+          li
+            strong Culture
+            p Will you get along well with the rest of Blueprint? We’re sure you will!
+  .spacer-large
+  .row
+    .title-column
+      h1 FAQ
+    .content-column
+      #faq.small-12.columns
+        .drawer
+          h5
+            ' What is Blueprint's project structure?
+            span
+              | (+)
+          p
+            | The client and the project leader communicate on a weekly basis to ensure the
+            | project’s progress. Meetings occur throughout the project engagement, beginning with
+            | at least one mandatory project scoping meeting with the project leader at the onset.
+            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            | recommendation will be delivered at a final presentation in Week 10.
+        .drawer
+          h5
+            ' How are client team interactions conducted?
+            span
+              | (+)
+          p
+            | The client and the project leader communicate on a weekly basis to ensure the
+            | project’s progress. Meetings occur throughout the project engagement, beginning with
+            | at least one mandatory project scoping meeting with the project leader at the onset.
+            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            | recommendation will be delivered at a final presentation in Week 10.
+        .drawer
+          h5
+            ' What resources does Blueprint have to ensure success?
+            span
+              | (+)
+          p
+            | The client and the project leader communicate on a weekly basis to ensure the
+            | project’s progress. Meetings occur throughout the project engagement, beginning with
+            | at least one mandatory project scoping meeting with the project leader at the onset.
+            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final
+            | recommendation will be delivered at a final presentation in Week 10.
+  .spacer-large
+  .row
+    .small-12.columns
+      h2 Want to be involved?
+      p.subtitle Sign up for our newsletter to get updates about events, our work and applications!
+  .row
+    .small-8.small-centered.columns
+      form
+        .newsletter-form.tooltip-item
+          input disabled="" placeholder=("Email Address") type="text" /
+          button disabled="" type="submit"  Go
+          #full-page-tooltip.tooltip
+            p Pardon our dust, this is still under construction.
+  .spacer-small

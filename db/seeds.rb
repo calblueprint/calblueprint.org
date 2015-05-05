@@ -46,10 +46,7 @@ Nonprofit.create! organization_name: 'Nonprofit Blueprint', email: 'nonprofitblu
                   password: 'password'
 Nonprofit.create! organization_name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com',
                   password: 'password'
-NonprofitApplication.create! purpose: 'To rule the world.',
-                             nonprofit: Nonprofit.find(1), semester: semester
-NonprofitApplication.create! purpose: 'To combat illiteracy.',
-                             nonprofit: Nonprofit.find(2), semester: semester
+#TODO Seed NPO apps
 
 # Seed all members with current roles
 Member.create! first_name: 'Sam', last_name: 'Lau', email: 'samlau95@gmail.com',

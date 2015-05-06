@@ -8,21 +8,6 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
-# Create basic roles
-president_role = MemberRole.create! role: "President"
-internal_role = MemberRole.create! role: "Internal VP"
-external_role = MemberRole.create! role: "External VP"
-tech_role = MemberRole.create! role: "VP of Technology"
-projects_role = MemberRole.create! role: "VP of Projects"
-leader_role = MemberRole.create! role: "Project Leader"
-developer_role = MemberRole.create! role: "Project Developer"
-alumni_relations_role = MemberRole.create! role: "Alumni Relations Director"
-community_role = MemberRole.create! role: "Community Outreach Director"
-intersocietal_role = MemberRole.create! role: "Intersocietal Relations Director"
-media_role = MemberRole.create! role: "Media Director"
-corporate_role = MemberRole.create! role: "Corporate Relations Director"
-alumnus_role = MemberRole.create! role: "Alumnus"
-
 semester = Semester.create! season: 'spring', year: '2013'
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
@@ -46,7 +31,22 @@ Nonprofit.create! organization_name: 'Nonprofit Blueprint', email: 'nonprofitblu
                   password: 'password'
 Nonprofit.create! organization_name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com',
                   password: 'password'
-#TODO Seed NPO apps
+# TODO Seed NPO apps
+
+# Create roles
+president_role = MemberRole.create! role: "President"
+internal_role = MemberRole.create! role: "Internal VP"
+external_role = MemberRole.create! role: "External VP"
+tech_role = MemberRole.create! role: "VP of Technology"
+projects_role = MemberRole.create! role: "VP of Projects"
+leader_role = MemberRole.create! role: "Project Leader"
+developer_role = MemberRole.create! role: "Project Developer"
+alumni_relations_role = MemberRole.create! role: "Alumni Relations Director"
+community_role = MemberRole.create! role: "Community Outreach Director"
+intersocietal_role = MemberRole.create! role: "Intersocietal Relations Director"
+media_role = MemberRole.create! role: "Media Director"
+corporate_role = MemberRole.create! role: "Corporate Relations Director"
+alumnus_role = MemberRole.create! role: "Alumnus"
 
 # Seed all members with current roles
 Member.create! first_name: 'Jessica', last_name: 'Lin', email: 'heyjaylin@gmail.com',

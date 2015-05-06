@@ -8,7 +8,7 @@
 
 Admin.create! first_name: 'Sam', last_name: 'Admin', email: 'sam@admin.com', password: 'password'
 
-semester = Semester.create! season: 'spring', year: '2013'
+semester = Semester.create! season: 'spring', year: '2015'
 applicant = Applicant.create! name: 'Applicant1', email: 'kevin@gmail.com', password: 'password'
 
 applicant.student_applications.create! why_join: "I'm great",
@@ -31,7 +31,7 @@ Nonprofit.create! organization_name: 'Nonprofit Blueprint', email: 'nonprofitblu
                   password: 'password'
 Nonprofit.create! organization_name: 'Nonprofit Worldreader', email: 'nonprofitworldreader@gmail.com',
                   password: 'password'
-# TODO Seed NPO apps
+# TODO: Seed NPO apps
 
 # Create roles
 president_role = MemberRole.create! role: "President"

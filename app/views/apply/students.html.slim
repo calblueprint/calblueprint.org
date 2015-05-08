@@ -6,18 +6,13 @@
   .spacer-small
   .row
     .small-12.medium-9.columns
-      p#hook
-        | We are an organization of passionate UC Berkeley students 
-        | who develop web and mobile applications for non-profit organizations. 
-        | As a member, you will be able to join a family of like-minded students 
-        | working to use our education and technological prowess to make the 
-        | world a better place.
+      p#hook = t ".hook"
     #apply-button.small-12.medium-3.columns
       - if @settings.student_app_open
         = link_to "Apply Now", new_student_application_path, class: "button"
       - else
         .applications-closed
-          p Applications are now closed for this semester. Thank you for your interest!
+          p = t ".applications_closed"
   .spacer-small
 .gray-bg
   .spacer-large
@@ -34,9 +29,7 @@
               h5 TBA
               span.circle
             .timeline-content
-              p
-                | Come out and talk to us 
-                | to learn more about Blueprint at one of our infosessions.
+              p = t ".application_timeline.information"
           li.work.timeline-row
             .relative
               h5.title Applications Due
@@ -44,9 +37,7 @@
               h5 TBA
               span.circle
             .timeline-content
-              p
-                | Fill out the online application. Our inital cuts will be based 
-                | on the application and will be emailed out ASAP.
+              p = t ".application_timeline.submission"
           li.work.timeline-row
             .relative
               h5.title Blueprint Games
@@ -54,10 +45,7 @@
               h5 TBA
               span.circle
             .timeline-content
-              p
-                | A fun little event for you all 
-                | to flex your problem solving muscles within a team of other applicants. Second round 
-                | cuts will be based on this event.
+              p = t ".application_timeline.second_round"
           li.work.timeline-row
             .relative
               h5.title Behavioral Interviews
@@ -65,13 +53,11 @@
               h5 TBA
               span.circle
             .timeline-content
-              p
-                | The final step in the application process, we really want to feel your passion for social 
-                | good in person. Final decisions will be announced from this event.
+              p = t ".application_timeline.final_decisions"
       .small-12.columns.decision-criteria
         .spacer-small
         h4.title Decision Criteria
-        p If we could, we would accept every applicant but unfortunately we cannot manage the volume of people and administrative overhead while still fulfilling our mission to the best of our abilities. The following criteria are what we use to evaluate applicants.
+        p = t ".decision_criteria.description"
         ul
           li
             strong Passion
@@ -99,35 +85,22 @@
       #faq.small-12.columns
         .drawer
           h5
-            ' What is Blueprint's project structure?
-            span
+            = t ".faq.q1.question"
+            span<
               | (+)
-          p
-            | Blueprint's project structure consists of 4-5 project teams, each with a project leader and 4 
-            | developers on the team. Each project team is in charge of creating technology resources 
-            | for a specific non-profit they work with.
+          p = t ".faq.q1.answer"
         .drawer
           h5
-            ' How are client team interactions conducted?
-            span
+            = t ".faq.q2.question"
+            span<
               | (+)
-          p
-            | The client and the project leader communicate on a weekly basis to ensure the 
-            | project’s progress. Meetings occur throughout the project engagement, beginning with 
-            | at least one mandatory project scoping meeting with the project leader at the onset. 
-            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final 
-            | recommendation will be delivered at a final presentation in Week 10.
+          p = t ".faq.q2.answer"
         .drawer
           h5
-            ' What resources does Blueprint have to ensure success?
-            span
+            = t ".faq.q3.question"
+            span<
               | (+)
-          p
-            | The client and the project leader communicate on a weekly basis to ensure the 
-            | project’s progress. Meetings occur throughout the project engagement, beginning with 
-            | at least one mandatory project scoping meeting with the project leader at the onset. 
-            | A formal midpoint presentation will be given in Week 5 of the engagement, and the final 
-            | recommendation will be delivered at a final presentation in Week 10.
+          p = t ".faq.q3.answer"
   .spacer-large
   .row
     .small-12.columns

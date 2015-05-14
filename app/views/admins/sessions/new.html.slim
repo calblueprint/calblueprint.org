@@ -1,0 +1,19 @@
+.banner
+  .banner-text
+    h1.h0
+      | Log In
+    p.subtitle
+      |  Let's get started. 
+.spacer
+.row
+  .medium-6.medium-centered.columns.center
+    = render "form_errors", obj: resource
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-inputs
+        = f.input :email, required: false, autofocus: true
+        = f.input :password, required: false
+        = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+      .form-actions
+        = f.button :submit, "Log in"
+    = render "admins/shared/links"
+.spacer

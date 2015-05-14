@@ -1,0 +1,20 @@
+.header
+  = link_to "Apply", apply_path, class: "header-tab header-button"
+  - if current_user
+    = link_to "Log out", destroy_user_session_path, class: "header-tab", method: :delete
+  = link_to "Contact", new_contact_form_path, class: "header-tab"
+  = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "header-tab"
+  = link_to "Projects", projects_path, class: "header-tab"
+  = link_to "About", about_path, class: "header-tab"
+  - if current_admin
+    .header-tab.header-admin
+      ul
+        li
+          a[href="#"]
+            | Admin
+          ul
+            = link_to "Applications", admin_student_applications_path, class: "header-tab"
+            = link_to "Members", admin_members_path, class: "header-tab"
+            = link_to "Semesters", admin_semesters_path, class: "header-tab"
+            = link_to "Settings", admin_settings_path, class: "header-tab"
+  = link_to "", root_path, class: "header-logo"

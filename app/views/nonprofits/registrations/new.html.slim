@@ -1,0 +1,24 @@
+.gray-bg
+  .spacer
+  .banner
+    .banner-text
+      h1.h0
+        | Sign Up
+      p.subtitle
+        |  Let's get started. 
+  .spacer-small
+  .row
+    .medium-6.medium-centered.columns.center
+      = render "form_errors", obj: resource
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        .form-inputs
+          = f.input_field :organization_name, autofocus: true, placeholder: "Organization Name"
+          = f.input_field :email, placeholder: "Email"
+          = f.input_field :password, placeholder: "Password"
+          = f.input_field :password_confirmation, placeholder: "Confirm Password"
+        .spacer-small
+        .form-actions
+          = f.button :submit, "Sign Up", class: "login-button"
+      .gear-img
+  .spacer
+  .spacer

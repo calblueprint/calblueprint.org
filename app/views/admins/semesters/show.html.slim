@@ -1,0 +1,15 @@
+h1
+  = @semester.season
+h1
+  = @semester.year
+h1
+  | Apps
+table[border="1"]
+  - @semester.student_applications.each do |app|
+    tr
+      td
+        = app.applicant.name
+      td
+        = app.applicant.email
+h1
+  | Projects placeholder

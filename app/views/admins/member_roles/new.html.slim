@@ -1,0 +1,5 @@
+= render "form_errors", obj: @member_role
+= simple_form_for [:admin, @member_role] do |f|
+  = f.input :role, label: 'Role:'
+  br
+  = f.submit

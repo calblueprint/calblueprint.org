@@ -1,0 +1,13 @@
+.banner
+  .banner-text
+    h1.h0
+      | Edit Settings
+.row
+  .small-12.small-centered.columns
+    = render "form_errors", obj: @settings
+    = simple_form_for [:admin, @settings], url: admin_settings_path, :method => 'patch' do |f|
+      = f.input :current_semester_id, label: 'Semester', collection: Semester.order(:year), include_blank: false
+      = f.input :npo_app_open, label: 'NPO Application Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.npo_app_open, item_wrapper_class: 'inline'
+      = f.input :student_app_open, label: 'Student Application Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.student_app_open, item_wrapper_class: 'inline'
+      = f.button :submit,  'Update Settings'
+    .spacer

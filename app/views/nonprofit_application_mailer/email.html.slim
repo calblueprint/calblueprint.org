@@ -1,0 +1,8 @@
+html
+  head
+    meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
+  body
+    h3
+      = t("nonprofit_applications.email.subject")
+    p
+      = t("nonprofit_applications.email.message", :nonprofit => @nonprofit_application.nonprofit.organization_name)

@@ -1,0 +1,46 @@
+.gray-bg
+  .banner.apply-students-banner
+    .darken
+      .spacer
+      .banner-text
+        h1
+          = current_user.organization_name
+          | ,
+        p.subtitle
+          |  We're looking forward to working with you. 
+  .apply-info
+    .row
+      .apply-info-section
+        .calendar-icon
+        p.apply-info-section-text
+          |  Apps due: 
+          br
+          |  September 4th, 2015, 11:59PM 
+      .apply-info-section
+        .problem-icon
+        p.apply-info-section-text
+          = link_to "Contact us", new_contact_form_path
+          br
+          |  if you have any questions. 
+  = render "form_errors", obj: @nonprofit_application
+  = simple_form_for @nonprofit_application, url: nonprofit_applications_path do |f|
+    .row
+      .spacer
+      .medium-6.medium-offset-3.columns.centered
+        = f.input :purpose, label: "What is your organization’s mission statement?"
+        = f.input :history, label: "Give us a brief history of your organization. Tell us about some of your organization’s key accomplishments."
+        .date-dropdown
+          = f.input :date_established, label: "When was your organization established?"
+        .small-spacer
+        .new-line
+        = f.input :legal, label: "Is your organization a 501(c)3?"
+        = f.input :short_summary, label: "Give us a two sentence summary of your project."
+        = f.input :goals, label: "What are the goals of this project, and what problems does it address?"
+        = f.input :key_features, label: "What are some of the key features of this project, and how do they help achieve the goals you mentioned above?"
+        = f.input :devices, label: "On what devices do you expect it to work? Check all that apply. (mobile phones, tablets, desktop computers)"
+        = f.input :target_audience, label: "What is the target audience for this project? How large would you estimate this audience to be?"
+        = f.input :why, label: "Why is this project important to your organization?"
+    .row
+      .center
+        = f.button :submit, 'Submit'
+  .spacer

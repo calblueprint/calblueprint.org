@@ -1,9 +1,8 @@
 - unless flash.empty?
   noscript[type="text/css"]
     - flash.each do |type, text|
-      |  <div class="flash-
-      = type
-      | "> 
-      = text
-  script[type="text/javascript"]
-    |  <ruby code=" flash.each do |f| "> <ruby code=" type = f[0].gsub('alert', 'error').gsub('notice', 'info')"></ruby> toastr['<ruby code="= type"></ruby>']('<ruby code="= f[1]"></ruby>'); </ruby> 
+      .flash-#{type}
+        = text
+  script type="text/javascript"
+    - flash.each do |type, text|
+      | toastr["#{type}"]("#{text}")

@@ -25,20 +25,19 @@
   = simple_form_for @nonprofit_application do |f|
     .row
       .spacer
-      .medium-6.medium-offset-3.columns.centered
-        = f.input :purpose, label: "What is your organization’s mission statement?"
-        = f.input :history, label: "Give us a brief history of your organization. Tell us about some of your organization’s key accomplishments."
+      .medium-9.medium-centered.columns.centered
+        = f.input :purpose
+        = f.input :history
         .date-dropdown
-          = f.input :date_established, label: "When was your organization established?"
-        .small-spacer
+          = f.input :date_established
         .new-line
-        = f.input :legal, label: "Is your organization a 501(c)3?"
-        = f.input :short_summary, label: "Give us a two sentence summary of your project."
-        = f.input :goals, label: "What are the goals of this project, and what problems does it address?"
-        = f.input :key_features, label: "What are some of the key features of this project, and how do they help achieve the goals you mentioned above?"
-        = f.input :devices, label: "On what devices do you expect it to work? Check all that apply. (mobile phones, tablets, desktop computers)"
-        = f.input :target_audience, label: "What is the target audience for this project? How large would you estimate this audience to be?"
-        = f.input :why, label: "Why is this project important to your organization?"
+        = f.input :legal
+        = f.input :short_summary
+        = f.input :goals
+        = f.input :key_features
+        = f.input :devices, collection: ["Mobile phones", "Tablets", "Desktops"], as: :check_boxes
+        = f.input :target_audience
+        = f.input :why
     .row
       .center
         = f.button :submit, 'Submit'

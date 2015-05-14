@@ -14,6 +14,7 @@
 @import "vendor/base/base";
 @import "vendor/grid";
 @import 'vendor/toastr';
+@import "vendor/timeline";
 
 @import "shared/general";
 @import "shared/flash";
@@ -22,10 +23,10 @@
 @import "shared/footer";
 @import "shared/tooltips";
 
-@import "home";
-@import "about";
-@import "contact_forms";
-@import "sponsors";
-@import "vendor/timeline";
-@import "apply";
-@import "projects";
+@import "pages/home";
+@import "pages/about";
+@import "pages/sponsors";
+@import "contact_forms/new";
+@import "apply/apply";
+@import "projects/index";
+@import "nonprofit_applications/form";

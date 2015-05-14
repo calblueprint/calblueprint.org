@@ -20,6 +20,8 @@
 #
 
 class NonprofitApplication < ActiveRecord::Base
+  serialize :devices
+
   belongs_to :nonprofit
   belongs_to :semester
 

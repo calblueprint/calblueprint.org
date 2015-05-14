@@ -2,10 +2,8 @@
   .spacer
   .banner
     .banner-text
-      h1.h0
-        | Sign Up
-      p.subtitle
-        |  Let's get started. 
+      h1 Sign Up
+      p.subtitle Let's get started.
   .spacer-small
   .row
     .medium-6.medium-centered.columns.center
@@ -16,6 +14,7 @@
           = f.input_field :email, placeholder: "Email"
           = f.input_field :password, placeholder: "Password"
           = f.input_field :password_confirmation, placeholder: "Confirm Password"
+        = render "nonprofits/shared/links"
         .spacer-small
         .form-actions
           = f.button :submit, "Sign Up", class: "login-button"

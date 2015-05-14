@@ -18,7 +18,8 @@ label {
   margin-bottom: $base-spacing / 4;
 
   &.required:after {
-    content: "*";
+    // Don't put asterisk after required inputs
+    // content: "*";
   }
 
   abbr {

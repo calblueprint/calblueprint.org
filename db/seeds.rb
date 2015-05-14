@@ -8,8 +8,7 @@
 
 def seed_admins
   Admin.create_with(password: 'password').find_or_create_by!(
-    first_name: 'Blueprint', last_name: 'Admin',
-                              email: 'admin@calblueprint.org'
+    first_name: 'Blueprint', last_name: 'Admin', email: 'admin@calblueprint.org'
   )
 end
 
@@ -30,13 +29,6 @@ def seed_student_applications
   applicant.student_applications.find_or_create_by! why_join: "I'm great",
                                                     phone: "11",
                                                     year: "Other",
-                                                    semester: semester,
-                                                    resume_file_name: 'test.pdf',
-                                                    resume_content_type: 'application/pdf',
-                                                    resume_file_size: 800
-  applicant.student_applications.find_or_create_by! why_join: "I'm great",
-                                                    phone: "22",
-                                                    year: "Senior",
                                                     semester: semester,
                                                     resume_file_name: 'test.pdf',
                                                     resume_content_type: 'application/pdf',

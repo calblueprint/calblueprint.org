@@ -1,0 +1,10 @@
+- unless obj.errors.none?
+  noscript
+    .errors
+      .columns.small-12
+        - obj.errors.full_messages.each do |message|
+          .row
+            = message
+  script type="text/javascript"
+    - obj.errors.full_messages.each do |message|
+      | toastr["error"]("#{message}");

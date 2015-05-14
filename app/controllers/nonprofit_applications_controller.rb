@@ -18,10 +18,15 @@ class NonprofitApplicationsController < ApplicationController
 
   private
 
+  def authenticate_nonprofit!
+    redirect_to new_nonprofit_registration_path,
+                flash: { alert: "Please sign up or sign in before continuing." } unless current_nonprofit
+  end
+
   def nonprofit_application_params
     params.require(:nonprofit_application)
       .permit(:purpose, :history, :date_established, :legal,
-              :short_summary, :goals, :key_features, :devices, :target_audience, :why)
+              :short_summary, :goals, :key_features, :target_audience, :why, devices: [])
       .merge(semester: @settings.current_semester)
   end
 

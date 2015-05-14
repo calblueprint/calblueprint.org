@@ -1,0 +1,8 @@
+- unless flash.empty?
+  noscript[type="text/css"]
+    - flash.each do |type, text|
+      .flash-#{type}
+        = text
+  script type="text/javascript"
+    - flash.each do |type, text|
+      | toastr["#{type}"]("#{text}")

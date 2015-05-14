@@ -1,0 +1,43 @@
+.gray-bg
+  .banner.apply-students-banner
+    .darken
+      .spacer
+      .banner-text
+        h1
+          | Hey 
+          = current_user.first_name
+          | ,
+        p.subtitle
+          = t '.banner'
+  .apply-info
+    .row
+      .apply-info-section
+        .calendar-icon
+        p.apply-info-section-text
+          = t '.apps_due'
+          br
+          |  September 4th, 2015, 11:59PM 
+      .apply-info-section
+        .problem-icon
+        p.apply-info-section-text
+          = link_to "Contact us", new_contact_form_path
+          br
+          = t '.contact'
+  = render "form_errors", obj: @student_application
+  = simple_form_for @student_application, url: student_applications_path do |f|
+    .row
+      .spacer
+      .medium-5.medium-offset-1.columns
+        = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
+        .spacer-small
+        = f.input :phone
+        .spacer-small
+      .medium-4.medium-pull-1.columns
+        = f.input :why_join
+        .spacer-small
+        = f.input :resume, as: :file
+        .spacer-small
+    .row
+      .submit.center
+        = f.button :submit, 'Submit'
+  .spacer

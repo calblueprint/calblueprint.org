@@ -1,0 +1,76 @@
+.footer
+  .row
+    .large-2.medium-3.small-6.columns
+      div
+        h5
+          | Students
+        ul
+          li.tooltip-item.greyed-out
+            | Apply 
+            .tooltip
+              p
+                | Pardon our dust, this is still under construction.
+          li.tooltip-item.greyed-out
+            | FAQ 
+            .tooltip
+              p
+                | Pardon our dust, this is still under construction.
+    .large-2.medium-3.small-6.columns
+      div
+        h5
+          | Nonprofits
+        ul
+          li
+            = link_to "Apply", apply_path
+          li
+            = link_to "Process", nonprofits_apply_path
+          li
+            = link_to "FAQ", nonprofits_apply_path(anchor: "faq")
+    .large-2.medium-3.small-6.columns
+      div
+        h5
+          | Sponsors
+        ul
+          li.tooltip-item.greyed-out
+            | Contribute 
+            .tooltip
+              p
+                | Pardon our dust, this is still under construction.
+          li
+            = link_to "Team", about_path(anchor: "team")
+    .large-2.medium-3.small-6.columns
+      div
+        h5
+          | General
+        ul
+          li
+            = link_to "Contact", new_contact_form_path
+          li
+            = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank"
+          li
+            = link_to "Projects", projects_path
+          li
+            = link_to "About", about_path
+    .large-4.medium-6.end.small-12.columns[style="text-align:right;"]
+      form
+        .newsletter-form.tooltip-item
+          input[type="text" placeholder="Email Address" disabled]
+          button[type="submit" disabled]
+            | Go
+          #newsletter-tooltip.tooltip
+            p
+              | Pardon our dust, this is still under construction.
+      p.greyed-out
+        |  Sign up for our newsletter to get updates about events, our work and applications! 
+  .row
+    .icons.small-12.medium-9.medium-push-3.columns
+      = link_to SocialMediaUrls::FACEBOOK, target: "_blank" do
+        i.fa.fa-facebook-f
+      = link_to SocialMediaUrls::TWITTER, target: "_blank" do
+        i.fa.fa-twitter
+      = link_to SocialMediaUrls::GITHUB, target: "_blank" do
+        i.fa.fa-github-alt
+      = link_to SocialMediaUrls::MEDIUM, target: "_blank" do
+        i.fa.fa-medium
+    small.copyright.small-12.medium-3.medium-pull-9.columns
+      | © Blueprint 2015

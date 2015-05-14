@@ -13,9 +13,28 @@ en:
     # Labels and hints examples
     labels:
       defaults:
-        remember_me: "Keep me signed in"
+        remember_me: Keep me signed in
         email: ~
         password: ~
+      nonprofit_application:
+        purpose: What is your organization’s mission statement?
+        history: >
+          Give us a brief history of your organization. Tell us about some of your
+          organization’s key accomplishments.
+        date_established: When was your organization established?
+        legal: Is your organization a 501(c)3?
+        short_summary: Give us a two sentence summary of your project.
+        goals: What are the goals of this project, and what problems does it address?
+        key_features: >
+          What are some of the key features of this project,
+          and how do they help achieve the goals you mentioned above?
+        devices: >
+          On what devices do you expect it to work? Check all that apply.
+        target_audience: >
+          What is the target audience for this project? How large would you estimate
+          this audience to be?
+        why: Why is this project important to your organization?
+
     # placeholders:
     #   defaults:
     #     email: "Email"

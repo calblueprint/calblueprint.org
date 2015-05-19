@@ -8,7 +8,7 @@
 = render "form_errors", obj: @contact_form
 = simple_form_for @contact_form do |f|
   .row
-    .medium-4.medium-offset-1.columns
+    .medium-5.medium-offset-1.columns
       = f.input :name, wrapper_html: { class: "field-wrapper" }
       = f.input :email, wrapper_html: { class: "field-wrapper" }
       .spacer-small
@@ -17,7 +17,7 @@
       = f.input :message, wrapper_html: { class: "field-wrapper" }
       .gear-img-small
   .row
-    .medium-5.medium-offset-5.columns
+    .medium-5.medium-offset-6.columns
       .contact_form_submit
         = f.button :submit, 'Submit', class: "full-width-button"
 .spacer

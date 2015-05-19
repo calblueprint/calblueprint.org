@@ -49,14 +49,14 @@ $development-steps: 5;
   .date {
     margin-top: -10px;
     top: 50%;
-    left: -100px;
+    left: -130px;
     position: absolute;
     color: $text;
   }
   .circle {
     margin-top: -10px;
     top: 50%;
-    left: 56px;
+    left: 86px;
     @include circle;
   }
   .timeline-content {

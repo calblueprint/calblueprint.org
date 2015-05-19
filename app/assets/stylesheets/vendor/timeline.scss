@@ -11,7 +11,7 @@ $development-steps: 5;
 
 @mixin timeline-p {
   margin: 0 0 15px;
-  text-align: justify;
+  text-align: left;
   word-break: break-word;
   max-height: 200px;
   color: $text;

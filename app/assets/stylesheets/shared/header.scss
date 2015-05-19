@@ -1,18 +1,17 @@
 .header {
+  background-color: white;
   height: 48px;
   overflow: visible;
-  background-color: white;
   z-index: 1;
 }
 
 .header-tab {
-  float: right;
+  color: $medium-gray;
   display: block;
-  margin: 8px 8px;
-  padding: 4px 12px;
+  float: right;
   font-size: 1em;
   font-weight: 500;
-  color: $medium-gray;
+  padding: 12px 20px;
 }
 
 .header-tab:hover {
@@ -21,11 +20,12 @@
 
 .header-button {
   @extend .button;
-  padding: 4px 16px;
-  border-radius: 4px;
+
   background: $blue;
+  border-radius: 4px;
   color: #fff;
   margin: 8px 20px;
+  padding: 4px 16px;
 
   &:hover {
     color: $white;
@@ -33,53 +33,50 @@
 }
 
 .header-logo {
-  float: left;
-  display: block;
-  height: 36px;
-  width: 36px;
-  margin: 6px 8px 6px 20px;
-  background: url(asset_path("paw.png"));
+  @include transition(1.0s);
+
   background-size: cover;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background: url(asset_path("paw.png"));
+  display: block;
+  float: left;
+  height: 36px;
+  margin: 6px 8px 6px 20px;
+  width: 36px;
 }
 
 .header-logo:hover {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
+  @include transform(rotate(360deg));
 }
 
 
 .header-admin {
+  a {
+    color: $medium-gray;
+  }
+
+  &:hover > ul, ul:hover {
+    display: block;
+  }
+
   ul {
-    border-radius: 10px;
-    list-style: none;
-    position: relative;
+    background: $white;
+    border-color: $medium-gray;
+    border-radius: 1px;
+    border-style: solid;
+    border-width: 2px;
+    display: none;
+    position: absolute;
+    top: 48px;
+    width: 200px;
+    z-index: 999;
+  }
+
+  li {
     display: inline-table;
-    background: 0x000000;
 
-    ul {
-      display: none;
-      background: #ffffff; border-radius: 0px; padding: 0;
-      position: absolute; top: 100%;
-      border-style: solid;
-      border-color: $medium-gray;
-      z-index: 999;
-    }
-
-    li {
-      display: inline-table;
-
-      a {
+    a {
+      float: left;
       color: $medium-gray;
-      }
-    }
-
-    li:hover > ul {
-      display: block;
     }
   }
 }

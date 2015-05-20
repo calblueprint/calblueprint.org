@@ -37,4 +37,7 @@ class NonprofitApplication < ActiveRecord::Base
   validates :devices, presence: true
   validates :target_audience, presence: true
   validates :why, presence: true
+
+  delegate :email, to: :nonprofit
+  delegate :organization_name, to: :nonprofit
 end

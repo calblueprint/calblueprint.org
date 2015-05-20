@@ -1,0 +1,25 @@
+.spacer-small
+.banner
+  .banner-text
+    h1 NPO Applications
+
+.row
+  .small-12.columns
+    table.tables
+      thead
+        tr
+          th.name NPO Name
+          th.email Email
+          th Summary
+          th.actions Actions
+      tbody
+        - @nonprofit_applications.each do |app|
+          tr
+            td = app.organization_name
+            td = app.email
+            td = app.short_summary
+            td
+              = link_to [:admin, app], class: "icon hint--top", data: { hint: "View" } do
+                = fa_icon "eye"
+
+.spacer

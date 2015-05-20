@@ -24,8 +24,9 @@ gem 'recipient_interceptor', '~> 0.1.2'
 gem 'enumerize'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk', '~> 1.5.7'
-gem "iconv", "~> 1.0.3"
+gem 'iconv', '~> 1.0.3'
 gem 'ffaker'
+gem 'draper'
 
 # Frontend
 gem 'sass-rails', '~> 5.0.3'

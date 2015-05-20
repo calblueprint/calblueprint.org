@@ -41,7 +41,22 @@ def seed_nonprofits
   )
 end
 
-# TODO: Seed NPO apps
+def seed_nonprofit_applications
+  NonprofitApplication.find_or_create_by!(
+    purpose: "To save the world.",
+    history: "Cool history.",
+    date_established: DateTime.now.to_date,
+    legal: true,
+    short_summary: FFaker::Lorem.paragraph(2),
+    goals: FFaker::Lorem.paragraph(4),
+    key_features: FFaker::Lorem.paragraph(4),
+    devices: ["Mobile phones"],
+    target_audience: "Everyone.",
+    why: FFaker::Lorem.paragraph(4),
+    nonprofit: Nonprofit.first,
+    semester: Settings.instance.current_semester
+  )
+end
 
 def seed_roles_and_members
   president_role = MemberRole.find_or_create_by! role: "President"
@@ -146,4 +161,5 @@ seed_semesters
 seed_applicants
 seed_student_applications
 seed_nonprofits
+seed_nonprofit_applications
 seed_roles_and_members

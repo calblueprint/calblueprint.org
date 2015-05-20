@@ -30,7 +30,7 @@ FactoryGirl.define do
     short_summary "hi"
     goals "many"
     key_features "fun"
-    devices "android"
+    devices ["Desktop", "Mobile phones"]
     target_audience "everyone"
     why "Greatness"
   end

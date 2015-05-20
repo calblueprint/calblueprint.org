@@ -1,5 +1,11 @@
 ---
 en:
+  activerecord:
+    attributes:
+      nonprofit_application:
+        email: "Contact Email"
+        legal: "501(c)?"
+
   date:
     formats:
       default:
@@ -121,10 +127,10 @@ en:
       headline: For Students
       subtitle: Joining Blueprint is the perfect way to use your skills to give back to the community.
       hook: >
-        We are an organization of passionate UC Berkeley students 
-        who develop web and mobile applications for non-profit organizations. 
-        As a member, you will be able to join a family of like-minded students 
-        working to use our education and technological prowess to make the 
+        We are an organization of passionate UC Berkeley students
+        who develop web and mobile applications for non-profit organizations.
+        As a member, you will be able to join a family of like-minded students
+        working to use our education and technological prowess to make the
         world a better place.
       applications_closed: >
         Applications are now closed for this semester. Thank you for your interest!
@@ -137,7 +143,7 @@ en:
           A fun little event for you all to flex your problem solving muscles within a team
           of other applicants. Second round cuts will be based on this event.
         final_decisions: >
-          The final step in the application process, we really want to feel your passion for social 
+          The final step in the application process, we really want to feel your passion for social
           good in person. Final decisions will be announced from this event.
       decision_criteria:
         description: >
@@ -148,23 +154,23 @@ en:
         q1:
           question: What is Blueprint's project structure?
           answer: >
-            Blueprint's project structure consists of 4-5 project teams, each with a project leader and 4 
-            developers on the team. Each project team is in charge of creating technology resources 
+            Blueprint's project structure consists of 4-5 project teams, each with a project leader and 4
+            developers on the team. Each project team is in charge of creating technology resources
             for a specific non-profit they work with.
         q2:
           question: How are client team interactions conducted?
           answer: >
-            The client and the project leader communicate on a weekly basis to ensure the 
-            project’s progress. Meetings occur throughout the project engagement, beginning with 
-            at least one mandatory project scoping meeting with the project leader at the onset. 
-            A formal midpoint presentation will be given in Week 5 of the engagement, and the final 
+            The client and the project leader communicate on a weekly basis to ensure the
+            project’s progress. Meetings occur throughout the project engagement, beginning with
+            at least one mandatory project scoping meeting with the project leader at the onset.
+            A formal midpoint presentation will be given in Week 5 of the engagement, and the final
             recommendation will be delivered at a final presentation in Week 10.
         q3:
           question: What resources does Blueprint have to ensure success?
           answer: >
             Our club recruits some of the most hard-working, passionate, and brightest students
             at UC Berkeley, just like you. Through effective leadership, frequent check-ins, and an
-            organized project timeline set with our clients, we hope that the combination of talent, 
+            organized project timeline set with our clients, we hope that the combination of talent,
             dedication, and care will result in projects that benefit the non-profits we work with.
     show:
       nonprofits:

@@ -105,3 +105,29 @@ Block Grid: http://foundation.zurb.com/docs/components/block_grid.html
   z-index: -10;
 }
 
+/* In a two column layout, left column has right-aligned text, right column has left-aligned text */
+.two-col-container {
+  @include outer-container;
+
+  .two-col-left {
+    @include span-columns(12);
+
+    @include media($medium-screen) {
+      @include span-columns(4);
+      > * {
+        text-align: right;
+      }
+    }
+  }
+
+  .two-col-right {
+    @include span-columns(12);
+
+    @include media($medium-screen) {
+      @include span-columns(8);
+      > * {
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .header {
-  background-color: white;
+  background-color: $white;
   height: 48px;
   overflow: visible;
   z-index: 1;
@@ -33,10 +33,10 @@
 }
 
 .header-logo {
-  @include transition(1.0s);
+  @include transition(1s);
 
-  background-size: cover;
   background: url(asset_path("paw.png"));
+  background-size: cover;
   display: block;
   float: left;
   height: 36px;
@@ -54,7 +54,8 @@
     color: $medium-gray;
   }
 
-  &:hover > ul, ul:hover {
+  &:hover > ul,
+  ul:hover {
     display: block;
   }
 
@@ -75,8 +76,8 @@
     display: inline-table;
 
     a {
-      float: left;
       color: $medium-gray;
+      float: left;
     }
   }
 }

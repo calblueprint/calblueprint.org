@@ -24,7 +24,19 @@ require 'rails_helper'
 RSpec.describe NonprofitApplication, type: :model do
   it { should belong_to :nonprofit }
   it { should belong_to :semester }
+
   it { should validate_presence_of :nonprofit_id }
   it { should validate_presence_of :semester_id }
   it { should validate_presence_of :purpose }
+  it { should validate_presence_of :history }
+  it { should validate_presence_of :date_established }
+  it { should validate_presence_of :short_summary }
+  it { should validate_presence_of :goals }
+  it { should validate_presence_of :key_features }
+  it { should validate_presence_of :devices }
+  it { should validate_presence_of :target_audience }
+  it { should validate_presence_of :why }
+
+  it { should delegate_method(:email).to(:nonprofit) }
+  it { should delegate_method(:organization_name).to(:nonprofit) }
 end

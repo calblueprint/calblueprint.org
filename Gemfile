@@ -25,6 +25,7 @@ gem 'enumerize'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk', '~> 1.5.7'
 gem "iconv", "~> 1.0.3"
+gem 'ffaker'
 
 # Frontend
 gem 'sass-rails', '~> 5.0.3'
@@ -67,7 +68,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'i18n-tasks'
-  gem 'ffaker'
 end
 
 group :test do

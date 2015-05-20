@@ -1,8 +1,8 @@
 .icon {
   background-color: $base-button-color;
+  border-radius: $base-border-radius;
   color: $white;
   padding: 2px 5px;
-  border-radius: $base-border-radius;
 
   &:hover {
     background-color: $hover-button-color;

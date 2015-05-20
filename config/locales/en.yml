@@ -190,7 +190,7 @@ en:
 
   nonprofit_applications:
     new:
-      banner: Nonprofit Application
+      subtitle: We're looking forward to working with you.
     create:
       success: Application received! You should receive an email confirmation shortly.
     email:

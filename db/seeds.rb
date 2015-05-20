@@ -37,7 +37,7 @@ end
 
 def seed_nonprofits
   Nonprofit.create_with(password: 'password').find_or_create_by!(
-    organization_name: 'Nonprofit Blueprint', email: 'nonprofitblueprint@gmail.com'
+    organization_name: 'NPO Blueprint', email: 'npo@blueprint.org'
   )
 end
 

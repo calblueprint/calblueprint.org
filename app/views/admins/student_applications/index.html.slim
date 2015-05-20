@@ -7,7 +7,7 @@
     = form_tag import_admin_student_applications_path, multipart: true do
       = file_field_tag :file
       = submit_tag "Import CSV"
-    = link_to "Download CSV", admin_student_applications_path(format: "csv"), class: "float-right"
+    = link_to "Download CSV", admin_student_applications_path(format: "csv")
     table.tables
       thead
         tr

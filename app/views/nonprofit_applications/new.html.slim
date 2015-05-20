@@ -4,22 +4,21 @@
       .spacer
       .banner-text
         h1 #{current_user.organization_name},
-        p.subtitle
-          |  We're looking forward to working with you.
+        p.subtitle We're looking forward to working with you.
   .apply-info
     .row
       .apply-info-section
         .calendar-icon
         p.apply-info-section-text
-          |  Apps due:
+          | Apps due:
           br
-          |  September 4th, 2015, 11:59PM
+          | June 15th, 2015, 11:59PM
       .apply-info-section
         .problem-icon
         p.apply-info-section-text
           = link_to "Contact us", new_contact_form_path
           br
-          |  if you have any questions.
+          | if you have any questions.
 
   = render "form_errors", obj: @nonprofit_application
   = simple_form_for @nonprofit_application do |f|

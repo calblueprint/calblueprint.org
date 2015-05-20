@@ -1,27 +1,19 @@
 .banner
   .banner-text
-    h1.h0
-      | Settings
-    p.subtitle
-      |  What's the haps with BP? (Placeholder Setting subtitle) 
+    h1 Settings
+    p.subtitle What's the haps with BP? (Placeholder Setting subtitle)
 .row
   .small-12.small-centered.columns
     = link_to "Edit Settings", edit_admin_settings_path, class: "button"
     table.tables
       thead
         tr
-          th
-            | NPO Applications Open
-          th
-            | Student Applications Open
-          th
-            | Current Semester
+          th NPO Applications Open
+          th Student Applications Open
+          th Current Semester
       tbody
         tr
-          td
-            = @settings.npo_app_open
-          td
-            = @settings.student_app_open
-          td
-            = @settings.current_semester
+          td = @settings.npo_app_open
+          td = @settings.student_app_open
+          td = @settings.current_semester
 .spacer

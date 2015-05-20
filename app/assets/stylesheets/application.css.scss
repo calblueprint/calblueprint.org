@@ -13,7 +13,8 @@
 @import "sky-labels";
 @import "vendor/base/base";
 @import "vendor/grid";
-@import 'vendor/toastr';
+@import "vendor/toastr";
+@import "vendor/hint";
 @import "vendor/timeline";
 
 @import "shared/general";
@@ -21,6 +22,7 @@
 @import "shared/header";
 @import "shared/tables";
 @import "shared/footer";
+@import "shared/icons";
 @import "shared/tooltips";
 
 @import "pages/home";

@@ -8,6 +8,8 @@ guard 'livereload' do
   watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|scss|js|coffee|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
+  # Decorators
+  watch(%r{app/decorators/.+\.rb})
 end
 
 # Runs rspec, then rubocop

@@ -1,6 +1,7 @@
 .tables {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
+  $base-background-color: $white !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
@@ -12,51 +13,23 @@
   $base-font-color: $dark-gray !default;
   $table-border-color: $base-border-color;
   $table-border: 1px solid $table-border-color;
-  $table-background: lighten($table-border-color, 12%);
-  $table-header-background: lighten($table-background, 10%);
-  $table-hover-background: darken($table-background, 5%);
-  $table-stripe-background: darken($table-background, 2%);
-  $table-stripe-background-hover: darken($table-stripe-background, 5%);
+  $table-background: $base-background-color;
+  $table-header-background: lighten($table-background, 10);
+  $table-hover-background: darken($table-background, 2);
+  $table-stripe-background: darken($table-background, 4);
+  $table-stripe-background-hover: darken($table-stripe-background, 5);
   $table-padding: 0.75em 1em;
 
   border-collapse: separate;
-  border-left: 0px;
-  border-radius: $base-border-radius;
   border-spacing: 0;
-  border: $table-border;
   width: 100%;
 
   tbody {
-    background-color: $table-background;
-
     tr:hover > td, tr:hover > th {
       background-color: $table-hover-background;
     }
-    tr:nth-child(even) {
-      background-color: $table-stripe-background;
-      &:hover > td {
-        background-color: $table-stripe-background-hover;
-      }
-    }
-  }
-
-  thead:first-of-type {
-    tr:first-child > th:first-child {
-      border-top-left-radius: $base-border-radius;
-    }
-
-    tr:first-child > th:last-child {
-      border-top-right-radius: $base-border-radius;
-    }
-  }
-
-  tbody:last-child {
-    tr:last-child > td:first-child {
-      border-bottom-left-radius: $base-border-radius;
-    }
-
-    tr:last-child > td:last-child {
-      border-bottom-right-radius: $base-border-radius;
+    tr:first-child td {
+      border-top: 2px solid $table-border-color;
     }
   }
 
@@ -64,13 +37,8 @@
     th {
       background-color: $table-header-background;
       border-bottom: 0px;
-      border-left: 1px solid $table-border-color;
       padding: $table-padding;
       text-align: left;
-
-      &:first-child {
-        border-left: none;
-      }
     }
   }
 
@@ -79,13 +47,9 @@
 
     td {
       border-bottom: 0px;
-      border-left: 1px solid $table-border-color;
       border-top: 1px solid $table-border-color;
+      line-height: $base-line-height;
       padding: $table-padding;
-
-      &:first-child {
-        border-left: none;
-      }
 
       button {
         @include button(flat, $action-color);
@@ -98,7 +62,7 @@
         padding: 0.3em 1em;
         width: 100%;
 
-        @media only screen and (max-width: 64.063em) {
+        @include media($medium-screen) {
           margin-bottom: 0;
           width: auto;
         }
@@ -107,30 +71,34 @@
   }
 }
 
+.name {
+  width: 100px;
+}
+
+.email {
+  width: 250px;
+}
+
+.actions {
+  width: 100px;
+}
+
 .decision-button {
+  background: $medium-gray;
+  border: none;
+  border-radius: 6px;
+  color: $white;
   display: inline-block;
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: 1.5;
   margin: auto;
   padding: 7px 38px;
   text-decoration: none;
-  font-size: 1.1em;
-  line-height: 1.5;
-  border-radius: 6px;;
-  font-weight: 700;;
-  background: $medium-gray;;
-  color: #fff;;
-  border: none;
 }
 
 .selected {
-  background: $blue; 
-}
-
-.float-right {
-  float: right;
-}
-
-.float-none {
-  float: none;
+  background: $blue;
 }
 
 @media (max-width: $medium-screen) {

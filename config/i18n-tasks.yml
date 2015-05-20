@@ -83,7 +83,7 @@ ignore_unused:
   - 'date.*'
   - 'time.*'
   - 'unauthorized.*'
-# - 'activerecord.attributes.*'
+  - 'activerecord.attributes.*'
 
 ## Exclude these keys from `i18n-tasks eq-base' report
 # ignore_eq_base:

@@ -7,8 +7,4 @@ module AuthorizationHelpers
       redirect_to root_url, flash: { error: exception.message }
     end
   end
-
-  def authorize_admin!
-    authorize! :manage, :admin_dashboard
-  end
 end

@@ -1,6 +1,8 @@
 # Methods that are used across specs
+
+# Signs in an admin or a NPO
 def sign_in(user)
-  visit new_admin_session_path
+  visit Rails.application.routes.url_helpers.send("new_#{user.class.name.underscore}_session_path")
   fill_in "Email", with: user.email
   fill_in "Password", with: user.password
   click_button "Log in"

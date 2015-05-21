@@ -4,9 +4,9 @@ RSpec.describe "Nonprofit Application Form" do
   # Helpers for this spec
   def fill_in_form
     app = build :nonprofit_application
-    [:purpose, :history, :short_summary, :goals, :key_features,
-     :target_audience, :why].each do |attribute|
-       fill_in "nonprofit_application_#{attribute}", with: app.send(attribute)
+    [:purpose, :history, :short_summary, :goals,
+     :key_features, :target_audience, :why].each do |attribute|
+      fill_in "nonprofit_application_#{attribute}", with: app.send(attribute)
     end
   end
 

@@ -40,9 +40,9 @@ module Admins
       @semester = Semester.find params[:id]
       if @semester.can_be_destroyed?
         @semester.destroy
-        flash[:success] = t("admin.semesters.destroy.success")
+        flash[:success] = t("admins.semesters.destroy.success")
       else
-        flash[:error] = t("admin.semesters.destroy.error")
+        flash[:error] = t("admins.semesters.destroy.error")
       end
       redirect_to admin_semesters_path
     end

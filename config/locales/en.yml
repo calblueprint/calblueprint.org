@@ -198,7 +198,10 @@ en:
       message: "Hello %{nonprofit}! We have received your nonprofit application for consideration for Blueprint's development. Thank you for your time, and we will get back to you as soon as possible regarding your application status."
     closed: Organization applications are now closed for this semester. Thank you for your interest!
 
-  admin:
+  admins:
+    nonprofit_applications:
+      index:
+        banner: NPO Applications
     semesters:
       destroy:
         error: Cannot delete semester if the semester has applications or projects, or if there is only one semester left. Please reassign applications and projects before deleting this semester.

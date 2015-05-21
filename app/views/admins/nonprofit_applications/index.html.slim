@@ -1,7 +1,7 @@
 .spacer-small
 .banner
   .banner-text
-    h1 NPO Applications
+    h1 = t(".banner")
 
 / TODO(sam): Add CSV downloading/uploading
 .row
@@ -15,7 +15,7 @@
           th.actions Actions
       tbody
         - @nonprofit_applications.each do |app|
-          tr
+          tr id="#{dom_id app}"
             td = app.organization_name
             td = app.email
             td = app.short_summary

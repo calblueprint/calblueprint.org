@@ -4,7 +4,7 @@
       .spacer
       .banner-text
         h1 #{current_user.organization_name},
-        p.subtitle We're looking forward to working with you.
+        p.subtitle = t(".subtitle")
   .apply-info
     .row
       .apply-info-section
@@ -34,7 +34,7 @@
         = f.input :short_summary
         = f.input :goals
         = f.input :key_features
-        = f.input :devices, collection: ["Mobile phones", "Tablets", "Desktops"], as: :check_boxes
+        = f.input :devices, collection: NonprofitApplication::POSSIBLE_DEVICES, as: :check_boxes
         = f.input :target_audience
         = f.input :why
     .row

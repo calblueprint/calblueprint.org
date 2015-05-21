@@ -34,7 +34,7 @@
         = f.input :short_summary
         = f.input :goals
         = f.input :key_features
-        = f.input :devices, collection: ["Mobile phones", "Tablets", "Desktops"], as: :check_boxes
+        = f.input :devices, collection: NonprofitApplication::POSSIBLE_DEVICES, as: :check_boxes
         = f.input :target_audience
         = f.input :why
     .row

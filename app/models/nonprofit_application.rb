@@ -20,6 +20,7 @@
 #
 
 class NonprofitApplication < ActiveRecord::Base
+  POSSIBLE_DEVICES = ["Mobile phones", "Tablets", "Desktops"]
   serialize :devices
 
   belongs_to :nonprofit

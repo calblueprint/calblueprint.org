@@ -1,17 +1,68 @@
-# Lint config used by scss-lint locally. Hound uses .scss-style.yml
-# Some linters are disabled to avoid huge amounts of linter spam, but we'll
-# fix them eventually.
-scss_files: "app/assets/stylesheets/**/*.scss"
+# Used by Hound to lint added/changed files.
+scss_files: "**/*.scss"
 exclude: "app/assets/stylesheets/vendor/**"
 
 linters:
-  Comment:
+  # We should enable these two later.
+  SelectorDepth:
+    enabled: false
+    max_depth: 3
+    severity: warning
+  NestingDepth:
+    enabled: false
+    max_depth: 4
+    severity: warning
+
+  BangFormat:
     enabled: true
+    space_before_bang: true
+    space_after_bang: false
+  BorderZero:
+    enabled: false
+    convention: zero
+  ColorKeyword:
+    enabled: true
+    severity: warning
+  ColorVariable:
+    enabled: true
+  Comment:
+    enabled: false
+  DebugStatement:
+    enabled: true
+  DeclarationOrder:
+    enabled: true
+  DuplicateProperty:
+    enabled: true
+  ElsePlacement:
+    enabled: true
+    style: same_line
+  EmptyLineBetweenBlocks:
+    enabled: true
+    ignore_single_line_blocks: true
+  EmptyRule:
+    enabled: true
+  FinalNewline:
+    enabled: true
+    present: true
+  HexLength:
+    enabled: false
+    style: short
   HexNotation:
     enabled: false
+    style: uppercase
+  HexValidation:
+    enabled: true
   IdSelector:
     enabled: false
+  ImportantRule:
+    enabled: true
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
   Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
     character: space
     width: 2
   LeadingZero:
@@ -20,39 +71,83 @@ linters:
   MergeableSelector:
     enabled: true
     force_nesting: true
-  # Sam: I don't like that this is disabled. We should consider refactoring the scss at some point.
-  NestingDepth:
-    enabled: false
+  NameFormat:
+    enabled: true
+    allow_leading_underscore: true
+    convention: hyphenated_lowercase
   PlaceholderInExtend:
     enabled: false
-  # Sam: I got up to here when linting the SCSS. We should continue down this list to lint our codebase
-  ColorVariable:
-    enabled: false
+  PropertyCount:
+    enabled: true
+    include_nested: false
+    max_properties: 15
   PropertySortOrder:
-    enabled: false
+    enabled: true
+    ignore_unspecified: false
+    severity: warning
+    separate_groups: false
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
   QualifyingElement:
     enabled: false
-  SelectorDepth:
-    enabled: false
+    allow_element_with_attribute: false
+    allow_element_with_class: false
+    allow_element_with_id: false
+    severity: warning
   SelectorFormat:
-    enabled: false
+    enabled: true
+    convention: hyphenated_BEM
+    convention_explanation: >
+      Please use BEM syntax:
+      http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
   Shorthand:
-    enabled: false
+    enabled: true
+    severity: warning
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: true
   SingleLinePerSelector:
-    enabled: false
+    enabled: true
   SpaceAfterComma:
-    enabled: false
+    enabled: true
   SpaceAfterPropertyColon:
-    enabled: false
+    enabled: true
+    style: one_space
+  SpaceAfterPropertyName:
+    enabled: true
   SpaceBeforeBrace:
-    enabled: false
+    enabled: true
+    style: space
+    allow_single_line_padding: false
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
   StringQuotes:
+    enabled: true
+    style: double_quotes
+  TrailingSemicolon:
+    enabled: true
+  TrailingZero:
     enabled: false
   UnnecessaryMantissa:
+    enabled: true
+  UnnecessaryParentReference:
+    enabled: true
+  UrlFormat:
+    enabled: true
+  UrlQuotes:
+    enabled: true
+  VariableForProperty:
     enabled: false
-  VendorPrefix:
-    enabled: false
+    properties: []
   VendorPrefixes:
-    enabled: false
+    enabled: true
+    identifier_list: bourbon
+    include: []
+    exclude: []
   ZeroUnit:
+    enabled: true
+    severity: warning
+  Compass::PropertyWithMixin:
     enabled: false

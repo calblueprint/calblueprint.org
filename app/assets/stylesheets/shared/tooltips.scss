@@ -30,7 +30,7 @@
   .tooltip {
     @include position(absolute, null 0 $tooltip-distance-from-item 0);
     @include transition (all 0.2s ease-in-out);
-    background: #FFF;
+    background: $white;
     background-color: $tooltip-background;
     border-radius: $base-border-radius;
     box-shadow: $tooltip-shadow;

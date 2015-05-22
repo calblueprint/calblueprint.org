@@ -1,9 +1,7 @@
-$block-height: 300px;
-
 .projects-background {
-  width: 100%;
-  background-color: #eaeaea;
+  background-color: $gray-background-color;
   height: 100%;
+  width: 100%;
 }
 
 .projects-section {
@@ -13,14 +11,18 @@ $block-height: 300px;
 }
 
 // start da css for da buttons
+$demo-btn-color: #55acee;
+$demo-btn-hover-color: #6FC6FF;
+$demo-btn-shadow: #3C93D5;
+
 .demo-btn {
-  display: block;
   border-radius: 5px;
-  padding: 12px 20px;
+  color: $white;
+  display: block;
   font-size: 22px;
-  color: #fff;
-  width: 75%;
   margin: 48px auto;
+  padding: 12px 20px;
+  width: 75%;
 }
 
 .demo-btn:active {
@@ -29,29 +31,34 @@ $block-height: 300px;
 }
 
 .demo-btn-color {
-  background-color: #55acee;
-  box-shadow: 0px 5px 0px 0px #3C93D5;
+  background-color: $demo-btn-color;
+  box-shadow: 0px 5px 0px 0px $demo-btn-shadow;
 }
 
 .demo-btn-color:hover {
-  background-color: #6FC6FF;
-  color: #fff;
+  background-color: $demo-btn-hover-color;
+  color: $white;
 }
 
 .project {
+  $block-height: 300px;
+  $project-bg-color: lighten($gray-background-color, 5);
+  $project-border-color: #D0D1D5;
+  $project-section-text-color: #565a5c;
+
   @extend .row;
 
   .project-expand {
+    background-color: $project-bg-color;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: $project-border-color;
+    border-right-style: solid;
+    border-right-width: 1px;
     display: none;
     overflow: hidden;
-    width: 100%;
     padding-bottom: 32px;
-    background-color: #F6F7F8;
-    border-color: #D0D1D5;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-right-width: 1px;
-    border-right-style: solid;
+    width: 100%;
 
     .project-expand-section {
       @extend .columns;
@@ -62,18 +69,18 @@ $block-height: 300px;
       .project-expand-section-icon {
         background-size: cover;
         height: 32px;
-        width: 32px;
         margin: 24px auto 12px;
+        width: 32px;
       }
 
       .project-expand-section-text {
-        color: #565a5c;
+        color: $project-section-text-color;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0px auto;
         text-align: justify;
         text-indent: 16px;
         width: 80%;
-        line-height: 20px;
-        font-size: 14px;
-        margin: 0px auto;
       }
 
       .problem-icon {
@@ -98,12 +105,12 @@ $block-height: 300px;
     @extend .small-12;
     @extend .medium-4;
     @extend .large-4;
-    height: $block-height;
     background-size: cover;
-    border-radius: 2px 0px 0px 2px;
-    border-color: #D0D1D5;
-    border-bottom-width: 1px;
     border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: $project-border-color;
+    border-radius: 2px 0px 0px 2px;
+    height: $block-height;
   }
 
   .project-card {
@@ -111,43 +118,38 @@ $block-height: 300px;
     @extend .small-12;
     @extend .medium-8;
     @extend .large-8;
-    position: relative;
-    height: $block-height;
     background-color: $white;
-    border-radius: 0px 2px 2px 0px;
-    border-color: #D0D1D5;
-    border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-color: $project-border-color;
+    border-radius: 0px 2px 2px 0px;
     border-right-style: solid;
-
-    .project-card-text {
-      color: #565a5c;
-      text-align: left;
-    }
+    border-right-width: 1px;
+    height: $block-height;
+    position: relative;
 
     .project-title {
       @extend .project-card-text;
-      padding: 0px 8px;
       height: 57px;
       line-height: 57px;
       overflow: hidden;
+      padding: 0px 8px;
     }
 
     .project-description {
       @extend .project-card-text;
       font-size: 16px;
+      height: 48px;
       line-height: 16px;
       padding: 0px 8px;
-      height: 48px;
     }
 
     .project-subtitle {
       @extend.project-card-text;
-      font-size: 14px;
-      line-height:14px;
-      padding: 12px 8px 12px;
       display: block;
+      font-size: 14px;
+      line-height: 14px;
+      padding: 12px 8px;
     }
 
     .project-member-images {
@@ -155,13 +157,13 @@ $block-height: 300px;
     }
 
     .project-member-image {
+      background-color: $blue;
       background-size: cover;
+      border-radius: 24px;
       display: inline-block;
       height: 48px;
+      margin: 4px;
       width: 48px;
-      border-radius: 24px;
-      background-color: $blue;
-      margin: 4px 4px;
     }
 
     .project-member-noimage {
@@ -173,11 +175,11 @@ $block-height: 300px;
     }
 
     .project-progress-scope {
+      background-color: $progress-red;
       display: inline-block;
       height: 8px;
-      width: 20%;
       margin: 0px 2px 4px 0px;
-      background-color: $progress-red;
+      width: 20%;
     }
 
     .project-progress-green {
@@ -186,19 +188,19 @@ $block-height: 300px;
   }
 
   .project-see-more {
-    position: absolute;
-    bottom: 24px;
-    right: 20px;
-    height: 24px;
-    width: 24px;
-    background-size: cover;
     background-image: image-url("projects/see-more.png");
-    opacity: 0.5;
+    background-size: cover;
+    bottom: 24px;
     cursor: hand;
+    height: 24px;
+    opacity: 0.5;
+    position: absolute;
+    right: 20px;
+    width: 24px;
   }
 
-  .project-see-more:hover{
-    opacity: 1.0;
+  .project-see-more:hover {
+    opacity: 1;
   }
 }
 

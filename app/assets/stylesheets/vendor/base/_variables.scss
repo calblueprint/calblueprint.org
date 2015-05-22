@@ -27,13 +27,14 @@ $base-z-index: 0;
 $button-font-size: 1.1em;
 
 // Colors
-$white: #FFFFFF;
-$black: #000000;
+$white: #FFF;
+$black: #000;
+$light-gray: #DDD;
+$medium-gray: #999;
+$dark-gray: #333;
+
 $blue: #477DCA;
 $gainsboro: #DCDCDC;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
@@ -46,6 +47,7 @@ $progress-red: #FF7E79;
 
 // Background Color
 $base-background-color: $white;
+$gray-background-color: #EAEAEA;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -72,7 +74,8 @@ $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);
 $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;
-$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow: inset 0 1px 3px rgba($black, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
+$sky-label-blue: #75BBDC;

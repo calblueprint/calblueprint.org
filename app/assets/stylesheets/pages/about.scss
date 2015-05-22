@@ -1,22 +1,22 @@
 .about-banner {
   @extend .banner;
-  @include animation(FadeIn 2.0s ease-in);
+  @include animation(FadeIn 2s ease-in);
   @include background(linear-gradient(rgba(255, 255, 255, 0.3),
                       rgba(255, 255, 255, 0.3)),
                       image-url("about/about.jpg"));
-  height: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position-y: 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
 }
 
 @-webkit-keyframes FadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
 
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
@@ -37,8 +37,8 @@
 
     .icon-wrapper {
       color: $blue;
-      width: 80%;
       margin: auto;
+      width: 80%;
     }
 
     p {
@@ -60,17 +60,17 @@
       padding-left: 0px;
 
       a {
-        height: 100%;
         display: inline-block;
+        height: 100%;
         position: relative;
 
         .member-description {
+          color: transparent;
+          left: 10px;
           position: absolute;
           top: 10px;
-          left: 10px;
           width: 0;
           z-index: 10;
-          color: transparent;
           //@include transition-ease-all(0.5s);
         }
 
@@ -84,53 +84,53 @@
   }
 }
 
-.about-sponsor-block {
-  background: #666;
+// Sam: We removed sponsors from this page.
+// .about-sponsor-block {
+//   background: #666;
 
-  h2.sponsor-title {
-    @extend .center;
-    color: $light-gray;
-  }
+//   h2.sponsor-title {
+//     @extend .center;
+//     color: $light-gray;
+//   }
 
-  ul.sponsor-list {
-    padding: 0;
+//   ul.sponsor-list {
+//     padding: 0;
 
-    li.sponsor-item {
-      @extend .center;
-      padding: 15px;
-      display: inline-block;
-      height: 150px;
-      font: 0/0 a;
+//     li.sponsor-item {
+//       @extend .center;
+//       padding: 15px;
+//       display: inline-block;
+//       height: 150px;
+//       font: 0/0 a;
 
-      &:before {
-        content: ' ';
-        display: inline-block;
-        vertical-align: middle;  // vertical alignment of the inline element
-        height: 100%;
-      }
+//       &:before {
+//         content: ' ';
+//         display: inline-block;
+//         vertical-align: middle;  // vertical alignment of the inline element
+//         height: 100%;
+//       }
 
-      a {
-        display: inline-block;
-        vertical-align: middle;
-        font: 16px/1 Arial sans-serif;
+//       a {
+//         display: inline-block;
+//         vertical-align: middle;
+//         font: 16px/1 Arial sans-serif;
 
-        img {
-          width: auto;
-          max-height: 150px;
-        }
-      }
-    }
-  }
-
-}
+//         img {
+//           width: auto;
+//           max-height: 150px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .hover-icon {
   position: relative;
 
   img {
     @include transition(opacity 0.3s ease-in-out);
-    position: absolute;
     left: 0;
+    position: absolute;
 
     &.icon-top:hover {
       opacity: 0;
@@ -143,9 +143,9 @@
   position: relative;
 
   a {
+    height: 50px;
     margin: -42px 14px;
     width: 50px;
-    height: 50px;
 
     &.next .icon-wrap {
       @include transform(rotate(90deg));
@@ -156,9 +156,9 @@
       @include transition(opacity 0.3s);
       @include transform(scale(0.9));
 
-      background: #fff;
+      background: $white;
       border-radius: 50%;
-      content: '';
+      content: "";
       height: 100%;
       left: 0;
       opacity: 0;
@@ -169,11 +169,11 @@
   }
 
   .icon-wrap {
-    position: relative;
     display: block;
-    margin: 32% 0 0 33%;
-    width: 80%;
     height: 80%;
+    margin: 32% 0 0 33%;
+    position: relative;
+    width: 80%;
 
     &::before,
     &::after {
@@ -182,7 +182,7 @@
       @include backface-visibility(hidden);
 
       background: $white;
-      content: '';
+      content: "";
       height: 50%;
       left: 25%;
       position: absolute;
@@ -250,8 +250,8 @@ nav a {
 }
 
 figure.effect-sadie figcaption::before {
-  @include background(linear-gradient(top, rgba(71,125,202,0.5) 0%, rgba(71,125,202,0.5) 75%));
-  content: '';
+  @include background(linear-gradient(top, rgba(71, 125, 202, 0.5) 0%, rgba(71, 125, 202, 0.5) 75%));
+  content: "";
   height: 100%;
   left: 0;
   opacity: 0;
@@ -266,7 +266,7 @@ figure.effect-sadie .member-description {
 }
 
 figure.effect-sadie .member-description {
-  @include transform(translate3d(0,10px,0));
+  @include transform(translate3d(0, 10px, 0));
   bottom: 0;
   left: 0;
   opacity: 0;
@@ -276,29 +276,29 @@ figure.effect-sadie .member-description {
 }
 
 figure.effect-sadie:hover .member-description {
-  @include transform(translate3d(0,-50%,0) translate3d(0,-40px,0));
+  @include transform(translate3d(0, -50%, 0) translate3d(0, -40px, 0));
   color: $white;
 }
 
 figure.effect-sadie:hover figcaption::before ,
 figure.effect-sadie:hover .member-description {
-  @include transform(translate3d(0,0,0));
+  @include transform(translate3d(0, 0, 0));
   opacity: 1;
 }
 
 
 // SVG wrap
 .svg-wrap {
-  position: absolute;
-  width: 0px;
   height: 0px;
   overflow: hidden;
+  position: absolute;
+  width: 0px;
 }
 
 .nav-arrow {
-  position: relative;
   padding-left: 45%;
   padding-top: 27%;
+  position: relative;
 }
 
 @media only screen and (max-width: 64.063em) {
@@ -311,8 +311,8 @@ figure.effect-sadie:hover .member-description {
   }
 
   .hover-icon img {
-    position: relative;
     left: 0;
+    position: relative;
   }
 
   .hover-icon .icon-bottom {

@@ -44,18 +44,18 @@
 // Use spacers to space your paragraphs and individual elements rather than <br> or css margins. Spacers
 // are divs with one of the following three classes. See home.html.erb for an example of spacer use.
 .spacer-small {
-  width: 100%;
   height: 30px;
+  width: 100%;
 }
 
 .spacer {
-  width: 100%;
   height: 75px;
+  width: 100%;
 }
 
 .spacer-large {
-  width: 100%;
   height: 150px;
+  width: 100%;
 }
 
 // Use to make your text white when putting over dark, color, or photo backgrounds.
@@ -96,7 +96,7 @@
 }
 
 .gray-bg {
-  background-color: #ECECEC;
+  background-color: $gray-background-color;
   border-top: 1px solid #CCC;
   z-index: -10;
 }

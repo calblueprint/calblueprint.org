@@ -2,12 +2,12 @@ $laptop-width: 969px;
 $small-screen: em(420);
 
 #home-banner {
-  width: 100%;
+  background: image-url("home/banner-bg.jpg");
+  background-size: cover;
   height: 600px;
   margin-bottom: 200px;
-  background: image-url('home/banner-bg.jpg');
-  background-size:cover;
   position: relative;
+  width: 100%;
 
   @include media(max-width $medium-screen) {
     height: 400px;
@@ -16,39 +16,39 @@ $small-screen: em(420);
 }
 
 #laptop {
-  position: absolute;
   bottom: -175px;
-  max-height: 650px;
   height: 100%;
+  max-height: 650px;
+  position: absolute;
+  text-align: center;
   width: 100%;
-  text-align:center;
 
   @include media(max-width $medium-screen) {
-    bottom:-120px;
+    bottom: -120px;
   }
 
   #laptop-bg-container {
+    bottom: 0;
     position: relative;
-    z-index:2;
-    bottom: 0px;
+    z-index: 2;
 
     @include media(max-width $laptop-width) {
+      bottom: 0;
       position: absolute;
-      bottom: 0px;
     }
   }
 
   #laptop-bg {
     height: auto;
-    width: 100%;
     max-width: $laptop-width;
+    width: 100%;
   }
 
   #laptop-content-container {
-    position: absolute;
-    width: 100%;
-    text-align:center;
     padding-top: 25px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
     z-index: 0;
 
     @include media(max-width $large-screen) {
@@ -56,18 +56,18 @@ $small-screen: em(420);
     }
 
     @include media(max-width $laptop-width) {
-      padding-top: 0px;
+      bottom: 0;
       padding-bottom: 6.5%;
+      padding-top: 0;
       position: absolute;
-      bottom: 0px;
     }
   }
 
   #laptop-content {
+    border-top: 10px solid $black;
     height: auto;
-    width: 83%;
     max-width: 795px;
-    border-top:10px solid $black;
+    width: 83%;
   }
 }
 
@@ -81,31 +81,31 @@ $small-screen: em(420);
 }
 
 #smartphone-bg-container {
+  bottom: 0;
   position: relative;
-  z-index:2;
-  bottom: 0px;
+  z-index: 2;
 }
 
 #smartphone-bg {
   height: auto;
-  width: 100%;
   max-width: $laptop-width;
+  width: 100%;
 }
 
 #smartphone-content-container {
-  position: absolute;
-  width: 100%;
-  text-align:center;
-  z-index: 0;
-  padding-right: $gutter;
+  bottom: 0;
   padding-bottom: 18%;
-  bottom: 0px;
+  padding-right: $gutter;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 0;
 }
 
 #smartphone-content {
   height: auto;
-  width: 71%;
   max-width: 795px;
+  width: 71%;
 }
 
 

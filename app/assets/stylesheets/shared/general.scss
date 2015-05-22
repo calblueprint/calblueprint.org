@@ -60,7 +60,7 @@
 
 // Use to make your text white when putting over dark, color, or photo backgrounds.
 .white {
-  color: #fff;
+  color: $white;
 }
 
 // Center your text inside an element
@@ -71,24 +71,24 @@
 // An inner div as a dark overlay to make banners darker. You have to put this inside the banner as
 // if the banner was a wrapper.
 .darken {
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
 }
 
 // A darker version of darken .
 .blacken {
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
 }
 
 
 // If h1 isn't big enough to satisfy your needs, then use h0! Probably use for banners in
 // combination with the white class.
 .h0 {
-  text-align: center;
   font-size: 5em;
+  text-align: center;
 }
 
 .white-bg {
@@ -97,7 +97,7 @@
 
 .gray-bg {
   background-color: $gray-background-color;
-  border-top: 1px solid #CCC;
+  border-top: 1px solid $gray-background-border-color;
   z-index: -10;
 }
 

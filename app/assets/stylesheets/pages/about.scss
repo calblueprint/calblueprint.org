@@ -10,7 +10,7 @@
   height: 500px;
 }
 
-@-webkit-keyframes FadeIn {
+@include keyframes(FadeIn) {
   0% {
     opacity: 0;
   }
@@ -57,7 +57,7 @@
   ul.team-pictures {
     li {
       padding-bottom: 2em;
-      padding-left: 0px;
+      padding-left: 0;
 
       a {
         display: inline-block;
@@ -289,10 +289,10 @@ figure.effect-sadie:hover .member-description {
 
 // SVG wrap
 .svg-wrap {
-  height: 0px;
+  height: 0;
   overflow: hidden;
   position: absolute;
-  width: 0px;
+  width: 0;
 }
 
 .nav-arrow {

@@ -22,8 +22,8 @@ $flashes: alert $flash-yellow, error $flash-red, notice lighten($base-accent-col
     color: darken($color, 60);
 
     a {
-      color: darken($color, 70);
       border-bottom: 1px solid transparentize(darken($color, 70), 0.7);
+      color: darken($color, 70);
 
       &:hover {
         color: darken($color, 90);

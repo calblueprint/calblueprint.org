@@ -26,13 +26,13 @@ $demo-btn-shadow: #3C93D5;
 }
 
 .demo-btn:active {
-  @include transform(translate(0px, 5px));
-  box-shadow: 0px 1px 0px 0px;
+  @include transform(translate(0, 5px));
+  box-shadow: 0 1px 0 0;
 }
 
 .demo-btn-color {
   background-color: $demo-btn-color;
-  box-shadow: 0px 5px 0px 0px $demo-btn-shadow;
+  box-shadow: 0 5px 0 0 $demo-btn-shadow;
 }
 
 .demo-btn-color:hover {
@@ -77,7 +77,7 @@ $demo-btn-shadow: #3C93D5;
         color: $project-text-color;
         font-size: 14px;
         line-height: 20px;
-        margin: 0px auto;
+        margin: 0 auto;
         text-align: justify;
         text-indent: 16px;
         width: 80%;
@@ -109,7 +109,7 @@ $demo-btn-shadow: #3C93D5;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-color: $project-border-color;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 2px 0 0 2px;
     height: $block-height;
   }
 
@@ -122,7 +122,7 @@ $demo-btn-shadow: #3C93D5;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-color: $project-border-color;
-    border-radius: 0px 2px 2px 0px;
+    border-radius: 0 2px 2px 0;
     border-right-style: solid;
     border-right-width: 1px;
     height: $block-height;
@@ -138,7 +138,7 @@ $demo-btn-shadow: #3C93D5;
       height: 57px;
       line-height: 57px;
       overflow: hidden;
-      padding: 0px 8px;
+      padding: 0 8px;
     }
 
     .project-description {
@@ -146,7 +146,7 @@ $demo-btn-shadow: #3C93D5;
       font-size: 16px;
       height: 48px;
       line-height: 18px;
-      padding: 0px 8px;
+      padding: 0 8px;
     }
 
     .project-subtitle {
@@ -183,7 +183,7 @@ $demo-btn-shadow: #3C93D5;
       background-color: $progress-red;
       display: inline-block;
       height: 8px;
-      margin: 0px 2px 4px 0px;
+      margin: 0 2px 4px 0;
       width: 20%;
     }
 

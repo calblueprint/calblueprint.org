@@ -15,7 +15,7 @@ module ::Guard
     private
 
     def inspect_with_scss_lint
-      passed = system('scss-lint -c .scss-lint.yml')
+      passed = system('scss-lint -c .scss-style.yml')
       throw :task_has_failed unless passed
     rescue => error
       UI.error 'The following exception occurred while running guard-scss_lint: ' \

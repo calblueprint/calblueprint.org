@@ -3,6 +3,16 @@ scss_files: "**/*.scss"
 exclude: "app/assets/stylesheets/vendor/**"
 
 linters:
+  # We should enable these two later.
+  SelectorDepth:
+    enabled: false
+    max_depth: 3
+    severity: warning
+  NestingDepth:
+    enabled: false
+    max_depth: 4
+    severity: warning
+
   BangFormat:
     enabled: true
     space_before_bang: true
@@ -38,7 +48,7 @@ linters:
     enabled: false
     style: short
   HexNotation:
-    enabled: true
+    enabled: false
     style: uppercase
   HexValidation:
     enabled: true
@@ -65,10 +75,6 @@ linters:
     enabled: true
     allow_leading_underscore: true
     convention: hyphenated_lowercase
-  NestingDepth:
-    enabled: true
-    max_depth: 4
-    severity: warning
   PlaceholderInExtend:
     enabled: false
   PropertyCount:
@@ -84,14 +90,10 @@ linters:
     enabled: true
     extra_properties: []
   QualifyingElement:
-    enabled: true
+    enabled: false
     allow_element_with_attribute: false
     allow_element_with_class: false
     allow_element_with_id: false
-    severity: warning
-  SelectorDepth:
-    enabled: true
-    max_depth: 3
     severity: warning
   SelectorFormat:
     enabled: true

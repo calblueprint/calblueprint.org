@@ -95,7 +95,10 @@ linters:
     severity: warning
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase
+    convention: hyphenated_BEM
+    convention_explanation: >
+      Please use BEM syntax:
+      http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
   Shorthand:
     enabled: true
     severity: warning

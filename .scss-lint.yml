@@ -2,17 +2,7 @@ scss_files: "app/assets/stylesheets/**/*.scss"
 exclude: "app/assets/stylesheets/vendor/**"
 
 linters:
-  ColorVariable:
-    enabled: false
   Comment:
-    enabled: false
-  DeclarationOrder:
-    enabled: false
-  DuplicateProperty:
-    enabled: false
-  EmptyLineBetweenBlocks:
-    enabled: false
-  EmptyRule:
     enabled: false
   HexLength:
     enabled: false

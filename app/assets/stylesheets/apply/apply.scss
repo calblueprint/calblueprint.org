@@ -56,6 +56,8 @@
 }
 
 .gear-img {
+  @include transform(scale(0.6, 0.6));
+
   background: image-url("apply/gears.svg");
   background-size: cover;
   bottom: -280px;
@@ -63,10 +65,11 @@
   left: -500px;
   position: absolute;
   width: 600px;
-  @include transform(scale(0.6, 0.6));
 }
 
 .gear-img-small {
+  @include transform(scale(0.5, 0.5));
+
   background: image-url("apply/gears.svg");
   background-size: cover;
   bottom: -305px;
@@ -74,7 +77,6 @@
   left: -525px;
   position: absolute;
   width: 600px;
-  @include transform(scale(0.5, 0.5));
   z-index: -1;
 }
 
@@ -190,6 +192,7 @@ label.remember-me {
 
   @media only screen and (max-width: $medium-screen) {
     text-align: center;
+
     h1 {
       text-align: center;
     }
@@ -309,12 +312,14 @@ label.remember-me {
   @extend .small-12;
   @extend .medium-6;
   @extend .large-6;
+
   .apply-info-section-icon {
     background-size: cover;
     height: 32px;
     width: 32px;
     margin: 24px auto 12px;
   }
+
   .apply-info-section-text {
     color: $dark-gray;
     text-align: center;
@@ -323,16 +328,16 @@ label.remember-me {
     font-size: 16px;
     margin: 16px auto 52px;
   }
+
   .problem-icon {
     @extend .apply-info-section-icon;
     background-image: image-url("projects/problem.png");
   }
+
   .calendar-icon {
     @extend .apply-info-section-icon;
     background-image: image-url("apply/students/calendar.png");
   }
-
-
 }
 
 

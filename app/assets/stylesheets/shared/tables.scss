@@ -28,6 +28,7 @@
     tr:hover > td, tr:hover > th {
       background-color: $table-hover-background;
     }
+
     tr:first-child td {
       border-top: 2px solid $table-border-color;
     }

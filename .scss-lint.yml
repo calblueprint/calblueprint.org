@@ -17,10 +17,12 @@ linters:
   MergeableSelector:
     enabled: true
     force_nesting: true
+  # Sam: I don't like that this is disabled. We should consider refactoring the scss at some point.
   NestingDepth:
     enabled: false
   PlaceholderInExtend:
     enabled: false
+  # Sam: I got up to here when linting the SCSS. We should continue down this list to lint our codebase
   PropertySortOrder:
     enabled: false
   QualifyingElement:

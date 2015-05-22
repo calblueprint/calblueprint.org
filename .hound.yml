@@ -10,6 +10,6 @@ javascript:
   ignore_file: .javascript_ignore
 
 scss:
-  config_file: .scss-style.yml
+  config_file: .scss-lint.yml
 
 ShowCopNames: true

@@ -44,7 +44,7 @@ $demo-btn-shadow: #3C93D5;
   $block-height: 300px;
   $project-bg-color: lighten($gray-background-color, 5);
   $project-border-color: #D0D1D5;
-  $project-section-text-color: #565a5c;
+  $project-text-color: #565a5c;
 
   @extend .row;
 
@@ -74,7 +74,7 @@ $demo-btn-shadow: #3C93D5;
       }
 
       .project-expand-section-text {
-        color: $project-section-text-color;
+        color: $project-text-color;
         font-size: 14px;
         line-height: 20px;
         margin: 0px auto;
@@ -128,8 +128,13 @@ $demo-btn-shadow: #3C93D5;
     height: $block-height;
     position: relative;
 
+    @mixin project-card-text {
+      color: $project-text-color;
+      text-align: left;
+    }
+
     .project-title {
-      @extend .project-card-text;
+      @include project-card-text;
       height: 57px;
       line-height: 57px;
       overflow: hidden;
@@ -137,15 +142,15 @@ $demo-btn-shadow: #3C93D5;
     }
 
     .project-description {
-      @extend .project-card-text;
+      @include project-card-text;
       font-size: 16px;
       height: 48px;
-      line-height: 16px;
+      line-height: 18px;
       padding: 0px 8px;
     }
 
     .project-subtitle {
-      @extend.project-card-text;
+      @include project-card-text;
       display: block;
       font-size: 14px;
       line-height: 14px;

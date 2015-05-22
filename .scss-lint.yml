@@ -4,20 +4,19 @@ exclude: "app/assets/stylesheets/vendor/**"
 linters:
   Comment:
     enabled: false
-  HexLength:
-    enabled: false
   HexNotation:
     enabled: false
   IdSelector:
     enabled: false
-  ImportantRule:
-    enabled: false
   Indentation:
-    enabled: false
+    character: space
+    width: 2
   LeadingZero:
-    enabled: false
+    enabled: true
+    style: include_zero
   MergeableSelector:
-    enabled: false
+    enabled: true
+    force_nesting: true
   NestingDepth:
     enabled: false
   PlaceholderInExtend:

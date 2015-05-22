@@ -76,7 +76,7 @@
 
         &:hover {
           .member-description {
-            color: #FFFFFF;
+            color: $white;
           }
         }
       }
@@ -125,100 +125,100 @@
 }
 
 .hover-icon {
-  position:relative;
-}
+  position: relative;
 
-.hover-icon img {
-  @include transition(opacity 0.3s ease-in-out);
-  position: absolute;
-  left: 0;
-}
+  img {
+    @include transition(opacity 0.3s ease-in-out);
+    position: absolute;
+    left: 0;
 
-.hover-icon img.icon-top:hover {
-  opacity: 0;
+    &.icon-top:hover {
+      opacity: 0;
+    }
+  }
 }
 
 /** NAVIGATION ARROWS */
 
 .nav-circlepop {
   position: relative;
-}
 
-.nav-circlepop a {
-  margin: -42px 14px;
-  width: 50px;
-  height: 50px;
-}
+  a {
+    margin: -42px 14px;
+    width: 50px;
+    height: 50px;
 
-.nav-circlepop a::before {
-  @include transition(transform 0.3s);
-  @include transition(opacity 0.3s);
-  @include transform(scale(0.9));
+    &.next .icon-wrap {
+      @include transform(rotate(90deg));
+    }
 
-  background: #fff;
-  border-radius: 50%;
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
+    &::before {
+      @include transition(transform 0.3s);
+      @include transition(opacity 0.3s);
+      @include transform(scale(0.9));
 
-.nav-circlepop .icon-wrap {
-  position: relative;
-  display: block;
-  margin: 32% 0 0 33%;
-  width: 80%;
-  height: 80%;
-}
+      background: #fff;
+      border-radius: 50%;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 
-.nav-circlepop a.next .icon-wrap {
-  @include transform(rotate(90deg));
-}
+  .icon-wrap {
+    position: relative;
+    display: block;
+    margin: 32% 0 0 33%;
+    width: 80%;
+    height: 80%;
 
-.nav-circlepop .icon-wrap::before,
-.nav-circlepop .icon-wrap::after {
-  @include transition(transform 0.3s);
-  @include transition-property(background-color 0.3s);
-  @include backface-visibility(hidden);
+    &::before,
+    &::after {
+      @include transition(transform 0.3s);
+      @include transition-property(background-color 0.3s);
+      @include backface-visibility(hidden);
 
-  background: $white;
-  content: '';
-  height: 50%;
-  left: 25%;
-  position: absolute;
-  width: 3px;
-}
+      background: $white;
+      content: '';
+      height: 50%;
+      left: 25%;
+      position: absolute;
+      width: 3px;
+    }
+  }
 
-.nav-circlepop .icon-wrap::before {
-  @include transform(translateX(-50%) rotate(-60deg));
-  @include transform-origin(0 100%);
-}
+  .icon-wrap::before {
+    @include transform(translateX(-50%) rotate(-60deg));
+    @include transform-origin(0 100%);
+  }
 
-.nav-circlepop .icon-wrap::after {
-  @include transform(translateX(-50%) rotate(-120deg));
-  @include transform-origin(0 0);
-  top: 50%;
-}
+  .icon-wrap::after {
+    @include transform(translateX(-50%) rotate(-120deg));
+    @include transform-origin(0 0);
+    top: 50%;
+  }
 
-.nav-circlepop a:hover::before {
-  @include transform(scale(1));
-  opacity: 1;
-}
+  a:hover::before {
+    @include transform(scale(1));
+    opacity: 1;
+  }
 
-.nav-circlepop a:hover .icon-wrap::before,
-.nav-circlepop a:hover .icon-wrap::after {
-  background: $blue;
-}
+  a:hover .icon-wrap::before,
+  a:hover .icon-wrap::after {
+    background: $blue;
+  }
 
-.nav-circlepop a:hover .icon-wrap::before {
-  @include transform(translateX(-50%) rotate(-45deg));
-}
+  a:hover .icon-wrap::before {
+    @include transform(translateX(-50%) rotate(-45deg));
+  }
 
-.nav-circlepop a:hover .icon-wrap::after {
-  @include transform(translateX(-50%) rotate(-135deg));
+  a:hover .icon-wrap::after {
+    @include transform(translateX(-50%) rotate(-135deg));
+  }
 }
 
 nav a {
@@ -229,20 +229,20 @@ nav a {
   text-align: left;
   top: 50%;
   z-index: 1000;
-}
 
-nav a.prev {
-  left: 0;
-}
+  &.prev {
+    left: 0;
+  }
 
-nav a.next {
-  right: 0;
-}
+  &.next {
+    right: 0;
+  }
 
-nav a svg {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
+  svg {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 /** SADIE EFFECTS TEST */

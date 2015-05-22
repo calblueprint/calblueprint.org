@@ -29,7 +29,7 @@
 
   .title {
     @extend .h0;
-    color: #FFFFFF;
+    color: $white;
     padding-top: 150px;
   }
 }
@@ -173,7 +173,7 @@ label.remember-me {
     }
 
     &:hover {
-      background-color: #DDDDDD;
+      background-color: $light-gray;
       border-bottom: 5px solid rgba($blue, 1);
     }
   }
@@ -285,7 +285,7 @@ label.remember-me {
 }
 
 .white-bg {
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 // Student Application Page CSS

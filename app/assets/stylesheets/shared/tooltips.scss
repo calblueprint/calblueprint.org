@@ -1,10 +1,10 @@
-.tooltip-item {  
+.tooltip-item {
   $base-border-color: #dcdcdc !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  $tooltip-background: #ffffff;
+  $tooltip-background: $white;
   $tooltip-border: transparent;
   $tooltip-color: $base-font-color;
   $tooltip-max-width: 16em;

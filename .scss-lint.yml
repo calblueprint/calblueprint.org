@@ -1,3 +1,6 @@
+# Lint config used by scss-lint locally. Hound uses .scss-style.yml
+# Some linters are disabled to avoid huge amounts of linter spam, but we'll
+# fix them eventually.
 scss_files: "app/assets/stylesheets/**/*.scss"
 exclude: "app/assets/stylesheets/vendor/**"
 
@@ -23,6 +26,8 @@ linters:
   PlaceholderInExtend:
     enabled: false
   # Sam: I got up to here when linting the SCSS. We should continue down this list to lint our codebase
+  ColorVariable:
+    enabled: false
   PropertySortOrder:
     enabled: false
   QualifyingElement:

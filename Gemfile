@@ -57,7 +57,7 @@ group :development do
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'rubocop'
-  gem 'scss-lint'
+  gem 'scss-lint', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
 end

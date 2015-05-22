@@ -105,7 +105,7 @@
       &:before {
         content: ' ';
         display: inline-block;
-        vertical-align: middle;  /* vertical alignment of the inline element */
+        vertical-align: middle;  // vertical alignment of the inline element
         height: 100%;
       }
 
@@ -138,8 +138,7 @@
   }
 }
 
-/** NAVIGATION ARROWS */
-
+// NAVIGATION ARROWS
 .nav-circlepop {
   position: relative;
 
@@ -245,8 +244,7 @@ nav a {
   }
 }
 
-/** SADIE EFFECTS TEST */
-
+// SADIE EFFECTS TEST
 .effect-sadie {
   margin: 0;
 }
@@ -289,7 +287,7 @@ figure.effect-sadie:hover .member-description {
 }
 
 
-/* SVG wrap */
+// SVG wrap
 .svg-wrap {
   position: absolute;
   width: 0px;

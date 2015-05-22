@@ -3,7 +3,7 @@ exclude: "app/assets/stylesheets/vendor/**"
 
 linters:
   Comment:
-    enabled: false
+    enabled: true
   HexNotation:
     enabled: false
   IdSelector:

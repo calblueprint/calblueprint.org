@@ -1,5 +1,5 @@
 .tables {
-  $base-border-color: gainsboro !default;
+  $base-border-color: $gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: $white !default;
   $base-line-height: 1.5em !default;
@@ -85,7 +85,7 @@
 
 .decision-button {
   background: $medium-gray;
-  border: none;
+  border: 0;
   border-radius: 6px;
   color: $white;
   display: inline-block;
@@ -112,4 +112,3 @@
     display: none;
   }
 }
-

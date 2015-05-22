@@ -109,7 +109,7 @@ $block-height: 300px;
     @extend .large-8;
     position: relative;
     height: $block-height;
-    background-color: white;
+    background-color: $white;
     border-radius: 0px 2px 2px 0px;
     border-color: #D0D1D5;
     border-bottom-width: 1px;
@@ -192,7 +192,7 @@ $block-height: 300px;
   background-image: image-url("projects/projects-banner.png");
   background-position: center;
   background-size: cover;
-  color: white;
+  color: $white;
   height: 220px;
 }
 

@@ -28,7 +28,9 @@ $button-font-size: 1.1em;
 
 // Colors
 $white: #FFFFFF;
+$black: #000000;
 $blue: #477DCA;
+$gainsboro: #DCDCDC;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #DDD;
@@ -43,7 +45,7 @@ $progress-green: #4CB74C;
 $progress-red: #FF7E79;
 
 // Background Color
-$base-background-color: white;
+$base-background-color: $white;
 
 // Font Colors
 $base-font-color: $dark-gray;

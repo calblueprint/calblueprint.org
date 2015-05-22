@@ -2,8 +2,6 @@ scss_files: "app/assets/stylesheets/**/*.scss"
 exclude: "app/assets/stylesheets/vendor/**"
 
 linters:
-  ColorKeyword:
-    enabled: false
   ColorVariable:
     enabled: false
   Comment:

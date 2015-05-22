@@ -25,7 +25,7 @@ FactoryGirl.define do
     semester
     purpose "Some text."
     history "Some text."
-    date_established DateTime.now.to_date
+    date_established Time.zone.now.to_date
     legal true
     short_summary "hi"
     goals "many"

@@ -52,13 +52,14 @@ group :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'guard-livereload'
+  gem 'guard-rubocop'
+  gem 'letter_opener'
   gem 'quiet_assets'
+  gem 'rubocop'
+  gem 'scss_lint', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'rubocop'
-  gem 'guard-rubocop'
-  gem 'guard-livereload'
-  gem "letter_opener"
 end
 
 group :development, :test do

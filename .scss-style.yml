@@ -1,3 +1,4 @@
+# Used by Hound to lint added/changed files.
 scss_files: "**/*.scss"
 exclude: "app/assets/stylesheets/vendor/**"
 

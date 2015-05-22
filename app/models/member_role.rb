@@ -11,8 +11,7 @@
 class MemberRole < ActiveRecord::Base
   has_many :members
 
-  validates :role, presence: true
-  validates_uniqueness_of :role
+  validates :role, presence: true, uniqueness: true
 
   def to_s
     "#{role}"

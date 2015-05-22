@@ -1,5 +1,5 @@
 .tables {
-  $base-border-color: gainsboro !default;
+  $base-border-color: $gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: $white !default;
   $base-line-height: 1.5em !default;
@@ -24,15 +24,6 @@
   border-spacing: 0;
   width: 100%;
 
-  tbody {
-    tr:hover > td, tr:hover > th {
-      background-color: $table-hover-background;
-    }
-    tr:first-child td {
-      border-top: 2px solid $table-border-color;
-    }
-  }
-
   thead {
     th {
       background-color: $table-header-background;
@@ -44,6 +35,14 @@
 
   tbody {
     background-color: $table-background;
+
+    tr:hover > td, tr:hover > th {
+      background-color: $table-hover-background;
+    }
+
+    tr:first-child td {
+      border-top: 2px solid $table-border-color;
+    }
 
     td {
       border-bottom: 0px;
@@ -85,7 +84,7 @@
 
 .decision-button {
   background: $medium-gray;
-  border: none;
+  border: 0;
   border-radius: 6px;
   color: $white;
   display: inline-block;
@@ -112,4 +111,3 @@
     display: none;
   }
 }
-

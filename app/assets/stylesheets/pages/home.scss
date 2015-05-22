@@ -13,7 +13,6 @@ $small-screen: em(420);
     height: 400px;
     margin-bottom: 150px;
   }
-
 }
 
 #laptop {
@@ -68,7 +67,7 @@ $small-screen: em(420);
     height: auto;
     width: 83%;
     max-width: 795px;
-    border-top:10px solid black;
+    border-top:10px solid $black;
   }
 }
 
@@ -111,12 +110,13 @@ $small-screen: em(420);
 
 
 #our-projects {
-  text-align:left !important;
+  text-align: left;
+
   p {
-    text-align:left;
+    text-align: left;
   }
 
   h1 {
-    text-align:left;
+    text-align: left;
   }
 }

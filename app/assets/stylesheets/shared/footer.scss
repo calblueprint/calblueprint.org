@@ -7,7 +7,7 @@ $greyed-out-color: #777;
 
   h5 {
     text-align: left;
-    color: white;
+    color: $white;
   }
 
   p {
@@ -17,8 +17,10 @@ $greyed-out-color: #777;
 
   li {
     padding: 5px;
+
     a {
       color: #AAA;
+
       &:hover {
         color: #FFF;
       }

@@ -12,7 +12,7 @@ $block-height: 300px;
   @extend .small-centered;
 }
 
-/* start da css for da buttons */
+// start da css for da buttons
 .demo-btn {
   display: block;
   border-radius: 5px;
@@ -65,6 +65,7 @@ $block-height: 300px;
         width: 32px;
         margin: 24px auto 12px;
       }
+
       .project-expand-section-text {
         color: #565a5c;
         text-align: justify;
@@ -79,16 +80,19 @@ $block-height: 300px;
         @extend .project-expand-section-icon;
         background-image: image-url("projects/problem.png");
       }
+
       .solution-icon {
         @extend .project-expand-section-icon;
         background-image: image-url("projects/solution.png");
       }
+
       .demo-icon {
         @extend .project-expand-section-icon;
         background-image: image-url("projects/demo.png");
       }
     }
   }
+
   .project-image {
     @extend .columns;
     @extend .small-12;
@@ -109,7 +113,7 @@ $block-height: 300px;
     @extend .large-8;
     position: relative;
     height: $block-height;
-    background-color: white;
+    background-color: $white;
     border-radius: 0px 2px 2px 0px;
     border-color: #D0D1D5;
     border-bottom-width: 1px;
@@ -121,6 +125,7 @@ $block-height: 300px;
       color: #565a5c;
       text-align: left;
     }
+
     .project-title {
       @extend .project-card-text;
       padding: 0px 8px;
@@ -128,6 +133,7 @@ $block-height: 300px;
       line-height: 57px;
       overflow: hidden;
     }
+
     .project-description {
       @extend .project-card-text;
       font-size: 16px;
@@ -135,6 +141,7 @@ $block-height: 300px;
       padding: 0px 8px;
       height: 48px;
     }
+
     .project-subtitle {
       @extend.project-card-text;
       font-size: 14px;
@@ -142,9 +149,11 @@ $block-height: 300px;
       padding: 12px 8px 12px;
       display: block;
     }
+
     .project-member-images {
       margin-left: 4px;
     }
+
     .project-member-image {
       background-size: cover;
       display: inline-block;
@@ -154,9 +163,11 @@ $block-height: 300px;
       background-color: $blue;
       margin: 4px 4px;
     }
+
     .project-member-noimage {
       background-color: $white;
     }
+
     .project-progress {
       margin-left: 8px;
     }
@@ -168,10 +179,12 @@ $block-height: 300px;
       margin: 0px 2px 4px 0px;
       background-color: $progress-red;
     }
+
     .project-progress-green {
       background-color: $progress-green;
     }
   }
+
   .project-see-more {
     position: absolute;
     bottom: 24px;
@@ -180,19 +193,20 @@ $block-height: 300px;
     width: 24px;
     background-size: cover;
     background-image: image-url("projects/see-more.png");
-    opacity: .5;
-    cursor: pointer;
+    opacity: 0.5;
     cursor: hand;
   }
+
   .project-see-more:hover{
     opacity: 1.0;
   }
 }
+
 .projects-banner {
   background-image: image-url("projects/projects-banner.png");
   background-position: center;
   background-size: cover;
-  color: white;
+  color: $white;
   height: 220px;
 }
 

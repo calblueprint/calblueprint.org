@@ -320,6 +320,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    scss_lint (0.38.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.1)
     shellany (0.0.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
@@ -438,6 +441,7 @@ DEPENDENCIES
   rspec-rails (~> 3.1.0)
   rubocop
   sass-rails (~> 5.0.3)
+  scss_lint
   shoulda-matchers
   simple_form (~> 3.0.2)
   sky-labels-rails

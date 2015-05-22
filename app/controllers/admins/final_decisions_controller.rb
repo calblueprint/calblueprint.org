@@ -1,6 +1,6 @@
 module Admins
   class FinalDecisionsController < BaseController
-    before_filter :load_final_decision
+    before_action :load_final_decision
 
     def reject
       if @final_decision.rejected?

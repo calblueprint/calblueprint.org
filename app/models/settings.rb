@@ -12,7 +12,7 @@
 #
 
 class Settings < ActiveRecord::Base
-  validates_numericality_of :singleton_guard, equal: 0
+  validates :singleton_guard, numericality: 0
   validates :npo_app_open, inclusion: [true, false]
   validates :student_app_open, inclusion: [true, false]
   validates :current_semester_id, presence: true

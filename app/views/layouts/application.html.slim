@@ -15,11 +15,11 @@ html
     = include_gon
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-  body class="#{body_class}"
+  body
     .container
-      .content
-        = render "header"
-        = render "flash"
+      = render "header"
+      = render "flash"
+      .content class="#{body_class}"
         = yield
-        = render "footer"
+      = render "footer"
   = render "ga_boiler"

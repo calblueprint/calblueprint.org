@@ -8,5 +8,15 @@ module Admins
     def index
       @nonprofit_applications = NonprofitApplication.all
     end
+
+    def destroy
+      application = NonprofitApplication.find(params[:id])
+      if application.delete
+        flash[:success] = t("Successfully deleted #{application.nonprofit.organization_name}'s application.")
+      else
+        flash[:error] = t("An error occured.")
+      end
+      redirect_to :index
+    end
   end
 end

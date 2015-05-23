@@ -143,12 +143,25 @@
   position: relative;
 
   a {
+    @include transform(translateY(-100%));
+    display: block;
     height: 50px;
     margin: -42px 14px;
+    outline: none;
+    position: absolute;
+    text-align: left;
+    top: 50%;
     width: 50px;
+    z-index: 1000;
 
-    &.next .icon-wrap {
-      @include transform(rotate(90deg));
+    &.prev {
+      left: 0;
+    }
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
     }
 
     &::before {
@@ -217,30 +230,6 @@
 
   a:hover .icon-wrap::after {
     @include transform(translateX(-50%) rotate(-135deg));
-  }
-}
-
-nav a {
-  @include transform(translateY(-100%));
-  display: block;
-  outline: none;
-  position: absolute;
-  text-align: left;
-  top: 50%;
-  z-index: 1000;
-
-  &.prev {
-    left: 0;
-  }
-
-  &.next {
-    right: 0;
-  }
-
-  svg {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
   }
 }
 
@@ -322,5 +311,4 @@ figure.effect-sadie:hover .member-description {
   .hover-icon img.icon-top:hover {
     opacity: 1;
   }
-
 }

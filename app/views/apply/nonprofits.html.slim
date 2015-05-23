@@ -45,60 +45,62 @@
     .title-column
       h1#process Application Process
     .content-column
-      .small-12.columns
-        ul.timeline-vertical
-          li.work.timeline-row
-            .relative
-              h5.title Application Submission
-              span.date/
-              h5 TBA
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.submission"
-          li.work.timeline-row
-            .relative
-              h5.title First Round Decisions
-              span.date/
-              h5 TBA
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.first_round"
-          li.work.timeline-row
-            .relative
-              h5.title Organization Interviews
-              span.date/
-              h5 TBA
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.interviews"
-          li.work.timeline-row
-            .relative
-              h5.title Final Decisions
-              span.date/
-              h5 TBA
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.final_decisions"
-      .small-12.columns.decision-criteria
-        .spacer-small
-        h4.title Decision Criteria
-        p = t ".decision_criteria.description"
-        ul
-          li
-            strong Impact
-            p How much will your project impact the community?
-          li
-            strong Necessity
-            p How vital is your project to your non-profit organization?
-          li
-            strong Scope
-            p Is your project achievable within the alloted timeline?
-          li
-            strong Technical Fit
-            p Does your project use the capabilities of technology? For example, an application to manage a classroom is more interesting than a website redesign.
-          li
-            strong Credibility
-            p Is there evidence that your project will have an impact?
+      .row
+        .small-12.columns
+          ul.timeline-vertical
+            li.work.timeline-row
+              .relative
+                h5.title Application Submission
+                span.date/
+                h5 May 18
+                span.circle
+              .timeline-content
+                p = t ".application_timeline.submission"
+            li.work.timeline-row
+              .relative
+                h5.title First Round Decisions
+                span.date/
+                h5 June 28
+                span.circle
+              .timeline-content
+                p = t ".application_timeline.first_round"
+            li.work.timeline-row
+              .relative
+                h5.title Organization Interviews
+                span.date/
+                h5 July 6
+                span.circle
+              .timeline-content
+                p = t ".application_timeline.interviews"
+            li.work.timeline-row
+              .relative
+                h5.title Final Decisions
+                span.date/
+                h5 July 19
+                span.circle
+              .timeline-content
+                p = t ".application_timeline.final_decisions"
+      .row
+        .small-12.columns.decision-criteria
+          .spacer-small
+          h4.title Decision Criteria
+          p = t ".decision_criteria.description"
+          ul
+            li
+              strong Impact
+              p How much will your project impact the community?
+            li
+              strong Necessity
+              p How vital is your project to your non-profit organization?
+            li
+              strong Scope
+              p Is your project achievable within the alloted timeline?
+            li
+              strong Technical Fit
+              p Does your project use the capabilities of technology? For example, an application to manage a classroom is more interesting than a website redesign.
+            li
+              strong Credibility
+              p Is there evidence that your project will have an impact?
   .spacer
   .row
     .small-12.columns
@@ -110,70 +112,73 @@
     .title-column
       h1#timeline Project Timeline
     .content-column
-      .small-12.columns
-        ul.timeline-slim
-          li.work.timeline-row
-            .relative
-              span.circle
-            .timeline-content
-              p = t ".timeline.spec"
-          li.work.timeline-row
-            .relative
-              span.circle
-            .timeline-content
-              p = t ".timeline.begin"
-          li.work.timeline-row
-            .relative
-              span.circle
-            .timeline-content
-              p = t ".timeline.midterm"
-          li.work.timeline-row
-            .relative
-              span.circle
-            .timeline-content
-              p = t ".timeline.user_iteration"
-          li.work.timeline-row
-            .relative
-              span.circle
-            .timeline-content
-              p = t ".timeline.deliver"
+      .row
+        .small-12.columns
+          ul.timeline-slim
+            li.work.timeline-row
+              .relative
+                span.circle
+              .timeline-content
+                p = t ".timeline.spec"
+            li.work.timeline-row
+              .relative
+                span.circle
+              .timeline-content
+                p = t ".timeline.begin"
+            li.work.timeline-row
+              .relative
+                span.circle
+              .timeline-content
+                p = t ".timeline.midterm"
+            li.work.timeline-row
+              .relative
+                span.circle
+              .timeline-content
+                p = t ".timeline.user_iteration"
+            li.work.timeline-row
+              .relative
+                span.circle
+              .timeline-content
+                p = t ".timeline.deliver"
   .spacer-large
   .row
     .title-column
       h1#previous_work Previous Work
     .content-column
-      .small-12.small-centered.columns.center
-        .spacer-small
-        ul.small-block-grid-3
-          li
-            = image_tag "apply/nonprofits/elevate-africa.png"
-          li
-            = image_tag "apply/nonprofits/food-shift.png"
-          li
-            = image_tag "apply/nonprofits/worldreader.png"
-        = link_to "See More", projects_path, class: "button"
+      .row
+        .small-12.small-centered.columns.center
+          .spacer-small
+          ul.small-block-grid-3
+            li
+              = image_tag "apply/nonprofits/elevate-africa.png"
+            li
+              = image_tag "apply/nonprofits/food-shift.png"
+            li
+              = image_tag "apply/nonprofits/worldreader.png"
+          = link_to "See More", projects_path, class: "button"
   .spacer-large
   .row
     .title-column
       h1#faq FAQ
     .content-column
-      #faq.small-12.columns
-        .drawer
-          h5
-            = t ".faq.q1.question"
-            span<
-              | (+)
-          p = t ".faq.q1.answer"
-        .drawer
-          h5
-            = t ".faq.q2.question"
-            span<
-              | (+)
-          p = t ".faq.q2.answer"
-        .drawer
-          h5
-            = t ".faq.q3.question"
-            span<
-              | (+)
-          p = t ".faq.q3.answer"
+      .row
+        #faq.small-12.columns
+          .drawer
+            h5
+              = t ".faq.q1.question"
+              span<
+                | (+)
+            p = t ".faq.q1.answer"
+          .drawer
+            h5
+              = t ".faq.q2.question"
+              span<
+                | (+)
+            p = t ".faq.q2.answer"
+          .drawer
+            h5
+              = t ".faq.q3.question"
+              span<
+                | (+)
+            p = t ".faq.q3.answer"
   .spacer-small

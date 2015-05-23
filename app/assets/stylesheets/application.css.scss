@@ -1,28 +1,24 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- */
-
+// Vendor
 @import "vendor/normalize";
 @import "bourbon";
 @import "neat";
 @import "sky-labels";
 @import "vendor/base/base";
 @import "vendor/grid";
-@import 'vendor/toastr';
+@import "vendor/toastr";
+@import "vendor/hint";
 @import "vendor/timeline";
 
+// Shared
 @import "shared/general";
 @import "shared/flash";
 @import "shared/header";
 @import "shared/tables";
 @import "shared/footer";
+@import "shared/icons";
 @import "shared/tooltips";
 
+// Page specific
 @import "pages/home";
 @import "pages/about";
 @import "pages/sponsors";

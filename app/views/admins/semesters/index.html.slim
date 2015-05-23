@@ -1,6 +1,6 @@
 .banner
   .banner-text
-    h1.h0 Semesters
+    h1 Semesters
     p.subtitle Cheers to more Blueprint semesters!
 .row
   .small-12.small-centered.columns
@@ -15,10 +15,8 @@
       tbody
         - @semesters.each do |semester|
           tr
-            td
-              = semester.season
-            td
-              = semester.year
+            td = semester.season
+            td = semester.year
             td
               = link_to "", admin_semester_path(semester), class: 'fa fa-eye button'
               = link_to "", edit_admin_semester_path(semester), class: 'fa fa-pencil button', id: dom_id(semester, :edit)

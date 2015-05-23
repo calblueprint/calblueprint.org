@@ -8,13 +8,11 @@
   = link_to "About", about_path, class: "header-tab"
   - if current_admin
     .header-tab.header-admin
+      a.reveal href="javascript:void(0)" Admin
       ul
-        li
-          a[href="#"]
-            | Admin
-          ul
-            = link_to "Applications", admin_student_applications_path, class: "header-tab"
-            = link_to "Members", admin_members_path, class: "header-tab"
-            = link_to "Semesters", admin_semesters_path, class: "header-tab"
-            = link_to "Settings", admin_settings_path, class: "header-tab"
+        = link_to "NPO Applications", admin_nonprofit_applications_path, class: "header-tab"
+        = link_to "Student Applications", admin_student_applications_path, class: "header-tab"
+        = link_to "Members", admin_members_path, class: "header-tab"
+        = link_to "Semesters", admin_semesters_path, class: "header-tab"
+        = link_to "Settings", admin_settings_path, class: "header-tab"
   = link_to "", root_path, class: "header-logo"

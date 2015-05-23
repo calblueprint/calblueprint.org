@@ -1,107 +1,129 @@
-/* GENERAL STYLE GUIDE: Use these sass variables for consistent style.
+// GENERAL STYLE GUIDE: Use these sass variables for consistent style.
 
-COLORS:
-$blue: #477DCA
-$dark-gray: #333
-$medium-gray: #999
-$light-gray: #DDD
-(Use #fff for white)
+// COLORS: see app/assets/stylesheets/vendor/base/_variables.scss
 
-FONTS:
-$header-font-family: 'Helvetica Neue', sans-serif
-$body-font: 'Open Sans', sans-serif
+// FONTS:
+// $header-font-family: 'Helvetica Neue', sans-serif
+// $body-font: 'Open Sans', sans-serif
 
-GENERAL COMMENTS:
-1) All content possible should be within the grid system. This means inside a column class that's inside a
-   row class. Very sparingly use content not inside the grid system, with the exception of banners and
-   spacers. Banners and spacers are detailed later in this file. However, of course there are a
-   few exceptions. Just try your best!
-2) Text in headlines and paragraphs should be mostly centered by using the center class when neccesary.
-   When writing the actual text, try to write it so that the middle part extends further than the top and
-   bottoms, like a barrel.
-3) Outside of banners, of which you should only be using one a page at most, images should have padding
-   between each other.
-4) For now let's stay away from JS and CSS transitions (except when used for something we've specifically
-   designated for animation). We'll add in effects later but it's important to have a solid layout first.
+// GENERAL COMMENTS:
+// 1) All content possible should be within the grid system. This means inside a column class that's inside a
+//    row class. Very sparingly use content not inside the grid system, with the exception of banners and
+//    spacers. Banners and spacers are detailed later in this file. However, of course there are a
+//    few exceptions. Just try your best!
+// 2) Text in headlines and paragraphs should be mostly centered by using the center class when neccesary.
+//    When writing the actual text, try to write it so that the middle part extends further than the top and
+//    bottoms, like a barrel.
+// 3) Outside of banners, of which you should only be using one a page at most, images should have padding
+//    between each other.
+// 4) For now let's stay away from JS and CSS transitions (except when used for something we've specifically
+//    designated for animation). We'll add in effects later but it's important to have a solid layout first.
 
-GRID SYSTEM:
-Grid: http://foundation.zurb.com/docs/components/grid.html
-Block Grid: http://foundation.zurb.com/docs/components/block_grid.html
-            (use for arranging multiple items evenly quickly)
-*/
+// GRID SYSTEM:
+// Grid: http://foundation.zurb.com/docs/components/grid.html
+// Block Grid: http://foundation.zurb.com/docs/components/block_grid.html
+//             (use for arranging multiple items evenly quickly)
 
-/* Resets default margin and padding */
+// Resets default margin and padding
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Removes Chrome's default blue outline on focus */
+// Removes Chrome's default blue outline on focus
 *:focus {
   outline: none;
 }
 
-/* Use the banner class for any banners (large screen-wide photography, illustration). Add an additional
-   id for more styling. Refer to #home-banner in home.scss for an example id styling. */
+// Use the banner class for any banners (large screen-wide photography, illustration). Add an additional
+// id for more styling. Refer to #home-banner in home.scss for an example id styling.
 .banner {
   width: 100%;
 }
 
-/* Use spacers to space your paragraphs and individual elements rather than <br> or css margins. Spacers
-   are divs with one of the following three classes. See home.html.erb for an example of spacer use. */
+// Use spacers to space your paragraphs and individual elements rather than <br> or css margins. Spacers
+// are divs with one of the following three classes. See home.html.erb for an example of spacer use.
 .spacer-small {
-  width: 100%;
   height: 30px;
+  width: 100%;
 }
+
 .spacer {
-  width: 100%;
   height: 75px;
-}
-.spacer-large {
   width: 100%;
+}
+
+.spacer-large {
   height: 150px;
+  width: 100%;
 }
 
-/* Use to make your text white when putting over dark, color, or photo backgrounds. */
+// Use to make your text white when putting over dark, color, or photo backgrounds.
 .white {
-  color: #fff;
+  color: $white;
 }
 
-/* Center your text inside an element */
+// Center your text inside an element
 .center {
   text-align: center;
 }
 
-/* An inner div as a dark overlay to make banners darker. You have to put this inside the banner as
-   if the banner was a wrapper. */
+// An inner div as a dark overlay to make banners darker. You have to put this inside the banner as
+// if the banner was a wrapper.
 .darken {
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.2);
-}
-
-/* A darker version of darken . */
-.blacken {
-  width: 100%;
   height: 100%;
+  width: 100%;
+}
+
+// A darker version of darken .
+.blacken {
   background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
 }
 
 
-/* If h1 isn't big enough to satisfy your needs, then use h0! Probably use for banners in
-   combination with the white class. */
+// If h1 isn't big enough to satisfy your needs, then use h0! Probably use for banners in
+// combination with the white class.
 .h0 {
-  text-align: center;
   font-size: 5em;
+  text-align: center;
 }
 
 .white-bg {
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 .gray-bg {
-  background-color: #ECECEC;
-  border-top: 1px solid #CCC;
+  background-color: $gray-background-color;
+  border-top: 1px solid $gray-background-border-color;
   z-index: -10;
 }
 
+// In a two column layout, left column has right-aligned text, right column has left-aligned text
+.two-col-container {
+  @include outer-container;
+}
+
+.two-col-left {
+  @include span-columns(12);
+
+  @include media($medium-screen) {
+    @include span-columns(4);
+    > * {
+      text-align: right;
+    }
+  }
+}
+
+.two-col-right {
+  @include span-columns(12);
+
+  @include media($medium-screen) {
+    @include span-columns(8);
+    > * {
+      text-align: left;
+    }
+  }
+}

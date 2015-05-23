@@ -1,37 +1,39 @@
+$sponsor-banner-bg: #0073B2;
+
 .sponsor-banner {
-  background-color: #0073B2;
-  color: white;
+  background-color: $sponsor-banner-bg;
+  color: $white;
   height: 300px;
 }
 
 .sponsor-banner-bottom {
   background-color: $light-gray;
-  color: black;
+  color: $black;
   height: 300px;
 }
 
-#sponsor-triple-top {
-}
+// #sponsor-triple-top {}
+
 #sponsor-triple-middle {
   background-color: $light-gray;
 }
-#sponsor-triple-bottom {
-}
+
+// #sponsor-triple-bottom {}
 
 .sponsor-asset {
-  width: 100px;
-  height: 100px;
   background-color: $medium-gray;
-  margin: auto;
   border-radius: 50%;
+  height: 100px;
+  margin: auto;
+  width: 100px;
 }
 
 .sponsor-triple-image {
-  width: 200px;
-  height: 200px;
   background-color: $medium-gray;
-  margin: 40px auto;
   border-radius: 50%;
+  height: 200px;
+  margin: 40px auto;
+  width: 200px;
 }
 
 .sponsor-triple-row-text {

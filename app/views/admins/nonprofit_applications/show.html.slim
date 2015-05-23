@@ -1,0 +1,13 @@
+.spacer-small
+.banner
+  .banner-text
+    h1 = @nonprofit_application.organization_name
+
+.spacer-small
+
+.row
+  .small-12.columns
+    - @nonprofit_application.display_attributes.each do |attribute|
+      = @nonprofit_application.attribute_html attribute
+
+.spacer

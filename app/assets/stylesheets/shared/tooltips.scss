@@ -1,15 +1,16 @@
-.tooltip-item {  
+.tooltip-item {
   $base-border-color: #dcdcdc !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-  $tooltip-background: #ffffff;
+  $tooltip-background: $white;
   $tooltip-border: transparent;
   $tooltip-color: $base-font-color;
   $tooltip-max-width: 16em;
   $tooltip-arrow-width: 8px;
-  $tooltip-shadow: 0 2px 2px #c0c0c0;
+  $tooltip-shadow-color: #c0c0c0;
+  $tooltip-shadow: 0 2px 2px $tooltip-shadow-color;
   $tooltip-distance-from-item: 5em;
   $tooltip-arrow-distance-from-box: -1.2em;
 
@@ -30,7 +31,7 @@
   .tooltip {
     @include position(absolute, null 0 $tooltip-distance-from-item 0);
     @include transition (all 0.2s ease-in-out);
-    background: #FFF;
+    background: $white;
     background-color: $tooltip-background;
     border-radius: $base-border-radius;
     box-shadow: $tooltip-shadow;
@@ -58,7 +59,7 @@
       border: $tooltip-arrow-width solid $tooltip-border;
       bottom: $tooltip-arrow-distance-from-box;
       color: $tooltip-background;
-      content: '▼';
+      content: "▼";
       font-size: 1.4em;
       margin-left: -60px;
       text-align: center;

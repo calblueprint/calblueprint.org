@@ -30,14 +30,20 @@ Rails.application.routes.draw do
   # Admin
   namespace :admins, as: :admin do
     resource :projects
+
     resources :student_applications, only: [:index] do
       collection { post :import }
     end
+
+    resources :nonprofit_applications, only: [:show, :index] do
+      collection { post :import }
+    end
+
     resources :members
     resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters
 
-    resources :final_decisions, shallow: true, only: [] do
+    resources :final_decisions, only: [] do
       member do
         post :approve
         post :reject

@@ -3,7 +3,7 @@ module DeviseSettings
 
   included do
     # Allow more params through devise
-    before_filter :configure_permitted_parameters, if: :devise_controller?
+    before_action :configure_permitted_parameters, if: :devise_controller?
     helper_method :current_user
     helper_method :destroy_user_session_path
   end

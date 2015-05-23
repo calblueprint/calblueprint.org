@@ -1,26 +1,32 @@
-$greyed-out-color: #777;
-
 .footer {
-  background-color: #333;
+  $greyed-out-color: #777;
+  $footer-bg-color: #333;
+  $footer-text-color: #CCC;
+  $footer-link-color: #AAA;
+  $footer-icon-color: #BBB;
+
+  background-color: $footer-bg-color;
   padding: 50px 10px 30px;
   text-align: left;
 
   h5 {
+    color: $white;
     text-align: left;
-    color: white;
   }
 
   p {
+    color: $footer-text-color;
     text-align: left;
-    color: #CCC;
   }
 
   li {
     padding: 5px;
+
     a {
-      color: #AAA;
+      color: $footer-link-color;
+
       &:hover {
-        color: #FFF;
+        color: $white;
       }
     }
   }
@@ -29,19 +35,20 @@ $greyed-out-color: #777;
     color: $greyed-out-color;
   }
 
-  .fa, a .fa {
-    color: #BBB;
+  .fa,
+  a .fa {
+    color: $footer-icon-color;
     font-size: 1.5em;
     margin: 10px;
     text-decoration: none;
 
     &:hover {
-      color: #FFF;
+      color: $white;
     }
   }
 
   .copyright {
-    color: #CCC;
+    color: $footer-text-color;
     text-align: left;
   }
 

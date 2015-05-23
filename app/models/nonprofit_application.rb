@@ -20,6 +20,7 @@
 #
 
 class NonprofitApplication < ActiveRecord::Base
+  POSSIBLE_DEVICES = ["Mobile phones", "Tablets", "Desktops"]
   serialize :devices
 
   belongs_to :nonprofit
@@ -30,11 +31,14 @@ class NonprofitApplication < ActiveRecord::Base
   validates :purpose, presence: true
   validates :history, presence: true
   validates :date_established, presence: true
-  validates :legal, presence: true
+  # legal is validated by database
   validates :short_summary, presence: true
   validates :goals, presence: true
   validates :key_features, presence: true
   validates :devices, presence: true
   validates :target_audience, presence: true
   validates :why, presence: true
+
+  delegate :email, to: :nonprofit
+  delegate :organization_name, to: :nonprofit
 end

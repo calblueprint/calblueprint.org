@@ -24,7 +24,9 @@ gem 'recipient_interceptor', '~> 0.1.2'
 gem 'enumerize'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk', '~> 1.5.7'
-gem "iconv", "~> 1.0.3"
+gem 'iconv', '~> 1.0.3'
+gem 'ffaker'
+gem 'draper'
 
 # Frontend
 gem 'sass-rails', '~> 5.0.3'
@@ -50,13 +52,14 @@ group :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'guard-livereload'
+  gem 'guard-rubocop'
+  gem 'letter_opener'
   gem 'quiet_assets'
+  gem 'rubocop'
+  gem 'scss_lint', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'rubocop'
-  gem 'guard-rubocop'
-  gem 'guard-livereload'
-  gem "letter_opener"
 end
 
 group :development, :test do
@@ -67,7 +70,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'i18n-tasks'
-  gem 'ffaker'
 end
 
 group :test do

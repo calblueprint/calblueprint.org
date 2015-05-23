@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.1.4'
+ruby '2.2.0'
 
 # Core gems
-gem 'rails', '4.1.7'
+gem 'rails', '4.2.0'
 gem 'thin', '~> 1.6.3'
 gem 'pg', '~> 0.17.1'
 gem 'figaro', '~> 1.0.0'
@@ -30,7 +30,7 @@ gem "iconv", "~> 1.0.3"
 gem 'sass-rails', '~> 5.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.1.2'
-gem 'slim-rails'
+gem 'slim-rails', '~> 3.0.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'autoprefixer-rails', '~> 3.1.2'
 

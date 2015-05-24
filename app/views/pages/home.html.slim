@@ -16,10 +16,12 @@
 .spacer
 .row
   .medium-5.small-12.columns.center
-    #smartphone-content-container
-      = image_tag("home/smartphone-content.png", id: "smartphone-content")
-    #smartphone-bg-container
-      = image_tag("home/smartphone-bg.png", id: "smartphone-bg")
+    .device.nexus5
+      .top-bar
+      .sleep
+      .volume
+      .camera
+      .screen = image_tag "home/smartphone-content.png"
   #our-projects.medium-6.medium-offset-1.small-12.columns.center
     .spacer-large
     h1 Our Projects

@@ -4,10 +4,18 @@
   @include background(linear-gradient(rgba(255, 255, 255, 0.3),
                       rgba(255, 255, 255, 0.3)),
                       image-url("about/about.jpg"));
-  background-position-y: 25%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 300px;
+
+  @include media($medium-screen) {
+    height: 400px;
+  }
+
+  @include media($large-screen) {
+    height: 500px;
+  }
 }
 
 @include keyframes(FadeIn) {
@@ -136,9 +144,36 @@
       opacity: 0;
     }
   }
+
+  @include media(max-width $large-screen) {
+    img {
+      left: 0;
+      position: relative;
+    }
+
+    .icon-bottom {
+      display: none;
+    }
+
+    img.icon-top:hover {
+      opacity: 1;
+    }
+  }
 }
 
-// NAVIGATION ARROWS
+// NAVIGATION ARROW
+.nav-arrow {
+  display: block;
+  padding-left: 40%;
+  padding-top: 45%;
+  position: relative;
+
+  @include media(380px) {
+    padding-left: 45%;
+    padding-top: 27%;
+  }
+}
+
 .nav-circlepop {
   position: relative;
 
@@ -273,42 +308,4 @@ figure.effect-sadie:hover figcaption::before ,
 figure.effect-sadie:hover .member-description {
   @include transform(translate3d(0, 0, 0));
   opacity: 1;
-}
-
-
-// SVG wrap
-.svg-wrap {
-  height: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 0;
-}
-
-.nav-arrow {
-  padding-left: 45%;
-  padding-top: 27%;
-  position: relative;
-}
-
-@media only screen and (max-width: 64.063em) {
-  .nav-arrow {
-    display: none;
-  }
-
-  figure.effect-sadie figcaption {
-    display: none;
-  }
-
-  .hover-icon img {
-    left: 0;
-    position: relative;
-  }
-
-  .hover-icon .icon-bottom {
-    display: none;
-  }
-
-  .hover-icon img.icon-top:hover {
-    opacity: 1;
-  }
 }

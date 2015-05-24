@@ -12,9 +12,9 @@ module Admins
     def destroy
       application = NonprofitApplication.find(params[:id])
       if application.delete
-        flash[:success] = t("Successfully deleted #{application.nonprofit.organization_name}'s application.")
+        flash[:success] = "Successfully deleted #{application.nonprofit.organization_name}'s application."
       else
-        flash[:error] = t("An error occured.")
+        flash[:error] = t("admin.nonprofit_applications.delete.error")
       end
       redirect_to admin_nonprofit_applications_path
     end

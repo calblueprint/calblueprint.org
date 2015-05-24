@@ -110,13 +110,10 @@ $small-screen: em(420);
 
 
 #our-projects {
-  text-align: left;
+  text-align: center;
 
-  p {
-    text-align: left;
-  }
-
+  p,
   h1 {
-    text-align: left;
+    text-align: center;
   }
 }

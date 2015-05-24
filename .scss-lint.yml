@@ -1,6 +1,6 @@
 # Used by Hound to lint added/changed files.
 scss_files: "**/*.scss"
-exclude: "app/assets/stylesheets/vendor/**/*"
+exclude: "app/assets/stylesheets/vendor/*"
 
 linters:
   # We should enable these two later.

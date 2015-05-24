@@ -141,11 +141,11 @@ linters:
   VariableForProperty:
     enabled: false
     properties: []
-  VendorPrefixes:
+  VendorPrefix:
     enabled: true
-    identifier_list: bourbon
+    identifier_list: ["bourbon"]
     include: []
-    exclude: []
+    exclude: ["-webkit-transform-style"]
   ZeroUnit:
     enabled: true
     severity: warning

@@ -135,16 +135,6 @@
 .hover-icon {
   position: relative;
 
-  img {
-    @include transition(opacity 0.3s ease-in-out);
-    left: 0;
-    position: absolute;
-
-    &.icon-top:hover {
-      opacity: 0;
-    }
-  }
-
   @include media(max-width $large-screen) {
     img {
       left: 0;
@@ -157,6 +147,16 @@
 
     img.icon-top:hover {
       opacity: 1;
+    }
+  }
+
+  img {
+    @include transition(opacity 0.3s ease-in-out);
+    left: 0;
+    position: absolute;
+
+    &.icon-top:hover {
+      opacity: 0;
     }
   }
 }

@@ -58,6 +58,19 @@
   width: 100%;
 }
 
+// Hide on different screen sizes
+.hide-on-medium-up {
+  @include media($medium-screen) {
+    display: none;
+  }
+}
+
+.hide-on-large-up {
+  @include media($large-screen) {
+    display: none;
+  }
+}
+
 // Use to make your text white when putting over dark, color, or photo backgrounds.
 .white {
   color: $white;
@@ -87,8 +100,7 @@
 // If h1 isn't big enough to satisfy your needs, then use h0! Probably use for banners in
 // combination with the white class.
 .h0 {
-  font-size: 5em;
-  text-align: center;
+  font-size: $h0-font-size;
 }
 
 .white-bg {

@@ -80,43 +80,11 @@ $small-screen: em(420);
   }
 }
 
-#smartphone-bg-container {
-  bottom: 0;
-  position: relative;
-  z-index: 2;
-}
-
-#smartphone-bg {
-  height: auto;
-  max-width: $laptop-width;
-  width: 100%;
-}
-
-#smartphone-content-container {
-  bottom: 0;
-  padding-bottom: 18%;
-  padding-right: $gutter;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  z-index: 0;
-}
-
-#smartphone-content {
-  height: auto;
-  max-width: 795px;
-  width: 71%;
-}
-
-
 #our-projects {
-  text-align: left;
+  text-align: center;
 
-  p {
-    text-align: left;
-  }
-
+  p,
   h1 {
-    text-align: left;
+    text-align: center;
   }
 }

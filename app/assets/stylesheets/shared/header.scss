@@ -256,7 +256,8 @@ header.navigation {
   }
 
   .apply-button {
-    @include button(flat, $action-color);
+    @extend .button;
+    border-radius: 3px;
     display: inline;
     float: right;
     font-weight: normal;

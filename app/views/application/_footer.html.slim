@@ -36,7 +36,8 @@
           li = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank"
           li = link_to "Projects", projects_path
           li = link_to "About", about_path
-    .large-4.medium-6.end.small-12.columns[style="text-align:right;"]
+    .large-4.medium-6.end.small-12.columns.footer-form
+      .spacer-small.hide-on-medium-up
       form
         .newsletter-form.tooltip-item
           input[type="text" placeholder="Email Address" disabled]

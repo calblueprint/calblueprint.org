@@ -17,9 +17,9 @@ FactoryGirl.define do
       timezone(-8)
       locale "en_US"
       verified true
-      updated_time { SecureRandom.random_number(1.month).seconds.ago }
+      updated_time { SecureRandom.random_number(1.month.to_bn).seconds.ago }
       token { SecureRandom.urlsafe_base64(100).delete("-_").first(100) }
-      expires_at { SecureRandom.random_number(1.month).seconds.from_now }
+      expires_at { SecureRandom.random_number(1.month.to_bn).seconds.from_now }
     end
 
     provider :facebook

@@ -16,7 +16,7 @@ module Admins
       else
         flash[:error] = t("An error occured.")
       end
-      redirect_to :index
+      redirect_to admin_nonprofit_applications_path
     end
   end
 end

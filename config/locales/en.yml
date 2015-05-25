@@ -202,7 +202,7 @@ en:
     nonprofit_applications:
       index:
         banner: NPO Applications
-      delete:
+      destroy:
         error: An error occured while deleting the application.
 
     semesters:

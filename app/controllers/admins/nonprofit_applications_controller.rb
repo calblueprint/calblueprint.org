@@ -14,7 +14,7 @@ module Admins
       if application.delete
         flash[:success] = "Successfully deleted #{application.nonprofit.organization_name}'s application."
       else
-        flash[:error] = t("admin.nonprofit_applications.delete.error")
+        flash[:error] = t("admins.nonprofit_applications.destroy.error")
       end
       redirect_to admin_nonprofit_applications_path
     end

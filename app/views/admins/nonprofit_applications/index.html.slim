@@ -23,7 +23,9 @@
               = link_to [:admin, app], class: "icon hint--top", data: { hint: "View" } do
                 = fa_icon "eye"
             td
-              = link_to [:admin, app], class: "icon hint--top", data: { hint: "Delete" }, method: :delete do
+              = link_to [:admin, app], class: "icon hint--top", data: { hint: "Delete",
+                                       confirm: "Are you sure you want to delete #{app.organization_name}'s app?"  },
+                                       method: :delete do
                 = fa_icon "trash"
 
 .spacer

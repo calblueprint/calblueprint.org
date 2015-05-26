@@ -31,6 +31,7 @@ RSpec.describe NonprofitApplication, type: :model do
   it { should validate_presence_of :history }
   it { should validate_presence_of :date_established }
   it { should validate_presence_of :short_summary }
+  it { should validate_length_of(:short_summary).is_at_most(255) }
   it { should validate_presence_of :goals }
   it { should validate_presence_of :key_features }
   it { should validate_presence_of :devices }

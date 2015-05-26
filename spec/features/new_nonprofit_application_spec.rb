@@ -56,4 +56,13 @@ RSpec.describe "Nonprofit Application Form" do
       expect { submit_form }.to change { ActionMailer::Base.deliveries.count }.by(1)
     end
   end
+
+  describe "filling out form with too long of a summary" do
+    it "creates an error about length" do
+      fill_in_form
+      fill_in "nonprofit_application_short_summary", with: Array.new(256) { rand(36).to_s(36) }.join
+      submit_form
+      expect(page).to have_content "is too long"
+    end
+  end
 end

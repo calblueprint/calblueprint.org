@@ -204,6 +204,7 @@ en:
         banner: NPO Applications
       destroy:
         error: An error occured while deleting the application.
+        success: "Successfully deleted %{organization_name}'s application."
 
     semesters:
       destroy:

@@ -35,7 +35,7 @@ Rails.application.routes.draw do
       collection { post :import }
     end
 
-    resources :nonprofit_applications, only: [:show, :index] do
+    resources :nonprofit_applications, only: [:show, :index, :destroy] do
       collection { post :import }
     end
 

@@ -202,6 +202,10 @@ en:
     nonprofit_applications:
       index:
         banner: NPO Applications
+      destroy:
+        error: An error occured while deleting the application.
+        success: "Successfully deleted %{organization_name}'s application."
+
     semesters:
       destroy:
         error: Cannot delete semester if the semester has applications or projects, or if there is only one semester left. Please reassign applications and projects before deleting this semester.

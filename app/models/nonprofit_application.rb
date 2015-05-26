@@ -32,7 +32,7 @@ class NonprofitApplication < ActiveRecord::Base
   validates :history, presence: true
   validates :date_established, presence: true
   # legal is validated by database
-  validates :short_summary, presence: true
+  validates :short_summary, presence: true, length: { maximum: 255 }
   validates :goals, presence: true
   validates :key_features, presence: true
   validates :devices, presence: true

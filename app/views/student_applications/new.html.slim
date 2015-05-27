@@ -1,12 +1,9 @@
 .gray-bg
-  .banner.apply-students-banner
+  .banner.apply-banner
     .darken
       .spacer
       .banner-text
-        h1
-          | Hey 
-          = current_user.first_name
-          | ,
+        h1 Hey #{current_user.first_name},
         p.subtitle
           = t '.banner'
   .apply-info
@@ -16,7 +13,7 @@
         p.apply-info-section-text
           = t '.apps_due'
           br
-          |  September 4th, 2015, 11:59PM 
+          |  September 4th, 2015, 11:59PM
       .apply-info-section
         .problem-icon
         p.apply-info-section-text

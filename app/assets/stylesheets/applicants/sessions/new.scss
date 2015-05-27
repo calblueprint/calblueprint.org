@@ -1,0 +1,32 @@
+.authorize-icon {
+  font-size: 3em;
+  position: absolute;
+}
+
+.fb-authorize-icon {
+  bottom: 156px;
+  left: 39px;
+}
+
+.google-authorize-icon {
+  bottom: 68px;
+  left: 39px;
+}
+
+.fb-authorize-button {
+  background: $facebook-blue;
+  width: 100%;
+}
+
+.fb-authorize-button:hover {
+  background: $facebook-hover;
+}
+
+.google-authorize-button {
+  background: $google-red;
+  width: 100%;
+}
+
+.google-authorize-button:hover {
+  background: $google-hover;
+}

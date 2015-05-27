@@ -23,7 +23,7 @@ en:
           organization’s key accomplishments.
         date_established: When was your organization established?
         legal: Is your organization a 501(c)3?
-        short_summary: Give us a two sentence summary of your project.
+        short_summary: Give us a two sentence summary of your project. (255 characters max)
         goals: What are the goals of this project, and what problems does it address?
         key_features: >
           What are some of the key features of this project,

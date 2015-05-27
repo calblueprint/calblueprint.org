@@ -51,72 +51,6 @@
     background-size: cover;
   }
 
-  .gear-img {
-    @include transform(scale(0.6, 0.6));
-
-    background: image-url("apply/gears.svg");
-    background-size: cover;
-    bottom: -280px;
-    height: 779px;
-    left: -500px;
-    position: absolute;
-    width: 600px;
-  }
-
-  .gear-img-small {
-    @include transform(scale(0.5, 0.5));
-
-    background: image-url("apply/gears.svg");
-    background-size: cover;
-    bottom: -305px;
-    height: 779px;
-    left: -525px;
-    position: absolute;
-    width: 600px;
-    z-index: -1;
-  }
-
-  .authorize-icon {
-    font-size: 3em;
-    position: absolute;
-  }
-
-  .fb-authorize-icon {
-    bottom: 156px;
-    left: 39px;
-  }
-
-  .google-authorize-icon {
-    bottom: 68px;
-    left: 39px;
-  }
-
-  .fb-authorize-button {
-    background: $facebook-blue;
-    width: 100%;
-  }
-
-  .fb-authorize-button:hover {
-    background: $facebook-hover;
-  }
-
-  .google-authorize-button {
-    background: $google-red;
-    width: 100%;
-  }
-
-  .google-authorize-button:hover {
-    background: $google-hover;
-  }
-
-  label.remember-me {
-    color: $medium-gray;
-  }
-
-  .login-button {
-    width: 100%;
-  }
-
   .students-bg {
     @include background-image(
       linear-gradient(
@@ -286,59 +220,6 @@
   .white-bg {
     background-color: $white;
   }
-
-  // Student Application Page CSS
-  .apply-students-banner {
-    background-image: image-url("apply/students/banner.png");
-    background-size: cover;
-    color: $white;
-    height: 260px;
-  }
-
-  .apply-info {
-    background-color: $white;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-color: $light-gray;
-    border-radius: 0 2px 2px 0;
-    border-right-style: solid;
-    border-right-width: 1px;
-    height: 100%;
-  }
-
-  .apply-info-section {
-    @extend .columns;
-    @extend .small-12;
-    @extend .medium-6;
-    @extend .large-6;
-
-    .apply-info-section-icon {
-      background-size: cover;
-      height: 32px;
-      margin: 24px auto 12px;
-      width: 32px;
-    }
-
-    .apply-info-section-text {
-      color: $dark-gray;
-      font-size: 16px;
-      line-height: 20px;
-      margin: 16px auto 52px;
-      text-align: center;
-      width: 80%;
-    }
-
-    .problem-icon {
-      @extend .apply-info-section-icon;
-      background-image: image-url("projects/problem.png");
-    }
-
-    .calendar-icon {
-      @extend .apply-info-section-icon;
-      background-image: image-url("apply/students/calendar.png");
-    }
-  }
-
 
   .control-label {
     color: $black;

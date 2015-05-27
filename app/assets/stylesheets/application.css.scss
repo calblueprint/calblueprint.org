@@ -18,6 +18,7 @@
 @import "shared/footer";
 @import "shared/icons";
 @import "shared/tooltips";
+@import "shared/gear-img";
 
 // Page specific
 @import "pages/home";
@@ -25,5 +26,7 @@
 @import "pages/sponsors";
 @import "contact_forms/new";
 @import "apply/apply";
+@import "apply/new_application";
+@import "applicants/sessions/new";
 @import "projects/index";
 @import "nonprofit_applications/form";

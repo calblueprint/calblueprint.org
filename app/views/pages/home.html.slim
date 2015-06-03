@@ -36,5 +36,9 @@
       p = t ".get_involved"
       = link_to "For Nonprofits", nonprofits_apply_path, class: "button"
       | &nbsp;
-      = link_to "For Students", students_apply_path, class: "button"
+      div.tooltip-item style="position:relative; width:auto; display:inline-block;"
+        button[disabled] For Students
+        div.tooltip
+          p Applications opening soon! Like our #{link_to "Facebook page", SocialMediaUrls::FACEBOOK, target: "_blank"} to stay up to date.
+      / = link_to "For Students", students_apply_path, class: "button"
   .spacer-large

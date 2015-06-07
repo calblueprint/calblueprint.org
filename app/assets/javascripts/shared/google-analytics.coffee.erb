@@ -2,7 +2,7 @@ class @GoogleAnalytics
 
   @load: ->
     window._gaq = []
-    window._gaq.push ["_setAccount", window._gak]
+    window._gaq.push ["_setAccount",@getGAKey()]
 
     # Create a script element and insert it in the DOM
     ga = document.createElement("script")
@@ -26,6 +26,7 @@ class @GoogleAnalytics
       GoogleAnalytics.trackPageview()
 
   @trackPageview: (url) ->
+    console.log(@getGAKey())
     unless GoogleAnalytics.isLocalRequest()
       if url
         window._gaq.push ["_trackPageview", url]
@@ -38,5 +39,8 @@ class @GoogleAnalytics
 
   @documentDomainIncludes: (str) ->
     document.domain.indexOf(str) isnt -1
+
+  @getGAKey: ->
+    "<%= ENV["GA_KEY"] %>"
 
 GoogleAnalytics.load()

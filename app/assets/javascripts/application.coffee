@@ -16,4 +16,5 @@
 #= require turbolinks
 #= require sky-labels
 #= require shared/utilities
+#= require shared/google-analytics
 #= require_tree .

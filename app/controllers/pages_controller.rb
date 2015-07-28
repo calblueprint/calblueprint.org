@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    @members = Member.all.sort_by{ |member| member.member_role}
+    @members = Member.all.sort_by { |member| member.member_role }
   end
 
   def sponsors

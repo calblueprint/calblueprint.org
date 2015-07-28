@@ -2,7 +2,6 @@
 president: &president 
   role: "President"
 
-
 internal: &internal 
   role: "Internal VP"
 
@@ -53,7 +52,6 @@ vivek_raghuran:
   email: 'vv9295@yahoo.com'
   <<: *external
 
-
 quinton_dang:
   first_name: 'Quinton'
   last_name: 'Dang'
@@ -71,7 +69,6 @@ nishant_desai:
   last_name: 'Desai'
   email: 'nish.sdesai@gmail.com'
   <<: *projects
-
 
 # External Team 
 
@@ -101,16 +98,13 @@ warren_shen:
   email: 'warrenzshen@gmail.com'
   <<: *leader
 
-
 jordeen_chang:
   first_name: 'Jordeen'
   last_name: 'Chang'
   email: 'jordeenchang@gmail.com'
   <<: *leader 
 
-
 # Developers  
-
 
 sam_lau:
   first_name: 'Sam'
@@ -118,20 +112,17 @@ sam_lau:
   email: 'samlau95@gmail.com'
   <<: *developer
 
-
 eric_shen:
   first_name: 'Eric'
   last_name: 'Shen'
   email: 'email.ericshen@gmail.com'
   <<: *developer
 
-
 max_wolffe:
   first_name: 'Max'
   last_name: 'Wolffe'
   email: 'max.alan.wolffe@gmail.com'
   <<: *developer 
-
 
 sameera_vemulapalli:
   first_name: 'Sameera'
@@ -145,8 +136,6 @@ ethan_chiou:
   email: 'nahte.uoihc@gmail.com'
   <<: *developer 
 
-
-
 andy_qin:
   first_name: 'Andy'
   last_name: 'Qin'
@@ -154,7 +143,6 @@ andy_qin:
   <<: *developer
 
 # Alumni 
-
 
 alice_oh:
   first_name: 'Alice'
@@ -216,11 +204,8 @@ elizabeth_lin:
   email: 'elizabethylin@gmail.com'
   <<: *alumnus
 
-
 jason_won:
   first_name: 'Jason'
   last_name: 'Won'
   email: 'jason.j.won@gmail.com'
   <<: *alumnus
-
-

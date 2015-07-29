@@ -60,20 +60,15 @@ end
 
 def seed_roles_and_members
   roles_hash = {}
-  member_info = YAML::load_file(File.join(__dir__, "members.yml"))
-  member_info.each do |k, v|
-  member_info.values.each do |member_attributes|
-    if member_attributes.has_key? 'first_name'
-      member = Member.find_or_create_by! email: member_attributes["email"]
-      member_role = member_attributes["role"]
-      if !roles_hash.has_key? member_role
-        roles_hash[member_role] = MemberRole.find_or_create_by! role: member_role
-      end
-      member_role = roles_hash[member_role]
-      member.update(member_role: member_role)
-    end 
-  end
+  members_data = YAML::load_file(File.join(__dir__, "members.yml"))
+  members_data.each do |_, member_data|
+    role = member_data.delete "role"
+    Member.find_or_create_by!( member_data.merge member_role: MemberRole.find_by(role: role) )
+  end 
 end
+
+
+
 
 seed_admins
 seed_semesters

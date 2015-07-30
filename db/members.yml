@@ -1,211 +1,214 @@
 # Roles
-president: &president 
-  role: "President"
+roles:
+  president: &president
+    role: "President"
 
-internal: &internal 
-  role: "Internal VP"
+  internal: &internal
+    role: "Internal VP"
 
-external: &external 
-  role: "External VP" 
+  external: &external
+    role: "External VP"
 
-tech: &tech 
-  role: "VP of Technology" 
+  tech: &tech
+    role: "VP of Technology"
 
-projects: &projects 
-  role: "VP of Projects"
+  projects: &projects
+    role: "VP of Projects"
 
-leader: &leader 
-  role: "Project Leader"
+  leader: &leader
+    role: "Project Leader"
 
-developer: &developer
-  role: "Project Developer"
+  developer: &developer
+    role: "Project Developer"
 
-alumni_relations: &alumni_relations 
-  role: "Alumni Relations Director"
+  alumni_relations: &alumni_relations
+    role: "Alumni Relations Director"
 
-community: &community
-  role: "Community Outreach Director"
+  community: &community
+    role: "Community Outreach Director"
 
-intersocietal: &intersocietal
-  role: "Intersocietal Relations Director"
+  intersocietal: &intersocietal
+    role: "Intersocietal Relations Director"
 
-media: &media 
-  role: "Media Director"
+  media: &media
+    role: "Media Director"
 
-corporate: &corporate 
-  role: "Corporate Relations Director"
+  corporate: &corporate
+    role: "Corporate Relations Director"
 
-alumnus: &alumnus 
-  role: "Alumnus" 
+  alumnus: &alumnus
+    role: "Alumnus"
 
-# E-Team 
+members:
 
-howard_chen:
-  first_name: 'Howard'
-  last_name: 'Chen'
-  email: 'howardxchen@gmail.com'
-  <<: *president 
+  # E-Team
 
-vivek_raghuran:
-  first_name: 'Vivek'
-  last_name: 'Raghuram'
-  email: 'vv9295@yahoo.com'
-  <<: *external
+  howard_chen:
+    first_name: 'Howard'
+    last_name: 'Chen'
+    email: 'howardxchen@gmail.com'
+    <<: *president
 
-quinton_dang:
-  first_name: 'Quinton'
-  last_name: 'Dang'
-  email: 'quintonddang@gmail.com'
-  <<: *internal 
+  vivek_raghuran:
+    first_name: 'Vivek'
+    last_name: 'Raghuram'
+    email: 'vv9295@yahoo.com'
+    <<: *external
+
+  quinton_dang:
+    first_name: 'Quinton'
+    last_name: 'Dang'
+    email: 'quintonddang@gmail.com'
+    <<: *internal
 
   aleks_kamko:
-  first_name: 'Aleks'
-  last_name: 'Kamko'
-  email: 'aykamko@gmail.com'
-  <<: *tech
+    first_name: 'Aleks'
+    last_name: 'Kamko'
+    email: 'aykamko@gmail.com'
+    <<: *tech
 
-nishant_desai:
-  first_name: 'Nishant'
-  last_name: 'Desai'
-  email: 'nish.sdesai@gmail.com'
-  <<: *projects
+  nishant_desai:
+    first_name: 'Nishant'
+    last_name: 'Desai'
+    email: 'nish.sdesai@gmail.com'
+    <<: *projects
 
-# External Team 
+  # External Team
 
-soo_song:
-  first_name: 'Soo'
-  last_name: 'Song'
-  email: 'soosong@berkeley.edu'
-  <<: *media 
+  soo_song:
+    first_name: 'Soo'
+    last_name: 'Song'
+    email: 'soosong@berkeley.edu'
+    <<: *media
 
-# Project Leaders 
+  # Project Leaders
 
-nikhil_narayen:
-  first_name: 'Nikhil'
-  last_name: 'Narayen'
-  email: 'nikhil.narayen@gmail.com'
-  <<: *leader
+  nikhil_narayen:
+    first_name: 'Nikhil'
+    last_name: 'Narayen'
+    email: 'nikhil.narayen@gmail.com'
+    <<: *leader
 
-daniel_li:
-  first_name: 'Daniel'
-  last_name: 'Li'
-  email: 'danielmxli@gmail.com'
-  <<: *leader
+  daniel_li:
+    first_name: 'Daniel'
+    last_name: 'Li'
+    email: 'danielmxli@gmail.com'
+    <<: *leader
 
-warren_shen:
-  first_name: 'Warren'
-  last_name: 'Shen'
-  email: 'warrenzshen@gmail.com'
-  <<: *leader
+  warren_shen:
+    first_name: 'Warren'
+    last_name: 'Shen'
+    email: 'warrenzshen@gmail.com'
+    <<: *leader
 
-jordeen_chang:
-  first_name: 'Jordeen'
-  last_name: 'Chang'
-  email: 'jordeenchang@gmail.com'
-  <<: *leader 
+  jordeen_chang:
+    first_name: 'Jordeen'
+    last_name: 'Chang'
+    email: 'jordeenchang@gmail.com'
+    <<: *leader
 
-# Developers  
+  # Developers
 
-sam_lau:
-  first_name: 'Sam'
-  last_name: 'Lau'
-  email: 'samlau95@gmail.com'
-  <<: *developer
+  sam_lau:
+    first_name: 'Sam'
+    last_name: 'Lau'
+    email: 'samlau95@gmail.com'
+    <<: *developer
 
-eric_shen:
-  first_name: 'Eric'
-  last_name: 'Shen'
-  email: 'email.ericshen@gmail.com'
-  <<: *developer
+  eric_shen:
+    first_name: 'Eric'
+    last_name: 'Shen'
+    email: 'email.ericshen@gmail.com'
+    <<: *developer
 
-max_wolffe:
-  first_name: 'Max'
-  last_name: 'Wolffe'
-  email: 'max.alan.wolffe@gmail.com'
-  <<: *developer 
+  max_wolffe:
+    first_name: 'Max'
+    last_name: 'Wolffe'
+    email: 'max.alan.wolffe@gmail.com'
+    <<: *developer
 
-sameera_vemulapalli:
-  first_name: 'Sameera'
-  last_name: 'Vemulapalli'
-  email: 'sameera.vemulapalli@gmail.com'
-  <<: *developer
+  sameera_vemulapalli:
+    first_name: 'Sameera'
+    last_name: 'Vemulapalli'
+    email: 'sameera.vemulapalli@gmail.com'
+    <<: *developer
 
-ethan_chiou:
-  first_name: 'Ethan'
-  last_name: 'Chiou'
-  email: 'nahte.uoihc@gmail.com'
-  <<: *developer 
+  ethan_chiou:
+    first_name: 'Ethan'
+    last_name: 'Chiou'
+    email: 'nahte.uoihc@gmail.com'
+    <<: *developer
 
-andy_qin:
-  first_name: 'Andy'
-  last_name: 'Qin'
-  email: 'andrewlqin@gmail.com'
-  <<: *developer
+  andy_qin:
+    first_name: 'Andy'
+    last_name: 'Qin'
+    email: 'andrewlqin@gmail.com'
+    <<: *developer
 
-# Alumni 
+  # Alumni
 
-alice_oh:
-  first_name: 'Alice'
-  last_name: 'Oh'
-  email: 'missonederland@gmail.com'
-  <<: *alumnus
+  alice_oh:
+    first_name: 'Alice'
+    last_name: 'Oh'
+    email: 'missonederland@gmail.com'
+    <<: *alumnus
 
-jessica_lin:
-  first_name: "Jessica"
-  last_name: "Lin"
-  email: "heyjaylin@gmail.com"
-  <<: *alumnus
+  jessica_lin:
+    first_name: "Jessica"
+    last_name: "Lin"
+    email: "heyjaylin@gmail.com"
+    <<: *alumnus
 
-byron_zhang:
-  first_name: 'Byron'
-  last_name: 'Zhang'
-  email: 'byron.yi.zhang@gmail.com'
-  <<: *alumnus 
+  byron_zhang:
+    first_name: 'Byron'
+    last_name: 'Zhang'
+    email: 'byron.yi.zhang@gmail.com'
+    <<: *alumnus
 
-harrison_tsai:
-  first_name: 'Harrison'
-  last_name: 'Tsai'
-  email: 'harrisontsai0123@gmail.com'
-  <<: *alumnus 
+  harrison_tsai:
+    first_name: 'Harrison'
+    last_name: 'Tsai'
+    email: 'harrisontsai0123@gmail.com'
+    <<: *alumnus
 
-erica_yin:
-  first_name: 'Erica'
-  last_name: 'Yin'
-  email: 'eriicaericaerica@gmail.com'
-  <<: *alumnus 
+  erica_yin:
+    first_name: 'Erica'
+    last_name: 'Yin'
+    email: 'eriicaericaerica@gmail.com'
+    <<: *alumnus
 
-kevin_shieh:
-  first_name: 'Kevin'
-  last_name: 'Shieh'
-  email: 'kevshieh@gmail.com'
-  <<: *alumnus
+  kevin_shieh:
+    first_name: 'Kevin'
+    last_name: 'Shieh'
+    email: 'kevshieh@gmail.com'
+    <<: *alumnus
 
-will_tang:
-  first_name: 'Will'
-  last_name: 'Tang'
-  email: 'williamctang93@gmail.com'
-  <<: *alumnus
+  will_tang:
+    first_name: 'Will'
+    last_name: 'Tang'
+    email: 'williamctang93@gmail.com'
+    <<: *alumnus
 
-varun_rau:
-  first_name: 'Varun'
-  last_name: 'Rau'
-  email: 'varun@berkeley.edu'
-  <<: *alumnus
+  varun_rau:
+    first_name: 'Varun'
+    last_name: 'Rau'
+    email: 'varun@berkeley.edu'
+    <<: *alumnus
 
-atsunori_kakitani:
-  first_name: 'Atsunori'
-  last_name: 'Kakitani'
-  email: 'atsunori.kakitani@gmail.com'
-  <<: *alumnus 
+  atsunori_kakitani:
+    first_name: 'Atsunori'
+    last_name: 'Kakitani'
+    email: 'atsunori.kakitani@gmail.com'
+    <<: *alumnus
 
-elizabeth_lin:
-  first_name: 'Elizabeth'
-  last_name: 'Lin'
-  email: 'elizabethylin@gmail.com'
-  <<: *alumnus
+  elizabeth_lin:
+    first_name: 'Elizabeth'
+    last_name: 'Lin'
+    email: 'elizabethylin@gmail.com'
+    <<: *alumnus
 
-jason_won:
-  first_name: 'Jason'
-  last_name: 'Won'
-  email: 'jason.j.won@gmail.com'
-  <<: *alumnus
+  jason_won:
+    first_name: 'Jason'
+    last_name: 'Won'
+    email: 'jason.j.won@gmail.com'
+    <<: *alumnus

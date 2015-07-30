@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admins", force: true do |t|
+  create_table "admins", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "first_name"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
   add_index "admins", ["invited_by_id"], name: "index_admins_on_invited_by_id", using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
-  create_table "applicants", force: true do |t|
+  create_table "applicants", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
 
   add_index "applicants", ["email"], name: "index_applicants_on_email", unique: true, using: :btree
 
-  create_table "contact_forms", force: true do |t|
+  create_table "contact_forms", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
     t.text     "message"
   end
 
-  create_table "final_decisions", force: true do |t|
+  create_table "final_decisions", force: :cascade do |t|
     t.string   "decision"
     t.integer  "decisionable_id"
     t.string   "decisionable_type"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
 
   add_index "final_decisions", ["decisionable_id", "decisionable_type"], name: "index_final_decisions_on_decisionable_id_and_decisionable_type", using: :btree
 
-  create_table "identities", force: true do |t|
+  create_table "identities", force: :cascade do |t|
     t.integer  "applicant_id"
     t.string   "provider"
     t.string   "uid"
@@ -83,13 +83,13 @@ ActiveRecord::Schema.define(version: 20150505014507) do
 
   add_index "identities", ["applicant_id"], name: "index_identities_on_applicant_id", using: :btree
 
-  create_table "member_roles", force: true do |t|
+  create_table "member_roles", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "role"
   end
 
-  create_table "members", force: true do |t|
+  create_table "members", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "last_name"
@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
 
   add_index "members", ["member_role_id"], name: "index_members_on_member_role_id", using: :btree
 
-  create_table "nonprofit_applications", force: true do |t|
+  create_table "nonprofit_applications", force: :cascade do |t|
     t.integer  "nonprofit_id"
     t.integer  "semester_id"
     t.datetime "created_at"
@@ -117,7 +117,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
     t.text     "why"
   end
 
-  create_table "nonprofits", force: true do |t|
+  create_table "nonprofits", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -136,7 +136,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
   add_index "nonprofits", ["email"], name: "index_nonprofits_on_email", unique: true, using: :btree
   add_index "nonprofits", ["reset_password_token"], name: "index_nonprofits_on_reset_password_token", unique: true, using: :btree
 
-  create_table "projects", force: true do |t|
+  create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "short_summary"
     t.string   "overview"
@@ -150,14 +150,14 @@ ActiveRecord::Schema.define(version: 20150505014507) do
 
   add_index "projects", ["semester_id"], name: "index_projects_on_semester_id", using: :btree
 
-  create_table "semesters", force: true do |t|
+  create_table "semesters", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "season"
     t.string   "year"
   end
 
-  create_table "settings", force: true do |t|
+  create_table "settings", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "singleton_guard"
@@ -169,7 +169,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
   add_index "settings", ["current_semester_id"], name: "index_settings_on_current_semester_id", using: :btree
   add_index "settings", ["singleton_guard"], name: "index_settings_on_singleton_guard", unique: true, using: :btree
 
-  create_table "student_applications", force: true do |t|
+  create_table "student_applications", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "applicant_id"

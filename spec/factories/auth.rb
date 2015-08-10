@@ -8,7 +8,7 @@ FactoryGirl.define do
       name { "#{first_name} #{last_name}" }
       first_name "Joe"
       last_name "Bloggs"
-      link { "http://www.facebook.com/#{username}" }
+      link { "//www.facebook.com/#{username}" }
       username "jbloggs"
       location_id "123456789"
       location_name "Palo Alto, California"
@@ -32,7 +32,7 @@ FactoryGirl.define do
         name: name,
         first_name: first_name,
         last_name: last_name,
-        image: "http://graph.facebook.com/#{id}/picture?type=square",
+        image: "//graph.facebook.com/#{id}/picture?type=square",
         urls: { Facebook: link },
         location: location_name,
         verified: verified

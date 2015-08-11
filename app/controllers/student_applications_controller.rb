@@ -10,6 +10,7 @@ class StudentApplicationsController < ApplicationController
   def create
     @student_application = current_user.student_applications.build student_application_params
     if @student_application.save
+      SendStudentApplicationEmail.execute @student_application
       redirect_to students_apply_path, flash: { success: t('student_applications.create.success') }
     else
       render "new"

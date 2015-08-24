@@ -31,9 +31,9 @@ if ! [ -f config/database.yml ]; then
   tput sgr0
 else
   tput setaf 2
-  echo "Running rake db:reset"
+  echo "Running rake db:setup"
   tput sgr0
-  rake db:reset
+  rake db:setup
   tput setaf 2
   echo "Database set up!"
   tput sgr0

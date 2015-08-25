@@ -5,7 +5,7 @@ class StudentApplicationsController < ApplicationController
 
   def new
     @student_application = current_applicant.student_applications.build name: current_user.name,
-      email: current_user.email
+                                                                        email: current_user.email
   end
 
   def create

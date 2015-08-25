@@ -4,7 +4,8 @@ class StudentApplicationsController < ApplicationController
   before_action :verify_student_app_open
 
   def new
-    @student_application = current_applicant.student_applications.build
+    @student_application = current_applicant.student_applications.build name: current_user.name,
+      email: current_user.email
   end
 
   def create
@@ -18,7 +19,8 @@ class StudentApplicationsController < ApplicationController
 
   def student_application_params
     params.require(:student_application).permit(
-      :why_join, :resume, :phone, :year, :applicant_id, :semester_id).merge(
+      :why_join, :resume, :phone, :year, :applicant_id, :semester_id, :name, :email,
+      :available_for_retreat, :available_for_bp_games).merge(
         semester: @settings.current_semester
       )
   end

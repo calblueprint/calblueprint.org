@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505014507) do
+ActiveRecord::Schema.define(version: 20150825192509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -181,6 +181,10 @@ ActiveRecord::Schema.define(version: 20150505014507) do
     t.datetime "resume_updated_at"
     t.string   "year"
     t.string   "phone"
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "available_for_bp_games", default: false
+    t.boolean  "available_for_retreat",  default: false
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

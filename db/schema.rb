@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150505014507) do
     t.datetime "updated_at"
   end
 
-  add_index "final_decisions", ["decisionable_id", "decisionable_type"], name: "index_final_decisions_on_decisionable_id_and_decisionable_type", using: :btree
+  add_index "final_decisions", ["decisionable_type", "decisionable_id"], name: "index_final_decisions_on_decisionable_type_and_decisionable_id", using: :btree
 
   create_table "identities", force: :cascade do |t|
     t.integer  "applicant_id"

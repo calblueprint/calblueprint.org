@@ -19,6 +19,8 @@ FactoryGirl.define do
   factory :student_application do
     applicant
     semester
+    name { applicant.name }
+    email { applicant.email }
     why_join "I love Blueprint"
     phone "012-345-5678"
     year "Freshman"

@@ -18,7 +18,7 @@
       .small-12.medium-8.columns.small-centered
         .applications-closed
           p.center = t ".applications_closed"
-          = render "newsletter_subscribe", list_id: "STUDENT"
+          = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
   .spacer-small
 .gray-bg
   .spacer-large
@@ -115,5 +115,5 @@
       p.subtitle Sign up for our newsletter to get updates about events, our work and applications!
   .row
     .small-8.small-centered.columns
-      = render "newsletter_subscribe", list_id: "NEWSLETTER_ID"
+      = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
   .spacer-small

@@ -136,6 +136,12 @@ members:
     last_name: 'Qin'
     <<: *developer
 
+  kevin_wu:
+    first_name: 'Kevin'
+    last_name: 'Wu'
+    email: 'kevintxwu@gmail.com'
+    <<: *developer
+
   erica_yin:
     first_name: 'Erica'
     last_name: 'Yin'

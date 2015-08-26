@@ -98,6 +98,12 @@ members:
     last_name: 'Chang'
     <<: *leader
 
+  andrew_millman:
+    first_name: 'Andrew'
+    last_name: 'Millman'
+    email: 'andrewmillman35@gmail.com'
+    <<: *leader
+
   # Developers
 
   sam_lau:
@@ -130,6 +136,12 @@ members:
     last_name: 'Qin'
     <<: *developer
 
+  erica_yin:
+    first_name: 'Erica'
+    last_name: 'Yin'
+    <<: *developer
+
+
   # Alumni
 
   alice_oh:
@@ -150,11 +162,6 @@ members:
   harrison_tsai:
     first_name: 'Harrison'
     last_name: 'Tsai'
-    <<: *alumnus
-
-  erica_yin:
-    first_name: 'Erica'
-    last_name: 'Yin'
     <<: *alumnus
 
   kevin_shieh:

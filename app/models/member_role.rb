@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  created_at :datetime
 #  updated_at :datetime
-#  role       :string(255)
+#  role       :string
 #
 
 # TODO(lilshim): Enforce member role order

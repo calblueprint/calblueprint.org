@@ -4,8 +4,8 @@
 #
 #  id           :integer          not null, primary key
 #  applicant_id :integer
-#  provider     :string(255)
-#  uid          :string(255)
+#  provider     :string
+#  uid          :string
 #  created_at   :datetime
 #  updated_at   :datetime
 #

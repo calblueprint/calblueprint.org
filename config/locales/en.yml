@@ -223,6 +223,9 @@ en:
     create:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
+    email:
+      subject: "Submission of student application was successful!"
+      message: "Hello %{student}! We have received your student application. Thank you for your time, and we will get back to on Saturday, September 5. "
     closed: Student applications are now closed for this semester. Thank you for your interest!
 
   titles:

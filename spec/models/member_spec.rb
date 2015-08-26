@@ -5,9 +5,9 @@
 #  id             :integer          not null, primary key
 #  created_at     :datetime
 #  updated_at     :datetime
-#  last_name      :string(255)
-#  first_name     :string(255)
-#  email          :string(255)
+#  last_name      :string
+#  first_name     :string
+#  email          :string
 #  member_role_id :integer
 #
 

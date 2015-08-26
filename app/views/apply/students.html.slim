@@ -4,15 +4,21 @@
   p.white.subtitle = t ".subtitle"
 .white-bg
   .spacer-small
-  .row
-    .small-12.medium-9.columns
-      p#hook = t ".hook"
-    #apply-button.small-12.medium-3.columns
-      - if @settings.student_app_open
+  - if @settings.student_app_open
+    .row
+      .small-12.medium-9.columns
+        p#hook = t ".hook"
+      #apply-button.small-12.medium-3.columns
         = link_to "Apply Now", new_student_application_path, class: "button"
-      - else
+  - else
+    .row
+      .small-12.medium-11.columns.small-centered
+        p.center = t ".hook"
+    .row
+      .small-12.medium-8.columns.small-centered
         .applications-closed
-          p = t ".applications_closed"
+          p.center = t ".applications_closed"
+          = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
   .spacer-small
 .gray-bg
   .spacer-large
@@ -109,10 +115,5 @@
       p.subtitle Sign up for our newsletter to get updates about events, our work and applications!
   .row
     .small-8.small-centered.columns
-      form
-        .newsletter-form.tooltip-item
-          input disabled="" placeholder=("Email Address") type="text" /
-          button disabled="" type="submit"  Go
-          #full-page-tooltip.tooltip
-            p Pardon our dust, this is still under construction.
+      = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
   .spacer-small

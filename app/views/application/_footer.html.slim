@@ -4,20 +4,14 @@
       div
         h5 Students
         ul
-          li.tooltip-item.greyed-out
-            | Apply
-            .tooltip
-              p Applications opening soon! Like our Facebook page to stay up to date.
-          li.tooltip-item.greyed-out
-            | FAQ
-            .tooltip
-              p Applications opening soon! Like our Facebook page to stay up to date.
+          li = link_to "Apply", students_apply_path
+          li = link_to "FAQ", students_apply_path(anchor: "faq")
     .large-2.medium-3.small-6.columns
       div
         h5 Nonprofits
         ul
-          li = link_to "Apply", apply_path
-          li = link_to "Process", nonprofits_apply_path
+          li = link_to "Apply", nonprofits_apply_path
+          li = link_to "Process", nonprofits_apply_path(anchor: "process")
           li = link_to "FAQ", nonprofits_apply_path(anchor: "faq")
     .large-2.medium-3.small-6.columns
       div
@@ -38,13 +32,8 @@
           li = link_to "About", about_path
     .large-4.medium-6.end.small-12.columns.footer-form
       .spacer-small.hide-on-medium-up
-      form
-        .newsletter-form.tooltip-item
-          input[type="text" placeholder="Email Address" disabled]
-          button[type="submit" disabled] Go
-          #newsletter-tooltip.tooltip
-            p Pardon our dust, this is still under construction.
-      p.greyed-out Sign up for our newsletter to get updates about events, our work and applications!
+      = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
+      p Sign up for our newsletter to get updates about events, our work and applications!
   .row
     .icons.small-12.medium-9.medium-push-3.columns
       = link_to SocialMediaUrls::FACEBOOK, target: "_blank" do

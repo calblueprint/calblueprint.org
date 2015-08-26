@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     get "nonprofits"
   end
 
+  # Newsletter
+  post "/newsletter-subscribe", to: "newsletter#subscribe"
+
   # Nonprofits
   resources :nonprofit_applications, only: [:new, :create]
 

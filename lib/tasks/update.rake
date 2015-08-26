@@ -7,10 +7,10 @@ namespace :update do
     end
     members_and_roles["members"].each do |_, member_data|
       role_data = member_data.delete 'role'
-      is_alumnus = member_data.delete 'is_alumnus'
+      is_alumnus = member_data.key?('is_alumnus') && member_data.delete('is_alumnus')
       role = MemberRole.find_by role: role_data
       member = Member.find_or_initialize_by member_data
-      member.update! member_role: role, is_alumnus: !!is_alumnus
+      member.update! member_role: role, is_alumnus: is_alumnus
     end
   end
 end

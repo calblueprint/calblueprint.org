@@ -36,8 +36,8 @@ roles:
   corporate: &corporate
     role: "Corporate Relations Director"
 
-  alumnus: &alumnus
-    is_alumnus: true
+alumnus: &alumnus
+  is_alumnus: true
 
 members:
 

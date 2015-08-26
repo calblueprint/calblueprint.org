@@ -37,7 +37,7 @@ roles:
     role: "Corporate Relations Director"
 
   alumnus: &alumnus
-    role: "Alumnus"
+    is_alumnus: true
 
 members:
 
@@ -148,48 +148,58 @@ members:
     first_name: 'Alice'
     last_name: 'Oh'
     <<: *alumnus
+    <<: *external
 
   jessica_lin:
     first_name: "Jessica"
     last_name: "Lin"
     <<: *alumnus
+    <<: *president
 
   byron_zhang:
     first_name: 'Byron'
     last_name: 'Zhang'
     <<: *alumnus
+    <<: *leader
 
   harrison_tsai:
     first_name: 'Harrison'
     last_name: 'Tsai'
     <<: *alumnus
+    <<: *developer
 
   kevin_shieh:
     first_name: 'Kevin'
     last_name: 'Shieh'
     <<: *alumnus
+    <<: *developer
 
   will_tang:
     first_name: 'Will'
     last_name: 'Tang'
     <<: *alumnus
+    <<: *developer
 
   varun_rau:
     first_name: 'Varun'
     last_name: 'Rau'
     <<: *alumnus
+    <<: *leader
 
   atsunori_kakitani:
     first_name: 'Atsunori'
     last_name: 'Kakitani'
     <<: *alumnus
+    <<: *leader
 
   elizabeth_lin:
     first_name: 'Elizabeth'
     last_name: 'Lin'
     <<: *alumnus
+    <<: *developer
 
   jason_won:
     first_name: 'Jason'
     last_name: 'Won'
     <<: *alumnus
+    <<: *leader

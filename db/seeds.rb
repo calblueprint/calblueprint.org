@@ -29,6 +29,8 @@ def seed_student_applications
   applicant.student_applications.find_or_create_by! why_join: "I'm great",
                                                     phone: "11",
                                                     year: "Other",
+                                                    name: applicant.name,
+                                                    email: applicant.email,
                                                     semester: semester,
                                                     resume_file_name: 'test.pdf',
                                                     resume_content_type: 'application/pdf',
@@ -59,14 +61,7 @@ def seed_nonprofit_applications
 end
 
 def seed_roles_and_members
-  members_and_roles = YAML::load_file(File.join(__dir__, "members.yml"))
-  members_and_roles["roles"].each do |_, role_data|
-    MemberRole.find_or_create_by! role_data
-  end
-  members_and_roles["members"].each do |_, member_data|
-    role = member_data.delete "role"
-    Member.find_or_create_by!( member_data.merge member_role: MemberRole.find_by(role: role) )
-  end
+  `rake update:members`
 end
 
 seed_admins
@@ -76,4 +71,3 @@ seed_student_applications
 seed_nonprofits
 seed_nonprofit_applications
 seed_roles_and_members
-

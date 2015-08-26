@@ -46,31 +46,26 @@ members:
   howard_chen:
     first_name: 'Howard'
     last_name: 'Chen'
-    email: 'test@gmail.com'
     <<: *president
 
   vivek_raghuran:
     first_name: 'Vivek'
     last_name: 'Raghuram'
-    email: 'test@gmail.com'
     <<: *external
 
   quinton_dang:
     first_name: 'Quinton'
     last_name: 'Dang'
-    email: 'test@gmail.com'
     <<: *internal
 
   aleks_kamko:
     first_name: 'Aleks'
     last_name: 'Kamko'
-    email: 'test@gmail.com'
     <<: *tech
 
   nishant_desai:
     first_name: 'Nishant'
     last_name: 'Desai'
-    email: 'test@gmail.com'
     <<: *projects
 
   # External Team
@@ -78,7 +73,6 @@ members:
   soo_song:
     first_name: 'Soo'
     last_name: 'Song'
-    email: 'test@gmail.com'
     <<: *media
 
   # Project Leaders
@@ -86,25 +80,21 @@ members:
   nikhil_narayen:
     first_name: 'Nikhil'
     last_name: 'Narayen'
-    email: 'test@gmail.com'
     <<: *leader
 
   daniel_li:
     first_name: 'Daniel'
     last_name: 'Li'
-    email: 'test@gmail.com'
     <<: *leader
 
   warren_shen:
     first_name: 'Warren'
     last_name: 'Shen'
-    email: 'test@gmail.com'
     <<: *leader
 
   jordeen_chang:
     first_name: 'Jordeen'
     last_name: 'Chang'
-    email: 'test@gmail.com'
     <<: *leader
 
   # Developers
@@ -112,37 +102,31 @@ members:
   sam_lau:
     first_name: 'Sam'
     last_name: 'Lau'
-    email: 'test@gmail.com'
     <<: *developer
 
   eric_shen:
     first_name: 'Eric'
     last_name: 'Shen'
-    email: 'test@gmail.com'
     <<: *developer
 
   max_wolffe:
     first_name: 'Max'
     last_name: 'Wolffe'
-    email: 'test@gmail.com'
     <<: *developer
 
   sameera_vemulapalli:
     first_name: 'Sameera'
     last_name: 'Vemulapalli'
-    email: 'test@gmail.com'
     <<: *developer
 
   ethan_chiou:
     first_name: 'Ethan'
     last_name: 'Chiou'
-    email: 'test@gmail.com'
     <<: *developer
 
   andy_qin:
     first_name: 'Andy'
     last_name: 'Qin'
-    email: 'test@gmail.com'
     <<: *developer
 
   # Alumni
@@ -150,65 +134,54 @@ members:
   alice_oh:
     first_name: 'Alice'
     last_name: 'Oh'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   jessica_lin:
     first_name: "Jessica"
     last_name: "Lin"
-    email: 'test@gmail.com'
     <<: *alumnus
 
   byron_zhang:
     first_name: 'Byron'
     last_name: 'Zhang'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   harrison_tsai:
     first_name: 'Harrison'
     last_name: 'Tsai'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   erica_yin:
     first_name: 'Erica'
     last_name: 'Yin'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   kevin_shieh:
     first_name: 'Kevin'
     last_name: 'Shieh'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   will_tang:
     first_name: 'Will'
     last_name: 'Tang'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   varun_rau:
     first_name: 'Varun'
     last_name: 'Rau'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   atsunori_kakitani:
     first_name: 'Atsunori'
     last_name: 'Kakitani'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   elizabeth_lin:
     first_name: 'Elizabeth'
     last_name: 'Lin'
-    email: 'test@gmail.com'
     <<: *alumnus
 
   jason_won:
     first_name: 'Jason'
     last_name: 'Won'
-    email: 'test@gmail.com'
     <<: *alumnus

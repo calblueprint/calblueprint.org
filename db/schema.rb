@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825192509) do
+ActiveRecord::Schema.define(version: 20150826194109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20150825192509) do
     t.string   "first_name"
     t.string   "email"
     t.integer  "member_role_id"
+    t.boolean  "is_alumnus",     default: false
   end
 
   add_index "members", ["member_role_id"], name: "index_members_on_member_role_id", using: :btree

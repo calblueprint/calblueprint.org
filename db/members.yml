@@ -46,6 +46,7 @@ members:
   howard_chen:
     first_name: 'Howard'
     last_name: 'Chen'
+    email: 'howardxchen@gmail.com'
     <<: *president
 
   vivek_raghuran:

@@ -4,15 +4,21 @@
   p.white.subtitle = t ".subtitle"
 .white-bg
   .spacer-small
-  .row
-    .small-12.medium-9.columns
-      p#hook = t ".hook"
-    #apply-button.small-12.medium-3.columns
-      - if @settings.npo_app_open
-        = link_to "Apply Now", new_nonprofit_application_path, class: "button"
-      - else
+  - if @settings.npo_app_open
+    .row
+      .small-12.medium-9.columns
+        p#hook = t ".hook"
+      #apply-button.small-12.medium-3.columns
+          = link_to "Apply Now", new_nonprofit_application_path, class: "button"
+  - else
+    .row
+      .small-12.medium-11.columns.small-centered
+        p.center = t ".hook"
+    .row
+      .small-12.medium-8.columns.small-centered
         .applications-closed
-          p = t ".applications_closed"
+          p.center = t ".applications_closed"
+          = render "newsletter_subscribe", list_id: "NONPROFIT"
   .spacer-small
 .gray-bg
   ul#apply_nav.submenu

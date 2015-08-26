@@ -13,7 +13,7 @@
         p.apply-info-section-text
           = t '.apps_due'
           br
-          |  September 4th, 2015, 11:59PM
+          |  September 4th, 2015, 10:00 PM
       .apply-info-section
         .problem-icon
         p.apply-info-section-text
@@ -25,12 +25,16 @@
     .row
       .spacer
       .medium-5.medium-offset-1.columns
+        = f.input :name
+        = f.input :email
         = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
         .spacer-small
         = f.input :phone
+        = f.input :available_for_bp_games
+        = f.input :available_for_retreat
         .spacer-small
       .medium-4.medium-pull-1.columns
-        = f.input :why_join
+        = f.input :why_join, input_html: { rows: 14, cols: 19 }
         .spacer-small
         = f.input :resume, as: :file
         .spacer-small

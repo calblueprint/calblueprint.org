@@ -6,8 +6,4 @@
   .panel-right.students-bg
     h1#right-title.white.h0 = t ".students.headline"
     p#right-subtitle.white.subtitle = t ".students.subtitle"
-    div.tooltip-item style="position:relative; width:auto; display:inline-block;"
-      button[disabled] Learn More
-      div.tooltip
-        p Applications opening soon! Like our #{link_to "Facebook page", SocialMediaUrls::FACEBOOK, target: "_blank"} to stay up to date.
-    /= link_to "Learn More", students_apply_path, class: "button"
+    = link_to "Learn More", students_apply_path, class: "button"

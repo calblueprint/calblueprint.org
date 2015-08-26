@@ -14,6 +14,9 @@
 class Member < ActiveRecord::Base
   belongs_to :member_role
 
+  scope :current, -> { where(is_alumnus: false) }
+  scope :alumni, -> { where(is_alumnus: true) }
+
   validates :last_name, presence: true
   validates :first_name, presence: true
   validates :email, presence: true

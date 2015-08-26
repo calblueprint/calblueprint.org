@@ -82,3 +82,20 @@
                     .name
                       b = member
                     .position = member.member_role
+  .spacer-small
+  .row
+    .small-9.small-centered.columns
+      h3.team-title Alumni
+  .row
+    .small-12.small-centered.columns
+      ul.team-pictures.medium-block-grid-4.small-block-grid-2
+        - @alumni.each do |alumnus|
+          li.team-picture-item
+            figure.effect-sadie
+              a href="javascript:void(0)"
+                = image_tag gravatar_url(alumnus.email)
+                figcaption
+                  .member-description
+                    .name
+                      b = alumnus
+                    .position = alumnus.member_role

@@ -3,9 +3,9 @@
 # Table name: final_decisions
 #
 #  id                :integer          not null, primary key
-#  decision          :string(255)
+#  decision          :string
 #  decisionable_id   :integer
-#  decisionable_type :string(255)
+#  decisionable_type :string
 #  created_at        :datetime
 #  updated_at        :datetime
 #

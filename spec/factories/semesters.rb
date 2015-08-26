@@ -5,8 +5,8 @@
 #  id         :integer          not null, primary key
 #  created_at :datetime
 #  updated_at :datetime
-#  season     :string(255)
-#  year       :string(255)
+#  season     :string
+#  year       :string
 #
 
 FactoryGirl.define do

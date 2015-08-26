@@ -11,10 +11,10 @@
 #  history          :text
 #  date_established :date
 #  legal            :boolean
-#  short_summary    :string(255)
+#  short_summary    :string
 #  goals            :text
 #  key_features     :text
-#  devices          :string(255)
+#  devices          :string
 #  target_audience  :text
 #  why              :text
 #

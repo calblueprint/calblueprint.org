@@ -143,6 +143,9 @@ GEM
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
+    gibbon (2.0.0)
+      faraday (>= 0.9.1)
+      multi_json (>= 1.11.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     gon (5.2.3)
@@ -438,6 +441,7 @@ DEPENDENCIES
   figaro (~> 1.0.0)
   flutie (~> 2.0.0)
   font-awesome-rails (~> 4.3.0)
+  gibbon (~> 2.0.0)
   gon (~> 5.2.3)
   guard-livereload
   guard-rspec

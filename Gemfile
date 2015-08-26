@@ -27,6 +27,7 @@ gem 'aws-sdk', '~> 1.5.7'
 gem 'iconv', '~> 1.0.3'
 gem 'ffaker'
 gem 'draper'
+gem 'gibbon', '~> 2.0.0'
 
 # Frontend
 gem 'sass-rails', '~> 5.0.3'

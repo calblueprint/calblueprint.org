@@ -38,13 +38,8 @@
           li = link_to "About", about_path
     .large-4.medium-6.end.small-12.columns.footer-form
       .spacer-small.hide-on-medium-up
-      form
-        .newsletter-form.tooltip-item
-          input[type="text" placeholder="Email Address" disabled]
-          button[type="submit" disabled] Go
-          #newsletter-tooltip.tooltip
-            p Pardon our dust, this is still under construction.
-      p.greyed-out Sign up for our newsletter to get updates about events, our work and applications!
+      = render "newsletter_subscribe"
+      p Sign up for our newsletter to get updates about events, our work and applications!
   .row
     .icons.small-12.medium-9.medium-push-3.columns
       = link_to SocialMediaUrls::FACEBOOK, target: "_blank" do

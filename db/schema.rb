@@ -19,22 +19,22 @@ ActiveRecord::Schema.define(version: 20150826194109) do
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: ""
-    t.string   "reset_password_token"
+    t.string   "first_name",             limit: 255
+    t.string   "last_name",              limit: 255
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: ""
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "role",                   default: 0
-    t.string   "invitation_token"
+    t.integer  "role",                               default: 0
+    t.string   "invitation_token",       limit: 255
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
-    t.string   "invited_by_type"
-    t.integer  "invitations_count",      default: 0
+    t.string   "invited_by_type",        limit: 255
+    t.integer  "invitations_count",                  default: 0
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
@@ -57,9 +57,9 @@ ActiveRecord::Schema.define(version: 20150826194109) do
   create_table "contact_forms", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "email"
-    t.string   "subject"
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.string   "subject",    limit: 255
     t.text     "message"
   end
 
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150826194109) do
     t.datetime "updated_at"
   end
 
-  add_index "final_decisions", ["decisionable_id", "decisionable_type"], name: "index_final_decisions_on_decisionable_id_and_decisionable_type", using: :btree
+  add_index "final_decisions", ["decisionable_type", "decisionable_id"], name: "index_final_decisions_on_decisionable_type_and_decisionable_id", using: :btree
 
   create_table "identities", force: :cascade do |t|
     t.integer  "applicant_id"

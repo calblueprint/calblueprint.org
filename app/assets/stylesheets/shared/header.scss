@@ -5,7 +5,7 @@ header.navigation {
   $navigation-background: $white;
   $navigation-color: $medium-gray;
   $navigation-color-hover: $dark-gray;
-  $navigation-height: 48px;
+  $navigation-height: 52px;
   $navigation-active-link-color: transparentize($white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
@@ -22,6 +22,8 @@ header.navigation {
     @include outer-container(100%);
     position: relative;
     z-index: 9999;
+    padding-top: 10px;
+    padding: 5px;
   }
 
   .logo {
@@ -120,11 +122,12 @@ header.navigation {
     a {
       color: $navigation-color;
       display: inline-block;
-      font-weight: 400;
+      font-weight: bold;
+      font-size: 14px;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        padding-right: 2.5em;
       }
 
       &:focus,
@@ -260,9 +263,14 @@ header.navigation {
     border-radius: 3px;
     display: inline;
     float: right;
-    font-weight: normal;
-    margin: 8px;
-    padding: 4px 16px;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 8px 8px 10px 8px;
+    padding: 8px 25px;
+
+    @include media($horizontal-bar-mode) {
+      margin: 8px 8px 0px 0px;
+    }
   }
 }
 

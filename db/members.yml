@@ -222,3 +222,10 @@ members:
     email: 'noah.w.gilmore@gmail.com'
     <<: *alumnus
     <<: *leader
+
+  mark_miyashita:
+    first_name: 'Mark'
+    last_name: 'Miyashita'
+    email: 'negativetwelve@gmail.com'
+    <<: *alumnus
+    <<: *tech

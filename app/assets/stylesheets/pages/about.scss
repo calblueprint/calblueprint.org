@@ -1,21 +1,36 @@
-.about-banner {
-  @extend .banner;
-  @include animation(FadeIn 2s ease-in);
-  @include background(linear-gradient(rgba(255, 255, 255, 0.3),
-                      rgba(255, 255, 255, 0.3)),
-                      image-url("about/about.jpg"));
+#about-blackener {
+  margin-top: -300px;
+  height: 300px;
+}
+
+#about-image {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 365px;
+  background: image-url("about/about.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#about-subtitle {
+  padding-top: 5px;
+}
+
+.about-banner {
+  @extend .banner;
+  background: transparent;
   height: 300px;
+}
 
-  @include media($medium-screen) {
-    height: 400px;
-  }
+.left-align {
+  text-align: left;
+}
 
-  @include media($large-screen) {
-    height: 500px;
-  }
+.right-align {
+  text-align: right
 }
 
 @include keyframes(FadeIn) {
@@ -32,7 +47,9 @@
   @extend .center;
 
   p.mission {
-    font-size: 1.5em;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #477DCA;
     margin: 0;
   }
 }
@@ -55,8 +72,46 @@
   }
 }
 
+.spacer-about {
+  height: 45px;
+  width: 100%;
+}
+
+.spacer-about-bot {
+  height: 60px;
+  width: 100%;
+}
+
+.team-title-2 {
+  margin-top: -15px;
+}
+
 .about-title {
-  padding-top: 30px;
+  padding-top: 110px;
+}
+
+.value-blurb {
+  @include media(max-width $medium-screen) {
+    position: relative;
+    top: 50px;
+    padding-top: 50px;
+  }
+}
+
+.culture-small {
+  display: none;
+
+  @include media(max-width $medium-screen) {
+    display: block;
+  }
+}
+
+.culture-medium {
+  display: block;
+
+  @include media(max-width $medium-screen) {
+    display: none;
+  }
 }
 
 .about-team-block {
@@ -73,8 +128,12 @@
         position: relative;
 
         .member-description {
+          .name {
+            font-weight: bold;
+          }
+
           color: transparent;
-          left: 10px;
+          left: 13px;
           position: absolute;
           top: 10px;
           width: 0;
@@ -142,7 +201,7 @@
     }
 
     .icon-bottom {
-      display: none;
+      opacity: 0;
     }
 
     img.icon-top:hover {
@@ -151,7 +210,7 @@
   }
 
   img {
-    @include transition(opacity 0.3s ease-in-out);
+    @include transition(opacity 1s);
     left: 0;
     position: absolute;
 

@@ -72,6 +72,11 @@
         height: 100%;
         position: relative;
 
+        .member-image {
+          height: 200px;
+          width: 200px;
+        }
+
         .member-description {
           color: transparent;
           left: 10px;

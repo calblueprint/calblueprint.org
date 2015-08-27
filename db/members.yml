@@ -209,3 +209,10 @@ members:
     last_name: 'Won'
     <<: *alumnus
     <<: *leader
+
+  noah_gilmore:
+    first_name: 'noah'
+    last_name: 'gilmore'
+    email: 'noah.w.gilmore@gmail.com'
+    <<: *alumnus
+    <<: *leader

@@ -217,8 +217,8 @@ members:
     <<: *leader
 
   noah_gilmore:
-    first_name: 'noah'
-    last_name: 'gilmore'
+    first_name: 'Noah'
+    last_name: 'Gilmore'
     email: 'noah.w.gilmore@gmail.com'
     <<: *alumnus
     <<: *leader

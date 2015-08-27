@@ -1,6 +1,6 @@
 .tooltip-item {
   $base-border-color: #dcdcdc !default;
-  $base-border-radius: 3px !default;
+  $base-border-radius: 3px;
   $base-line-height: 1.5em !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
@@ -34,7 +34,8 @@
     background: $white;
     background-color: $tooltip-background;
     border-radius: $base-border-radius;
-    box-shadow: $tooltip-shadow;
+    // box-shadow: $tooltip-shadow;
+    border: 1px solid $gray-background-border-color;
     color: $tooltip-color;
     font-size: 0.9em;
     // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.
@@ -42,10 +43,10 @@
     margin: 0 auto 0 -1em;
     max-width: $tooltip-max-width;
     opacity: 0;
-    padding: 1em;
+    padding: 1em 1.5em;
     text-align: center;
     visibility: hidden;
-    width: 14em;
+    width: 15em;
     z-index: 10;
 
     p {

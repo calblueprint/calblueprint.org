@@ -24,6 +24,7 @@ header.navigation {
     z-index: 9999;
     padding-top: 10px;
     padding: 5px;
+    border-bottom: 1px solid $gray-background-border-color;
   }
 
   .logo {
@@ -31,7 +32,7 @@ header.navigation {
 
     float: left;
     max-height: $navigation-height;
-    padding: 0 $navigation-padding;
+    padding: 0 0.4em;
 
     img {
       max-height: $navigation-height;
@@ -41,6 +42,10 @@ header.navigation {
     &:hover {
       @include transform(rotate(360deg));
       @include transform-origin(center);
+    }
+
+    @include media ($horizontal-bar-mode) {
+      padding: 0 $navigation-padding;
     }
   }
 
@@ -260,7 +265,7 @@ header.navigation {
 
   .apply-button {
     @extend .button;
-    border-radius: 3px;
+    border-radius: 4px;
     display: inline;
     float: right;
     font-weight: bold;

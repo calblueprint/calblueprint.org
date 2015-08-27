@@ -2,20 +2,20 @@
   .row
     .large-2.medium-3.small-6.columns
       div
-        h5 Students
+        h6.footer-section Students
         ul
           li = link_to "Apply", students_apply_path
           li = link_to "FAQ", students_apply_path(anchor: "faq")
     .large-2.medium-3.small-6.columns
       div
-        h5 Nonprofits
+        h6.footer-section Nonprofits
         ul
           li = link_to "Apply", nonprofits_apply_path
           li = link_to "Process", nonprofits_apply_path(anchor: "process")
           li = link_to "FAQ", nonprofits_apply_path(anchor: "faq")
     .large-2.medium-3.small-6.columns
       div
-        h5 Sponsors
+        h6.footer-section.bottom-footer-section Sponsors
         ul
           li.tooltip-item.greyed-out
             | Contribute
@@ -24,7 +24,7 @@
           li = link_to "Team", about_path(anchor: "team")
     .large-2.medium-3.small-6.columns
       div
-        h5 General
+        h6.footer-section.bottom-footer-section General
         ul
           li = link_to "Contact", new_contact_form_path
           li = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank"
@@ -33,7 +33,7 @@
     .large-4.medium-6.end.small-12.columns.footer-form
       .spacer-small.hide-on-medium-up
       = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
-      p Sign up for our newsletter to get updates about events, our work and applications!
+      p.footer-text Sign up for our newsletter to get updates about events, our work and applications!
   .row
     .icons.small-12.medium-9.medium-push-3.columns
       = link_to SocialMediaUrls::FACEBOOK, target: "_blank" do

@@ -41,6 +41,15 @@
   width: 100%;
 }
 
+.back-banner {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
 // Use spacers to space your paragraphs and individual elements rather than <br> or css margins. Spacers
 // are divs with one of the following three classes. See home.html.erb for an example of spacer use.
 .spacer-small {
@@ -110,6 +119,7 @@
 .gray-bg {
   background-color: $gray-background-color;
   border-top: 1px solid $gray-background-border-color;
+  border-bottom: 1px solid $gray-background-border-color;
   z-index: -10;
 }
 
@@ -137,5 +147,11 @@
     > * {
       text-align: left;
     }
+  }
+}
+
+@include media(max-width $medium-screen) {
+  .row {
+    padding: 0 15px;
   }
 }

@@ -1,22 +1,61 @@
 $laptop-width: 969px;
 $small-screen: em(420);
 
-#home-banner {
+#home-image {
   background: image-url("home/banner-bg.jpg");
   background-size: cover;
+  height: 660px;
+
+  @include media(max-width $medium-screen) {
+    width: 100%;
+    height: 550px;
+  }
+}
+
+#home-padding {
+  padding-top: 190px;
+
+  @include media(max-width $medium-screen) {
+    padding-top: 90px;
+  }
+}
+
+#home-screen {
+  width: 552px;
+  height: 345px;
+  border: 1px solid $gray-background-border-color;
+  border-radius: 6px;
+  background: image-url("elevate-africa.png");
+  background-size: cover;
+
+  @include media(max-width $medium-screen) {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 50px;
+  }
+}
+
+.home-button-spacer {
+  @include media(max-width $medium-screen) {
+    display: none;
+  }
+}
+
+#home-banner {
+  // background: image-url("home/banner-bg.jpg");
+  // background-size: cover;
+  background: transparent;
   height: 600px;
-  margin-bottom: 200px;
   position: relative;
   width: 100%;
 
   @include media(max-width $medium-screen) {
     height: 400px;
-    margin-bottom: 150px;
   }
 }
 
 #laptop {
-  bottom: -175px;
+  bottom: -217px;
   height: 100%;
   max-height: 650px;
   position: absolute;
@@ -73,18 +112,49 @@ $small-screen: em(420);
 
 
 #home-title {
-  padding-top: 50px;
-
+  padding-top: 75px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   @include media(max-width $small-screen) {
-    padding-top: 30px;
+    padding-top: 32px;
   }
 }
 
+#home-subtitle {
+  padding-top: 5px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+  @include media(max-width $medium-screen) {
+    padding-top: 25px;
+  }
+}
+
+.bold-blue {
+  font-weight: bold;
+  color: #477DCA;
+}
+
 #our-projects {
-  text-align: center;
+  position: relative;
+  top: -5px;
+  left: 25px;
+  text-align: left;
 
   p,
-  h1 {
-    text-align: center;
+  h2 {
+    text-align: left;
   }
+
+  @include media(max-width $medium-screen) {
+    left: 0;
+    text-align: center;
+
+    p,
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+p {
+  margin: 0;
 }

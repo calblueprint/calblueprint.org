@@ -6,12 +6,16 @@
   $footer-icon-color: #BBB;
 
   background-color: $footer-bg-color;
-  padding: 50px 10px 30px;
+  padding: 50px 10px 25px;
   text-align: left;
 
-  h5 {
+  h6 {
     color: $white;
     text-align: left;
+  }
+
+  .footer-section {
+    padding-bottom: 5px;
   }
 
   p {
@@ -20,7 +24,8 @@
   }
 
   li {
-    padding: 5px;
+    padding-top: 5px;
+    font-size: 14px;
 
     a {
       color: $footer-link-color;
@@ -31,6 +36,10 @@
     }
   }
 
+  .footer-text {
+    padding-bottom: 5px;
+  }
+
   .greyed-out {
     color: $greyed-out-color;
   }
@@ -38,7 +47,7 @@
   .fa,
   a .fa {
     color: $footer-icon-color;
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 10px;
     text-decoration: none;
 
@@ -48,7 +57,7 @@
   }
 
   .copyright {
-    color: $footer-text-color;
+    color: #666;
     text-align: left;
   }
 
@@ -60,8 +69,28 @@
     display: inline-block;
   }
 
+  @include media(max-width $medium-screen) {
+    padding: 50px 10px 40px;
+
+    .footer-form {
+      position: relative;
+      top: 10px;
+    }
+
+    .fa,
+    a .fa {
+      position: relative;
+      top: 26px;
+    }
+  }
 }
 
 .footer-form {
   text-align: right;
+}
+
+@include media(max-width $medium-screen) {
+  .bottom-footer-section {
+    padding-top: 15px;
+  }
 }

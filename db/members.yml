@@ -79,7 +79,7 @@ members:
   shreya_shanbhag:
     first_name: 'Shreya'
     last_name: 'Shanbhag'
-    email: 'shreya995@gmail.com,'
+    email: 'shreya995@gmail.com'
     <<: *community
 
   # Project Leaders

@@ -48,6 +48,54 @@
               | View Demo
       .spacer
       .project
+        .project-image[style="background-image:url(https://github.com/calblueprint/calblueprint.org/blob/master/app/assets/images/projects/phc.png?raw=true)"]
+        .project-card
+          h5.project-title
+            | Project Homeless Connect
+          p.project-description
+            | Provides a secure and paperless way for the homeless to sign up for services and for the organization to collect data to improve their service. Application built on Android with a Ruby on Rails API.
+          h7.project-subtitle
+            | TEAM MEMBERS:
+          .project-member-images
+            = image_tag gravatar_url("howardxchen@gmail.com"), class: "project-member-image"
+            = image_tag gravatar_url("byron.yi.zhang@gmail.com"), class: "project-member-image"
+            = image_tag gravatar_url("jason.j.won@gmail.com"), class: "project-member-image"
+            = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
+            = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
+            = image_tag gravatar_url("danielmxli@gmail.com"), class: "project-member-image"
+            = image_tag gravatar_url("warrenzshen@gmail.com"), class: "project-member-image"
+            = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
+            = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
+          h7.project-subtitle
+            | STATUS:
+          .project-progress
+            .project-progress-scope.project-progress-green
+            .project-progress-scope.project-progress-green
+            .project-progress-scope.project-progress-green
+            .project-progress-scope.project-progress-green
+          .project-see-more
+        .project-expand
+          .project-expand-section
+            .problem-icon
+
+            p.project-expand-section-text
+              |  Project Homeless Connect runs approximately five events a year where they provide the homeless population of San Francisco with services such as hair cuts and wheelchair repairs.
+              |  Every event the clients fill out a paper form with their personal information such as their SSN, and carry around a carbon copy during the event.  This runs the risk of the client losing their carbon
+              |  copy and exposing their personal information, while also accruing a large time debt for the organization to copy information from the paper form into their Salesforce CRM.
+          .project-expand-section
+            .solution-icon
+
+            p.project-expand-section-text
+              |  Blueprint was able to work with Project Homeless Connect by developing an Android application that allowed clients to check in to the event.  The application removed the cost of carbon copy paper, while adding the
+              |  security of not carrying their personal information along with them, but rather a QR code associated with their information.  The Android application also entered the data directly to their Salesforce CRM while reducing
+              |  the number of duplicate entries, thus saving them countless hours of data entry every event.
+          .project-expand-section
+            .demo-icon
+
+            a.demo-btn.demo-btn-color.center[href="https://medium.com/@blueprint/learning-from-doing-39c9aa926b87" target="_blank"]
+              | View Report of App
+      .spacer
+      .project
         .project-image[style="background-image:url(https://github.com/calblueprint/calblueprint.org/blob/master/app/assets/images/projects/odalc.png?raw=true)"]
         .project-card
           h5.project-title

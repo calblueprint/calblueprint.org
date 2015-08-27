@@ -76,6 +76,12 @@ members:
     last_name: 'Song'
     <<: *media
 
+  shreya_shanbhag:
+    first_name: 'Shreya'
+    last_name: 'Shanbhag'
+    email: 'shreya995@gmail.com,'
+    <<: *community
+
   # Project Leaders
 
   nikhil_narayen:

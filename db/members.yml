@@ -76,6 +76,12 @@ members:
     last_name: 'Song'
     <<: *media
 
+  shreya_shanbhag:
+    first_name: 'Shreya'
+    last_name: 'Shanbhag'
+    email: 'shreya995@gmail.com'
+    <<: *community
+
   # Project Leaders
 
   nikhil_narayen:
@@ -207,5 +213,12 @@ members:
   jason_won:
     first_name: 'Jason'
     last_name: 'Won'
+    <<: *alumnus
+    <<: *leader
+
+  noah_gilmore:
+    first_name: 'Noah'
+    last_name: 'Gilmore'
+    email: 'noah.w.gilmore@gmail.com'
     <<: *alumnus
     <<: *leader

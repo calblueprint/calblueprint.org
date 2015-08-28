@@ -27,14 +27,14 @@ en:
       headline: Blueprint, Technology for Nonprofits
       subtitle: We are a group of UC Berkeley students who want to use technology to improve our community.
       what_we_do: >
-        Hey! We're Blueprint, a student organization using technology for social good.
-        We build web and mobile applications for nonprofits pro bono and foster the use of technology
-        for public welfare through events and discussions.
+        We're Blueprint, a student organization using technology for social good.
+        We build web and mobile apps for nonprofits pro bono and foster the use of technology
+        for public welfare through various events.
       our_projects: >
         Each year, teams of five students work with non-profit organizations on projects
-        to help them better serve their communities. We've built a crowdfunding application for
+        to help them better serve their communities. We've designed and built a crowdfunding application for
         Berkeley's public schools, a professional development platform for digital literacy in Oakland, and
-        much more.
+        much more!
       get_involved: >
         Are you a nonprofit looking to partner? Are you a student looking to join? Find out how you can get
         involved in bridging technology and social good!
@@ -47,7 +47,7 @@ en:
       values:
         craft: >
           Our projects are carefully constructed from the first contact with the nonprofit to project
-          deployment and use in production. We are meticulous about our design, our process, and our code.
+          deployment and live use. We are meticulous about our design, our process, and our code.
         culture: >
           Bluepers work hard and play hard. When we’re not developing, we eat, play,
           and volunteer together. We value a good sense of humor and think that there's fun to be had
@@ -56,7 +56,7 @@ en:
           We believe that our schooling and abilities should be used for good. Our motivation pushes us to
           constantly learn, work hard, and find solutions where others haven't looked.
       team:
-        title: Meet Our Team
+        title: Our Team
         description: >
           Blueprint is made up of innovative designers, diligent hackers, and thoughtful leaders.
           We recognize that the individual might be talented but only a team has the power
@@ -129,9 +129,8 @@ en:
       hook: >
         We are an organization of passionate UC Berkeley students
         who develop web and mobile applications for non-profit organizations.
-        As a member, you will be able to join a family of like-minded students
-        working to use our education and technological prowess to make the
-        world a better place.
+        As a member, you will join a family of fellow students working to use our education
+        and skills to make the world a better place.
       applications_closed: >
         Applications are closed for this semester. Sign up to be notified when they reopen!
       application_timeline:
@@ -187,7 +186,7 @@ en:
   contact_forms:
     new:
       banner: Contact Us
-      subtitle: To get the gears turning
+      subtitle: Reach out to get the gears turning!
     create:
       success: Message sent! We'll get back to you shortly.
 

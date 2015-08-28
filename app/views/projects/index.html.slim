@@ -1,29 +1,29 @@
+#projects-image
+.banner.projects-banner
+  .large-12.large-centered.columns
+    h1.about-title Our Projects
+    p#about-subtitle.white = "The previous applications that we've built."
 .projects-background
-  .banner.projects-banner
-    .darken
-      .large-12.large-centered.columns
-        h1.h0.about-title Our Projects
   .row
     .projects-section
       .spacer
       .project
-        .project-image[style="background-image:url(https://github.com/calblueprint/calblueprint.org/blob/master/app/assets/images/projects/bpsf.png?raw=true)"]
+        .project-image.bpsf
         .project-card
           h5.project-title
             | Berkeley Public Schools Fund
           p.project-description
             | Provides a way for Berkeley public school teachers to fund classroom projects. Application built using Ruby on Rails.
           h7.project-subtitle
-            | TEAM MEMBERS:
+            | Team Members:
           .project-member-images
             = image_tag gravatar_url("jeong.wonjun@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("varun@berkeley.edu"), class: "project-member-image"
-            = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
             = image_tag gravatar_url("vivekrag95@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("samlau95@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("heyjaylin@gmail.com"), class: "project-member-image"
           h7.project-subtitle
-            | STATUS:
+            | Status:
           .project-progress
             .project-progress-scope.project-progress-green
             .project-progress-scope.project-progress-green
@@ -53,9 +53,9 @@
           h5.project-title
             | Project Homeless Connect
           p.project-description
-            | Provides a secure and paperless way for the homeless to sign up for services and for the organization to collect data to improve their service. Application built on Android with a Ruby on Rails API.
+            | Provides a secure way for the homeless to sign up for services and for volunteers to collect data. Application built on Android and Rails.
           h7.project-subtitle
-            | TEAM MEMBERS:
+            | Team Members:
           .project-member-images
             = image_tag gravatar_url("howardxchen@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("byron.yi.zhang@gmail.com"), class: "project-member-image"
@@ -67,7 +67,7 @@
             = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
             = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
           h7.project-subtitle
-            | STATUS:
+            | Status:
           .project-progress
             .project-progress-scope.project-progress-green
             .project-progress-scope.project-progress-green
@@ -96,14 +96,14 @@
               | View Report of App
       .spacer
       .project
-        .project-image[style="background-image:url(https://github.com/calblueprint/calblueprint.org/blob/master/app/assets/images/projects/odalc.png?raw=true)"]
+        .project-image.odalc
         .project-card
           h5.project-title
             | Oakland Digital Arts and Literacy
           p.project-description
-            | Allows tech and design professionals around the Bay Area to come and teach courses at the Oakland Digital Office. Application built using Django.
+            | Allows tech and design professionals around the Bay Area to teach courses at the Oakland Digital Office. Application built using Django.
           h7.project-subtitle
-            | TEAM MEMBERS:
+            | Team Members:
           .project-member-images
             = image_tag gravatar_url("atsunori.kakitani@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("vivekrag95@gmail.com"), class: "project-member-image"
@@ -112,7 +112,7 @@
             = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
             = image_tag gravatar_url("anthonysutardja@berkeley.edu"), class: "project-member-image"
           h7.project-subtitle
-            | STATUS:
+            | Status:
           .project-progress
             .project-progress-scope.project-progress-green
             .project-progress-scope.project-progress-green
@@ -137,14 +137,14 @@
               | View Demo
       .spacer
       .project
-        .project-image[style="background-image:url(https://github.com/calblueprint/calblueprint.org/blob/master/app/assets/images/projects/rootsofsuccess.png?raw=true)"]
+        .project-image.ros
         .project-card
           h5.project-title
             | Roots of Success
           p.project-description
             | Provides a way for Roots of Success teachers to manage various curricula and classes. Application built using Ruby on Rails.
           h7.project-subtitle
-            | TEAM MEMBERS:
+            | Team Members:
           .project-member-images
             = image_tag gravatar_url("samlau95@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("vincenttian16@gmail.com"), class: "project-member-image"
@@ -157,7 +157,7 @@
             = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
             = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
           h7.project-subtitle
-            | STATUS:
+            | Status:
           .project-progress
             .project-progress-scope.project-progress-green
             .project-progress-scope.project-progress-green
@@ -182,23 +182,22 @@
               | View Demo
       .spacer
       .project
-        .project-image[style="background-image:url(https://github.com/calblueprint/calblueprint.org/blob/master/app/assets/images/projects/elevate-africa.png?raw=true)"]
+        .project-image.ea
         .project-card
           h5.project-title
             | Elevate Africa
           p.project-description
-            | Provides a way for aspiring entreprenuers build vibrant local business that breaks the cycle of poverty for individuals in Africa. Application built using Ruby on Rails.
+            | Provides local entrepreneurs a way to build small businesses that break the cycle of poverty in Africa. Application built using Ruby on Rails.
           h7.project-subtitle
-            | TEAM MEMBERS:
+            | Team Members:
           .project-member-images
-            = image_tag image_url("paw.png"), class: "project-member-image project-member-noimage"
-            - #= image_tag gravatar_url("kevintxwu@gmail.com"), class: "project-member-image"
+            = image_tag gravatar_url("kevintxwu@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("warrenzshen@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("charlesx2013@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("elizabethylin@gmail.com"), class: "project-member-image"
             = image_tag gravatar_url("triciasfu@berkeley.edu"), class: "project-member-image"
           h7.project-subtitle
-            | STATUS:
+            | Status:
           .project-progress
             .project-progress-scope.project-progress-green
             .project-progress-scope.project-progress-green

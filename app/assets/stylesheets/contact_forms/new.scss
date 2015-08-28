@@ -1,3 +1,26 @@
+#contact-image {
+  background-image: image-url("contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 365px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.spacer-form {
+  height: 50px;
+  width: 100%;
+}
+
+.no-margin-small input {
+  @include media(max-width $medium-screen) {
+    margin-bottom: 0;
+  }
+}
+
 // scss-lint:disable SelectorFormat
 .contact_forms-new,
 .contact_forms-create {
@@ -10,7 +33,7 @@
 // scss-lint:enable SelectorFormat
 
 .field-wrapper {
-  margin-top: 15px;
+  margin-top: 25px;
   position: relative;
 
   label {
@@ -45,5 +68,22 @@
 
   &.js-slider-focused.js-slider-has-text label {
     opacity: 1;
+  }
+
+  input,
+  textarea {
+    border: 1px solid $gray-background-border-color;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 10px 15px;
+    transition: 0.5s;
+  }
+
+  input:hover,
+  textarea:hover,
+  input:focus,
+  textarea:focus {
+    border: 1px solid $sky-label-blue;
+    box-shadow: none;
   }
 }

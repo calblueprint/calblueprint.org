@@ -11,15 +11,16 @@
 }
 
 // start da css for da buttons
-$demo-btn-color: #55acee;
-$demo-btn-hover-color: #6FC6FF;
+$demo-btn-color: #477DCA;
+$demo-btn-hover-color: darken($demo-btn-color, 25);
 $demo-btn-shadow: #3C93D5;
 
 .demo-btn {
   border-radius: 5px;
   color: $white;
   display: block;
-  font-size: 22px;
+  font-size: 1em;
+  font-weight: bold;
   margin: 48px auto;
   padding: 12px 20px;
   width: 75%;
@@ -32,7 +33,6 @@ $demo-btn-shadow: #3C93D5;
 
 .demo-btn-color {
   background-color: $demo-btn-color;
-  box-shadow: 0 5px 0 0 $demo-btn-shadow;
 }
 
 .demo-btn-color:hover {
@@ -41,23 +41,21 @@ $demo-btn-shadow: #3C93D5;
 }
 
 .project {
-  $block-height: 300px;
+  $block-height: 320px;
   $project-bg-color: lighten($gray-background-color, 5);
-  $project-border-color: #D0D1D5;
+  $project-border-color: $gray-background-border-color;
   $project-text-color: #565a5c;
 
   @extend .row;
 
   .project-expand {
     background-color: $project-bg-color;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-color: $project-border-color;
-    border-right-style: solid;
-    border-right-width: 1px;
+    border: 1px solid $project-border-color;
+    border-radius: 6px;
     display: none;
     overflow: hidden;
-    padding-bottom: 32px;
+    padding: 6px;
+    padding-bottom: 36px;
     width: 100%;
 
     .project-expand-section {
@@ -69,7 +67,7 @@ $demo-btn-shadow: #3C93D5;
       .project-expand-section-icon {
         background-size: cover;
         height: 32px;
-        margin: 24px auto 12px;
+        margin: 24px auto 18px;
         width: 32px;
       }
 
@@ -106,10 +104,8 @@ $demo-btn-shadow: #3C93D5;
     @extend .medium-4;
     @extend .large-4;
     background-size: cover;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-color: $project-border-color;
-    border-radius: 2px 0 0 2px;
+    border: 1px solid $project-border-color;
+    border-radius: 6px 0 0 6px;
     height: $block-height;
   }
 
@@ -119,13 +115,11 @@ $demo-btn-shadow: #3C93D5;
     @extend .medium-8;
     @extend .large-8;
     background-color: $white;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-color: $project-border-color;
-    border-radius: 0 2px 2px 0;
-    border-right-style: solid;
-    border-right-width: 1px;
+    border: 1px solid $project-border-color;
+    border-left: 0;
+    border-radius: 0 6px 6px 0;
     height: $block-height;
+    padding: 10px 26px;
     position: relative;
 
     @mixin project-card-text {
@@ -135,30 +129,42 @@ $demo-btn-shadow: #3C93D5;
 
     .project-title {
       @include project-card-text;
+      color: $black;
       height: 57px;
       line-height: 57px;
+      margin-top: 5px;
       overflow: hidden;
-      padding: 0 8px;
+      padding: 0 10px;
     }
 
     .project-description {
       @include project-card-text;
       font-size: 16px;
       height: 48px;
-      line-height: 18px;
-      padding: 0 8px;
+      line-height: 24px;
+      margin-bottom: 10px;
+      padding: 0 10px;
     }
 
     .project-subtitle {
       @include project-card-text;
       display: block;
       font-size: 14px;
+      font-weight: bold;
       line-height: 14px;
-      padding: 12px 8px;
+      padding: 12px 10px;
+
+      @include media(max-width $medium-screen) {
+        display: none;
+      }
     }
 
     .project-member-images {
       margin-left: 4px;
+
+      @include media(max-width $medium-screen) {
+        display: none;
+      }
     }
 
     .project-member-image {
@@ -177,6 +183,10 @@ $demo-btn-shadow: #3C93D5;
 
     .project-progress {
       margin-left: 8px;
+
+      @include media(max-width $medium-screen) {
+        display: none;
+      }
     }
 
     .project-progress-scope {
@@ -195,13 +205,13 @@ $demo-btn-shadow: #3C93D5;
   .project-see-more {
     background-image: image-url("projects/see-more.png");
     background-size: cover;
-    bottom: 24px;
+    bottom: 25px;
     cursor: hand;
-    height: 24px;
+    height: 20px;
     opacity: 0.5;
     position: absolute;
-    right: 20px;
-    width: 24px;
+    right: 31px;
+    width: 20px;
   }
 
   .project-see-more:hover {
@@ -209,15 +219,48 @@ $demo-btn-shadow: #3C93D5;
   }
 }
 
-.projects-banner {
+#projects-image {
   background-image: image-url("projects/projects-banner.png");
   background-position: center;
   background-size: cover;
+  height: 365px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.projects-banner {
+  background: rgba(0, 0, 0, 0.4);
   color: $white;
-  height: 220px;
+  height: 300px;
 }
 
 .projects-banner-text {
   line-height: 220px;
+}
+
+.bpsf {
+  background-image: image-url("projects/bpsf-alt.png");
+  background-position: top;
+  background-size: cover;
+}
+
+.odalc {
+  background-image: image-url("projects/odalc-alt.png");
+  background-position: top;
+  background-size: cover;
+}
+
+.ros {
+  background-image: image-url("projects/rootsofsuccess.png");
+  background-position: top;
+  background-size: cover;
+}
+
+.ea {
+  background-image: image-url("projects/elevate-africa.png");
+  background-position: left;
+  background-size: cover;
 }
 

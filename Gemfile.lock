@@ -485,6 +485,3 @@ DEPENDENCIES
   title (~> 0.0.5)
   turbolinks (~> 2.5.1)
   uglifier (>= 1.3.0)
-
-BUNDLED WITH
-   1.10.6

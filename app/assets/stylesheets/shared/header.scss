@@ -5,14 +5,13 @@ header.navigation {
   $navigation-background: $white;
   $navigation-color: $medium-gray;
   $navigation-color-hover: $dark-gray;
-  $navigation-height: 48px;
+  $navigation-height: 52px;
   $navigation-active-link-color: transparentize($white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $medium-screen;
 
   background-color: $navigation-background;
-  // border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -20,6 +19,9 @@ header.navigation {
   .navigation-wrapper {
     @include clearfix;
     @include outer-container(100%);
+    border-bottom: 1px solid $gray-background-border-color;
+    padding: 5px;
+    padding-top: 7px;
     position: relative;
     z-index: 9999;
   }
@@ -29,7 +31,11 @@ header.navigation {
 
     float: left;
     max-height: $navigation-height;
-    padding: 0 $navigation-padding;
+    padding: 0 0.4em;
+
+    @include media ($horizontal-bar-mode) {
+      padding: 0 $navigation-padding;
+    }
 
     img {
       max-height: $navigation-height;
@@ -120,11 +126,12 @@ header.navigation {
     a {
       color: $navigation-color;
       display: inline-block;
-      font-weight: 400;
+      font-size: 14px;
+      font-weight: bold;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
+        padding-right: 2.5em;
       }
 
       &:focus,
@@ -257,12 +264,17 @@ header.navigation {
 
   .apply-button {
     @extend .button;
-    border-radius: 3px;
+    border-radius: 4px;
     display: inline;
     float: right;
-    font-weight: normal;
-    margin: 8px;
-    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px 8px 10px;
+    padding: 8px 25px;
+
+    @include media($horizontal-bar-mode) {
+      margin: 8px 8px 0 0;
+    }
   }
 }
 

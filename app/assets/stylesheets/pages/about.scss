@@ -1,21 +1,40 @@
-.about-banner {
-  @extend .banner;
-  @include animation(FadeIn 2s ease-in);
-  @include background(linear-gradient(rgba(255, 255, 255, 0.3),
-                      rgba(255, 255, 255, 0.3)),
-                      image-url("about/about.jpg"));
+#about-blackener {
+  height: 300px;
+  margin-top: -300px;
+}
+
+#about-bigger {
+  height: 600px;
+}
+
+#about-image {
+  background: image-url("about/about.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 670px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#about-subtitle {
+  padding-top: 5px;
+}
+
+.about-banner {
+  @extend .banner;
+  background: rgba(255, 255, 255, 0.2);
   height: 300px;
+}
 
-  @include media($medium-screen) {
-    height: 400px;
-  }
+.left-align {
+  text-align: left;
+}
 
-  @include media($large-screen) {
-    height: 500px;
-  }
+.right-align {
+  text-align: right;
 }
 
 @include keyframes(FadeIn) {
@@ -32,14 +51,14 @@
   @extend .center;
 
   p.mission {
-    font-size: 1.5em;
+    color: $dark-gray;
+    font-size: 1.2em;
+    font-weight: bold;
     margin: 0;
   }
 }
 
 .about-detail-block {
-  background: $light-gray;
-
   .about-value {
     @extend .center;
 
@@ -55,8 +74,50 @@
   }
 }
 
+.spacer-about {
+  height: 45px;
+  width: 100%;
+}
+
+.spacer-about-bot {
+  height: 60px;
+  width: 100%;
+}
+
+.team-title-2 {
+  margin-top: -15px;
+}
+
 .about-title {
-  padding-top: 30px;
+  padding-top: 110px;
+}
+
+#about-padding {
+  padding-top: 250px;
+}
+
+.value-blurb {
+  @include media(max-width $medium-screen) {
+    padding-top: 50px;
+    position: relative;
+    top: 50px;
+  }
+}
+
+.culture-small {
+  display: none;
+
+  @include media(max-width $medium-screen) {
+    display: block;
+  }
+}
+
+.culture-medium {
+  display: block;
+
+  @include media(max-width $medium-screen) {
+    display: none;
+  }
 }
 
 .about-team-block {
@@ -79,12 +140,15 @@
 
         .member-description {
           color: transparent;
-          left: 10px;
+          left: 13px;
           position: absolute;
           top: 10px;
           width: 0;
           z-index: 10;
-          //@include transition-ease-all(0.5s);
+
+          .name {
+            font-weight: bold;
+          }
         }
 
         &:hover {
@@ -147,7 +211,7 @@
     }
 
     .icon-bottom {
-      display: none;
+      opacity: 0;
     }
 
     img.icon-top:hover {
@@ -156,7 +220,7 @@
   }
 
   img {
-    @include transition(opacity 0.3s ease-in-out);
+    @include transition(opacity 1s);
     left: 0;
     position: absolute;
 

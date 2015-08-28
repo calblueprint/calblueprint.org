@@ -41,6 +41,15 @@
   width: 100%;
 }
 
+.back-banner {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 // Use spacers to space your paragraphs and individual elements rather than <br> or css margins. Spacers
 // are divs with one of the following three classes. See home.html.erb for an example of spacer use.
 .spacer-small {
@@ -84,14 +93,14 @@
 // An inner div as a dark overlay to make banners darker. You have to put this inside the banner as
 // if the banner was a wrapper.
 .darken {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   height: 100%;
   width: 100%;
 }
 
 // A darker version of darken .
 .blacken {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   height: 100%;
   width: 100%;
 }
@@ -109,8 +118,13 @@
 
 .gray-bg {
   background-color: $gray-background-color;
+  border-bottom: 1px solid $gray-background-border-color;
   border-top: 1px solid $gray-background-border-color;
   z-index: -10;
+}
+
+.outline {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 // In a two column layout, left column has right-aligned text, right column has left-aligned text
@@ -137,5 +151,11 @@
     > * {
       text-align: left;
     }
+  }
+}
+
+@include media(max-width $medium-screen) {
+  .row {
+    padding: 0 15px;
   }
 }

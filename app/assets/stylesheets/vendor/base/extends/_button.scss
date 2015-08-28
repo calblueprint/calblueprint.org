@@ -1,14 +1,22 @@
 %button {
   -webkit-font-smoothing: antialiased;
   background-color: $base-button-color;
-  border-radius: $base-border-radius;
+  border-radius: 6px;
   color: $white;
   display: inline-block;
   font-size: $button-font-size;
   font-weight: bold;
   line-height: 1.5;
   margin: auto;
-  padding: 0.9em 1.3em;
+
+  /* FUTURE DEVELOPER IF YOU ARE EVER PERPLEXED
+  IN THE PISSED OFF SORT OF WAY WITH WIERD CSS
+  AND EVENTUALLY FIND THIS SEEMINGLY ARBITRARY
+  MARGIN TOP, JUST KNOW THAT IT HAD TO BE DONE */
+  margin-top: 10px;
+
+  transition: 0.3s;
+  padding: 0.9em 1.5em;
   text-decoration: none;
 
   &:hover {

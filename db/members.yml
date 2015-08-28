@@ -36,8 +36,8 @@ roles:
   corporate: &corporate
     role: "Corporate Relations Director"
 
-  alumnus: &alumnus
-    role: "Alumnus"
+alumnus: &alumnus
+  is_alumnus: true
 
 members:
 
@@ -76,6 +76,12 @@ members:
     last_name: 'Song'
     <<: *media
 
+  shreya_shanbhag:
+    first_name: 'Shreya'
+    last_name: 'Shanbhag'
+    email: 'shreya995@gmail.com'
+    <<: *community
+
   # Project Leaders
 
   nikhil_narayen:
@@ -96,6 +102,12 @@ members:
   jordeen_chang:
     first_name: 'Jordeen'
     last_name: 'Chang'
+    <<: *leader
+
+  andrew_millman:
+    first_name: 'Andrew'
+    last_name: 'Millman'
+    email: 'andrewmillman35@gmail.com'
     <<: *leader
 
   # Developers
@@ -130,59 +142,90 @@ members:
     last_name: 'Qin'
     <<: *developer
 
+  kevin_wu:
+    first_name: 'Kevin'
+    last_name: 'Wu'
+    email: 'kevintxwu@gmail.com'
+    <<: *developer
+
+  erica_yin:
+    first_name: 'Erica'
+    last_name: 'Yin'
+    <<: *developer
+
+
   # Alumni
 
   alice_oh:
     first_name: 'Alice'
     last_name: 'Oh'
     <<: *alumnus
+    <<: *external
 
   jessica_lin:
     first_name: "Jessica"
     last_name: "Lin"
     <<: *alumnus
+    <<: *president
 
   byron_zhang:
     first_name: 'Byron'
     last_name: 'Zhang'
     <<: *alumnus
+    <<: *leader
 
   harrison_tsai:
     first_name: 'Harrison'
     last_name: 'Tsai'
     <<: *alumnus
-
-  erica_yin:
-    first_name: 'Erica'
-    last_name: 'Yin'
-    <<: *alumnus
+    <<: *developer
 
   kevin_shieh:
     first_name: 'Kevin'
     last_name: 'Shieh'
     <<: *alumnus
+    <<: *developer
 
   will_tang:
     first_name: 'Will'
     last_name: 'Tang'
     <<: *alumnus
+    <<: *developer
 
   varun_rau:
     first_name: 'Varun'
     last_name: 'Rau'
     <<: *alumnus
+    <<: *leader
 
   atsunori_kakitani:
     first_name: 'Atsunori'
     last_name: 'Kakitani'
     <<: *alumnus
+    <<: *leader
 
   elizabeth_lin:
     first_name: 'Elizabeth'
     last_name: 'Lin'
     <<: *alumnus
+    <<: *developer
 
   jason_won:
     first_name: 'Jason'
     last_name: 'Won'
     <<: *alumnus
+    <<: *leader
+
+  noah_gilmore:
+    first_name: 'Noah'
+    last_name: 'Gilmore'
+    email: 'noah.w.gilmore@gmail.com'
+    <<: *alumnus
+    <<: *leader
+
+  mark_miyashita:
+    first_name: 'Mark'
+    last_name: 'Miyashita'
+    email: 'negativetwelve@gmail.com'
+    <<: *alumnus
+    <<: *tech

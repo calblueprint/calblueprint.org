@@ -12,7 +12,6 @@ header.navigation {
   $horizontal-bar-mode: $medium-screen;
 
   background-color: $navigation-background;
-  // border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;

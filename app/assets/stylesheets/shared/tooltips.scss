@@ -14,6 +14,8 @@
   $tooltip-distance-from-item: 5em;
   $tooltip-arrow-distance-from-box: -1.2em;
 
+  // A big chunk of previous tooltip styling
+  
   // background: $tooltip-background;
   // border-radius: $base-border-radius;
   // border: 1px solid $base-border-color;
@@ -35,7 +37,10 @@
     background-color: $tooltip-background;
     border: 1px solid $gray-background-border-color;
     border-radius: $base-border-radius;
+
+    // The previous use case of tooltip-shadow
     // box-shadow: $tooltip-shadow;
+    
     color: $tooltip-color;
     font-size: 0.9em;
     // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.

@@ -9,6 +9,7 @@ gem 'figaro', '~> 1.0.0'
 gem 'sucker_punch', '~> 1.3.1'
 gem 'aasm', '~> 4.1.0'
 gem 'activesupport-json_encoder', '1.1.0'
+gem 'dalli' # memcache
 
 # Components
 gem 'turbolinks', '~> 2.5.1'

@@ -76,12 +76,16 @@
           li.team-picture-item
             figure.effect-sadie
               a href="javascript:void(0)"
-                = image_tag gravatar_url(member.email)
+                div.member-image
+                  - if member['email']
+                    = image_tag gravatar_url(member['email']), onError: "this.onerror=null;this.src='#{asset_path 'paw.png'}';"
+                  - else
+                    = image_tag 'paw.png'
                 figcaption
                   .member-description
                     .name
-                      b = member
-                    .position = member.member_role
+                      b = "#{member['first']} #{member['last']}"
+                    .position = member['role']
   .spacer-small
   .row
     .small-9.small-centered.columns
@@ -90,13 +94,17 @@
   .row
     .small-12.small-centered.columns
       ul.team-pictures.medium-block-grid-4.small-block-grid-2
-        - @alumni.each do |alumnus|
+        - @alumni.each do |member|
           li.team-picture-item
             figure.effect-sadie
               a href="javascript:void(0)"
-                = image_tag gravatar_url(alumnus.email)
+                div.member-image
+                  - if member['email']
+                    = image_tag gravatar_url(member['email']), onError: "this.onerror=null;this.src='#{asset_path 'paw.png'}';"
+                  - else
+                    = image_tag 'paw.png'
                 figcaption
                   .member-description
                     .name
-                      b = alumnus
-                    .position = alumnus.member_role
+                      b = "#{member['first']} #{member['last']}"
+                    .position = member['role']

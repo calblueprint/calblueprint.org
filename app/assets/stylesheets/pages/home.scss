@@ -4,7 +4,7 @@ $small-screen: em(420);
 #home-image {
   background: image-url("home/banner-bg.jpg");
   background-size: cover;
-  height: 660px;
+  height: 665px;
 
   @include media(max-width $medium-screen) {
     height: 550px;

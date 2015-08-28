@@ -3,8 +3,9 @@ class PagesController < ApplicationController
   end
 
   def about
-    @members = Member.current.sort_by(&:member_role)
-    @alumni = Member.alumni.sort_by(&:member_role)
+    membersyml = Rails.cache.read('members.yml')
+    @members = membersyml['members']
+    @alumni = membersyml['alumni']
   end
 
   def sponsors

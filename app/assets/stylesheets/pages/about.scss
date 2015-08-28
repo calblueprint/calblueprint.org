@@ -3,12 +3,16 @@
   margin-top: -300px;
 }
 
+#about-bigger {
+  height: 600px;
+}
+
 #about-image {
   background: image-url("about/about.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 370px;
+  height: 670px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -21,7 +25,7 @@
 
 .about-banner {
   @extend .banner;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   height: 300px;
 }
 
@@ -47,7 +51,7 @@
   @extend .center;
 
   p.mission {
-    color: $blue;
+    color: $dark-gray;
     font-size: 1.2em;
     font-weight: bold;
     margin: 0;
@@ -86,6 +90,10 @@
 
 .about-title {
   padding-top: 110px;
+}
+
+#about-padding {
+  padding-top: 250px;
 }
 
 .value-blurb {

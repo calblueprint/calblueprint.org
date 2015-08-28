@@ -7,7 +7,7 @@
   }
 
   .panel {
-    height: 365px;
+    height: 370px;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -15,12 +15,14 @@
   }
 
   .panel-container {
+    /*background-color, height, position, text-align, width, z-index */
+    background-color: rgba(0, 0, 0, 0.5);
     height: 300px;
     position: static;
     text-align: center;
     width: 100%;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    
 
     .title {
       color: $white;

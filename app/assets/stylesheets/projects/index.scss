@@ -52,12 +52,12 @@ $demo-btn-shadow: #3C93D5;
   .project-expand {
     background-color: $project-bg-color;
     border: 1px solid $project-border-color;
+    border-radius: 6px;
     display: none;
     overflow: hidden;
     padding: 6px;
     padding-bottom: 36px;
     width: 100%;
-    border-radius: 6px;
 
     .project-expand-section {
       @extend .columns;
@@ -120,8 +120,8 @@ $demo-btn-shadow: #3C93D5;
     border-left: 0;
     border-radius: 0 6px 6px 0;
     height: $block-height;
-    position: relative;
     padding: 10px 26px;
+    position: relative;
 
     @mixin project-card-text {
       color: $project-text-color;
@@ -130,12 +130,12 @@ $demo-btn-shadow: #3C93D5;
 
     .project-title {
       @include project-card-text;
+      color: $black;
       height: 57px;
       line-height: 57px;
-      overflow: hidden;
-      color: black;
-      padding: 0 10px;
       margin-top: 5px;
+      overflow: hidden;
+      padding: 0 10px;
     }
 
     .project-description {
@@ -143,8 +143,8 @@ $demo-btn-shadow: #3C93D5;
       font-size: 16px;
       height: 48px;
       line-height: 24px;
-      padding: 0 10px;
       margin-bottom: 10px;
+      padding: 0 10px;
     }
 
     .project-subtitle {
@@ -225,9 +225,9 @@ $demo-btn-shadow: #3C93D5;
   background-position: center;
   background-size: cover;
   height: 365px;
-  width: 100%;
   position: fixed;
   top: 0;
+  width: 100%;
   z-index: -1;
 }
 

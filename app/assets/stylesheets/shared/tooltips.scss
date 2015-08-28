@@ -33,9 +33,9 @@
     @include transition (all 0.2s ease-in-out);
     background: $white;
     background-color: $tooltip-background;
+    border: 1px solid $gray-background-border-color;
     border-radius: $base-border-radius;
     // box-shadow: $tooltip-shadow;
-    border: 1px solid $gray-background-border-color;
     color: $tooltip-color;
     font-size: 0.9em;
     // Make sure you use -webkit-backface-visibility: hidden; on the body element to prevent 1px nudging bugs.

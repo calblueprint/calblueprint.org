@@ -7,8 +7,8 @@ $small-screen: em(420);
   height: 660px;
 
   @include media(max-width $medium-screen) {
-    width: 100%;
     height: 550px;
+    width: 100%;
   }
 }
 
@@ -21,17 +21,17 @@ $small-screen: em(420);
 }
 
 #home-screen {
-  width: 552px;
-  height: 345px;
-  border: 1px solid $gray-background-border-color;
-  border-radius: 6px;
   background: image-url("elevate-africa.png");
   background-size: cover;
-
+  border: 1px solid $gray-background-border-color;
+  border-radius: 6px;
+  height: 345px;
+  width: 552px;
+  
   @include media(max-width $medium-screen) {
-    width: 100%;
     height: 150px;
     margin-bottom: 50px;
+    width: 100%;
   }
 }
 
@@ -113,6 +113,7 @@ $small-screen: em(420);
 
 #home-title {
   padding-top: 75px;
+
   @include media(max-width $small-screen) {
     padding-top: 32px;
   }
@@ -127,27 +128,26 @@ $small-screen: em(420);
 }
 
 .bold-blue {
+  color: $blue;
   font-weight: bold;
-  color: #477DCA;
 }
 
 #our-projects {
-  position: relative;
-  top: -5px;
   left: 25px;
+  position: relative;
   text-align: left;
-
-  p,
-  h2 {
-    text-align: left;
-  }
+  top: -5px;
 
   @include media(max-width $medium-screen) {
     left: 0;
     text-align: center;
+  }
 
-    p,
-    h2 {
+  p,
+  h2 {
+    text-align: left;
+
+    @include media(max-width $medium-screen) {
       text-align: center;
     }
   }

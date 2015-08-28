@@ -24,8 +24,8 @@
   }
 
   li {
-    padding-top: 5px;
     font-size: 14px;
+    padding-top: 5px;
 
     a {
       color: $footer-link-color;
@@ -57,7 +57,7 @@
   }
 
   .copyright {
-    color: #666;
+    color: $what-i-think-rspec-really-is;
     text-align: left;
   }
 
@@ -68,8 +68,18 @@
   .general li {
     display: inline-block;
   }
+}
 
-  @include media(max-width $medium-screen) {
+.footer-form {
+  text-align: right;
+}
+
+@include media(max-width $medium-screen) {
+  .bottom-footer-section {
+    padding-top: 15px;
+  }
+
+  .footer {
     padding: 50px 10px 40px;
 
     .footer-form {
@@ -82,15 +92,5 @@
       position: relative;
       top: 26px;
     }
-  }
-}
-
-.footer-form {
-  text-align: right;
-}
-
-@include media(max-width $medium-screen) {
-  .bottom-footer-section {
-    padding-top: 15px;
   }
 }

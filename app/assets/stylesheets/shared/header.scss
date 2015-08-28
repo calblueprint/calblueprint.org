@@ -20,11 +20,11 @@ header.navigation {
   .navigation-wrapper {
     @include clearfix;
     @include outer-container(100%);
+    border-bottom: 1px solid $gray-background-border-color;
+    padding: 5px;
+    padding-top: 10px;
     position: relative;
     z-index: 9999;
-    padding-top: 10px;
-    padding: 5px;
-    border-bottom: 1px solid $gray-background-border-color;
   }
 
   .logo {
@@ -34,6 +34,10 @@ header.navigation {
     max-height: $navigation-height;
     padding: 0 0.4em;
 
+    @include media ($horizontal-bar-mode) {
+      padding: 0 $navigation-padding;
+    }
+
     img {
       max-height: $navigation-height;
       padding: 0.4em 0;
@@ -42,10 +46,6 @@ header.navigation {
     &:hover {
       @include transform(rotate(360deg));
       @include transform-origin(center);
-    }
-
-    @include media ($horizontal-bar-mode) {
-      padding: 0 $navigation-padding;
     }
   }
 
@@ -127,8 +127,8 @@ header.navigation {
     a {
       color: $navigation-color;
       display: inline-block;
-      font-weight: bold;
       font-size: 14px;
+      font-weight: bold;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
@@ -268,13 +268,13 @@ header.navigation {
     border-radius: 4px;
     display: inline;
     float: right;
-    font-weight: bold;
     font-size: 14px;
-    margin: 8px 8px 10px 8px;
+    font-weight: bold;
+    margin: 8px 8px 10px;
     padding: 8px 25px;
 
     @include media($horizontal-bar-mode) {
-      margin: 8px 8px 0px 0px;
+      margin: 8px 8px 0 0;
     }
   }
 }

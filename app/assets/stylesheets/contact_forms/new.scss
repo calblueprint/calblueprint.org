@@ -1,13 +1,13 @@
 #contact-image {
-  position: fixed;
-  z-index: -1;
-  top: 0;
   background-image: image-url("contact.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 365px;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: -1;
 }
 
 .spacer-form {
@@ -70,16 +70,20 @@
     opacity: 1;
   }
 
-  input, textarea {
-    box-shadow: none;
+  input,
+  textarea {
     border: 1px solid $gray-background-border-color;
     border-radius: 4px;
-    transition: 0.5s;
+    box-shadow: none;
     padding: 10px 15px;
+    transition: 0.5s;
   }
 
-  input:hover, textarea:hover, input:focus, textarea:focus {
-    box-shadow: none;
+  input:hover,
+  textarea:hover,
+  input:focus,
+  textarea:focus {
     border: 1px solid $sky-label-blue;
+    box-shadow: none;
   }
 }

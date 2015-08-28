@@ -44,7 +44,7 @@ $small-screen: em(420);
 #home-banner {
   // background: image-url("home/banner-bg.jpg");
   // background-size: cover;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
   height: 600px;
   position: relative;
   width: 100%;

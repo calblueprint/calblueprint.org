@@ -11,7 +11,7 @@
 }
 
 .gear-img-small {
-  @include transform(scale(0.5, 0.5));
+  @include transform(scale(0.4, 0.4));
 
   background: image-url("apply/gears.svg");
   background-size: cover;
@@ -20,5 +20,5 @@
   left: -525px;
   position: absolute;
   width: 600px;
-  z-index: -1;
+  z-index: 1;
 }

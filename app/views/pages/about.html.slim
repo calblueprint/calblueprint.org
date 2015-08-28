@@ -13,51 +13,42 @@
       .spacer-small
 .about-detail-block
   a#linkto-traits.prev
+  .spacer
   .row
     .medium-4.columns
-      .spacer
       .about-value
         .icon-wrapper
           .hover-icon
             = image_tag("about/craft-hover.png", class: "icon-bottom")
             = image_tag("about/craft.png", class: "icon-top")
-        .spacer-small
     .medium-8.columns
-      .spacer
       .about-value
-        .spacer
+        .spacer.show-on-large-up
         p = t ".values.craft"
-        .spacer-small
+  .spacer-small
   .row
-    .medium-8.columns
-      .spacer
-      .about-value
-        .spacer
-        p = t ".values.culture"
-        .spacer
-    .medium-4.columns
-      .spacer
+    .medium-4.columns.medium-push-8
       .about-value
         .icon-wrapper
           .hover-icon
             = image_tag("about/culture-hover.png", class: "icon-bottom")
             = image_tag("about/culture.png", class: "icon-top")
-        .spacer-small
+    .medium-8.columns.medium-pull-4
+      .about-value
+        .spacer.show-on-large-up
+        p = t ".values.culture"
+  .spacer-small
   .row
     .medium-4.columns
-      .spacer
       .about-value
         .icon-wrapper
           .hover-icon
             = image_tag("about/heart-hover.png", class: "icon-bottom")
             = image_tag("about/heart.png", class: "icon-top")
-        .spacer-small
     .medium-8.columns
-      .spacer
       .about-value
-        .spacer
+        .spacer.show-on-large-up
         p = t ".values.heart"
-        .spacer-small
   .spacer
   .spacer
 .spacer

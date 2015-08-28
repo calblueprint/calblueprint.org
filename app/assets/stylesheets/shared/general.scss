@@ -71,6 +71,13 @@
   }
 }
 
+// Show on different screen sizes
+.show-on-large-up {
+  @media only screen and (max-width: $large-screen) {
+    display: none;
+  }
+}
+
 // Use to make your text white when putting over dark, color, or photo backgrounds.
 .white {
   color: $white;

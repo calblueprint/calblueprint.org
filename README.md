@@ -8,12 +8,15 @@ The Blueprint Website
 
 Dependencies:
 - `rvm` (https://rvm.io/)
-- Ruby `v2.1.4` (run `rvm install 2.1.4` to install)
+- Ruby `v2.2.0` (run `rvm install 2.2.0` to install)
 
-Run ```cd . && bin/setup``` from the project root to get everything set up.
+Setup:
+
+1. Create a `database.yml` file in `config/`.
+  - `config/database.yml.sample` is provided as an example; you'll need to tweak it a bit.
+2. Run `./bin/setup` from the project root.
 
 ## Cal Blueprint
-![bp](http://bptech.berkeley.edu/assets/logo-full-large-d6419503b443e360bc6c404a16417583.png "BP Banner")
 **[Cal Blueprint](http://www.calblueprint.org/)** is a student-run UC Berkeley organization devoted to matching the skills of its members to our desire to see social good enacted in our community. Each semester, teams of 4-5 students work closely with a non-profit to bring technological solutions to the problems they face every day.
 
 ## License

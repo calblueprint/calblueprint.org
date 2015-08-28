@@ -5,7 +5,7 @@ namespace :update do
     members_and_roles["roles"].each do |_, role_data|
       MemberRole.find_or_create_by! role_data
     end
-    members_and_roles["members"].each do |_, member_data|
+    members_and_roles["members"].each do |member_data|
       role_data = member_data.delete 'role'
       is_alumnus = member_data.key?('is_alumnus') && member_data.delete('is_alumnus')
       role = MemberRole.find_by role: role_data

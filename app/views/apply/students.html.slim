@@ -1,9 +1,9 @@
+.panel.students-bg
 .panel-container
-  .panel.students-bg
   h1.title = t ".headline"
   p.white.subtitle = t ".subtitle"
 .white-bg
-  .spacer-small
+  .spacer
   - if @settings.student_app_open
     .row
       .small-12.medium-9.columns
@@ -19,12 +19,12 @@
         .applications-closed
           p.center = t ".applications_closed"
           = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
-  .spacer-small
+  .spacer
 .gray-bg
-  .spacer-large
+  .spacer
   .row
     .title-column
-      h1 Application Process
+      h2 Application Process
     .content-column
       .small-12.columns
         ul.timeline-vertical
@@ -64,30 +64,38 @@
       .small-12.columns.decision-criteria
         .spacer-small
         h4.title Decision Criteria
+        .spacer-small
         p = t ".decision_criteria.description"
+        .spacer-small
         ul
           li
             strong Passion
             p This is the single most important criteria. Do you demonstrate a genuine passion for social good?
+            br
           li
             strong Skill
             p Do you have the necessary skills to productively contribute to the mission?
+            br
           li
             strong Experience
             p Do you have relevant work experience? Volunteering experience?
+            br
           li
             strong Attitude
             p Do you demonstrate positive, hard-working attitude?
+            br
           li
             strong Teamwork
             p Do you display the ability to work well in a team?
+            br
           li
             strong Culture
             p Will you get along well with the rest of Blueprint? We’re sure you will!
-  .spacer-large
+            br
+  .spacer
   .row
     .title-column
-      h1 FAQ
+      h2 FAQ
     .content-column
       #faq.small-12.columns
         .drawer
@@ -108,7 +116,7 @@
             span<
               | (+)
           p = t ".faq.q3.answer"
-  .spacer-large
+  .spacer
   .row
     .small-12.columns
       h2 Want to be involved?
@@ -116,4 +124,5 @@
   .row
     .small-8.small-centered.columns
       = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
+  .spacer
   .spacer-small

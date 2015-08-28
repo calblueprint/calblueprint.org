@@ -1,9 +1,9 @@
+.panel.nonprofits-bg
 .panel-container
-  .panel.nonprofits-bg
   h1.title = t ".headline"
   p.white.subtitle = t ".subtitle"
 .white-bg
-  .spacer-small
+  .spacer
   - if @settings.npo_app_open
     .row
       .small-12.medium-9.columns
@@ -19,7 +19,7 @@
         .applications-closed
           p.center = t ".applications_closed"
           = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
-  .spacer-small
+  .spacer
 .gray-bg
   ul#apply_nav.submenu
     li data-target="services" Our Services
@@ -27,10 +27,10 @@
     li data-target="timeline" Project Timeline
     li data-target="previous_work" Previous Work
     li data-target="faq" FAQ
-  .spacer-large
+  .spacer
   .row
     .title-column
-      h1#services.title
+      h2#services.title
         | Our
         br/
         | Services
@@ -41,15 +41,17 @@
             strong Web Application Development
             br/
             = t ".services.web_application_development"
+      .spacer-small
+      .row
         .small-12.columns
           p
             strong Mobile Application Development
             br/
             = t ".services.mobile_application_development"
-  .spacer-large
+  .spacer
   .row
     .title-column
-      h1#process Application Process
+      h2#process Application Process
     .content-column
       .row
         .small-12.columns
@@ -90,20 +92,26 @@
         .small-12.columns.decision-criteria
           .spacer-small
           h4.title Decision Criteria
+          .spacer-small
           p = t ".decision_criteria.description"
+          .spacer-small
           ul
             li
               strong Impact
               p How much will your project impact the community?
+              br
             li
               strong Necessity
               p How vital is your project to your non-profit organization?
+              br
             li
               strong Scope
               p Is your project achievable within the alloted timeline?
+              br
             li
               strong Technical Fit
               p Does your project use the capabilities of technology? For example, an application to manage a classroom is more interesting than a website redesign.
+              br
             li
               strong Credibility
               p Is there evidence that your project will have an impact?
@@ -116,7 +124,7 @@
   .spacer
   .row
     .title-column
-      h1#timeline Project Timeline
+      h2#timeline Project Timeline
     .content-column
       .row
         .small-12.columns
@@ -149,7 +157,7 @@
   .spacer-large
   .row
     .title-column
-      h1#previous_work Previous Work
+      h2#previous_work Previous Work
     .content-column
       .row
         .small-12.small-centered.columns.center
@@ -165,7 +173,7 @@
   .spacer-large
   .row
     .title-column
-      h1#faq FAQ
+      h2#faq FAQ
     .content-column
       .row
         #faq.small-12.columns
@@ -187,4 +195,5 @@
               span<
                 | (+)
             p = t ".faq.q3.answer"
+  .spacer
   .spacer-small

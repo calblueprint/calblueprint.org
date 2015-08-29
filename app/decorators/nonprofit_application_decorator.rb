@@ -5,6 +5,7 @@ class NonprofitApplicationDecorator < ApplicationDecorator
     [:email, :purpose, :history, :date_established, :legal,
      :short_summary, :goals, :key_features, :devices, :target_audience, :why]
   end
+
   def date_established
     object.date_established.readable_inspect
   end

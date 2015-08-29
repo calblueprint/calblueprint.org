@@ -24,9 +24,10 @@ class ApplicationDecorator < Draper::Decorator
   def right_col_html(attribute)
     h.content_tag :div, class: "two-col-right" do
       val = send(attribute.is_a?(Array) ? attribute[0] : attribute)
-      if !!val == val  # nifty bool check: http://stackoverflow.com/a/3033645
-        val = yesno(val)
-      end
+      # rubocop:disable Style/DoubleNegation
+      # nifty bool check: http://stackoverflow.com/a/3033645
+      !!val == val && val = yesno(val)
+      # rubocop:enable Style/DoubleNegation
       h.simple_format val
     end
   end

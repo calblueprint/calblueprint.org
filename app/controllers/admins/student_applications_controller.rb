@@ -8,6 +8,11 @@ module Admins
       end
     end
 
+    def show
+      app = StudentApplication.find(params[:id])
+      @app = StudentApplicationDecorator.new app
+    end
+
     def import
       # TODO: Bugs out when no file
       StudentAppsCsv.import_decisions params[:file]

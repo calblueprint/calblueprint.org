@@ -24,7 +24,7 @@
             td.column-remove-small = app.applicant.email
             td.column-remove-medium = app.semester.season
             td.column-remove-medium = app.semester.year
-            td.column-remove-medium = link_to "Details", "URL TO DETAILS", class: "button"
+            td.column-remove-medium = link_to "Details", admin_student_application_path(app.id), class: "button"
             td
               = link_to "", approve_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button fa fa-check", selected_if?(app.final_decision.accepted?)]
               .spacer-small

@@ -13,12 +13,6 @@ describe NonprofitApplicationDecorator do
     end
   end
 
-  describe "#legal" do
-    it "returns the string 'Yes' if legal" do
-      expect(decorator.legal).to eql "Yes"
-    end
-  end
-
   describe "#devices" do
     it "removes blank elements and returns an comma'd string" do
       expect(decorator.devices).to eql(

@@ -1,0 +1,19 @@
+.spacer-small
+.banner
+  .banner-text
+    h1 = @app.name
+
+.spacer-small
+
+.row
+  .small-12.columns
+    - @app.display_attributes.each do |attribute|
+      = @app.attribute_html attribute
+
+.spacer-small
+
+.row
+  .small-12.center
+    = link_to 'Back', :back, class: "button"
+
+.spacer

@@ -14,6 +14,4 @@ class StudentApplicationDecorator < ApplicationDecorator
   def resume
     h.link_to "Link", object.resume.url
   end
-
-
 end

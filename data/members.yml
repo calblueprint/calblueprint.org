@@ -77,6 +77,11 @@ members:
     email: 'shreya995@gmail.com'
     <<: *community
 
+  - first: 'Alice'
+    last: 'Deng'
+    email: 'alicevdeng@gmail.com'
+    <<: *corporate
+
   # Project Leaders
 
   - first: 'Nikhil'
@@ -146,37 +151,42 @@ members:
     email: 'eriicaericaerica@gmail.com'
     <<: *developer
 
-alumni:
+  - first: 'Tricia'
+    last: 'Fu'
+    email: 'triciasfu@berkeley.edu'
+    <<: *developer
 
-  - first: 'Alice'
-    last: 'Oh'
-    email: 'missonederland@gmail.com'
-    <<: *external
+  - first: 'Nikita'
+    last: 'Rau'
+    email: 'raun@berkeley.edu'
+    <<: *developer
+
+alumni:
 
   - first: "Jessica"
     last: "Lin"
     email: 'heyjaylin@gmail.com'
     <<: *president
 
+  - first: 'Alice'
+    last: 'Oh'
+    email: 'missonederland@gmail.com'
+    <<: *external
+
+  - first: 'Mark'
+    last: 'Miyashita'
+    email: 'negativetwelve@gmail.com'
+    <<: *tech
+
+  - first: 'Jessica'
+    last: 'Shen'
+    email: 'jessicashen93@gmail.com'
+    <<: *corporate
+
   - first: 'Byron'
     last: 'Zhang'
     email: 'byron.yi.zhang@gmail.com'
     <<: *leader
-
-  - first: 'Harrison'
-    last: 'Tsai'
-    email: 'harrisontsai0123@gmail.com'
-    <<: *developer
-
-  - first: 'Kevin'
-    last: 'Shieh'
-    email: 'kevshieh@gmail.com'
-    <<: *developer
-
-  - first: 'Will'
-    last: 'Tang'
-    email: 'williamctang93@gmail.com'
-    <<: *developer
 
   - first: 'Varun'
     last: 'Rau'
@@ -203,7 +213,23 @@ alumni:
     email: 'noah.w.gilmore@gmail.com'
     <<: *leader
 
-  - first: 'Mark'
-    last: 'Miyashita'
-    email: 'negativetwelve@gmail.com'
-    <<: *tech
+  - first: 'Harrison'
+    last: 'Tsai'
+    email: 'harrisontsai0123@gmail.com'
+    <<: *developer
+
+  - first: 'Kevin'
+    last: 'Shieh'
+    email: 'kevshieh@gmail.com'
+    <<: *developer
+
+  - first: 'Will'
+    last: 'Tang'
+    email: 'williamctang93@gmail.com'
+    <<: *developer
+
+  - first: 'Anthony'
+    last: 'Sutardja'
+    email: 'anthony.sutardja@gmail.com'
+    <<: *developer
+

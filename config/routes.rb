@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   namespace :admins, as: :admin do
     resource :projects
 
-    resources :student_applications, only: [:index] do
+    resources :student_applications, only: [:index, :show] do
       collection { post :import }
     end
 

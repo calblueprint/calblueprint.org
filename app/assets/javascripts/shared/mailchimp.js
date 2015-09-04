@@ -1,4 +1,4 @@
-$(document).ready(function() {
+function mailchimp() {
   $(".newsletter-form").each(function(id, form) {
     $(form).children("button").one("click", function(){
       if ($(form).children("input").val()) {
@@ -23,4 +23,6 @@ $(document).ready(function() {
       }
     });
   });
-});
+}
+
+ready(mailchimp);

@@ -6,7 +6,8 @@ class StudentAppsCsv
       CSV.generate do |csv|
         csv << COLUMN_NAMES
         student_applications.order("created_at desc").each do |app|
-          csv << [app.created_at, app.final_decision.id, app.applicant.name, app.applicant.email, app.final_decision.decision]
+          csv << [app.created_at, app.final_decision.id, app.applicant.name,
+                  app.applicant.email, app.final_decision.decision]
         end
       end
     end

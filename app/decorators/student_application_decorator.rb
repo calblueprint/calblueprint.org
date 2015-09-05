@@ -12,6 +12,6 @@ class StudentApplicationDecorator < ApplicationDecorator
   end
 
   def resume
-    h.link_to "Link", object.resume.url
+    h.link_to "Link", object.resume.url, target: '_blank'
   end
 end

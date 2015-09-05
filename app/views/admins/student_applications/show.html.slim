@@ -14,6 +14,10 @@
 
 .row
   .small-12.center
-    = link_to 'Back', :back, class: "button"
+    - if StudentApplication.where("id < ?", @app.id).last
+      = link_to 'Previous', admin_student_application_path(StudentApplication.where("id < ?", @app.id).last), class: "button"
+    = link_to 'Index', :back, class: "button"
+    - if StudentApplication.where("id > ?", @app.id).first
+      = link_to 'Next', admin_student_application_path(StudentApplication.where("id > ?", @app.id).first), class: "button"
 
 .spacer

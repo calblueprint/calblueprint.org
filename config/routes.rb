@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/sponsors", to: "pages#sponsors"
 
   # Devise
-  devise_for :admins, controllers: { invitations: "admins/invitations" }
+  devise_for :admin, controllers: { invitations: "admin/invitations" }
   devise_for :applicants, controllers: { omniauth_callbacks: "applicants/omniauth_callbacks" }
   devise_for :nonprofits
 
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   resources :contact_forms, only: [:new, :create]
 
   # Admin
-  namespace :admins, as: :admin do
+  namespace :admin do
     resource :projects
 
     resources :student_applications, only: [:index, :show] do

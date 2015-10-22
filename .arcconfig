@@ -1,4 +1,9 @@
 {
   "phabricator.uri": "http://phab.calblueprint.org",
-  "history.immutable": false
+  "history.immutable": false,
+  "project.name": "calblueprint.org",
+  "load": [
+    "/Users/Aleks/Projects/blueprint/traphic/conphig"
+  ],
+  "arcanist_configuration": "Conphig"
 }

@@ -77,6 +77,11 @@ members:
     email: 'shreya995@gmail.com'
     <<: *community
 
+  - first_name: 'Grace'
+    last_name: 'Noh'
+    email: 'gracesnoh@berkeley.edu'
+    <<: *media
+
   - first_name: 'Alice'
     last_name: 'Deng'
     email: 'alicevdeng@gmail.com'

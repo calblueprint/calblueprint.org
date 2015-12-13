@@ -276,7 +276,6 @@ Devise.setup do |config|
   # https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview#openssl
   # for more info.
   require "omniauth-facebook"
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
   config.omniauth :facebook,      ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"]
   config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
 

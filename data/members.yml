@@ -40,196 +40,246 @@ members:
 
   # E-Team
 
-  - first: 'Howard'
-    last: 'Chen'
+  - first_name: 'Howard'
+    last_name: 'Chen'
     email: 'howardxchen@gmail.com'
     <<: *president
 
-  - first: 'Vivek'
-    last: 'Raghuram'
+  - first_name: 'Vivek'
+    last_name: 'Raghuram'
     email: 'vivekrag95@gmail.com'
     <<: *external
 
-  - first: 'Quinton'
-    last: 'Dang'
+  - first_name: 'Quinton'
+    last_name: 'Dang'
     email: 'quintonddang@gmail.com'
     <<: *internal
 
-  - first: 'Aleks'
-    last: 'Kamko'
+  - first_name: 'Aleks'
+    last_name: 'Kamko'
     email: 'aykamko@gmail.com'
     <<: *tech
 
-  - first: 'Nishant'
-    last: 'Desai'
+  - first_name: 'Nishant'
+    last_name: 'Desai'
     email: 'nish.sdesai@gmail.com'
     <<: *projects
 
   # External Team
 
-  - first: 'Soo'
-    last: 'Song'
+  - first_name: 'Soo'
+    last_name: 'Song'
     email: 'soosong@berkeley.edu'
     <<: *media
 
-  - first: 'Shreya'
-    last: 'Shanbhag'
+  - first_name: 'Shreya'
+    last_name: 'Shanbhag'
     email: 'shreya995@gmail.com'
     <<: *community
 
-  - first: 'Alice'
-    last: 'Deng'
+  - first_name: 'Alice'
+    last_name: 'Deng'
     email: 'alicevdeng@gmail.com'
     <<: *corporate
 
   # Project Leaders
 
-  - first: 'Nikhil'
-    last: 'Narayen'
+  - first_name: 'Nikhil'
+    last_name: 'Narayen'
     email: 'nikhil.narayen@gmail.com'
     <<: *leader
 
-  - first: 'Daniel'
-    last: 'Li'
+  - first_name: 'Daniel'
+    last_name: 'Li'
     email: 'danielmxli@gmail.com'
     <<: *leader
 
-  - first: 'Warren'
-    last: 'Shen'
+  - first_name: 'Warren'
+    last_name: 'Shen'
     email: 'warrenzshen@gmail.com'
     <<: *leader
 
-  - first: 'Jordeen'
-    last: 'Chang'
+  - first_name: 'Jordeen'
+    last_name: 'Chang'
     email: 'jordeenchang@gmail.com'
     <<: *leader
 
-  - first: 'Andrew'
-    last: 'Millman'
+  - first_name: 'Andrew'
+    last_name: 'Millman'
     email: 'andrewmillman35@gmail.com'
     <<: *leader
 
   # Developers
 
-  - first: 'Sam'
-    last: 'Lau'
+  - first_name: 'Anthony'
+    last_name: 'Huang'
+    email: 'a.h@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Casey'
+    last_name: 'Takahashi'
+    email: 'caseytaka@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Eric'
+    last_name: 'Liang'
+    email: 'liang.eric24@gmail.com'
+    <<: *developer
+
+  - first_name: 'Helen'
+    last_name: 'Che'
+    email: 'helenc@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Isaiah'
+    last_name: 'Yoon'
+    email: 'isaiahyoon22@gmail.com'
+    <<: *developer
+
+  - first_name: 'Jonathan'
+    last_name: 'Chu'
+    email: 'jonmchu@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Kelsey'
+    last_name: 'Lam'
+    email: 'kelseylam@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Shannon'
+    last_name: 'Chu'
+    email: 'shannonchu@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Sonia'
+    last_name: 'Yang'
+    email: 'sonia.yang@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Unzi'
+    last_name: 'Park'
+    email: 'upark.go@gmail.com'
+    <<: *developer
+
+  - first_name: 'Sam'
+    last_name: 'Lau'
     email: 'samlau95@gmail.com'
     <<: *developer
 
-  - first: 'Eric'
-    last: 'Shen'
+  - first_name: 'Eric'
+    last_name: 'Shen'
     email: 'email.ericshen@gmail.com'
     <<: *developer
 
-  - first: 'Max'
-    last: 'Wolffe'
+  - first_name: 'Max'
+    last_name: 'Wolffe'
     email: 'max.alan.wolffe@gmail.com'
     <<: *developer
 
-  - first: 'Sameera'
-    last: 'Vemulapalli'
+  - first_name: 'Sameera'
+    last_name: 'Vemulapalli'
     email: 'sameera.vemulapalli@gmail.com'
     <<: *developer
 
-  - first: 'Ethan'
-    last: 'Chiou'
+  - first_name: 'Ethan'
+    last_name: 'Chiou'
     email: 'nahte.uoihc@gmail.com'
     <<: *developer
 
-  - first: 'Andy'
-    last: 'Qin'
+  - first_name: 'Andy'
+    last_name: 'Qin'
     email: 'qin@berkeley.edu'
     <<: *developer
 
-  - first: 'Kevin'
-    last: 'Wu'
+  - first_name: 'Kevin'
+    last_name: 'Wu'
     email: 'kevintxwu@gmail.com'
     <<: *developer
 
-  - first: 'Erica'
-    last: 'Yin'
+  - first_name: 'Erica'
+    last_name: 'Yin'
     email: 'eriicaericaerica@gmail.com'
     <<: *developer
 
-  - first: 'Tricia'
-    last: 'Fu'
+  - first_name: 'Tricia'
+    last_name: 'Fu'
     email: 'triciasfu@berkeley.edu'
     <<: *developer
 
-  - first: 'Nikita'
-    last: 'Rau'
+  - first_name: 'Nikita'
+    last_name: 'Rau'
     email: 'raun@berkeley.edu'
     <<: *developer
 
 alumni:
 
-  - first: "Jessica"
-    last: "Lin"
+  - first_name: "Jessica"
+    last_name: "Lin"
     email: 'heyjaylin@gmail.com'
     <<: *president
 
-  - first: 'Alice'
-    last: 'Oh'
+  - first_name: 'Alice'
+    last_name: 'Oh'
     email: 'missonederland@gmail.com'
     <<: *external
 
-  - first: 'Mark'
-    last: 'Miyashita'
+  - first_name: 'Mark'
+    last_name: 'Miyashita'
     email: 'negativetwelve@gmail.com'
     <<: *tech
 
-  - first: 'Jessica'
-    last: 'Shen'
+  - first_name: 'Jessica'
+    last_name: 'Shen'
     email: 'jessicashen93@gmail.com'
     <<: *corporate
 
-  - first: 'Byron'
-    last: 'Zhang'
+  - first_name: 'Byron'
+    last_name: 'Zhang'
     email: 'byron.yi.zhang@gmail.com'
     <<: *leader
 
-  - first: 'Varun'
-    last: 'Rau'
+  - first_name: 'Varun'
+    last_name: 'Rau'
     email: 'varun@berkeley.edu'
     <<: *leader
 
-  - first: 'Atsunori'
-    last: 'Kakitani'
+  - first_name: 'Atsunori'
+    last_name: 'Kakitani'
     email: 'atsunori.kakitani@gmail.com'
     <<: *leader
 
-  - first: 'Elizabeth'
-    last: 'Lin'
+  - first_name: 'Elizabeth'
+    last_name: 'Lin'
     email: 'elizabethylin@gmail.com'
     <<: *developer
 
-  - first: 'Jason'
-    last: 'Won'
+  - first_name: 'Jason'
+    last_name: 'Won'
     email: 'jason.j.won@gmail.com'
     <<: *leader
 
-  - first: 'Noah'
-    last: 'Gilmore'
+  - first_name: 'Noah'
+    last_name: 'Gilmore'
     email: 'noah.w.gilmore@gmail.com'
     <<: *leader
 
-  - first: 'Harrison'
-    last: 'Tsai'
+  - first_name: 'Harrison'
+    last_name: 'Tsai'
     email: 'harrisontsai0123@gmail.com'
     <<: *developer
 
-  - first: 'Kevin'
-    last: 'Shieh'
+  - first_name: 'Kevin'
+    last_name: 'Shieh'
     email: 'kevshieh@gmail.com'
     <<: *developer
 
-  - first: 'Will'
-    last: 'Tang'
+  - first_name: 'Will'
+    last_name: 'Tang'
     email: 'williamctang93@gmail.com'
     <<: *developer
 
-  - first: 'Anthony'
-    last: 'Sutardja'
+  - first_name: 'Anthony'
+    last_name: 'Sutardja'
     email: 'anthony.sutardja@gmail.com'
     <<: *developer
 

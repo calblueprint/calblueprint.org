@@ -1,7 +1,7 @@
 namespace :update do
   desc 'Updates our members to match our yml file'
   task members: :environment do
-    members_and_roles = YAML.load_file(Rails.root.join('db', 'members.yml'))
+    members_and_roles = YAML.load_file(Rails.root.join('data', 'members.yml'))
     members_and_roles["roles"].each do |_, role_data|
       MemberRole.find_or_create_by! role_data
     end

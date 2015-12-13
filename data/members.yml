@@ -166,6 +166,11 @@ members:
     email: 'samlau95@gmail.com'
     <<: *developer
 
+  - first_name: 'Charles'
+    last_name: 'Xue'
+    email: 'charlesx2013@gmail.com'
+    <<: *developer
+
   - first_name: 'Eric'
     last_name: 'Shen'
     email: 'email.ericshen@gmail.com'

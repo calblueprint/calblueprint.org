@@ -2,7 +2,6 @@ $laptop-width: 969px;
 $small-screen: em(420);
 
 #home-image {
-  background: image-url("home/banner-bg.jpg");
   background-size: cover;
   height: 665px;
 
@@ -27,7 +26,7 @@ $small-screen: em(420);
   border-radius: 6px;
   height: 345px;
   width: 552px;
-  
+
   @include media(max-width $medium-screen) {
     height: 150px;
     margin-bottom: 50px;

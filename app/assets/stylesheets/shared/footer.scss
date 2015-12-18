@@ -1,96 +1,128 @@
+/**
+ * The footer is shown at the bottom of every page and makes heavy use of flexbox to place items.
+ *
+ * [1] The wrapper container has two children: the footer links and the footer icons (which also contains the
+ *     copyright). These are laid out from top to bottom using flex-direction: column.
+ * [2] The footer links just lay their link columns out from left to right.
+ *    [2a] On medium screens and smaller, we put two link columns side-by-side.
+ * [3] The newsletter signup form takes up more space.
+ *    [3a] On large screens and smaller, we put the signup form on its own row for readability.
+ * [4] The footer icons are right-aligned, whereas...
+ * [5] The copyright is left-aligned.
+ *
+ * The weird indentation is an experiment based on http://cssguidelin.es/#indenting
+ * This lets us avoid super specific selectors while preserving the component hierarchy.
+ */
+
 .footer {
   $greyed-out-color: #777;
   $footer-bg-color: #333;
   $footer-text-color: #CCC;
   $footer-link-color: #AAA;
   $footer-icon-color: #BBB;
+  $link-font-size: 14px;
 
   background-color: $footer-bg-color;
-  padding: 50px 10px 30px;
+  padding: 50px 30px 30px;
+
   text-align: left;
+  color: $footer-text-color;
 
-  h6 {
-    color: $white;
-    text-align: left;
-  }
+  display: flex;
+  flex-direction: column; /* [1] */
 
-  .footer-section {
-    padding-bottom: 5px;
-  }
+  .footer__greyed-out {
+    // This is a hack to make tooltips work, since they only work on relatively positioned items.
+    // See tooltips.scss
+    // TODO(sam): Make tooltips work on all positioning types.
+    position: relative;
 
-  p {
-    color: $footer-text-color;
-    text-align: left;
-  }
-
-  li {
-    font-size: 14px;
-    padding-top: 5px;
-
-    a {
-      color: $footer-link-color;
-
-      &:hover {
-        color: $white;
-      }
-    }
-  }
-
-  .footer-text {
-    padding-bottom: 5px;
-  }
-
-  .greyed-out {
     color: $greyed-out-color;
+    font-size: $link-font-size;
   }
 
-  .fa,
-  a .fa {
-    color: $footer-icon-color;
-    font-size: 1em;
-    margin: 10px;
-    text-decoration: none;
+  .footer__items {
+    display: flex; /* [2] */
+    flex-flow: row wrap;
+    justify-content: space-around;
 
-    &:hover {
-      color: $white;
-    }
+    // Don't want the footer getting too wide, so set a max-width
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 
-  .copyright {
-    color: $what-i-think-rspec-really-is;
-    text-align: left;
+      .footer__link-column {
+        flex: 1 auto;
+
+        margin-bottom: 10px;
+
+        @include media(max-width $medium-screen) {
+          flex: 1 50%; /* [2a] */
+        }
+      }
+
+          .footer__header {
+            @extend h6;
+            color: $white;
+            text-align: left;
+
+            margin-bottom: 5px;
+          }
+
+          .footer__link {
+            display: block;
+            padding: 3px 0;
+
+            font-size: $link-font-size;
+            color: $footer-link-color;
+
+            &:hover {
+              color: $white;
+            }
+          }
+
+      .footer__newsletter-form {
+        flex: 4; /* [3] */
+
+        @include media(max-width $large-screen) {
+          flex: 1 100%; /* [4] */
+
+          margin-top: 10px;
+        }
+      }
+
+          .footer__newsletter-text {
+            @extend p;
+            text-align: left;
+          }
+
+  .footer__icons {
+    display: flex;
+    justify-content: flex-end; /* [4] */
+
+    width: 100%;
+    max-width: 1024px;
+    margin: 10px auto;
   }
 
-  .icons {
-    text-align: right;
-  }
+      .footer__copyright {
+        @extend small;
 
-  .general li {
-    display: inline-block;
-  }
-}
+        flex: 1; /* [5] */
 
-.footer-form {
-  text-align: right;
-}
+        color: $what-i-think-rspec-really-is;
+      }
 
-@include media(max-width $medium-screen) {
-  .bottom-footer-section {
-    padding-top: 15px;
-  }
+      .footer__icon {
+        margin: 0 10px;
 
-  .footer {
-    padding: 50px 10px 40px;
+        color: $footer-icon-color;
+        font-size: 1em;
+        text-decoration: none;
 
-    .footer-form {
-      position: relative;
-      top: 10px;
-    }
-
-    .fa,
-    a .fa {
-      position: relative;
-      top: 26px;
-    }
-  }
+        &:hover {
+          color: $white;
+        }
+      }
 }

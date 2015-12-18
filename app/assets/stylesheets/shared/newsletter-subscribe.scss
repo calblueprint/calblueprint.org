@@ -2,6 +2,9 @@
   display: flex;
   width: 100%;
 
+  color: $black;
+
+  // TODO(sam): Change the specificity of these. http://cssguidelin.es/#selector-intent
   input {
     border-bottom-left-radius: $form-border-radius;
     border-bottom-right-radius: 0;

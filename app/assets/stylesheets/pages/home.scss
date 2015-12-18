@@ -150,6 +150,8 @@ $small-screen: em(420);
   }
 }
 
+// This is pretty horrible since it affects the entire website, not just the home page.
+// TODO(sam): Move this to some normalizing spreadsheet, like general.scss
 p {
   margin: 0;
 }

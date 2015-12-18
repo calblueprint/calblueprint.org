@@ -19,6 +19,8 @@ html
     .container
       = render "header"
       = render "flash"
+
       .content class="#{body_class}"
         = yield
+
       = render "footer"

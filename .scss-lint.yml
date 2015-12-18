@@ -3,6 +3,18 @@ scss_files: "**/*.scss"
 exclude: "app/assets/stylesheets/vendor/*"
 
 linters:
+  # Disabled rules
+  Indentation:
+    enabled: false
+    allow_non_nested_indentation: false
+    character: space
+    width: 2
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+    severity: warning
+    separate_groups: false
+
   # We should enable these two later.
   SelectorDepth:
     enabled: false
@@ -60,11 +72,6 @@ linters:
     enabled: true
     leading_underscore: false
     filename_extension: false
-  Indentation:
-    enabled: true
-    allow_non_nested_indentation: false
-    character: space
-    width: 2
   LeadingZero:
     enabled: true
     style: include_zero
@@ -81,11 +88,6 @@ linters:
     enabled: true
     include_nested: false
     max_properties: 15
-  PropertySortOrder:
-    enabled: true
-    ignore_unspecified: false
-    severity: warning
-    separate_groups: false
   PropertySpelling:
     enabled: true
     extra_properties: []

@@ -32,8 +32,6 @@ Rails.application.routes.draw do
 
   # Admin
   namespace :admins, as: :admin do
-    resource :projects
-
     resources :student_applications, only: [:index, :show] do
       collection { post :import }
     end
@@ -45,6 +43,8 @@ Rails.application.routes.draw do
     resources :members
     resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters
+
+    resources :projects, only: [:index]
 
     resources :final_decisions, only: [] do
       member do

@@ -1,0 +1,18 @@
+/**
+ * Styles for the admin pages' layout.
+ *
+ * I use flexbox to solve the sticky footer problem:
+ * https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+ */
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.admin-content {
+  flex: 1;
+
+  margin-top: 20px;
+}

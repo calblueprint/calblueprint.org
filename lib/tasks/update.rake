@@ -18,7 +18,17 @@ namespace :update do
   task projects: :environment do
     projects = YAML.load_file Rails.root.join 'data', 'projects.yml'
     projects.each do |project|
-      Project.find_or_create_by! project
+      # The project object contains a banner_image key that has the URL of the
+      # image for a particular project. Normally, we could just do
+      # Project.create(project) and have the banner_image set properly because
+      # of Paperclip. However, since banner_image isn't an actual column in the
+      # DB, trying to find_by with that key results in an error. The following
+      # bit of code gets around that by excluding the key then setting it
+      # manually.
+      without_banner_image = project.reject { |k| k == 'banner_image' }
+      Project.find_or_create_by!(without_banner_image) do |p|
+        p.banner_image = project['banner_image']
+      end
     end
   end
 end

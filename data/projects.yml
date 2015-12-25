@@ -2,6 +2,7 @@
   short_summary: >
     Provides a way for Berkeley public school teachers to fund classroom projects.
   link: https://schoolsfund-friendsandfamily.herokuapp.com/
+  banner_image: https://s3.amazonaws.com/calblueprint-prod/images/bpsf.png
   full_description: >
     Every year, the schools fund would review hundreds of grant applications
     by hand in a very time consuming process. Grants would then only be
@@ -18,6 +19,7 @@
     Provides a secure way for the homeless to sign up for services and for
     volunteers to collect data.
   link: https://medium.com/@blueprint/learning-from-doing-39c9aa926b87
+  banner_image: https://s3.amazonaws.com/calblueprint-prod/images/phc.png
   full_description: >
     Project Homeless Connect runs approximately five events a year where they
     provide the homeless population of San Francisco with services such as
@@ -42,6 +44,7 @@
     Allows tech and design professionals around the Bay Area to teach courses
     at the Oakland Digital Office.
   link: https://bridge.odalc.org/
+  banner_image: https://s3.amazonaws.com/calblueprint-prod/images/odalc.png
   full_description: >
     ODALC aims to empower people with digital literacy education that will
     improve their lives and the communities they live in, but struggled with
@@ -58,6 +61,7 @@
     Provides a way for Roots of Success teachers to manage various curricula
     and classes.
   link: http://ros-staging.herokuapp.com/
+  banner_image: https://s3.amazonaws.com/calblueprint-prod/images/rootsofsuccess.png
   full_description: >
     Roots of Success strives to connect youth and adults from communities with
     high rates of poverty and unemployment to environmental careers and post-

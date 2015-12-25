@@ -4,7 +4,8 @@
   color: $white;
   padding: 2px 5px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $hover-button-color;
     color: $white;
   }

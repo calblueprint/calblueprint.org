@@ -1,0 +1,8 @@
+= render "form_errors", obj: project
+= simple_form_for [:admin, project] do |f|
+  = f.input :title
+  = f.input :short_summary
+  = f.input :link
+  = f.input :full_description
+
+  = f.button :submit

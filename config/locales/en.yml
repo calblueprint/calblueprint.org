@@ -205,8 +205,14 @@ en:
       index:
         banner: NPO Applications
       destroy:
-        error: An error occured while deleting the application.
+        error: An error occurred while deleting the application.
         success: "Successfully deleted %{organization_name}'s application."
+
+    projects:
+      update:
+        success: Project updated!
+      create:
+        success: Project created!
 
     semesters:
       destroy:
@@ -229,6 +235,11 @@ en:
 
   titles:
     application: Cal Blueprint
+    admins:
+      projects:
+        index: Projects | Admin
+        new: Projects | Admin
+        edit: Projects | Admin
     pages:
       home: Home | Cal Blueprint
       about: About | Cal Blueprint

@@ -1,1 +1,23 @@
-h1 Hello world
+h1.banner Projects
+p.subtitle These get displayed at /projects
+
+.row
+  .small-12.columns
+    = link_to "New Project", new_admin_project_path, class: 'button'
+
+    table.tables.projects-table
+      thead
+        tr
+          th.projects-table__title Title
+          th.projects-table__summary Short Summary
+          th.projects-table__actions Actions
+        tbody
+          - @projects.each do |project|
+            tr
+              td = project.title
+              td = project.short_summary
+              td
+                = link_to edit_admin_project_path(project),
+                          class: 'icon hint--top', data: { hint: 'Edit' } do
+                  = fa_icon 'pencil'
+

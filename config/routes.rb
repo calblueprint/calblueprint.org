@@ -44,7 +44,7 @@ Rails.application.routes.draw do
     resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters
 
-    resources :projects, only: [:index]
+    resources :projects, except: [:show]
 
     resources :final_decisions, only: [] do
       member do

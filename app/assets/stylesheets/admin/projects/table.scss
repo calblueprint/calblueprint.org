@@ -1,0 +1,22 @@
+/**
+ * This is the styling for the projects table in the admin dashboard.
+ *
+ * We want the summary column to be the widest and the actions column to be the
+ * smallest.
+ */
+
+.projects-table {
+  // This is a parent
+}
+
+    .projects-table__title {
+      width: 20%;
+    }
+
+    .projects-table__summary {
+      width: 60%;
+    }
+
+    .projects-table__actions {
+      width: 20%;
+    }

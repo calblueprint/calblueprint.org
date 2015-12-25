@@ -9,6 +9,7 @@
 #  first_name     :string
 #  email          :string
 #  member_role_id :integer
+#  is_alumnus     :boolean          default(FALSE)
 #
 
 require 'rails_helper'

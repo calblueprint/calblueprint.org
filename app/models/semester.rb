@@ -15,12 +15,11 @@ class Semester < ActiveRecord::Base
 
   has_many :student_applications
   has_many :nonprofit_applications
-  has_many :projects
 
   validates :year, uniqueness: { scope: [:season] }, presence: true
 
   def can_be_destroyed?
-    student_applications.none? && projects.none? && Semester.count > 1
+    student_applications.none? && Semester.count > 1
   end
 
   def to_s

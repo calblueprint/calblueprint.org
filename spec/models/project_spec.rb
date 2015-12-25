@@ -11,9 +11,11 @@
 #  full_description :text
 #
 
-class Project < ActiveRecord::Base
-  validates :title, presence: true
-  validates :short_summary, presence: true
-  validates :link, presence: true
-  validates :full_description, presence: true
+require 'rails_helper'
+
+RSpec.describe Project, type: :model do
+  it { should validate_presence_of :title }
+  it { should validate_presence_of :short_summary }
+  it { should validate_presence_of :link }
+  it { should validate_presence_of :full_description }
 end

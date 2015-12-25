@@ -60,6 +60,10 @@ def seed_nonprofit_applications
   )
 end
 
+def seed_projects
+  `rake update:projects`
+end
+
 def seed_roles_and_members
   `rake update:members`
 end
@@ -70,4 +74,5 @@ seed_applicants
 seed_student_applications
 seed_nonprofits
 seed_nonprofit_applications
+seed_projects
 seed_roles_and_members

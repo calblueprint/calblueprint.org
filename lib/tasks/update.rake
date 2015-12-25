@@ -13,4 +13,12 @@ namespace :update do
       member.update! member_role: role, is_alumnus: is_alumnus
     end
   end
+
+  desc 'Updates projects to match the data/project.yml file'
+  task projects: :environment do
+    projects = YAML.load_file Rails.root.join 'data', 'projects.yml'
+    projects.each do |project|
+      Project.find_or_create_by! project
+    end
+  end
 end

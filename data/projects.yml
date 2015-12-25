@@ -1,0 +1,70 @@
+- title: Berkeley Public Schools Fund
+  short_summary: >
+    Provides a way for Berkeley public school teachers to fund classroom projects.
+  link: https://schoolsfund-friendsandfamily.herokuapp.com/
+  full_description: >
+    Every year, the schools fund would review hundreds of grant applications
+    by hand in a very time consuming process. Grants would then only be
+    awarded once a year for teachers, even though the teachers needed the
+    funds throughout the year.
+
+    Blueprint was able to work with the Schools Fund to create Friends and
+    Family, a local crowdfunding platform for Berkeley School District
+    teachers to utilize. With this new platform, teachers have been able to
+    raise almost $30,000 thus far.
+
+- title: Project Homeless Connect
+  short_summary: >
+    Provides a secure way for the homeless to sign up for services and for
+    volunteers to collect data.
+  link: https://medium.com/@blueprint/learning-from-doing-39c9aa926b87
+  full_description: >
+    Project Homeless Connect runs approximately five events a year where they
+    provide the homeless population of San Francisco with services such as
+    hair cuts and wheelchair repairs. Every event the clients fill out a paper
+    form with their personal information such as their SSN, and carry around a
+    carbon copy during the event. This runs the risk of the client losing
+    their carbon copy and exposing their personal information, while also
+    accruing a large time debt for the organization to copy information from
+    the paper form into their Salesforce CRM.
+
+    Blueprint was able to work with Project Homeless Connect by developing an
+    Android application that allowed clients to check in to the event. The
+    application removed the cost of carbon copy paper, while adding the
+    security of not carrying their personal information along with them, but
+    rather a QR code associated with their information. The Android
+    application also entered the data directly to their Salesforce CRM while
+    reducing the number of duplicate entries, thus saving them countless hours
+    of data entry every event.
+
+- title: Oakland Digital Arts and Literacy
+  short_summary: >
+    Allows tech and design professionals around the Bay Area to teach courses
+    at the Oakland Digital Office.
+  link: https://bridge.odalc.org/
+  full_description: >
+    ODALC aims to empower people with digital literacy education that will
+    improve their lives and the communities they live in, but struggled with
+    how to connect professionals in the tech and design industry with under
+    resourced communities.
+
+    Blueprint was able to work with ODALC to create a platform that seamlessly
+    bridges technology, design and low-income communities. This platform
+    serves to empower individuals to harness the digital tools to succeed in
+    the 21st century.
+
+- title: Roots of Success
+  short_summary: >
+    Provides a way for Roots of Success teachers to manage various curricula
+    and classes.
+  link: http://ros-staging.herokuapp.com/
+  full_description: >
+    Roots of Success strives to connect youth and adults from communities with
+    high rates of poverty and unemployment to environmental careers and post-
+    secondary education. With Roots of Success gaining more traction, it
+    needed a way to efficiently manage more communities, teachers and
+    students.
+
+    Blueprint was able to work with Roots of Success to create a platform that
+    allows teachers to gracefully manage multiple classrooms, modules and
+    surveys.

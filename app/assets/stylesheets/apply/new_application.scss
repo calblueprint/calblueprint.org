@@ -1,9 +1,11 @@
 // Application Page CSS
-.apply-banner {
-  background-image: image-url("apply/students/banner.png");
-  background-size: cover;
-  color: $white;
-  height: 260px;
+.student-apply-banner {
+  @include banner(image-url("apply/students/banner.png"),
+    $height: 260px,
+    $tint: rgba(53, 53, 53, 0.35));
+
+  background-size: contain;
+  margin-bottom: 0;
 }
 
 .apply-info {

@@ -1,11 +1,8 @@
 .gray-bg
-  .banner.apply-banner
-    .darken
-      .spacer
-      .banner-text
-        h1 Hey #{current_user.first_name},
-        p.subtitle
-          = t '.banner'
+  .student-apply-banner
+    .banner-inner
+      h1 Hey #{current_user.first_name},
+      p.subtitle = t '.banner'
   .apply-info
     .spacer-small
     .row

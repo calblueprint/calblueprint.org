@@ -1,27 +1,15 @@
 /**
  * Banners for the projects index and show pages
  *
- * Both banners use flexbox to vertically center text.
- * The banner on the show page contains the project's banner image, so we change
- * a bunch of the background settings there to be more similar to a project card
- * in _project-cards.scss
+ * The banner on the show page contains a project-specific banner image, so we
+ * change a bunch of the background settings there to be more similar to a
+ * project card in _project-cards.scss
  */
 
-// TODO(sam): Use this for all the banners in the app.
 .projects-banner {
-  @include background-image(linear-gradient($banner-bg-tint 100%, $banner-bg-tint 0),
-                            asset-url("projects/projects-banner.png"));
-  background-position: center;
-  background-repeat: repeat, no-repeat;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  height: 250px;
-  margin-bottom: 30px;
-
-  color: $white;
+  @include banner(asset-url("projects/projects-banner.png"),
+                  $height: 200px);
+  background-size: initial;
 }
 
 .project-banner {

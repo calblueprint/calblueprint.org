@@ -1,13 +1,6 @@
-#contact-image {
-  background-image: image-url("contact.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 365px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
+.contact-banner {
+  @include banner(image-url("contact.jpg"),
+    $tint: transparentize($black, 0.6));
 }
 
 .spacer-form {

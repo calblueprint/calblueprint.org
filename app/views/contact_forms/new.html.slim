@@ -1,8 +1,7 @@
-#contact-image
-.row
-  .large-12.large-centered.columns
-    h1.about-title = t '.banner'
-    p#about-subtitle.white = t '.subtitle'
+.contact-banner
+  .banner-inner
+    h1.title = t '.banner'
+    p.subtitle = t '.subtitle'
 .white-bg
   .spacer-form
   = render "form_errors", obj: @contact_form

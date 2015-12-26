@@ -1,3 +1,13 @@
+.nonprofits-banner {
+  @include banner(image-url("apply/nonprofits/nonprofits.jpg"),
+    $tint: rgba(50, 50, 50, 0.4));
+}
+
+.students-banner {
+  @include banner(image-url("apply/students/students.jpg"),
+    $tint: rgba(27, 117, 188, 0.4));
+}
+
 .apply {
   .apply-container {
     display: flex;
@@ -21,7 +31,7 @@
     text-align: center;
     width: 100%;
     z-index: 0;
-    
+
 
     .title {
       color: $white;

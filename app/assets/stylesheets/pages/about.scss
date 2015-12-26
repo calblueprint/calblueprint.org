@@ -1,40 +1,7 @@
-#about-blackener {
-  height: 300px;
-  margin-top: -300px;
-}
-
-#about-bigger {
-  height: 600px;
-}
-
-#about-image {
-  background: image-url("about/about.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 670px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-#about-subtitle {
-  padding-top: 5px;
-}
-
 .about-banner {
-  @extend .banner;
-  background: rgba(255, 255, 255, 0.2);
-  height: 300px;
-}
-
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
+  @include banner(image-url("about/about.jpg"),
+    $height: 500px,
+    $tint: rgba(255, 255, 255, 0.2));
 }
 
 @include keyframes(FadeIn) {

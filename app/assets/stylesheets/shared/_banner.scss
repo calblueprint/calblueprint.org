@@ -1,0 +1,43 @@
+/**
+ * Mixin to style banners that are used on most public-facing pages.
+ * Produces a banner with parallax scrolling, overlaying a tint on a provided
+ * background image.
+ *
+ * Use it like
+ *
+ *    @include banner(asset-url("projects/projects-banner.png"));
+ *    @include banner(asset-url("projects/projects-banner.png"), $height: 250px);
+ *
+ * The HTML must look something like:
+ *
+ * .my-banner-class / This class will include this mixin
+ *   .banner-inner
+ *     h1.title Stuff
+ *     p.subtitle Subheading
+ *     / More stuff here
+ */
+
+@mixin banner($background-image,
+              $height: $default-banner-height,
+              $tint: $banner-bg-tint) {
+  @include background-image(linear-gradient($tint 100%, $tint 0),
+                            $background-image);
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: repeat, no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: $height;
+  margin-bottom: 30px;
+}
+
+.banner-inner {
+  @extend .wrap;
+
+  color: $white;
+  text-align: center;
+}

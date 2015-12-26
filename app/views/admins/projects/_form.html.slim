@@ -4,5 +4,8 @@
   = f.input :short_summary
   = f.input :link
   = f.input :full_description
+  = f.input :banner_image, as: :file
+
+  .project-banner-image-preview style="background-image: url(#{project.banner_image.url})"
 
   = f.button :submit

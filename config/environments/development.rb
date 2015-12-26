@@ -42,7 +42,7 @@ Rails.application.configure do
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
 
-  #  Uncomment to use S3 in Development
+  # Uncomment to use S3 in Development
   # config.paperclip_defaults = {
   #   storage: :s3,
   #   url: ":s3_domain_url",

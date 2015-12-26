@@ -16,8 +16,10 @@
 #
 
 class Project < ActiveRecord::Base
+  MISSING_IMAGE_PLACEHOLDER = "http://placehold.it/1024x400"
+
   # See https://github.com/thoughtbot/paperclip#validations for more about these
-  has_attached_file :banner_image
+  has_attached_file :banner_image, default_url: MISSING_IMAGE_PLACEHOLDER
   # rubocop:disable Style/AlignHash
   validates_attachment :banner_image, presence: true,
     content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }

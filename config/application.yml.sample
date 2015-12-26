@@ -38,5 +38,22 @@ production:
   ROLLBAR_ACCESS_TOKEN: <your_production_rollbar_api_key>
   GA_KEY: UA-XXXXXXX-X
 
+  S3_BUCKET_NAME: <s3_bucket_name>
+
+  # Omniauth keys
+  FACEBOOK_KEY: <key>
+  FACEBOOK_SECRET: <key>
+  GOOGLE_CLIENT_ID: <key>
+  GOOGLE_CLIENT_SECRET: <key>
+
 staging:
   EMAIL_RECIPIENTS: <your_email>
+  ROLLBAR_ACCESS_TOKEN: <your_production_rollbar_api_key>
+
+  S3_BUCKET_NAME: <s3_bucket_name>
+
+  # Omniauth keys
+  FACEBOOK_KEY: <key>
+  FACEBOOK_SECRET: <key>
+  GOOGLE_CLIENT_ID: <key>
+  GOOGLE_CLIENT_SECRET: <key>

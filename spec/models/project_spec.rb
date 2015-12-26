@@ -22,4 +22,12 @@ RSpec.describe Project, type: :model do
   it { should validate_presence_of :short_summary }
   it { should validate_presence_of :link }
   it { should validate_presence_of :full_description }
+
+  it { should have_attached_file :banner_image }
+  it { should validate_attachment_presence :banner_image }
+  it do
+    should validate_attachment_content_type(:banner_image)
+      .allowing('image/png', 'image/gif')
+      .rejecting('text/plain', 'text/xml')
+  end
 end

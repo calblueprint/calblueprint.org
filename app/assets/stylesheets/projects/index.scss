@@ -1,266 +1,117 @@
-.projects-background {
-  background-color: $gray-background-color;
-  height: 100%;
-  width: 100%;
-}
+/**
+ * Styling for the /projects page.
+ *
+ * [1] The page starts with a banner of height 250px. It's followed by...
+ * [2] ...a sequence of cards for each project.
+ *    [2a] Each card is inside of an anchor tag so the whole thing is clickable.
+ *    [2b] Each card has a title, summary, and case study link.
+ *    [2c] The background image for each card is loaded dynamically in the
+ *         index.html.slim file and is styled in this file to cover the card.
+ */
 
-.projects-section {
-  @extend .columns;
-  @extend .small-11;
-  @extend .small-centered;
-}
+// Tints the banner image for project cards
+$project-card-bg-tint: rgba(28, 37, 56, 0.85);
 
-// start da css for da buttons
-$demo-btn-color: #477DCA;
-$demo-btn-hover-color: darken($demo-btn-color, 25);
-$demo-btn-shadow: #3C93D5;
-
-.demo-btn {
-  border-radius: 5px;
-  color: $white;
-  display: block;
-  font-size: 1em;
-  font-weight: bold;
-  margin: 48px auto;
-  padding: 12px 20px;
-  width: 75%;
-}
-
-.demo-btn:active {
-  @include transform(translate(0, 5px));
-  box-shadow: 0 1px 0 0;
-}
-
-.demo-btn-color {
-  background-color: $demo-btn-color;
-}
-
-.demo-btn-color:hover {
-  background-color: $demo-btn-hover-color;
-  color: $white;
-}
-
-.project {
-  $block-height: 320px;
-  $project-bg-color: lighten($gray-background-color, 5);
-  $project-border-color: $gray-background-border-color;
-  $project-text-color: #565a5c;
-
-  @extend .row;
-
-  .project-expand {
-    background-color: $project-bg-color;
-    border: 1px solid $project-border-color;
-    border-radius: 6px;
-    display: none;
-    overflow: hidden;
-    padding: 6px;
-    padding-bottom: 36px;
-    width: 100%;
-
-    .project-expand-section {
-      @extend .columns;
-      @extend .small-12;
-      @extend .medium-4;
-      @extend .large-4;
-
-      .project-expand-section-icon {
-        background-size: cover;
-        height: 32px;
-        margin: 24px auto 18px;
-        width: 32px;
-      }
-
-      .project-expand-section-text {
-        color: $project-text-color;
-        font-size: 14px;
-        line-height: 20px;
-        margin: 0 auto;
-        text-align: justify;
-        text-indent: 16px;
-        width: 80%;
-      }
-
-      .problem-icon {
-        @extend .project-expand-section-icon;
-        background-image: image-url("projects/problem.png");
-      }
-
-      .solution-icon {
-        @extend .project-expand-section-icon;
-        background-image: image-url("projects/solution.png");
-      }
-
-      .demo-icon {
-        @extend .project-expand-section-icon;
-        background-image: image-url("projects/demo.png");
-      }
-    }
-  }
-
-  .project-image {
-    @extend .columns;
-    @extend .small-12;
-    @extend .medium-4;
-    @extend .large-4;
-    background-size: cover;
-    border: 1px solid $project-border-color;
-    border-radius: 6px 0 0 6px;
-    height: $block-height;
-  }
-
-  .project-card {
-    @extend .columns;
-    @extend .small-12;
-    @extend .medium-8;
-    @extend .large-8;
-    background-color: $white;
-    border: 1px solid $project-border-color;
-    border-left: 0;
-    border-radius: 0 6px 6px 0;
-    height: $block-height;
-    padding: 10px 26px;
-    position: relative;
-
-    @mixin project-card-text {
-      color: $project-text-color;
-      text-align: left;
-    }
-
-    .project-title {
-      @include project-card-text;
-      color: $black;
-      height: 57px;
-      line-height: 57px;
-      margin-top: 5px;
-      overflow: hidden;
-      padding: 0 10px;
-    }
-
-    .project-description {
-      @include project-card-text;
-      font-size: 16px;
-      height: 48px;
-      line-height: 24px;
-      margin-bottom: 10px;
-      padding: 0 10px;
-    }
-
-    .project-subtitle {
-      @include project-card-text;
-      display: block;
-      font-size: 14px;
-      font-weight: bold;
-      line-height: 14px;
-      padding: 12px 10px;
-
-      @include media(max-width $medium-screen) {
-        display: none;
-      }
-    }
-
-    .project-member-images {
-      margin-left: 4px;
-
-      @include media(max-width $medium-screen) {
-        display: none;
-      }
-    }
-
-    .project-member-image {
-      background-color: $blue;
-      background-size: cover;
-      border-radius: 24px;
-      display: inline-block;
-      height: 48px;
-      margin: 4px;
-      width: 48px;
-    }
-
-    .project-member-noimage {
-      background-color: $white;
-    }
-
-    .project-progress {
-      margin-left: 8px;
-
-      @include media(max-width $medium-screen) {
-        display: none;
-      }
-    }
-
-    .project-progress-scope {
-      background-color: $progress-red;
-      display: inline-block;
-      height: 8px;
-      margin: 0 2px 4px 0;
-      width: 20%;
-    }
-
-    .project-progress-green {
-      background-color: $progress-green;
-    }
-  }
-
-  .project-see-more {
-    background-image: image-url("projects/see-more.png");
-    background-size: cover;
-    bottom: 25px;
-    cursor: hand;
-    height: 20px;
-    opacity: 0.5;
-    position: absolute;
-    right: 31px;
-    width: 20px;
-  }
-
-  .project-see-more:hover {
-    opacity: 1;
-  }
-}
-
-#projects-image {
-  background-image: image-url("projects/projects-banner.png");
-  background-position: center;
-  background-size: cover;
-  height: 365px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
+// TODO(sam): Use this for all the banners in the app.
+/* [1] */
 .projects-banner {
-  background: rgba(0, 0, 0, 0.4);
+  @include background-image(linear-gradient($banner-bg-tint 100%, $banner-bg-tint 0),
+                            asset-url("projects/projects-banner.png"));
+  background-position: center;
+  background-repeat: repeat, no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 250px;
+  margin-bottom: 30px;
+
   color: $white;
-  height: 300px;
 }
 
-.projects-banner-text {
-  line-height: 220px;
+/* [2] */
+.project-cards {
+  // This is just here to show the hierarchy
 }
 
-.bpsf {
-  background-image: image-url("projects/bpsf-alt.png");
-  background-position: top;
-  background-size: cover;
-}
+    /* [2a] */
+    .project {
+      @include transition(all 0.5s ease-in-out);
 
-.odalc {
-  background-image: image-url("projects/odalc-alt.png");
-  background-position: top;
-  background-size: cover;
-}
+      margin-bottom: 64px;
+      padding: 0 1.25em;
+      height: 25em;
 
-.ros {
-  background-image: image-url("projects/rootsofsuccess.png");
-  background-position: top;
-  background-size: cover;
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-.ea {
-  background-image: image-url("projects/elevate-africa.png");
-  background-position: left;
-  background-size: cover;
-}
+      // This is so we can position: absolute the background image
+      position: relative;
+      // When the background image expands on hover, hide the overflow
+      overflow: hidden;
 
+      background-color: $project-card-bg-tint;
+      color: $white;
+
+      // Increase the padding when we have the space
+      @include media($medium-screen) {
+        padding: 0 3em;
+      }
+
+      // On hover, scale background image up just a tad and make it more visible
+      &:hover {
+        background-color: transparentize($project-card-bg-tint, 0.08);
+
+        .project__image {
+          @include transform(scale(1.03));
+        }
+      }
+
+      /* [2b] */
+      .project__title {
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      .project__summary {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .project__case-study {
+        @include transition(all 0.25s ease-in-out);
+
+        background-color: transparent;
+        border-radius: 5px;
+        border: 2px solid $blue;
+        display: inline-block;
+        padding: 0.625em 1em;
+        width: 200px;
+
+        font-family: $body-font;
+        font-size: 0.75em;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        // Give a nice hover effect.
+        &:hover,
+        &:focus {
+          background-color: $blue;
+        }
+      }
+
+      /* [2c] */
+      .project__image {
+        @include transition(all 0.5s ease-in-out);
+        @include position(absolute, 0);
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+      }
+    }

@@ -62,6 +62,11 @@ en:
           We recognize that the individual might be talented but only a team has the power
           to take on the challenges of an organization.
 
+  projects:
+    index:
+      title: Our Projects
+      subtitle: Highlights and studies of our past work
+
   apply:
     nonprofits:
       headline: For Nonprofits

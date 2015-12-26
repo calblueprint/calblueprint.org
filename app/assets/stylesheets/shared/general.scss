@@ -127,6 +127,15 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
+// The .wrap class provides a max-width so content doesn't go too wide. This
+// wraps content that has more margins since you need margin: 0 auto when using
+// max-width for centering.
+.wrap {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0 2.35765%;
+}
+
 // In a two column layout, left column has right-aligned text, right column has left-aligned text
 .two-col-container {
   @include outer-container;

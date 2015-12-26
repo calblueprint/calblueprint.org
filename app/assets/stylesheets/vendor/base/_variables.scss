@@ -27,6 +27,12 @@ $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
 $button-font-size: 1em;
 
+// Banners
+$default-banner-height: 300px;
+$banner-bg-tint: rgba(28, 37, 56, 0.9);
+// Tints the banner image for project cards
+$project-card-bg-tint: rgba(28, 37, 56, 0.85);
+
 // Colors
 $white: #FFF;
 $black: #000;
@@ -51,7 +57,6 @@ $progress-red: #FF7E79;
 $base-background-color: $white;
 $gray-background-color: #EAEAEA;
 $gray-background-border-color: #CCC;
-$banner-bg-tint: rgba(28, 37, 56, 0.9);
 
 // Font Colors
 $base-font-color: $dark-gray;

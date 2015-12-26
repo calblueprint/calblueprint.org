@@ -1,0 +1,93 @@
+/**
+ * Styling for the project cards on the /projects page.
+ *
+ * [1] Each card is inside of an anchor tag so the whole thing is clickable.
+ * [2] Each card has a title, summary, and case study link.
+ * [3] The background image for each card is loaded dynamically in the
+ *      index.html.slim file and is styled in this file to cover the card.
+ */
+
+.project-cards {
+  // This is just here to show the hierarchy
+}
+
+    /* [1] */
+    .project {
+      @include transition(all 0.5s ease-in-out);
+
+      margin-bottom: 64px;
+      padding: 0 1.25em;
+      height: 25em;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      // This is so we can position: absolute the background image
+      position: relative;
+      // When the background image expands on hover, hide the overflow
+      overflow: hidden;
+
+      background-color: $project-card-bg-tint;
+      color: $white;
+
+      // Increase the padding when we have the space
+      @include media($medium-screen) {
+        padding: 0 3em;
+      }
+
+      // On hover, scale background image up just a tad and make it more visible
+      &:hover {
+        background-color: transparentize($project-card-bg-tint, 0.08);
+
+        .project__image {
+          @include transform(scale(1.03));
+        }
+      }
+    }
+
+        /* [2] */
+        .project__title {
+          margin-bottom: 10px;
+          text-align: left;
+        }
+
+        .project__summary {
+          margin-bottom: 20px;
+          text-align: left;
+        }
+
+        .project__case-study {
+          @include transition(all 0.25s ease-in-out);
+
+          background-color: transparent;
+          border-radius: 5px;
+          border: 2px solid $blue;
+          display: inline-block;
+          padding: 0.625em 1em;
+          width: 200px;
+
+          font-family: $body-font;
+          font-size: 0.75em;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          // Give a nice hover effect.
+          &:hover,
+          &:focus {
+            background-color: $blue;
+          }
+        }
+
+        /* [3] */
+        .project__image {
+          @include transition(all 0.5s ease-in-out);
+          @include position(absolute, 0);
+
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          z-index: -1;
+        }

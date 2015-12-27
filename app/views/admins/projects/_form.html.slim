@@ -3,9 +3,14 @@
   = f.input :title
   = f.input :short_summary
   = f.input :link
-  = f.input :full_description
   = f.input :banner_image, as: :file
 
   .project-banner-image-preview style="background-image: url(#{project.banner_image.url})"
+
+  .spacer-small
+
+  = f.input :full_description,
+      input_html: { class: ['project__full-description-input',
+                            'js-resizing-textarea'] }
 
   = f.button :submit

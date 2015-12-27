@@ -16,6 +16,10 @@ en:
         remember_me: Keep me signed in
         email: ~
         password: ~
+      project:
+        full_description: >
+          Full description for this project as Markdown. This will be shown as a separate
+          page for this specific project.
       nonprofit_application:
         purpose: What is your organization’s mission statement?
         history: >

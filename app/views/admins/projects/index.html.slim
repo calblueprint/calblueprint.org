@@ -8,12 +8,14 @@ p.subtitle These get displayed at /projects
     table.tables.projects-table
       thead
         tr
+          th.projects-table__sorter
           th.projects-table__title Title
           th.projects-table__summary Short Summary
           th.projects-table__actions Actions
-        tbody
+        tbody.js-projects-sortable
           - @projects.each do |project|
             tr
+              td = fa_icon 'arrows-v', class: 'js-sortable-handle'
               td = project.title
               td = project.short_summary
               td

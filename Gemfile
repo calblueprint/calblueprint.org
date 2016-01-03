@@ -31,6 +31,7 @@ gem 'ffaker'
 gem 'draper', '~> 2.1.0'
 gem 'gibbon', '~> 2.0.0'
 gem 'redcarpet', '~> 3.3.4'
+gem 'acts_as_list', '~> 0.7.2'
 
 # Frontend
 gem 'sass-rails', '~> 5.0.3'

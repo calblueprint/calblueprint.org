@@ -13,10 +13,13 @@
 #  banner_image_content_type :string
 #  banner_image_file_size    :integer
 #  banner_image_updated_at   :datetime
+#  position                  :integer
 #
 
 class Project < ActiveRecord::Base
   MISSING_IMAGE_PLACEHOLDER = "http://placehold.it/1024x400"
+
+  default_scope { order 'position' }
 
   # See https://github.com/thoughtbot/paperclip#validations for more about these
   has_attached_file :banner_image, default_url: MISSING_IMAGE_PLACEHOLDER
@@ -24,6 +27,8 @@ class Project < ActiveRecord::Base
   validates_attachment :banner_image, presence: true,
     content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
   # rubocop:enable Style/AlignHash
+
+  acts_as_list
 
   validates :title, presence: true
   validates :short_summary, presence: true

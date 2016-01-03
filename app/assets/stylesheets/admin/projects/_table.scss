@@ -6,8 +6,17 @@
  */
 
 .projects-table {
-  // This is a parent
+
+  // Show a handle when hovering over the icons used to drag and drop items
+  .fa-arrows-v {
+    cursor: move;
+    cursor: -webkit-grabbing;
+  }
 }
+
+    .projects-table__sorter {
+      width: 5%;
+    }
 
     .projects-table__title {
       width: 20%;
@@ -18,5 +27,5 @@
     }
 
     .projects-table__actions {
-      width: 20%;
+      width: 15%;
     }

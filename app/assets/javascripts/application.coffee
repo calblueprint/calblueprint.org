@@ -15,6 +15,13 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require sky-labels
+#= require ./sky-labels-setup
+#= require vendor/toastr
 #= require shared/utilities
 #= require shared/google-analytics
-#= require_tree .
+#= require shared/header
+#= require shared/mailchimp
+#=
+#= require ./slider
+#= require_tree ./pages
+#= require_tree ./apply

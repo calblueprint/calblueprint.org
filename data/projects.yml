@@ -1,4 +1,5 @@
 - title: Berkeley Public Schools Fund
+  position: 1
   short_summary: >
     Provides a way for Berkeley public school teachers to fund classroom projects.
   link: https://schoolsfund-friendsandfamily.herokuapp.com/
@@ -19,6 +20,7 @@
     raise almost $30,000 thus far.
 
 - title: Project Homeless Connect
+  position: 2
   short_summary: >
     Provides a secure way for the homeless to sign up for services and for
     volunteers to collect data.
@@ -48,6 +50,7 @@
     of data entry every event.
 
 - title: Oakland Digital Arts and Literacy
+  position: 3
   short_summary: >
     Allows tech and design professionals around the Bay Area to teach courses
     at the Oakland Digital Office.
@@ -69,6 +72,7 @@
     the 21st century.
 
 - title: Roots of Success
+  position: 4
   short_summary: >
     Provides a way for Roots of Success teachers to manage various curricula
     and classes.

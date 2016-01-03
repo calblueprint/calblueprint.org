@@ -32,6 +32,17 @@ module Admins
       end
     end
 
+    # An API method that is used to change a position of a project. It's called
+    # from sortable-table.coffee.
+    #
+    # @param oldPos - The old position of the project
+    # @param newPos - The new position of the project
+    def change_position
+      project = Project.find_by position: params[:oldPos]
+      project.insert_at params[:newPos].to_i
+      render json: { status: :ok }
+    end
+
     private
 
     def project_params

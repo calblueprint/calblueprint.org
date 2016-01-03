@@ -2,11 +2,11 @@
 #
 # Add the .js-resizing-textarea class to any textarea you want to auto-resize.
 
-resizing_textarea = ->
+resizingTextarea = ->
   $(".js-resizing-textarea").each(->
     @setAttribute "style", "height:#{@scrollHeight}px;overflow-y:hidden;"
   ).on "input", ->
     @style.height = "auto"
     @style.height = "#{@scrollHeight}px"
 
-ready resizing_textarea
+ready resizingTextarea

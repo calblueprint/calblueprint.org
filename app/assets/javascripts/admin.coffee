@@ -14,7 +14,10 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
-#= require sky-labels
+#= require vendor/toastr
+#= require vendor/Sortable.min
 #= require shared/utilities
 #= require shared/google-analytics
-#= require_tree .
+#= require shared/header
+#= require shared/resizing-textarea
+#= require admin/sortable-table

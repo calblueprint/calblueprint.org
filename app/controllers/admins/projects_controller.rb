@@ -1,7 +1,10 @@
 module Admins
   class ProjectsController < BaseController
+    # TODO(sam): Add feature specs for the project flow
+
     def index
-      @projects = Project.all
+      @published_projects = Project.published.decorate
+      @unpublished_projects = Project.unpublished.decorate
     end
 
     def new
@@ -32,13 +35,20 @@ module Admins
       end
     end
 
+    def toggle_publish
+      project = Project.find params[:id]
+      project.toggle_published
+
+      redirect_to action: :index
+    end
+
     # An API method that is used to change a position of a project. It's called
     # from sortable-table.coffee.
     #
-    # @param oldPos - The old position of the project
+    # @param id - The id of the project
     # @param newPos - The new position of the project
     def change_position
-      project = Project.find_by position: params[:oldPos]
+      project = Project.find params[:id]
       project.insert_at params[:newPos].to_i
       render json: { status: :ok }
     end

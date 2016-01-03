@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103043622) do
+ActiveRecord::Schema.define(version: 20160103102529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -149,6 +149,7 @@ ActiveRecord::Schema.define(version: 20160103043622) do
     t.integer  "banner_image_file_size"
     t.datetime "banner_image_updated_at"
     t.integer  "position"
+    t.boolean  "published",                 default: false
   end
 
   add_index "projects", ["position"], name: "index_projects_on_position", using: :btree

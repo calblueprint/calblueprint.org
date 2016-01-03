@@ -14,12 +14,16 @@
 #  banner_image_file_size    :integer
 #  banner_image_updated_at   :datetime
 #  position                  :integer
+#  published                 :boolean          default(FALSE)
 #
 
 class Project < ActiveRecord::Base
   MISSING_IMAGE_PLACEHOLDER = "http://placehold.it/1024x400"
 
   default_scope { order 'position' }
+
+  scope :published,   -> { where published: true }
+  scope :unpublished, -> { where published: false }
 
   # See https://github.com/thoughtbot/paperclip#validations for more about these
   has_attached_file :banner_image, default_url: MISSING_IMAGE_PLACEHOLDER
@@ -34,4 +38,27 @@ class Project < ActiveRecord::Base
   validates :short_summary, presence: true
   validates :link, presence: true
   validates :full_description, presence: true
+
+  # Methods to publish and unpublish a project.
+  # We make sure only the published projects are in the list
+  # provided by acts_as_list.
+  #
+  # TODO(sam): Add specs for these methods
+  def toggle_published
+    if published?
+      unpublish
+    else
+      publish
+    end
+  end
+
+  def publish
+    update published: true
+    move_to_bottom
+  end
+
+  def unpublish
+    update published: false
+    remove_from_list
+  end
 end

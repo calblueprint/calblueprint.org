@@ -5,21 +5,14 @@ p.subtitle These get displayed at /projects
   .small-12.columns
     = link_to "New Project", new_admin_project_path, class: 'button'
 
-    table.tables.projects-table
-      thead
-        tr
-          th.projects-table__sorter
-          th.projects-table__title Title
-          th.projects-table__summary Short Summary
-          th.projects-table__actions Actions
-        tbody.js-projects-sortable
-          - @projects.each do |project|
-            tr
-              td = fa_icon 'arrows-v', class: 'js-sortable-handle'
-              td = project.title
-              td = project.short_summary
-              td
-                = link_to edit_admin_project_path(project),
-                          class: 'icon hint--top', data: { hint: 'Edit' } do
-                  = fa_icon 'pencil'
+.spacer-small
 
+h3 Published
+
+= render 'table', projects: @published_projects, sortable: true
+
+.spacer-small
+
+h3 Unpublished
+
+= render 'table', projects: @unpublished_projects, sortable: false

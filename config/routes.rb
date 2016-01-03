@@ -45,6 +45,7 @@ Rails.application.routes.draw do
     resources :semesters
 
     resources :projects, except: [:show] do
+      member { post :toggle_publish }
       collection { post :change_position }
     end
 

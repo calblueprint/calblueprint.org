@@ -37,10 +37,10 @@ initSortableTable = (el, onUpdate) ->
 ready ->
   $('.js-projects-sortable').each ->
     initSortableTable this, (evt) ->
-      # We have to add one since Sortable uses 0 indexing while acts_as_list
-      # starts at 1
       data = {
-        oldPos: evt.oldIndex + 1
+        id: evt.item.dataset.id
+        # We have to add one since Sortable uses 0 indexing while acts_as_list
+        # starts at 1
         newPos: evt.newIndex + 1
       }
 

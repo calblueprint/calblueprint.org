@@ -14,6 +14,7 @@
 #  banner_image_file_size    :integer
 #  banner_image_updated_at   :datetime
 #  position                  :integer
+#  published                 :boolean          default(FALSE)
 #
 
 require 'rails_helper'

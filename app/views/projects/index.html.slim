@@ -7,7 +7,7 @@
   .project-cards
     - @projects.each do |project|
       = link_to project do
-        .project
+        .project id="#{dom_id project}"
           h3.project__title = project.title
           p.project__summary = project.short_summary
           span.project__case-study Read the Case Study

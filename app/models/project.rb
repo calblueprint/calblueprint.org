@@ -42,8 +42,6 @@ class Project < ActiveRecord::Base
   # Methods to publish and unpublish a project.
   # We make sure only the published projects are in the list
   # provided by acts_as_list.
-  #
-  # TODO(sam): Add specs for these methods
   def toggle_published
     if published?
       unpublish

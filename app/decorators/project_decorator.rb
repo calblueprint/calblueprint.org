@@ -11,7 +11,9 @@ class ProjectDecorator < ApplicationDecorator
   #
   def action_edit_link
     link_to edit_admin_project_path(object),
-            class: 'icon hint--top', data: { hint: 'Edit' } do
+            class: 'icon hint--top',
+            id: dom_id(object, :edit),
+            data: { hint: 'Edit' } do
       fa_icon 'pencil'
     end
   end
@@ -20,6 +22,7 @@ class ProjectDecorator < ApplicationDecorator
     link_to toggle_publish_admin_project_path(object),
             method: :post,
             class: 'icon hint--top',
+            id: dom_id(object, :toggle_publish),
             data: { hint: object.published ? 'Unpublish' : 'Publish' } do
       fa_icon object.published ? 'eye-slash' : 'eye'
     end

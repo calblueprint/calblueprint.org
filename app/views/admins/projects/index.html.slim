@@ -1,18 +1,21 @@
-h1.banner Projects
-p.subtitle These get displayed at /projects
+h1.banner = t '.banner'
+p.subtitle = t '.subtitle'
 
 .row
   .small-12.columns
-    = link_to "New Project", new_admin_project_path, class: 'button'
+    = link_to t('.new_project'), new_admin_project_path, class: 'button'
 
 .spacer-small
 
 h3 Published
 
-= render 'table', projects: @published_projects, sortable: true
+/ These wrappers are only used for testing, not for styling. See project_spec.rb
+.projects--published
+  = render 'table', projects: @published_projects, sortable: true
 
 .spacer-small
 
 h3 Unpublished
 
-= render 'table', projects: @unpublished_projects, sortable: false
+.projects--unpublished
+  = render 'table', projects: @unpublished_projects, sortable: false

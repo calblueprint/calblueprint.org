@@ -14,7 +14,7 @@
             th.projects-table__actions Actions
           tbody class=[class_if?('js-projects-sortable', sortable)]
             - projects.each do |project|
-              tr data={ id: project.id }
+              tr data={ id: project.id } id="#{dom_id project}"
                 - if sortable
                   td = fa_icon 'arrows-v', class: 'js-sortable-handle'
                 td = project.title

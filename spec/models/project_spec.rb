@@ -32,4 +32,41 @@ RSpec.describe Project, type: :model do
       .allowing('image/png', 'image/gif')
       .rejecting('text/plain', 'text/xml')
   end
+
+  let(:project) { create :project }
+  let(:published_project) { create :published_project }
+
+  describe '#publish' do
+    before { project.publish }
+
+    it 'sets published to true' do
+      expect(project.published).to be true
+    end
+
+    it 'adds itself to the list' do
+      expect(project.position).not_to be nil
+    end
+  end
+
+  describe "#unpublish" do
+    before { published_project.unpublish }
+
+    it 'sets published to false' do
+      expect(published_project.published).to be false
+    end
+
+    it 'removes itself from the list' do
+      expect(published_project.position).to be nil
+    end
+  end
+
+  describe '#toggle_published' do
+    it 'toggles the publish state of a project' do
+      expect(project.published).to be false
+      project.toggle_published
+      expect(project.published).to be true
+      project.toggle_published
+      expect(project.published).to be false
+    end
+  end
 end

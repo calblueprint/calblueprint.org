@@ -214,6 +214,10 @@ en:
         success: "Successfully deleted %{organization_name}'s application."
 
     projects:
+      index:
+        banner: Projects
+        subtitle: These get displayed at /projects
+        new_project: New Project
       update:
         success: Project updated!
       create:

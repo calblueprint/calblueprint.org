@@ -1,7 +1,5 @@
 module Admins
   class ProjectsController < BaseController
-    # TODO(sam): Add feature specs for the project flow
-
     def index
       @published_projects = Project.published.decorate
       @unpublished_projects = Project.unpublished.decorate

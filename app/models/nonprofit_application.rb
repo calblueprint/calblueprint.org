@@ -17,6 +17,7 @@
 #  devices          :string
 #  target_audience  :text
 #  why              :text
+#  cs169_pool       :boolean
 #
 
 class NonprofitApplication < ActiveRecord::Base

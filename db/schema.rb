@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103102529) do
+ActiveRecord::Schema.define(version: 20160113021137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -116,6 +116,7 @@ ActiveRecord::Schema.define(version: 20160103102529) do
     t.string   "devices"
     t.text     "target_audience"
     t.text     "why"
+    t.boolean  "cs169_pool"
   end
 
   create_table "nonprofits", force: :cascade do |t|

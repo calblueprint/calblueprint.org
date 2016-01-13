@@ -3,7 +3,7 @@
   "history.immutable": false,
   "project.name": "calblueprint.org",
   "load": [
-    "$TRAPHIC_PATH/traphic"
+    "$TRAPHIC_PATH"
   ],
   "arcanist_configuration": "TraphicConfiguration"
 }

@@ -22,6 +22,10 @@ en:
           page for this specific project.
       nonprofit_application:
         purpose: What is your organization’s mission statement?
+        cs169_pool: >
+          Do you want your application to be considered for <a target="_blank"
+          href="https://sites.google.com/site/ucbsaas/project/external-customer">CS
+          169</a>?
         history: >
           Give us a brief history of your organization. Tell us about some of your
           organization’s key accomplishments.

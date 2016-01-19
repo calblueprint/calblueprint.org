@@ -5,6 +5,11 @@
 
 / TODO(sam): Add CSV downloading/uploading
 .row
+  .small-4.columns{style="float: right"}
+    = form_tag("", method: "get") do
+      = select_tag :filter_by, options_for_select([['All applications', 'all'], ['Blueprint only', 'bp'], ['CS169 only', 'cs169']], @filter) 
+      = submit_tag "Filter", name: ""
+.row
   .small-12.columns
     table.tables
       thead
@@ -12,6 +17,7 @@
           th.name NPO Name
           th.email Email
           th Summary
+          th CS169
           th.actions Actions
       tbody
         - @nonprofit_applications.each do |app|
@@ -19,6 +25,9 @@
             td = app.organization_name
             td = app.email
             td = app.short_summary
+            td
+              - if app.cs169_pool
+                = fa_icon "check"
             td
               = link_to [:admin, app], class: "icon hint--top", data: { hint: "View" } do
                 = fa_icon "eye"

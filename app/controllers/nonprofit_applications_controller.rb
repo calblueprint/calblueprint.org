@@ -1,9 +1,11 @@
 class NonprofitApplicationsController < ApplicationController
   before_action :authenticate_nonprofit!
-  before_action :verify_npo_app_open
+  before_action :verify_app_open
 
   def new
     @nonprofit_application = current_nonprofit.nonprofit_applications.build
+    @default_check_cs169 = params.key?(:cs169) || (@settings.cs169_app_open && !@settings.npo_app_open)
+    @disable_cs169_choice = !@settings.cs169_app_open || !@settings.npo_app_open
   end
 
   def create
@@ -25,13 +27,13 @@ class NonprofitApplicationsController < ApplicationController
 
   def nonprofit_application_params
     params.require(:nonprofit_application)
-      .permit(:purpose, :history, :date_established, :legal,
+      .permit(:cs169_pool, :purpose, :history, :date_established, :legal,
               :short_summary, :goals, :key_features, :target_audience, :why, devices: [])
       .merge(semester: @settings.current_semester)
   end
 
-  def verify_npo_app_open
-    return if @settings.npo_app_open
+  def verify_app_open
+    return if @settings.npo_app_open || @settings.cs169_app_open
     redirect_to nonprofits_apply_path, flash: { error: t('nonprofit_applications.closed') }
   end
 end

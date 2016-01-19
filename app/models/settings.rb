@@ -14,11 +14,13 @@
 class Settings < ActiveRecord::Base
   validates :singleton_guard, numericality: 0
   validates :npo_app_open, inclusion: [true, false]
+  validates :cs169_app_open, inclusion: [true, false]
   validates :student_app_open, inclusion: [true, false]
   validates :current_semester_id, presence: true
 
   def self.instance
     first_or_create npo_app_open: true,
+                    cs169_app_open: true,
                     student_app_open: true,
                     current_semester_id: Semester.first.id,
                     singleton_guard: 0

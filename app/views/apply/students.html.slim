@@ -7,8 +7,8 @@
   - if @settings.student_app_open
     .row
       .small-12.medium-9.columns
-        p#hook = t ".hook"
-      #apply-button.small-12.medium-3.columns
+        p.hook = t ".hook"
+      .apply-button.small-12.medium-3.columns
         = link_to "Apply Now", new_student_application_path, class: "button"
   - else
     .row

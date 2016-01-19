@@ -123,6 +123,14 @@
   z-index: -10;
 }
 
+.error-text {
+  color: $google-red;
+}
+
+.disabled-text {
+  color: $medium-gray;
+}
+
 .outline {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }

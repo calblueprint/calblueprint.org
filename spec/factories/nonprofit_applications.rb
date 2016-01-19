@@ -27,6 +27,7 @@ FactoryGirl.define do
     history "Some text."
     date_established Time.zone.now.to_date
     legal true
+    cs169_pool false
     short_summary "hi"
     goals "many"
     key_features "fun"

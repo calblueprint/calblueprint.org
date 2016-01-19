@@ -76,8 +76,15 @@ en:
         develops web and mobile applications for non-profit organizations. As
         a partner, we will work with you to develop technology that turns
         your vision into a reality. Everything we do is completely pro bono.
+      cs169_hook: >
+        We also partner with UC Berkeley's <a
+        href="https://sites.google.com/site/ucbsaas/project/external-customer"
+        target="_blank">Software Engineering</a> class (CS 169) to facilitate
+        projects that we don't have the capacity to take on. If you're
+        interested in having your project considered for this pool, you can
+        choose to opt in on your application.
       applications_closed: >
-        Applications are closed for this semester. Sign up to be notified when they reopen!
+        Applications for Blueprint are closed for this semester. Sign up to be notified when they reopen!
       services:
         web_application_development: >
           Our platform of choice, web applications leverage the power of the internet to expand reach and

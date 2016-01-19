@@ -1,12 +1,19 @@
 module Admins
   class NonprofitApplicationsController < BaseController
+    FILTER_TO_QUERY = {
+      all: -> { NonprofitApplication.all },
+      bp: -> { NonprofitApplication.bp_apps },
+      cs169: -> { NonprofitApplication.cs169_apps }
+    }.with_indifferent_access
+
     def show
       application = NonprofitApplication.find(params[:id])
       @nonprofit_application = NonprofitApplicationDecorator.new application
     end
 
     def index
-      @nonprofit_applications = NonprofitApplication.all
+      @filter = params[:filter_by] || :all
+      @nonprofit_applications = FILTER_TO_QUERY[@filter].call
     end
 
     def destroy

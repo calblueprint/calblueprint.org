@@ -87,11 +87,11 @@
     width: 75%;
   }
 
-  #hook {
+  .hook {
     text-align: left;
   }
 
-  #apply-button {
+  .apply-button {
     padding-top: 14px;
     text-align: center;
   }
@@ -227,6 +227,15 @@
   .white-button {
     @extend button;
     border: 1px solid $white;
+  }
+
+  .calgold-button {
+    color: $black;
+    background-color: $california-gold;
+
+    &:hover {
+      background-color: darken($california-gold, 10);
+    }
   }
 
   .white-bg {

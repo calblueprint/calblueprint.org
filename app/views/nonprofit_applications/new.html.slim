@@ -25,6 +25,13 @@
     .row
       .spacer
       .medium-9.medium-centered.columns.centered
+        - if !@settings.cs169_app_open
+          label.error-text CS169 pool is closed.
+        - elsif !@settings.npo_app_open
+          label.error-text Blueprint application is closed.
+        = f.input :cs169_pool,
+          input_html: { checked: @default_check_cs169, disabled: @disable_cs169_choice },
+          label_html: { class: @disable_cs169_choice ? "disabled-text" : "" }
         = f.input :purpose
         = f.input :history
         .date-dropdown

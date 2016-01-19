@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103102529) do
+ActiveRecord::Schema.define(version: 20160119012728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -116,6 +116,7 @@ ActiveRecord::Schema.define(version: 20160103102529) do
     t.string   "devices"
     t.text     "target_audience"
     t.text     "why"
+    t.boolean  "cs169_pool",       null: false
   end
 
   create_table "nonprofits", force: :cascade do |t|
@@ -168,6 +169,7 @@ ActiveRecord::Schema.define(version: 20160103102529) do
     t.integer  "current_semester_id"
     t.boolean  "npo_app_open"
     t.boolean  "student_app_open"
+    t.boolean  "cs169_app_open"
   end
 
   add_index "settings", ["current_semester_id"], name: "index_settings_on_current_semester_id", using: :btree

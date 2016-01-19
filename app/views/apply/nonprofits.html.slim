@@ -7,19 +7,28 @@
   - if @settings.npo_app_open
     .row
       .small-12.medium-9.columns
-        p#hook = t ".hook"
-      #apply-button.small-12.medium-3.columns
-          = link_to "Apply Now", new_nonprofit_application_path, class: "button"
+        p.hook = raw t ".hook"
+      .apply-button.small-12.medium-3.columns
+        = link_to "Apply to Blueprint", new_nonprofit_application_path, class: "button"
   - else
     .row
       .small-12.medium-11.columns.small-centered
-        p.center = t ".hook"
+        p.center = raw t ".hook"
     .spacer-small
     .row
-      .small-12.medium-8.columns.small-centered
+      .small-12.medium-9.columns.small-centered
         .applications-closed
           p.center = t ".applications_closed"
           = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
+  .spacer-small
+  .row
+    .small-12.medium-9.columns
+      p.hook = raw t ".cs169_hook"
+    .apply-button.small-12.medium-3.columns
+      - if @settings.cs169_app_open
+        = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "button calgold-button"
+      - else
+        button.calgold-button.disabled disabled="disabled" CS169 Pool Closed
   .spacer
 .gray-bg
   ul#apply_nav.submenu

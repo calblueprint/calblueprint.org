@@ -17,15 +17,20 @@
 #  devices          :string
 #  target_audience  :text
 #  why              :text
+#  cs169_pool       :boolean
 #
 
 class NonprofitApplication < ActiveRecord::Base
+  scope :cs169_apps, -> { where(cs169_pool: true) }
+  scope :bp_apps, -> { where(cs169_pool: false) }
+
   POSSIBLE_DEVICES = ["Mobile phones", "Tablets", "Desktops"]
   serialize :devices
 
   belongs_to :nonprofit
   belongs_to :semester
 
+  validates :cs169_pool, inclusion: [true, false]
   validates :nonprofit_id, presence: true
   validates :semester_id, presence: true
   validates :purpose, presence: true

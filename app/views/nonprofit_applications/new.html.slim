@@ -32,6 +32,9 @@
         = f.input :cs169_pool,
           input_html: { checked: @default_check_cs169, disabled: @disable_cs169_choice },
           label_html: { class: @disable_cs169_choice ? "disabled-text" : "" }
+        .js-cs169-disclaimer.error-text
+          label = raw t ".cs169_disclaimer"
+          .spacer-small
         = f.input :purpose
         = f.input :history
         .date-dropdown

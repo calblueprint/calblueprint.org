@@ -39,6 +39,9 @@ roles:
   expansion: &expansion
     role: "Director of Expansion"
 
+  expansion: &mentor
+    role: "Project Mentor"
+
 members:
 
   # E-Team
@@ -114,6 +117,11 @@ members:
 
   # Developers
 
+  - first_name: 'Sam'
+    last_name: 'Lau'
+    email: 'samlau95@gmail.com'
+    <<: *mentor
+
   - first_name: 'Andrew'
     last_name: 'Millman'
     email: 'andrewmillman35@gmail.com'
@@ -184,11 +192,6 @@ members:
     email: 'upark.go@gmail.com'
     <<: *developer
 
-  - first_name: 'Sam'
-    last_name: 'Lau'
-    email: 'samlau95@gmail.com'
-    <<: *developer
-
   - first_name: 'Eric'
     last_name: 'Shen'
     email: 'email.ericshen@gmail.com'
@@ -227,6 +230,11 @@ members:
   - first_name: 'Nikita'
     last_name: 'Rau'
     email: 'raun@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Quinn'
+    last_name: 'Romanek'
+    email: 'quinnromanek@gmail.com'
     <<: *developer
 
 alumni:
@@ -301,3 +309,42 @@ alumni:
     email: 'anthony.sutardja@gmail.com'
     <<: *developer
 
+  - first_name: 'Melissa'
+    last_name: 'Huang'
+    email: 'melissahuang10@gmail.com'
+    <<: *leader
+
+  - first_name: 'Deepak'
+    last_name: 'Warrier'
+    email: 'dwarrier@gmail.com'
+    <<: *developer
+
+  - first_name: 'John'
+    last_name: 'Du'
+    email: 'johnldu@gmail.com'
+    <<: *developer
+
+  - first_name: 'Alton'
+    last_name: 'Zheng'
+    email: 'altonzheng@berkeley.edu'
+    <<: *developer
+
+  - first_name: 'Alli'
+    last_name: 'Leong'
+    email: 'allisonhleong@gmail.com'
+    <<: *leader
+
+  - first_name: 'Wonjun'
+    last_name: 'Jeong'
+    email: 'jeong.wonjun@gmail.com'
+    <<: *president
+
+  - first_name: 'Michelle'
+    last_name: 'Chow'
+    email: 'callmemc@gmail.com'
+    <<: *leader
+
+  - first_name: 'Tony'
+    last_name: 'Wu'
+    email: 'tony.wu@berkeley.edu'
+    <<: *leader

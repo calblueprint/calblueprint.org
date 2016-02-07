@@ -88,6 +88,11 @@ members:
     email: 'vivekrag95@gmail.com'
     <<: *expansion
 
+  - first_name: 'Jessica'
+    last_name: 'Chang'
+    email: 'jessmchang@gmail.com'
+    <<: *media
+
   # Project Leaders
 
   - first_name: 'Howard'

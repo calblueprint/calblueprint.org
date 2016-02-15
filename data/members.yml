@@ -88,9 +88,9 @@ members:
     email: 'vivekrag95@gmail.com'
     <<: *expansion
 
-  - first_name: 'Jessica'
-    last_name: 'Chang'
-    email: 'jessmchang@gmail.com'
+  - first_name: 'Ying'
+    last_name: 'Luo'
+    email: 'ying.t.luo@gmail.com'
     <<: *media
 
   # Project Leaders

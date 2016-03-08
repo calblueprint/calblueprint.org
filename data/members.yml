@@ -118,6 +118,7 @@ members:
   - first_name: 'Joey'
     last_name: 'Pereira'
     email: 'joeypereira@berkeley.edu'
+    image: 'http://i.imgur.com/y5ipzhw.jpg?1'
     <<: *leader
 
   # Developers

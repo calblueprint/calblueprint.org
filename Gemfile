@@ -24,7 +24,7 @@ gem 'kaminari', '~> 0.16.1'
 gem 'email_validator', '~> 1.4.0'
 gem 'recipient_interceptor', '~> 0.1.2'
 gem 'enumerize'
-gem "paperclip", "~> 4.2"
+gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '~> 1.5.7'
 gem 'iconv', '~> 1.0.3'
 gem 'ffaker'
@@ -32,6 +32,7 @@ gem 'draper', '~> 2.1.0'
 gem 'gibbon', '~> 2.0.0'
 gem 'redcarpet', '~> 3.3.4'
 gem 'acts_as_list', '~> 0.7.2'
+gem 'httparty', '~> 0.13.3'
 
 # Frontend
 gem 'sass-rails', '~> 5.0.3'

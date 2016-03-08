@@ -94,7 +94,7 @@
                 a href="javascript:void(0)"
                   div.member-image
                     - if member['email']
-                      = image_tag member_image(member, 'paw.png')
+                      = image_tag gravatar_url(member['email']), onError: "this.onerror=null;this.src='#{member['image'] || asset_path('paw.png')}';"
                     - else
                       = image_tag 'paw.png'
                   figcaption
@@ -116,7 +116,7 @@
                 a href="javascript:void(0)"
                   div.member-image
                     - if member['email']
-                      = image_tag member_image(member, 'paw.png')
+                      = image_tag gravatar_url(member['email']), onError: "this.onerror=null;this.src='#{member['image'] || asset_path('paw.png')}';"
                     - else
                       = image_tag 'paw.png'
                   figcaption

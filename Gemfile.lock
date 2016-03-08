@@ -455,7 +455,6 @@ DEPENDENCIES
   guard-livereload
   guard-rspec
   guard-rubocop
-  httparty (~> 0.13.3)
   i18n-tasks
   iconv (~> 1.0.3)
   jquery-rails (~> 3.1.2)

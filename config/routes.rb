@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: "pages#home"
 
+  # Route for Let's Encrypt
+  get "/.well-known/acme-challenge/:id" => "pages#lets_encrypt"
+
   # Static pages
   get "/about", to: "pages#about"
   get "/sponsors", to: "pages#sponsors"

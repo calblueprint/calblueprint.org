@@ -2,6 +2,13 @@ class ProjectDecorator < ApplicationDecorator
   include Draper::LazyHelpers
   delegate_all
 
+  HTTP = 'http://'
+
+  def background_image_style
+    url = object.banner_image.url.sub HTTP, '//'
+    "background-image: url(#{url})"
+  end
+
   def full_description_markdown
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     markdown.render object.full_description

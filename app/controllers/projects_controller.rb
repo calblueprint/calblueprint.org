@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.published
+    @projects = Project.published.decorate
   end
 
   def show

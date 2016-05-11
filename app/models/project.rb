@@ -18,7 +18,7 @@
 #
 
 class Project < ActiveRecord::Base
-  MISSING_IMAGE_PLACEHOLDER = "http://placehold.it/1024x400"
+  MISSING_IMAGE_PLACEHOLDER = "//placehold.it/1024x400"
 
   default_scope { order 'position' }
 

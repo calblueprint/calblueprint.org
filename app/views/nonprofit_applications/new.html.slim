@@ -35,6 +35,7 @@
         .js-cs169-disclaimer.error-text
           label = raw t ".cs169_disclaimer"
           .spacer-small
+        = f.input :client_status, collection: NonprofitApplication::CLIENT_STATUSES, as: :radio_buttons
         = f.input :purpose
         = f.input :history
         .date-dropdown
@@ -48,7 +49,6 @@
         = f.input :target_audience
         = f.input :why
         = f.input :technical_requirements
-        = f.input :client_status, collection: NonprofitApplication::CLIENT_STATUSES, as: :radio_buttons
     .row
       .center
         = f.button :submit, 'Submit'

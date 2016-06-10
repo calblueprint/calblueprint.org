@@ -47,6 +47,8 @@
         = f.input :devices, collection: NonprofitApplication::POSSIBLE_DEVICES, as: :check_boxes
         = f.input :target_audience
         = f.input :why
+        = f.input :technical_requirements
+        = f.input :client_status, collection: NonprofitApplication::CLIENT_STATUSES, as: :radio_buttons
     .row
       .center
         = f.button :submit, 'Submit'

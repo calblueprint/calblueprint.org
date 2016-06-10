@@ -42,6 +42,10 @@ en:
           What is the target audience for this project? How large would you estimate
           this audience to be?
         why: Why is this project important to your organization?
+        technical_requirements: >
+          Does your project have any specific technical requirements (such as Salesforce,
+          or a strong preference to use Django)?
+        client_status: Are you a returning CS169 customer from past semesters?
 
     # placeholders:
     #   defaults:
@@ -56,4 +60,3 @@ en:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
-

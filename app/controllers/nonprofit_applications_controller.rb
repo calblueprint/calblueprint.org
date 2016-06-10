@@ -14,7 +14,8 @@ class NonprofitApplicationsController < ApplicationController
       SendNonprofitApplicationEmail.execute @nonprofit_application
       redirect_to nonprofits_apply_path, flash: { success: t("nonprofit_applications.create.success") }
     else
-      render 'new'
+      @default_check_cs169 = nonprofit_application_params[:cs169_pool] == "1"
+      render :new
     end
   end
 

@@ -14,7 +14,8 @@ class NonprofitApplicationsController < ApplicationController
       SendNonprofitApplicationEmail.execute @nonprofit_application
       redirect_to nonprofits_apply_path, flash: { success: t("nonprofit_applications.create.success") }
     else
-      render 'new'
+      @default_check_cs169 = nonprofit_application_params[:cs169_pool] == "1"
+      render :new
     end
   end
 
@@ -28,7 +29,8 @@ class NonprofitApplicationsController < ApplicationController
   def nonprofit_application_params
     params.require(:nonprofit_application)
       .permit(:cs169_pool, :purpose, :history, :date_established, :legal,
-              :short_summary, :goals, :key_features, :target_audience, :why, devices: [])
+              :short_summary, :goals, :key_features, :target_audience, :why,
+              :technical_requirements, :client_status, devices: [])
       .merge(semester: @settings.current_semester)
   end
 

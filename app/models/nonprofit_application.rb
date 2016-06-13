@@ -43,6 +43,12 @@ class NonprofitApplication < ActiveRecord::Base
   validates :devices, presence: true
   validates :target_audience, presence: true
   validates :why, presence: true
+  validates :technical_requirements, presence: true
+
+  CLIENT_STATUSES = ["Yes, my current app works but I want to add more features",
+                     "Yes, but the app is not currently in a usable state",
+                     "No"]
+  validates :client_status, presence: true, if: :cs169_pool?
 
   delegate :email, to: :nonprofit
   delegate :organization_name, to: :nonprofit

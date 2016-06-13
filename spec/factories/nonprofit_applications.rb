@@ -34,5 +34,6 @@ FactoryGirl.define do
     devices ["Desktop", "Mobile phones"]
     target_audience "everyone"
     why "Greatness"
+    technical_requirements "none"
   end
 end

@@ -1,7 +1,8 @@
 .about-banner {
   @include banner(image-url("about/about.jpg"),
-    $height: 500px,
+    $height: 600px,
     $tint: rgba(255, 255, 255, 0.2));
+  margin-bottom: 0;
 }
 
 @include keyframes(FadeIn) {
@@ -14,17 +15,6 @@
   }
 }
 
-.about-mission-block {
-  @extend .center;
-
-  p.mission {
-    color: $dark-gray;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0;
-  }
-}
-
 .about-detail-block {
   .about-value {
     @extend .center;
@@ -33,10 +23,12 @@
       color: $blue;
       margin: auto;
       width: 80%;
+      padding: 25px;
     }
 
     p {
       margin: 0;
+      text-align: left;
     }
   }
 }
@@ -65,7 +57,7 @@
 
 .value-blurb {
   @include media(max-width $medium-screen) {
-    padding-top: 50px;
+    padding-top: 5px;
     position: relative;
     top: 50px;
   }
@@ -99,6 +91,8 @@
         display: inline-block;
         height: 100%;
         position: relative;
+        border-radius: 6px;
+        overflow: hidden;
 
         .member-image {
           height: 200px;
@@ -114,7 +108,8 @@
           z-index: 10;
 
           .name {
-            font-weight: bold;
+            font-weight: 600;
+            font-size: $h5-font-size;
           }
         }
 
@@ -310,7 +305,8 @@
 }
 
 figure.effect-sadie figcaption::before {
-  @include background(linear-gradient(top, rgba(71, 125, 202, 0.5) 0%, rgba(71, 125, 202, 0.5) 75%));
+  @include background(linear-gradient(top, rgba(71, 125, 202, 0.8) 0%, rgba(71, 125, 202, 0.8) 75%));
+  border-radius: 6px;
   content: "";
   height: 100%;
   left: 0;

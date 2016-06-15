@@ -73,6 +73,6 @@ seed_semesters
 seed_applicants
 seed_student_applications
 seed_nonprofits
-seed_nonprofit_applications
+# seed_nonprofit_applications
 seed_projects
 seed_roles_and_members

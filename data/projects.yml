@@ -6,14 +6,14 @@
   link: https://schoolsfund-friendsandfamily.herokuapp.com/
   banner_image: https://s3.amazonaws.com/calblueprint-prod/images/bpsf.png
   full_description: |
-    The problem
+    The Problem
     -----------
     Every year, the schools fund would review hundreds of grant applications
     by hand in a very time consuming process. Grants would then only be
     awarded once a year for teachers, even though the teachers needed the
     funds throughout the year.
 
-    The solution
+    The Solution
     ------------
     Blueprint was able to work with the Schools Fund to create Friends and
     Family, a local crowdfunding platform for Berkeley School District
@@ -29,7 +29,7 @@
   link: https://medium.com/@blueprint/learning-from-doing-39c9aa926b87
   banner_image: https://s3.amazonaws.com/calblueprint-prod/images/phc.png
   full_description: |
-    The problem
+    The Problem
     -----------
     Project Homeless Connect runs approximately five events a year where they
     provide the homeless population of San Francisco with services such as
@@ -40,7 +40,7 @@
     accruing a large time debt for the organization to copy information from
     the paper form into their Salesforce CRM.
 
-    The solution
+    The Solution
     ------------
     Blueprint was able to work with Project Homeless Connect by developing an
     Android application that allowed clients to check in to the event. The
@@ -60,14 +60,14 @@
   link: https://bridge.odalc.org/
   banner_image: https://s3.amazonaws.com/calblueprint-prod/images/odalc.png
   full_description: |
-    The problem
+    The Problem
     -----------
     ODALC aims to empower people with digital literacy education that will
     improve their lives and the communities they live in, but struggled with
     how to connect professionals in the tech and design industry with under
     resourced communities.
 
-    The solution
+    The Solution
     ------------
     Blueprint was able to work with ODALC to create a platform that seamlessly
     bridges technology, design and low-income communities. This platform
@@ -83,7 +83,7 @@
   link: http://ros-staging.herokuapp.com/
   banner_image: https://s3.amazonaws.com/calblueprint-prod/images/rootsofsuccess.png
   full_description: |
-    The problem
+    The Problem
     -----------
     Roots of Success strives to connect youth and adults from communities with
     high rates of poverty and unemployment to environmental careers and post-
@@ -91,7 +91,7 @@
     needed a way to efficiently manage more communities, teachers and
     students.
 
-    The solution
+    The Solution
     ------------
     Blueprint was able to work with Roots of Success to create a platform that
     allows teachers to gracefully manage multiple classrooms, modules and

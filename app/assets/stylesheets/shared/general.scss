@@ -62,6 +62,11 @@
   width: 100%;
 }
 
+.spacer-adjust {
+  height: 65px;
+  width: 100%;
+}
+
 .spacer-large {
   height: 150px;
   width: 100%;
@@ -118,8 +123,6 @@
 
 .gray-bg {
   background-color: $gray-background-color;
-  border-bottom: 1px solid $gray-background-border-color;
-  border-top: 1px solid $gray-background-border-color;
   z-index: -10;
 }
 
@@ -129,6 +132,10 @@
 
 .disabled-text {
   color: $medium-gray;
+}
+
+.align-right {
+  text-align: right !important;
 }
 
 .outline {

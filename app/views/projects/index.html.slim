@@ -1,8 +1,9 @@
 .projects-banner
   .banner-inner
-    h1.title = t ".title"
-    p.subtitle = t ".subtitle"
-
+    h1.h0.title = t ".title"
+.spacer
+h2 The Results
+.spacer
 .wrap
   .project-cards
     - @projects.each do |project|
@@ -10,7 +11,8 @@
         .project id="#{dom_id project}"
           h3.project__title = project.title
           p.project__summary = project.short_summary
-          span.project__case-study Read the Case Study
+          span.card-button Read More
           / Little hack to get dynamically loading images since we can't
           / get the image url in CSS
           .project__image style="#{project.background_image_style}"
+.spacer-small

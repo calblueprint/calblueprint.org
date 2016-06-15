@@ -2,8 +2,9 @@ $laptop-width: 969px;
 $small-screen: em(420);
 
 #home-image {
+  background: image-url("howard.jpg");
   background-size: cover;
-  height: 665px;
+  height: 715px;
 
   @include media(max-width $medium-screen) {
     height: 550px;
@@ -11,21 +12,12 @@ $small-screen: em(420);
   }
 }
 
-#home-padding {
-  padding-top: 190px;
-
-  @include media(max-width $medium-screen) {
-    padding-top: 90px;
-  }
-}
-
 #home-screen {
   background: image-url("elevate-africa.png");
   background-size: cover;
-  border: 1px solid $gray-background-border-color;
   border-radius: 6px;
-  height: 345px;
-  width: 552px;
+  height: 347px;
+  width: 556px;
 
   @include media(max-width $medium-screen) {
     height: 150px;
@@ -40,76 +32,24 @@ $small-screen: em(420);
   }
 }
 
+.home-button {
+  font-size: $h6-font-size;
+}
+
 #home-banner {
-  background: rgba(0, 0, 0, 0.4);
-  height: 600px;
+  height: 650px;
   position: relative;
   width: 100%;
+  background: rgba(0, 0, 0, 0.4);
 
   @include media(max-width $medium-screen) {
     height: 400px;
   }
 }
 
-#laptop {
-  bottom: -217px;
-  height: 100%;
-  max-height: 650px;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-
-  @include media(max-width $medium-screen) {
-    bottom: -120px;
-  }
-
-  #laptop-bg-container {
-    bottom: 0;
-    position: relative;
-    z-index: 2;
-
-    @include media(max-width $laptop-width) {
-      bottom: 0;
-      position: absolute;
-    }
-  }
-
-  #laptop-bg {
-    height: auto;
-    max-width: $laptop-width;
-    width: 100%;
-  }
-
-  #laptop-content-container {
-    padding-top: 25px;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    z-index: 0;
-
-    @include media(max-width $large-screen) {
-      padding-top: 2.3%;
-    }
-
-    @include media(max-width $laptop-width) {
-      bottom: 0;
-      padding-bottom: 6.5%;
-      padding-top: 0;
-      position: absolute;
-    }
-  }
-
-  #laptop-content {
-    border-top: 10px solid $black;
-    height: auto;
-    max-width: 795px;
-    width: 83%;
-  }
-}
-
-
 #home-title {
-  padding-top: 75px;
+  padding-top: 235px;
+  text-shadow: 0 0 10px rgba(27, 117, 188, 0.4);
 
   @include media(max-width $small-screen) {
     padding-top: 32px;
@@ -118,6 +58,9 @@ $small-screen: em(420);
 
 #home-subtitle {
   padding-top: 5px;
+  font-weight: 600;
+  font-size: $h6-font-size;
+  text-shadow: 0 0 20px rgba(27, 117, 188, 0.4);
 
   @include media(max-width $medium-screen) {
     padding-top: 25px;
@@ -127,6 +70,10 @@ $small-screen: em(420);
 .bold-blue {
   color: $blue;
   font-weight: bold;
+}
+
+.spacer-home {
+  height: 20px;
 }
 
 #our-projects {

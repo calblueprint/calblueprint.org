@@ -7,9 +7,8 @@
  */
 
 .projects-banner {
-  @include banner(asset-url("projects/projects-banner.png"),
-                  $height: 200px);
-  background-size: initial;
+  @include banner(asset-url("cogs.jpg"),
+                  $height: 400px);
 }
 
 .project-banner {
@@ -20,6 +19,4 @@
 
   // We need this because the div with the image will be position: absolute
   position: relative;
-
-  height: 350px;
 }

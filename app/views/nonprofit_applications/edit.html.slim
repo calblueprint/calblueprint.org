@@ -21,7 +21,7 @@
           | if you have any questions.
 
   = render "form_errors", obj: @nonprofit_application
-  = simple_form_for @nonprofit_application do |f|
+  = simple_form_for @nonprofit_application, url: nonprofit_application_submit_path(@nonprofit_application.id), method: 'post' do |f|
     .row
       .spacer
       .medium-9.medium-centered.columns.centered
@@ -52,4 +52,9 @@
     .row
       .center
         = f.button :submit, 'Submit'
+  .row
+    button#save_button data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}" Save
+    small
+      | Last Updated
+      span#last_updated   #{@nonprofit_application.updated_at.strftime("%I:%M:%S %B %d, %Y")}
   .spacer

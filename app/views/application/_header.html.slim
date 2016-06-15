@@ -32,4 +32,9 @@ header.navigation role="banner"
         - if current_user
           li.nav-link
             = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
-        = link_to "Apply", apply_path, class: "apply-button"
+        - if current_nonprofit
+          li.nav-link
+            = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
+          = link_to "Apply", nonprofit_applications_path, class: "apply-button"
+        - else
+          = link_to "Apply", apply_path, class: "apply-button"

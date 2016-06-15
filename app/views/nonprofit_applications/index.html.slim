@@ -1,0 +1,24 @@
+.row
+  .banner
+    .banner-text
+      .spacer
+      h1 #{current_user.organization_name} Proposals
+.row
+  .medium-6.small-12.columns
+    table
+      tr
+        th DRAFT PROPOSALS
+      - @nonprofit_applications.each do |na|
+        - if na.draft?
+          tr
+            td = link_to "Continue proposal last updated #{na.updated_at.strftime("%B %d, %Y")}", edit_nonprofit_application_path(id: na.id)
+      tr
+        td = link_to "Begin New Proposal", new_nonprofit_application_path
+  .medium-6.small-12.columns
+    table
+      tr
+        th SUBMITTED PROPOSALS
+      - @nonprofit_applications.each do |na|
+        - if na.submitted?
+          tr
+            td Proposal submitted on #{na.submitted_at.strftime("%B %d, %Y")}

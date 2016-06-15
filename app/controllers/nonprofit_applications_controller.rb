@@ -3,20 +3,47 @@ class NonprofitApplicationsController < ApplicationController
   before_action :verify_app_open
 
   def new
-    @nonprofit_application = current_nonprofit.nonprofit_applications.build
-    @default_check_cs169 = params.key?(:cs169) || (@settings.cs169_app_open && !@settings.npo_app_open)
-    @disable_cs169_choice = !@settings.cs169_app_open || !@settings.npo_app_open
+    default_check_cs169 = params.key?(:cs169) || (@settings.cs169_app_open && !@settings.npo_app_open)
+    nonprofit_application = current_nonprofit.nonprofit_applications.create(cs169_pool: default_check_cs169,
+                                                                            semester: @settings.current_semester)
+    puts nonprofit_application
+    redirect_to edit_nonprofit_application_path(id: nonprofit_application.id)
   end
 
-  def create
-    @nonprofit_application = current_nonprofit.nonprofit_applications.build nonprofit_application_params
-    if @nonprofit_application.save
-      SendNonprofitApplicationEmail.execute @nonprofit_application
-      redirect_to nonprofits_apply_path, flash: { success: t("nonprofit_applications.create.success") }
-    else
-      @default_check_cs169 = nonprofit_application_params[:cs169_pool] == "1"
-      render :new
+  def edit
+    @nonprofit_application = NonprofitApplication.find(params[:id])
+    if @nonprofit_application.nonprofit != current_nonprofit
+      redirect_to root_path, flash: { error: "You are not authorized to access that page"}
     end
+    @disable_cs169_choice = !@settings.cs169_app_open || !@settings.npo_app_open
+    @default_check_cs169 = @nonprofit_application[:cs169_pool]
+  end
+
+  def save
+    puts "HELLOOOOOO"
+    puts nonprofit_application_params
+    nonprofit_application = NonprofitApplication.find(params[:nonprofit_application_id])
+    if nonprofit_application.update_attributes(nonprofit_application_params)
+      render json: {success: true}
+    else
+      render json: {success: false}
+    end
+  end
+
+  def submit
+    @nonprofit_application = NonprofitApplication.find(params[:nonprofit_application_id])
+    if @nonprofit_application.update_attributes(nonprofit_application_params) && @nonprofit_application.submit
+      SendNonprofitApplicationEmail.execute @nonprofit_application
+      redirect_to nonprofit_applications_path, flash: { success: t("nonprofit_applications.create.success") }
+    else
+      @disable_cs169_choice = !@settings.cs169_app_open || !@settings.npo_app_open
+      @default_check_cs169 = @nonprofit_application[:cs169_pool]
+      render 'edit'
+    end
+  end
+
+  def index
+    @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
   end
 
   private
@@ -30,7 +57,7 @@ class NonprofitApplicationsController < ApplicationController
     params.require(:nonprofit_application)
       .permit(:cs169_pool, :purpose, :history, :date_established, :legal,
               :short_summary, :goals, :key_features, :target_audience, :why,
-              :technical_requirements, :client_status, devices: [])
+              :technical_requirements, :client_status, :nonprofit_application_id, devices: [])
       .merge(semester: @settings.current_semester)
   end
 

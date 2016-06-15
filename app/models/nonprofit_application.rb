@@ -25,30 +25,43 @@ class NonprofitApplication < ActiveRecord::Base
   scope :bp_apps, -> { where(cs169_pool: false) }
 
   POSSIBLE_DEVICES = ["Mobile phones", "Tablets", "Desktops"]
+  STATES = ["draft", "submitted"]
   serialize :devices
 
   belongs_to :nonprofit
   belongs_to :semester
 
-  validates :cs169_pool, inclusion: [true, false]
+  validates :cs169_pool, inclusion: [true, false], if: lambda { |na| na.submitted? }
   validates :nonprofit_id, presence: true
   validates :semester_id, presence: true
-  validates :purpose, presence: true
-  validates :history, presence: true
-  validates :date_established, presence: true
+  validates :purpose, presence: true, if: lambda { |na| na.submitted? }
+  validates :history, presence: true, if: lambda { |na| na.submitted? }
+  validates :date_established, presence: true, if: lambda { |na| na.submitted? }
   # legal is validated by database
-  validates :short_summary, presence: true, length: { maximum: 255 }
-  validates :goals, presence: true
-  validates :key_features, presence: true
-  validates :devices, presence: true
-  validates :target_audience, presence: true
-  validates :why, presence: true
-  validates :technical_requirements, presence: true
+  validates :short_summary, presence: true, length: { maximum: 255 }, if: lambda { |na| na.submitted? }
+  validates :goals, presence: true, if: lambda { |na| na.submitted? }
+  validates :key_features, presence: true, if: lambda { |na| na.submitted? }
+  validates :devices, presence: true, if: lambda { |na| na.submitted? }
+  validates :target_audience, presence: true, if: lambda { |na| na.submitted? }
+  validates :why, presence: true, if: lambda { |na| na.submitted? }
+  validates :technical_requirements, presence: true, if: lambda { |na| na.submitted? }
 
   CLIENT_STATUSES = ["Yes, my current app works but I want to add more features",
                      "Yes, but the app is not currently in a usable state",
                      "No"]
-  validates :client_status, presence: true, if: :cs169_pool?
+  validates :client_status, presence: true, if: lambda { |na| na.submitted? && na.cs169_pool? }
+
+  validates :state, inclusion: {in: STATES}, allow_nil: false
+
+  state_machine :state, :initial => :draft do
+    event :submit do
+      transition :draft => :submitted
+    end
+
+    after_transition :draft => :submitted do |nonprofit_application, transition|
+      nonprofit_application.update_attributes(submitted_at: Time.now)
+    end
+  end
 
   delegate :email, to: :nonprofit
   delegate :organization_name, to: :nonprofit

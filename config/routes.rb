@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :nonprofit_applications, only: [:new, :edit, :index], controller: "nonprofit_applications" do
     post "save"
     post "submit"
+    get "revise"
   end
 
   # Applicants

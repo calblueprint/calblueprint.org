@@ -6,24 +6,24 @@ class NonprofitApplicationsController < ApplicationController
     default_check_cs169 = params.key?(:cs169) || (@settings.cs169_app_open && !@settings.npo_app_open)
     nonprofit_application = current_nonprofit.nonprofit_applications.create(cs169_pool: default_check_cs169,
                                                                             semester: @settings.current_semester)
-    puts nonprofit_application
     redirect_to edit_nonprofit_application_path(id: nonprofit_application.id)
   end
 
   def edit
     @nonprofit_application = NonprofitApplication.find(params[:id])
-    if @nonprofit_application.nonprofit != current_nonprofit
+    unless @nonprofit_application.nonprofit == current_nonprofit && @nonprofit_application.draft?
       redirect_to root_path, flash: { error: "You are not authorized to access that page"}
     end
+
     @disable_cs169_choice = !@settings.cs169_app_open || !@settings.npo_app_open
     @default_check_cs169 = @nonprofit_application[:cs169_pool]
   end
 
   def save
-    puts "HELLOOOOOO"
-    puts nonprofit_application_params
     nonprofit_application = NonprofitApplication.find(params[:nonprofit_application_id])
-    if nonprofit_application.update_attributes(nonprofit_application_params)
+    if nonprofit_application.draft? &&
+       nonprofit_application.nonprofit == current_nonprofit &&
+       nonprofit_application.update_attributes(nonprofit_application_params)
       render json: {success: true}
     else
       render json: {success: false}
@@ -44,6 +44,14 @@ class NonprofitApplicationsController < ApplicationController
 
   def index
     @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
+  end
+
+  def revise
+    nonprofit_application = NonprofitApplication.find(params[:nonprofit_application_id])
+    if nonprofit_application.nonprofit == current_nonprofit
+      new_application = NonprofitApplication.create(nonprofit_application.attributes.except("id", "state"))
+      redirect_to edit_nonprofit_application_path(id: new_application.id)
+    end
   end
 
   private

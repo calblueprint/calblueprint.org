@@ -21,4 +21,4 @@
       - @nonprofit_applications.each do |na|
         - if na.submitted?
           tr
-            td Proposal submitted on #{na.submitted_at.strftime("%B %d, %Y")}
+            td = link_to "Revise proposal submitted on #{na.submitted_at.strftime("%B %d, %Y")}", nonprofit_application_revise_path(nonprofit_application_id: na.id)

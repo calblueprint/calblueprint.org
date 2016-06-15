@@ -1,8 +1,8 @@
 .project-banner
   .banner-inner
-    h1.title = @project.title
-    p.subtitle = @project.short_summary
+    h1.h0.title = @project.title
     .project__image style="background-image: url(#{@project.banner_image.url})"
-
+.spacer
 .project-case-study
   = raw @project.full_description_markdown
+.spacer-adjust

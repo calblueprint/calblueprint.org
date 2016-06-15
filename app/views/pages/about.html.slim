@@ -1,18 +1,20 @@
 .about-banner
   .banner-inner
-    h1.about-banner__title = t ".headline"
+    h1.h0.about-banner__title = t ".headline"
 .white-bg
-  .about-mission-block
-    .row
-      .small-10.small-centered.columns
-        .spacer
-        p.mission = t ".mission"
-        .spacer
+  .spacer-adjust
+  .row
+    .small-12.medium-9.large-7.small-centered.columns.center
+      h2 The Mission
+      .spacer-small
+      p.mission = t ".mission"
+  .spacer
   .about-detail-block.gray-bg
     a#linkto-traits.prev
     .row
+      .spacer
+      h2 Our Values
       .medium-4.medium-offset-1.columns
-        .spacer
         .about-value
           .icon-wrapper
             .hover-icon
@@ -20,7 +22,6 @@
               = image_tag("about/craft.png", class: "icon-top")
           .spacer-small
       .medium-6.columns.value-blurb
-        .spacer
         .about-value
           .spacer
           p = t ".values.craft"
@@ -28,7 +29,6 @@
       .medium-1.columns
     .row.culture-small
       .medium-4.medium-offset-1.columns
-        .spacer
         .about-value
           .icon-wrapper
             .hover-icon
@@ -36,21 +36,17 @@
               = image_tag("about/culture.png", class: "icon-top")
           .spacer-small
       .medium-6.columns.value-blurb
-        .spacer
         .about-value
-          .spacer
           p = t ".values.culture"
           .spacer-small
       .medium-1.columns
     .row.culture-medium
       .medium-6.medium-offset-1.columns
-        .spacer
         .about-value
           .spacer
-          p = t ".values.culture"
+          p.align-right = t ".values.culture"
           .spacer-small
       .medium-4.columns
-        .spacer
         .about-value
           .icon-wrapper
             .hover-icon
@@ -60,7 +56,6 @@
       .medium-1.columns
     .row
       .medium-4.medium-offset-1.columns
-        .spacer
         .about-value
           .icon-wrapper
             .hover-icon
@@ -68,13 +63,12 @@
               = image_tag("about/heart.png", class: "icon-top")
           .spacer-small
       .medium-6.columns.value-blurb
-        .spacer
         .about-value
           .spacer
           p = t ".values.heart"
           .spacer-small
       .medium-1.columns
-    .spacer
+    .spacer-about
     .spacer-about
   .spacer
   #team.about-team-block

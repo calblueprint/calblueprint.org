@@ -23,7 +23,11 @@ Rails.application.routes.draw do
   post "/newsletter-subscribe", to: "newsletter#subscribe"
 
   # Nonprofits
-  resources :nonprofit_applications, only: [:new, :create]
+  resources :nonprofit_applications, only: [:new, :edit, :index], controller: "nonprofit_applications" do
+    post "save"
+    post "submit"
+    get "revise"
+  end
 
   # Applicants
   resources :student_applications, only: [:new, :create], path: "apply/students"

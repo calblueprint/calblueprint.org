@@ -21,7 +21,7 @@
           | if you have any questions.
 
   = render "form_errors", obj: @nonprofit_application
-  = simple_form_for @nonprofit_application do |f|
+  = simple_form_for @nonprofit_application, url: nonprofit_application_submit_path(@nonprofit_application.id), method: 'post' do |f|
     .row
       .spacer
       .medium-9.medium-centered.columns.centered
@@ -35,6 +35,7 @@
         .js-cs169-disclaimer.error-text
           label = raw t ".cs169_disclaimer"
           .spacer-small
+        = f.input :client_status, collection: NonprofitApplication::CLIENT_STATUSES, as: :radio_buttons
         = f.input :purpose
         = f.input :history
         .date-dropdown
@@ -47,7 +48,13 @@
         = f.input :devices, collection: NonprofitApplication::POSSIBLE_DEVICES, as: :check_boxes
         = f.input :target_audience
         = f.input :why
+        = f.input :technical_requirements
     .row
       .center
         = f.button :submit, 'Submit'
+  .row
+    button#save_button data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}" Save
+    small
+      | Last Updated
+      span#last_updated   #{@nonprofit_application.updated_at.strftime("%I:%M:%S %B %d, %Y")}
   .spacer

@@ -203,7 +203,7 @@ en:
       success: Message sent! We'll get back to you shortly.
 
   nonprofit_applications:
-    new:
+    edit:
       subtitle: We're looking forward to working with you.
       cs169_disclaimer: >
         Please be sure to review

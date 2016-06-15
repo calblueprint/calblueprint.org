@@ -19,6 +19,7 @@
       .footer__header Nonprofits
       .footer__links
         = link_to "Apply", nonprofits_apply_path, class: 'footer__link'
+        = link_to "Login", new_nonprofit_session_path, class: 'footer__link'
         = link_to "Process", nonprofits_apply_path(anchor: "process"), class: 'footer__link'
         = link_to "FAQ", nonprofits_apply_path(anchor: "faq"), class: 'footer__link'
 

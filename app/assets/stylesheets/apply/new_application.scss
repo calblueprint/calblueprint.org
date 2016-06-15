@@ -8,6 +8,24 @@
   margin-bottom: 0;
 }
 
+.apply-form {
+  .input {
+    padding-bottom: 25px;
+  }
+
+  .text {
+    padding-bottom: 10px;
+  }
+
+  .date {
+    select {
+      text-align: center;
+      float: none;
+      display: inline-block;
+    }
+  }
+}
+
 .apply-info {
   background-color: $white;
   border-bottom-style: solid;
@@ -17,6 +35,12 @@
   border-right-style: solid;
   border-right-width: 1px;
   height: 100%;
+}
+
+.edit-spacer {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
 }
 
 .apply-info-section {

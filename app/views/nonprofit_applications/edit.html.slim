@@ -5,7 +5,9 @@
       .banner-text
         h1 #{current_user.organization_name},
         p.subtitle = t(".subtitle")
+      .spacer
   .apply-info
+    .spacer-small
     .row
       .apply-info-section
         .calendar-icon
@@ -24,7 +26,7 @@
   = simple_form_for @nonprofit_application, url: nonprofit_application_submit_path(@nonprofit_application.id), method: 'post' do |f|
     .row
       .spacer
-      .medium-9.medium-centered.columns.centered
+      .medium-9.medium-centered.columns.centered.apply-form
         - if !@settings.cs169_app_open
           label.error-text CS169 pool is closed.
         - elsif !@settings.npo_app_open
@@ -52,8 +54,10 @@
     .row
       .center
         = f.button :submit, 'Submit'
+        .edit-spacer
+        button#save_button data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}" Save
   .row
-    button#save_button data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}" Save
+    .spacer-small
     small
       | Last Updated
       span#last_updated   #{@nonprofit_application.updated_at.strftime("%I:%M:%S %B %d, %Y")}

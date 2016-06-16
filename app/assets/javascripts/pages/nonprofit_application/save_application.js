@@ -1,5 +1,6 @@
 $(document).on( "page:load ready", function() {
   $("#save_button").on("click", function(e) {
+    e.preventDefault();
     var endpoint = $(this).data("endpoint");
     var request = {
       method: "POST",
@@ -16,5 +17,7 @@ $(document).on( "page:load ready", function() {
     }).fail(function(error) {
       window.alert("Uh oh. Something went wrong.");
     });
+
+    return false;
   });
 });

@@ -1,7 +1,6 @@
 .nonprofits-banner
   .banner-inner
-    h1.title = t ".headline"
-    p.subtitle = t ".subtitle"
+    h1.h0.title = t ".headline"
 .white-bg
   .spacer
   - if @settings.npo_app_open
@@ -9,7 +8,7 @@
       .small-12.medium-9.columns
         p.hook = raw t ".hook"
       .apply-button.small-12.medium-3.columns
-        = link_to "Apply to Blueprint", new_nonprofit_application_path, class: "button"
+        = link_to "Apply as a Nonprofit", new_nonprofit_application_path, class: "button"
   - else
     .row
       .small-12.medium-11.columns.small-centered
@@ -20,15 +19,15 @@
         .applications-closed
           p.center = t ".applications_closed"
           = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
-  .spacer-small
-  .row
-    .small-12.medium-9.columns
-      p.hook = raw t ".cs169_hook"
-    .apply-button.small-12.medium-3.columns
-      - if @settings.cs169_app_open
-        = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "button calgold-button"
-      - else
-        button.calgold-button.disabled disabled="disabled" CS169 Pool Closed
+  / .spacer-small
+  / .row
+  /   .small-12.medium-9.columns
+  /     p.hook = raw t ".cs169_hook"
+  /   .apply-button.small-12.medium-3.columns
+  /     - if @settings.cs169_app_open
+  /       = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "button calgold-button"
+  /     - else
+  /       button.calgold-button.disabled disabled="disabled" CS169 Pool Closed
   .spacer
 .gray-bg
   ul#apply_nav.submenu

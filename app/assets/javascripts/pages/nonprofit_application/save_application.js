@@ -11,6 +11,7 @@ $(document).on( "page:load ready", function() {
     $.ajax(request).done(function(response) {
       if (response.success) {
         $("#last_updated").text(" " + (new Date().toLocaleString()));
+        toastr.success("Application saved!");
       } else {
         window.alert("Uh oh. Something went wrong.");
       }

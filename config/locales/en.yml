@@ -93,7 +93,7 @@ en:
           Mobile applications use the unique capabilities of phones to bring computing to many.
       application_timeline:
         submission: Written application portal opened.
-        first_round: Applications are reviewed and preliminary decisions are made.
+        first_round: Applications are reviewed, feedback is given, then preliminary decisions are made.
         interviews: Interviews are conducted to better understand project fit.
         final_decisions: Each project leader chooses an organization and begins the project!
       decision_criteria:

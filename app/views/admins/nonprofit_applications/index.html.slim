@@ -21,6 +21,7 @@
           th.email Email
           th Summary
           th CS169
+          th Submitted At
           th.actions Actions
       tbody
         - @nonprofit_applications.each do |app|
@@ -28,6 +29,9 @@
             td = app.organization_name
             td = app.email
             td = app.short_summary
+            td
+              - if app.submitted?
+                = app.submitted_at.strftime(t("date.formats.default"))
             td
               - if app.cs169_pool
                 = fa_icon "check"

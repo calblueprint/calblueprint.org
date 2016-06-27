@@ -21,7 +21,7 @@
 #
 
 class NonprofitApplication < ActiveRecord::Base
-  scope :current, -> { where(semester: Settings.instance.current_semester, state: 'submitted') }
+  scope :current, -> { where(semester: Settings.instance.current_semester, state: 'submitted').order(:submitted_at) }
   scope :cs169_apps, -> { current.where(cs169_pool: true) }
   scope :bp_apps, -> { current.where(cs169_pool: false) }
 

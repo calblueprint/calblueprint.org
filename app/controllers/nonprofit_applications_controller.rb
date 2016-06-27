@@ -1,5 +1,5 @@
 class NonprofitApplicationsController < ApplicationController
-  before_action :authenticate_nonprofit!
+  before_action :authenticate_nonprofit
   before_action :verify_app_open
 
   def new
@@ -11,9 +11,7 @@ class NonprofitApplicationsController < ApplicationController
 
   def edit
     @nonprofit_application = NonprofitApplication.find(params[:id])
-    unless @nonprofit_application.nonprofit == current_nonprofit && @nonprofit_application.draft?
-      redirect_to root_path, flash: { error: "You are not authorized to access that page"}
-    end
+    authenticate_nonprofit_application
 
     @disable_cs169_choice = !@settings.cs169_app_open || !@settings.npo_app_open
     @default_check_cs169 = @nonprofit_application[:cs169_pool]
@@ -24,14 +22,15 @@ class NonprofitApplicationsController < ApplicationController
     if nonprofit_application.draft? &&
        nonprofit_application.nonprofit == current_nonprofit &&
        nonprofit_application.update_attributes(nonprofit_application_params)
-      render json: {success: true}
+      render json: { success: true }
     else
-      render json: {success: false}
+      render json: { serverErrors: nonprofit_application.errors.messages }, status: :bad_request
     end
   end
 
   def submit
     @nonprofit_application = NonprofitApplication.find(params[:nonprofit_application_id])
+    authenticate_nonprofit_application
     if @nonprofit_application.update_attributes(nonprofit_application_params) && @nonprofit_application.submit
       SendNonprofitApplicationEmail.execute @nonprofit_application
       redirect_to nonprofit_applications_path, flash: { success: t("nonprofit_applications.create.success") }
@@ -56,9 +55,15 @@ class NonprofitApplicationsController < ApplicationController
 
   private
 
-  def authenticate_nonprofit!
+  def authenticate_nonprofit
     redirect_to new_nonprofit_registration_path,
                 flash: { alert: "Please sign up or sign in before continuing." } unless current_nonprofit
+  end
+
+  def authenticate_nonprofit_application
+    unless @nonprofit_application.nonprofit == current_nonprofit && @nonprofit_application.draft?
+      redirect_to root_path, flash: { error: "You are not authorized to access that page" }
+    end
   end
 
   def nonprofit_application_params

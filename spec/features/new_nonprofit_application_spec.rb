@@ -2,8 +2,16 @@ require "rails_helper"
 
 RSpec.describe "Nonprofit Application Form" do
   # Helpers for this spec
+  def visit_form
+    visit new_nonprofit_session_path
+    fill_in "nonprofit_email", with: nonprofit.email
+    fill_in "nonprofit_password", with: nonprofit.password
+    click_button "Log in"
+    visit new_nonprofit_application_path
+  end
+
   def fill_in_form
-    app = build :nonprofit_application
+    app = build :finished_nonprofit_application
     [:purpose, :history, :short_summary, :goals,
      :key_features, :target_audience, :why, :technical_requirements].each do |attribute|
       fill_in "nonprofit_application_#{attribute}", with: app.send(attribute)
@@ -16,53 +24,49 @@ RSpec.describe "Nonprofit Application Form" do
 
   let(:nonprofit) { create :nonprofit }
 
-  before do
-    visit new_nonprofit_session_path
-    fill_in "nonprofit_email", with: nonprofit.email
-    fill_in "nonprofit_password", with: nonprofit.password
-    click_button "Log in"
-    visit new_nonprofit_application_path
+  it "creates a Nonprofit Application on visit" do
+    expect { visit_form }.to change { NonprofitApplication.count }.by(1)
   end
 
-  subject { page }
+  context "When submitting a new application" do
 
-  it { should have_content t("nonprofit_applications.new.subtitle") }
-
-  describe "without filling in form" do
-    it "renders back form with errors" do
-      submit_form
-      expect(page).to have_content t("nonprofit_applications.new.subtitle")
-      expect(page).to have_content "can't be blank"
+    before do
+      visit_form
     end
 
-    it "does not send email" do
-      expect { submit_form }.not_to change { ActionMailer::Base.deliveries.count }
-    end
-  end
+    subject { page }
 
-  describe "after filling in form" do
-    before { fill_in_form }
+    describe "without filling in form" do
+      it "renders back form with errors" do
+        submit_form
+        expect(page).to have_content "can't be blank"
+      end
 
-    it "redirects and renders a success message on submit" do
-      submit_form
-      expect(page).to have_content t("nonprofit_applications.create.success")
-    end
-
-    it "creates a Nonprofit Application on submit" do
-      expect { submit_form }.to change { NonprofitApplication.count }.by(1)
+      it "does not send email" do
+        expect { submit_form }.not_to change { ActionMailer::Base.deliveries.count }
+      end
     end
 
-    it "sends an email on submit" do
-      expect { submit_form }.to change { ActionMailer::Base.deliveries.count }.by(1)
-    end
-  end
+    describe "after filling in form" do
+      before { fill_in_form }
 
-  describe "filling out form with too long of a summary" do
-    it "creates an error about length" do
-      fill_in_form
-      fill_in "nonprofit_application_short_summary", with: Array.new(256) { rand(36).to_s(36) }.join
-      submit_form
-      expect(page).to have_content "is too long"
+      it "redirects and renders a success message on submit" do
+        submit_form
+        expect(page).to have_content t("nonprofit_applications.create.success")
+      end
+
+      it "sends an email on submit" do
+        expect { submit_form }.to change { ActionMailer::Base.deliveries.count }.by(1)
+      end
+    end
+
+    describe "filling out form with too long of a summary" do
+      it "creates an error about length" do
+        fill_in_form
+        fill_in "nonprofit_application_short_summary", with: Array.new(256) { rand(36).to_s(36) }.join
+        submit_form
+        expect(page).to have_content "is too long"
+      end
     end
   end
 end

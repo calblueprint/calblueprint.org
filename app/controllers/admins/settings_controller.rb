@@ -18,7 +18,8 @@ module Admins
 
     def settings_params
       params.require(:settings).permit(
-        :npo_app_open, :cs169_app_open, :student_app_open, :current_semester_id)
+        :npo_app_open, :cs169_app_open, :student_app_open, :current_semester_id
+      )
     end
   end
 end

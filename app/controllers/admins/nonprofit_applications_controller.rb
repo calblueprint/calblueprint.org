@@ -1,6 +1,7 @@
 module Admins
   class NonprofitApplicationsController < BaseController
     FILTER_TO_QUERY = {
+      current: -> { NonprofitApplication.current },
       all: -> { NonprofitApplication.all },
       bp: -> { NonprofitApplication.bp_apps },
       cs169: -> { NonprofitApplication.cs169_apps }

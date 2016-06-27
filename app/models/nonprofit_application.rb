@@ -21,8 +21,9 @@
 #
 
 class NonprofitApplication < ActiveRecord::Base
-  scope :cs169_apps, -> { where(cs169_pool: true) }
-  scope :bp_apps, -> { where(cs169_pool: false) }
+  scope :current, -> { where(semester: Settings.instance.current_semester, state: 'submitted') }
+  scope :cs169_apps, -> { current.where(cs169_pool: true) }
+  scope :bp_apps, -> { current.where(cs169_pool: false) }
 
   POSSIBLE_DEVICES = ["Mobile phones", "Tablets", "Desktops"]
   STATES = ["draft", "submitted"]

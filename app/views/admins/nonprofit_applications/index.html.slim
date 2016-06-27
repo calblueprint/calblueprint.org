@@ -30,11 +30,11 @@
             td = app.email
             td = app.short_summary
             td
-              - if app.submitted?
-                = app.submitted_at.strftime(t("date.formats.default"))
-            td
               - if app.cs169_pool
                 = fa_icon "check"
+            td
+              - if app.submitted?
+                = app.submitted_at.strftime(t("date.formats.default"))
             td
               = link_to [:admin, app], class: "icon hint--top", data: { hint: "View" } do
                 = fa_icon "eye"

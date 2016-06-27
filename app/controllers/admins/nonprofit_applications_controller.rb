@@ -13,7 +13,7 @@ module Admins
     end
 
     def index
-      @filter = params[:filter_by] || :all
+      @filter = params[:filter_by] || :current
       @nonprofit_applications = FILTER_TO_QUERY[@filter].call
     end
 

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe NonprofitApplicationDecorator do
-  let(:nonprofit_application) { create :nonprofit_application, legal: true }
+  let(:nonprofit_application) { create :finished_nonprofit_application, legal: true }
 
   subject(:decorator) { NonprofitApplicationDecorator.new nonprofit_application }
 

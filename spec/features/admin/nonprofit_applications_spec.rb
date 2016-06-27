@@ -2,8 +2,8 @@ require "rails_helper"
 
 RSpec.describe "Nonprofit applications" do
   let(:admin) { create :admin }
-  let!(:app1) { create :nonprofit_application }
-  let!(:app2) { create :nonprofit_application }
+  let!(:app1) { create :finished_nonprofit_application }
+  let!(:app2) { create :finished_nonprofit_application }
 
   subject { page }
 

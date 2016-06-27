@@ -19,15 +19,6 @@
         .applications-closed
           p.center = t ".applications_closed"
           = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
-  / .spacer-small
-  / .row
-  /   .small-12.medium-9.columns
-  /     p.hook = raw t ".cs169_hook"
-  /   .apply-button.small-12.medium-3.columns
-  /     - if @settings.cs169_app_open
-  /       = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "button calgold-button"
-  /     - else
-  /       button.calgold-button.disabled disabled="disabled" CS169 Pool Closed
   .spacer
 .gray-bg
   ul#apply_nav.submenu
@@ -75,7 +66,7 @@
                 p = t ".application_timeline.submission"
             li.work.timeline-row
               .relative
-                h5.title Submission Deadline 
+                h5.title Submission Deadline
                 span.date/
                 h5 Jul 23
                 span.circle

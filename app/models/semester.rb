@@ -16,7 +16,7 @@ class Semester < ActiveRecord::Base
   has_many :student_applications
   has_many :nonprofit_applications
 
-  validates :year, uniqueness: { scope: [:season] }, presence: true
+  validates :year, uniqueness: { scope: [:season], case_sensitive: false }, presence: true
 
   def can_be_destroyed?
     student_applications.none? && Semester.count > 1

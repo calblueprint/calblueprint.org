@@ -1,9 +1,0 @@
-h1
-  = link_to "New Member Role", new_admin_member_role_path
-table[border="1"]
-  - @member_roles.each do |member_role|
-    tr
-      td
-        = member_role.role
-      td
-        = link_to "Delete", admin_member_role_path(member_role), method: :delete, class: 'button', id: "delete-" + member_role.role.downcase.tr(" ", "_")

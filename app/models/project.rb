@@ -17,6 +17,10 @@
 #  published                 :boolean          default(FALSE)
 #
 
+# **********
+# DEPRECATED
+# **********
+
 class Project < ActiveRecord::Base
   MISSING_IMAGE_PLACEHOLDER = "//placehold.it/1024x400"
 

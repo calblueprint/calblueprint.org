@@ -1,9 +1,6 @@
 class ProjectsController < ApplicationController
-  def index
-    @projects = Project.published.decorate
+  def show
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
   end
 
-  def show
-    @project = ProjectDecorator.decorate Project.find params[:id]
-  end
 end

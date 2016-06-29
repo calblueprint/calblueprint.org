@@ -1,0 +1,26 @@
+---
+en:
+  activerecord:
+    attributes:
+      nonprofit_application:
+        email: "Contact Email"
+        legal: "501(c)?"
+
+  date:
+    formats:
+      default:
+        "%m/%d/%Y"
+      with_weekday:
+        "%a %m/%d/%y"
+
+  time:
+    formats:
+      default:
+        "%a, %b %-d, %Y at %r"
+      date:
+        "%b %-d, %Y"
+      short:
+        "%B %d"
+
+  unauthorized:
+    default: You aren't allowed to view that page.

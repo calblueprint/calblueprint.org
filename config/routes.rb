@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   # Applicants
   resources :student_applications, only: [:new, :create], path: "apply/students"
   # Projects
-  resources :projects, only: [:show, :index]
+  resources :projects, only: [:show, :index], param: :slug
 
   # Contact
   resources :contact_forms, only: [:new, :create]

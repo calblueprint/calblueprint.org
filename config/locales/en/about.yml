@@ -1,0 +1,24 @@
+en:
+  pages:
+    about:
+      headline: About Us
+      mission: >
+        To make beautiful engineering accessible and useful
+        for those who create communities and promote public welfare.
+      values:
+        craft: >
+          Our projects are carefully constructed from the first contact with the nonprofit to project
+          deployment and live use. We are meticulous about our design, our process, and our code.
+        culture: >
+          Bluepers work hard and play hard. When we’re not developing, we eat, play,
+          and volunteer together. We value a good sense of humor and think that there's fun to be had
+          wherever we go.
+        heart: >
+          We believe that our schooling and abilities should be used for good. Our motivation pushes us to
+          constantly learn, work hard, and find solutions where others haven't looked.
+      team:
+        title: The Team
+        description: >
+          Blueprint is made up of innovative designers, diligent hackers, and thoughtful leaders.
+          We recognize that the individual might be talented but only a team has the power
+          to take on the challenges of an organization.

@@ -1,0 +1,60 @@
+en:
+  apply:
+    nonprofits:
+      headline: For Nonprofits
+      hook: >
+        We are an organization of passionate UC Berkeley students that
+        develops web and mobile applications for nonprofit organizations. As
+        a partner, we will work with you to develop technology that turns
+        your vision into a reality, completely free of charge.
+      applications_closed: >
+        Applications for Blueprint are closed for this semester. Sign up to be notified when they reopen!
+      services:
+        web_application_development: >
+          Our platform of choice, web applications leverage the power of the internet to expand reach and
+          increase communication.
+        mobile_application_development: >
+          Mobile applications use the unique capabilities of phones to bring computing to many.
+      application_timeline:
+        submission: Written application portal opened.
+        first_round: Applications are reviewed, feedback is given, then preliminary decisions are made.
+        interviews: Interviews are conducted to better understand project fit.
+        final_decisions: Each project leader chooses an organization and begins the project!
+      decision_criteria:
+        description: >
+          We want to help as many organizations as we possibly can. Unfortunately, we cannot take every
+          project because of the large amount of resources each one requires. These are the primary criteria
+          we use to determine project fit.
+      quote:
+        text: >
+          Working with Blueprint has been an incredible pleasure. We have used their application to raise
+          hundreds of thousands of dollars for Berkeley's teachers.
+        reference: "- Berkeley Public Schools Fund"
+      timeline:
+        spec: Agree upon project's vision and scope out primary features.
+        begin: Form team and begin development.
+        midterm: Midterm meeting to evaluate progress.
+        user_iteration: Pilot app and iterate on user feedback.
+        deliver: Deliver the final application!
+      faq:
+        q1:
+          question: How often do project teams and nonprofits meet?
+          answer: >
+            The client and the project leader meet on a weekly or biweekly basis to ensure the
+            project’s progress. There are project scoping meetings with the project leader
+            at the project start, a formal midpoint presentation, and a final presentation where the project
+            is delivered.
+        q2:
+          question: What is the client-team interaction like?
+          answer: >
+            The team works alongside the client's vision for the organization. We hope that our project has
+            significant impact on the organization's efficiency and reach, so the alignment of goals is
+            crucial. At our meetings, we discuss updates on project features, check the timeline, and have
+            discussion on the progress of the project and the nonprofit itself.
+        q3:
+          question: How does Blueprint ensure success?
+          answer: >
+            Our club recruits the brightest and most hard-working students at UC Berkeley, one of the best
+            universities in computer science. Through effective leadership and frequent checkins with our
+            clients we hope that the combination of talent, dedication, and care will result in a project that
+            benefits your organization.

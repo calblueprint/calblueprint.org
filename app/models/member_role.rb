@@ -8,6 +8,9 @@
 #  role       :string
 #
 
+# *************
+# DEPRECATED
+# *************
 # TODO(lilshim): Enforce member role order
 class MemberRole < ActiveRecord::Base
   has_many :members

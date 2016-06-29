@@ -12,6 +12,10 @@
 #  is_alumnus     :boolean          default(FALSE)
 #
 
+# **********
+# DEPRECATED
+# **********
+
 class Member < ActiveRecord::Base
   belongs_to :member_role
 

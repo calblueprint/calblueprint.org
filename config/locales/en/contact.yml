@@ -1,0 +1,7 @@
+en:
+  contact_forms:
+    new:
+      banner: Contact Us
+      subtitle: Reach out to get the gears turning!
+    create:
+      success: Message sent! We'll get back to you shortly.

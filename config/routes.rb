@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   # Applicants
   resources :student_applications, only: [:new, :create], path: "apply/students"
   # Projects
-  resources :projects, only: [:show, :index]
+  resources :projects, only: [:show, :index], param: :slug
 
   # Contact
   resources :contact_forms, only: [:new, :create]
@@ -47,14 +47,7 @@ Rails.application.routes.draw do
       collection { post :import }
     end
 
-    resources :members
-    resources :member_roles, only: [:index, :new, :create, :destroy]
     resources :semesters
-
-    resources :projects, except: [:show] do
-      member { post :toggle_publish }
-      collection { post :change_position }
-    end
 
     resources :final_decisions, only: [] do
       member do

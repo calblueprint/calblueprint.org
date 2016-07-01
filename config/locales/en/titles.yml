@@ -1,0 +1,24 @@
+en:
+  titles:
+    application: Cal Blueprint
+    admins:
+      projects:
+        index: Projects | Admin
+        new: Projects | Admin
+        edit: Projects | Admin
+    pages:
+      home: Home | Cal Blueprint
+      about: About | Cal Blueprint
+    apply:
+      show: Apply | Cal Blueprint
+      students: Students | Cal Blueprint
+      nonprofits: Nonprofits | Cal Blueprint
+    projects:
+      index: Projects | Cal Blueprint
+    contact_forms:
+      default: Contact Us | Cal Blueprint
+    devise:
+      sessions:
+        new: Log In | Cal Blueprint
+      passwords:
+        new: Forgot Password | Cal Blueprint

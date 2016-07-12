@@ -13,7 +13,6 @@ $development-steps: 5;
   margin: 0 0 15px;
   text-align: left;
   word-break: break-word;
-  max-height: 200px;
   color: $text;
 }
 
@@ -60,9 +59,8 @@ $development-steps: 5;
     @include circle;
   }
   .timeline-content {
-    max-height: 180px;
     margin-right: 0px;
-    padding: 40px 0 0;
+    padding: 10px 0 0;
     position: relative;
     p {
       @include timeline-p;
@@ -72,6 +70,7 @@ $development-steps: 5;
   h5.title {
     top: 5px;
     @include timeline-title;
+    position: relative;
   }
 }
 

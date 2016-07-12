@@ -43,7 +43,8 @@ $small-screen: em(420);
   background: rgba(0, 0, 0, 0.4);
 
   @include media(max-width $medium-screen) {
-    height: 400px;
+    height: auto;
+    padding-bottom: 50px;
   }
 }
 

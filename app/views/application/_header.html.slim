@@ -29,12 +29,13 @@ header.navigation role="banner"
           = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "header-tab"
         li.nav-link
           = link_to "Contact", new_contact_form_path, class: "header-tab"
+        - if current_nonprofit
+          li.nav-link
+            = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
         - if current_user
           li.nav-link
             = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
         - if current_nonprofit
-          li.nav-link
-            = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
           = link_to "Apply", nonprofit_applications_path, class: "apply-button"
         - else
           = link_to "Apply", apply_path, class: "apply-button"

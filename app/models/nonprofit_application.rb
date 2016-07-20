@@ -59,7 +59,7 @@ class NonprofitApplication < ActiveRecord::Base
       transition :draft => :submitted
     end
 
-    after_transition :draft => :submitted do |nonprofit_application, transition|
+    after_transition :draft => :submitted do |nonprofit_application, _transition|
       nonprofit_application.update_attributes(submitted_at: Time.now)
     end
   end

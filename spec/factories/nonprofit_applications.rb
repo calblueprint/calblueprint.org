@@ -37,9 +37,6 @@ FactoryGirl.define do
       target_audience "everyone"
       why "Greatness"
       technical_requirements "none"
-      state 'submitted'
-      submitted_at Time.now
-      semester Settings.instance.current_semester
     end
   end
 end

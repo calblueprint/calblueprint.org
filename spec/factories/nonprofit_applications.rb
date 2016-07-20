@@ -2,21 +2,26 @@
 #
 # Table name: nonprofit_applications
 #
-#  id               :integer          not null, primary key
-#  nonprofit_id     :integer
-#  semester_id      :integer
-#  created_at       :datetime
-#  updated_at       :datetime
-#  purpose          :text
-#  history          :text
-#  date_established :date
-#  legal            :boolean
-#  short_summary    :string
-#  goals            :text
-#  key_features     :text
-#  devices          :string
-#  target_audience  :text
-#  why              :text
+#  id                     :integer          not null, primary key
+#  nonprofit_id           :integer
+#  semester_id            :integer
+#  created_at             :datetime
+#  updated_at             :datetime
+#  purpose                :text
+#  history                :text
+#  date_established       :date
+#  legal                  :boolean
+#  short_summary          :string
+#  goals                  :text
+#  key_features           :text
+#  devices                :string
+#  target_audience        :text
+#  why                    :text
+#  cs169_pool             :boolean          not null
+#  client_status          :string
+#  technical_requirements :text
+#  state                  :string           default("draft"), not null
+#  submitted_at           :datetime
 #
 
 FactoryGirl.define do

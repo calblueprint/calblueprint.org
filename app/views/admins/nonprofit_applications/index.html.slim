@@ -12,36 +12,34 @@
                                                    ['CS169 only', 'cs169'],
                                                    ['All applications', 'all']], @filter)
       = submit_tag "Filter", name: ""
-.row
-  .small-12.columns
-    table.tables
-      thead
-        tr
-          th.name NPO Name
-          th.email Email
-          th Summary
-          th CS169
-          th Submitted At
-          th.actions Actions
-      tbody
-        - @nonprofit_applications.each do |app|
-          tr id="#{dom_id app}"
-            td = app.organization_name
-            td = app.email
-            td = app.short_summary
-            td
-              - if app.cs169_pool
-                = fa_icon "check"
-            td
-              - if app.submitted?
-                = app.submitted_at.strftime(t("date.formats.default"))
-            td
-              = link_to [:admin, app], class: "icon hint--top", data: { hint: "View" } do
-                = fa_icon "eye"
-            td
-              = link_to [:admin, app], class: "icon hint--top", data: { hint: "Delete",
-                                       confirm: "Are you sure you want to delete #{app.organization_name}'s app?"  },
-                                       method: :delete do
-                = fa_icon "trash"
+
+table.tables.npo-apps
+  thead
+    tr
+      th.npo-apps__name NPO Name
+      th.npo-apps__email Email
+      th.npo-apps__summary Summary
+      th.npo-apps__cs169 CS169
+      th.npo-apps__submitted Submitted At
+      th.npo-apps__actions Actions
+  tbody
+    - @nonprofit_applications.each do |app|
+      tr id="#{dom_id app}"
+        td = app.organization_name
+        td = app.email
+        td = app.short_summary
+        td
+          - if app.cs169_pool
+            = fa_icon "check"
+        td
+          - if app.submitted?
+            = app.submitted_at.strftime(t("date.formats.default"))
+        td
+          = link_to [:admin, app], class: "icon hint--top", data: { hint: "View" } do
+            = fa_icon "eye"
+          = link_to [:admin, app], class: "icon hint--top", data: { hint: "Delete",
+                                   confirm: "Are you sure you want to delete #{app.organization_name}'s app?"  },
+                                   method: :delete do
+            = fa_icon "trash"
 
 .spacer

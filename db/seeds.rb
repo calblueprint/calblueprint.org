@@ -56,8 +56,28 @@ def seed_nonprofit_applications
     target_audience: "Everyone.",
     why: FFaker::Lorem.paragraph(4),
     nonprofit: Nonprofit.first,
-    semester: Settings.instance.current_semester
+    semester: Settings.instance.current_semester,
+    cs169_pool: true,
+    client_status: NonprofitApplication::CLIENT_STATUSES[0],
+    technical_requirements: "All the tech.",
   )
+  NonprofitApplication.find_or_create_by!(
+    purpose: "To save the world.",
+    history: "Cool history.",
+    date_established: DateTime.now.to_date,
+    legal: true,
+    short_summary: FFaker::Lorem.paragraph(2),
+    goals: FFaker::Lorem.paragraph(4),
+    key_features: FFaker::Lorem.paragraph(4),
+    devices: ["Mobile phones"],
+    target_audience: "Everyone.",
+    why: FFaker::Lorem.paragraph(4),
+    nonprofit: Nonprofit.first,
+    semester: Settings.instance.current_semester,
+    cs169_pool: true,
+    client_status: NonprofitApplication::CLIENT_STATUSES[0],
+    technical_requirements: "All the tech.",
+  ).submit
 end
 
 def seed_projects
@@ -73,6 +93,6 @@ seed_semesters
 seed_applicants
 seed_student_applications
 seed_nonprofits
-# seed_nonprofit_applications
+seed_nonprofit_applications
 seed_projects
 seed_roles_and_members

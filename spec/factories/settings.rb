@@ -9,6 +9,7 @@
 #  current_semester_id :integer
 #  npo_app_open        :boolean
 #  student_app_open    :boolean
+#  cs169_app_open      :boolean
 #
 
 FactoryGirl.define do

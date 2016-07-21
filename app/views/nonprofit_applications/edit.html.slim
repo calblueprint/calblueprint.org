@@ -14,7 +14,7 @@
         p.apply-info-section-text
           | Apps due:
           br
-          | June 15th, 2015, 11:59PM
+          | July 23rd, 2016, 11:59PM
       .apply-info-section
         .problem-icon
         p.apply-info-section-text
@@ -60,5 +60,5 @@
     .spacer-small
     small
       | Last Updated
-      span#last_updated   #{@nonprofit_application.updated_at.strftime("%I:%M:%S %B %d, %Y")}
+      span#last_updated   #{@nonprofit_application.updated_at.localtime.strftime("%I:%M:%S %B %d, %Y")}
   .spacer

@@ -39,7 +39,8 @@ class NonprofitApplication < ActiveRecord::Base
   validates :history, presence: true, if: -> (na) { na.submitted? }
   validates :date_established, presence: true, if: -> (na) { na.submitted? }
   # legal is validated by database
-  validates :short_summary, presence: true, length: { maximum: 255 }, if: -> (na) { na.submitted? }
+  validates :short_summary, presence: true, if: -> (na) { na.submitted? }
+  validates_length_of :short_summary, maximum: 255, if: -> (na) { na.submitted? }
   validates :goals, presence: true, if: -> (na) { na.submitted? }
   validates :key_features, presence: true, if: -> (na) { na.submitted? }
   validates :devices, presence: true, if: -> (na) { na.submitted? }

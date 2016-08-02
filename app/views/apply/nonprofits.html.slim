@@ -10,9 +10,17 @@
       .apply-button.small-12.medium-3.columns
         = link_to "Apply as a Nonprofit", new_nonprofit_application_path, class: "button"
   - else
-    .row
-      .small-12.medium-11.columns.small-centered
-        p.center = raw t ".hook"
+    - if @settings.cs169_app_open
+      .row
+        .small-12.medium-9.columns
+          p.hook = raw t ".cs169_hook"
+        .apply-button.small-12.medium-3.columns
+          - if @settings.cs169_app_open
+            = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "button calgold-button"
+    - else
+      .row
+        .small-12.medium-11.columns.small-centered
+          p.center = raw t ".hook"
     .spacer-small
     .row
       .small-12.medium-9.columns.small-centered

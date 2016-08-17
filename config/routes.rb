@@ -43,6 +43,11 @@ Rails.application.routes.draw do
     resources :nonprofit_applications, only: [:show, :index, :destroy]
     resources :semesters
 
+    resources :admins, only: [:index, :destroy] do
+      get "promote"
+      get "demote"
+    end
+
     resource :settings, only: [:show, :edit, :update] do
       post :set_current_semester
     end

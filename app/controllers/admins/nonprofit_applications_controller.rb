@@ -1,5 +1,7 @@
 module Admins
   class NonprofitApplicationsController < BaseController
+    load_and_authorize_resource
+
     FILTER_TO_QUERY = {
       current: -> { NonprofitApplication.current },
       all: -> { NonprofitApplication.all },

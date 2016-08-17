@@ -1,5 +1,7 @@
 module Admins
   class StudentApplicationsController < BaseController
+    load_and_authorize_resource
+
     def index
       @student_applications = StudentApplication.order(:id)
       respond_to do |format|

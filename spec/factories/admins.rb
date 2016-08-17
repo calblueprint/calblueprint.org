@@ -29,5 +29,13 @@ FactoryGirl.define do
     last_name "Lau"
     sequence(:email) { |n| "sam#{n}@sam.com" }
     password "password"
+
+    trait :student_reviewer do
+      role 'student_reviewer'
+    end
+
+    trait :super_admin do
+      role 'super_admin'
+    end
   end
 end

@@ -1,5 +1,7 @@
 module Admins
   class SemestersController < BaseController
+    load_and_authorize_resource param_method: :member_params
+
     def index
       @semesters = Semester.all
     end

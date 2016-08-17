@@ -17,7 +17,7 @@ RSpec.describe "Semester" do
   let!(:semester_nonempty) { create :semester, year: "nonempty", student_applications: [student_application] }
 
   before do
-    admin = create :admin
+    admin = create :admin, :super_admin
     sign_in admin
     expect(page).to have_content "Signed in successfully."
   end

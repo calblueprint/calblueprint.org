@@ -38,6 +38,7 @@ module DeviseSettings
   private
 
   def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:invite) << [:role]
     devise_parameter_sanitizer.for(:accept_invitation) << [:first_name, :last_name]
     devise_parameter_sanitizer.for(:sign_up) << [:organization_name]
   end

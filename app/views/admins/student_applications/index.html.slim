@@ -4,9 +4,6 @@
     p.subtitle Future Bloopers
 .row
   .small-12.small-centered.columns
-    = form_tag import_admin_student_applications_path, multipart: true do
-      = file_field_tag :file
-      = submit_tag "Import CSV"
     = link_to "Download CSV", admin_student_applications_path(format: "csv")
     table.tables
       thead
@@ -16,7 +13,6 @@
           th.column-remove-medium Semester
           th.column-remove-medium Year
           th.column-remove-medium Actions
-          th Decision
       tbody
         - @student_applications.each do |app|
           tr
@@ -25,8 +21,4 @@
             td.column-remove-medium = app.semester.season
             td.column-remove-medium = app.semester.year
             td.column-remove-medium = link_to "Details", admin_student_application_path(app.id), class: "button"
-            td
-              = link_to "", approve_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button fa fa-check", selected_if?(app.final_decision.accepted?)]
-              .spacer-small
-              = link_to "", reject_admin_final_decision_path(app.final_decision), method: :post, class: ["decision-button fa fa-times", selected_if?(app.final_decision.rejected?)]
     .spacer

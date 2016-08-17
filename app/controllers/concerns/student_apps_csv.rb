@@ -6,17 +6,8 @@ class StudentAppsCsv
       CSV.generate do |csv|
         csv << COLUMN_NAMES
         student_applications.order("created_at desc").each do |app|
-          csv << [app.created_at, app.final_decision.id, app.applicant.name,
-                  app.email, app.final_decision.decision]
+          csv << [app.created_at, app.applicant.name, app.email]
         end
-      end
-    end
-
-    def import_decisions(file)
-      spreadsheet = open_spreadsheet(file)
-      spreadsheet.each(final_decision_id: "final_decision_id", decision: "decision") do |attributes|
-        final_decision = FinalDecision.find_by id: attributes[:final_decision_id]
-        final_decision.update(decision: attributes[:decision]) if final_decision
       end
     end
 

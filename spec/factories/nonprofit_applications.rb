@@ -11,7 +11,7 @@
 #  history                :text
 #  date_established       :date
 #  legal                  :boolean
-#  short_summary          :string
+#  short_summary          :text
 #  goals                  :text
 #  key_features           :text
 #  devices                :string
@@ -42,6 +42,15 @@ FactoryGirl.define do
       target_audience "everyone"
       why "Greatness"
       technical_requirements "none"
+
+      trait :submitted do
+        state "submitted"
+        submitted_at Time.zone.now
+      end
+
+      trait :current do
+        semester Settings.instance.current_semester
+      end
     end
   end
 end

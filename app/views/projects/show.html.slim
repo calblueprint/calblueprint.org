@@ -1,8 +1,9 @@
+- project = t("projects.past_projects.#{params[:slug]}")
 .project-banner
   .banner-inner
-    h1.h0.title = @project.title
-    .project__image style="background-image: url(#{@project.banner_image.url})"
+    h1.h0.title = project[:title]
+    .project__image style="background-image: url(#{project[:banner_image]})"
 .spacer
 .project-case-study
-  = raw @project.full_description_markdown
+  = raw @markdown.render project[:full_description]
 .spacer-adjust

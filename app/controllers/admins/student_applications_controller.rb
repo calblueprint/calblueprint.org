@@ -1,5 +1,7 @@
 module Admins
   class StudentApplicationsController < BaseController
+    load_and_authorize_resource
+
     def index
       @student_applications = StudentApplication.order(:id)
       respond_to do |format|
@@ -11,12 +13,6 @@ module Admins
     def show
       app = StudentApplication.find(params[:id])
       @app = StudentApplicationDecorator.new app
-    end
-
-    def import
-      # TODO: Bugs out when no file
-      StudentAppsCsv.import_decisions params[:file]
-      redirect_to admin_student_applications_path, flash: { success: "Student Applicants imported!" }
     end
   end
 end

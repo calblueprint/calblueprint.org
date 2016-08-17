@@ -29,12 +29,9 @@ class StudentApplication < ActiveRecord::Base
                        size: { in: 0..1.megabytes }
 
   validates_attachment_presence :resume
-  has_one :final_decision, as: :decisionable
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
-
-  after_create :create_final_decision
 
   validates :why_join, presence: true
   validates :phone, presence: true

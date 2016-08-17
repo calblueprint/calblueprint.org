@@ -82,20 +82,17 @@
     .row
       .small-12.small-centered.columns
         ul.team-pictures.medium-block-grid-4.small-block-grid-2
-          - @members.each do |member|
+          - t("members").each do |member|
             li.team-picture-item
               figure.effect-sadie
                 a href="javascript:void(0)"
                   div.member-image
-                    - if member['email']
-                      = image_tag gravatar_url(member['email']), onError: "this.onerror=null;this.src='#{member['image'] || asset_path('paw.png')}';"
-                    - else
-                      = image_tag 'paw.png'
+                    = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || asset_path('paw.png')}';"
                   figcaption
                     .member-description
                       .name
-                        b = "#{member['first_name']} #{member['last_name']}"
-                      .position = member['role']
+                        b = "#{member[:first_name]} #{member[:last_name]}"
+                      .position = member[:role]
     .spacer-small
     .row
       .small-9.small-centered.columns
@@ -104,18 +101,15 @@
     .row
       .small-12.small-centered.columns
         ul.team-pictures.medium-block-grid-4.small-block-grid-2
-          - @alumni.each do |member|
+          - t("alumni").each do |alum|
             li.team-picture-item
               figure.effect-sadie
                 a href="javascript:void(0)"
                   div.member-image
-                    - if member['email']
-                      = image_tag gravatar_url(member['email']), onError: "this.onerror=null;this.src='#{member['image'] || asset_path('paw.png')}';"
-                    - else
-                      = image_tag 'paw.png'
+                    = image_tag gravatar_url(alum[:email]), onError: "this.onerror=null;this.src='#{alum[:image] || asset_path('paw.png')}';"
                   figcaption
                     .member-description
                       .name
-                        b = "#{member['first_name']} #{member['last_name']}"
-                      .position = member['role']
+                        b = "#{alum[:first_name]} #{alum[:last_name]}"
+                      .position = alum[:role]
     .spacer-about-bot

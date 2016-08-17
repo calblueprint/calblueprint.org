@@ -108,7 +108,7 @@
       cursor: pointer;
       display: inline-block;
       margin: 0;
-      padding: 5px 10px;
+      padding: 10px;
       transition-duration: 0.3s;
 
       &:first-child {
@@ -134,6 +134,7 @@
     }
 
     @media only screen and (max-width: $medium-screen) {
+      margin-bottom: 20px;
       text-align: center;
 
       h2 {
@@ -160,6 +161,8 @@
     @media only screen and (max-width: $medium-screen) {
       border: 0;
       border-top: 1px solid darken($light-gray, 10);
+      padding-top: 20px;
+      padding-left: 15px;
     }
 
     .timeline-vertical {
@@ -261,6 +264,13 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 40em) {
+  .example-images li {
+    display: block;
     width: 100%;
   }
 }

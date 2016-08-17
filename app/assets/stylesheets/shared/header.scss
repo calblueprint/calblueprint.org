@@ -122,6 +122,11 @@ header.navigation {
       width: auto;
     }
 
+    @media (max-width: 40em) {
+      line-height: 1;
+      padding: 15px;
+    }
+
     a {
       color: $navigation-color;
       display: inline-block;

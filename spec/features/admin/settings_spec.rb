@@ -4,7 +4,7 @@ RSpec.describe "Settings" do
   let!(:semester) { create :semester }
 
   before do
-    admin = create :admin
+    admin = create :admin, :super_admin
     sign_in admin
     expect(page).to have_content "Signed in successfully."
   end

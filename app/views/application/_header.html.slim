@@ -9,18 +9,21 @@ header.navigation role="banner"
           li.nav-link.more
             a href="javascript:void(0)" Admin
             ul.submenu
-              li
-                = link_to "NPO Applications", admin_nonprofit_applications_path
-              li
-                = link_to "Student Applications", admin_student_applications_path
-              li
-                = link_to "Members", admin_members_path
-              li
-                = link_to "Projects", admin_projects_path
-              li
-                = link_to "Semesters", admin_semesters_path
-              li
-                = link_to "Settings", admin_settings_path
+              - if can? :read, NonprofitApplication
+                li
+                  = link_to "NPO Applications", admin_nonprofit_applications_path
+              - if can? :read, StudentApplication
+                li
+                  = link_to "Student Applications", admin_student_applications_path
+              - if can? :read, Semester
+                li
+                  = link_to "Semesters", admin_semesters_path
+              - if can? :read, Settings
+                li
+                  = link_to "Settings", admin_settings_path
+              - if can? :read, Admins
+                li
+                  = link_to "Admin Users", admin_admins_path
         li.nav-link
           = link_to "About", about_path, class: "header-tab"
         li.nav-link

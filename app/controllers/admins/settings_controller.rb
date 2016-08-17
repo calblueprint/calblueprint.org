@@ -1,5 +1,7 @@
 module Admins
   class SettingsController < BaseController
+    load_and_authorize_resource class: "Settings", param_method: :settings_params
+
     def update
       if @settings.update_attributes settings_params
         redirect_to admin_settings_path, notice: "Settings updated."

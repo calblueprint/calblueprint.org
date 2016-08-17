@@ -1,0 +1,34 @@
+en:
+  admins:
+    nonprofit_applications:
+      index:
+        banner: NPO Applications
+      destroy:
+        error: An error occurred while deleting the application.
+        success: "Successfully deleted %{organization_name}'s application."
+
+    projects:
+      index:
+        banner: Projects
+        subtitle: These get displayed at /projects
+        new_project: New Project
+      update:
+        success: Project updated!
+      create:
+        success: Project created!
+
+    semesters:
+      destroy:
+        error: Cannot delete semester if the semester has applications or projects, or if there is only one semester left. Please reassign applications and projects before deleting this semester.
+        success: Semester has been successfully deleted!
+
+    admins:
+      destroy:
+        error: An error occurred while deleting the admin user.
+        success: "Successfully deleted %{email}'s account."
+      demote:
+        error: "Error - the admin user remains a %{role}"
+        success: "The admin user successfully demoted to %{role}"
+      promote:
+        error: "Error - the admin user remains a %{role}"
+        success: "The admin user successfully promoted to %{role}"

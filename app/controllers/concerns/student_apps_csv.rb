@@ -12,14 +12,6 @@ class StudentAppsCsv
       end
     end
 
-    def import_decisions(file)
-      spreadsheet = open_spreadsheet(file)
-      spreadsheet.each(final_decision_id: "final_decision_id", decision: "decision") do |attributes|
-        final_decision = FinalDecision.find_by id: attributes[:final_decision_id]
-        final_decision.update(decision: attributes[:decision]) if final_decision
-      end
-    end
-
     private
 
     def open_spreadsheet(file)

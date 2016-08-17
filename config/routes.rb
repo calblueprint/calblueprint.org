@@ -39,22 +39,10 @@ Rails.application.routes.draw do
 
   # Admin
   namespace :admins, as: :admin do
-    resources :student_applications, only: [:index, :show] do
-      collection { post :import }
-    end
-
-    resources :nonprofit_applications, only: [:show, :index, :destroy] do
-      collection { post :import }
-    end
-
+    resources :student_applications, only: [:index, :show]
+    resources :nonprofit_applications, only: [:show, :index, :destroy]
     resources :semesters
 
-    resources :final_decisions, only: [] do
-      member do
-        post :approve
-        post :reject
-      end
-    end
     resource :settings, only: [:show, :edit, :update] do
       post :set_current_semester
     end

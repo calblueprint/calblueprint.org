@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160721044737) do
+ActiveRecord::Schema.define(version: 20160817002007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,16 +63,6 @@ ActiveRecord::Schema.define(version: 20160721044737) do
     t.text     "message"
   end
 
-  create_table "final_decisions", force: :cascade do |t|
-    t.string   "decision"
-    t.integer  "decisionable_id"
-    t.string   "decisionable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "final_decisions", ["decisionable_type", "decisionable_id"], name: "index_final_decisions_on_decisionable_type_and_decisionable_id", using: :btree
-
   create_table "identities", force: :cascade do |t|
     t.integer  "applicant_id"
     t.string   "provider"
@@ -82,24 +72,6 @@ ActiveRecord::Schema.define(version: 20160721044737) do
   end
 
   add_index "identities", ["applicant_id"], name: "index_identities_on_applicant_id", using: :btree
-
-  create_table "member_roles", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "role"
-  end
-
-  create_table "members", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "last_name"
-    t.string   "first_name"
-    t.string   "email"
-    t.integer  "member_role_id"
-    t.boolean  "is_alumnus",     default: false
-  end
-
-  add_index "members", ["member_role_id"], name: "index_members_on_member_role_id", using: :btree
 
   create_table "nonprofit_applications", force: :cascade do |t|
     t.integer  "nonprofit_id"
@@ -141,23 +113,6 @@ ActiveRecord::Schema.define(version: 20160721044737) do
 
   add_index "nonprofits", ["email"], name: "index_nonprofits_on_email", unique: true, using: :btree
   add_index "nonprofits", ["reset_password_token"], name: "index_nonprofits_on_reset_password_token", unique: true, using: :btree
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "title"
-    t.string   "short_summary"
-    t.string   "link"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "full_description"
-    t.string   "banner_image_file_name"
-    t.string   "banner_image_content_type"
-    t.integer  "banner_image_file_size"
-    t.datetime "banner_image_updated_at"
-    t.integer  "position"
-    t.boolean  "published",                 default: false
-  end
-
-  add_index "projects", ["position"], name: "index_projects_on_position", using: :btree
 
   create_table "semesters", force: :cascade do |t|
     t.datetime "created_at"

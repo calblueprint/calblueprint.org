@@ -12,7 +12,7 @@
 #  reset_password_token   :string
 #  reset_password_sent_at :datetime
 #  remember_created_at    :datetime
-#  role                   :integer          default(0)
+#  role                   :string           default("npo_reviewer"), not null
 #  invitation_token       :string
 #  invitation_created_at  :datetime
 #  invitation_sent_at     :datetime
@@ -28,4 +28,17 @@ class Admin < ActiveRecord::Base
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  ROLES = ["npo_reviewer", "student_reviewer", "super_admin"]
+  validates :role, inclusion: { in: ROLES }, allow_nil: false
+
+  state_machine :role, :initial => :npo_reviewer do
+    event :promote do
+      transition :npo_reviewer => :student_reviewer, :student_reviewer => :super_admin
+    end
+
+    event :demote do
+      transition :super_admin => :student_reviewer, :student_reviewer => :npo_reviewer
+    end
+  end
 end

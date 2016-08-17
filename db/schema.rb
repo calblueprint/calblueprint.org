@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 20160817002007) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email",                  default: "", null: false
+    t.string   "email",                  default: "",             null: false
     t.string   "encrypted_password",     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "role",                   default: 0
+    t.string   "role",                   default: "npo_reviewer", null: false
     t.string   "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"

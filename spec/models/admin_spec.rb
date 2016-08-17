@@ -12,7 +12,7 @@
 #  reset_password_token   :string
 #  reset_password_sent_at :datetime
 #  remember_created_at    :datetime
-#  role                   :integer          default(0)
+#  role                   :string           default("npo_reviewer"), not null
 #  invitation_token       :string
 #  invitation_created_at  :datetime
 #  invitation_sent_at     :datetime
@@ -28,4 +28,5 @@ require 'rails_helper'
 RSpec.describe Admin, type: :model do
   it { should validate_presence_of :first_name }
   it { should validate_presence_of :last_name }
+  it { should validate_inclusion_of(:role).in_array(Admin::ROLES) }
 end

@@ -12,7 +12,7 @@
 #  reset_password_token   :string
 #  reset_password_sent_at :datetime
 #  remember_created_at    :datetime
-#  role                   :integer          default(0)
+#  role                   :string           default("npo_reviewer"), not null
 #  invitation_token       :string
 #  invitation_created_at  :datetime
 #  invitation_sent_at     :datetime

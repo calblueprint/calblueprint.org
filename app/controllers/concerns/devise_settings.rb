@@ -10,14 +10,12 @@ module DeviseSettings
 
   # Lets cancancan grab user
   def current_user
-    current_admin || current_applicant || current_nonprofit
+    current_admin || current_nonprofit
   end
 
   def destroy_user_session_path
     if current_admin
       destroy_admin_session_path
-    elsif current_applicant
-      destroy_applicant_session_path
     elsif current_nonprofit
       destroy_nonprofit_session_path
     end
@@ -26,8 +24,6 @@ module DeviseSettings
   def after_sign_in_path_for(user)
     if user.is_a? Admin
       root_path
-    elsif user.is_a? Applicant
-      students_apply_path
     elsif user.is_a? Nonprofit
       nonprofits_apply_path
     else

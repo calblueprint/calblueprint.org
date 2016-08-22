@@ -12,8 +12,6 @@ class Ability
       elsif user.super_admin?
         can :manage, :all
       end
-    elsif user.is_a? Applicant
-      can :create, :application
     end
   end
 end

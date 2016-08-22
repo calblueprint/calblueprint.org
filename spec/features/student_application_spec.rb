@@ -3,10 +3,6 @@ require "rails_helper"
 RSpec.describe "Student Application Form" do
   before do
     visit new_student_application_path
-    expect(page).to have_content "You need to sign in"
-    create_omniauth
-    click_link 'Log in with Facebook'
-    visit new_student_application_path
   end
 
   subject { page }
@@ -24,6 +20,8 @@ RSpec.describe "Student Application Form" do
 
   describe "after filling in form" do
     before do
+      fill_in "student_application_name", with: "bob"
+      fill_in "student_application_email", with: "bob@email.com"
       fill_in "student_application_why_join", with: "I'm really awesome"
       fill_in "student_application_phone", with: "1234567"
       choose "student_application_year_senior"

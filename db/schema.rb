@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821210920) do
+ActiveRecord::Schema.define(version: 20160822015108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20160821210920) do
     t.datetime "updated_at"
     t.string   "name",                limit: 255
     t.string   "email",               limit: 255, default: "", null: false
-    t.string   "encrypted_password",  limit: 255, default: "", null: false
     t.datetime "remember_created_at"
   end
 
@@ -74,16 +73,6 @@ ActiveRecord::Schema.define(version: 20160821210920) do
     t.string   "subject",    limit: 255
     t.text     "message"
   end
-
-  create_table "identities", force: :cascade do |t|
-    t.integer  "applicant_id"
-    t.string   "provider",     limit: 255
-    t.string   "uid",          limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "identities", ["applicant_id"], name: "index_identities_on_applicant_id", using: :btree
 
   create_table "nonprofit_applications", force: :cascade do |t|
     t.integer  "nonprofit_id"

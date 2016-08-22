@@ -15,6 +15,5 @@ FactoryGirl.define do
   factory :applicant do
     sequence(:name) { |n| "Applicant #{n}" }
     sequence(:email) { |n| "application#{n}@gmail.com" }
-    password "password"
   end
 end

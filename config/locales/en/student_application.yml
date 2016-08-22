@@ -5,28 +5,34 @@ en:
       apps_due: >
         Applications are due:
       contact: if you have any questions
-      available_for_gm: Can you make general meetings? (Mondays at 8pm)
+      available_for_gm: Check this box if you can attend Blueprint’s General Meetings (Mondays at 8pm).
     create:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
     email:
-      subject: "Submission of student application was successful!"
-      message: "Hello %{student}! We have received your student application. Thank you for your time, and we will get back to on Saturday, September 5. "
+      subject: "Submission of application was successful!"
+      message: |
+       Hello %{student}!
+
+       We have received your application. Thank you for your time, and we will get back to you by Monday, September 5.
+
+       Best,
+       Blueprint Team
     closed: Student applications are now closed for this semester. Thank you for your interest!
 
   simple_form:
     labels:
       student_application:
-        year: What year are you in?
+        year: What year in school are you?
         phone: What is your phone number?
         why_join: Why do you want to join Blueprint? (400 words max)
         why_you: What makes you a good fit for Blueprint? (400 words max)
         experience: What experience do you have (internships/extracurriculars/leadership)? (400 words max)
         projects: Discuss some past projects (hackathons/side projects/designathons). Please no class projects unless they required you designing the project yourself. (400 words max)
         service: What service experience do you have (volunteering/community service)? (400 words max)
-        applied_before: Have you applied to Blueprint before?
+        applied_before: Check this box if you have applied to Blueprint before.
         resume: Please attach your resume as a PDF.
-        available_for_bp_games: Can you make BP Games? (8pm, September 7)
+        available_for_bp_games: Check this box if you can attend BP Games (September 7, 8pm).
         why_no_bp_games: Why can't you make BP Games? This is an important part of our application process but we're willing to accomodate exceptional circumstances.
-        available_for_retreat: Can you make Retreat? (September 16 - 18)
+        available_for_retreat: Check this box if you can attend Blueprint Retreat (September 16 - 18).
         why_no_retreat: Why can't you make retreat? This is important to integrating into the club but we're willing to accomodate exceptional circumstances.

@@ -20,7 +20,7 @@
           = t '.contact'
   = render "form_errors", obj: @student_application
   = simple_form_for @student_application, url: student_applications_path do |f|
-    .row.left-align
+    .row.align-left
       .spacer
       .medium-5.medium-offset-1.columns
         = f.input :name
@@ -38,7 +38,7 @@
         = f.input :available_for_retreat, input_html: { checked: true }
         = f.input :why_no_retreat
         .spacer-small
-    .row.left-align
+    .row.align-left
       .medium-10.medium-centered.columns
         = f.input :why_join, input_html: { rows: 6, cols: 19 }
         = f.input :why_you, input_html: { rows: 6, cols: 19 }

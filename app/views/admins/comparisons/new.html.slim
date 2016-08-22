@@ -1,19 +1,27 @@
 .row
-  - @left.display_attributes.each do |attribute|
+  - @left.comparison_attributes.each do |attribute|
     .row
-      .small-6.columns
-        = @left.attribute_html attribute
-      .small-6.columns
-        = @right.attribute_html attribute
+      = @left.attribute_title_html attribute
+      = @left.comparison_attribute_html attribute
+      = @right.comparison_attribute_html attribute
+    hr
   .row
-    .small-6.columns
+    .small-4.columns.align-left
+      h4 Resume
+    .small-4.columns.align-left
+      = @left.resume
+    .small-4.columns.align-left
+      = @right.resume
+  hr
+  .row
+    .small-4.columns.push-4.align-left
       = simple_form_for [:admin, @comparison] do |f|
         = f.hidden_field :winner_id, value: @left.id
         = f.hidden_field :loser_id, value: @right.id
-        = f.button :submit, "#{@left.name} is better!"
+        = f.button :submit, "Left is better!"
 
-    .small-6.columns
+    .small-4.columns.align-left
       = simple_form_for [:admin, @comparison] do |f|
         = f.hidden_field :winner_id, value: @right.id
         = f.hidden_field :loser_id, value: @left.id
-        = f.button :submit, "#{@right.name} is better!"
+        = f.button :submit, "Right is better!"

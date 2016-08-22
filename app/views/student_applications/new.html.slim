@@ -11,7 +11,7 @@
         p.apply-info-section-text
           = t '.apps_due'
           br
-          |  September 4th, 2015, 10:00 PM
+          |  September 2nd, 2016, 11:59 PM
       .apply-info-section
         .problem-icon
         p.apply-info-section-text
@@ -20,23 +20,71 @@
           = t '.contact'
   = render "form_errors", obj: @student_application
   = simple_form_for @student_application, url: student_applications_path do |f|
-    .row
+    .row.left-align
       .spacer
       .medium-5.medium-offset-1.columns
         = f.input :name
         = f.input :email
-        = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
-        .spacer-small
         = f.input :phone
-        = f.input :available_for_bp_games
-        = f.input :available_for_retreat
-        .spacer-small
-      .medium-4.medium-pull-1.columns
-        = f.input :why_join, input_html: { rows: 14, cols: 19 }
         .spacer-small
         = f.input :resume, as: :file
         .spacer-small
+      .medium-5.medium-pull-1.columns
+        = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
+        .spacer-small
+        = f.input :applied_before
+        = f.input :available_for_bp_games, input_html: { checked: true }
+        = f.input :why_no_bp_games
+        = f.input :available_for_retreat, input_html: { checked: true }
+        = f.input :why_no_retreat
+        .spacer-small
+    .row.left-align
+      .medium-10.medium-centered.columns
+        = f.input :why_join, input_html: { rows: 6, cols: 19 }
+        = f.input :why_you, input_html: { rows: 6, cols: 19 }
+
+        .spacer-small
+        h5 Feel free to copy and paste from your resume for the below questions
+        hr
+        = f.input :experience, input_html: { rows: 6, cols: 19 }
+        = f.input :projects, input_html: { rows: 6, cols: 19 }
+        = f.input :service, input_html: { rows: 6, cols: 19 }
+        .spacer-small
     .row
+      .center
+        hr
+        label for='available_for_gm'
+          input type='checkbox' name='available_for_gm' id='available_for_gm'
+          = t '.available_for_gm'
+        .spacer-small
       .submit.center
-        = f.button :submit, 'Submit'
+        = f.button :submit, 'Submit', disabled: true
   .spacer
+
+javascript:
+  $('.student_application_why_no_bp_games').hide();
+  $('.student_application_why_no_retreat').hide();
+
+  $('#student_application_available_for_bp_games').on('click', function() {
+    if($(this).is(':checked')) {
+      $('.student_application_why_no_bp_games').hide();
+    } else {
+      $('.student_application_why_no_bp_games').show();
+    }
+  });
+
+  $('#student_application_available_for_retreat').on('click', function() {
+    if($(this).is(':checked')) {
+      $('.student_application_why_no_retreat').hide();
+    } else {
+      $('.student_application_why_no_retreat').show();
+    }
+  });
+
+  $('#available_for_gm').on('click', function() {
+    if($(this).is(':checked')) {
+      $('input[type="submit"]').prop("disabled", false)
+    } else {
+      $('input[type="submit"]').prop("disabled", true)
+    }
+  })

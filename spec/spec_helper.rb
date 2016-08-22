@@ -18,6 +18,7 @@
 # Start CodeClimate
 require "codeclimate-test-reporter"
 require "paperclip/matchers"
+require "factory_girl_rails"
 
 CodeClimate::TestReporter.start
 

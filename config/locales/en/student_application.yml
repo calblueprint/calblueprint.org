@@ -5,6 +5,7 @@ en:
       apps_due: >
         Applications are due:
       contact: if you have any questions
+      available_for_gm: Can you make general meetings? (Mondays at 8pm)
     create:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
@@ -18,7 +19,14 @@ en:
       student_application:
         year: What year are you in?
         phone: What is your phone number?
-        why_join: Why do you want to join Blueprint? (250 words max)
+        why_join: Why do you want to join Blueprint? (400 words max)
+        why_you: What makes you a good fit for Blueprint? (400 words max)
+        experience: What experience do you have (internships/extracurriculars/leadership)? (400 words max)
+        projects: Discuss some past projects (hackathons/side projects/designathons). Please no class projects unless they required you designing the project yourself. (400 words max)
+        service: What service experience do you have (volunteering/community service)? (400 words max)
+        applied_before: Have you applied to Blueprint before?
         resume: Please attach your resume as a PDF.
-        available_for_bp_games: Can you make BP Games? (September 9)
-        available_for_retreat: Can you make Retreat? (September 18 - 20)
+        available_for_bp_games: Can you make BP Games? (8pm, September 7)
+        why_no_bp_games: Why can't you make BP Games? This is an important part of our application process but we're willing to accomodate exceptional circumstances.
+        available_for_retreat: Can you make Retreat? (September 16 - 18)
+        why_no_retreat: Why can't you make retreat? This is important to integrating into the club but we're willing to accomodate exceptional circumstances.

@@ -14,5 +14,9 @@ module Admins
       app = StudentApplication.find(params[:id])
       @app = StudentApplicationDecorator.new app
     end
+
+    def remaining
+      @student_applications = StudentApplication.remaining
+    end
   end
 end

@@ -31,17 +31,17 @@ FactoryGirl.define do
     cs169_pool false
 
     factory :finished_nonprofit_application do
-      purpose "Some text."
-      history "Some text."
+      purpose FFaker::Lorem.paragraph
+      history FFaker::Lorem.paragraph
       date_established Time.zone.now.to_date
       legal true
-      short_summary "hi"
-      goals "many"
-      key_features "fun"
-      devices ["Desktop", "Mobile phones"]
-      target_audience "everyone"
-      why "Greatness"
-      technical_requirements "none"
+      short_summary FFaker::Lorem.sentence
+      goals FFaker::Lorem.paragraph
+      key_features FFaker::Lorem.paragraph
+      devices NonprofitApplication::POSSIBLE_DEVICES.sample(2)
+      target_audience FFaker::Lorem.paragraph
+      why FFaker::Lorem.paragraph
+      technical_requirements FFaker::Lorem.paragraph
 
       trait :submitted do
         state "submitted"
@@ -49,7 +49,7 @@ FactoryGirl.define do
       end
 
       trait :current do
-        semester Settings.instance.current_semester
+        semester { Settings.instance.current_semester }
       end
     end
   end

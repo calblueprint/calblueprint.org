@@ -26,11 +26,35 @@ FactoryGirl.define do
     semester
     name { applicant.name }
     email { applicant.email }
-    why_join "I love Blueprint"
-    phone "012-345-5678"
-    year "Freshman"
+    why_join FFaker::Lorem.paragraph
+    phone FFaker::PhoneNumber.phone_number
+    year ['Freshman', 'Sophomore', 'Junior', 'Senior'].sample
     resume_file_name { 'test.pdf' }
     resume_content_type { 'application/pdf' }
     resume_file_size 800
+    version 1
+
+    trait :v2 do
+      version 2
+      why_you FFaker::Lorem.paragraph
+      experience FFaker::Lorem.paragraph
+      projects FFaker::Lorem.paragraph
+      service FFaker::Lorem.paragraph
+      available_for_bp_games true
+      available_for_retreat true
+    end
+
+    trait :current do
+      semester { Settings.instance.current_semester }
+    end
+
+    trait :old do
+      semester {
+        if Semester.count == 0
+          create(:semester)
+        end
+        create(:semester)
+      }
+    end
   end
 end

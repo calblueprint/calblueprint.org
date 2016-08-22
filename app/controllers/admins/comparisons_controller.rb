@@ -4,8 +4,8 @@ module Admins
 
     def new
       if StudentApplication.remaining.count <= @settings.applicants_remaining &&
-          StudentApplication.remaining.count <= StudentApplication.needs_comparison.count + 1
-        redirect_to admin_remaining_path, flash: { success: t('admins.comparisons.complete')}
+         StudentApplication.remaining.count <= StudentApplication.needs_comparison.count + 1
+        redirect_to admin_remaining_path, flash: { success: t('admins.comparisons.complete') }
       end
 
       @comparison = Comparison.new

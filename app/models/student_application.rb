@@ -33,7 +33,7 @@
 class StudentApplication < ActiveRecord::Base
   belongs_to :applicant
   belongs_to :semester
-  has_many :wins,    class_name: 'Comparison', foreign_key: 'winner_id'
+  has_many :wins, class_name: 'Comparison', foreign_key: 'winner_id'
   has_many :losses, class_name: 'Comparison', foreign_key: 'loser_id'
 
   has_attached_file :resume
@@ -63,25 +63,25 @@ class StudentApplication < ActiveRecord::Base
   validates_presence_of :why_no_retreat, if: :v2?, unless: :available_for_retreat?
 
   validates_each :why_join, :why_you, :experience, :projects, :service do |record, attr, value|
-    record.errors.add attr, 'Your response must be less than 400 words' if record.v2? && !value.nil? && value.split(" ").length > 400
+    record.errors.add attr, ' - your response must be less than 400 words' if record.v2? && !value.nil? && value.split(" ").length > 400
   end
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
   scope :remaining, -> {
     current.
-    where("wins_count * #{Settings.instance.comparison_bonus} + losses_count * #{Settings.instance.comparison_penalty} >= #{Settings.instance.comparison_threshold}").
-    order('wins_count + losses_count ASC')
+      where("wins_count * #{Settings.instance.comparison_bonus} + losses_count * #{Settings.instance.comparison_penalty} >= #{Settings.instance.comparison_threshold}").
+      order('wins_count + losses_count ASC')
   }
   scope :needs_comparison, -> {
     remaining.where('wins_count + losses_count = ?', StudentApplication.remaining.minimum("wins_count + losses_count"))
   }
 
   def v1?
-    return self.version == 1
+    self.version == 1
   end
 
   def v2?
-    return self.version == 2
+    self.version == 2
   end
 
   def comparisons

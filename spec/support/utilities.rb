@@ -26,11 +26,11 @@ def words(n)
   final = []
   while n > 0
     if n < 249
-      final = final + FFaker::Lorem.words(n)
+      final += FFaker::Lorem.words(n)
       n = 0
     else
-      final = final + FFaker::Lorem.words(249)
-      n = n - 249
+      final += FFaker::Lorem.words(249)
+      n -= 249
     end
   end
   final.join(" ")

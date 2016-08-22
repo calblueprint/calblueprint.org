@@ -37,10 +37,6 @@
         = f.input :why_no_bp_games
         = f.input :available_for_retreat, input_html: { checked: true }
         = f.input :why_no_retreat
-
-        label for='available_for_gm'
-          input type='checkbox' name='available_for_gm' id='available_for_gm'
-          = t '.available_for_gm'
         .spacer-small
     .row.left-align
       .medium-10.medium-centered.columns
@@ -55,6 +51,12 @@
         = f.input :service, input_html: { rows: 6, cols: 19 }
         .spacer-small
     .row
+      .center
+        hr
+        label for='available_for_gm'
+          input type='checkbox' name='available_for_gm' id='available_for_gm'
+          = t '.available_for_gm'
+        .spacer-small
       .submit.center
         = f.button :submit, 'Submit', disabled: true
   .spacer

@@ -16,7 +16,7 @@ RSpec.describe "Student Application Form" do
   describe "without filling in form" do
     it "renders back form with errors" do
       find(:css, "#available_for_gm").set(true)
-      find(:css, "input[type='submit']").click()
+      find(:css, "input[type='submit']").click
       expect(page).to have_content t("student_applications.new.banner")
       expect(page).to have_content "can't be blank"
     end
@@ -36,13 +36,13 @@ RSpec.describe "Student Application Form" do
     end
 
     it "redirects and renders a success message on submit" do
-      find(:css, "input[type='submit']").click()
+      find(:css, "input[type='submit']").click
       expect(page).not_to have_content t("student_applications.new.banner")
       expect(page).to have_content t("student_applications.create.success")
     end
 
     it "creates a Student Application on submit" do
-      expect { find(:css, "input[type='submit']").click() }.to change { StudentApplication.count }.by(1)
+      expect { find(:css, "input[type='submit']").click }.to change { StudentApplication.count }.by(1)
     end
   end
 end

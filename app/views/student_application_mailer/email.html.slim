@@ -5,4 +5,4 @@ html
     h3
       = t("student_applications.email.subject")
     p
-      = t("student_applications.email.message", :student => @student_application.applicant.name)
+      = simple_format t("student_applications.email.message", :student => @student_application.applicant.name)

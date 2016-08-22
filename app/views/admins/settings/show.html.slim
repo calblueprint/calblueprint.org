@@ -18,4 +18,17 @@
           td = @settings.cs169_app_open
           td = @settings.student_app_open
           td = @settings.current_semester
+    table.tables
+      thead
+        tr
+          th Comparison Bonus
+          th Comparison Penalty
+          th Comparison Threshold
+          th Remaining Applicant Cutoff
+      tbody
+        tr
+          td = @settings.comparison_bonus
+          td = @settings.comparison_penalty
+          td = @settings.comparison_threshold
+          td = @settings.applicants_remaining
 .spacer

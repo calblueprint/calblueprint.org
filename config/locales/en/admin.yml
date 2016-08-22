@@ -32,3 +32,9 @@ en:
       promote:
         error: "Error - the admin user remains a %{role}"
         success: "The admin user successfully promoted to %{role}"
+
+    comparisons:
+      complete: No more applicants to compare!
+      create:
+        error: Something must be broken! Comparison was not saved.
+        success: Comparison made!

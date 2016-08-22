@@ -15,6 +15,8 @@ header.navigation role="banner"
               - if can? :read, StudentApplication
                 li
                   = link_to "Student Applications", admin_student_applications_path
+                li
+                  = link_to "Compare Applications", new_admin_comparison_path
               - if can? :read, Semester
                 li
                   = link_to "Semesters", admin_semesters_path

@@ -40,8 +40,11 @@ Rails.application.routes.draw do
   # Admin
   namespace :admins, as: :admin do
     resources :student_applications, only: [:index, :show]
+    get "remaining", to: "student_applications#remaining"
+
     resources :nonprofit_applications, only: [:show, :index, :destroy]
     resources :semesters
+    resources :comparisons, only: [:new, :create]
 
     resources :admins, only: [:index, :destroy] do
       get "promote"

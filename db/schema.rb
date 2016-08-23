@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822015108) do
+ActiveRecord::Schema.define(version: 20160823023613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -157,7 +157,6 @@ ActiveRecord::Schema.define(version: 20160822015108) do
     t.boolean  "available_for_retreat",              default: false
     t.integer  "wins_count",                         default: 0
     t.integer  "losses_count",                       default: 0
-    t.text     "why_you"
     t.text     "experience"
     t.text     "projects"
     t.text     "service"

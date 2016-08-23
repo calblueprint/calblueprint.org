@@ -3,6 +3,13 @@
     h1 Student Applications
     p.subtitle Future Bloopers
 .row
+  .small-4.columns{style="float: right"}
+    = form_tag("", method: "get") do
+      = select_tag :filter_by, options_for_select([['Current applications', 'current'],
+                                                   ['All applications', 'all']], @filter)
+      = submit_tag "Filter", name: ""
+
+.row
   .small-12.small-centered.columns
     = link_to "Download CSV", admin_student_applications_path(format: "csv")
     table.tables

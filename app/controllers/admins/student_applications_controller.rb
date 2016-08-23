@@ -2,8 +2,14 @@ module Admins
   class StudentApplicationsController < BaseController
     load_and_authorize_resource
 
+    FILTER_TO_QUERY = {
+      current: -> { StudentApplication.current },
+      all: -> { StudentApplication.all }
+    }.with_indifferent_access
+
     def index
-      @student_applications = StudentApplication.order(:id)
+      filter = params[:filter_by] || :current
+      @student_applications = FILTER_TO_QUERY[filter].call.order(:id)
       respond_to do |format|
         format.html
         format.csv { send_data StudentAppsCsv.to_csv @student_applications }

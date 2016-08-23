@@ -6,4 +6,13 @@
 .spacer
 .project-case-study
   = raw @markdown.render project[:full_description]
-.spacer-adjust
+/ sorry for the hackiness, tbh this whole page is sucky
+- if project[:title] == "Berkeley Public Schools Fund"
+  = link_to "View Project", "https://www.berkeleypublicschoolsfund.org/", class: "button"
+- if project[:title] == "Project Homeless Connect"
+  = link_to "View Project", "https://medium.com/@blueprint/tackling-problems-with-technology-d77b42b0b3a#.tod5ref1e", class: "button"
+- if project[:title] == "Oakland Digital Arts and Literacy"
+  = link_to "View Project", "https://odalc-stage.herokuapp.com/", class: "button"
+- if project[:title] == "Roots of Success"
+  = link_to "View Project", "https://ros-production.herokuapp.com/", class: "button"
+.spacer

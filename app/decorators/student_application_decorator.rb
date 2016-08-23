@@ -5,7 +5,6 @@ class StudentApplicationDecorator < ApplicationDecorator
     [:year,
      [:applied_before, "Applied before?"],
      :why_join,
-     :why_you,
      :experience,
      :projects,
      :service,
@@ -26,7 +25,6 @@ class StudentApplicationDecorator < ApplicationDecorator
      [:why_no_retreat, "Why unavailable for Retreat?"],
      [:applied_before, "Applied before?"],
      :why_join,
-     :why_you,
      :experience,
      :projects,
      :service]

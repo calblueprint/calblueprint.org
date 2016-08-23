@@ -20,7 +20,6 @@
 #  available_for_retreat  :boolean          default(FALSE)
 #  wins_count             :integer          default(0)
 #  losses_count           :integer          default(0)
-#  why_you                :text
 #  experience             :text
 #  projects               :text
 #  service                :text
@@ -55,14 +54,13 @@ class StudentApplication < ActiveRecord::Base
             format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
             presence: true
 
-  validates_presence_of :why_you, if: :v2?
   validates_presence_of :experience, if: :v2?
   validates_presence_of :projects, if: :v2?
   validates_presence_of :service, if: :v2?
   validates_presence_of :why_no_bp_games, if: :v2?, unless: :available_for_bp_games?
   validates_presence_of :why_no_retreat, if: :v2?, unless: :available_for_retreat?
 
-  validates_each :why_join, :why_you, :experience, :projects, :service do |record, attr, value|
+  validates_each :why_join, :experience, :projects, :service do |record, attr, value|
     record.errors.add attr, ' - your response must be less than 400 words' if record.v2? && !value.nil? && value.split(" ").length > 400
   end
 

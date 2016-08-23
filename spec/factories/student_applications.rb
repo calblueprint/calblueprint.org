@@ -36,7 +36,6 @@ FactoryGirl.define do
 
     trait :v2 do
       version 2
-      why_you FFaker::Lorem.paragraph
       experience FFaker::Lorem.paragraph
       projects FFaker::Lorem.paragraph
       service FFaker::Lorem.paragraph

@@ -3,6 +3,8 @@
     $height: 600px,
     $tint: rgba(255, 255, 255, 0.2));
   margin-bottom: 0;
+  background-position: center center;
+  background-size: cover;
 }
 
 @include keyframes(FadeIn) {

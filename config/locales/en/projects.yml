@@ -29,7 +29,7 @@ en:
         short_summary: >
           Provides a secure way for the homeless to sign up for services and for
           volunteers to collect data.
-        link: https://medium.com/@blueprint/learning-from-doing-39c9aa926b87
+        link: https://medium.com/@blueprint/tackling-problems-with-technology-d77b42b0b3a#.appc0099n
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/phc.png
         full_description: |
           The Problem
@@ -59,7 +59,7 @@ en:
         short_summary: >
           Allows tech and design professionals around the Bay Area to teach courses
           at the Oakland Digital Office.
-        link: https://bridge.odalc.org/
+        link: https://odalc-stage.herokuapp.com/
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/odalc.png
         full_description: |
           The Problem

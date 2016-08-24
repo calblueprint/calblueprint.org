@@ -44,8 +44,7 @@ $small-screen: em(420);
 
   @include media(max-width $medium-screen) {
     height: auto;
-    padding-bottom: 50px;
-  }
+    padding-bottom: 50px;  }
 }
 
 #home-title {

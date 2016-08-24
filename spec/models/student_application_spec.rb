@@ -38,7 +38,6 @@ describe StudentApplication do
 
     context 'if v2' do
       before { allow(subject).to receive(:v2?).and_return(true) }
-      it { should validate_presence_of :why_you }
       it { should validate_presence_of :experience }
       it { should validate_presence_of :projects }
       it { should validate_presence_of :service }
@@ -67,7 +66,7 @@ describe StudentApplication do
         let(:app) { build(:student_application, :v2) }
 
         it 'it should disallow v2 field when they have too many words' do
-          [:why_join, :why_you, :experience, :projects, :service].each do |field|
+          [:why_join, :experience, :projects, :service].each do |field|
             app[field] = words(401)
             app.should_not be_valid
             app[field] = words(399)

@@ -3,6 +3,8 @@
     $height: 600px,
     $tint: rgba(255, 255, 255, 0.2));
   margin-bottom: 0;
+  background-position: center center;
+  background-size: cover;
 }
 
 @include keyframes(FadeIn) {
@@ -57,9 +59,21 @@
 
 .value-blurb {
   @include media(max-width $medium-screen) {
-    padding-top: 5px;
+    padding: 40px 0 25px 0;
     position: relative;
     top: 50px;
+  }
+}
+
+.value-blurb p {
+  @include media(max-width $medium-screen) {
+    text-align: center !important;
+  }
+}
+
+.small-block-grid-2 > li {
+  @include media(max-width $medium-screen) {
+    width: 100%;
   }
 }
 

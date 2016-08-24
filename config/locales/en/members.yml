@@ -40,8 +40,8 @@ en:
     expansion: &expansion
       role: "Director of Expansion"
 
-    expansion: &mentor
-      role: "Project Mentor"
+    mentor: &mentor
+      role: "Mentor"
 
   members:
 
@@ -52,86 +52,75 @@ en:
       email: 'kevintxwu@gmail.com'
       <<: *president
 
-    - first_name: 'Soo'
-      last_name: 'Song'
-      email: 'soosong@berkeley.edu'
-      <<: *external
-
-    - first_name: 'Daniel'
-      last_name: 'Li'
-      email: 'danielmxli@gmail.com'
-      <<: *internal
-
-    - first_name: 'Nikhil'
-      last_name: 'Narayen'
-      email: 'nikhil.narayen@gmail.com'
-      <<: *tech
-
-    - first_name: 'Jordeen'
-      last_name: 'Chang'
-      email: 'jordeenchang@gmail.com'
-      <<: *projects
-
-    # External Team
-
     - first_name: 'Shreya'
       last_name: 'Shanbhag'
       email: 'shreya995@gmail.com'
-      <<: *community
+      <<: *external
 
     - first_name: 'Alice'
       last_name: 'Deng'
       email: 'alicevdeng@gmail.com'
-      <<: *corporate
+      <<: *internal
 
     - first_name: 'Vivek'
       last_name: 'Raghuram'
       email: 'vivekrag95@gmail.com'
-      <<: *expansion
+      <<: *tech
+
+    - first_name: 'Andrew'
+      last_name: 'Millman'
+      email: 'andrewmillman35@gmail.com'
+      <<: *projects
+
+    # External Team
 
     - first_name: 'Ying'
       last_name: 'Luo'
       email: 'ying.t.luo@gmail.com'
       <<: *media
 
+    - first_name: 'Vivian'
+      last_name: 'Yao'
+      email: vivyao31@berkeley.edu
+      <<: *community
+
+    - first_name: 'Steven'
+      last_name: 'Zheng'
+      email: stnzheng@gmail.com
+      <<: *corporate
+
     # Project Leaders
-
-    - first_name: 'Howard'
-      last_name: 'Chen'
-      email: 'howardxchen@gmail.com'
-      <<: *leader
-
-    - first_name: 'Aleks'
-      last_name: 'Kamko'
-      email: 'aykamko@gmail.com'
-      <<: *leader
 
     - first_name: 'Charles'
       last_name: 'Xue'
       email: 'charlesx2013@gmail.com'
       <<: *leader
 
-    - first_name: 'Warren'
-      last_name: 'Shen'
-      email: 'warrenzshen@gmail.com'
+    - first_name: 'Sam'
+      last_name: 'Lau'
+      email: 'samlau95@gmail.com'
       <<: *leader
 
-    - first_name: 'Joey'
-      last_name: 'Pereira'
-      email: 'joeypereira@berkeley.edu'
-      image: 'http://i.imgur.com/y5ipzhw.jpg?1'
+    - first_name: 'Jonathan'
+      last_name: 'Chu'
+      email: 'jonmchu@berkeley.edu'
+      <<: *leader
+
+    - first_name: 'Sonia'
+      last_name: 'Yang'
+      email: 'sonia.yang@berkeley.edu'
+      <<: *leader
+
+    - first_name: 'Eric'
+      last_name: 'Liang'
+      email: 'liang.eric24@gmail.com'
       <<: *leader
 
     # Developers
 
-    - first_name: 'Sam'
-      last_name: 'Lau'
-      email: 'samlau95@gmail.com'
-      <<: *mentor
-
-    - first_name: 'Andrew'
-      last_name: 'Millman'
-      email: 'andrewmillman35@gmail.com'
+    - first_name: 'Daniel'
+      last_name: 'Li'
+      email: 'danielmxli@gmail.com'
       <<: *developer
 
     - first_name: 'Grace'
@@ -139,29 +128,9 @@ en:
       email: 'gracesnoh@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Nishant'
-      last_name: 'Desai'
-      email: 'nish.sdesai@gmail.com'
-      <<: *developer
-
-    - first_name: 'Quinton'
-      last_name: 'Dang'
-      email: 'quintonddang@gmail.com'
-      <<: *developer
-
-    - first_name: 'Anthony'
-      last_name: 'Huang'
-      email: 'a.h@berkeley.edu'
-      <<: *developer
-
     - first_name: 'Casey'
       last_name: 'Takahashi'
       email: 'caseytaka@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Eric'
-      last_name: 'Liang'
-      email: 'liang.eric24@gmail.com'
       <<: *developer
 
     - first_name: 'Helen'
@@ -174,14 +143,58 @@ en:
       email: 'isaiahyoon22@gmail.com'
       <<: *developer
 
-    - first_name: 'Jonathan'
-      last_name: 'Chu'
-      email: 'jonmchu@berkeley.edu'
-      <<: *developer
-
     - first_name: 'Kelsey'
       last_name: 'Lam'
       email: 'kelseylam@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Sameera'
+      last_name: 'Vemulapalli'
+      email: 'sameera.vemulapalli@gmail.com'
+      <<: *developer
+
+    - first_name: 'Nikita'
+      last_name: 'Rau'
+      email: 'raun@berkeley.edu'
+      <<: *developer
+
+    # Mentors
+
+    - first_name: 'Aleks'
+      last_name: 'Kamko'
+      email: 'aykamko@gmail.com'
+      <<: *mentor
+
+    - first_name: 'Warren'
+      last_name: 'Shen'
+      email: 'warrenzshen@gmail.com'
+      <<: *mentor
+
+    - first_name: 'Soo'
+      last_name: 'Song'
+      email: 'soosong@berkeley.edu'
+      <<: *mentor
+
+    - first_name: 'Nishant'
+      last_name: 'Desai'
+      email: 'nish.sdesai@gmail.com'
+      <<: *mentor
+
+  alumni:
+
+    - first_name: 'Howard'
+      last_name: 'Chen'
+      email: 'howardxchen@gmail.com'
+      <<: *president
+
+    - first_name: 'Quinton'
+      last_name: 'Dang'
+      email: 'quintonddang@gmail.com'
+      <<: *internal
+
+    - first_name: 'Anthony'
+      last_name: 'Huang'
+      email: 'a.h@berkeley.edu'
       <<: *developer
 
     - first_name: 'Shannon'
@@ -189,9 +202,9 @@ en:
       email: 'shannonchu@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Sonia'
-      last_name: 'Yang'
-      email: 'sonia.yang@berkeley.edu'
+    - first_name: 'Andy'
+      last_name: 'Qin'
+      email: 'qin@berkeley.edu'
       <<: *developer
 
     - first_name: 'Unzi'
@@ -209,19 +222,9 @@ en:
       email: 'max.alan.wolffe@gmail.com'
       <<: *developer
 
-    - first_name: 'Sameera'
-      last_name: 'Vemulapalli'
-      email: 'sameera.vemulapalli@gmail.com'
-      <<: *developer
-
     - first_name: 'Ethan'
       last_name: 'Chiou'
       email: 'nahte.uoihc@gmail.com'
-      <<: *developer
-
-    - first_name: 'Andy'
-      last_name: 'Qin'
-      email: 'qin@berkeley.edu'
       <<: *developer
 
     - first_name: 'Erica'
@@ -234,17 +237,26 @@ en:
       email: 'triciasfu@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Nikita'
-      last_name: 'Rau'
-      email: 'raun@berkeley.edu'
-      <<: *developer
-
     - first_name: 'Quinn'
       last_name: 'Romanek'
       email: 'quinnromanek@gmail.com'
       <<: *developer
 
-  alumni:
+    - first_name: 'Jordeen'
+      last_name: 'Chang'
+      email: 'jordeenchang@gmail.com'
+      <<: *projects
+
+    - first_name: 'Nikhil'
+      last_name: 'Narayen'
+      email: 'nikhil.narayen@gmail.com'
+      <<: *tech
+
+    - first_name: 'Joey'
+      last_name: 'Pereira'
+      email: 'joeypereira@berkeley.edu'
+      image: 'http://i.imgur.com/y5ipzhw.jpg?1'
+      <<: *leader
 
     - first_name: "Jessica"
       last_name: "Lin"
@@ -319,7 +331,7 @@ en:
     - first_name: 'Melissa'
       last_name: 'Huang'
       email: 'melissahuang10@gmail.com'
-      <<: *leader
+      <<: *president
 
     - first_name: 'Deepak'
       last_name: 'Warrier'
@@ -349,9 +361,9 @@ en:
     - first_name: 'Michelle'
       last_name: 'Chow'
       email: 'callmemc@gmail.com'
-      <<: *leader
+      <<: *tech
 
     - first_name: 'Tony'
       last_name: 'Wu'
       email: 'tony.wu@berkeley.edu'
-      <<: *leader
+      <<: *projects

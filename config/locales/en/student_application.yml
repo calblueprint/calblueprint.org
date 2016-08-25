@@ -3,7 +3,7 @@ en:
     new:
       banner: We're excited to read your application.
       apps_due: >
-        Applications are due:
+        Applications Due By
       contact: if you have any questions
       available_for_gm: Check this box if you can attend Blueprint’s General Meetings (Mondays at 8pm).
     create:
@@ -24,14 +24,14 @@ en:
     labels:
       student_application:
         year: What year in school are you?
-        phone: What is your phone number?
+        phone: Phone Number
         why_join: Why do you want to join Blueprint? (250 words max)
-        experience: Please list and briefly describe your previous work and organization experience. (250 words max)
-        projects: Please list and briefly describe a few past projects. We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, feel free to list it anyways! (250 words max, links welcome!)
-        service: Describe your service experience (eg. volunteering/community service) or describe a moment that shaped what social good means to you. (250 words max)
+        experience: Please list and briefly describe past work experience or extracurricular activities. (250 words max)
+        projects: Please list and briefly describe a few personal projects. We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. (250 words max)
+        service: Please tell us about your past community service experience or describe a moment that shaped what social good means to you. (250 words max)
         applied_before: Check this box if you have applied to Blueprint before.
         resume: Please attach your resume as a PDF.
-        available_for_bp_games: Check this box if you can attend BP Games (September 7, 8pm).
+        available_for_bp_games: Check this box if you can attend BP Games. (September 7, 8 PM)
         why_no_bp_games: Why are you unable to attend BP Games? It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
-        available_for_retreat: Check this box if you can attend Blueprint Retreat (September 16 - 18).
-        why_no_retreat: Why are you unable to attend Retreat? It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
+        available_for_retreat: Check this box if you can attend Blueprint Retreat. (September 16, Night - 18)
+        why_no_retreat: Why are you unable to attend the retreat? It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.

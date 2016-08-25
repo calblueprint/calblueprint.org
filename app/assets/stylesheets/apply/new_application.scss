@@ -11,6 +11,20 @@
   margin-bottom: 0;
 }
 
+.apply-section {
+  label {
+    padding-bottom: 1px;
+  }
+
+  .input.text.optional {
+    padding-top: 10px;
+  }
+
+  .text.control-label {
+    padding-bottom: 5px;
+  }
+}
+
 .apply-form {
   .input {
     padding-bottom: 25px;
@@ -51,6 +65,10 @@
   @extend .small-12;
   @extend .medium-6;
   @extend .large-6;
+
+  strong {
+    line-height: 1.8em;
+  }
 
   .apply-info-section-icon {
     background-size: cover;

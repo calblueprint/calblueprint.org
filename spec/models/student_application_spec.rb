@@ -67,9 +67,9 @@ describe StudentApplication do
 
         it 'it should disallow v2 field when they have too many words' do
           [:why_join, :experience, :projects, :service].each do |field|
-            app[field] = words(401)
+            app[field] = words(261)
             app.should_not be_valid
-            app[field] = words(399)
+            app[field] = words(259)
             app.should be_valid
           end
         end

@@ -25,13 +25,13 @@ en:
       student_application:
         year: What year in school are you?
         phone: What is your phone number?
-        why_join: Why do you want to join Blueprint? (400 words max)
-        experience: What experience do you have (internships/extracurriculars/leadership)? (400 words max)
-        projects: Tell us about a few past projects (hackathons/side projects/designathons). We prefer to hear about something you did outside of class projects, but if you feel particularly proud of one, feel free to tell us about it. (400 words max, links welcome!)
-        service: Describe your service experience (eg. volunteering/community service) or describe a moment that shaped what social good means to you. (400 words max)
+        why_join: Why do you want to join Blueprint? (250 words max)
+        experience: Please list your previous work and organization experience. (250 words max)
+        projects: Please list and briefly describe a few past projects. We prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, feel free to list it. (250 words max, links welcome!)
+        service: Describe your service experience (eg. volunteering/community service) or describe a moment that shaped what social good means to you. (250 words max)
         applied_before: Check this box if you have applied to Blueprint before.
         resume: Please attach your resume as a PDF.
         available_for_bp_games: Check this box if you can attend BP Games (September 7, 8pm).
         why_no_bp_games: Why are you unable to attend BP Games? It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
         available_for_retreat: Check this box if you can attend Blueprint Retreat (September 16 - 18).
-        why_no_retreat: Why are you unable to attend retreat? It's important for integrating members into the club, but we will do our best to be accomodating, especially for exceptional circumstances.
+        why_no_retreat: Why are you unable to attend Blueprint Retreat? It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.

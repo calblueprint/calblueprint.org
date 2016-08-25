@@ -1,7 +1,7 @@
 en:
   student_applications:
     new:
-      banner: We're really excited to read your application.
+      banner: We're excited to read your application.
       apps_due: >
         Applications are due:
       contact: if you have any questions
@@ -26,12 +26,12 @@ en:
         year: What year in school are you?
         phone: What is your phone number?
         why_join: Why do you want to join Blueprint? (250 words max)
-        experience: Please list your previous work and organization experience. (250 words max)
-        projects: Please list and briefly describe a few past projects. We prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, feel free to list it. (250 words max, links welcome!)
+        experience: Please list and briefly describe your previous work and organization experience. (250 words max)
+        projects: Please list and briefly describe a few past projects. We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, feel free to list it anyways! (250 words max, links welcome!)
         service: Describe your service experience (eg. volunteering/community service) or describe a moment that shaped what social good means to you. (250 words max)
         applied_before: Check this box if you have applied to Blueprint before.
         resume: Please attach your resume as a PDF.
         available_for_bp_games: Check this box if you can attend BP Games (September 7, 8pm).
         why_no_bp_games: Why are you unable to attend BP Games? It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
         available_for_retreat: Check this box if you can attend Blueprint Retreat (September 16 - 18).
-        why_no_retreat: Why are you unable to attend Blueprint Retreat? It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
+        why_no_retreat: Why are you unable to attend Retreat? It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.

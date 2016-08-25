@@ -61,7 +61,7 @@ class StudentApplication < ActiveRecord::Base
   validates_presence_of :why_no_retreat, if: :v2?, unless: :available_for_retreat?
 
   validates_each :why_join, :experience, :projects, :service do |record, attr, value|
-    record.errors.add attr, ' - your response must be less than 400 words' if record.v2? && !value.nil? && value.split(" ").length > 400
+    record.errors.add attr, ' - your response must be less than 250 words' if record.v2? && !value.nil? && value.split(" ").length > 260
   end
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }

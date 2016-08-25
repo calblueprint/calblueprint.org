@@ -48,10 +48,6 @@
   top: 0;
   width: 100%;
   z-index: -1;
-  @include media(max-width $medium-screen) {
-    height: 700px !important;
-    background-position: center center !important;
-  }
 }
 
 // Use spacers to space your paragraphs and individual elements rather than <br> or css margins. Spacers

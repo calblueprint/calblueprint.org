@@ -23,15 +23,13 @@
   @include background-image(linear-gradient($tint 100%, $tint 0),
                             $background-image);
   background-attachment: fixed;
-  background-position: top center;
+  background-position: center center;
   background-repeat: repeat, no-repeat;
+  height: $height;
   background-size: cover;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  height: $height;
 }
 
 .banner-inner {

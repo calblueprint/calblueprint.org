@@ -27,7 +27,7 @@ RSpec.describe "Student Application Form" do
       choose "student_application_year_senior"
       attach_file "student_application_resume", "#{Rails.root}/spec/support/fixtures/bops.pdf"
       fill_in "student_application_experience", with: FFaker::Lorem.paragraph
-      fill_in "student_application_projects", with: FFaker::Lorem.paragraph
+      # Don't fill out projects
       fill_in "student_application_service", with: FFaker::Lorem.paragraph
       find(:css, "#available_for_gm").set(true)
     end

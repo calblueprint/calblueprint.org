@@ -38,9 +38,6 @@ describe StudentApplication do
 
     context 'if v2' do
       before { allow(subject).to receive(:v2?).and_return(true) }
-      it { should validate_presence_of :experience }
-      it { should validate_presence_of :projects }
-      it { should validate_presence_of :service }
 
       context 'if cannot attend bp_games' do
         before { allow(subject).to receive(:available_for_bp_games?).and_return(false) }

@@ -40,14 +40,14 @@
         .spacer-small
     .row.align-left
       .medium-10.medium-centered.columns
-        = f.input :why_join, input_html: { rows: 6, cols: 19 }
+        = f.input :why_join, input_html: { rows: 8, cols: 19 }
 
         .spacer-small
         h5 Feel free to copy and paste from your resume for the optional questions below
         hr
-        = f.input :experience, input_html: { rows: 6, cols: 19 }
-        = f.input :projects, input_html: { rows: 6, cols: 19 }
-        = f.input :service, input_html: { rows: 6, cols: 19 }
+        = f.input :experience, input_html: { rows: 8, cols: 19 }
+        = f.input :projects, input_html: { rows: 8, cols: 19 }
+        = f.input :service, input_html: { rows: 8, cols: 19 }
         .spacer-small
     .row
       .center
@@ -86,4 +86,101 @@ javascript:
     } else {
       $('input[type="submit"]').prop("disabled", true)
     }
-  })
+  });
+
+  // HACK: Can't do multiline placeholders any other way. Lots of code repetition here. Delete soon.
+
+  var whyJoinPlaceholder = "Use this space to explain why you’re interested in Blueprint. " +
+                           "What about Blueprint appeals to you? What do you hope to get " +
+                           "out of the experience?",
+      experiencePlaceholder = "Organization 1\n" +
+                               "Position\n" +
+                               "Briefly describe your responsibilities and achievements.\n" +
+                               "\n" +
+                               "Organization 2\n" +
+                               "Position\n" +
+                               "Briefly describe your responsibilities and achievements.",
+      projectsPlaceholder = "Project 1\n" +
+                             "Link (if possible)\n" +
+                             "Briefly describe what you created.\n" +
+                             "\n" +
+                             "Project 2\n" +
+                             "Link (if possible)\n" +
+                             "Briefly describe what you created.",
+      servicePlaceholder = "You can use this space to list your previous service experience " +
+                            "like you did with your projects and work above. However, you can " +
+                            "also choose to describe certain experiences or events in more " +
+                            "detail to better explain your background.";
+
+  $(document).on('ready page:load', function() {
+    $('#student_application_why_join').val(whyJoinPlaceholder).addClass('greyed');
+    $('#student_application_experience').val(experiencePlaceholder).addClass('greyed');
+    $('#student_application_projects').val(projectsPlaceholder).addClass('greyed');
+    $('#student_application_service').val(servicePlaceholder).addClass('greyed');
+  });
+
+  $('#student_application_why_join').on('focus', function(){
+    if($(this).val() === whyJoinPlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#student_application_why_join').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(whyJoinPlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#student_application_experience').on('focus', function(){
+    if($(this).val() === experiencePlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#student_application_experience').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(experiencePlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#student_application_projects').on('focus', function(){
+    if($(this).val() === projectsPlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#student_application_projects').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(projectsPlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#student_application_service').on('focus', function(){
+    if($(this).val() === servicePlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#student_application_service').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(servicePlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#new_student_application').on('submit', function() {
+    if($('#student_application_why_join').val() === whyJoinPlaceholder){
+      $('#student_application_why_join').val('').removeClass('greyed');
+    }
+
+    if($('#student_application_experience').val() === experiencePlaceholder){
+      $('#student_application_experience').val('').removeClass('greyed');
+    }
+
+    if($('#student_application_projects').val() === projectsPlaceholder){
+      $('#student_application_projects').val('').removeClass('greyed');
+    }
+
+    if($('#student_application_service').val() === servicePlaceholder){
+      $('#student_application_service').val('').removeClass('greyed');
+    }
+  });

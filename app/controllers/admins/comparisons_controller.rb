@@ -16,6 +16,10 @@ module Admins
       else
         @right = StudentApplication.remaining.where.not(id: @left.id).first
       end
+
+      if @right.nil?
+        redirect_to admin_student_applications_path, flash: { error: t('admins.comparisons.insufficient')}
+      end
     end
 
     def create

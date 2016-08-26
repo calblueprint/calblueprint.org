@@ -35,6 +35,7 @@ en:
 
     comparisons:
       complete: No more applicants to compare!
+      insufficient: Not enough applicants to compare
       create:
         error: Something must be broken! Comparison was not saved.
         success: Comparison made!

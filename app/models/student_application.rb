@@ -54,9 +54,6 @@ class StudentApplication < ActiveRecord::Base
             format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
             presence: true
 
-  validates_presence_of :experience, if: :v2?
-  validates_presence_of :projects, if: :v2?
-  validates_presence_of :service, if: :v2?
   validates_presence_of :why_no_bp_games, if: :v2?, unless: :available_for_bp_games?
   validates_presence_of :why_no_retreat, if: :v2?, unless: :available_for_retreat?
 

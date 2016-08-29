@@ -14,7 +14,7 @@ module Admins
       if needs_comparison.count > 1
         @right = needs_comparison.second.decorate
       else
-        @right = StudentApplication.remaining.where.not(id: @left.id).first
+        @right = StudentApplication.remaining.where.not(id: @left.id).first.decorate
       end
 
       if @right.nil?

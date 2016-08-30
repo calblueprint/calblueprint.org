@@ -2,8 +2,8 @@
   - @left.comparison_attributes.each do |attribute|
     .row
       = @left.attribute_title_html attribute
-      = @left.comparison_attribute_html attribute
-      = @right.comparison_attribute_html attribute
+      = auto_link @left.comparison_attribute_html(attribute), html: { target: '_blank' }
+      = auto_link @right.comparison_attribute_html(attribute), html: { target: '_blank' }
     hr
   .row
     .small-4.columns.align-left

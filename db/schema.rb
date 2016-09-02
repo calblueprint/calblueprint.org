@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823023613) do
+ActiveRecord::Schema.define(version: 20160901203939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,22 +19,22 @@ ActiveRecord::Schema.define(version: 20160823023613) do
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email",                  default: "",             null: false
-    t.string   "encrypted_password",     default: ""
-    t.string   "reset_password_token"
+    t.string   "first_name",             limit: 255
+    t.string   "last_name",              limit: 255
+    t.string   "email",                  limit: 255, default: "",             null: false
+    t.string   "encrypted_password",     limit: 255, default: ""
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string   "role",                   default: "npo_reviewer", null: false
-    t.string   "invitation_token"
+    t.string   "role",                               default: "npo_reviewer", null: false
+    t.string   "invitation_token",       limit: 255
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
-    t.string   "invited_by_type"
-    t.integer  "invitations_count",      default: 0
+    t.string   "invited_by_type",        limit: 255
+    t.integer  "invitations_count",                  default: 0
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 20160823023613) do
   create_table "applicants", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "email",               default: "", null: false
+    t.string   "name",                limit: 255
+    t.string   "email",               limit: 255, default: "", null: false
     t.datetime "remember_created_at"
   end
 
@@ -68,11 +68,23 @@ ActiveRecord::Schema.define(version: 20160823023613) do
   create_table "contact_forms", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "email"
-    t.string   "subject"
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.string   "subject",    limit: 255
     t.text     "message"
   end
+
+  create_table "holds", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "left_id",    null: false
+    t.integer  "right_id",   null: false
+    t.integer  "admin_id",   null: false
+  end
+
+  add_index "holds", ["admin_id"], name: "index_holds_on_admin_id", using: :btree
+  add_index "holds", ["left_id"], name: "index_holds_on_left_id", using: :btree
+  add_index "holds", ["right_id"], name: "index_holds_on_right_id", using: :btree
 
   create_table "nonprofit_applications", force: :cascade do |t|
     t.integer  "nonprofit_id"
@@ -86,30 +98,30 @@ ActiveRecord::Schema.define(version: 20160823023613) do
     t.text     "short_summary"
     t.text     "goals"
     t.text     "key_features"
-    t.string   "devices"
+    t.string   "devices",                limit: 255
     t.text     "target_audience"
     t.text     "why"
-    t.boolean  "cs169_pool",                               null: false
+    t.boolean  "cs169_pool",                                           null: false
     t.string   "client_status"
     t.text     "technical_requirements"
-    t.string   "state",                  default: "draft", null: false
+    t.string   "state",                              default: "draft", null: false
     t.datetime "submitted_at"
   end
 
   create_table "nonprofits", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                      default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "organization_name"
+    t.string   "organization_name",      limit: 255
   end
 
   add_index "nonprofits", ["email"], name: "index_nonprofits_on_email", unique: true, using: :btree
@@ -118,8 +130,8 @@ ActiveRecord::Schema.define(version: 20160823023613) do
   create_table "semesters", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "season"
-    t.string   "year"
+    t.string   "season",     limit: 255
+    t.string   "year",       limit: 255
   end
 
   create_table "settings", force: :cascade do |t|
@@ -145,25 +157,25 @@ ActiveRecord::Schema.define(version: 20160823023613) do
     t.integer  "applicant_id"
     t.integer  "semester_id"
     t.text     "why_join"
-    t.string   "resume_file_name"
-    t.string   "resume_content_type"
+    t.string   "resume_file_name",       limit: 255
+    t.string   "resume_content_type",    limit: 255
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
-    t.string   "year"
-    t.string   "phone"
+    t.string   "year",                   limit: 255
+    t.string   "phone",                  limit: 255
     t.string   "name"
     t.string   "email"
-    t.boolean  "available_for_bp_games", default: false
-    t.boolean  "available_for_retreat",  default: false
-    t.integer  "wins_count",             default: 0
-    t.integer  "losses_count",           default: 0
+    t.boolean  "available_for_bp_games",             default: false
+    t.boolean  "available_for_retreat",              default: false
+    t.integer  "wins_count",                         default: 0
+    t.integer  "losses_count",                       default: 0
     t.text     "experience"
     t.text     "projects"
     t.text     "service"
     t.text     "why_no_bp_games"
     t.text     "why_no_retreat"
-    t.boolean  "applied_before",         default: false
-    t.integer  "version",                default: 2
+    t.boolean  "applied_before",                     default: false
+    t.integer  "version",                            default: 2
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

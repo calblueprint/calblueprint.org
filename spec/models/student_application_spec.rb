@@ -94,6 +94,20 @@ describe StudentApplication do
       end
     end
 
+    describe '.comparable' do
+      let(:comparable) { StudentApplication.comparable }
+      let!(:old_hold) { create(:hold, :old, left: app_1, right: app_3) }
+      let!(:current_hold) { create(:hold, left: app_1, right: app_2) }
+
+      it 'includes only the applications without current holds' do
+        comparable.should include(app_3, app_4, app_5, app_6)
+      end
+
+      it 'does not include applications with current holds' do
+        comparable.should_not include(app_1, app_2)
+      end
+    end
+
     describe '.remaining' do
       let(:remaining) { StudentApplication.remaining }
 

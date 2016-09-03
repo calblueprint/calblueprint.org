@@ -113,10 +113,18 @@ javascript:
                             "detail to better explain your background.";
 
   $(document).on('ready page:load', function() {
-    $('#student_application_why_join').val(whyJoinPlaceholder).addClass('greyed');
-    $('#student_application_experience').val(experiencePlaceholder).addClass('greyed');
-    $('#student_application_projects').val(projectsPlaceholder).addClass('greyed');
-    $('#student_application_service').val(servicePlaceholder).addClass('greyed');
+    if ($('#student_application_why_join').val() === '') {
+      $('#student_application_why_join').val(whyJoinPlaceholder).addClass('greyed');
+    }
+    if ($('#student_application_experience').val() === '') {
+      $('#student_application_experience').val(experiencePlaceholder).addClass('greyed');
+    }
+    if ($('#student_application_projects').val() === '') {
+      $('#student_application_projects').val(projectsPlaceholder).addClass('greyed');
+    }
+    if ($('#student_application_service').val() === '') {
+      $('#student_application_service').val(servicePlaceholder).addClass('greyed');
+    }
   });
 
   $('#student_application_why_join').on('focus', function(){

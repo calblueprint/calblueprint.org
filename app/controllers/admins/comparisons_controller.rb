@@ -11,12 +11,14 @@ module Admins
       @comparison = Comparison.new
       hold = Hold.where(admin_id: current_admin.id).last
       if hold.nil? || !hold.current?
-        needs_comparison = StudentApplication.needs_comparison.comparable.sample(2)
-        @left = needs_comparison.first.decorate
-        if needs_comparison.count > 1
+        needs_comparison = StudentApplication.comparable.needs_comparison.sample(2)
+        @left = needs_comparison.first.try(:decorate)
+        if @left.nil?
+          return redirect_to admin_student_applications_path, flash: { error: t('admins.comparisons.insufficient')}
+        elsif needs_comparison.count > 1
           @right = needs_comparison.second.decorate
         else
-          @right = StudentApplication.remaining.comparable.where.not(id: @left.id).first.try(:decorate)
+          @right = StudentApplication.comparable.remaining.where.not(id: @left.id).first.try(:decorate)
         end
       else
         @left = hold.left.decorate
@@ -33,7 +35,7 @@ module Admins
 
     def create
       hold = Hold.find_hold(current_admin.id, comparison_params[:winner_id], comparison_params[:loser_id])
-      if hold || (!winner_hold.any? && !loser_hold.any?)
+      if hold || (!Hold.current_hold(comparison_params[:winner_id]) && !Hold.current_hold(comparison_params[:loser_id]))
         hold.release if hold
         if Comparison.create(comparison_params)
           redirect_to new_admin_comparison_path, flash: { success: t('admins.comparisons.create.success') }

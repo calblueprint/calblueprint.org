@@ -40,7 +40,8 @@ class Hold < ActiveRecord::Base
   end
 
   def self.current_hold(id)
-    Hold.current.where('left_id = ? OR right_id = ?', id, id)
+    hold = Hold.current.where('left_id = ? OR right_id = ?', id, id)
+    hold.any? ? hold.first : false
   end
 
   def self.find_hold(admin_id, app_1_id, app_2_id)

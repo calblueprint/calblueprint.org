@@ -39,3 +39,4 @@ en:
       create:
         error: Something must be broken! Comparison was not saved.
         success: Comparison made!
+        held: You took too long to complete your comparison. Someone else is currently reviewing one of your applicants.

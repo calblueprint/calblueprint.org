@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160901203939) do
+ActiveRecord::Schema.define(version: 20160902051758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,9 +77,10 @@ ActiveRecord::Schema.define(version: 20160901203939) do
   create_table "holds", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "left_id",    null: false
-    t.integer  "right_id",   null: false
-    t.integer  "admin_id",   null: false
+    t.integer  "left_id",       null: false
+    t.integer  "right_id",      null: false
+    t.integer  "admin_id",      null: false
+    t.datetime "current_until"
   end
 
   add_index "holds", ["admin_id"], name: "index_holds_on_admin_id", using: :btree

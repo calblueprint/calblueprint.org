@@ -27,6 +27,7 @@ class Admin < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :recoverable, :rememberable, :validatable
 
   has_many :comparisons
+  has_many :holds
 
   validates :first_name, presence: true
   validates :last_name, presence: true

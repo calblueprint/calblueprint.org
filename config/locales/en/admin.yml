@@ -36,6 +36,7 @@ en:
     comparisons:
       complete: No more applicants to compare!
       insufficient: No available applicants to compare right now
+      almost_done: Your work is done. Let the others take it from here. Thanks!
       create:
         error: Something must be broken! Comparison was not saved.
         success: Comparison made!

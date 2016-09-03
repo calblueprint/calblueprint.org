@@ -34,6 +34,8 @@ class StudentApplication < ActiveRecord::Base
   belongs_to :semester
   has_many :wins, class_name: 'Comparison', foreign_key: 'winner_id'
   has_many :losses, class_name: 'Comparison', foreign_key: 'loser_id'
+  has_many :left_hold, class_name: 'Hold', foreign_key: 'left_id'
+  has_many :right_hold, class_name: 'Hold', foreign_key: 'right_id'
 
   has_attached_file :resume
   validates_attachment :resume,
@@ -62,6 +64,7 @@ class StudentApplication < ActiveRecord::Base
   end
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
+  scope :comparable, -> { where.not(id: Hold.current.pluck(:left_id, :right_id).try(:flatten)) }
   scope :remaining, -> {
     current.
       where("wins_count * #{Settings.instance.comparison_bonus} + losses_count * #{Settings.instance.comparison_penalty} >= #{Settings.instance.comparison_threshold}").

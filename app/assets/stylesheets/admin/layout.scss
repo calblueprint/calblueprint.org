@@ -13,8 +13,11 @@
 
 .admin-content {
   flex: 1;
-
   padding: 20px;
+}
+
+.admin-content .row {
+  max-width: 95%;
 }
 
 p {

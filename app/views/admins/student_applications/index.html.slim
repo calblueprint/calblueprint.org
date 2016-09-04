@@ -2,7 +2,7 @@
   .banner-text
     h1 Student Applications
     p.subtitle
-      | #{@student_applications.count} Potential Future Bloopers.
+      | #{@student_applications.remaining.count} Potential Future Bloopers.
       |  #{Comparison.count} comparisons have been made.
       |  You made #{current_admin.comparisons.count} of them.
 .row

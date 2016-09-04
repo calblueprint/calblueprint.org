@@ -9,7 +9,7 @@ module Admins
 
     def index
       filter = params[:filter_by] || :current
-      @student_applications = FILTER_TO_QUERY[filter].call.order(:wins_count DESC)
+      @student_applications = FILTER_TO_QUERY[filter].call.order(wins_count: :desc, losses_count: :asc)
       respond_to do |format|
         format.html
         format.csv { send_data StudentAppsCsv.to_csv @student_applications }

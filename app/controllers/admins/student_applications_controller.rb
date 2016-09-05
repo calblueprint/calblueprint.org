@@ -22,7 +22,11 @@ module Admins
     end
 
     def remaining
-      @student_applications = StudentApplication.remaining
+      @student_applications = StudentApplication.remaining.reorder(wins_count: :desc, losses_count: :asc)
+      respond_to do |format|
+        format.html
+        format.csv { send_data StudentAppsCsv.to_csv @student_applications }
+      end
     end
   end
 end

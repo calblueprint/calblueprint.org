@@ -2,7 +2,9 @@ class StudentApplicationDecorator < ApplicationDecorator
   delegate_all
 
   def display_attributes
-    [:year,
+    [[:wins_count, "Number of Wins"],
+     [:losses_count, "Number of Losses"],
+     :year,
      [:applied_before, "Applied before?"],
      :why_join,
      :experience,

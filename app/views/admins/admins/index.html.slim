@@ -11,6 +11,7 @@ table.tables.admin-users
       th Email
       th Role
       th Created At
+      th # of Comparisons
       th Actions
   tbody
     - @admins.each do |admin|
@@ -20,6 +21,7 @@ table.tables.admin-users
         td = admin.email
         td = admin.role
         td = admin.created_at.to_date
+        td = admin.comparisons.count
         td
           = link_to admin_admin_promote_path(admin), class: "icon hint--top", data: { hint: "Promote" } do
             = fa_icon "level-up"

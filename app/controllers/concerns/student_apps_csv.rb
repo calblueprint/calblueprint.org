@@ -1,12 +1,14 @@
 class StudentAppsCsv
   class << self
-    COLUMN_NAMES = %w(created_at final_decision_id name email decision)
+    COLUMN_NAMES = %w(name email appliction_year wins losses class applied_before bp_games retreat)
 
     def to_csv(student_applications)
       CSV.generate do |csv|
         csv << COLUMN_NAMES
-        student_applications.order("created_at desc").each do |app|
-          csv << [app.created_at, app.applicant.name, app.email]
+        student_applications.each do |app|
+          csv << [app.applicant.name, app.email, "#{app.semester.season} #{app.semester.year}",
+                  app.wins_count, app.losses_count, app.year, app.applied_before, app.available_for_bp_games,
+                  app.available_for_retreat]
         end
       end
     end

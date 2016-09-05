@@ -7,9 +7,10 @@ class Ability
       can :read, Nonprofit
 
       if user.student_reviewer?
-        can :read, StudentApplication
+        can [:read, :remaining], StudentApplication
         can :read, Settings
         can [:create, :read], Comparison
+        can :read, Admin
       elsif user.super_admin?
         can :manage, :all
       end

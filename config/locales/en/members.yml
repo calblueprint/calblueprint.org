@@ -163,6 +163,16 @@ en:
       email: 'gretahuang@berkeley.edu'
       <<: *developer
 
+    - first_name: 'Calvin'
+      last_name: 'Dong'
+      email: 'calvind777@gmail.com'
+      <<: *developer
+
+    - first_name: 'Jeff'
+      last_name: 'Gong'
+      email: 'jgong@berkeley.edu'
+      <<: *developer
+
     # Mentors
 
     - first_name: 'Aleks'

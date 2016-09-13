@@ -81,12 +81,12 @@ en:
 
     - first_name: 'Vivian'
       last_name: 'Yao'
-      email: vivyao31@berkeley.edu
+      email: 'vivyao31@berkeley.edu'
       <<: *community
 
     - first_name: 'Steven'
       last_name: 'Zheng'
-      email: stnzheng@gmail.com
+      email: 'stnzheng@gmail.com'
       <<: *corporate
 
     # Project Leaders
@@ -156,6 +156,11 @@ en:
     - first_name: 'Nikita'
       last_name: 'Rau'
       email: 'raun@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Greta'
+      last_name: 'Huang'
+      email: 'gretahuang@berkeley.edu'
       <<: *developer
 
     # Mentors

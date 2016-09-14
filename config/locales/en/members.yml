@@ -173,6 +173,21 @@ en:
       email: 'jgong@berkeley.edu'
       <<: *developer
 
+    - first_name: 'Jason'
+      last_name: 'Xie'
+      email: 'jasonxie9801@gmail.com'
+      <<: *developer
+
+    - first_name: 'Allan'
+      last_name: 'Wu'
+      email: 'allanlwu@gmail.com'
+      <<: *developer
+
+    - first_name: 'Lois'
+      last_name: 'Chang'
+      email: 'loischang@berkeley.edu'
+      <<: *developer
+
     # Mentors
 
     - first_name: 'Aleks'

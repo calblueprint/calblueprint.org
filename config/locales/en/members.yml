@@ -188,6 +188,41 @@ en:
       email: 'loischang@berkeley.edu'
       <<: *developer
 
+    - first_name: 'Pooja'
+      last_name: 'Nagpal'
+      email: 'poojanagpal@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Derrick'
+      last_name: 'Mar'
+      email: 'derrickmar1215@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Kenneth'
+      last_name: 'Steele'
+      email: 'kvsteele@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Eric'
+      last_name: 'Chang'
+      email: 'echang2013@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Ken'
+      last_name: 'Chen'
+      email: 'Lbkchen@gmail.com'
+      <<: *developer
+
+    - first_name: 'Micah'
+      last_name: 'Carroll'
+      email: 'micah.d.carroll@gmail.com'
+      <<: *developer
+
+    - first_name: 'Peter'
+      last_name: 'Veerman'
+      email: 'peterkangveerman@berkeley.edu'
+      <<: *developer
+
     # Mentors
 
     - first_name: 'Aleks'

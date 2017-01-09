@@ -193,11 +193,6 @@ en:
       email: 'poojanagpal@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Derrick'
-      last_name: 'Mar'
-      email: 'derrickmar1215@berkeley.edu'
-      <<: *developer
-
     - first_name: 'Kenneth'
       last_name: 'Steele'
       email: 'kvsteele@berkeley.edu'
@@ -225,11 +220,6 @@ en:
 
     # Mentors
 
-    - first_name: 'Aleks'
-      last_name: 'Kamko'
-      email: 'aykamko@gmail.com'
-      <<: *mentor
-
     - first_name: 'Warren'
       last_name: 'Shen'
       email: 'warrenzshen@gmail.com'
@@ -246,6 +236,16 @@ en:
       <<: *mentor
 
   alumni:
+
+    - first_name: 'Aleks'
+      last_name: 'Kamko'
+      email: 'aykamko@gmail.com'
+      <<: *mentor
+
+    - first_name: 'Derrick'
+      last_name: 'Mar'
+      email: 'derrickmar1215@berkeley.edu'
+      <<: *developer
 
     - first_name: 'Howard'
       last_name: 'Chen'

@@ -33,6 +33,8 @@
         = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
         .spacer-small
         = f.input :applied_before
+        = f.input :available_for_bp_games, input_html: { checked: true }
+        = f.input :why_no_bp_games
         = f.input :available_for_retreat, input_html: { checked: true }
         = f.input :why_no_retreat
         .spacer-small

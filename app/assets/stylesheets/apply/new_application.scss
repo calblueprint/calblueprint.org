@@ -11,6 +11,10 @@
   margin-bottom: 0;
 }
 
+[for~="student_application_available_for_bp_games"] {
+  display: none;
+}
+
 .apply-section {
   label {
     padding-bottom: 1px;

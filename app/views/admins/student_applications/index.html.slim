@@ -4,8 +4,8 @@
     .spacer-small
     p.subtitle
       | #{@student_applications.remaining.count} Potential Future Bloopers.
-      |  #{Comparison.count} comparisons have been made.
-      |  You made #{current_admin.comparisons.count} of them.
+      |  #{Comparison.current.count} comparisons have been made.
+      |  You made #{current_admin.comparisons.current.count} of them.
 .row
   .small-4.columns{style="float: right"}
     = form_tag("", method: "get") do

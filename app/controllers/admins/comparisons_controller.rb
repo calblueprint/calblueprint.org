@@ -13,8 +13,7 @@ module Admins
         end
       end
 
-      # HACK: WILL NOT WORK NEXT YEAR. Used as a cap on the nuber of comparisons a student_reviewer can do
-      if current_admin.student_reviewer? && current_admin.comparisons.count > 110
+      if current_admin.student_reviewer? && current_admin.comparisons.current.count > 110
         return redirect_to root_path, flash: { success: t('admins.comparisons.almost_done') }
       end
 

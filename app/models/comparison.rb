@@ -21,7 +21,15 @@ class Comparison < ActiveRecord::Base
 
   validate :check_winner_and_loser
 
+  def self.current
+      Comparison.joins('LEFT OUTER JOIN "student_applications" ON
+                        "comparisons"."winner_id" = "student_applications"."id"').where(
+                        '"student_applications"."semester_id" = ?',
+                        Settings.instance.current_semester_id)
+  end
+
   def check_winner_and_loser
     errors.add(:winner_id, "cannot be same as loser") if winner_id == loser_id
   end
+
 end

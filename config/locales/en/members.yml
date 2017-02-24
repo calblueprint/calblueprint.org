@@ -96,7 +96,7 @@ en:
 
     - first_name: 'Ken'
       last_name: 'Chen'
-      email: 'Lbkchen@gmail.com'
+      email: 'lbkchen@gmail.com'
       <<: *leader
 
     - first_name: 'Jason'

@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    membersyml = Rails.cache.read('members.yml')
+    membersyml = YAML.load_file('config/locales/en/members.yml')
     @members = membersyml['members']
     @alumni = membersyml['alumni']
   end

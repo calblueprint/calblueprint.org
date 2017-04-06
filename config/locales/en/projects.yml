@@ -2,6 +2,123 @@ en:
   projects:
     index:
       title: Our Projects
+    current_projects:
+      Roots of Success:
+        title: Roots of Success
+        short_summary: >
+          Roots of Success is an international organization that provides educational
+          resources to teachers who serve in communities impacted by poverty and unemployment.
+        link: https://schoolsfund-friendsandfamily.herokuapp.com/
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/ros_student_banner.png
+        full_description: |
+          The Problem
+          -----------
+          Many students, including people in correctional facilities and untapped schools,
+          do not have the opportunity to access many educational materials and other related
+          academic resources.
+
+          The Solution
+          ------------
+          Blueprint’s is partnering with Roots of Success to bring their material onto
+          an accessible digital platform. The organization will be able to create online
+          modules, consolidating their materials into one central location. This can reach
+          students who have traditionally not been included in such education programs, including
+          people in correctional facilities and untapped schools. By creating this app, Blueprint
+          hopes to ease educational access for students and potentially impact thousands of individuals.
+
+      Re-Plate:
+        title: Re-Plate
+        short_summary: >
+          Re-Plate is a Berkeley nonprofit that aims to use technology to eliminate food
+          waste and hunger in the community. They collect surplus food donations from
+          businesses and deliver the food to other nonprofits, homeless shelters, and
+          people in need.
+        link: https://replate-staging.herokuapp.com/
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/replate_banner.png
+        full_description: |
+          The Problem
+          -----------
+          Re-Plate currently acts as a middleman for all transactions and relies on a
+          fleet of drivers to ship food around. As they scale, Re-Plate needs a more direct
+          system for donors and recipients to communicate with each other.
+
+          The Solution
+          ------------
+          Blueprint’s team is developing an online marketplace for food donations. This
+          system will allow anybody with surplus food — not just businesses — to post a
+          donation and for nearby recipients to claim the donation. Re-Plate’s staff would be
+          able to facilitate the process and monitor the marketplace. Through this system,
+          Re-Plate doesn’t have to manually track each donation, which would allow them to
+          scale to cities across the US and potentially feed thousands of additional individuals.
+
+      Lava Mae:
+        title: Lava Mae
+        short_summary: >
+          Lava Mae is a nonprofit organization founded in 2014 in San Francisco, CA. Lava Mae's
+          main goal is to serve the city's homeless who lack access to basic sanitation.
+        link: http://lavamae.herokuapp.com/
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/lavamae_banner.png
+        full_description: |
+          The Problem
+          -----------
+          In order for Lava Mae to respond to an increasing number of inquiries worldwide about
+          starting a similar organization, they require a way to manage the network that can share
+          information and connect organizations.
+
+          The Solution
+          -----------
+          Blueprint's project team will build this capability in a web application to help Lava Mae
+          grow and manage this network. It will consist of a discussion forum for people to ask questions
+          and give responses, a page for Lava Mae to upload relevant toolkits and resources, and an
+          interactive map to showcase their growing network. Through this tool, Lava Mae can connect
+          users and continue to scale.
+
+      Data Science:
+        title: UC Berkeley Data Science Education Program
+        short_summary: >
+          Berkeley’s Data Science Education Program is a rising initiative at UC Berkeley that aims to
+          expand data science learning for undergraduate students. The program is uniquely designed for
+          students from non-technical backgrounds to be exposed to data science— course offerings are
+          connecting data science to ethics, cognitive neuroscience, public policy, and many other fields.
+        link: https://docs.google.com/a/berkeley.edu/document/d/1SYRloAtMdLOtpLKUseexAkrF-9dF86A5dC5Y1121Ffs/edit?usp=sharing
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/data_science_banner.png
+        full_description: |
+          The Problem
+          -----------
+          Few other colleges teach data science as an intro course, not because the content is challenging
+          so much as because the student set-up time is so high. Many packages and tools — such as Jupyter,
+          Pandas, and Matplotlib —need to be configured for students to adequately learn key concepts.
+          This presents a serious barrier to entry for non-technical students.
+
+          The Solution
+          ------------
+          Blueprint’s project team will be creating a new deployment system that is easy for other classes
+          and universities to use. This new system will deploy in one step with minimal configuration. be
+          easily monitored for traffic and errors, and work across multiple cloud providers, including Google
+          Cloud, Microsoft Azure, Amazon Web Services. Blueprint’s completed application will potentially
+          impact thousands of students in Berkeley alone — and if it is used by other universities, countless
+          more students will be exposed to the power of data science.
+      Forte:
+        title: Forte
+        short_summary: >
+          Forte is a nonprofit that strives to make affordable music more accessible for young students.
+        link: http://forte-staging.herokuapp.com/
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/forte_banner.png
+        full_description: |
+          The Problem
+          -----------
+          As Forte scales their operations to cater to more students and teachers, they can no longer
+          manage to do everything manually, including accepting applications, matching up suitable
+          teachers with students, and scheduling individual music lessons.
+
+          The Solution
+          ------------
+          Blueprint’s Forte team will build a web application to help automate a large part of this
+          process. This web application will include an application system for interested students and
+          teachers, a scheduling dashboard for students and teachers to see upcoming and past lessons,
+          and profiles for individual students and teachers. Through this system, Forte will be able to
+          handle more demand, ultimately fostering lifelong passions for music.
+
     past_projects:
       bpsf:
         title: Berkeley Public Schools Fund

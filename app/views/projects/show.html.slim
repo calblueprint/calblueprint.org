@@ -1,4 +1,4 @@
-- project = t("projects.past_projects.#{params[:slug]}")
+- project = (params[:current] == 'true' ? t("projects.current_projects.#{params[:slug]}") : t("projects.past_projects.#{params[:slug]}"))
 .project-banner
   .banner-inner
     h1.h0.title = project[:title]
@@ -6,5 +6,9 @@
 .spacer
 .project-case-study
   = raw @markdown.render project[:full_description]
-= link_to "View Project", "#{project[:link]}", class: "button", target: '_blank'
-.spacer
+-if params[:current] == 'false'
+  = link_to "View Project", "#{project[:link]}", class: "button", target: '_blank'
+  .spacer
+-else
+  <b>More updates to come as the project comes to a wrap!</b>
+  .spacer

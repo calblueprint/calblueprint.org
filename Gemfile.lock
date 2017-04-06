@@ -1,7 +1,17 @@
+GIT
+  remote: https://github.com/jalada/platform-api
+  revision: 4a06e57bd32d805248f3b8e1358ed4833296c659
+  branch: master
+  specs:
+    platform-api (0.8.0)
+      heroics (~> 0.0.17)
+
 GEM
   remote: https://rubygems.org/
   specs:
     aasm (4.1.1)
+    acme-client (0.4.1)
+      faraday (~> 0.9, >= 0.9.1)
     actionmailer (4.2.0)
       actionpack (= 4.2.0)
       actionview (= 4.2.0)
@@ -129,6 +139,7 @@ GEM
       activesupport (>= 3.2)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
+    excon (0.55.0)
     execjs (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -177,6 +188,10 @@ GEM
       guard (~> 2.0)
       rubocop (~> 0.20)
     hashie (3.4.4)
+    heroics (0.0.21)
+      erubis (~> 2.0)
+      excon
+      multi_json (>= 1.9.2)
     highline (1.7.8)
     hitimes (1.2.4)
     http_parser.rb (0.6.0)
@@ -205,6 +220,9 @@ GEM
       activesupport (>= 3.0.0)
     launchy (2.4.3)
       addressable (~> 2.3)
+    letsencrypt-rails-heroku (1.2.0)
+      acme-client (~> 0.4.0)
+      platform-api
     letter_opener (1.4.1)
       launchy (~> 2.2)
     listen (2.10.0)
@@ -467,6 +485,7 @@ DEPENDENCIES
   jquery-rails (~> 3.1.2)
   kaminari (~> 0.16.1)
   launchy
+  letsencrypt-rails-heroku
   letter_opener
   neat (~> 1.7.2)
   newrelic_rpm
@@ -474,6 +493,7 @@ DEPENDENCIES
   omniauth-google-oauth2 (~> 0.2.6)
   paperclip (~> 4.2)
   pg (~> 0.17.1)
+  platform-api!
   pry-byebug
   pry-rails
   quiet_assets
@@ -504,4 +524,4 @@ RUBY VERSION
    ruby 2.2.0p0
 
 BUNDLED WITH
-   1.12.5
+   1.13.1

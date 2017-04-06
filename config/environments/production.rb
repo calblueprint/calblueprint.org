@@ -32,6 +32,8 @@ Rails.application.configure do
   # Enable deflate / gzip compression of controller-generated responses
   config.middleware.use Rack::Deflater
 
+  config.middleware.use Letsencrypt::Middleware
+
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass

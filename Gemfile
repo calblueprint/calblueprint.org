@@ -94,4 +94,8 @@ group :staging, :production do
 
   # Analytics - requires setup
   gem 'newrelic_rpm'
+
+  # SSL
+  gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
+  gem 'letsencrypt-rails-heroku'
 end

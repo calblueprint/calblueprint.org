@@ -2,12 +2,13 @@
 #
 # Table name: holds
 #
-#  id         :integer          not null, primary key
-#  created_at :datetime
-#  updated_at :datetime
-#  left_id    :integer          not null
-#  right_id   :integer          not null
-#  admin_id   :integer          not null
+#  id            :integer          not null, primary key
+#  created_at    :datetime
+#  updated_at    :datetime
+#  left_id       :integer          not null
+#  right_id      :integer          not null
+#  admin_id      :integer          not null
+#  current_until :datetime
 #
 
 class Hold < ActiveRecord::Base

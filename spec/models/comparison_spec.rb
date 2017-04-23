@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: comparisons
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#  winner_id  :integer          not null
+#  loser_id   :integer          not null
+#  admin_id   :integer          not null
+#
+
 require 'rails_helper'
 
 describe Comparison do

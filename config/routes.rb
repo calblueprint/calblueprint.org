@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 
   # Applicants
   resources :student_applications, only: [:new, :create], path: "apply/students"
+  # External Applicants
+  resources :external_applications, only: [:new, :create], path: "apply/external"
   # Projects
   resources :projects, only: [:show, :index], param: :slug
 

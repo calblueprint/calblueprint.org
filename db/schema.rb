@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160902051758) do
+ActiveRecord::Schema.define(version: 20170422003501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,34 @@ ActiveRecord::Schema.define(version: 20160902051758) do
     t.string   "email",      limit: 255
     t.string   "subject",    limit: 255
     t.text     "message"
+  end
+
+  create_table "external_applications", force: :cascade do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.integer  "applicant_id"
+    t.integer  "semester_id"
+    t.boolean  "operations"
+    t.boolean  "content"
+    t.boolean  "design"
+    t.boolean  "available_for_bp_games"
+    t.boolean  "available_for_retreat"
+    t.boolean  "applied_before"
+    t.text     "why_no_bp_games"
+    t.text     "why_no_retreat"
+    t.text     "why_join"
+    t.text     "design_experience"
+    t.text     "experience"
+    t.string   "website"
+    t.string   "year"
+    t.string   "major"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
   end
 
   create_table "holds", force: :cascade do |t|
@@ -147,6 +175,7 @@ ActiveRecord::Schema.define(version: 20160902051758) do
     t.integer  "comparison_penalty",   default: 0
     t.integer  "comparison_threshold", default: 0
     t.integer  "applicants_remaining", default: 0
+    t.boolean  "external_app_open",    default: true
   end
 
   add_index "settings", ["current_semester_id"], name: "index_settings_on_current_semester_id", using: :btree

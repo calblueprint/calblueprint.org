@@ -1,0 +1,36 @@
+en:
+  external_applications:
+    new:
+      banner: We're excited to read your application.
+      apps_due: >
+        Applications Due By
+      contact: if you have any questions
+      available_for_gm: Check this box if you can attend Blueprint’s General Meetings (Mondays at 8pm).
+    create:
+      success: You have successfully submitted an application. You will receive an email shortly.
+      resubmit: You have already submitted an application for this semester.
+    email:
+      subject: "Submission of application was successful!"
+      message: |
+       Hello %{student}!
+
+       We have received your application. Thank you for your time, and we will get back to you by Monday, January 22.
+
+       Best,
+       Blueprint Team
+    closed: External applications are now closed for this semester. Thank you for your interest!
+
+  simple_form:
+    labels:
+      external_application:
+        year: What year in school are you?
+        phone: Phone Number
+        why_join: Why do you want to join Blueprint? (250 words max)
+        experience: Please list and briefly describe past work experience or extracurricular activities. (250 words max)
+        design_experience: Please share your design experience if you are applying for Design Director. (250 words max)
+        applied_before: Check this box if you have applied to Blueprint before.
+        resume: Please attach your resume as a PDF.
+        available_for_bp_games: Keep this box checked. However, we will not be having Blueprint Games this semester.
+        why_no_bp_games: Why are you unable to attend BP Games? It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
+        available_for_retreat: Check this box if you can attend Blueprint Retreat. (Evening of February 3 - Morning of February 5)
+        why_no_retreat: Why are you unable to attend the retreat? It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.

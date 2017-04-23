@@ -7,13 +7,13 @@
 #  updated_at          :datetime
 #  name                :string(255)
 #  email               :string(255)      default(""), not null
-#  encrypted_password  :string(255)      default(""), not null
 #  remember_created_at :datetime
 #
 
 class Applicant < ActiveRecord::Base
   has_many :identities
   has_many :student_applications
+  has_many :external_applications
 
   validates :email, presence: true
 

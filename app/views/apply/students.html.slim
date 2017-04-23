@@ -9,8 +9,14 @@
       .small-12.medium-9.columns
         p.hook = t ".hook"
       .apply-button.small-12.medium-3.columns
-        = link_to "Apply Now", new_student_application_path, class: "button"
-  - else
+        = link_to "Apply Student Developer", new_student_application_path, class: "button"
+  - if @settings.external_app_open
+    .row
+      .small-12.medium-9.columns
+        p.hook = t ".hook"
+      .apply-button.small-12.medium-3.columns
+        = link_to "Apply External Team", new_external_application_path, class: "button"
+  - if !@settings.student_app_open && !@settings.external_app_open
     .row
       .small-12.medium-11.columns.small-centered
         p.center = t ".hook"
@@ -24,7 +30,7 @@
   .spacer
   .row
     .title-column
-      h2 Application Process
+      h2 Developer Application Process
     .content-column
       .small-12.columns
         ul.timeline-vertical

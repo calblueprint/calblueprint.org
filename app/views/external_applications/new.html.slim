@@ -1,0 +1,196 @@
+.gray-bg.apply-section
+  .student-apply-banner
+    .banner-inner
+      h1 Hello!
+      p.subtitle = 'We\'re excited to read your application.'
+  .apply-info
+    .spacer-small
+    .row
+      .apply-info-section
+        .calendar-icon
+        p.apply-info-section-text
+          strong = 'Applications Due By'
+          br
+          |  January 20th, 2017, 11:59 PM
+      .apply-info-section
+        .problem-icon
+        p.apply-info-section-text
+          strong = link_to "Contact Us", new_contact_form_path
+          br
+          = 'if you have any questions'
+  = render "form_errors", obj: @external_application
+  = simple_form_for @external_application, url: external_applications_path do |f|
+    .row.align-left
+      .spacer
+      .medium-5.medium-offset-1.columns
+        = f.input :name
+        = f.input :email
+        = f.input :phone
+        = f.input :major
+        .spacer-small
+        h5 Positions Applying For
+        = f.input :operations, label: "Operations Director", input_html: { checked: false }
+        = f.input :design, label: "Design Director", input_html: { checked: false }
+        = f.input :content, label: "Content Director", input_html: { checked: false }
+        .spacer-small
+        = f.input :resume, as: :file
+        .spacer-small
+      .medium-5.medium-pull-1.columns
+        = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
+        .spacer-small
+        = f.input :applied_before
+        = f.input :available_for_bp_games, input_html: { checked: true }
+        = f.input :why_no_bp_games
+        = f.input :available_for_retreat, input_html: { checked: true }
+        = f.input :why_no_retreat
+        .spacer-small
+    .row.align-left
+      .medium-10.medium-centered.columns
+        = f.input :website, label: 'Please link your personal website or portfolio of past design work'
+        = f.input :why_join, label: 'Why do you want to join Blueprint? 250 words max.', input_html: { rows: 8, cols: 19 }
+        = f.input :experience, label: 'Please list and briefly describe past work experience or extracurricular activities. 250 words max.' ,input_html: { rows: 8, cols: 19 }
+        = f.input :design_experience, label: 'Please share your design experience if you are applying for Design Director. 250 words max.', input_html: { rows: 8, cols: 19 }
+        .spacer-small
+    .row
+      .center
+        hr
+        h5 Check this box if you can attend Blueprint’s General Meetings (Mondays at 8pm).
+        label for='available_for_gm'
+          input type='checkbox' name='available_for_gm' id='available_for_gm'
+        .spacer-small
+      .submit.center
+        = f.button :submit, 'Submit', disabled: true
+  .spacer
+
+javascript:
+  $('.external_application_why_no_bp_games').hide();
+  $('.external_application_why_no_retreat').hide();
+  $('.external_application_website').hide();
+
+  $('#external_application_available_for_bp_games').on('click', function() {
+    if($(this).is(':checked')) {
+      $('.external_application_why_no_bp_games').hide();
+    } else {
+      $('.external_application_why_no_bp_games').show();
+    }
+  });
+
+  $('#external_application_available_for_retreat').on('click', function() {
+    if($(this).is(':checked')) {
+      $('.external_application_why_no_retreat').hide();
+    } else {
+      $('.external_application_why_no_retreat').show();
+    }
+  });
+
+  $('#available_for_gm').on('click', function() {
+    if($(this).is(':checked')) {
+      $('input[type="submit"]').prop("disabled", false)
+    } else {
+      $('input[type="submit"]').prop("disabled", true)
+    }
+  });
+
+  $('#external_application_design').on('click', function() {
+    if($(this).is(':checked')) {
+      $('.external_application_website').show();
+    } else {
+      $('.external_application_website').hide();
+    }
+  })
+
+  // HACK: Can't do multiline placeholders any other way. Lots of code repetition here. Delete soon.
+
+  var whyJoinPlaceholder = "Use this space to explain why you’re interested in Blueprint. " +
+                           "What about Blueprint appeals to you? What do you hope to get " +
+                           "out of the experience?",
+      experiencePlaceholder = "Organization 1\n" +
+                               "Position\n" +
+                               "Briefly describe your responsibilities and achievements.\n" +
+                               "\n" +
+                               "Organization 2\n" +
+                               "Position\n" +
+                               "Briefly describe your responsibilities and achievements.",
+      designPlaceholder = "Example: Expert in Adobe Illustrator and Photoshop, Proficient in HTML/CSS, Beginner in Sketch",
+      websitePlaceholder = "Please link your personal website or portfolio of past design work";
+
+  $(document).on('ready page:load', function() {
+    if ($('#external_application_why_join').val() === '') {
+      $('#external_application_why_join').val(whyJoinPlaceholder).addClass('greyed');
+    }
+    if ($('#external_application_experience').val() === '') {
+      $('#external_application_experience').val(experiencePlaceholder).addClass('greyed');
+    }
+    if ($('#external_application_design_experience').val() === '') {
+      $('#external_application_design_experience').val(designPlaceholder).addClass('greyed');
+    }
+    if ($('#external_application_website').val() === '') {
+      $('#external_application_website').val(websitePlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#external_application_why_join').on('focus', function(){
+    if($(this).val() === whyJoinPlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#external_application_why_join').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(whyJoinPlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#external_application_experience').on('focus', function(){
+    if($(this).val() === experiencePlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#external_application_experience').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(experiencePlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#external_application_design_experience').on('focus', function(){
+    if($(this).val() === designPlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#external_application_design_experience').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(designPlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#external_application_website').on('focus', function(){
+    if($(this).val() === websitePlaceholder){
+      $(this).val('').removeClass('greyed');
+    }
+  });
+
+  $('#external_application_website').on('blur', function(){
+    if ($(this).val() === '') {
+      $(this).val(websitePlaceholder).addClass('greyed');
+    }
+  });
+
+  $('#new_external_application').on('submit', function() {
+    if($('#external_application_why_join').val() === whyJoinPlaceholder){
+      $('#external_application_why_join').val('').removeClass('greyed');
+    }
+
+    if($('#external_application_experience').val() === experiencePlaceholder){
+      $('#external_application_experience').val('').removeClass('greyed');
+    }
+
+    if($('#external_application_design_experience').val() === designPlaceholder){
+      $('#external_application_design_experience').val('').removeClass('greyed');
+    }
+
+    if($('#external_application_website').val() === websitePlaceholder){
+      $('#external_application_website').val('').removeClass('greyed');
+    }
+  });

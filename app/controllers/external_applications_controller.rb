@@ -6,16 +6,17 @@ class ExternalApplicationsController < ApplicationController
 
   def create
     applicant = Applicant.find_or_create_by(email: external_application_params[:email])
-    if verify_unique_semester_application applicant
-      @external_application = applicant.external_applications.build external_application_params
-      if @external_application.save
-        applicant.update_attributes(name: @external_application.name)
-        SendStudentApplicationEmail.execute @external_application
-        redirect_to students_apply_path, flash: { success: t('student_applications.create.success') }
-      else
-        render "new"
-      end
+    # current bug - need to verify it is unique and only external apps.
+    # if verify_unique_semester_application applicant
+    @external_application = applicant.external_applications.build external_application_params
+    if @external_application.save
+      applicant.update_attributes(name: @external_application.name)
+      SendStudentApplicationEmail.execute @external_application
+      redirect_to students_apply_path, flash: { success: t('student_applications.create.success') }
+    else
+      render "new"
     end
+    # end
   end
 
   def external_application_params

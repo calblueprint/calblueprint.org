@@ -18,7 +18,7 @@
       = link_to 'Previous', admin_student_application_path(StudentApplication.where("id < ?", @app.id).last), class: "button"
     span.home-button-spacer
         | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    = link_to 'Index', :back, class: "button"
+    = link_to 'Index', admin_student_applications_path, class: "button"
     span.home-button-spacer
         | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     - if StudentApplication.where("id > ?", @app.id).first

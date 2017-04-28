@@ -8,6 +8,7 @@ class Ability
 
       if user.student_reviewer?
         can [:read, :remaining], StudentApplication
+        can :read, ExternalApplication
         can :read, Settings
         can [:create, :read], Comparison
         can :read, Admin

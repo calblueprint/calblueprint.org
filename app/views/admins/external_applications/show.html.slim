@@ -1,0 +1,27 @@
+.spacer-small
+.banner
+  .banner-text
+    h1 = @app.name
+
+.spacer-small
+
+.row
+  .small-12.columns
+    - @app.display_attributes.each do |attribute|
+      = auto_link @app.attribute_html(attribute), html: { target: '_blank' }
+
+.spacer-small
+
+.row
+  .small-12.center
+    - if ExternalApplication.where("id < ?", @app.id).last
+      = link_to 'Previous', admin_external_application_path(ExternalApplication.where("id < ?", @app.id).last), class: "button"
+    span.home-button-spacer
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    = link_to 'Index', admin_external_applications_path, class: "button"
+    span.home-button-spacer
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    - if ExternalApplication.where("id > ?", @app.id).first
+      = link_to 'Next', admin_external_application_path(ExternalApplication.where("id > ?", @app.id).first), class: "button"
+
+.spacer

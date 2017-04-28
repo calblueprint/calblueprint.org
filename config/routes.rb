@@ -55,5 +55,7 @@ Rails.application.routes.draw do
     resource :settings, only: [:show, :edit, :update] do
       post :set_current_semester
     end
+
+    resources :external_applications, only: [:index, :show]
   end
 end

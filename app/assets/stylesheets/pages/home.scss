@@ -1,104 +1,129 @@
-$laptop-width: 969px;
-$small-screen: em(420);
+.home-section {
+  background: $bp-blue;
+  min-height: 90vh;
 
-#home-image {
-  background: image-url("howard.jpg");
-  background-size: cover;
-  height: 715px;
+  .main-title {
+    @extend .header-font;
+    color: $white;
+    font-size: 60px;
+    font-weight: 600;
+  }
 
-  @include media(max-width $medium-screen) {
-    height: 550px;
-    width: 100%;
+  .main-subtitle {
+    color: $white-60;
+    font-size: 24px;
   }
 }
 
-#home-screen {
-  background: image-url("elevate-africa.png");
-  background-size: cover;
-  border-radius: 6px;
-  height: 347px;
-  width: 556px;
-
-  @include media(max-width $medium-screen) {
-    height: 150px;
-    margin-bottom: 50px;
-    width: 100%;
-  }
-}
-
-.home-button-spacer {
-  @include media(max-width $medium-screen) {
-    display: none;
-  }
-}
-
-.home-button {
-  font-size: $h6-font-size;
-}
-
-#home-banner {
-  height: 650px;
-  position: relative;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-
-  @include media(max-width $medium-screen) {
-    height: auto;
-    padding-bottom: 50px;  }
-}
-
-#home-title {
-  padding-top: 235px;
-  text-shadow: 0 0 10px rgba(27, 117, 188, 0.4);
-
-  @include media(max-width $small-screen) {
-    padding-top: 32px;
-  }
-}
-
-#home-subtitle {
-  padding-top: 5px;
+.homepage-header {
+  @extend .header-font;
+  font-size: 40px;
   font-weight: 600;
-  font-size: $h6-font-size;
-  text-shadow: 0 0 20px rgba(27, 117, 188, 0.4);
-
-  @include media(max-width $medium-screen) {
-    padding-top: 25px;
-  }
 }
 
-.bold-blue {
-  color: $blue;
-  font-weight: bold;
-}
 
-.spacer-home {
-  height: 20px;
-}
 
-#our-projects {
-  left: 25px;
-  position: relative;
-  text-align: left;
-  top: -5px;
+// $laptop-width: 969px;
+// $small-screen: em(420);
 
-  @include media(max-width $medium-screen) {
-    left: 0;
-    text-align: center;
-  }
+// #home-image {
+//   background: image-url("howard.jpg");
+//   background-size: cover;
+//   height: 715px;
 
-  p,
-  h2 {
-    text-align: left;
+//   @include media(max-width $medium-screen) {
+//     height: 550px;
+//     width: 100%;
+//   }
+// }
 
-    @include media(max-width $medium-screen) {
-      text-align: center;
-    }
-  }
-}
+// #home-screen {
+//   background: image-url("elevate-africa.png");
+//   background-size: cover;
+//   border-radius: 6px;
+//   height: 347px;
+//   width: 556px;
 
-// This is pretty horrible since it affects the entire website, not just the home page.
-// TODO(sam): Move this to some normalizing spreadsheet, like general.scss
-p {
-  margin: 0;
-}
+//   @include media(max-width $medium-screen) {
+//     height: 150px;
+//     margin-bottom: 50px;
+//     width: 100%;
+//   }
+// }
+
+// .home-button-spacer {
+//   @include media(max-width $medium-screen) {
+//     display: none;
+//   }
+// }
+
+// .home-button {
+//   font-size: $h6-font-size;
+// }
+
+// #home-banner {
+//   height: 650px;
+//   position: relative;
+//   width: 100%;
+//   background: rgba(0, 0, 0, 0.4);
+
+//   @include media(max-width $medium-screen) {
+//     height: auto;
+//     padding-bottom: 50px;  }
+// }
+
+// #home-title {
+//   padding-top: 235px;
+//   text-shadow: 0 0 10px rgba(27, 117, 188, 0.4);
+
+//   @include media(max-width $small-screen) {
+//     padding-top: 32px;
+//   }
+// }
+
+// #home-subtitle {
+//   padding-top: 5px;
+//   font-weight: 600;
+//   font-size: $h6-font-size;
+//   text-shadow: 0 0 20px rgba(27, 117, 188, 0.4);
+
+//   @include media(max-width $medium-screen) {
+//     padding-top: 25px;
+//   }
+// }
+
+// .bold-blue {
+//   color: $blue;
+//   font-weight: bold;
+// }
+
+// .spacer-home {
+//   height: 20px;
+// }
+
+// #our-projects {
+//   left: 25px;
+//   position: relative;
+//   text-align: left;
+//   top: -5px;
+
+//   @include media(max-width $medium-screen) {
+//     left: 0;
+//     text-align: center;
+//   }
+
+//   p,
+//   h2 {
+//     text-align: left;
+
+//     @include media(max-width $medium-screen) {
+//       text-align: center;
+//     }
+//   }
+// }
+
+// // This is pretty horrible since it affects the entire website, not just the home page.
+// // TODO(sam): Move this to some normalizing spreadsheet, like general.scss
+// p {
+//   margin: 0;
+// }

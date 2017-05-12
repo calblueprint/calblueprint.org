@@ -42,7 +42,7 @@ $space-list: $xxs, $xs, $sm, $md, $lg, $xl, $xxl, $xxxl;
   $i: index($space-list, $value);
   $name: nth($space-names, $i);
 
-  .margin-#{$name} { margin: $xxs; }
+  .margin-#{$name} { margin: #{$value}; }
 
   .marginTopBot-#{$name} {
     margin-top: #{$value};

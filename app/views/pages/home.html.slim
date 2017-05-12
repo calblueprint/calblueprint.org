@@ -5,15 +5,15 @@ nav.bp-nav.nav-white.home-nav
         .logo
         | Blueprint
     ul.link-container
-      li About
-      li Students
-      li Nonprofits
+      li.link-1 About
+      li.link-2 Students
+      li.link-3 Nonprofits
 
 section.home-section
   .pattern: object id="pattern" data=image_path("home/pattern.svg") type="image/svg+xml"
   .container
     h1.main-title Tech for Social Good
-    p.main-subtitle We’re a team of UC Berkeley students that develop pro-bono apps for nonprofits and promote tech for social good.
+    p.main-subtitle We’re a team of UC Berkeley students that develops web and mobile applications for nonprofits and promote technology for social good.
     div.main-button-container
       button.bp-btn.btn-white Learn More
       button.bp-btn.btn-white--clear Apply
@@ -23,14 +23,18 @@ section.about-section
     h2.homepage-header About Us
     h3.homepage-mission-statement
       | Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.
-    a More About Us
+    a.homepage-link href="/about"
+      | More About Us
+      span.fa.fa-angle-right
 
 section.projects-section
   .container
     h2.homepage-header Our Projects
-    p.homepage-desc
+    p.homepage-desc.marginBot-xl
       | Blueprint partners with nonprofits and develops applications that help streamline their operations.
-    a View All Projects
+    a.homepage-link
+      | View All Projects
+      span.fa.fa-angle-right
 
   .projects-container
     .project-item#lavamae
@@ -49,16 +53,30 @@ section.projects-section
 section.involve-section
   .container
     h2.homepage-header Get Involved
-    h4 Berkeley Students
-    p Applications are now open! For more information, come to our infosessions on August 29 and 31. Good luck!
-    a See More and Apply
+    .involve-container.students-involve
+      .text.marginRight-xl
+        h4 Berkeley Students
+        p.homepage-desc.marginBot-lg
+          | Applications are now open! For more information, come to our infosessions on August 29 and 31. Good luck!
+        a.homepage-link
+          | See More and Apply
+          span.fa.fa-angle-right
+      .image.img-container.marginLeftRight-xl
+        img src=image_url("home/group_photo.jpg") alt=""/
 
-    h4 Nonprofit Organizations
-    p If you’re a nonprofit organization with a project in mind, we encourage you to apply! We accept NPO applications every June.
-    a See More
+    .involve-container.npo-involve
+      .image.img-container.marginLeftRight-xl
+        img src=image_url("home/group_photo.jpg") alt=""/
+      .text.marginLeft-xl
+        h4 Nonprofit Organizations
+        p.homepage-desc.marginBot-lg
+          | If you’re a nonprofit organization with a project in mind, we encourage you to apply! We accept NPO applications every June.
+        a.homepage-link
+          | See More
+          span.fa.fa-angle-right
 
     h4 Other Organizations
-    p If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
+    p.homepage-desc If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
 
 section.contact-section
   .container
@@ -72,9 +90,10 @@ section.contact-section
 
 javascript:
   document.getElementById("pattern").addEventListener("load", function() {
+    document.querySelector(".pattern").classList.add("show");
     let pattern = this.getSVGDocument();
     pattern.querySelectorAll(".polygon").forEach((item) => {
-      item.style.transition = "100ms";
+      item.style.transition = "150ms";
 
       item.addEventListener("mouseover", (event) => {
         event.target.setAttribute("opacity", 0.6);
@@ -85,6 +104,4 @@ javascript:
         event.target.setAttribute("opacity", randOpacity)
       })
     })
-    // console.log(p)
-
   });

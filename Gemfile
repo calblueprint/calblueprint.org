@@ -35,12 +35,13 @@ gem 'acts_as_list', '~> 0.7.2'
 gem 'state_machine', '~> 1.2.0'
 
 # Frontend
-gem 'sass-rails', '~> 5.0.3'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '~> 5.0.6'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.1.2'
 gem 'slim-rails', '~> 3.0.1'
 gem 'uglifier', '>= 1.3.0'
-gem 'autoprefixer-rails', '~> 3.1.2'
+gem 'autoprefixer-rails', '~> 5.2.1'
 gem 'rails_autolink'
 
 gem 'flutie', '~> 2.0.0'

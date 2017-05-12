@@ -1,0 +1,78 @@
+nav.bp-nav {
+  padding: 15px 0;
+  z-index: 10;
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .logo-container {
+    font-family: "Poppins";
+    font-size: 20px;
+    opacity: 0.8;
+    transition: 100ms;
+
+    a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .logo {
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
+  }
+
+  .link-container {
+    display: flex;
+    font-family: $bptext-font;
+    font-weight: 600;
+    margin-left: auto;
+    text-transform: uppercase;
+
+    li {
+      margin: 0 15px;
+      opacity: 0.8;
+      transition: 100ms;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+// For use on dark or colored backgrounds
+nav.bp-nav.nav-white {
+
+  .logo-container {
+    a {
+      color: $white;
+    }
+  }
+
+  .logo {
+    background-image: image_url("logo-white.png");
+  }
+
+  .link-container {
+    color: white;
+
+    li {
+
+    }
+  }
+}

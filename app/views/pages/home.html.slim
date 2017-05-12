@@ -1,50 +1,90 @@
-#home-image.back-banner
-#home-banner.banner
-  h1.h0#home-title.white = t ".headline"
-  p#home-subtitle.white  = t ".subtitle"
-  .spacer-home
-  = link_to "Student Application", students_apply_path, class: "button home-button"
-.white-bg
-  .spacer
-  .row
-    .small-12.medium-9.large-7.small-centered.columns.center
-      h2 What We Do
-      .spacer-small
-      p
-        span.bold-blue = "Hi! "
-        span = t ".what_we_do"
-  .spacer-small
-  = link_to "Learn More", about_path, class: "button"
-  .spacer
-  .gray-bg
-    .spacer
-    .row
-      .medium-7.small-12.columns.center
-        #home-screen
-        / .device.nexus5
-        /   .top-bar
-        /   .sleep
-        /   .volume
-        /   .camera
-        /   .screen = image_tag "home/smartphone-content.png"
-      #our-projects.medium-5.small-12.columns.center
-        h2 Our Projects
-        .spacer-small
-        p = t ".our_projects"
-        .spacer-small
-        = link_to "See Our Work", projects_path, class: "button"
-      .medium-1.small-12.columns.center
-    .spacer
-  .spacer
-  .row
-    .medium-8.small-12.columns.small-centered.center
-      h2 Get Involved
-      .spacer-small
-      p = t ".get_involved"
-      .spacer-small
-      = link_to "For Nonprofits", nonprofits_apply_path, class: "button"
-      span.home-button-spacer
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      br.hide-on-medium-up
-      = link_to "For Students", students_apply_path, class: "button"
-  .spacer
+nav.bp-nav.nav-white.home-nav
+  .container
+    .logo-container
+      a href="/"
+        .logo
+        | Blueprint
+    ul.link-container
+      li About
+      li Students
+      li Nonprofits
+
+section.home-section
+  .pattern: object id="pattern" data=image_path("home/pattern.svg") type="image/svg+xml"
+  .container
+    h1.main-title Tech for Social Good
+    p.main-subtitle We’re a team of UC Berkeley students that develop pro-bono apps for nonprofits and promote tech for social good.
+    div.main-button-container
+      button.bp-btn.btn-white Learn More
+      button.bp-btn.btn-white--clear Apply
+
+section.about-section
+  .container
+    h2.homepage-header About Us
+    h3.homepage-mission-statement
+      | Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.
+    a More About Us
+
+section.projects-section
+  .container
+    h2.homepage-header Our Projects
+    p.homepage-desc
+      | Blueprint partners with nonprofits and develops applications that help streamline their operations.
+    a View All Projects
+
+  .projects-container
+    .project-item#lavamae
+      .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
+      h4 Lava Mae
+      p Bringing humanity and collaboration through services for the homeless.
+    .project-item#replate
+      .project-img.img-container: img src=image_url("home/replate.jpg") alt="" /
+      h4 Replate
+      p Reducing food waste and hunger in the community.
+    .project-item#roots
+      .project-img.img-container: img src=image_url("home/roots.jpg") alt="" /
+      h4 Roots of Success
+      p Improving opportunities for people from underserved communities
+
+section.involve-section
+  .container
+    h2.homepage-header Get Involved
+    h4 Berkeley Students
+    p Applications are now open! For more information, come to our infosessions on August 29 and 31. Good luck!
+    a See More and Apply
+
+    h4 Nonprofit Organizations
+    p If you’re a nonprofit organization with a project in mind, we encourage you to apply! We accept NPO applications every June.
+    a See More
+
+    h4 Other Organizations
+    p If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
+
+section.contact-section
+  .container
+    h2.homepage-header Contact Us
+    .contact-items
+      h3.homepage-desc
+        | Couldn’t find what you needed? We’re easily reached via email or social media.
+      .contact-btns
+        button.bp-btn Email Us
+        button.bp-btn.btn-white Facebook Page
+
+javascript:
+  document.getElementById("pattern").addEventListener("load", function() {
+    let pattern = this.getSVGDocument();
+    pattern.querySelectorAll(".polygon").forEach((item) => {
+      item.style.transition = "100ms";
+
+      item.addEventListener("mouseover", (event) => {
+        event.target.setAttribute("opacity", 0.6);
+      })
+
+      item.addEventListener("mouseout", (event) => {
+        const randOpacity = (Math.random() * 2 + 0.5) / 10;
+        event.target.setAttribute("opacity", randOpacity)
+      })
+    })
+    // console.log(p)
+
+  });

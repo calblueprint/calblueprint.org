@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  color: $dark-gray;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.header-font {
+  font-family: "BPText";
+  font-weight: 400;
+}
+
+.img-container {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+}
+
+$xxs: 6px;
+$xs: 12px;
+$sm: 16px;
+$md: 24px;
+$lg: 32px;
+$xl: 40px;
+$xxl: 54px;
+$xxxl: 68px;
+
+$space-names: 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl';
+$space-list: $xxs, $xs, $sm, $md, $lg, $xl, $xxl, $xxxl;
+
+@each $value in $space-list {
+  $i: index($space-list, $value);
+  $name: nth($space-names, $i);
+
+  .margin-#{$name} { margin: $xxs; }
+
+  .marginTopBot-#{$name} {
+    margin-top: #{$value};
+    margin-bottom: #{$value};
+  }
+
+  .marginLeftRight-#{$name} {
+    margin-left: #{$value};
+    margin-right: #{$value};
+  }
+
+  .marginTop-#{$name} { margin-top: #{$value} }
+  .marginBot-#{$name} { margin-bottom: #{$value} }
+  .marginLeft-#{$name} { margin-left: #{$value} }
+  .marginRight-#{$name} { margin-right: #{$value} }
+}

@@ -6,7 +6,7 @@ html
     title = title
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="Build technology that improves the world. Cal Blueprint pairs motivated teams with local non-profits to create solutions for social good, pro bono." name="description"
-    = favicon_link_tag "paw.png"
+    = favicon_link_tag "logo.png"
     link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css"
     = render "fb_meta_tags"
     link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
@@ -16,11 +16,10 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
-    .container
-      / = render "header"
-      = render "flash"
+    / = render "header"
+    = render "flash"
 
-      .content class="#{body_class}"
-        = yield
+    .content class="#{body_class}"
+      = yield
 
-      / = render "footer"
+    / = render "footer"

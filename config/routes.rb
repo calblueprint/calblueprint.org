@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "pages#new_home"
+  root to: "pages#home"
 
   # Route for Let's Encrypt
   get "/.well-known/acme-challenge/:id" => "pages#lets_encrypt"

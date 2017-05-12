@@ -1,5 +1,11 @@
 // New Styles Here
 
+// Import Bootstrap grid
+@import "bootstrap-sprockets";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/grid";
+
 // Reset browser-specific CSS
 @import "vendor/normalize";
 @import "partials/reset";
@@ -7,6 +13,8 @@
 @import "partials/variables";
 @import "partials/fonts";
 @import "partials/layout";
+
+@import "components/*";
 
 @import "pages/home";
 

@@ -1,7 +1,8 @@
 en:
   pages:
     about:
-      headline: About Us
+      headline: About The Club
+      subtitle: We’re a club at UC Berkeley that develops pro-bono apps for nonprofits and promotes tech for social good.
       mission: >
         To make beautiful engineering accessible and useful
         for those who create communities and promote public welfare.

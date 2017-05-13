@@ -12,8 +12,10 @@ nav.bp-nav.nav-white.home-nav
 section.home-section
   .pattern: object id="pattern" data=image_path("home/pattern.svg") type="image/svg+xml"
   .container
-    h1.main-title Tech for Social Good
-    p.main-subtitle We’re a team of UC Berkeley students that develops web and mobile applications for nonprofits and promote technology for social good.
+    h1.main-title
+      = t ".headline"
+    p.main-subtitle
+      = t ".subtitle"
     div.main-button-container
       button.bp-btn.btn-white Learn More
       button.bp-btn.btn-white--clear Apply
@@ -22,17 +24,17 @@ section.about-section
   .container
     h2.homepage-header About Us
     h3.homepage-mission-statement
-      | Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.
-    a.homepage-link href="/about"
-      | More About Us
+      = t ".what_we_do"
+    = link_to about_path, class: "homepage-link"
+      | Read More
       span.fa.fa-angle-right
 
 section.projects-section
   .container
     h2.homepage-header Our Projects
     p.homepage-desc.marginBot-xl
-      | Blueprint partners with nonprofits and develops applications that help streamline their operations.
-    a.homepage-link
+      = t ".our_projects"
+    = link_to projects_path, class: "homepage-link marginBot-xl"
       | View All Projects
       span.fa.fa-angle-right
 

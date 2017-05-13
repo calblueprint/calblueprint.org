@@ -4,16 +4,17 @@
   font-family: $bptext-font;
   font-size: 22px;
   font-weight: 500;
+  padding-right: 5px;
   position: relative;
   text-decoration: none;
   transition: 300ms;
 
   &:hover {
-    transform: translateX(-3px);
+    transform: translateX(-2px);
   }
 
   &:hover .fa {
-    transform: translateX(6px);
+    transform: translateX(8px);
   }
 
   &:before {
@@ -56,7 +57,7 @@
   }
 
   .fa {
-    padding-left: 10px;
+    padding-left: 7px;
     transition: 300ms;
   }
 }

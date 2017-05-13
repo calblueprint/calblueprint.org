@@ -20,9 +20,15 @@
   }
 }
 
-@keyframes fadein {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -53,22 +59,22 @@
 
   .logo-container {
     animation: slideDown 400ms both;
-    animation-delay: 600ms;
+    animation-delay: 700ms;
   }
 
   .link-1 {
     animation: slideDown 400ms both;
-    animation-delay: 700ms;
+    animation-delay: 800ms;
   }
 
   .link-2 {
     animation: slideDown 400ms both;
-    animation-delay: 750ms;
+    animation-delay: 850ms;
   }
 
   .link-3 {
     animation: slideDown 400ms both;
-    animation-delay: 800ms;
+    animation-delay: 900ms;
   }
 }
 
@@ -94,7 +100,7 @@
     }
 
     &.show {
-      animation: fadein 500ms both;
+      animation: scaleIn 500ms both;
     }
   }
 
@@ -111,7 +117,8 @@
 
   .main-title {
     @extend .header-font;
-    animation: slideLeft 400ms both;
+    animation: slideLeft 500ms both;
+    animation-delay: 200ms;
     color: $white;
     font-size: 60px;
     font-weight: 600;
@@ -120,8 +127,8 @@
   }
 
   .main-subtitle {
-    animation: slideLeft 400ms both;
-    animation-delay: 100ms;
+    animation: slideLeft 500ms both;
+    animation-delay: 350ms;
     color: $white-80;
     font-size: 22px;
     margin-bottom: 28px;
@@ -130,8 +137,8 @@
   }
 
   .main-button-container {
-    animation: slideLeft 400ms both;
-    animation-delay: 200ms;
+    animation: slideLeft 500ms both;
+    animation-delay: 500ms;
     pointer-events: all;
 
     button {
@@ -141,7 +148,7 @@
 }
 
 .homepage-header {
-  @extend .header-font;
+  font-family: $bptext-font;
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 14px;
@@ -257,6 +264,8 @@
     }
 
     .image {
+      border-radius: 3px;
+      box-shadow: 3px 3px 30px $dark-gray-10;
       flex: 1;
     }
   }
@@ -304,109 +313,3 @@
   background: linear-gradient(to bottom, rgba(56,185,166,0.3) 0%,rgba(41,182,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d38b9a6', endColorstr='#29b681',GradientType=0 ); /* IE6-9 */
 }
-
-
-// $laptop-width: 969px;
-// $small-screen: em(420);
-
-// #home-image {
-//   background: image-url("howard.jpg");
-//   background-size: cover;
-//   height: 715px;
-
-//   @include media(max-width $medium-screen) {
-//     height: 550px;
-//     width: 100%;
-//   }
-// }
-
-// #home-screen {
-//   background: image-url("elevate-africa.png");
-//   background-size: cover;
-//   border-radius: 6px;
-//   height: 347px;
-//   width: 556px;
-
-//   @include media(max-width $medium-screen) {
-//     height: 150px;
-//     margin-bottom: 50px;
-//     width: 100%;
-//   }
-// }
-
-// .home-button-spacer {
-//   @include media(max-width $medium-screen) {
-//     display: none;
-//   }
-// }
-
-// .home-button {
-//   font-size: $h6-font-size;
-// }
-
-// #home-banner {
-//   height: 650px;
-//   position: relative;
-//   width: 100%;
-//   background: rgba(0, 0, 0, 0.4);
-
-//   @include media(max-width $medium-screen) {
-//     height: auto;
-//     padding-bottom: 50px;  }
-// }
-
-// #home-title {
-//   padding-top: 235px;
-//   text-shadow: 0 0 10px rgba(27, 117, 188, 0.4);
-
-//   @include media(max-width $small-screen) {
-//     padding-top: 32px;
-//   }
-// }
-
-// #home-subtitle {
-//   padding-top: 5px;
-//   font-weight: 600;
-//   font-size: $h6-font-size;
-//   text-shadow: 0 0 20px rgba(27, 117, 188, 0.4);
-
-//   @include media(max-width $medium-screen) {
-//     padding-top: 25px;
-//   }
-// }
-
-// .bold-blue {
-//   color: $blue;
-//   font-weight: bold;
-// }
-
-// .spacer-home {
-//   height: 20px;
-// }
-
-// #our-projects {
-//   left: 25px;
-//   position: relative;
-//   text-align: left;
-//   top: -5px;
-
-//   @include media(max-width $medium-screen) {
-//     left: 0;
-//     text-align: center;
-//   }
-
-//   p,
-//   h2 {
-//     text-align: left;
-
-//     @include media(max-width $medium-screen) {
-//       text-align: center;
-//     }
-//   }
-// }
-
-// // This is pretty horrible since it affects the entire website, not just the home page.
-// // TODO(sam): Move this to some normalizing spreadsheet, like general.scss
-// p {
-//   margin: 0;
-// }

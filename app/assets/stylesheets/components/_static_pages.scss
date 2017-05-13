@@ -1,0 +1,24 @@
+.static-page-title {
+  color: $white;
+  font-family: $bptext-font;
+  font-size: 42px;
+  font-weight: 600;
+  text-shadow: 3px 3px $dark-gray-20;
+}
+
+.static-page-subtitle {
+  font-family: $bptext-font;
+  font-size: 30px;
+  font-weight: 400;
+
+  &.light {
+    color: $white-80;
+  }
+}
+
+.static-page-header {
+  font-family: $bptext-font;
+  font-size: 36px;
+  font-weight: 600;
+}
+

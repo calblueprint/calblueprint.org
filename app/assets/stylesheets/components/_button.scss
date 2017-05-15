@@ -11,6 +11,11 @@
   padding: 8px 12px;
   vertical-align: middle;
 
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
   &.btn-dark {
     background: $dark-gray;
   }

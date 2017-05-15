@@ -20,7 +20,6 @@
 
 $timeline-num-width: 200px;
 
-
 .student-timeline {
   margin: 0 auto;
   width: 800px;
@@ -39,7 +38,7 @@ $timeline-num-width: 200px;
   width: $timeline-num-width;
 
   &:after {
-    background: $bp-blue-20;
+    background: $bp-blue-40;
     content: '';
     height: 100%;
     position: absolute;
@@ -55,22 +54,12 @@ $timeline-num-width: 200px;
 
 .timeline-num {
   background: white;
-  font-family: $bptext-font;
-}
-
-.num--active {
   color: $bp-blue-20;
-  display: none;
+  font-family: $bptext-font;
   font-size: 100px;
   font-weight: 600;
   position: relative;
   top: -40px;
-}
-
-.num--default {
-  color: $bp-blue;
-  font-size: 24px;
-  font-weight: 900;
 }
 
 .text-col {
@@ -85,6 +74,7 @@ $timeline-num-width: 200px;
   font-size: 27px;
   font-weight: 600;
   margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .timeline-row-date {
@@ -97,20 +87,9 @@ $timeline-num-width: 200px;
 
 .timeline-row-description {
   color: $dark-gray-70;
-  display: none;
-}
-
-.row--active {
-  .num--active { display: block; }
-  .num--default { display: none; }
-  .timeline-row-title {
-    margin-bottom: 15px;
-  }
-  .timeline-row-description { display: block; }
 }
 
 
-// HRELSJDFKL DSFJSD
 
 
 
@@ -147,6 +126,19 @@ $timeline-num-width: 200px;
 
 .application-faqs-section {
   padding: 50px 0;
+
+  h3 {
+    font-family: $bptext-font;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: $dark-gray-70;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
 }
 
 // .nonprofits-banner {

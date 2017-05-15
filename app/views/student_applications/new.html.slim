@@ -1,64 +1,53 @@
-.gray-bg.apply-section
-  .student-apply-banner
-    .banner-inner
-      h1 Hello!
-      p.subtitle = t '.banner'
-  .apply-info
-    .spacer-small
-    .row
-      .apply-info-section
-        .calendar-icon
-        p.apply-info-section-text
-          strong = t '.apps_due'
-          br
-          |  January 20th, 2017, 11:59 PM
-      .apply-info-section
-        .problem-icon
-        p.apply-info-section-text
-          strong = link_to "Contact Us", new_contact_form_path
-          br
-          = t '.contact'
-  = render "form_errors", obj: @student_application
-  = simple_form_for @student_application, url: student_applications_path do |f|
-    .row.align-left
-      .spacer
-      .medium-5.medium-offset-1.columns
-        = f.input :name
-        = f.input :email
-        = f.input :phone
-        .spacer-small
-        = f.input :resume, as: :file
-        .spacer-small
-      .medium-5.medium-pull-1.columns
-        = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
-        .spacer-small
-        = f.input :applied_before
-        = f.input :available_for_bp_games, input_html: { checked: true }
-        = f.input :why_no_bp_games
-        = f.input :available_for_retreat, input_html: { checked: true }
-        = f.input :why_no_retreat
-        .spacer-small
-    .row.align-left
-      .medium-10.medium-centered.columns
-        = f.input :why_join, input_html: { rows: 8, cols: 19 }
+= render "header"
 
-        .spacer-small
-        h5 Feel free to copy and paste from your resume for the optional questions below
-        hr
-        = f.input :experience, input_html: { rows: 8, cols: 19 }
-        = f.input :projects, input_html: { rows: 8, cols: 19 }
-        = f.input :service, input_html: { rows: 8, cols: 19 }
-        .spacer-small
-    .row
-      .center
-        hr
-        label for='available_for_gm'
-          input type='checkbox' name='available_for_gm' id='available_for_gm'
-          = t '.available_for_gm'
-        .spacer-small
-      .submit.center
-        = f.button :submit, 'Submit', disabled: true
-  .spacer
+.container
+  h1.apply-page-header.marginBot-md
+    strong Student Application
+    span< Developer Position
+
+  p.static-page-desc
+    = t '.banner'
+    | The application is due on
+    strong.apply-page-due< Friday, April 28 at 11:59 pm.
+
+  .application-form
+    = render "form_errors", obj: @student_application
+    = simple_form_for @student_application, url: student_applications_path do |f|
+      .input-group
+        = f.label :name
+        = f.hint "First and Last"
+        = f.input_field :name, placeholder: "Alyssa P. Hacker"
+
+      .input-group
+        = f.label :email
+        = f.hint "Please use your Berkeley email"
+        = f.input_field :email, placeholder: "example@berkeley.edu"
+
+      .input-group
+        = f.label :phone
+        = f.input_field :phone, placeholder: "(123) 456-7890"
+
+      = f.input :resume, as: :file
+      = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
+      = f.input :applied_before
+      = f.input :available_for_bp_games, input_html: { checked: true }
+      = f.input :why_no_bp_games
+      = f.input :available_for_retreat, input_html: { checked: true }
+      = f.input :why_no_retreat
+      = f.input :why_join, input_html: { rows: 8, cols: 19 }
+
+      h5 Feel free to copy and paste from your resume for the optional questions below
+      hr
+      = f.input :experience, input_html: { rows: 8, cols: 19 }
+      = f.input :projects, input_html: { rows: 8, cols: 19 }
+      = f.input :service, input_html: { rows: 8, cols: 19 }
+
+      hr
+      label for='available_for_gm'
+        input type='checkbox' name='available_for_gm' id='available_for_gm'
+        = t '.available_for_gm'
+
+      = f.button :submit, 'Submit', disabled: true, class: "bp-btn"
 
 javascript:
   $('.student_application_why_no_bp_games').hide();

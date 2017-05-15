@@ -1,3 +1,15 @@
+.apply-page-header {
+  color: $dark-gray-70;
+  font-family: $bptext-font;
+  font-size: 38px;
+
+  & strong {
+    color: $dark-gray;
+    font-weight: 600;
+  }
+}
+
+
 // // Application Page CSS
 // .student-apply-banner {
 //   @include banner(image-url("apply/students/banner.png"),

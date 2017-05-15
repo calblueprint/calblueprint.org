@@ -1,53 +1,62 @@
-= render "header"
+nav.bp-nav
+  .container
+    .logo-container
+      a href="/"
+        .logo
+        | Blueprint
+    ul.link-container
+      li.link-1
+        = link_to "About", about_path
+      li.link-2
+        = link_to "Students", students_apply_path
+      li.link-3 Nonprofits
 
-.container
-  h1.apply-page-header.marginBot-md
-    strong Student Application
-    span< Developer Position
+.container.form-container
+  .apply-page-header.marginBot-lg
+    h1 Student Application
+    h2 Developer Position
 
-  p.static-page-desc
+  p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
     strong.apply-page-due< Friday, April 28 at 11:59 pm.
 
-  .application-form
+  p.static-page-desc
+    | If you have any questions, please contact us
+    span< = link_to "here", new_contact_form_path
+    |. Good luck!
+
+  .application-form.marginTop-xl
     = render "form_errors", obj: @student_application
     = simple_form_for @student_application, url: student_applications_path do |f|
-      .input-group
-        = f.label :name
-        = f.hint "First and Last"
-        = f.input_field :name, placeholder: "Alyssa P. Hacker"
 
-      .input-group
-        = f.label :email
-        = f.hint "Please use your Berkeley email"
-        = f.input_field :email, placeholder: "example@berkeley.edu"
-
-      .input-group
-        = f.label :phone
-        = f.input_field :phone, placeholder: "(123) 456-7890"
-
-      = f.input :resume, as: :file
+      = f.input :name
+      = f.input :email
+      = f.input :phone
       = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
-      = f.input :applied_before
-      = f.input :available_for_bp_games, input_html: { checked: true }
+
+      = f.input :applied_before, as: :radio_buttons
+      = f.input :resume, as: :file
+
+      = f.input :available_for_bp_games, as: :radio_buttons, checked: true
       = f.input :why_no_bp_games
-      = f.input :available_for_retreat, input_html: { checked: true }
+      = f.input :available_for_retreat, as: :radio_buttons, checked: true
       = f.input :why_no_retreat
-      = f.input :why_join, input_html: { rows: 8, cols: 19 }
 
-      h5 Feel free to copy and paste from your resume for the optional questions below
-      hr
-      = f.input :experience, input_html: { rows: 8, cols: 19 }
-      = f.input :projects, input_html: { rows: 8, cols: 19 }
-      = f.input :service, input_html: { rows: 8, cols: 19 }
+      = f.input :why_join
 
-      hr
+      h3.apply-page-more-questions More Questions
+      p.static-page-desc Feel free to copy and paste from your resume for the optional questions below.
+      = f.input :experience
+      = f.input :projects
+      = f.input :service
+
       label for='available_for_gm'
         input type='checkbox' name='available_for_gm' id='available_for_gm'
         = t '.available_for_gm'
 
-      = f.button :submit, 'Submit', disabled: true, class: "bp-btn"
+      div
+        = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn"
 
 javascript:
   $('.student_application_why_no_bp_games').hide();
@@ -77,92 +86,6 @@ javascript:
     }
   });
 
-  // HACK: Can't do multiline placeholders any other way. Lots of code repetition here. Delete soon.
-
-  var whyJoinPlaceholder = "Use this space to explain why you’re interested in Blueprint. " +
-                           "What about Blueprint appeals to you? What do you hope to get " +
-                           "out of the experience?",
-      experiencePlaceholder = "Organization 1\n" +
-                               "Position\n" +
-                               "Briefly describe your responsibilities and achievements.\n" +
-                               "\n" +
-                               "Organization 2\n" +
-                               "Position\n" +
-                               "Briefly describe your responsibilities and achievements.",
-      projectsPlaceholder = "Project 1\n" +
-                             "Link (if possible)\n" +
-                             "Briefly describe what you created.\n" +
-                             "\n" +
-                             "Project 2\n" +
-                             "Link (if possible)\n" +
-                             "Briefly describe what you created.",
-      servicePlaceholder = "You can use this space to list your previous service experience " +
-                            "like you did with your projects and work above. However, you can " +
-                            "also choose to describe certain experiences or events in more " +
-                            "detail to better explain your background.";
-
-  $(document).on('ready page:load', function() {
-    if ($('#student_application_why_join').val() === '') {
-      $('#student_application_why_join').val(whyJoinPlaceholder).addClass('greyed');
-    }
-    if ($('#student_application_experience').val() === '') {
-      $('#student_application_experience').val(experiencePlaceholder).addClass('greyed');
-    }
-    if ($('#student_application_projects').val() === '') {
-      $('#student_application_projects').val(projectsPlaceholder).addClass('greyed');
-    }
-    if ($('#student_application_service').val() === '') {
-      $('#student_application_service').val(servicePlaceholder).addClass('greyed');
-    }
-  });
-
-  $('#student_application_why_join').on('focus', function(){
-    if($(this).val() === whyJoinPlaceholder){
-      $(this).val('').removeClass('greyed');
-    }
-  });
-
-  $('#student_application_why_join').on('blur', function(){
-    if ($(this).val() === '') {
-      $(this).val(whyJoinPlaceholder).addClass('greyed');
-    }
-  });
-
-  $('#student_application_experience').on('focus', function(){
-    if($(this).val() === experiencePlaceholder){
-      $(this).val('').removeClass('greyed');
-    }
-  });
-
-  $('#student_application_experience').on('blur', function(){
-    if ($(this).val() === '') {
-      $(this).val(experiencePlaceholder).addClass('greyed');
-    }
-  });
-
-  $('#student_application_projects').on('focus', function(){
-    if($(this).val() === projectsPlaceholder){
-      $(this).val('').removeClass('greyed');
-    }
-  });
-
-  $('#student_application_projects').on('blur', function(){
-    if ($(this).val() === '') {
-      $(this).val(projectsPlaceholder).addClass('greyed');
-    }
-  });
-
-  $('#student_application_service').on('focus', function(){
-    if($(this).val() === servicePlaceholder){
-      $(this).val('').removeClass('greyed');
-    }
-  });
-
-  $('#student_application_service').on('blur', function(){
-    if ($(this).val() === '') {
-      $(this).val(servicePlaceholder).addClass('greyed');
-    }
-  });
 
   $('#new_student_application').on('submit', function() {
     if($('#student_application_why_join').val() === whyJoinPlaceholder){

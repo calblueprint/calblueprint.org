@@ -1,12 +1,37 @@
+.student_applications-new {
+  .container {
+    max-width: 850px;
+  }
+
+  .form-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
 .apply-page-header {
-  color: $dark-gray-70;
+  color: $dark-gray;
   font-family: $bptext-font;
   font-size: 38px;
+  font-weight: 600;
 
-  & strong {
-    color: $dark-gray;
-    font-weight: 600;
+  & h2 {
+    color: $dark-gray-70;
+    font-size: 28px;
+    font-weight: 300;
   }
+}
+
+.apply-page-due {
+  color: $bp-blue;
+}
+
+.apply-page-more-questions {
+  color: $dark-gray;
+  font-family: $bptext-font;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 60px;
 }
 
 

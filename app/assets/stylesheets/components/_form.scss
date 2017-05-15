@@ -1,31 +1,47 @@
 .input-group {
-  margin: 20px 0;
+  margin: 50px 0;
 
-  label {
+  .control-label {
     color: $dark-gray;
     display: block;
     font-weight: 500;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
   .hint {
     color: $dark-gray-70;
     display: block;
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
+  textarea,
   input[type="text"],
   input[type="email"],
   input[type="tel"] {
     background: white;
     border: 1px solid $smoke;
     border-radius: 3px;
+    min-width: 300px;
     padding: 8px;
 
     &:focus {
       border-color: $bp-blue;
       outline: none;
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+    min-width: 600px;
+  }
+
+  .radio {
+    display: block;
+    margin-bottom: 5px;
+
+    input[type="radio"] {
+      margin-right: 5px;
     }
   }
 }

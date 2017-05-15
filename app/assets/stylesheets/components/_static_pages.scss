@@ -10,6 +10,8 @@
 
   .container {
     align-self: center;
+    position: relative;
+    z-index: 5;
   }
 
   .static-page-subtitle {
@@ -17,9 +19,13 @@
   }
 
   .page-nav {
+    animation: slideUp 500ms both;
+    animation-delay: 400ms;
     align-self: flex-end;
     background: $white-10;
+    position: relative;
     width: 100%;
+    z-index: 6;
 
     ul {
       display: flex;
@@ -39,6 +45,8 @@
 }
 
 .static-page-title {
+  animation: slideLeft 500ms both;
+  animation-delay: 200ms;
   color: $white;
   font-family: $bptext-font;
   font-size: 42px;
@@ -47,6 +55,8 @@
 }
 
 .static-page-subtitle {
+  animation: slideLeft 500ms both;
+  animation-delay: 300ms;
   font-family: $bptext-font;
   font-size: 30px;
   font-weight: 400;
@@ -54,6 +64,11 @@
   &.light {
     color: $white-80;
   }
+}
+
+.static-page-hero-btn-container {
+  animation: slideLeft 500ms both;
+  animation-delay: 400ms;
 }
 
 .static-page-header {

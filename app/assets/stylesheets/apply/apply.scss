@@ -1,6 +1,7 @@
 @media (min-width: 1200px) {
   // Override bootstrap container style for about page
-  .apply-students .container {
+  .apply-students .container,
+  .apply-nonprofits .container {
     width: 970px;
   }
 }
@@ -13,6 +14,26 @@
   }
 }
 
+.student-apply-hero {
+  background-image: image_url("apply/students/students.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .hero-gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#187be5+38,187be5+38,187be5+99&0.97+38,0.75+100 */
+    background: -moz-linear-gradient(left, rgba(24,123,229,0.97) 38%, rgba(24,123,229,0.75) 99%, rgba(24,123,229,0.75) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(24,123,229,0.97) 38%,rgba(24,123,229,0.75) 99%,rgba(24,123,229,0.75) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(24,123,229,0.97) 38%,rgba(24,123,229,0.75) 99%,rgba(24,123,229,0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7187be5', endColorstr='#bf187be5',GradientType=1 ); /* IE6-9 */
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
 
 
 
@@ -139,6 +160,38 @@ $timeline-num-width: 200px;
     font-size: 18px;
     margin-bottom: 40px;
   }
+}
+
+
+.application-our-services {
+  padding: 50px 0;
+}
+
+.our-services-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  .img-container {
+    margin: 0 auto 20px;
+  }
+
+  div {
+    padding: 0 30px;
+    text-align: center;
+    width: 50%;
+  }
+
+  h3 {
+    font-family: $bptext-font;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+   p {
+    color: $dark-gray-70;
+    font-size: 18px;
+   }
 }
 
 // .nonprofits-banner {

@@ -2,10 +2,8 @@ en:
   apply:
     nonprofits:
       headline: For Nonprofits
-      hook: >
-        We are an organization of passionate UC Berkeley students that
-        develops web and mobile applications for nonprofit organizations. As
-        a partner, we will work with you to develop technology that turns
+      subtitle: >
+        As a partner, we will work with you to develop technology that turns
         your vision into a reality, completely free of charge.
       cs169_hook: >
         We also partner with UC Berkeley's <a

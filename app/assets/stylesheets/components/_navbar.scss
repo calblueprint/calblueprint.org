@@ -15,6 +15,7 @@ nav.bp-nav {
     transition: 100ms;
 
     a {
+      color: $bp-blue;
       font-weight: 600;
       text-decoration: none;
     }
@@ -25,6 +26,7 @@ nav.bp-nav {
   }
 
   .logo {
+    background-image: image_url("logo.png");
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,10 +34,16 @@ nav.bp-nav {
     display: inline-block;
     height: 35px;
     width: 35px;
+    transition: 750ms;
     vertical-align: middle;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
   }
 
   .link-container {
+    color: $bp-blue;
     display: flex;
     font-family: $bptext-font;
     font-weight: 600;
@@ -43,12 +51,13 @@ nav.bp-nav {
     text-transform: uppercase;
 
     li {
+      color: $bp-blue-80;
       margin: 0 15px;
       opacity: 0.8;
       transition: 100ms;
 
       &:hover {
-        opacity: 1;
+        color: $bp-blue;
       }
     }
 
@@ -74,10 +83,12 @@ nav.bp-nav.nav-white {
   }
 
   .link-container {
-    color: white;
-
     li {
+      color: $white-80;
 
+      &:hover {
+        color: $white;
+      }
     }
   }
 }

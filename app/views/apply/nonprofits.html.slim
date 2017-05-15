@@ -1,3 +1,96 @@
+= render "header"
+
+section.static-page-hero.npo-apply-hero
+  .container
+    h1.static-page-title.marginBot-xl
+      = t ".headline"
+    p.static-page-subtitle.light
+      = t ".subtitle"
+
+  div.page-nav
+    .container
+      ul
+        li Our Services
+        li Application Process
+        li Project Timeline
+        li FAQs
+
+section.application-our-services
+  .container
+    h2.static-page-header.marginBot-xxl Our Services
+    .our-services-container
+      div
+        .img-container: img src="" alt=""/
+        h3 Web Development
+        p = t ".services.web_application_development"
+      div
+        .img-container: img src="" alt=""/
+        h3 Mobile Development
+        p = t ".services.mobile_application_development"
+
+section.application-process-section
+  .container
+    h2.static-page-header.marginBot-xxl Nonprofit Application Process
+    .student-timeline
+      .timeline-row
+        .num-col
+          .timeline-num 01
+        .text-col
+          .timeline-row-title Application Open
+          .timeline-row-date June 21
+          .timeline-row-description
+            | Written application portal open
+
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
+          .timeline-row-title Submission Deadline
+          .timeline-row-date Sept 4
+          .timeline-row-description
+            | Applications are reviewed, feedback is given, then preliminary decisions are made.
+
+      .timeline-row
+        .num-col
+          .timeline-num 03
+        .text-col
+          .timeline-row-title Blueprint Games
+          .timeline-row-date Sept 9
+          .timeline-row-description
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+
+      .timeline-row
+        .num-col
+          .timeline-num 04
+        .text-col
+          .timeline-row-title Interviews
+          .timeline-row-date Sept 12
+          .timeline-row-description
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+
+section.application-decision-criteria-section
+  .container
+    h2.static-page-header.marginBot-lg Decision Criteria
+    p.static-page-desc.marginBot-xxl = t ".decision_criteria.description"
+
+    ul.decision-criteria-list-container.marginBot-lg
+      li.decision-criteria-item
+        h3 Impact
+        p How much will your project impact the community?
+      li.decision-criteria-item
+        h3 Necessity
+        p How vital is your project to your non-profit organization?
+      li.decision-criteria-item
+        h3 Scope
+        p Is your project achievable within the alloted timeline?
+      li.decision-criteria-item
+        h3 Technical Fit
+        p Does your project use the capabilities of technology? For example, an application to manage a classroom is more interesting than a website redesign.
+      li.decision-criteria-item
+        h3 Credibility
+        p Is there evidence that your project will have an impact?
+
+
 .nonprofits-banner
   .banner-inner
     h1.h0.title = t ".headline"
@@ -6,7 +99,7 @@
   - if @settings.npo_app_open
     .row
       .small-12.medium-9.columns
-        p.hook = raw t ".hook"
+        p.hook = raw t ".subtitle"
       .apply-button.small-12.medium-3.columns
         = link_to "Apply as a Nonprofit", new_nonprofit_application_path, class: "button"
   - else

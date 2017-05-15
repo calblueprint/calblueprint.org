@@ -1,11 +1,14 @@
 = render "header"
 
 section.static-page-hero.student-apply-hero
+  .hero-gradient
   .container
     h1.static-page-title.marginBot-xl
       = t ".headline"
-    p.static-page-subtitle.light
+    p.static-page-subtitle.light.marginBot-lg
       = t ".subtitle"
+    .static-page-hero-btn-container
+      = link_to "Click to Apply", new_student_application_path, class: "bp-btn btn-white"
 
   div.page-nav
     .container

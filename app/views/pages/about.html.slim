@@ -1,15 +1,6 @@
-nav.bp-nav.nav-white.home-nav
-  .container
-    .logo-container
-      a href="/"
-        .logo
-        | Blueprint
-    ul.link-container
-      li.link-1 About
-      li.link-2 Students
-      li.link-3 Nonprofits
+= render "header"
 
-section.about-page-hero
+section.static-page-hero.about-page-hero
   .container
     h1.static-page-title.marginBot-xl
       = t ".headline"
@@ -53,5 +44,25 @@ section.about-page-photo-carousel
 
 section.about-page-team-section
   .container
-    h2.static-page-header The Team
+    h2.static-page-header.marginBot-lg The Team
+    .about-page-team-tab
+      ul
+        li.active Current Team
+        li 2015-2016
+        li 2014-2015
+        li 2013-2014
+    .about-page-members
+      ul
+        - t("members").each do |member|
+          li.about-page-member-item
+            figure
+              a href="javascript:void(0)"
+                .img-container
+                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || asset_path('paw.png')}';"
+                figcaption
+                  .name
+                    b = "#{member[:first_name]} #{member[:last_name]}"
+                  .position = member[:role]
+        - (0...5 - t("members").length % 5).each do |member|
+          li.about-page-member-item
 

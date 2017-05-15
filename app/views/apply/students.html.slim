@@ -1,126 +1,225 @@
-.students-banner
-  .banner-inner
-    h1.title = t ".headline"
-    p.subtitle = t ".subtitle"
-.white-bg
-  .spacer
-  - if @settings.student_app_open
-    .row
-      .small-12.medium-9.columns
-        p.hook = t ".hook"
-      .apply-button.small-12.medium-3.columns
-        = link_to "Apply Student Developer", new_student_application_path, class: "button"
-  - if @settings.external_app_open
-    .row
-      .small-12.medium-9.columns
-        p.hook = t ".hook"
-      .apply-button.small-12.medium-3.columns
-        = link_to "Apply External Team", new_external_application_path, class: "button"
-  - if !@settings.student_app_open && !@settings.external_app_open
-    .row
-      .small-12.medium-11.columns.small-centered
-        p.center = t ".hook"
-    .row
-      .small-12.medium-8.columns.small-centered
-        .applications-closed
-          p.center = t ".applications_closed"
-          = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
-  .spacer
-.gray-bg
-  .spacer
-  .row
-    .title-column
-      h2 Developer Application Process
-    .content-column
-      .small-12.columns
-        ul.timeline-vertical
-          li.work.timeline-row
-            .relative
-              h5.title Infosessions
-              span.date/
-              h5 Jan 9
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.information"
-          li.work.timeline-row
-            .relative
-              h5.title Applications Due
-              span.date/
-              h5 Jan 20
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.submission"
-          li.work.timeline-row
-            .relative
-              h5.title Interviews
-              span.date/
-              h5 Jan 27
-              h5 Jan 28
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.final_decisions"
-      .small-12.columns.decision-criteria
-        .spacer-small
-        h4.title Decision Criteria
-        .spacer-small
-        p = t ".decision_criteria.description"
-        .spacer-small
-        ul
-          li
-            strong Passion
-            p This is the single most important criteria. Do you demonstrate a genuine passion for social good?
-            br
-          li
-            strong Skill
-            p Do you have the necessary skills to productively contribute to the mission?
-            br
-          li
-            strong Experience
-            p Do you have relevant work experience? Volunteering experience?
-            br
-          li
-            strong Attitude
-            p Do you demonstrate positive, hard-working attitude?
-            br
-          li
-            strong Teamwork
-            p Do you display the ability to work well in a team?
-            br
-          li
-            strong Culture
-            p Will you get along well with the rest of Blueprint? We’re sure you will!
-            br
-  .spacer
-  .row
-    .title-column
-      h2 FAQ
-    .content-column
-      #faq.small-12.columns
-        .drawer
-          h5
-            = t ".faq.q1.question"
-            span<
-              | (+)
-          p = t ".faq.q1.answer"
-        .drawer
-          h5
-            = t ".faq.q2.question"
-            span<
-              | (+)
-          p = t ".faq.q2.answer"
-        .drawer
-          h5
-            = t ".faq.q3.question"
-            span<
-              | (+)
-          p = t ".faq.q3.answer"
-  .spacer
-  .row
-    .small-12.columns
-      h2 Want to be involved?
-      p.subtitle Sign up for our newsletter to get updates about events, our work and applications!
-  .row
-    .small-8.small-centered.columns
-      = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
-  .spacer
-  .spacer-small
+= render "header"
+
+section.static-page-hero.student-apply-hero
+  .container
+    h1.static-page-title.marginBot-xl
+      = t ".headline"
+    p.static-page-subtitle.light
+      = t ".subtitle"
+
+  div.page-nav
+    .container
+      ul
+        li Application Process
+        li Decision Criteria
+        li FAQs
+
+section.application-process-section
+  .container
+    h2.static-page-header.marginBot-xxl Developer Application Process
+    .student-timeline
+      .timeline-row.row--active
+        .num-col
+          .timeline-num.num--active 01
+          .timeline-num.num--default 01
+        .text-col
+          .timeline-row-title Infosessions
+          .timeline-row-date Aug 29
+          .timeline-row-description
+            | Come out and talk to us to learn more about Blueprint at one of our infosessions. They will be hosted at the HP Auditorium in Soda Hall starting at 7 PM on both Monday August 29th and Wednesday August 31st.
+          .timeline-row-btn.marginTopBot-lg
+            button.bp-btn Infosession #1
+
+      .timeline-row.row--active
+        .num-col
+          .timeline-num.num--active 02
+          .timeline-num.num--default 02
+        .text-col
+          .timeline-row-title Applications Due
+          .timeline-row-date Sept 4
+          .timeline-row-description
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+
+      .timeline-row.row--active
+        .num-col
+          .timeline-num.num--active 03
+          .timeline-num.num--default 03
+        .text-col
+          .timeline-row-title Blueprint Games
+          .timeline-row-date Sept 9
+          .timeline-row-description
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+
+      .timeline-row.row--active
+        .num-col
+          .timeline-num.num--active 04
+          .timeline-num.num--default 04
+        .text-col
+          .timeline-row-title Interviews
+          .timeline-row-date Sept 12
+          .timeline-row-description
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+
+section.application-decision-criteria-section
+  .container
+    h2.static-page-header.marginBot-lg Decision Criteria
+    p.static-page-desc.marginBot-xxl = t ".decision_criteria.description"
+
+    ul.decision-criteria-list-container.marginBot-lg
+      li.decision-criteria-item
+        h3 Passion
+        p Do you demonstrate a genuine passion for social good?
+      li.decision-criteria-item
+        h3 Skill
+        p Do you have the necessary skills to productively contribute to the mission?
+      li.decision-criteria-item
+        h3 Experience
+        p Do you have relevant work experience? Volunteering experience?
+      li.decision-criteria-item
+        h3 Attitude
+        p Do you demonstrate positive, hard-working attitude?
+      li.decision-criteria-item
+        h3 Teamwork
+        p Do you display the ability to work well in a team?
+      li.decision-criteria-item
+        h3 Culture
+        p Will you get along well with the rest of Blueprint? We’re sure you will!
+
+section.application-faqs-section
+  .container
+    h2.static-page-header.marginBot-lg Frequently Asked Questions
+    h3 = t ".faq.q1.question"
+    p = t ".faq.q1.answer"
+    h3 = t ".faq.q2.question"
+    p = t ".faq.q2.answer"
+    h3 = t ".faq.q3.question"
+    p = t ".faq.q3.answer"
+
+
+
+/ .students-banner
+/   .banner-inner
+/     h1.title = t ".headline"
+/     p.subtitle = t ".subtitle"
+/ .white-bg
+/   .spacer
+/   - if @settings.student_app_open
+/     .row
+/       .small-12.medium-9.columns
+/         p.hook = t ".hook"
+/       .apply-button.small-12.medium-3.columns
+/         = link_to "Apply Student Developer", new_student_application_path, class: "button"
+/   - if @settings.external_app_open
+/     .row
+/       .small-12.medium-9.columns
+/         p.hook = t ".hook"
+/       .apply-button.small-12.medium-3.columns
+/         = link_to "Apply External Team", new_external_application_path, class: "button"
+/   - if !@settings.student_app_open && !@settings.external_app_open
+/     .row
+/       .small-12.medium-11.columns.small-centered
+/         p.center = t ".hook"
+/     .row
+/       .small-12.medium-8.columns.small-centered
+/         .applications-closed
+/           p.center = t ".applications_closed"
+/           = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
+/   .spacer
+/ .gray-bg
+/   .spacer
+/   .row
+/     .title-column
+/       h2 Developer Application Process
+/     .content-column
+/       .small-12.columns
+/         ul.timeline-vertical
+/           li.work.timeline-row
+/             .relative
+/               h5.title Infosessions
+/               span.date/
+/               h5 Jan 9
+/               span.circle
+/             .timeline-content
+/               p = t ".application_timeline.information"
+/           li.work.timeline-row
+/             .relative
+/               h5.title Applications Due
+/               span.date/
+/               h5 Jan 20
+/               span.circle
+/             .timeline-content
+/               p = t ".application_timeline.submission"
+/           li.work.timeline-row
+/             .relative
+/               h5.title Interviews
+/               span.date/
+/               h5 Jan 27
+/               h5 Jan 28
+/               span.circle
+/             .timeline-content
+/               p = t ".application_timeline.final_decisions"
+/       .small-12.columns.decision-criteria
+/         .spacer-small
+/         h4.title Decision Criteria
+/         .spacer-small
+/         p = t ".decision_criteria.description"
+/         .spacer-small
+/         ul
+/           li
+/             strong Passion
+/             p This is the single most important criteria. Do you demonstrate a genuine passion for social good?
+/             br
+/           li
+/             strong Skill
+/             p Do you have the necessary skills to productively contribute to the mission?
+/             br
+/           li
+/             strong Experience
+/             p Do you have relevant work experience? Volunteering experience?
+/             br
+/           li
+/             strong Attitude
+/             p Do you demonstrate positive, hard-working attitude?
+/             br
+/           li
+/             strong Teamwork
+/             p Do you display the ability to work well in a team?
+/             br
+/           li
+/             strong Culture
+/             p Will you get along well with the rest of Blueprint? We’re sure you will!
+/             br
+/   .spacer
+/   .row
+/     .title-column
+/       h2 FAQ
+/     .content-column
+/       #faq.small-12.columns
+/         .drawer
+/           h5
+/             = t ".faq.q1.question"
+/             span<
+/               | (+)
+/           p = t ".faq.q1.answer"
+/         .drawer
+/           h5
+/             = t ".faq.q2.question"
+/             span<
+/               | (+)
+/           p = t ".faq.q2.answer"
+/         .drawer
+/           h5
+/             = t ".faq.q3.question"
+/             span<
+/               | (+)
+/           p = t ".faq.q3.answer"
+/   .spacer
+/   .row
+/     .small-12.columns
+/       h2 Want to be involved?
+/       p.subtitle Sign up for our newsletter to get updates about events, our work and applications!
+/   .row
+/     .small-8.small-centered.columns
+/       = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
+/   .spacer
+/   .spacer-small

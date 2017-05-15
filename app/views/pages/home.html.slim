@@ -1,13 +1,4 @@
-nav.bp-nav.nav-white.home-nav
-  .container
-    .logo-container
-      a href="/"
-        .logo
-        | Blueprint
-    ul.link-container
-      li.link-1 About
-      li.link-2 Students
-      li.link-3 Nonprofits
+= render "header"
 
 section.home-section
   .pattern: object id="pattern" data=image_path("home/pattern.svg") type="image/svg+xml"
@@ -22,7 +13,7 @@ section.home-section
 
 section.about-section
   .container
-    h2.homepage-header About Us
+    h2.static-page-header.marginBot-lg About Us
     h3.homepage-mission-statement
       = t ".what_we_do"
     = link_to about_path, class: "homepage-link"
@@ -31,8 +22,8 @@ section.about-section
 
 section.projects-section
   .container
-    h2.homepage-header Our Projects
-    p.homepage-desc.marginBot-xl
+    h2.static-page-header.marginBot-lg Our Projects
+    p.static-page-desc.marginBot-xl
       = t ".our_projects"
     = link_to projects_path, class: "homepage-link marginBot-xl"
       | View All Projects
@@ -54,11 +45,11 @@ section.projects-section
 
 section.involve-section
   .container
-    h2.homepage-header Get Involved
+    h2.static-page-header.marginBot-lg Get Involved
     .involve-container.students-involve
       .text.marginRight-xl
         h4 Berkeley Students
-        p.homepage-desc.marginBot-lg
+        p.static-page-desc.marginBot-lg
           | Applications are now open! For more information, come to our infosessions on August 29 and 31. Good luck!
         a.homepage-link
           | See More and Apply
@@ -71,20 +62,20 @@ section.involve-section
         img src=image_url("home/group_photo.jpg") alt=""/
       .text.marginLeft-xl
         h4 Nonprofit Organizations
-        p.homepage-desc.marginBot-lg
+        p.static-page-desc.marginBot-lg
           | If you’re a nonprofit organization with a project in mind, we encourage you to apply! We accept NPO applications every June.
         a.homepage-link
           | See More
           span.fa.fa-angle-right
 
     h4 Other Organizations
-    p.homepage-desc If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
+    p.static-page-desc If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
 
 section.contact-section
   .container
-    h2.homepage-header Contact Us
+    h2.static-page-header.marginBot-lg Contact Us
     .contact-items
-      h3.homepage-desc
+      h3.static-page-desc
         | Couldn’t find what you needed? We’re easily reached via email or social media.
       .contact-btns
         button.bp-btn Email Us

@@ -1,49 +1,62 @@
-header.navigation role="banner"
-  .navigation-wrapper
-    = link_to root_path, class: "logo" do
-      = image_tag "paw.png"
-    a#js-mobile-menu.navigation-menu-button href="javascript:void(0)"  MENU
-    nav role="navigation"
-      ul#js-navigation-menu.navigation-menu.show
-        - if current_admin
-          li.nav-link.more
-            a href="javascript:void(0)" Admin
-            ul.submenu
-              - if can? :read, NonprofitApplication
-                li
-                  = link_to "NPO Applications", admin_nonprofit_applications_path
-              - if can? :read, StudentApplication
-                li
-                  = link_to "Student Applications", admin_student_applications_path
-                li
-                  = link_to "Compare Applications", new_admin_comparison_path
-              - if can? :read, ExternalApplication
-                li
-                  = link_to "External Applications", admin_external_applications_path
-              - if can? :read, Semester
-                li
-                  = link_to "Semesters", admin_semesters_path
-              - if can? :read, Settings
-                li
-                  = link_to "Settings", admin_settings_path
-              - if can? :read, Admins
-                li
-                  = link_to "Admin Users", admin_admins_path
-        li.nav-link
-          = link_to "About", about_path, class: "header-tab"
-        li.nav-link
-          = link_to "Projects", projects_path, class: "header-tab"
-        li.nav-link
-          = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "header-tab"
-        li.nav-link
-          = link_to "Contact", new_contact_form_path, class: "header-tab"
-        - if current_nonprofit
-          li.nav-link
-            = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
-        - if current_user
-          li.nav-link
-            = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
-        - if current_nonprofit
-          = link_to "Apply", nonprofit_applications_path, class: "apply-button"
-        - else
-          = link_to "Apply", apply_path, class: "apply-button"
+nav.bp-nav.nav-white.home-nav
+  .container
+    .logo-container
+      a href="/"
+        .logo
+        | Blueprint
+    ul.link-container
+      li.link-1
+        = link_to "About", about_path
+      li.link-2
+        = link_to "Students", students_apply_path
+      li.link-3 Nonprofits
+
+/ header.navigation role="banner"
+/   .navigation-wrapper
+/     = link_to root_path, class: "logo" do
+/       = image_tag "paw.png"
+/     a#js-mobile-menu.navigation-menu-button href="javascript:void(0)"  MENU
+/     nav role="navigation"
+/       ul#js-navigation-menu.navigation-menu.show
+/         - if current_admin
+/           li.nav-link.more
+/             a href="javascript:void(0)" Admin
+/             ul.submenu
+/               - if can? :read, NonprofitApplication
+/                 li
+/                   = link_to "NPO Applications", admin_nonprofit_applications_path
+/               - if can? :read, StudentApplication
+/                 li
+/                   = link_to "Student Applications", admin_student_applications_path
+/                 li
+/                   = link_to "Compare Applications", new_admin_comparison_path
+/               - if can? :read, ExternalApplication
+/                 li
+/                   = link_to "External Applications", admin_external_applications_path
+/               - if can? :read, Semester
+/                 li
+/                   = link_to "Semesters", admin_semesters_path
+/               - if can? :read, Settings
+/                 li
+/                   = link_to "Settings", admin_settings_path
+/               - if can? :read, Admins
+/                 li
+/                   = link_to "Admin Users", admin_admins_path
+/         li.nav-link
+/           = link_to "About", about_path, class: "header-tab"
+/         li.nav-link
+/           = link_to "Projects", projects_path, class: "header-tab"
+/         li.nav-link
+/           = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "header-tab"
+/         li.nav-link
+/           = link_to "Contact", new_contact_form_path, class: "header-tab"
+/         - if current_nonprofit
+/           li.nav-link
+/             = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
+/         - if current_user
+/           li.nav-link
+/             = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
+/         - if current_nonprofit
+/           = link_to "Apply", nonprofit_applications_path, class: "apply-button"
+/         - else
+/           = link_to "Apply", apply_path, class: "apply-button"

@@ -1,9 +1,49 @@
+.static-page-hero {
+  background: $bp-blue;
+  display: flex;
+  flex-flow: row wrap;
+  height: 90vh;
+  max-height: 650px;
+  overflow: hidden;
+  padding: 50px 0 0;
+  position: relative;
+
+  .container {
+    align-self: center;
+  }
+
+  .static-page-subtitle {
+    max-width: 600px;
+  }
+
+  .page-nav {
+    align-self: flex-end;
+    background: $white-10;
+    width: 100%;
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    li {
+      color: $white;
+      font-family: $bptext-font;
+      font-size: 19px;
+      font-weight: 500;
+      margin: 0 15px;
+    }
+  }
+}
+
 .static-page-title {
   color: $white;
   font-family: $bptext-font;
   font-size: 42px;
   font-weight: 600;
-  text-shadow: 3px 3px $dark-gray-20;
+  text-shadow: 3px 3px $dark-gray-10;
 }
 
 .static-page-subtitle {
@@ -20,5 +60,10 @@
   font-family: $bptext-font;
   font-size: 36px;
   font-weight: 600;
+}
+
+.static-page-desc {
+  color: $dark-gray-60;
+  font-size: 21px;
 }
 

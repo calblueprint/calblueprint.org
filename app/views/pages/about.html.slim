@@ -59,9 +59,15 @@ section.about-page-team-section
               a href="javascript:void(0)"
                 .img-container
                   = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || asset_path('paw.png')}';"
+                  - if member[:linkedin] || member[:website]
+                    .member-links
+                      - if member[:linkedin]
+                        a href="https://linkedin.com/in/#{member[:linkedin]}" linkedin
+                      - if member[:website]
+                        a href="http://#{member[:website]}" website
                 figcaption
                   .name
-                    b = "#{member[:first_name]} #{member[:last_name]}"
+                    = "#{member[:first_name]} #{member[:last_name]}"
                   .position = member[:role]
         - (0...5 - t("members").length % 5).each do |member|
           li.about-page-member-item

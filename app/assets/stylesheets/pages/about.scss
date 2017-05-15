@@ -129,6 +129,11 @@
   margin-bottom: 30px;
   width: 17%;
 
+  &:hover .member-links {
+    opacity: 1;
+    visibility: visible;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -139,7 +144,19 @@
     border-radius: 3px;
     height: 160px;
     margin-bottom: 8px;
+    position: relative;
     overflow: hidden;
+    width: 100%;
+  }
+
+  .member-links {
+    background: $white-80;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 150ms;
+    visibility: hidden;
     width: 100%;
   }
 

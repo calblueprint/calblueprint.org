@@ -42,3 +42,10 @@
     }
   }
 }
+
+.bp-btn {
+  &.btn-lg {
+    font-size: 19px;
+    padding: 10px 15px;
+  }
+}

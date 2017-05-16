@@ -2,15 +2,15 @@
 
 .npo-login-container.container
   h1 Sign Up
-  p.subtitle Let's get started.
+  h2.subtitle Let's get started.
   = render "form_errors", obj: resource
   = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     .form-inputs
-      = f.input :organization_name, autofocus: true, placeholder: "Organization Name"
-      = f.input :email, placeholder: "Email"
-      = f.input :password, placeholder: "Password"
-      = f.input :password_confirmation, placeholder: "Confirm Password"
+      = f.input :organization_name, autofocus: true, placeholder: "My Awesome Org"
+      = f.input :email, placeholder: "example@gmail.com"
+      = f.input :password, placeholder: "********"
+      = f.input :password_confirmation, placeholder: "********"
     = render "nonprofits/shared/links"
     .spacer-small
     .form-actions
-      = f.button :submit, "Sign Up", class: "login-button"
+      = f.button :submit, "Sign Up", class: "bp-btn marginTop-lg login-button"

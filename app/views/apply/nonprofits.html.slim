@@ -6,6 +6,20 @@ section.static-page-hero.npo-apply-hero
       = t ".headline"
     p.static-page-subtitle.light
       = t ".subtitle"
+    .static-page-hero-btn-container.marginTop-xl
+      - if @settings.npo_app_open
+        - if current_nonprofit
+          = link_to "View Dashboard", nonprofit_applications_path, class: "bp-btn btn-white btn-lg"
+        - else
+          = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white bn-lg"
+      - else
+        - if @settings.cs169_app_open
+          p.hero-desc = raw t ".cs169_hook"
+          = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "bp-btn btn-white bn-lg"
+        - else
+          .applications-closed
+            p.hero-desc = t ".applications_closed"
+            = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
 
   div.page-nav
     .container
@@ -91,131 +105,7 @@ section.application-decision-criteria-section
         p Is there evidence that your project will have an impact?
 
 
-.nonprofits-banner
-  .banner-inner
-    h1.h0.title = t ".headline"
-.white-bg
   .spacer
-  - if @settings.npo_app_open
-    .row
-      .small-12.medium-9.columns
-        p.hook = raw t ".subtitle"
-      .apply-button.small-12.medium-3.columns
-        = link_to "Apply as a Nonprofit", new_nonprofit_application_path, class: "button"
-  - else
-    - if @settings.cs169_app_open
-      .row
-        .small-12.medium-9.columns
-          p.hook = raw t ".cs169_hook"
-        .apply-button.small-12.medium-3.columns
-          - if @settings.cs169_app_open
-            = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "button calgold-button"
-    - else
-      .row
-        .small-12.medium-11.columns.small-centered
-          p.center = raw t ".hook"
-    .spacer-small
-    .row
-      .small-12.medium-9.columns.small-centered
-        .applications-closed
-          p.center = t ".applications_closed"
-          = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
-  .spacer
-.gray-bg
-  ul#apply_nav.submenu
-    li data-target="services" Our Services
-    li data-target="process" Application Process
-    li data-target="timeline" Project Timeline
-    li data-target="previous_work" Previous Work
-    li data-target="faq" FAQ
-  .spacer
-  .row
-    .title-column
-      h2#services.title
-        | Our
-        br/
-        | Services
-    .content-column
-      .row
-        .small-12.columns
-          p
-            strong Web Application Development
-            br/
-            = t ".services.web_application_development"
-      .spacer-small
-      .row
-        .small-12.columns
-          p
-            strong Mobile Application Development
-            br/
-            = t ".services.mobile_application_development"
-  .spacer
-  .row
-    .title-column
-      h2#process Application Process
-    .content-column
-      .row
-        .small-12.columns
-          ul.timeline-vertical
-            li.work.timeline-row
-              .relative
-                h5.title Application Open
-                span.date/
-                h5 Jun 21
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.submission"
-            li.work.timeline-row
-              .relative
-                h5.title Submission Deadline
-                span.date/
-                h5 Jul 23
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.first_round"
-            li.work.timeline-row
-              .relative
-                h5.title Organization Interviews
-                span.date/
-                h5 Jul 30
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.interviews"
-            li.work.timeline-row
-              .relative
-                h5.title Final Decisions
-                span.date/
-                h5 Aug 16
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.final_decisions"
-      .row
-        .small-12.columns.decision-criteria
-          .spacer-small
-          h4.title Decision Criteria
-          .spacer-small
-          p = t ".decision_criteria.description"
-          .spacer-small
-          ul
-            li
-              strong Impact
-              p How much will your project impact the community?
-              br
-            li
-              strong Necessity
-              p How vital is your project to your non-profit organization?
-              br
-            li
-              strong Scope
-              p Is your project achievable within the alloted timeline?
-              br
-            li
-              strong Technical Fit
-              p Does your project use the capabilities of technology? For example, an application to manage a classroom is more interesting than a website redesign.
-              br
-            li
-              strong Credibility
-              p Is there evidence that your project will have an impact?
   .spacer
   .row
     .small-12.columns

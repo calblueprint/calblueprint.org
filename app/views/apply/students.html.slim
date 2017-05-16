@@ -7,8 +7,15 @@ section.static-page-hero.student-apply-hero
       = t ".headline"
     p.static-page-subtitle.light.marginBot-lg
       = t ".subtitle"
-    .static-page-hero-btn-container
-      = link_to "Click to Apply", new_student_application_path, class: "bp-btn btn-white"
+    .static-page-hero-btn-container.marginTop-xl
+      - if @settings.student_app_open
+        = link_to "Apply Student Developer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
+      - if @settings.external_app_open
+        = link_to "Apply External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs"
+      - if !@settings.student_app_open && !@settings.external_app_open
+        p.hero-desc = t ".applications_closed"
+        = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
+
 
   div.page-nav
     .container
@@ -103,27 +110,27 @@ section.application-faqs-section
 /     p.subtitle = t ".subtitle"
 / .white-bg
 /   .spacer
-/   - if @settings.student_app_open
-/     .row
-/       .small-12.medium-9.columns
-/         p.hook = t ".hook"
-/       .apply-button.small-12.medium-3.columns
-/         = link_to "Apply Student Developer", new_student_application_path, class: "button"
-/   - if @settings.external_app_open
-/     .row
-/       .small-12.medium-9.columns
-/         p.hook = t ".hook"
-/       .apply-button.small-12.medium-3.columns
-/         = link_to "Apply External Team", new_external_application_path, class: "button"
-/   - if !@settings.student_app_open && !@settings.external_app_open
-/     .row
-/       .small-12.medium-11.columns.small-centered
-/         p.center = t ".hook"
-/     .row
-/       .small-12.medium-8.columns.small-centered
-/         .applications-closed
-/           p.center = t ".applications_closed"
-/           = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
+  - if @settings.student_app_open
+    .row
+      .small-12.medium-9.columns
+        p.hook = t ".hook"
+      .apply-button.small-12.medium-3.columns
+        = link_to "Apply Student Developer", new_student_application_path, class: "button"
+  - if @settings.external_app_open
+    .row
+      .small-12.medium-9.columns
+        p.hook = t ".hook"
+      .apply-button.small-12.medium-3.columns
+        = link_to "Apply External Team", new_external_application_path, class: "button"
+  - if !@settings.student_app_open && !@settings.external_app_open
+    .row
+      .small-12.medium-11.columns.small-centered
+        p.center = t ".hook"
+    .row
+      .small-12.medium-8.columns.small-centered
+        .applications-closed
+          p.center = t ".applications_closed"
+          = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
 /   .spacer
 / .gray-bg
 /   .spacer

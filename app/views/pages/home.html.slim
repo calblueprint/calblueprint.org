@@ -9,7 +9,7 @@ section.home-section
       = t ".subtitle"
     div.main-button-container
       button.bp-btn.btn-white Learn More
-      button.bp-btn.btn-white--clear Apply
+      = link_to "Apply", apply_path, class: "bp-btn btn-white--clear"
 
 section.about-section
   .container
@@ -51,7 +51,7 @@ section.involve-section
         h4 Berkeley Students
         p.static-page-desc.marginBot-lg
           | Applications are now open! For more information, come to our infosessions on August 29 and 31. Good luck!
-        a.homepage-link
+        = link_to students_apply_path, class: "homepage-link"
           | See More and Apply
           span.fa.fa-angle-right
       .image.img-container.marginLeftRight-xl
@@ -64,7 +64,7 @@ section.involve-section
         h4 Nonprofit Organizations
         p.static-page-desc.marginBot-lg
           | If you’re a nonprofit organization with a project in mind, we encourage you to apply! We accept NPO applications every June.
-        a.homepage-link
+        = link_to nonprofits_apply_path, class: "homepage-link"
           | See More
           span.fa.fa-angle-right
 
@@ -78,8 +78,9 @@ section.contact-section
       h3.static-page-desc
         | Couldn’t find what you needed? We’re easily reached via email or social media.
       .contact-btns
-        button.bp-btn Email Us
-        button.bp-btn.btn-white Facebook Page
+        = link_to "Email Us", new_contact_form_path, class: "bp-btn marginRight-xs"
+        a.bp-btn.btn-white href="https://facebook.com/calblueprint" target="_blank"
+          | Facebook Page
 
 javascript:
   document.getElementById("pattern").addEventListener("load", function() {

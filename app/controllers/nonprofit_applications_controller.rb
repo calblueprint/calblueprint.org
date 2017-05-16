@@ -43,6 +43,14 @@ class NonprofitApplicationsController < ApplicationController
 
   def index
     @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
+
+    @num_submitted = 0
+    @nonprofit_applications.each do |na|
+      if na.submitted?
+        @num_submitted += 1
+      end
+    end
+
   end
 
   def revise

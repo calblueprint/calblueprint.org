@@ -3,14 +3,25 @@
   border: $white;
   border-radius: 2px;
   color: $white;
+  cursor: pointer;
   display: inline-block;
   font-family: $bptext-font;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.3px;
+  line-height: inherit;
+  opacity: 0.9;
   padding: 8px 12px;
   text-decoration: none;
   vertical-align: middle;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
 
   &:disabled {
     cursor: not-allowed;

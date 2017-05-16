@@ -1,4 +1,4 @@
-= render "header"
+= render "header_light"
 
 section.static-page-hero.npo-apply-hero
   .container
@@ -39,7 +39,7 @@ section.application-process-section
           .timeline-row-title Application Open
           .timeline-row-date June 21
           .timeline-row-description
-            | Written application portal open
+            = t ".application_timeline.submission"
 
       .timeline-row
         .num-col
@@ -48,25 +48,25 @@ section.application-process-section
           .timeline-row-title Submission Deadline
           .timeline-row-date Sept 4
           .timeline-row-description
-            | Applications are reviewed, feedback is given, then preliminary decisions are made.
+            = t ".application_timeline.first_round"
 
       .timeline-row
         .num-col
           .timeline-num 03
         .text-col
-          .timeline-row-title Blueprint Games
+          .timeline-row-title Interviews
           .timeline-row-date Sept 9
           .timeline-row-description
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+            = t ".application_timeline.interviews"
 
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
-          .timeline-row-title Interviews
+          .timeline-row-title Final Decisions
           .timeline-row-date Sept 12
           .timeline-row-description
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+            = t ".application_timeline.final_decisions"
 
 section.application-decision-criteria-section
   .container

@@ -1,64 +1,51 @@
-.gray-bg
-  .banner.apply-banner
-    .darken
-      .spacer
-      .banner-text
-        h1 #{current_user.organization_name},
-        p.subtitle = t(".subtitle")
-      .spacer
-  .apply-info
-    .spacer-small
-    .row
-      .apply-info-section
-        .calendar-icon
-        p.apply-info-section-text
-          | CS 169 Apps due:
-          br
-          | August 21st, 2016, 11:59PM
-      .apply-info-section
-        .problem-icon
-        p.apply-info-section-text
-          = link_to "Contact us", new_contact_form_path
-          br
-          | if you have any questions.
+= render "header"
+
+.npo-application-edit-container.container
+  h1.npo-application-header.marginBot-md Nonprofit Application
+  p.static-page-desc
+    | Hi #{current_user.organization_name}!
+    =< t(".subtitle")
+    | The CS169 App is due on
+    strong.apply-page-due< August 21st, 2016, 11:59pm.
+    =<> link_to "Contact us", new_contact_form_path
+    | if you have any questions.
 
   = render "form_errors", obj: @nonprofit_application
   = simple_form_for @nonprofit_application, url: nonprofit_application_submit_path(@nonprofit_application.id), method: 'post' do |f|
-    .row
-      .spacer
-      .medium-9.medium-centered.columns.centered.apply-form
-        - if !@settings.cs169_app_open
-          label.error-text CS169 pool is closed.
-        - elsif !@settings.npo_app_open
-          label.error-text Blueprint application is closed.
-        = f.input :cs169_pool,
-          input_html: { checked: @default_check_cs169, disabled: @disable_cs169_choice },
-          label_html: { class: @disable_cs169_choice ? "disabled-text" : "" }
-        .js-cs169-disclaimer.error-text
-          label = raw t ".cs169_disclaimer"
-          .spacer-small
-        = f.input :client_status, collection: NonprofitApplication::CLIENT_STATUSES, as: :radio_buttons
-        = f.input :purpose
-        = f.input :history
-        .date-dropdown
-          = f.input :date_established, start_year: 1900, end_year: Date.today.year
-        .new-line
-        = f.input :legal
-        = f.input :short_summary
-        = f.input :goals
-        = f.input :key_features
-        = f.input :devices, collection: NonprofitApplication::POSSIBLE_DEVICES, as: :check_boxes
-        = f.input :target_audience
-        = f.input :why
-        = f.input :technical_requirements
-    .row
-      .center
-        = f.button :submit, 'Submit'
-        .edit-spacer
-        button#save_button data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}" Save
-  .row
-    .spacer-small
-    small
+    - if !@settings.cs169_app_open
+      label.error-text CS169 pool is closed.
+    - elsif !@settings.npo_app_open
+      label.error-text Blueprint application is closed.
+
+    = f.input :cs169_pool,
+      input_html: { checked: @default_check_cs169, disabled: @disable_cs169_choice },
+      label_html: { class: @disable_cs169_choice ? "disabled-text" : "" },
+      as: :radio_buttons,
+      checked: false
+
+    .js-cs169-disclaimer.error-text
+      label = raw t ".cs169_disclaimer"
+
+    = f.input :client_status, collection: NonprofitApplication::CLIENT_STATUSES, as: :radio_buttons
+    = f.input :purpose
+    = f.input :history
+    .date-dropdown
+      = f.input :date_established, start_year: 1900, end_year: Date.today.year
+    .new-line
+    = f.input :legal, as: :radio_buttons
+    = f.input :short_summary
+    = f.input :goals
+    = f.input :key_features
+    = f.input :devices, collection: NonprofitApplication::POSSIBLE_DEVICES, as: :check_boxes
+    = f.input :target_audience
+    = f.input :why
+    = f.input :technical_requirements
+
+    .form-btn-container
+      button#save_button.bp-btn.btn-dark data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}"
+        | Save
+      = f.button :submit, 'Submit Application', class: "bp-btn marginLeft-xs"
+
+    small.marginTop-xl
       | Last Updated
-      span#last_updated   #{@nonprofit_application.updated_at.localtime.strftime("%I:%M:%S %B %d, %Y")}
-  .spacer
+      span#last_updated< #{@nonprofit_application.updated_at.localtime.strftime("%I:%M on %B %d, %Y")}

@@ -1,4 +1,4 @@
-nav.bp-nav.nav-white.home-nav
+nav.bp-nav
   .container
     .logo-container
       a href="/"
@@ -11,6 +11,12 @@ nav.bp-nav.nav-white.home-nav
         = link_to "Students", students_apply_path
       li.link-3
         = link_to "Nonprofits", nonprofits_apply_path
+      - if current_nonprofit
+        li.nav-link
+          = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
+      - if current_user
+        li.nav-link
+          = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
 
 / header.navigation role="banner"
 /   .navigation-wrapper

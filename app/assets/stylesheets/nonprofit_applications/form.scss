@@ -1,7 +1,31 @@
-// scss-lint:disable SelectorFormat
-.new_nonprofit_application {
-  .input {
-    margin-bottom: 2em;
+.npo-application-header {
+  font-family: $bptext-font;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.npo-application-subheader {
+  font-family: $bptext-font;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.npo-application-home-container {
+  max-width: 800px;
+  padding-top: 60px;
+
+  .static-page-desc {
+    font-size: 18px;
   }
 }
-// scss-lint:enable SelectorFormat
+
+.npo-application-edit-container {
+  max-width: 800px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  small {
+    display: inline-block;
+    font-size: 14px;
+  }
+}

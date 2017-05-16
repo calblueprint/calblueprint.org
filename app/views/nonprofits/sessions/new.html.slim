@@ -1,24 +1,15 @@
-.gray-bg
-  .spacer
-  .banner
-    .banner-text
-      h1
-        | Log In
-      p.subtitle
-        |  Welcome Back. 
-  .spacer-small
-  .row
-    .medium-6.medium-centered.columns.center
-      = render "form_errors", obj: resource
-      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        .form-inputs
-          = f.input_field :email, required: false, autofocus: true
-          = f.input_field :password, required: false
-          = f.input :remember_me, label_html: { class: "remember-me" }, as: :boolean if devise_mapping.rememberable?
-        = render "nonprofits/shared/links"
-        .spacer-small
-        .form-actions
-          = f.button :submit, "Log in", class: "login-button"
-      .gear-img
-  .spacer
-  .spacer
+= render "header"
+
+.npo-login-container.container
+    h1 Log In
+    p.subtitle Welcome Back.
+    = render "form_errors", obj: resource
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-inputs
+        = f.input :email, required: false, autofocus: true
+        = f.input :password, required: false
+        = f.input :remember_me, label_html: { class: "remember-me" }, as: :boolean if devise_mapping.rememberable?
+      = render "nonprofits/shared/links"
+      .spacer-small
+      .form-actions
+        = f.button :submit, "Log in", class: "bp-btn login-button"

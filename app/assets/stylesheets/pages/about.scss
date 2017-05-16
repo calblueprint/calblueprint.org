@@ -5,9 +5,19 @@
   }
 }
 
-.about-page-hero {
-
+.pages-about {
+  .bp-nav {
+    @extend .static-page-nav;
+  }
 }
+
+// .about-page-hero {
+//   background-image: image_url("about/map.png");
+//   background-repeat: no-repeat;
+//   background-position: right;
+//   background-size: contain;
+//   background-blend-mode: screen;
+// }
 
 .about-page-mission-section {
   background: #F4F4F4;

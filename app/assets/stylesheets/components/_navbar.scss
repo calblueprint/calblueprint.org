@@ -11,7 +11,6 @@ nav.bp-nav {
   .logo-container {
     font-family: "Poppins";
     font-size: 20px;
-    opacity: 0.8;
     transition: 100ms;
 
     a {
@@ -53,7 +52,6 @@ nav.bp-nav {
     li {
       color: $bp-blue-80;
       margin: 0 15px;
-      opacity: 0.8;
       transition: 100ms;
 
       &:hover {
@@ -90,5 +88,32 @@ nav.bp-nav.nav-white {
         color: $white;
       }
     }
+  }
+}
+
+.static-page-nav {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .logo-container {
+    animation: slideDown 400ms both;
+    animation-delay: 700ms;
+  }
+
+  .link-1 {
+    animation: slideDown 400ms both;
+    animation-delay: 800ms;
+  }
+
+  .link-2 {
+    animation: slideDown 400ms both;
+    animation-delay: 850ms;
+  }
+
+  .link-3 {
+    animation: slideDown 400ms both;
+    animation-delay: 900ms;
   }
 }

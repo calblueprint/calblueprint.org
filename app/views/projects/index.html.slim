@@ -1,30 +1,39 @@
-.projects-banner
-  .banner-inner
-    h1.h0.title = t ".title"
-.spacer
-h2 Current Projects
-.spacer
-.wrap
-  .project-cards
-    - t("projects.current_projects").each do |slug, project|
-      = link_to project_path(slug, :current => 'true') do
-        .project
-          h3.project__title = project[:title]
-          p.project__summary = project[:short_summary]
-          span.card-button Read More
-          .project__image style="background-image: url(#{project[:banner_image]})"
-.spacer
-h2 Past Results
-.spacer
-.wrap
-  .project-cards
-    - t("projects.past_projects").each do |slug, project|
-      = link_to project_path(slug, :current => 'false') do
-        .project
-          h3.project__title = project[:title]
-          p.project__summary = project[:short_summary]
-          span.card-button Read More
-          .project__image style="background-image: url(#{project[:banner_image]})"
+= render "header_light"
+
+section.static-page-hero
+  .container
+    h1.static-page-title.marginBot-xl
+      = t ".title"
+    p.static-page-subtitle.light
+      = t ".subtitle"
+    .static-page-hero-btn-container.marginTop-xl
+      a.bp-btn.btn-white.btn-lg href="https://github.com/calblueprint/" target="_blank"
+        | View our Github
+
+section.current-projects-section
+  .container
+    h2.static-page-header.marginBot-xxl Current Projects
+    .project-card-container
+      - t("projects.current_projects").each do |slug, project|
+        .project-card-column
+          = link_to project_path(slug, :current => 'true'), class: "project-card" do ||
+            .project-card--image style="background-image: url(#{project[:banner_image]})"
+            h3.project-card--title = project[:title]
+            p.project-card--summary = project[:short_summary]
+            .card-button Read More
+
+section.past-projects-section
+  .container
+    h2.static-page-header.marginBot-xxl Past Projects
+    .project-card-container
+      - t("projects.past_projects").each do |slug, project|
+        .project-card-column
+          = link_to project_path(slug, :current => 'false'), class: "project-card" do ||
+            .project-card--image style="background-image: url(#{project[:banner_image]})"
+            h3.project-card--title = project[:title]
+            p.project-card--summary = project[:short_summary]
+            .card-button Read More
+
 .spacer-small
 .gray-bg
   .spacer

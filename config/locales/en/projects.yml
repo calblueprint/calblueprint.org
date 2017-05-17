@@ -2,6 +2,7 @@ en:
   projects:
     index:
       title: Our Projects
+      subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
     current_projects:
       Roots of Success:
         title: Roots of Success
@@ -31,8 +32,7 @@ en:
         short_summary: >
           Re-Plate is a Berkeley nonprofit that aims to use technology to eliminate food
           waste and hunger in the community. They collect surplus food donations from
-          businesses and deliver the food to other nonprofits, homeless shelters, and
-          people in need.
+          businesses and deliver the food to homeless shelters and people in need.
         link: https://replate-staging.herokuapp.com/
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/replate_banner.png
         full_description: |
@@ -76,10 +76,9 @@ en:
       Data Science:
         title: UC Berkeley Data Science Education Program
         short_summary: >
-          Berkeley’s Data Science Education Program is a rising initiative at UC Berkeley that aims to
-          expand data science learning for undergraduate students. The program is uniquely designed for
-          students from non-technical backgrounds to be exposed to data science— course offerings are
-          connecting data science to ethics, cognitive neuroscience, public policy, and many other fields.
+          The Data Science Education Program is an initiative at UC Berkeley that aims to
+          expand data science learning for undergrads, and is designed for
+          students from non-technical backgrounds.
         link: https://docs.google.com/a/berkeley.edu/document/d/1SYRloAtMdLOtpLKUseexAkrF-9dF86A5dC5Y1121Ffs/edit?usp=sharing
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/data_science_banner.png
         full_description: |
@@ -101,7 +100,8 @@ en:
       Forte:
         title: Forte
         short_summary: >
-          Forte is a nonprofit that strives to make affordable music more accessible for young students.
+          Forte is a Berkeley nonprofit that strives to make music lessons more affordable for children from
+          underserved communities. They match K-12 students with college-age teachers, and offer over 12 instruments.
         link: http://forte-staging.herokuapp.com/
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/forte_banner.png
         full_description: |

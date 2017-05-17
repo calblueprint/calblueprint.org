@@ -9,6 +9,11 @@
     margin-bottom: 5px;
   }
 
+  .required-symbol {
+    color: $red;
+    font-size: 14px;
+  }
+
   .hint {
     color: $dark-gray-70;
     display: block;

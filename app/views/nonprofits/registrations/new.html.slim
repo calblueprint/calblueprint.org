@@ -6,8 +6,8 @@
   = render "form_errors", obj: resource
   = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     .form-inputs
-      = f.input :organization_name, autofocus: true, placeholder: "My Awesome Org"
-      = f.input :email, placeholder: "example@gmail.com"
+      = f.input :organization_name, autofocus: true, required: false, placeholder: "My Awesome Org"
+      = f.input :email, required: false, placeholder: "example@gmail.com"
       = f.input :password, placeholder: "********"
       = f.input :password_confirmation, placeholder: "********"
     = render "nonprofits/shared/links"

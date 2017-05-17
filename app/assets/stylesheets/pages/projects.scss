@@ -1,0 +1,68 @@
+.projects-index {
+  .bp-nav {
+    @extend .static-page-nav;
+  }
+}
+
+.current-projects-section {
+  background: $off-white;
+  padding: 50px 0;
+}
+
+.past-projects-section {
+  padding: 50px 0;
+}
+
+.project-card-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.project-card-column {
+  margin-bottom: 40px;
+  padding: 0 20px;
+  width: 33.333%;
+}
+
+.project-card {
+  display: flex;
+  height: 100%;
+  flex-flow: column wrap;
+  padding-bottom: 20px;
+  text-decoration: none;
+  transition: 200ms;
+  // width: 30%;
+
+  &:hover {
+    background: white;
+    box-shadow: 2px 2px 15px $dark-gray-10;
+    transform: translateY(-5px);
+  }
+
+  &--image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &--title {
+    color: initial;
+    font-family: $bptext-font;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 20px 20px;
+  }
+
+  &--summary {
+    color: $dark-gray-70;
+    margin: 0 20px 20px;
+  }
+
+  .card-button {
+    margin: 0 20px;
+    margin-top: auto;
+  }
+}

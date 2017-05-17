@@ -7,7 +7,7 @@ en:
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
-      # html: '<abbr title="required">*</abbr>'
+      html: '<span class="required-symbol" title="required">*</span>'
     error_notification:
       default_message: "Please review the problems below:"
     # Labels and hints examples
@@ -50,6 +50,8 @@ en:
     hints:
       nonprofit_application:
         cs169_pool: If you choose yes, your project will also be submitted to UC Berkeley's CS169 class. Students in the course will develop your requested application for their class project.
+        client_status: >
+          Please be sure to review <a target="_blank" href="https://sites.google.com/site/ucbsaas/faq/external-customer">these</a> guidelines to confirm if your project qualifies for CS169.
         devices: Check all that apply.
         short_summary: 255 characters max
 

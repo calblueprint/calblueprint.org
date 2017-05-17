@@ -9,22 +9,22 @@
 
   - else
     - if @num_submitted != 0
-      .marginBot-lg
+      .marginBot-xxl
         h2.npo-application-subheader Submitted Proposals
-        / - if @num_submitted == 0
-        /   p.static-page-desc You haven't submitted any proposals
-        / - else
         p.static-page-desc.marginBot-sm These are proposals that you've submitted. You can always edit your proposal by clicking below. We will review proposals and get back to you shortly!
         - @nonprofit_applications.each do |na|
           - if na.submitted?
             div
-              = link_to "Proposal submitted on #{na.submitted_at.localtime.strftime("%B %d, %Y")}", nonprofit_application_revise_path(nonprofit_application_id: na.id)
+              = link_to "Proposal submitted on #{na.submitted_at.localtime.strftime("%B %d, %Y at %I:%M")}", nonprofit_application_revise_path(nonprofit_application_id: na.id)
     .marginBot-lg
       h2.npo-application-subheader Draft Proposals
-      p.static-page-desc.marginBot-sm These are proposals that you've started, but haven't submitted yet.
-      - @nonprofit_applications.each do |na|
-        - if na.draft?
-          div
-            = link_to "Continue proposal last updated #{na.updated_at.localtime.strftime("%B %d, %Y")}", edit_nonprofit_application_path(id: na.id)
+      - if @num_draft == 0
+        p.static-page-desc You don't have any drafts.
+      - else
+        p.static-page-desc.marginBot-sm These are proposals that you've started, but haven't submitted yet.
+        - @nonprofit_applications.each do |na|
+          - if na.draft?
+            div
+              = link_to "Continue proposal last updated #{na.updated_at.localtime.strftime("%B %d, %Y at %I:%M")}", edit_nonprofit_application_path(id: na.id)
       div.marginTop-lg
         = link_to "Begin New Proposal", new_nonprofit_application_path

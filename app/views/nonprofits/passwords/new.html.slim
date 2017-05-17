@@ -1,21 +1,17 @@
-.spacer-small
-.banner
-  .banner-text
-    h1
-      | Forgot your Password?
-    p.subtitle
-      |  We'll help you out! 
-.spacer-small
-.row
-  .medium-6.medium-centered.columns.center
-    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-      = f.error_notification
-      .form-inputs
-        = f.input_field :email, required: true, autofocus: true
-      .form-actions
-        = f.button :submit, "Submit", class: "button full-width-button"
-    .spacer-small
-    = link_to "Log in", new_session_path(resource_name)
-    |  | 
-    = link_to "Create an account", new_registration_path(resource_name)
+= render "header"
+
+.npo-login-container.container
+  h1 Forgot your Password?
+  h2.subtitle.marginBot-xl We'll help you out!
+  = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = f.error_notification
+    .form-inputs
+      = f.input :email, required: true, autofocus: true, placeholder: "email@example.com"
+    .form-actions
+      = f.button :submit, "Submit", class: "bp-btn"
+
+  div.marginTop-xl
+    => link_to "Log in", new_session_path(resource_name)
+    | |
+    =< link_to "Create an account", new_registration_path(resource_name)
 .spacer

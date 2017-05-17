@@ -1,8 +1,8 @@
 = render "header"
 
 .npo-login-container.container
-  h1 Log In
-  h2.subtitle Welcome Back!
+  h1 Nonprofit Log In
+  h2.subtitle.marginBot-xl Welcome Back!
   = render "form_errors", obj: resource
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .form-inputs
@@ -10,6 +10,5 @@
       = f.input :password, required: false
       = f.input :remember_me, label_html: { class: "remember-me" }, as: :boolean if devise_mapping.rememberable?
     = render "nonprofits/shared/links"
-    .spacer-small
     .form-actions
       = f.button :submit, "Log in", class: "bp-btn login-button marginTop-lg"

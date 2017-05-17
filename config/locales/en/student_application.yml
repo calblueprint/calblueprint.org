@@ -30,11 +30,11 @@ en:
         projects: Please list and briefly describe a few personal projects.
         service: Please tell us about your past community service experience or describe a moment that shaped what social good means to you.
         applied_before: Have you applied to Blueprint before?
-        resume: Please attach your resume as a PDF.
+        resume: Resume
         available_for_bp_games: Will you be able to attend BP Games?
-        why_no_bp_games: Why are you unable to attend BP Games? It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
+        why_no_bp_games: Why are you unable to attend BP Games?
         available_for_retreat: Will you be able to attend Blueprint Retreat?
-        why_no_retreat: Why are you unable to attend the retreat? It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
+        why_no_retreat: Why are you unable to attend retreat?
 
     hints:
       student_application:
@@ -46,7 +46,9 @@ en:
         projects: We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. Fewer than 250 words, please!
         service: You can use this space to list your previous service experience. However, you can also choose to describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!
         available_for_bp_games: 7-9pm on January 30
+        why_no_bp_games: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
         available_for_retreat: Evening of February 3 - Morning of February 5
+        why_no_retreat: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
 
     placeholders:
       student_application:

@@ -1,5 +1,6 @@
 - if controller_name != 'sessions'
-  = link_to "Already have an account? Sign in", new_session_path(resource_name)
+  | Already have an account?
+  =< link_to "Log in here", new_session_path(resource_name)
   br
 - if devise_mapping.registerable? && controller_name != 'registrations'
   = link_to "Create an account", new_registration_path(resource_name)

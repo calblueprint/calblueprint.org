@@ -4,6 +4,7 @@
   .control-label {
     color: $dark-gray;
     display: block;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 5px;
   }
@@ -17,8 +18,9 @@
 
   .error {
     color: $red;
-    display: inline-block;
+    display: block;
     font-size: 14px;
+    font-weight: 500;
     margin-top: 5px;
   }
 
@@ -35,6 +37,7 @@
 
     &:focus {
       border-color: $bp-blue;
+      box-shadow: 0 0 4px $bp-blue-50;
       outline: none;
     }
   }

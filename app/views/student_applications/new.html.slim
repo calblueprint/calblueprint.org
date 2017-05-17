@@ -45,51 +45,47 @@
         = t '.available_for_gm'
 
       div
-        = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn"
+        = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 
 javascript:
   $('.student_application_why_no_bp_games').hide();
   $('.student_application_why_no_retreat').hide();
 
-  $('#student_application_available_for_bp_games').on('click', function() {
-    if($(this).is(':checked')) {
+  $BPGamesTrue = $("#student_application_available_for_bp_games_true");
+  $BPGamesFalse = $("#student_application_available_for_bp_games_false");
+
+  function toggleBPGames() {
+    if ($BPGamesTrue.prop("checked")) {
       $('.student_application_why_no_bp_games').hide();
     } else {
       $('.student_application_why_no_bp_games').show();
     }
-  });
+  }
 
-  $('#student_application_available_for_retreat').on('click', function() {
-    if($(this).is(':checked')) {
+  $BPGamesTrue.click(toggleBPGames);
+  $BPGamesFalse.click(toggleBPGames);
+
+
+
+
+  $retreatTrue = $("#student_application_available_for_retreat_true");
+  $retreatFalse = $("#student_application_available_for_retreat_false");
+
+  function toggleRetreat() {
+    if ($retreatTrue.prop("checked")) {
       $('.student_application_why_no_retreat').hide();
     } else {
       $('.student_application_why_no_retreat').show();
     }
-  });
+  }
+
+  $retreatTrue.click(toggleRetreat);
+  $retreatFalse.click(toggleRetreat);
 
   $('#available_for_gm').on('click', function() {
     if($(this).is(':checked')) {
       $('input[type="submit"]').prop("disabled", false)
     } else {
       $('input[type="submit"]').prop("disabled", true)
-    }
-  });
-
-
-  $('#new_student_application').on('submit', function() {
-    if($('#student_application_why_join').val() === whyJoinPlaceholder){
-      $('#student_application_why_join').val('').removeClass('greyed');
-    }
-
-    if($('#student_application_experience').val() === experiencePlaceholder){
-      $('#student_application_experience').val('').removeClass('greyed');
-    }
-
-    if($('#student_application_projects').val() === projectsPlaceholder){
-      $('#student_application_projects').val('').removeClass('greyed');
-    }
-
-    if($('#student_application_service').val() === servicePlaceholder){
-      $('#student_application_service').val('').removeClass('greyed');
     }
   });

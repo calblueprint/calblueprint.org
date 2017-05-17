@@ -11,11 +11,13 @@ section.static-page-hero.npo-apply-hero
         - if current_nonprofit
           = link_to "View Dashboard", nonprofit_applications_path, class: "bp-btn btn-white btn-lg"
         - else
-          = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white bn-lg"
+          = link_to "Nonprofit Signup", new_nonprofit_registration_path, class: "bp-btn btn-white btn-lg marginRight-sm"
+          = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white--clear btn-lg"
+
       - else
         - if @settings.cs169_app_open
           p.hero-desc = raw t ".cs169_hook"
-          = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "bp-btn btn-white bn-lg"
+          = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "bp-btn btn-white btn-lg"
         - else
           .applications-closed
             p.hero-desc = t ".applications_closed"
@@ -87,7 +89,7 @@ section.application-decision-criteria-section
     h2.static-page-header.marginBot-lg Decision Criteria
     p.static-page-desc.marginBot-xxl = t ".decision_criteria.description"
 
-    ul.decision-criteria-list-container.marginBot-lg
+    ul.decision-criteria-list-container
       li.decision-criteria-item
         h3 Impact
         p How much will your project impact the community?
@@ -104,6 +106,15 @@ section.application-decision-criteria-section
         h3 Credibility
         p Is there evidence that your project will have an impact?
 
+section.application-faqs-section
+  .container
+    h2.static-page-header.marginBot-xl Frequently Asked Questions
+    h3 = t ".faq.q1.question"
+    p = t ".faq.q1.answer"
+    h3 = t ".faq.q2.question"
+    p = t ".faq.q2.answer"
+    h3 = t ".faq.q3.question"
+    p = t ".faq.q3.answer"
 
   .spacer
   .spacer
@@ -145,46 +156,3 @@ section.application-decision-criteria-section
                 span.circle
               .timeline-content
                 p = t ".timeline.deliver"
-  .spacer-large
-  .row
-    .title-column
-      h2#previous_work Previous Work
-    .content-column
-      .row
-        .small-12.small-centered.columns.center
-          .spacer-small
-          ul.small-block-grid-3.example-images
-            li
-              = image_tag "apply/nonprofits/elevate-africa.png"
-            li
-              = image_tag "apply/nonprofits/food-shift.png"
-            li
-              = image_tag "apply/nonprofits/worldreader.png"
-          = link_to "See More", projects_path, class: "button"
-  .spacer-large
-  .row
-    .title-column
-      h2#faq FAQ
-    .content-column
-      .row
-        #faq.small-12.columns
-          .drawer
-            h5
-              = t ".faq.q1.question"
-              span<
-                | (+)
-            p = t ".faq.q1.answer"
-          .drawer
-            h5
-              = t ".faq.q2.question"
-              span<
-                | (+)
-            p = t ".faq.q2.answer"
-          .drawer
-            h5
-              = t ".faq.q3.question"
-              span<
-                | (+)
-            p = t ".faq.q3.answer"
-  .spacer
-  .spacer-small

@@ -1,8 +1,8 @@
 = render "header"
 
 .npo-login-container.container
-  h1 Sign Up
-  h2.subtitle Let's get started.
+  h1 Nonprofit Sign Up
+  h2.subtitle.marginBot-xl Let's get started.
   = render "form_errors", obj: resource
   = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     .form-inputs

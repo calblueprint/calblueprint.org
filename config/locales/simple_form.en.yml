@@ -49,7 +49,7 @@ en:
 
     hints:
       nonprofit_application:
-        cs169_pool: If you choose yes, your project will also be submitted to UC Berkeley's CS169 class. Students in the course will develop your requested applicatino for their class project.
+        cs169_pool: If you choose yes, your project will also be submitted to UC Berkeley's CS169 class. Students in the course will develop your requested application for their class project.
         devices: Check all that apply.
         short_summary: 255 characters max
 

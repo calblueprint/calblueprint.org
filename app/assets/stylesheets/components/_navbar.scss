@@ -64,6 +64,10 @@ nav.bp-nav {
       text-decoration: none;
     }
   }
+
+  .nav-link {
+    // animation: slideDown 400ms both;
+  }
 }
 
 
@@ -100,20 +104,5 @@ nav.bp-nav.nav-white {
   .logo-container {
     animation: slideDown 400ms both;
     animation-delay: 700ms;
-  }
-
-  .link-1 {
-    animation: slideDown 400ms both;
-    animation-delay: 800ms;
-  }
-
-  .link-2 {
-    animation: slideDown 400ms both;
-    animation-delay: 850ms;
-  }
-
-  .link-3 {
-    animation: slideDown 400ms both;
-    animation-delay: 900ms;
   }
 }

@@ -3,30 +3,8 @@ en:
     index:
       title: Our Projects
       subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
+      more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     current_projects:
-      Roots of Success:
-        title: Roots of Success
-        short_summary: >
-          Roots of Success is an international organization that provides educational
-          resources to teachers who serve in communities impacted by poverty and unemployment.
-        link: https://schoolsfund-friendsandfamily.herokuapp.com/
-        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/ros_student_banner.png
-        full_description: |
-          The Problem
-          -----------
-          Many students, including people in correctional facilities and untapped schools,
-          do not have the opportunity to access many educational materials and other related
-          academic resources.
-
-          The Solution
-          ------------
-          Blueprint’s is partnering with Roots of Success to bring their material onto
-          an accessible digital platform. The organization will be able to create online
-          modules, consolidating their materials into one central location. This can reach
-          students who have traditionally not been included in such education programs, including
-          people in correctional facilities and untapped schools. By creating this app, Blueprint
-          hopes to ease educational access for students and potentially impact thousands of individuals.
-
       Re-Plate:
         title: Re-Plate
         short_summary: >
@@ -34,6 +12,7 @@ en:
           waste and hunger in the community. They collect surplus food donations from
           businesses and deliver the food to homeless shelters and people in need.
         link: https://replate-staging.herokuapp.com/
+        color: 29B681
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/replate_banner.png
         full_description: |
           The Problem
@@ -57,6 +36,7 @@ en:
           Lava Mae is a nonprofit organization founded in 2014 in San Francisco, CA. Lava Mae's
           main goal is to serve the city's homeless who lack access to basic sanitation.
         link: http://lavamae.herokuapp.com/
+        color: 16ACE6
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/lavamae_banner.png
         full_description: |
           The Problem
@@ -73,6 +53,30 @@ en:
           interactive map to showcase their growing network. Through this tool, Lava Mae can connect
           users and continue to scale.
 
+      Roots of Success:
+        title: Roots of Success
+        short_summary: >
+          Roots of Success is an international organization that provides educational
+          resources to teachers who serve in communities impacted by poverty and unemployment.
+        link: https://schoolsfund-friendsandfamily.herokuapp.com/
+        color: BFA325
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/ros_student_banner.png
+        full_description: |
+          The Problem
+          -----------
+          Many students, including people in correctional facilities and untapped schools,
+          do not have the opportunity to access many educational materials and other related
+          academic resources.
+
+          The Solution
+          ------------
+          Blueprint’s is partnering with Roots of Success to bring their material onto
+          an accessible digital platform. The organization will be able to create online
+          modules, consolidating their materials into one central location. This can reach
+          students who have traditionally not been included in such education programs, including
+          people in correctional facilities and untapped schools. By creating this app, Blueprint
+          hopes to ease educational access for students and potentially impact thousands of individuals.
+
       Data Science:
         title: UC Berkeley Data Science Education Program
         short_summary: >
@@ -80,6 +84,7 @@ en:
           expand data science learning for undergrads, and is designed for
           students from non-technical backgrounds.
         link: https://docs.google.com/a/berkeley.edu/document/d/1SYRloAtMdLOtpLKUseexAkrF-9dF86A5dC5Y1121Ffs/edit?usp=sharing
+        color: 3C4858
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/data_science_banner.png
         full_description: |
           The Problem
@@ -103,6 +108,7 @@ en:
           Forte is a Berkeley nonprofit that strives to make music lessons more affordable for children from
           underserved communities. They match K-12 students with college-age teachers, and offer over 12 instruments.
         link: http://forte-staging.herokuapp.com/
+        color: F89406
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/forte_banner.png
         full_description: |
           The Problem

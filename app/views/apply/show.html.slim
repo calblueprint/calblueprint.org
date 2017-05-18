@@ -1,9 +1,18 @@
 .apply-container
-  .panel-left.nonprofits-bg
-    h1#left-title.white.h1 = t ".nonprofits.headline"
-    p#left-subtitle.white.subtitle = t ".nonprofits.subtitle"
-    = link_to "Learn More", nonprofits_apply_path, class: "button"
-  .panel-right.students-bg
-    h1#right-title.white.h1 = t ".students.headline"
-    p#right-subtitle.white.subtitle = t ".students.subtitle"
-    = link_to "Learn More", students_apply_path, class: "button"
+  .panel.npo-panel
+    div
+      .img-container: img src=image_url("home/nonprofits.jpg") alt=""/
+      h1 = t ".nonprofits.headline"
+      p = t ".nonprofits.subtitle"
+      = link_to nonprofits_apply_path, class: "homepage-link"
+        | Learn More
+        span.fa.fa-angle-right
+
+  .panel.student-panel
+    div
+      .img-container: img src=image_url("apply/students/students.jpg") alt=""/
+      h1 = t ".students.headline"
+      p = t ".students.subtitle"
+      = link_to students_apply_path, class: "homepage-link"
+        | Learn More
+        span.fa.fa-angle-right

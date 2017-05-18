@@ -20,7 +20,7 @@ section.current-projects-section
             .project-card--image style="background-image: url(#{project[:banner_image]})"
             h3.project-card--title = project[:title]
             p.project-card--summary = project[:short_summary]
-            .card-button Read More
+            .card-button style="color: ##{project[:color]}" Read More
 
 section.past-projects-section
   .container
@@ -34,18 +34,11 @@ section.past-projects-section
             p.project-card--summary = project[:short_summary]
             .card-button Read More
 
-.spacer-small
-.gray-bg
-  .spacer
-  .row
-    .small-12.medium-9.large-7.small-centered.columns.center
-      h2 Explore More
-      .spacer-small
-      p = "For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!"
-  .spacer-small
-  = link_to "2016", "https://medium.com/@blueprint/reframing-project-progress-into-new-goals-9022653661a4#.5ft9zwhur", class: "button", target: '_blank'
-  span.home-button-spacer
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  br.hide-on-medium-up
-  = link_to "2015", "https://medium.com/@blueprint/bringing-the-blueprints-to-life-ac4f3c2b6694#.q52nlio5b", class: "button", target: '_blank'
-  .spacer
+section.more-projects-section
+  .container
+    h2.static-page-header.marginBot-md Explore More
+    p.static-page-desc = t ".more"
+    = link_to "2016", "https://medium.com/@blueprint/reframing-project-progress-into-new-goals-9022653661a4#.5ft9zwhur", class: "bp-btn btn-lg marginRight-sm", target: '_blank'
+
+
+    = link_to "2015", "https://medium.com/@blueprint/bringing-the-blueprints-to-life-ac4f3c2b6694#.q52nlio5b", class: "bp-btn btn-lg", target: '_blank'

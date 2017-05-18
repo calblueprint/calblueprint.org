@@ -5,11 +5,13 @@ nav.bp-nav.nav-white
         .logo
         | Blueprint
     ul.link-container
-      li.link-1
+      li.nav-link.link-1
         = link_to "About", about_path
-      li.link-2
+      li.nav-link.link-2
+        = link_to "Projects", projects_path
+      li.nav-link.link-3
         = link_to "Students", students_apply_path
-      li.link-3
+      li.nav-link.link-4
         = link_to "Nonprofits", nonprofits_apply_path
       - if current_nonprofit
         li.nav-link
@@ -17,3 +19,9 @@ nav.bp-nav.nav-white
       - if current_user
         li.nav-link
           = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
+
+javascript:
+  document.querySelectorAll(".nav-link").forEach((item, i) => {
+    item.style.animation = "slideDown 400ms both";
+    item.style.animationDelay = `${800 + (50 * i)}ms`;
+  })

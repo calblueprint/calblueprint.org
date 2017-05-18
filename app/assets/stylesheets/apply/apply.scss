@@ -1,3 +1,42 @@
+.apply-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 100vh;
+
+  h1 {
+    font-family: $bptext-font;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $dark-gray-70;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .panel {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    height: 100%;
+    position: relative;
+    padding: 50px;
+    width: 45%;
+  }
+
+  .img-container {
+    border-radius: 4px;
+    box-shadow: 0 5px 30px $dark-gray-20;
+    margin-bottom: 40px;
+    height: 300px;
+  }
+}
+
+
+
 @media (min-width: 1200px) {
   // Override bootstrap container style for about page
   .apply-students .container,

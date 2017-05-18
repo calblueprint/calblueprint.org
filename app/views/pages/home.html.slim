@@ -30,18 +30,21 @@ section.projects-section
       span.fa.fa-angle-right
 
   .projects-container
-    .project-item#lavamae
-      .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
-      h4 Lava Mae
-      p Bringing humanity and collaboration through services for the homeless.
-    .project-item#replate
-      .project-img.img-container: img src=image_url("home/replate.jpg") alt="" /
-      h4 Replate
-      p Reducing food waste and hunger in the community.
-    .project-item#roots
-      .project-img.img-container: img src=image_url("home/roots.jpg") alt="" /
-      h4 Roots of Success
-      p Improving opportunities for people from underserved communities
+    = link_to project_path("Lava Mae", :current => true)
+      .project-item#lavamae
+        .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
+        h4 Lava Mae
+        p Bringing humanity and collaboration through services for the homeless.
+    = link_to project_path("Re-Plate", :current => true)
+      .project-item#replate
+        .project-img.img-container: img src=image_url("home/replate.jpg") alt="" /
+        h4 Replate
+        p Reducing food waste and hunger in the community.
+    = link_to project_path("Roots of Success", :current => true)
+      .project-item#roots
+        .project-img.img-container: img src=image_url("home/roots.jpg") alt="" /
+        h4 Roots of Success
+        p Improving opportunities for people from underserved communities
 
 section.involve-section
   .container

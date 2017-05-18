@@ -3,6 +3,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
+// Fixes safari layout bug on /apply
+.container:before,
+.container:after {
+  display: inherit;
+}
+
 html, body {
   color: $dark-gray;
   font-family: "Roboto", sans-serif;

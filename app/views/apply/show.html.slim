@@ -1,20 +1,22 @@
 = render "header"
 
-.apply-container
-  .panel.npo-panel
-    div
-      .img-container: img src=image_url("home/nonprofits.jpg") alt=""/
-      h1 = t ".nonprofits.headline"
-      p = t ".nonprofits.subtitle"
-      = link_to nonprofits_apply_path, class: "homepage-link"
-        | Learn More
-        span.fa.fa-angle-right
+.container.apply-container
+  = link_to nonprofits_apply_path
+    .panel.npo-panel
+      div
+        .img-container: img src=image_url("home/nonprofits.jpg") alt=""/
+        h1 = t ".nonprofits.headline"
+        p = t ".nonprofits.subtitle"
+        = link_to nonprofits_apply_path, class: "homepage-link"
+          | Learn More
+          span.fa.fa-angle-right
 
-  .panel.student-panel
-    div
-      .img-container: img src=image_url("apply/students/students.jpg") alt=""/
-      h1 = t ".students.headline"
-      p = t ".students.subtitle"
-      = link_to students_apply_path, class: "homepage-link"
-        | Learn More
-        span.fa.fa-angle-right
+  = link_to students_apply_path
+    .panel.student-panel
+      div
+        .img-container: img src=image_url("apply/students/students.jpg") alt=""/
+        h1 = t ".students.headline"
+        p = t ".students.subtitle"
+        = link_to students_apply_path, class: "homepage-link"
+          | Learn More
+          span.fa.fa-angle-right

@@ -3,7 +3,13 @@
   flex-flow: row wrap;
   justify-content: center;
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   h1 {
+    animation: slideLeft 400ms both;
     font-family: $bptext-font;
     font-size: 45px;
     font-weight: 600;
@@ -11,9 +17,16 @@
   }
 
   p {
-    color: $dark-gray-70;
+    animation: slideLeft 400ms both;
+    color: $dark-gray-60;
     font-size: 24px;
     margin-bottom: 20px;
+  }
+
+  .homepage-link {
+    animation: slideLeft 400ms both;
+    color: $bp-blue;
+    font-weight: 600;
   }
 
   .panel {
@@ -23,18 +36,31 @@
     height: 100%;
     position: relative;
     padding: 50px;
-    width: 45%;
+    width: 50%;
   }
 
   .img-container {
+    animation: slideLeft 400ms both;
     border-radius: 4px;
     box-shadow: 0 5px 30px $dark-gray-20;
     margin-bottom: 40px;
     height: 300px;
   }
+
+  .npo-panel {
+    .img-container { animation-delay: 300ms; }
+    h1 { animation-delay: 350ms; }
+    p { animation-delay: 400ms; }
+    .homepage-link { animation-delay: 450ms; }
+  }
+
+  .student-panel {
+    .img-container { animation-delay: 500ms; }
+    h1 { animation-delay: 550ms; }
+    p { animation-delay: 600ms; }
+    .homepage-link { animation-delay: 650ms; }
+  }
 }
-
-
 
 @media (min-width: 1200px) {
   // Override bootstrap container style for about page

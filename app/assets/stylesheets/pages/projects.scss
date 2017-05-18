@@ -68,3 +68,36 @@
     margin-top: auto;
   }
 }
+
+.projects-show {
+  padding-bottom: 60px;
+}
+
+.project-article-container {
+  max-width: 700px;
+
+  h2 {
+    font-family: $bptext-font;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $dark-gray-70;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+}
+
+.project-article-img-container {
+  margin: 40px auto 60px;
+  max-width: 900px;
+
+  .img-container {
+    border-radius: 4px;
+    box-shadow: 0 5px 30px $dark-gray-10;
+    height: 400px;
+  }
+}

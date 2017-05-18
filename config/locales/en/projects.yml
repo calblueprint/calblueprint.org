@@ -11,7 +11,8 @@ en:
           Re-Plate is a Berkeley nonprofit that aims to use technology to eliminate food
           waste and hunger in the community. They collect surplus food donations from
           businesses and deliver the food to homeless shelters and people in need.
-        link: https://replate-staging.herokuapp.com/
+        link: https://re-plate.org
+        github_link: https://github.com/calblueprint/replate-business
         color: 29B681
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/replate_banner.png
         full_description: |
@@ -36,6 +37,7 @@ en:
           Lava Mae is a nonprofit organization founded in 2014 in San Francisco, CA. Lava Mae's
           main goal is to serve the city's homeless who lack access to basic sanitation.
         link: http://lavamae.herokuapp.com/
+        github_link: https://github.com/calblueprint/lavamae
         color: 16ACE6
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/lavamae_banner.png
         full_description: |
@@ -58,7 +60,8 @@ en:
         short_summary: >
           Roots of Success is an international organization that provides educational
           resources to teachers who serve in communities impacted by poverty and unemployment.
-        link: https://schoolsfund-friendsandfamily.herokuapp.com/
+        link: http://ros-student-staging.herokuapp.com/
+        github_link: https://github.com/calblueprint/ros-student
         color: BFA325
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/ros_student_banner.png
         full_description: |
@@ -108,6 +111,7 @@ en:
           Forte is a Berkeley nonprofit that strives to make music lessons more affordable for children from
           underserved communities. They match K-12 students with college-age teachers, and offer over 12 instruments.
         link: http://forte-staging.herokuapp.com/
+        github_link: https://github.com/calblueprint/forte
         color: F89406
         banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/forte_banner.png
         full_description: |

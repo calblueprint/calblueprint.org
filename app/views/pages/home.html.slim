@@ -1,4 +1,4 @@
-= render "header_light"
+= render "header", className: "nav-white", animate: true
 
 section.home-section
   .pattern: object id="pattern" data=image_path("home/pattern.svg") type="image/svg+xml"
@@ -8,8 +8,8 @@ section.home-section
     p.main-subtitle
       = t ".subtitle"
     div.main-button-container
-      button.bp-btn.btn-white.marginRight-sm Learn More
-      = link_to "Apply", apply_path, class: "bp-btn btn-white--clear"
+      button.bp-btn.btn-white.btn-lg.marginRight-sm.learn-more Learn More
+      = link_to "Apply", apply_path, class: "bp-btn btn-white--clear btn-lg"
 
 section.about-section
   .container
@@ -86,6 +86,12 @@ section.contact-section
           | Facebook Page
 
 javascript:
+  $(".learn-more").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".about-section").offset().top
+    }, 400);
+  })
+
   document.getElementById("pattern").addEventListener("load", function() {
     document.querySelector(".pattern").classList.add("show");
     let pattern = this.getSVGDocument();

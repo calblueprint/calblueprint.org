@@ -52,7 +52,7 @@ nav.bp-nav {
     li {
       color: $bp-blue-80;
       margin: 0 15px;
-      transition: 100ms;
+      transition: opacity 100ms;
 
       &:hover {
         color: $bp-blue;
@@ -100,9 +100,4 @@ nav.bp-nav.nav-white {
   position: absolute;
   top: 0;
   width: 100%;
-
-  .logo-container {
-    animation: slideDown 400ms both;
-    animation-delay: 700ms;
-  }
 }

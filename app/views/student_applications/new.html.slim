@@ -41,10 +41,10 @@
       = f.input :service
 
       label for='available_for_gm'
-        input type='checkbox' name='available_for_gm' id='available_for_gm'
+        input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
         = t '.available_for_gm'
 
-      div
+      div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 
 javascript:

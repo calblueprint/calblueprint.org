@@ -86,6 +86,12 @@
     animation: slideLeft 500ms both;
     animation-delay: 500ms;
     pointer-events: all;
+
+    .bp-btn { transition: 150ms; }
+    .bp-btn:hover {
+      box-shadow: 0 2px 15px $dark-gray-20;
+      transform: translateY(-3px);
+    }
   }
 }
 

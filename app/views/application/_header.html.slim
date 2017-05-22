@@ -1,22 +1,33 @@
-nav.bp-nav
+nav.bp-nav[class="#{className ||= "default"}"]
   .container
-    .logo-container
+    .logo-container.nav-link
       a href="/"
         .logo
         | Blueprint
     ul.link-container
-      li.link-1
+      li.nav-link
         = link_to "About", about_path
-      li.link-2
+      li.nav-link
+        = link_to "Projects", projects_path
+      li.nav-link
         = link_to "Students", students_apply_path
-      li.link-3
+      li.nav-link
         = link_to "Nonprofits", nonprofits_apply_path
       - if current_nonprofit
         li.nav-link
-          = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
+          = link_to "Dashboard", nonprofit_applications_path
       - if current_user
         li.nav-link
-          = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
+          = link_to "Log Out", destroy_user_session_path, method: :delete
+
+/ You must specify animation: true when rendering the partial
+/ for the header animation to show
+- if animate ||= false
+  javascript:
+    document.querySelectorAll(".nav-link").forEach((item, i) => {
+      item.style.animation = "slideDown 400ms both";
+      item.style.animationDelay = `${700 + (50 * i)}ms`;
+    })
 
 / header.navigation role="banner"
 /   .navigation-wrapper

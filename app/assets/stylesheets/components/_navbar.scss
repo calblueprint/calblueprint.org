@@ -97,3 +97,21 @@ nav.bp-nav.nav-white {
   top: 0;
   width: 100%;
 }
+
+nav.bp-nav-fixed {
+  animation: none;
+  background: white;
+  position: fixed !important;
+  transform: translateY(-100%);
+  transition: 150ms;
+  width: 100%;
+
+  .nav-link {
+    animation: none !important;
+  }
+
+  &.nav-fixed-show {
+    box-shadow: 0 2px 15px $dark-gray-10;
+    transform: translateY(0);
+  }
+}

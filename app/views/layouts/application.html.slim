@@ -14,10 +14,10 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
-    / = render "header"
     = render "flash"
 
-    .content class="#{body_class}"
+    .content class=" #{body_class}"
+      = render "header", className: "bp-nav-fixed"
       = yield
 
       = render "footer"

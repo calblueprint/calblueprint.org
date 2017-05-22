@@ -4,16 +4,12 @@
 
   color: $dark-gray;
 
-  // TODO(sam): Change the specificity of these. http://cssguidelin.es/#selector-intent
   input {
     background: white;
     border: 1px solid $smoke;
     border-radius: 3px;
     min-width: 300px;
     padding: 8px;
-
-    // flex-grow: 1;
-    // vertical-align: top;
   }
 
   button {

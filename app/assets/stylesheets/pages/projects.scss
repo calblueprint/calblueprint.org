@@ -80,12 +80,12 @@
   }
 }
 
-.projects-show {
-  padding-bottom: 60px;
-}
-
 .project-article-container {
   max-width: 700px;
+
+  &:last-of-type {
+    padding-bottom: 60px;
+  }
 
   h2 {
     font-family: $bptext-font;

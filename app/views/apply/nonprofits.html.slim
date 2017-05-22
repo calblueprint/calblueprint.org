@@ -1,6 +1,7 @@
 = render "header", className: "nav-white", animate: true
 
 section.static-page-hero.npo-apply-hero
+  .static-hero-gradient
   .container
     h1.static-page-title.marginBot-xl
       = t ".headline"
@@ -113,17 +114,7 @@ section.application-decision-criteria-section
     q = t ".quote.text"
     h5.reference = t ".quote.reference"
 
-section.application-faqs-section#faqs
-  .container
-    h2.static-page-header.marginBot-xl Frequently Asked Questions
-    h3 = t ".faq.q1.question"
-    p = t ".faq.q1.answer"
-    h3 = t ".faq.q2.question"
-    p = t ".faq.q2.answer"
-    h3 = t ".faq.q3.question"
-    p = t ".faq.q3.answer"
-
-section.project-timeline-section
+section.project-timeline-section#project-timeline
   .container
     h2.static-page-header.marginBot-xl Project Timeline
     ul
@@ -137,3 +128,13 @@ section.project-timeline-section
         p = t ".timeline.user_iteration"
       li
         p = t ".timeline.deliver"
+
+section.application-faqs-section#faqs
+  .container
+    h2.static-page-header.marginBot-xl Frequently Asked Questions
+    h3 = t ".faq.q1.question"
+    p = t ".faq.q1.answer"
+    h3 = t ".faq.q2.question"
+    p = t ".faq.q2.answer"
+    h3 = t ".faq.q3.question"
+    p = t ".faq.q3.answer"

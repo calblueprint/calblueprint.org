@@ -67,9 +67,11 @@ section.about-page-team-section#team
                   - if member[:linkedin] || member[:website]
                     .member-links
                       - if member[:linkedin]
-                        a href="https://linkedin.com/in/#{member[:linkedin]}" linkedin
+                        a href="https://linkedin.com/in/#{member[:linkedin]}"
+                          img src=image_url("icons/linkedin.svg") alt=""/
                       - if member[:website]
-                        a href="http://#{member[:website]}" website
+                        a href="//#{member[:website]}"
+                          img src=image_url("icons/website.svg") alt=""/
                 figcaption
                   .name
                     = "#{member[:first_name]} #{member[:last_name]}"

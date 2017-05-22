@@ -9,7 +9,7 @@ nav.bp-nav {
   }
 
   .logo-container {
-    font-family: "Poppins";
+    font-family: "Poppins", "Roboto";
     font-size: 20px;
     transition: 100ms;
 
@@ -63,10 +63,6 @@ nav.bp-nav {
       color: inherit;
       text-decoration: none;
     }
-  }
-
-  .nav-link {
-    // animation: slideDown 400ms both;
   }
 }
 

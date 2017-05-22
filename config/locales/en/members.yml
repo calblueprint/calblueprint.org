@@ -53,13 +53,11 @@ en:
     - first_name: 'Daniel'
       last_name: 'Li'
       email: 'danielmxli@gmail.com'
-      linkedin: 'hello'
       <<: *president
 
     - first_name: 'Shreya'
       last_name: 'Shanbhag'
       email: 'shreya995@gmail.com'
-      website: 'https://ericls.com'
       <<: *external
 
     - first_name: 'Jonathan'
@@ -132,6 +130,7 @@ en:
       last_name: 'Liang'
       email: 'liang.eric24@gmail.com'
       linkedin: 'ericls'
+      website: 'ericls.com'
       <<: *developer
 
     - first_name: 'Grace'

@@ -1,7 +1,7 @@
 = render "header", className: "nav-white", animate: true
 
 section.static-page-hero.student-apply-hero
-  .hero-gradient
+  .static-hero-gradient
   .container
     h1.static-page-title.marginBot-xl
       = t ".headline"
@@ -15,7 +15,6 @@ section.static-page-hero.student-apply-hero
       - if !@settings.student_app_open && !@settings.external_app_open
         p.hero-desc = t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
-
 
   div.page-nav
     .container
@@ -39,8 +38,12 @@ section.application-process-section#application-process
           .timeline-row-date = t ".application_timeline.infosession_date"
           .timeline-row-description = t ".application_timeline.infosession"
           .timeline-row-btn
-            button.bp-btn.marginRight-xs Infosession #1
-            button.bp-btn Infosession #2
+            - if SocialMediaUrls::INFOSESSION_1
+              = link_to "Infosession #1", SocialMediaUrls::INFOSESSION_1, class: "bp-btn marginRight-xs", target: "_blank"
+            - if SocialMediaUrls::INFOSESSION_2
+              = link_to "Infosession #2", SocialMediaUrls::INFOSESSION_2, class: "bp-btn marginRight-xs", target: "_blank"
+            - if not SocialMediaUrls::INFOSESSION_1 and not SocialMediaUrls::INFOSESSION_2
+              .timeline-row-notice = t ".application_timeline.infosession_notice"
 
       .timeline-row
         .num-col
@@ -50,7 +53,10 @@ section.application-process-section#application-process
           .timeline-row-date = t ".application_timeline.application_date"
           .timeline-row-description = t ".application_timeline.application"
           .timeline-row-btn
-            = link_to "Student Application", new_student_application_path, class: "bp-btn"
+            - if @settings.student_app_open
+              = link_to "Student Application", new_student_application_path, class: "bp-btn"
+            - else
+              .timeline-row-notice = raw t ".application_timeline.application_notice"
 
       .timeline-row
         .num-col

@@ -26,12 +26,16 @@ section.static-page-hero.npo-apply-hero
   div.page-nav
     .container
       ul
-        li Our Services
-        li Application Process
-        li Project Timeline
-        li FAQs
+        li.page-nav-link section-name="our-services"
+          | Our Services
+        li.page-nav-link section-name="application-process"
+          | Application Process
+        li.page-nav-link section-name="project-timeline"
+          | Project Timeline
+        li.page-nav-link section-name="faqs"
+          | FAQs
 
-section.application-our-services
+section.application-our-services#our-services
   .container
     h2.static-page-header.marginBot-xxl Our Services
     .our-services-container
@@ -44,7 +48,7 @@ section.application-our-services
         h3 Mobile Development
         p = t ".services.mobile_application_development"
 
-section.application-process-section
+section.application-process-section#application-process
   .container
     h2.static-page-header.marginBot-xxl Nonprofit Application Process
     .student-timeline
@@ -106,7 +110,10 @@ section.application-decision-criteria-section
         h3 Credibility
         p Is there evidence that your project will have an impact?
 
-section.application-faqs-section
+    q = t ".quote.text"
+    h5.reference = t ".quote.reference"
+
+section.application-faqs-section#faqs
   .container
     h2.static-page-header.marginBot-xl Frequently Asked Questions
     h3 = t ".faq.q1.question"
@@ -116,43 +123,17 @@ section.application-faqs-section
     h3 = t ".faq.q3.question"
     p = t ".faq.q3.answer"
 
-  .spacer
-  .spacer
-  .row
-    .small-12.columns
-      .quote-block
-        q = t ".quote.text"
-        h5.reference = t ".quote.reference"
-  .spacer
-  .row
-    .title-column
-      h2#timeline Project Timeline
-    .content-column
-      .row
-        .small-12.columns
-          ul.timeline-slim
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.spec"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.begin"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.midterm"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.user_iteration"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.deliver"
+section.project-timeline-section
+  .container
+    h2.static-page-header.marginBot-xl Project Timeline
+    ul
+      li
+        p = t ".timeline.spec"
+      li
+        p = t ".timeline.begin"
+      li
+        p = t ".timeline.midterm"
+      li
+        p = t ".timeline.user_iteration"
+      li
+        p = t ".timeline.deliver"

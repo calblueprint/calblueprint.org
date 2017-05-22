@@ -177,13 +177,9 @@ $timeline-num-width: 200px;
   color: $dark-gray-70;
 }
 
-
-
-
-
-
-
-
+.timeline-row-btn {
+  margin: 25px 0 35px;
+}
 
 .application-decision-criteria-section {
   padding: 50px 0;
@@ -259,4 +255,9 @@ $timeline-num-width: 200px;
     color: $dark-gray-70;
     font-size: 18px;
    }
+}
+
+.application-newsletter {
+  background: $off-white;
+  padding: 70px 0;
 }

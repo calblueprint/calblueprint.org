@@ -12,17 +12,20 @@ section.static-page-hero.about-page-hero
   div.page-nav
     .container
       ul
-        li Mission
-        li Values
-        li The Team
+        li.page-nav-link section-name="mission"
+          | Mission
+        li.page-nav-link section-name="values"
+          | Values
+        li.page-nav-link section-name="team"
+          | The Team
 
-section.about-page-mission-section
+section.about-page-mission-section#mission
   .container
     h2.static-page-header.marginBot-md Our Mission Statement
     p.mission = t ".mission"
   .about-page-oval
 
-section.about-page-values-section
+section.about-page-values-section#values
   .container
     .img-container: img src=image_url("home/group_photo.jpg") alt=""/
     h2.static-page-header.marginBot-md Our Values
@@ -44,7 +47,7 @@ section.about-page-values-section
 
 section.about-page-photo-carousel
 
-section.about-page-team-section
+section.about-page-team-section#team
   .container
     h2.static-page-header.marginBot-lg The Team
     .about-page-team-tab
@@ -73,4 +76,3 @@ section.about-page-team-section
                   .position = member[:role]
         - (0...5 - t("members").length % 5).each do |member|
           li.about-page-member-item
-

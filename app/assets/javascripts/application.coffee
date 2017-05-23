@@ -21,7 +21,7 @@
 #= require shared/google-analytics
 #= require shared/header
 #= require shared/mailchimp
-#= require shared/static_header_nav
+#= require shared/static_hero_nav
 #=
 #= require ./slider
 #= require_tree ./pages

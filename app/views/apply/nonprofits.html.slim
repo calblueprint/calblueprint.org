@@ -31,8 +31,8 @@ section.static-page-hero.npo-apply-hero
           | Our Services
         li.page-nav-link section-name="application-process"
           | Application Process
-        li.page-nav-link section-name="project-timeline"
-          | Project Timeline
+        li.page-nav-link section-name="previous-work"
+          | Previous Work
         li.page-nav-link section-name="faqs"
           | FAQs
 
@@ -52,7 +52,7 @@ section.application-our-services#our-services
 section.application-process-section#application-process
   .container
     h2.static-page-header.marginBot-xxl Nonprofit Application Process
-    .student-timeline
+    .npo-timeline
       .timeline-row
         .num-col
           .timeline-num 01
@@ -111,23 +111,34 @@ section.application-decision-criteria-section
         h3 Credibility
         p Is there evidence that your project will have an impact?
 
+section.npo-apply-quote
+  .container
     q = t ".quote.text"
     h5.reference = t ".quote.reference"
 
-section.project-timeline-section#project-timeline
+section.npo-apply-previous-work-section#previous-work
   .container
-    h2.static-page-header.marginBot-xl Project Timeline
-    ul
-      li
-        p = t ".timeline.spec"
-      li
-        p = t ".timeline.begin"
-      li
-        p = t ".timeline.midterm"
-      li
-        p = t ".timeline.user_iteration"
-      li
-        p = t ".timeline.deliver"
+    h2.static-page-header.marginBot-lg Previous Work
+    p.static-page-desc.marginBot-lg Some of the applications we've developed for previous clients.
+    = link_to projects_path, class: "homepage-link marginBot-xl"
+      | View All Projects
+      span.fa.fa-angle-right
+    .projects-container
+      = link_to project_path("Lava Mae", :current => true)
+        .project-item#lavamae
+          .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
+          h4 Lava Mae
+          p Bringing humanity and collaboration through services for the homeless.
+      = link_to project_path("Re-Plate", :current => true)
+        .project-item#replate
+          .project-img.img-container: img src=image_url("home/replate.jpg") alt="" /
+          h4 Replate
+          p Reducing food waste and hunger in the community.
+      = link_to project_path("Roots of Success", :current => true)
+        .project-item#roots
+          .project-img.img-container: img src=image_url("home/roots.jpg") alt="" /
+          h4 Roots of Success
+          p Improving opportunities for people from underserved communities
 
 section.application-faqs-section#faqs
   .container
@@ -138,3 +149,9 @@ section.application-faqs-section#faqs
     p = t ".faq.q2.answer"
     h3 = t ".faq.q3.question"
     p = t ".faq.q3.answer"
+
+section.application-newsletter
+  .container
+    h2.static-page-header.marginBot-md Get Involved
+    p.static-page-desc.marginBot-lg = t ".newsletter"
+    = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"

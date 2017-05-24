@@ -74,7 +74,16 @@ section.involve-section
           span.fa.fa-angle-right
 
     h4 Other Organizations
-    p.static-page-desc If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
+    p.static-page-desc.marginBot-xl If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
+    .other-org-container
+      = link_to "http://theberkeleygroup.org/", target: "_blank", class: "org"
+        .img-container: img src=image_url("home/tbg.png") alt=""/
+        h5 The Berkeley Group
+        p Consulting for Non-Profits
+      = link_to "https://datasci.berkeley.edu/", target: "_blank", class: "org"
+        .img-container: img src=image_url("home/bids.png") alt=""/
+        h5 Berkeley Institute for Data Science (BIDS)
+        p Data science for social good
 
 section.contact-section
   .container

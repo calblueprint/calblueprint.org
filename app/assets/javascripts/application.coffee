@@ -22,6 +22,7 @@
 #= require shared/header
 #= require shared/mailchimp
 #= require shared/static_hero_nav
+#= require bootstrap/dropdown
 #=
 #= require ./slider
 #= require_tree ./pages

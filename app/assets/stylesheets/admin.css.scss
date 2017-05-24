@@ -1,3 +1,10 @@
+// Import Bootstrap grid
+@import "bootstrap-sprockets";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/grid";
+@import "bootstrap/dropdowns";
+
 // Reset browser-specific CSS
 @import "vendor/normalize";
 @import "partials/reset";
@@ -10,24 +17,17 @@
 @import "components/*";
 
 // Vendor
-@import "vendor/normalize";
 @import "bourbon";
 @import "neat";
 @import "sky-labels";
 @import "vendor/base/base";
-@import "vendor/grid";
+// @import "vendor/grid";
 @import "vendor/toastr";
-@import "vendor/hint";
+// @import "vendor/hint";
 
 // Shared
-@import "shared/general";
-@import "shared/flash";
-@import "shared/header";
 @import "shared/tables";
-@import "shared/footer";
-@import "shared/icons";
 @import "shared/tooltips";
-@import "shared/gear-img";
 @import "shared/newsletter-subscribe";
 
 // Admin-specific

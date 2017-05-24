@@ -16,10 +16,6 @@
   padding: 60px 0;
 }
 
-.involve-section {
-  padding: 90px 0;
-}
-
 .about-section { padding-top: 100px; }
 
 .home-section {
@@ -187,6 +183,8 @@
 }
 
 .involve-section {
+  padding: 90px 0;
+
   .homepage-header {
     margin-bottom: 30px;
   }
@@ -215,6 +213,35 @@
       box-shadow: 3px 3px 30px $dark-gray-10;
       flex: 1;
       max-height: 230px;
+    }
+  }
+
+  .other-org-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    .img-container {
+      margin: 0 auto 20px;
+      max-width: 150px;
+    }
+
+    .org {
+      margin: 0 20px;
+      width: 250px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    p {
+      color: $dark-gray-60;
+      font-size: 16px;
     }
   }
 }

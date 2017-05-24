@@ -78,6 +78,7 @@
 }
 
 .application-process-section {
+  background: $off-white;
   padding: 80px 0;
 
   .static-page-header {
@@ -127,7 +128,6 @@ $timeline-num-width: 200px;
     position: absolute;
     top: -20px;
     width: 1px;
-    z-index: -1;
   }
 }
 
@@ -136,13 +136,14 @@ $timeline-num-width: 200px;
 }
 
 .timeline-num {
-  background: white;
+  background: $off-white;
   color: $bp-blue-20;
   font-family: $bptext-font;
   font-size: 100px;
   font-weight: 600;
   position: relative;
   top: -40px;
+  z-index: 1;
 }
 
 .text-col {
@@ -265,4 +266,43 @@ $timeline-num-width: 200px;
 .application-newsletter {
   background: $off-white;
   padding: 70px 0;
+}
+
+.npo-apply-quote {
+  background: $bp-blue;
+  color: $white;
+  padding: 70px 0 60px;
+
+  q {
+    display: block;
+    font-family: $bptext-font;
+    font-size: 33px;
+    font-weight: 500;
+    position: relative;
+
+    &:before {
+      background-image: image_url("apply/quote.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+      opacity: 0.2;
+      position: absolute;
+      left: -30px;
+      top: 0;
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  .reference {
+    color: $white-80;
+    float: right;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.npo-apply-previous-work-section {
+  background: $off-white;
+  padding: 70px 0 50px;
 }

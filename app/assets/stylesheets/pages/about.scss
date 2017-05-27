@@ -99,6 +99,29 @@
   }
 }
 
+.about-page-photo-carousel {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 10%;
+
+  .photo {
+    height: 100%;
+    margin: 0 10px;
+
+    &:last-of-type {
+      padding-right: 70px;
+    }
+
+    img {
+      width: 600px;
+      pointer-events: none;
+    }
+  }
+}
+
 .about-page-team-section {
   padding: 50px 0;
 }
@@ -230,6 +253,18 @@
 
       .value-num {
         top: -55px;
+      }
+    }
+  }
+
+  .about-page-photo-carousel {
+    padding: 30px 0 20px 20px;
+
+    .photo {
+      margin: 0 5px;
+
+      img {
+        width: 300px;
       }
     }
   }

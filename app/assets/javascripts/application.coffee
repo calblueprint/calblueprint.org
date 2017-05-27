@@ -17,6 +17,7 @@
 #= require sky-labels
 #= require ./sky-labels-setup
 #= require vendor/toastr
+#= require vendor/scrolldrag
 #= require shared/utilities
 #= require shared/google-analytics
 #= require shared/header

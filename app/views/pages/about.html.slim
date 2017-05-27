@@ -47,6 +47,11 @@ section.about-page-values-section#values
         p.value-desc = t ".values.heart"
 
 section.about-page-photo-carousel
+  .photo: img src=image_url("about/1.jpg") alt=""/
+  .photo: img src=image_url("about/2.jpg") alt=""/
+  .photo: img src=image_url("about/3.jpg") alt=""/
+  .photo: img src=image_url("about/4.jpg") alt=""/
+  .photo: img src=image_url("about/5.jpg") alt=""/
 
 section.about-page-team-section#team
   .container
@@ -86,3 +91,7 @@ javascript:
       scrollTop: $("#mission").offset().top
     }, 400);
   })
+
+  $(document).ready(function(){
+   $(".about-page-photo-carousel").kinetic();
+  });

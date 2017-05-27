@@ -1,6 +1,6 @@
 @keyframes slideLeft {
   0% {
-    transform: translateX(-30px);
+    transform: translateX(-20px);
     opacity: 0;
   }
   100% {
@@ -11,7 +11,7 @@
 
 @keyframes slideDown {
   0% {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     opacity: 0;
   }
   100% {
@@ -22,7 +22,7 @@
 
 @keyframes slideUp {
   0% {
-    transform: translateY(30px);
+    transform: translateY(20px);
     opacity: 0;
   }
   100% {

@@ -64,3 +64,17 @@
     }
   }
 }
+
+@media (max-width: $breakpt-mobile) {
+  .bp-footer {
+    .footer-col {
+      margin-bottom: 30px;
+      width: 50%;
+    }
+    .footer-logo {
+      padding-left: 15px;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+  }
+}

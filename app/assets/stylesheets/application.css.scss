@@ -1,5 +1,6 @@
 // New Styles Here
 
+// Vendor -------------------------
 // Import Bootstrap grid
 @import "bootstrap-sprockets";
 @import "bootstrap/variables";
@@ -11,16 +12,28 @@
 @import "vendor/normalize";
 @import "partials/reset";
 
+// FontAwesome
+@import "font-awesome";
+
+// Other
+@import "vendor/toastr";
+
+
+// Stylesheets --------------------
+// Partials
 @import "partials/variables";
 @import "partials/animations";
 @import "partials/fonts";
 @import "partials/layout";
 
+// Styles
 @import "components/*";
 
 @import "pages/*";
 @import "apply/*";
 @import "nonprofit_applications/*";
+@import "shared/newsletter-subscribe";
+
 
 
 
@@ -31,7 +44,7 @@
 // @import "sky-labels";
 // @import "vendor/base/base";
 // @import "vendor/grid";
-@import "vendor/toastr";
+// @import "vendor/toastr";
 // @import "vendor/hint";
 // @import "vendor/timeline";
 // @import "vendor/devices";
@@ -46,7 +59,7 @@
 // @import "shared/icons";
 // @import "shared/tooltips";
 // @import "shared/gear-img";
-@import "shared/newsletter-subscribe";
+// @import "shared/newsletter-subscribe";
 
 // // Page specific
 // // @import "pages/home";

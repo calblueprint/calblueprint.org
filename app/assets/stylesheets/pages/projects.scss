@@ -112,3 +112,16 @@
     height: 400px;
   }
 }
+
+@media (max-width: 991px) {
+  .project-card-column {
+    width: 50%;
+  }
+}
+
+@media (max-width: $breakpt-mobile) {
+  .project-card-column {
+    padding: 0;
+    width: 100%;
+  }
+}

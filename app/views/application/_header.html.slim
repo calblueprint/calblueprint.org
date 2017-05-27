@@ -4,18 +4,23 @@ nav.bp-nav[class="#{className ||= "default"}"]
       a href="/"
         .logo
         | Blueprint
+    .mobile-nav-show
+      .fa.fa-bars
     ul.link-container
+      .mobile-nav-close
+        img src=image_url("icons/close.svg") alt=""/
       li.nav-link
         = link_to "About", about_path
       li.nav-link
         = link_to "Projects", projects_path
       li.nav-link
-        = link_to "Students", students_apply_path
+        = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank"
       li.nav-link
-        = link_to "Nonprofits", nonprofits_apply_path
-      - if current_nonprofit
-        li.nav-link
-          = link_to "Dashboard", nonprofit_applications_path
+        - if current_nonprofit
+          = link_to "Apply", nonprofit_applications_path
+        - else
+          = link_to "Apply", apply_path
+
       - if current_admin
         li.nav-link.dropdown-toggle#header-admin-dropdown data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
           | Admin
@@ -41,7 +46,6 @@ nav.bp-nav[class="#{className ||= "default"}"]
           li.nav-link
             = link_to "Log Out", destroy_user_session_path, method: :delete
 
-
 / You must specify animation: true when rendering the partial
 / for the header animation to show
 - if animate ||= false
@@ -51,41 +55,22 @@ nav.bp-nav[class="#{className ||= "default"}"]
       item.style.animationDelay = `${700 + (50 * i)}ms`;
     })
 
+javascript:
+  $(".mobile-nav-close").click(function() {
+    $(".link-container").removeClass("mobile-show");
+  })
+
+  $(".mobile-nav-show").click(function() {
+    console.log("hello")
+    $(".link-container").addClass("mobile-show");
+  })
+
 / header.navigation role="banner"
 /   .navigation-wrapper
 /     = link_to root_path, class: "logo" do
 /       = image_tag "paw.png"
 /     a#js-mobile-menu.navigation-menu-button href="javascript:void(0)"  MENU
 /     nav role="navigation"
-/       ul#js-navigation-menu.navigation-menu.show
-/         - if current_admin
-/           li.nav-link.more
-/             a href="javascript:void(0)" Admin
-/             ul.submenu
-/               - if can? :read, NonprofitApplication
-/                 li
-/                   = link_to "NPO Applications", admin_nonprofit_applications_path
-/               - if can? :read, StudentApplication
-/                 li
-/                   = link_to "Student Applications", admin_student_applications_path
-/                 li
-/                   = link_to "Compare Applications", new_admin_comparison_path
-/               - if can? :read, ExternalApplication
-/                 li
-/                   = link_to "External Applications", admin_external_applications_path
-/               - if can? :read, Semester
-/                 li
-/                   = link_to "Semesters", admin_semesters_path
-/               - if can? :read, Settings
-/                 li
-/                   = link_to "Settings", admin_settings_path
-/               - if can? :read, Admins
-/                 li
-/                   = link_to "Admin Users", admin_admins_path
-/         li.nav-link
-/           = link_to "About", about_path, class: "header-tab"
-/         li.nav-link
-/           = link_to "Projects", projects_path, class: "header-tab"
 /         li.nav-link
 /           = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "header-tab"
 /         li.nav-link

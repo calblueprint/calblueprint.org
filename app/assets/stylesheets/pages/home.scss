@@ -228,8 +228,8 @@
     }
 
     .org {
-      margin: 0 20px;
-      width: 250px;
+      margin: 0 20px 30px 20px;
+      width: 220px;
       text-align: center;
       text-decoration: none;
     }
@@ -287,4 +287,76 @@
   background: -webkit-linear-gradient(top, rgba(56,185,166,0.3) 0%,rgba(41,182,129,1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgba(56,185,166,0.3) 0%,rgba(41,182,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d38b9a6', endColorstr='#29b681',GradientType=0 ); /* IE6-9 */
+}
+
+@media (max-width: 730px) {
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .homepage-mission-statement {
+    font-size: 30px;
+  }
+
+  .projects-container {
+    display: block;
+    padding: 0 15px;
+
+    a {
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    .project-item {
+      height: 200px;
+    }
+
+  }
+
+  .contact-section {
+    .contact-items {
+      display: block;
+    }
+
+    .contact-btns {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .home-section {
+    max-height: 500px;
+
+    .container {
+      align-items: flex-start;
+    }
+
+    .main-title {
+      font-size: 40px;
+    }
+
+    .main-subtitle {
+      font-size: 20px;
+      text-align: left;
+    }
+  }
+
+  .involve-section {
+    .involve-container {
+      margin-bottom: 40px;
+
+      .image {
+        margin: 0;
+      }
+
+      .text {
+        flex: initial;
+        order: 1;
+        margin: 20px 0;
+      }
+    }
+  }
 }

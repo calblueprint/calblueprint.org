@@ -1,3 +1,4 @@
+// Apply Page
 .apply-container {
   display: flex;
   flex-flow: row wrap;
@@ -62,6 +63,42 @@
   }
 }
 
+@media (max-width: 991px) {
+  .apply-container {
+    h1 {
+      font-size: 40px;
+    }
+
+    .panel {
+      padding: 40px 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .apply-container {
+    display: block;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .panel {
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .img-container {
+      height: 200px;
+    }
+  }
+}
+
+// Student and NPO Apply Page
 @media (min-width: 1200px) {
   // Override bootstrap container style for about page
   .apply-students .container,
@@ -197,6 +234,11 @@ $timeline-num-width: 200px;
   margin-bottom: 40px;
   width: 28%;
 
+  .img-container {
+    margin-bottom: 10px;
+    max-width: 100px;
+  }
+
   h3 {
     font-family: $bptext-font;
     font-size: 19px;
@@ -230,6 +272,10 @@ $timeline-num-width: 200px;
 
 .application-our-services {
   padding: 50px 0;
+
+  .static-page-header {
+    text-align: center;
+  }
 }
 
 .our-services-container {
@@ -238,9 +284,11 @@ $timeline-num-width: 200px;
 
   .img-container {
     margin: 0 auto 20px;
+    text-align: center;
+    width: 50%;
   }
 
-  div {
+  .item {
     padding: 0 30px;
     text-align: center;
     width: 50%;
@@ -271,12 +319,12 @@ $timeline-num-width: 200px;
 .npo-apply-quote {
   background: $bp-blue;
   color: $white;
-  padding: 70px 0 60px;
+  padding: 80px 0 70px;
 
   q {
     display: block;
     font-family: $bptext-font;
-    font-size: 33px;
+    font-size: 35px;
     font-weight: 500;
     position: relative;
 

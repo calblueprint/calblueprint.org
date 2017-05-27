@@ -11,6 +11,15 @@
   }
 }
 
+.about-page-hero {
+  background-image: image_url("home/group_photo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
 .about-page-mission-section {
   background: #F4F4F4;
   overflow: hidden;
@@ -182,5 +191,49 @@
   .position {
     color: $dark-gray-60;
     font-size: 14px;
+  }
+}
+
+@media (max-width: $breakpt-mobile) {
+  .about-page-mission-section {
+    padding: 70px 0 370px;
+
+    .mission {
+      font-size: 24px;
+    }
+  }
+
+  .about-page-oval {
+    width: 150%;
+  }
+
+  .about-page-values-section {
+    padding-top: 60px;
+
+    .img-container {
+      height: 250px;
+      width: 90%;
+      top: -300px;
+    }
+
+    .values-container {
+      display: block;
+
+      .value {
+        width: 100%;
+      }
+
+      .value-num {
+        top: -45px;
+      }
+    }
+  }
+
+  .about-page-member-item {
+    width: 31%;
+
+    .img-container {
+      height: 130px;
+    }
   }
 }

@@ -114,3 +114,29 @@
   font-size: 21px;
 }
 
+@media (max-width: $breakpt-mobile) {
+  .static-page-hero {
+    max-height: 550px;
+
+    .page-nav {
+      display: none;
+    }
+  }
+
+  .static-page-title {
+    font-size: 34px;
+  }
+
+  .static-page-subtitle {
+    font-size: 25px;
+  }
+
+  .static-page-header {
+    font-size: 28px;
+  }
+
+  .static-page-desc {
+    font-size: 18px;
+  }
+}
+

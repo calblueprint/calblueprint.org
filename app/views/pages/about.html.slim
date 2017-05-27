@@ -1,13 +1,14 @@
 = render "header", className: "nav-white", animate: true
 
 section.static-page-hero.about-page-hero
+  .static-hero-gradient
   .container
     h1.static-page-title.marginBot-xl
       = t ".headline"
     p.static-page-subtitle.light
       = t ".subtitle"
     .static-page-hero-btn-container.marginTop-xl
-      button.bp-btn.btn-white.btn-lg Read More
+      button.bp-btn.btn-white.btn-lg.read-more Read More
 
   div.page-nav
     .container
@@ -50,12 +51,12 @@ section.about-page-photo-carousel
 section.about-page-team-section#team
   .container
     h2.static-page-header.marginBot-lg The Team
-    .about-page-team-tab
-      ul
-        li.active Current Team
-        li 2015-2016
-        li 2014-2015
-        li 2013-2014
+    / .about-page-team-tab
+    /   ul
+    /     li.active Current Team
+    /     li 2015-2016
+    /     li 2014-2015
+    /     li 2013-2014
     .about-page-members
       ul
         - t("members").each do |member|
@@ -78,3 +79,10 @@ section.about-page-team-section#team
                   .position = member[:role]
         - (0...5 - t("members").length % 5).each do |member|
           li.about-page-member-item
+
+javascript:
+  $(".read-more").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#mission").offset().top
+    }, 400);
+  })

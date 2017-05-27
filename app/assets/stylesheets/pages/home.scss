@@ -289,7 +289,17 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d38b9a6', endColorstr='#29b681',GradientType=0 ); /* IE6-9 */
 }
 
+@media (max-width: 900px) {
+  .home-section .pattern object {
+    transform: scale(1.5);
+  }
+}
+
 @media (max-width: 730px) {
+  .home-section .pattern object {
+    transform: scale(1.8);
+  }
+
   .about-section {
     padding: 50px 0;
   }
@@ -329,6 +339,10 @@
 @media (max-width: 600px) {
   .home-section {
     max-height: 500px;
+
+    .pattern object {
+      transform: scale(2);
+    }
 
     .container {
       align-items: flex-start;

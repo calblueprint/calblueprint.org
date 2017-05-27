@@ -46,7 +46,7 @@ section.about-page-values-section#values
         h3.value-title Heart
         p.value-desc = t ".values.heart"
 
-section.about-page-photo-carousel
+section.photo-carousel.about-page-photo-carousel
   .photo: img src=image_url("about/1.jpg") alt=""/
   .photo: img src=image_url("about/2.jpg") alt=""/
   .photo: img src=image_url("about/3.jpg") alt=""/
@@ -69,21 +69,49 @@ section.about-page-team-section#team
             figure
               a href="javascript:void(0)"
                 .img-container
-                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || asset_path('paw.png')}';"
+                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
                   - if member[:linkedin] || member[:website]
                     .member-links
                       - if member[:linkedin]
-                        a href="https://linkedin.com/in/#{member[:linkedin]}"
+                        a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
                           img src=image_url("icons/linkedin.svg") alt=""/
                       - if member[:website]
-                        a href="//#{member[:website]}"
+                        a href="//#{member[:website]}" target="_blank"
                           img src=image_url("icons/website.svg") alt=""/
                 figcaption
                   .name
                     = "#{member[:first_name]} #{member[:last_name]}"
                   .position = member[:role]
-        - (0...5 - t("members").length % 5).each do |member|
+        - (0...5 - t("members").length % 3).each do |member|
           li.about-page-member-item
+
+
+section.about-page-team-section#team
+  .container
+    h2.static-page-header.marginBot-lg Alumni
+    .about-page-members
+      ul
+        - t("alumni").each do |member|
+          li.about-page-member-item
+            figure
+              a href="javascript:void(0)"
+                .img-container
+                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
+                  - if member[:linkedin] || member[:website]
+                    .member-links
+                      - if member[:linkedin]
+                        a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
+                          img src=image_url("icons/linkedin.svg") alt=""/
+                      - if member[:website]
+                        a href="//#{member[:website]}" target="_blank"
+                          img src=image_url("icons/website.svg") alt=""/
+                figcaption
+                  .name
+                    = "#{member[:first_name]} #{member[:last_name]}"
+                  .position = member[:role]
+        - (0...5 - t("members").length % 3).each do |member|
+          li.about-page-member-item
+
 
 javascript:
   $(".read-more").click(function() {

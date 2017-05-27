@@ -139,6 +139,15 @@
   position: relative;
 }
 
+.npo-photo-carousel {
+  padding-top: 100px;
+  padding-bottom: 30px;
+
+  img {
+    width: 500px;
+  }
+}
+
 $timeline-num-width: 200px;
 .student-timeline {
   margin: 0 auto;
@@ -391,6 +400,11 @@ $timeline-num-width: 200px;
       max-width: 450px;
       width: 100%;
     }
+  }
+
+  .npo-photo-carousel {
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
 
   .npo-apply-quote {

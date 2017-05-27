@@ -100,21 +100,10 @@
 }
 
 .about-page-photo-carousel {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
   padding-top: 50px;
   padding-bottom: 20px;
-  padding-left: 10%;
 
   .photo {
-    height: 100%;
-    margin: 0 10px;
-
-    &:last-of-type {
-      padding-right: 70px;
-    }
-
     img {
       width: 600px;
       pointer-events: none;
@@ -174,7 +163,7 @@
   }
 
   .img-container {
-    background: $dark-gray-10;
+    background: $bp-blue-10;
     border-radius: 3px;
     height: 160px;
     margin-bottom: 8px;

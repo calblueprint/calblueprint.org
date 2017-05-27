@@ -107,9 +107,9 @@ javascript:
     document.querySelector(".pattern").classList.add("show");
     let pattern = this.getSVGDocument();
     pattern.querySelectorAll(".polygon").forEach((item) => {
-      item.style.transition = "150ms";
 
       item.addEventListener("mouseover", (event) => {
+        event.target.style.transition = "150ms";
         event.target.setAttribute("opacity", 0.6);
       })
 

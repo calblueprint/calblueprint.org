@@ -28,6 +28,9 @@ en:
     community: &community
       role: "Community Outreach Director"
 
+    design: &design
+      role: "Design Director"
+
     intersocietal: &intersocietal
       role: "Intersocietal Relations Director"
 
@@ -87,6 +90,13 @@ en:
       email: 'stnzheng@gmail.com'
       <<: *corporate
 
+    - first_name: 'Vanessa'
+      last_name: 'Ng'
+      email: 'vanesng96@berkeley.edu'
+      linkedin: 'vanesng'
+      website: 'vanesng.com'
+      <<: *design
+
     # Project Leaders
 
     - first_name: 'Casey'
@@ -107,6 +117,7 @@ en:
     - first_name: 'Peter'
       last_name: 'Veerman'
       email: 'peterkangveerman@berkeley.edu'
+      linkedin: 'peter-veerman'
       <<: *leader
 
     - first_name: 'Eric'
@@ -191,6 +202,7 @@ en:
     - first_name: 'Micah'
       last_name: 'Carroll'
       email: 'micah.d.carroll@gmail.com'
+      linkedin: 'micah-carroll'
       <<: *developer
 
     - first_name: 'Garrett'
@@ -201,16 +213,19 @@ en:
     - first_name: 'Jason'
       last_name: 'Bao'
       email: 'jzbao@berkeley.edu'
+      linkedin: 'jasonzb'
       <<: *developer
 
     - first_name: 'Nhi'
       last_name: 'Quach'
       email: 'nhiquach@berkeley.edu'
+      linkedin: 'nhiquach'
       <<: *developer
 
     - first_name: 'Amy'
       last_name: 'Shan'
       email: 'amyshan@berkeley.edu'
+      linkedin: 'shanamy'
       <<: *developer
 
     - first_name: 'Tony'

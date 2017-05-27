@@ -42,11 +42,17 @@ nav.bp-nav {
     }
   }
 
+  .mobile-nav-btn {
+    display: none;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
   .mobile-nav-close {
     color: white;
-    display: none;
-    width: 30px;
-    height: 30px;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -55,9 +61,6 @@ nav.bp-nav {
   .mobile-nav-show {
     color: white;
     font-size: 21px;
-    display: none;
-    width: 30px;
-    height: 30px;
     margin-left: auto;
   }
 
@@ -145,11 +148,7 @@ nav.bp-nav-fixed {
 
 @media (max-width: 700px) {
   nav.bp-nav {
-    .mobile-nav-show {
-      display: block;
-    }
-
-    .mobile-nav-close {
+    .mobile-nav-btn {
       display: block;
     }
 

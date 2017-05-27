@@ -1,6 +1,6 @@
 - project = (params[:current] == 'true' ? t("projects.current_projects.#{params[:slug]}") : t("projects.past_projects.#{params[:slug]}"))
 
-= render "header"
+= render "navbar"
 
 .container.project-article-container.marginTop-xl
   h1.static-page-header.marginBot-md = project[:title]

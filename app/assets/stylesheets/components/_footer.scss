@@ -1,7 +1,7 @@
 .bp-footer {
   background: $dark-gray;
   color: $white;
-  padding: 60px 0;
+  padding: 60px 0 30px;
 
   .container {
     display: flex;
@@ -62,6 +62,14 @@
     .fa {
       width: 25px;
     }
+  }
+
+  .footer-copyright {
+    color: $white-40;
+    display: block;
+    text-align: left;
+    padding-left: 25px;
+    margin-top: 20px;
   }
 }
 

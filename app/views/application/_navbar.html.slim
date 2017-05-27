@@ -4,10 +4,10 @@ nav.bp-nav[class="#{className ||= "default"}"]
       a href="/"
         .logo
         | Blueprint
-    .mobile-nav-show
+    button.mobile-nav-btn.mobile-nav-show
       .fa.fa-bars
     ul.link-container
-      .mobile-nav-close
+      button.mobile-nav-btn.mobile-nav-close
         img src=image_url("icons/close.svg") alt=""/
       li.nav-link
         = link_to "About", about_path
@@ -17,7 +17,7 @@ nav.bp-nav[class="#{className ||= "default"}"]
         = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank"
       li.nav-link
         - if current_nonprofit
-          = link_to "Apply", nonprofit_applications_path
+          = link_to "Your Dashboard", nonprofit_applications_path
         - else
           = link_to "Apply", apply_path
 
@@ -61,27 +61,5 @@ javascript:
   })
 
   $(".mobile-nav-show").click(function() {
-    console.log("hello")
     $(".link-container").addClass("mobile-show");
   })
-
-/ header.navigation role="banner"
-/   .navigation-wrapper
-/     = link_to root_path, class: "logo" do
-/       = image_tag "paw.png"
-/     a#js-mobile-menu.navigation-menu-button href="javascript:void(0)"  MENU
-/     nav role="navigation"
-/         li.nav-link
-/           = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "header-tab"
-/         li.nav-link
-/           = link_to "Contact", new_contact_form_path, class: "header-tab"
-/         - if current_nonprofit
-/           li.nav-link
-/             = link_to "Dashboard", nonprofit_applications_path, class: "header-tab"
-/         - if current_user
-/           li.nav-link
-/             = link_to "Log Out", destroy_user_session_path, class: "header-tab", method: :delete
-/         - if current_nonprofit
-/           = link_to "Apply", nonprofit_applications_path, class: "apply-button"
-/         - else
-/           = link_to "Apply", apply_path, class: "apply-button"

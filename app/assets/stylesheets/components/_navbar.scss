@@ -81,6 +81,7 @@ nav.bp-nav {
 
     a {
       color: inherit;
+      display: block;
       text-decoration: none;
     }
   }
@@ -172,6 +173,7 @@ nav.bp-nav-fixed {
       }
 
       li {
+        animation: none !important;
         color: $white;
         font-size: 24px;
         font-weight: 500;

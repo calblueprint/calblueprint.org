@@ -143,7 +143,7 @@ $timeline-num-width: 200px;
 
 .student-timeline {
   margin: 0 auto;
-  width: 800px;
+  max-width: 800px;
 }
 
 .timeline-row {
@@ -353,4 +353,68 @@ $timeline-num-width: 200px;
 .npo-apply-previous-work-section {
   background: $off-white;
   padding: 70px 0 50px;
+}
+
+// Timeline
+@media (max-width: $breakpt-mobile) {
+  .num-col {
+    width: 100px;
+  }
+
+  .text-col {
+    margin-left: auto;
+    padding-right: 10px;
+    width: calc(100% - 120px);
+  }
+
+  .timeline-num {
+    font-size: 50px;
+    top: -20px;
+  }
+
+  .timeline-row-title {
+    margin-bottom: 5px;
+  }
+
+  .timeline-row-date {
+    margin-bottom: 10px;
+  }
+}
+
+
+// Nonprofits Page
+@media (max-width: $breakpt-mobile) {
+  .our-services-container {
+    display: block;
+
+    .item {
+      margin: 20px auto;
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+
+  .npo-apply-quote {
+    padding: 50px 0;
+
+    q {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// Students Page
+@media (max-width: $breakpt-mobile) {
+  .application-process-section {
+    padding: 50px 0;
+  }
+
+  .decision-criteria-item {
+    width: 45%;
+  }
+
+  .decision-criteria-list-container {
+    margin-bottom: 0;
+  }
 }

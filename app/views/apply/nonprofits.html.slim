@@ -160,3 +160,12 @@ section.application-newsletter
     h2.static-page-header.marginBot-md Get Involved
     p.static-page-desc.marginBot-lg = t ".newsletter"
     = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
+
+javascript:
+  $(document).ready(function(){
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
+    if (!isTouch) {
+      $(".npo-photo-carousel").kinetic();
+    }
+  });

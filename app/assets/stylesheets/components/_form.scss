@@ -37,7 +37,7 @@
     background: white;
     border: 1px solid $smoke;
     border-radius: 3px;
-    min-width: 300px;
+    min-width: 340px;
     padding: 8px;
     resize: vertical;
 
@@ -50,7 +50,8 @@
 
   textarea {
     min-height: 150px;
-    min-width: 600px;
+    max-width: 600px;
+    width: 100%;
   }
 
   .radio {
@@ -68,6 +69,19 @@
 
     input[type="checkbox"] {
       margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: $breakpt-mobile) {
+  .input-group {
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      max-width: none;
+      width: 100%;
     }
   }
 }

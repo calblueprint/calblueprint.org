@@ -82,11 +82,11 @@ section.about-page-team-section#team
                   .name
                     = "#{member[:first_name]} #{member[:last_name]}"
                   .position = member[:role]
-        - (0...5 - t("members").length % 3).each do |member|
+        - (0...(5 - t("members").length % 5)).each do |member|
           li.about-page-member-item
 
 
-section.about-page-team-section#team
+section.about-page-team-section
   .container
     h2.static-page-header.marginBot-lg Alumni
     .about-page-members
@@ -109,7 +109,7 @@ section.about-page-team-section#team
                   .name
                     = "#{member[:first_name]} #{member[:last_name]}"
                   .position = member[:role]
-        - (0...5 - t("members").length % 3).each do |member|
+        - (0...(5 - t("alumni").length % 5)).each do |member|
           li.about-page-member-item
 
 
@@ -121,5 +121,9 @@ javascript:
   })
 
   $(document).ready(function(){
-   $(".about-page-photo-carousel").kinetic();
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
+    if (!isTouch) {
+      $(".about-page-photo-carousel").kinetic();
+    }
   });

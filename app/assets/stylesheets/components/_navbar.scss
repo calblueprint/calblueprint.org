@@ -59,7 +59,7 @@ nav.bp-nav {
   }
 
   .mobile-nav-show {
-    color: white;
+    color: $bp-blue;
     font-size: 21px;
     margin-left: auto;
   }
@@ -98,6 +98,10 @@ nav.bp-nav.nav-white {
     a {
       color: $white;
     }
+  }
+
+  .mobile-nav-show {
+    color: white;
   }
 
   .logo {
@@ -142,7 +146,7 @@ nav.bp-nav-fixed {
   }
 
   .mobile-nav-show {
-    color: $dark-gray;
+    color: $bp-blue;
   }
 }
 

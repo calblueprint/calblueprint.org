@@ -50,9 +50,10 @@ section.application-our-services#our-services
         p = t ".services.mobile_application_development"
 
   .photo-carousel.npo-photo-carousel
-    .photo: img src=image_url("apply/nonprofits/carousel_1.jpg") alt=""/
-    .photo: img src=image_url("apply/nonprofits/carousel_2.jpg") alt=""/
-    .photo: img src=image_url("apply/nonprofits/nonprofits.jpg") alt=""/
+    .wrapper
+      .photo: img src=image_url("apply/nonprofits/carousel_1.jpg") alt=""/
+      .photo: img src=image_url("apply/nonprofits/carousel_2.jpg") alt=""/
+      .photo: img src=image_url("apply/nonprofits/nonprofits.jpg") alt=""/
 
 section.application-process-section#application-process
   .container
@@ -166,6 +167,6 @@ javascript:
     var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 
     if (!isTouch) {
-      $(".npo-photo-carousel").kinetic();
+      $(".npo-photo-carousel .wrapper").kinetic();
     }
   });

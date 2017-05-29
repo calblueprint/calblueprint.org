@@ -47,11 +47,12 @@ section.about-page-values-section#values
         p.value-desc = t ".values.heart"
 
 section.photo-carousel.about-page-photo-carousel
-  .photo: img src=image_url("about/1.jpg") alt=""/
-  .photo: img src=image_url("about/2.jpg") alt=""/
-  .photo: img src=image_url("about/3.jpg") alt=""/
-  .photo: img src=image_url("about/4.jpg") alt=""/
-  .photo: img src=image_url("about/5.jpg") alt=""/
+  .wrapper
+    .photo: img src=image_url("about/1.jpg") alt=""/
+    .photo: img src=image_url("about/2.jpg") alt=""/
+    .photo: img src=image_url("about/3.jpg") alt=""/
+    .photo: img src=image_url("about/4.jpg") alt=""/
+    .photo: img src=image_url("about/5.jpg") alt=""/
 
 section.about-page-team-section#team
   .container
@@ -124,6 +125,6 @@ javascript:
     var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 
     if (!isTouch) {
-      $(".about-page-photo-carousel").kinetic();
+      $(".about-page-photo-carousel .wrapper").kinetic();
     }
   });

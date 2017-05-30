@@ -14,7 +14,7 @@ en:
         link: https://www.re-plate.org
         github_link: https://github.com/calblueprint/replate-business
         color: 29B681
-        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/replate_banner.png
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/images/replate_banner.jpg
         full_description: |
           The Problem
           -----------
@@ -39,7 +39,7 @@ en:
         link: http://lavamae.herokuapp.com/
         github_link: https://github.com/calblueprint/lavamae
         color: 16ACE6
-        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/lavamae_banner.png
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/images/lavamae_banner.jpg
         full_description: |
           The Problem
           -----------
@@ -63,7 +63,7 @@ en:
         link: http://ros-student-staging.herokuapp.com/
         github_link: https://github.com/calblueprint/ros-student
         color: BFA325
-        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/ros_student_banner.png
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/images/ros_student_banner.jpg
         full_description: |
           The Problem
           -----------
@@ -88,7 +88,7 @@ en:
           students from non-technical backgrounds.
         link: https://docs.google.com/a/berkeley.edu/document/d/1SYRloAtMdLOtpLKUseexAkrF-9dF86A5dC5Y1121Ffs/edit?usp=sharing
         color: 3C4858
-        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/data_science_banner.png
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/images/data_science_banner.jpg
         full_description: |
           The Problem
           -----------
@@ -113,7 +113,7 @@ en:
         link: http://forte-staging.herokuapp.com/
         github_link: https://github.com/calblueprint/forte
         color: F89406
-        banner_image: https://s3.amazonaws.com/calblueprint-prod/projects/banner_images/000/000/2016-2017/forte_banner.png
+        banner_image: https://s3.amazonaws.com/calblueprint-prod/images/forte_banner.jpg
         full_description: |
           The Problem
           -----------

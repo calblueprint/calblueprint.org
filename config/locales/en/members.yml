@@ -68,15 +68,22 @@ en:
       email: 'stnzheng@gmail.com'
       <<: *external
 
-    - first_name: 'Jonathan'
-      last_name: 'Chu'
-      email: 'jonmchu@berkeley.edu'
-      <<: *tech
+    - first_name: 'Jason'
+      last_name: 'Xie'
+      email: 'jasonxie9801@gmail.com'
+      <<: *internal
 
-    - first_name: 'Sonia'
-      last_name: 'Yang'
-      email: 'sonia.yang@berkeley.edu'
+    - first_name: 'Peter'
+      last_name: 'Veerman'
+      email: 'peterkangveerman@berkeley.edu'
+      linkedin: 'peter-veerman'
       <<: *projects
+
+    - first_name: 'Tony'
+      last_name: 'Yang'
+      email: 'tonyyanga@gmail.com'
+      linkedin: 'yucheng-tony-yang'
+      <<: *tech
 
     # External Team
 
@@ -108,31 +115,31 @@ en:
 
     # Project Leaders
 
-    - first_name: 'Casey'
-      last_name: 'Takahashi'
-      email: 'caseytaka@berkeley.edu'
+    - first_name: 'Nikita'
+      last_name: 'Rau'
+      email: 'raun@berkeley.edu'
       <<: *leader
 
-    - first_name: 'Ken'
-      last_name: 'Chen'
-      email: 'lbkchen@gmail.com'
+    - first_name: 'Helen'
+      last_name: 'Che'
+      email: 'helenc@berkeley.edu'
       <<: *leader
 
-    - first_name: 'Jason'
-      last_name: 'Xie'
-      email: 'jasonxie9801@gmail.com'
-      <<: *leader
-
-    - first_name: 'Peter'
-      last_name: 'Veerman'
-      email: 'peterkangveerman@berkeley.edu'
-      linkedin: 'peter-veerman'
-      <<: *leader
-
-    - first_name: 'Eric'
+    - first_name: 'Lois'
       last_name: 'Chang'
-      email: 'echang2013@berkeley.edu'
-      linkedin: 'eric1chang'
+      email: 'loischang@berkeley.edu'
+      <<: *leader
+
+    - first_name: 'Calvin'
+      last_name: 'Dong'
+      email: 'calvind777@gmail.com'
+      linkedin: 'calvindong'
+      <<: *leader
+
+    - first_name: 'Nhi'
+      last_name: 'Quach'
+      email: 'nhiquach@berkeley.edu'
+      linkedin: 'nhiquach'
       <<: *leader
 
     # Developers
@@ -144,11 +151,6 @@ en:
       website: 'amillman.github.io'
       <<: *developer
 
-    - first_name: 'Ying'
-      last_name: 'Luo'
-      email: 'ying.t.luo@gmail.com'
-      <<: *developer
-
     - first_name: 'Eric'
       last_name: 'Liang'
       email: 'liang.eric24@gmail.com'
@@ -156,14 +158,14 @@ en:
       website: 'ericls.com'
       <<: *developer
 
-    - first_name: 'Grace'
-      last_name: 'Noh'
-      email: 'gracesnoh@berkeley.edu'
+    - first_name: 'Jonathan'
+      last_name: 'Chu'
+      email: 'jonmchu@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Helen'
-      last_name: 'Che'
-      email: 'helenc@berkeley.edu'
+    - first_name: 'Sonia'
+      last_name: 'Yang'
+      email: 'sonia.yang@berkeley.edu'
       <<: *developer
 
     - first_name: 'Kelsey'
@@ -172,35 +174,14 @@ en:
       linkedin: 'kelseylam'
       <<: *developer
 
-    - first_name: 'Nikita'
-      last_name: 'Rau'
-      email: 'raun@berkeley.edu'
-      <<: *developer
-
     - first_name: 'Greta'
       last_name: 'Huang'
       email: 'gretahuang@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Calvin'
-      last_name: 'Dong'
-      email: 'calvind777@gmail.com'
-      linkedin: 'calvindong'
-      <<: *developer
-
-    - first_name: 'Jeff'
-      last_name: 'Gong'
-      email: 'jgong@berkeley.edu'
-      <<: *developer
-
     - first_name: 'Allan'
       last_name: 'Wu'
       email: 'allanlwu@gmail.com'
-      <<: *developer
-
-    - first_name: 'Lois'
-      last_name: 'Chang'
-      email: 'loischang@berkeley.edu'
       <<: *developer
 
     - first_name: 'Pooja'
@@ -219,22 +200,10 @@ en:
       linkedin: 'micah-carroll'
       <<: *developer
 
-    - first_name: 'Garrett'
-      last_name: 'Tan'
-      email: 'gtan@berkeley.edu'
-      linkedin: 'garretttan'
-      <<: *developer
-
     - first_name: 'Jason'
       last_name: 'Bao'
       email: 'jzbao@berkeley.edu'
       linkedin: 'jasonzb'
-      <<: *developer
-
-    - first_name: 'Nhi'
-      last_name: 'Quach'
-      email: 'nhiquach@berkeley.edu'
-      linkedin: 'nhiquach'
       <<: *developer
 
     - first_name: 'Amy'
@@ -243,45 +212,24 @@ en:
       linkedin: 'shanamy'
       <<: *developer
 
-    - first_name: 'Tony'
-      last_name: 'Yang'
-      email: 'tonyyanga@gmail.com'
-      linkedin: 'yucheng-tony-yang'
+    - first_name: 'Casey'
+      last_name: 'Takahashi'
+      email: 'caseytaka@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Ken'
+      last_name: 'Chen'
+      email: 'lbkchen@gmail.com'
       <<: *developer
 
     # Mentors
 
-    - first_name: 'Warren'
-      last_name: 'Shen'
-      email: 'warrenzshen@gmail.com'
-      <<: *mentor
-
-    - first_name: 'Soo'
-      last_name: 'Song'
-      email: 'soosong@berkeley.edu'
-      <<: *mentor
-
-    - first_name: 'Sam'
-      last_name: 'Lau'
-      email: 'samlau95@gmail.com'
-      <<: *mentor
-
     # Other positions:
-
-    - first_name: 'Kevin'
-      last_name: 'Wu'
-      email: 'kevintxwu@gmail.com'
-      <<: *historian
 
     - first_name: 'Isaiah'
       last_name: 'Yoon'
       email: 'isaiahyoon22@gmail.com'
       <<: *historian
-
-    - first_name: 'Vivek'
-      last_name: 'Raghuram'
-      email: 'vivekrag95@gmail.com'
-      <<: *expansion
 
   alumni:
 
@@ -299,6 +247,58 @@ en:
     - first_name: 'Charles'
       last_name: 'Xue'
       email: 'charlesx2013@gmail.com'
+      <<: *developer
+
+    - first_name: 'Warren'
+      last_name: 'Shen'
+      email: 'warrenzshen@gmail.com'
+      <<: *mentor
+
+    - first_name: 'Kevin'
+      last_name: 'Wu'
+      email: 'kevintxwu@gmail.com'
+      <<: *president
+
+    - first_name: 'Vivek'
+      last_name: 'Raghuram'
+      email: 'vivekrag95@gmail.com'
+      <<: *expansion
+
+    - first_name: 'Soo'
+      last_name: 'Song'
+      email: 'soosong@berkeley.edu'
+      <<: *mentor
+
+    - first_name: 'Sam'
+      last_name: 'Lau'
+      email: 'samlau95@gmail.com'
+      <<: *mentor
+
+    - first_name: 'Eric'
+      last_name: 'Chang'
+      email: 'echang2013@berkeley.edu'
+      linkedin: 'eric1chang'
+      <<: *leader
+
+    - first_name: 'Grace'
+      last_name: 'Noh'
+      email: 'gracesnoh@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Jeff'
+      last_name: 'Gong'
+      email: 'jgong@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Ying'
+      last_name: 'Luo'
+      email: 'ying.t.luo@gmail.com'
+      <<: *developer
+
+    - first_name: 'Garrett'
+      last_name: 'Tan'
+      email: 'gtan@berkeley.edu'
+      linkedin: 'garretttan'
       <<: *developer
 
     - first_name: 'Nishant'

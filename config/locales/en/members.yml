@@ -93,11 +93,9 @@ en:
       linkedin: 'vivianyao31'
       <<: *community
 
-    - first_name: 'Vanessa'
-      last_name: 'Ng'
-      email: 'vanesng96@berkeley.edu'
-      linkedin: 'vanesng'
-      website: 'vanesng.com'
+    - first_name: 'Pamela'
+      last_name: 'Hu'
+      email: 'pamelahu@berkeley.edu'
       <<: *design
 
     - first_name: 'Tao'
@@ -151,27 +149,25 @@ en:
       website: 'amillman.github.io'
       <<: *developer
 
-    - first_name: 'Eric'
-      last_name: 'Liang'
-      email: 'liang.eric24@gmail.com'
-      linkedin: 'ericls'
-      website: 'ericls.com'
-      <<: *developer
-
     - first_name: 'Jonathan'
       last_name: 'Chu'
       email: 'jonmchu@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Sonia'
-      last_name: 'Yang'
-      email: 'sonia.yang@berkeley.edu'
       <<: *developer
 
     - first_name: 'Kelsey'
       last_name: 'Lam'
       email: 'kelseylam@berkeley.edu'
       linkedin: 'kelseylam'
+      <<: *developer
+
+    - first_name: 'Ken'
+      last_name: 'Chen'
+      email: 'lbkchen@gmail.com'
+      <<: *developer
+
+    - first_name: 'Casey'
+      last_name: 'Takahashi'
+      email: 'caseytaka@berkeley.edu'
       <<: *developer
 
     - first_name: 'Greta'
@@ -212,14 +208,11 @@ en:
       linkedin: 'shanamy'
       <<: *developer
 
-    - first_name: 'Casey'
-      last_name: 'Takahashi'
-      email: 'caseytaka@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Ken'
-      last_name: 'Chen'
-      email: 'lbkchen@gmail.com'
+    - first_name: 'Vanessa'
+      last_name: 'Ng'
+      email: 'vanesng96@berkeley.edu'
+      linkedin: 'vanesng'
+      website: 'vanesng.com'
       <<: *developer
 
     # Mentors
@@ -232,6 +225,18 @@ en:
       <<: *historian
 
   alumni:
+
+    - first_name: 'Sonia'
+      last_name: 'Yang'
+      email: 'sonia.yang@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Eric'
+      last_name: 'Liang'
+      email: 'liang.eric24@gmail.com'
+      linkedin: 'ericls'
+      website: 'ericls.com'
+      <<: *developer
 
     - first_name: 'Daniel'
       last_name: 'Li'

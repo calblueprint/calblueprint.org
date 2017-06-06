@@ -21,10 +21,20 @@ en:
         mobile_application_development: >
           Mobile applications use the unique capabilities of phones to bring computing to many.
       application_timeline:
-        submission: Written application portal opened.
-        first_round: Applications are reviewed, feedback is given, then preliminary decisions are made.
-        interviews: Interviews are conducted to better understand project fit.
-        final_decisions: Each project leader chooses an organization and begins the project!
+        submission: >
+          Our written application portal opens. Simply make an account as a client and fill out an
+          application describing the kind of project you would like Blueprint to implement. If you have any
+          questions or concerns please email <a href="mailto:team@calblueprint.org">team@calblueprint.org</a>.
+        first_round: >
+          We close application submissions and will carefully read through all applications. Preliminary
+          decisions are made and thorough feedback is given.
+        interviews: >
+          In order to ensure project success, we conduct a comprehensive interview with you to better understand
+          project fit. Check out our <a href="#criteria">decision criteria</a> below!
+        final_decisions: >
+          If selected to work with Blueprint, your organization will have the opportunity to work with
+          us on a technological project over the course of a year. Once decisions are made, each project leader chooses an
+          organization and we begin the awesome journey!
       decision_criteria:
         description: >
           We want to help as many organizations as we possibly can. Unfortunately, we cannot take every

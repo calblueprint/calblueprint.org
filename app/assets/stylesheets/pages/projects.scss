@@ -4,6 +4,14 @@
   }
 }
 
+.project-hero {
+  background-image: image_url("projects/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .current-projects-section {
   background: $off-white;
   padding: 50px 0;

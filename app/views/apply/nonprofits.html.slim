@@ -66,16 +66,19 @@ section.application-process-section#application-process
           .timeline-num 01
         .text-col
           .timeline-row-title Application Open
-          .timeline-row-date June 21
+          .timeline-row-date June 6
           .timeline-row-description
-            = t ".application_timeline.submission"
+            = raw t ".application_timeline.submission"
+          .timeline-row-btn
+            - if @settings.npo_app_open
+              = link_to "View Application", nonprofit_applications_path, class: "bp-btn"
 
       .timeline-row
         .num-col
           .timeline-num 02
         .text-col
           .timeline-row-title Submission Deadline
-          .timeline-row-date Sept 4
+          .timeline-row-date July 23
           .timeline-row-description
             = t ".application_timeline.first_round"
 
@@ -84,20 +87,20 @@ section.application-process-section#application-process
           .timeline-num 03
         .text-col
           .timeline-row-title Interviews
-          .timeline-row-date Sept 9
+          .timeline-row-date July 24 - 29
           .timeline-row-description
-            = t ".application_timeline.interviews"
+            = raw t ".application_timeline.interviews"
 
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
           .timeline-row-title Final Decisions
-          .timeline-row-date Sept 12
+          .timeline-row-date July 31
           .timeline-row-description
             = t ".application_timeline.final_decisions"
 
-section.application-decision-criteria-section
+section.application-decision-criteria-section#criteria
   .container
     h2.static-page-header.marginBot-lg Decision Criteria
     p.static-page-desc.marginBot-xxl = t ".decision_criteria.description"

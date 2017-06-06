@@ -63,17 +63,16 @@ section.application-process-section#application-process
           .timeline-num 03
         .text-col
           .timeline-row-title Blueprint Games
-          .timeline-row-date Sept 9
-          .timeline-row-description
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cupiditate blanditiis autem quia fugit delectus obcaecati, omnis. Consequuntur quibusdam, nobis ullam earum ab vero, eaque sint qui asperiores aperiam, eos?
+          .timeline-row-date = t ".application_timeline.bp_games_date"
+          .timeline-row-description = t ".application_timeline.bp_games"
 
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
           .timeline-row-title Interviews
-          .timeline-row-date Sept 12
-          .timeline-row-description = t ".application_timeline.interview"
+          .timeline-row-date = t ".application_timeline.interview_date"
+          .timeline-row-description = raw t ".application_timeline.interview"
 
 section.application-decision-criteria-section#decision-criteria
   .container

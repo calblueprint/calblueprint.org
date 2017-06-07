@@ -103,9 +103,12 @@ section.application-process-section#application-process
 section.application-decision-criteria-section#criteria
   .container
     h2.static-page-header.marginBot-lg Decision Criteria
-    p.static-page-desc.marginBot-xxl = t ".decision_criteria.description"
+    p.static-page-desc.marginBot-lg = t ".decision_criteria.description"
+    = link_to SocialMediaUrls::NPO_EXAMPLE, class: "homepage-link marginBot-xl", target: "_blank"
+      | Sample Application
+      span.fa.fa-angle-right
 
-    ul.decision-criteria-list-container.npo-criteria-list
+    ul.decision-criteria-list-container.npo-criteria-list.marginTop-xl
       li.decision-criteria-item
         .img-container: img src=image_url("apply/nonprofits/impact.png") alt=""/
         h3 Impact

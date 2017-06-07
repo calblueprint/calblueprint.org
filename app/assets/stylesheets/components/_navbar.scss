@@ -1,0 +1,187 @@
+nav.bp-nav {
+  padding: 15px 0;
+  position: relative;
+  z-index: 10;
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .logo-container {
+    font-family: "Poppins", "Roboto";
+    font-size: 20px;
+    transition: 100ms;
+
+    a {
+      color: $bp-blue;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .logo {
+    background-image: image_url("logo.png");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    transition: 750ms;
+    vertical-align: middle;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+  .mobile-nav-btn {
+    display: none;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .mobile-nav-close {
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .mobile-nav-show {
+    color: $bp-blue;
+    font-size: 21px;
+    margin-left: auto;
+  }
+
+  .link-container {
+    color: $bp-blue;
+    display: flex;
+    font-family: $bptext-font;
+    font-weight: 600;
+    margin-left: auto;
+    text-transform: uppercase;
+
+    li {
+      color: $bp-blue-80;
+      margin: 0 15px;
+      transition: opacity 100ms;
+
+      &:hover {
+        color: $bp-blue;
+      }
+    }
+
+    a {
+      color: inherit;
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// For use on dark or colored backgrounds
+nav.bp-nav.nav-white {
+
+  .logo-container {
+    a {
+      color: $white;
+    }
+  }
+
+  .mobile-nav-show {
+    color: white;
+  }
+
+  .logo {
+    background-image: image_url("logo-white.png");
+  }
+
+  .link-container {
+    li {
+      color: $white-80;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.static-page-nav {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+nav.bp-nav-fixed {
+  animation: none;
+  background: white;
+  position: fixed !important;
+  transform: translateY(-100%);
+  transition: 150ms;
+  width: 100%;
+  visibility: hidden;
+
+  .nav-link {
+    animation: none !important;
+  }
+
+  &.nav-fixed-show {
+    box-shadow: 0 2px 15px $dark-gray-10;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .mobile-nav-show {
+    color: $bp-blue;
+  }
+}
+
+@media (max-width: 700px) {
+  nav.bp-nav {
+    .mobile-nav-btn {
+      display: block;
+    }
+
+    .link-container {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      padding: 20px;
+      padding-left: 20%;
+      padding-right: 60px;
+      background: $dark-gray;
+      transition: 200ms;
+      transform: translateY(-100%);
+
+      &.mobile-show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      li {
+        animation: none !important;
+        color: $white;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 5px 0;
+      }
+    }
+  }
+}

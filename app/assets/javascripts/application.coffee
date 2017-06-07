@@ -17,10 +17,13 @@
 #= require sky-labels
 #= require ./sky-labels-setup
 #= require vendor/toastr
+#= require vendor/scrolldrag
 #= require shared/utilities
 #= require shared/google-analytics
 #= require shared/header
 #= require shared/mailchimp
+#= require shared/static_hero_nav
+#= require bootstrap/dropdown
 #=
 #= require ./slider
 #= require_tree ./pages

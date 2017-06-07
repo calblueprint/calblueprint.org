@@ -1,126 +1,122 @@
-.students-banner
-  .banner-inner
-    h1.title = t ".headline"
-    p.subtitle = t ".subtitle"
-.white-bg
-  .spacer
-  - if @settings.student_app_open
-    .row
-      .small-12.medium-9.columns
-        p.hook = t ".hook"
-      .apply-button.small-12.medium-3.columns
-        = link_to "Apply Student Developer", new_student_application_path, class: "button"
-  - if @settings.external_app_open
-    .row
-      .small-12.medium-9.columns
-        p.hook = t ".hook"
-      .apply-button.small-12.medium-3.columns
-        = link_to "Apply External Team", new_external_application_path, class: "button"
-  - if !@settings.student_app_open && !@settings.external_app_open
-    .row
-      .small-12.medium-11.columns.small-centered
-        p.center = t ".hook"
-    .row
-      .small-12.medium-8.columns.small-centered
-        .applications-closed
-          p.center = t ".applications_closed"
-          = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID"
-  .spacer
-.gray-bg
-  .spacer
-  .row
-    .title-column
-      h2 Developer Application Process
-    .content-column
-      .small-12.columns
-        ul.timeline-vertical
-          li.work.timeline-row
-            .relative
-              h5.title Infosessions
-              span.date/
-              h5 Jan 9
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.information"
-          li.work.timeline-row
-            .relative
-              h5.title Applications Due
-              span.date/
-              h5 Jan 20
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.submission"
-          li.work.timeline-row
-            .relative
-              h5.title Interviews
-              span.date/
-              h5 Jan 27
-              h5 Jan 28
-              span.circle
-            .timeline-content
-              p = t ".application_timeline.final_decisions"
-      .small-12.columns.decision-criteria
-        .spacer-small
-        h4.title Decision Criteria
-        .spacer-small
-        p = t ".decision_criteria.description"
-        .spacer-small
-        ul
-          li
-            strong Passion
-            p This is the single most important criteria. Do you demonstrate a genuine passion for social good?
-            br
-          li
-            strong Skill
-            p Do you have the necessary skills to productively contribute to the mission?
-            br
-          li
-            strong Experience
-            p Do you have relevant work experience? Volunteering experience?
-            br
-          li
-            strong Attitude
-            p Do you demonstrate positive, hard-working attitude?
-            br
-          li
-            strong Teamwork
-            p Do you display the ability to work well in a team?
-            br
-          li
-            strong Culture
-            p Will you get along well with the rest of Blueprint? We’re sure you will!
-            br
-  .spacer
-  .row
-    .title-column
-      h2 FAQ
-    .content-column
-      #faq.small-12.columns
-        .drawer
-          h5
-            = t ".faq.q1.question"
-            span<
-              | (+)
-          p = t ".faq.q1.answer"
-        .drawer
-          h5
-            = t ".faq.q2.question"
-            span<
-              | (+)
-          p = t ".faq.q2.answer"
-        .drawer
-          h5
-            = t ".faq.q3.question"
-            span<
-              | (+)
-          p = t ".faq.q3.answer"
-  .spacer
-  .row
-    .small-12.columns
-      h2 Want to be involved?
-      p.subtitle Sign up for our newsletter to get updates about events, our work and applications!
-  .row
-    .small-8.small-centered.columns
-      = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
-  .spacer
-  .spacer-small
+= render "navbar", className: "nav-white", animate: true
+
+section.static-page-hero.student-apply-hero
+  .static-hero-gradient
+  .container
+    h1.static-page-title.marginBot-xl
+      = t ".headline"
+    p.static-page-subtitle.light.marginBot-lg
+      = t ".subtitle"
+    .static-page-hero-btn-container.marginTop-xl
+      - if @settings.student_app_open
+        = link_to "Apply Student Developer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
+      - if @settings.external_app_open
+        = link_to "Apply External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs"
+      - if !@settings.student_app_open && !@settings.external_app_open
+        p.hero-desc = t ".applications_closed"
+        = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
+
+  div.page-nav
+    .container
+      ul
+        li.page-nav-link section-name="application-process"
+          | Application Process
+        li.page-nav-link section-name="decision-criteria"
+          | Decision Criteria
+        li.page-nav-link section-name="faqs"
+          | FAQs
+
+section.application-process-section#application-process
+  .container
+    h2.static-page-header.marginBot-xxl Developer Application Process
+    .student-timeline
+      .timeline-row
+        .num-col
+          .timeline-num 01
+        .text-col
+          .timeline-row-title Infosessions
+          .timeline-row-date = t ".application_timeline.infosession_date"
+          .timeline-row-description = t ".application_timeline.infosession"
+          .timeline-row-btn
+            - if SocialMediaUrls::INFOSESSION_1
+              = link_to "Infosession #1", SocialMediaUrls::INFOSESSION_1, class: "bp-btn marginRight-xs", target: "_blank"
+            - if SocialMediaUrls::INFOSESSION_2
+              = link_to "Infosession #2", SocialMediaUrls::INFOSESSION_2, class: "bp-btn marginRight-xs", target: "_blank"
+            - if not SocialMediaUrls::INFOSESSION_1 and not SocialMediaUrls::INFOSESSION_2
+              .timeline-row-notice = t ".application_timeline.infosession_notice"
+
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
+          .timeline-row-title Applications Due
+          .timeline-row-date = t ".application_timeline.application_date"
+          .timeline-row-description = t ".application_timeline.application"
+          .timeline-row-btn
+            - if @settings.student_app_open
+              = link_to "Student Application", new_student_application_path, class: "bp-btn"
+            - else
+              .timeline-row-notice = raw t ".application_timeline.application_notice"
+
+      .timeline-row
+        .num-col
+          .timeline-num 03
+        .text-col
+          .timeline-row-title Blueprint Games
+          .timeline-row-date = t ".application_timeline.bp_games_date"
+          .timeline-row-description = t ".application_timeline.bp_games"
+
+      .timeline-row
+        .num-col
+          .timeline-num 04
+        .text-col
+          .timeline-row-title Interviews
+          .timeline-row-date = t ".application_timeline.interview_date"
+          .timeline-row-description = raw t ".application_timeline.interview"
+
+section.application-decision-criteria-section#decision-criteria
+  .container
+    h2.static-page-header.marginBot-lg Decision Criteria
+    p.static-page-desc.marginBot-xxl = t ".decision_criteria.description"
+
+    ul.decision-criteria-list-container.marginBot-lg
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/students/passion.png") alt=""/
+        h3 Passion
+        p Do you demonstrate a genuine passion for social good?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/students/skill.png") alt=""/
+        h3 Skill
+        p Do you have the necessary skills to productively contribute to the mission?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/students/experience.png") alt=""/
+        h3 Experience
+        p Do you have relevant work experience? Volunteering experience?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/students/attitude.png") alt=""/
+        h3 Attitude
+        p Do you demonstrate positive, hard-working attitude?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/students/teamwork.png") alt=""/
+        h3 Teamwork
+        p Do you display the ability to work well in a team?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/students/culture.png") alt=""/
+        h3 Culture
+        p Will you get along well with the rest of Blueprint? We’re sure you will!
+
+section.application-faqs-section#faqs
+  .container
+    h2.static-page-header.marginBot-xl Frequently Asked Questions
+    h3 = t ".faq.q1.question"
+    p = t ".faq.q1.answer"
+    h3 = t ".faq.q2.question"
+    p = t ".faq.q2.answer"
+    h3 = t ".faq.q3.question"
+    p = t ".faq.q3.answer"
+
+section.application-newsletter
+  .container
+    h2.static-page-header.marginBot-md Get Involved
+    p.static-page-desc.marginBot-lg = t ".newsletter"
+    = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"

@@ -1,116 +1,130 @@
-.about-banner
-  .banner-inner
-    h1.h0.about-banner__title = t ".headline"
-.white-bg
-  .spacer-adjust
-  .row
-    .small-12.medium-9.large-7.small-centered.columns.center
-      h2 The Mission
-      .spacer-small
-      p.mission = t ".mission"
-  .spacer
-  .about-detail-block.gray-bg
-    a#linkto-traits.prev
-    .row
-      .spacer
-      h2 Our Values
-      .medium-4.medium-offset-1.columns
-        .about-value
-          .icon-wrapper
-            .hover-icon
-              = image_tag("about/craft-hover.png", class: "icon-bottom")
-              = image_tag("about/craft.png", class: "icon-top")
-          .spacer-small
-      .medium-6.columns.value-blurb
-        .about-value
-          .spacer
-          p = t ".values.craft"
-          .spacer-small
-      .medium-1.columns
-    .row.culture-small
-      .medium-4.medium-offset-1.columns
-        .about-value
-          .icon-wrapper
-            .hover-icon
-              = image_tag("about/culture-hover.png", class: "icon-bottom")
-              = image_tag("about/culture.png", class: "icon-top")
-          .spacer-small
-      .medium-6.columns.value-blurb
-        .about-value
-          .spacer
-          p = t ".values.culture"
-          .spacer-small
-      .medium-1.columns
-    .row.culture-medium
-      .medium-6.medium-offset-1.columns
-        .about-value
-          .spacer
-          p.align-right = t ".values.culture"
-          .spacer-small
-      .medium-4.columns
-        .about-value
-          .icon-wrapper
-            .hover-icon
-              = image_tag("about/culture-hover.png", class: "icon-bottom")
-              = image_tag("about/culture.png", class: "icon-top")
-          .spacer-small
-      .medium-1.columns
-    .row
-      .medium-4.medium-offset-1.columns
-        .about-value
-          .icon-wrapper
-            .hover-icon
-              = image_tag("about/heart-hover.png", class: "icon-bottom")
-              = image_tag("about/heart.png", class: "icon-top")
-          .spacer-small
-      .medium-6.columns.value-blurb
-        .about-value
-          .spacer
-          p = t ".values.heart"
-          .spacer-small
-      .medium-1.columns
-    .spacer-about
-    .spacer-about
-  .spacer
-  #team.about-team-block
-    .row
-      .small-9.small-centered.columns
-        h2.team-title = t ".team.title"
-        .spacer-small
-        p = t ".team.description"
-        p
-    .spacer-about
-    .row
-      .small-12.small-centered.columns
-        ul.team-pictures.medium-block-grid-4.small-block-grid-2
-          - t("members").each do |member|
-            li.team-picture-item
-              figure.effect-sadie
-                a href="javascript:void(0)"
-                  div.member-image
-                    = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || asset_path('paw.png')}';"
-                  figcaption
-                    .member-description
-                      .name
-                        b = "#{member[:first_name]} #{member[:last_name]}"
-                      .position = member[:role]
-    .spacer-small
-    .row
-      .small-9.small-centered.columns
-        h2.team-title-2 Alumni
-        .spacer-about
-    .row
-      .small-12.small-centered.columns
-        ul.team-pictures.medium-block-grid-4.small-block-grid-2
-          - t("alumni").each do |alum|
-            li.team-picture-item
-              figure.effect-sadie
-                a href="javascript:void(0)"
-                  div.member-image
-                    = image_tag gravatar_url(alum[:email]), onError: "this.onerror=null;this.src='#{alum[:image] || asset_path('paw.png')}';"
-                  figcaption
-                    .member-description
-                      .name
-                        b = "#{alum[:first_name]} #{alum[:last_name]}"
-                      .position = alum[:role]
-    .spacer-about-bot
+= render "navbar", className: "nav-white", animate: true
+
+section.static-page-hero.about-page-hero
+  .static-hero-gradient
+  .container
+    h1.static-page-title.marginBot-xl
+      = t ".headline"
+    p.static-page-subtitle.light
+      = t ".subtitle"
+    .static-page-hero-btn-container.marginTop-xl
+      button.bp-btn.btn-white.btn-lg.read-more Read More
+
+  div.page-nav
+    .container
+      ul
+        li.page-nav-link section-name="mission"
+          | Mission
+        li.page-nav-link section-name="values"
+          | Values
+        li.page-nav-link section-name="team"
+          | The Team
+
+section.about-page-mission-section#mission
+  .container
+    h2.static-page-header.marginBot-md Our Mission Statement
+    p.mission = t ".mission"
+  .about-page-oval
+
+section.about-page-values-section#values
+  .container
+    .img-container: img src=image_url("home/group_photo.jpg") alt=""/
+    h2.static-page-header.marginBot-md Our Values
+    .values-container
+      .value
+        div.value-num 01
+        h3.value-title Craft
+        p.value-desc = t ".values.craft"
+
+      .value
+        div.value-num 02
+        h3.value-title Culture
+        p.value-desc = t ".values.culture"
+
+      .value
+        div.value-num 03
+        h3.value-title Heart
+        p.value-desc = t ".values.heart"
+
+section.photo-carousel.about-page-photo-carousel
+  .wrapper
+    .photo: img src=image_url("about/1.jpg") alt=""/
+    .photo: img src=image_url("about/2.jpg") alt=""/
+    .photo: img src=image_url("about/3.jpg") alt=""/
+    .photo: img src=image_url("about/4.jpg") alt=""/
+    .photo: img src=image_url("about/5.jpg") alt=""/
+
+section.about-page-team-section#team
+  .container
+    h2.static-page-header.marginBot-lg The Team
+    / .about-page-team-tab
+    /   ul
+    /     li.active Current Team
+    /     li 2015-2016
+    /     li 2014-2015
+    /     li 2013-2014
+    .about-page-members
+      ul
+        - t("members").each do |member|
+          li.about-page-member-item
+            figure
+              a href="javascript:void(0)"
+                .img-container
+                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
+                  - if member[:linkedin] || member[:website]
+                    .member-links
+                      - if member[:linkedin]
+                        a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
+                          img src=image_url("icons/linkedin.svg") alt=""/
+                      - if member[:website]
+                        a href="//#{member[:website]}" target="_blank"
+                          img src=image_url("icons/website.svg") alt=""/
+                figcaption
+                  .name
+                    = "#{member[:first_name]} #{member[:last_name]}"
+                  .position = member[:role]
+        - (0...(5 - t("members").length % 5)).each do |member|
+          li.about-page-member-item
+
+
+section.about-page-team-section
+  .container
+    h2.static-page-header.marginBot-lg Alumni
+    .about-page-members
+      ul
+        - t("alumni").each do |member|
+          li.about-page-member-item
+            figure
+              a href="javascript:void(0)"
+                .img-container
+                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
+                  - if member[:linkedin] || member[:website]
+                    .member-links
+                      - if member[:linkedin]
+                        a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
+                          img src=image_url("icons/linkedin.svg") alt=""/
+                      - if member[:website]
+                        a href="//#{member[:website]}" target="_blank"
+                          img src=image_url("icons/website.svg") alt=""/
+                figcaption
+                  .name
+                    = "#{member[:first_name]} #{member[:last_name]}"
+                  .position = member[:role]
+        - (0...(5 - t("alumni").length % 5)).each do |member|
+          li.about-page-member-item
+
+
+javascript:
+  $(".read-more").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#mission").offset().top
+    }, 400);
+  })
+
+  $(document).ready(function(){
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
+    if (!isTouch) {
+      $(".about-page-photo-carousel .wrapper").kinetic();
+    }
+  });

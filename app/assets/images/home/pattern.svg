@@ -1,0 +1,130 @@
+<svg width="2838" height="1326" viewBox="0 0 2838 1326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>pattern</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="matrix(2 0 0 2 2320 480)">
+<g id="pattern">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Rectangle">
+<use xlink:href="#path0_fill" transform="translate(-1167 -244)" fill="url(#paint0_linear)"/>
+</g>
+</mask>
+<g class="polygon" id="Polygon" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -779.12 -49.3544)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 18" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -894.156 151.604)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 22" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -893.679 18.2548)" fill="#4BE6FF" opacity="0.3"/>
+</g>
+<g class="polygon" id="Polygon Copy 23" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -894.348 -114.873)" fill="#FF9EF0" opacity="0.2"/>
+</g>
+<g class="polygon" id="Polygon Copy 32" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -1009.67 83.8472)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 8" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -318.023 -50.4563)" fill="#E6E156" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 16" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -318.023 83.1486)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 3" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -547.617 -49.7577)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 9" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -86.9972 -50.4563)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 28" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 28.9128 149.951)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 24" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -202.113 150.348)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 7" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -547.617 83.8472)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 10" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -86.9972 83.1486)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 25" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -201.158 283.953)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -663.735 -116.304)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 19" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -778.842 84.9694)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 4" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -433.536 -117.259)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 12" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 28.516 -117.259)" fill="#4BE6FF" opacity="0.2"/>
+</g>
+<g class="polygon" id="Polygon Copy 29" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 144.029 83.1486)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 35" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 258.587 -116.304)" fill="#FFFFFF" opacity="0.2"/>
+</g>
+<g class="polygon" id="Polygon Copy 34" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 258.587 -249.909)" fill="#4BE6FF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 33" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 143.074 -184.061)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 6" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -549.049 -183.107)" fill="#FFFFFF" opacity="0.2"/>
+</g>
+<g class="polygon" id="Polygon Copy 13" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -86.9972 -184.061)" fill="#FFFFFF" opacity="0.2"/>
+</g>
+<g class="polygon" id="Polygon Copy 2" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -663.607 17.4481)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 21" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -663.322 151.383)" fill="#FFFFFF" opacity="0.2"/>
+</g>
+<g class="polygon" id="Polygon Copy 36" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -663.607 284.51)" fill="#E6E156" opacity="0.2"/>
+</g>
+<g class="polygon" id="Polygon Copy 20" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -778.835 218.185)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 31" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -1011.58 218.259)" fill="#FFFFFF" opacity="0.3"/>
+</g>
+<g class="polygon" id="Polygon Copy 14" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -202.51 16.3461)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 26" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -316.671 217.151)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 5" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -432.581 16.3461)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 17" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -432.581 149.951)" fill="#C5C5C5" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 15" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 28.516 16.3461)" fill="#FFFFFF" opacity="0.1"/>
+</g>
+<g class="polygon" id="Polygon Copy 30" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 143.471 216.754)" fill="#28E1FF" opacity="0.3"/>
+</g>
+<g class="polygon" id="Polygon Copy 27" mask="url(#mask0_alpha)">
+<use xlink:href="#path1_fill" transform="matrix(6.12536e-17 1 -1 6.12111e-17 -85.6454 217.151)" fill="#C5C5C5" opacity="0.4"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1223.22 425.083 -905.117 574.477 129.02 167.717)">
+<stop offset="0" stop-color="#EEEEEE" stop-opacity="0.399938"/>
+<stop offset="0.720324" stop-color="#E8E8E8" stop-opacity="0.238338"/>
+<stop offset="1" stop-color="#D8D8D8" stop-opacity="0.693671"/>
+</linearGradient>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 1433 0L 1433 673L 0 673L 0 0Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 73.9599 0L 138.011 36.9928L 138.011 110.978L 73.9599 147.971L 9.90874 110.978L 9.90874 36.9928L 73.9599 0Z"/>
+</defs>
+</svg>

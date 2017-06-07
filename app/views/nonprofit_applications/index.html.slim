@@ -1,26 +1,30 @@
-.row
-  .banner
-    .banner-text
-      .spacer
-      h1 #{current_user.organization_name} Proposals
-.spacer-small
-.row
-  .medium-6.small-12.columns
-    table
-      tr
-        th DRAFT PROPOSALS
-      - @nonprofit_applications.each do |na|
-        - if na.draft?
-          tr
-            td = link_to "Continue proposal last updated #{na.updated_at.localtime.strftime("%B %d, %Y")}", edit_nonprofit_application_path(id: na.id)
-      tr
-        td = link_to "Begin New Proposal", new_nonprofit_application_path
-  .medium-6.small-12.columns
-    table
-      tr
-        th SUBMITTED PROPOSALS
-      - @nonprofit_applications.each do |na|
-        - if na.submitted?
-          tr
-            td = link_to "Revise proposal submitted on #{na.submitted_at.localtime.strftime("%B %d, %Y")}", nonprofit_application_revise_path(nonprofit_application_id: na.id)
-.spacer
+= render "navbar"
+
+.npo-application-home-container.container
+  h1.npo-application-header.marginBot-lg Your Project Proposals
+
+  - if @nonprofit_applications.empty?
+    p.static-page-desc.marginBot-md = t ".empty_state"
+    = link_to "Begin New Proposal", new_nonprofit_application_path, class: "bp-btn"
+
+  - else
+    - if @num_submitted != 0
+      .marginBot-xxl
+        h2.npo-application-subheader Submitted Proposals
+        p.static-page-desc.marginBot-sm These are proposals that you've submitted. You can always edit your proposal by clicking below. We will review proposals and get back to you shortly!
+        - @nonprofit_applications.each do |na|
+          - if na.submitted?
+            div
+              = link_to "Proposal submitted on #{na.submitted_at.localtime.strftime("%B %d, %Y at %I:%M")}", nonprofit_application_revise_path(nonprofit_application_id: na.id)
+    .marginBot-lg
+      h2.npo-application-subheader Draft Proposals
+      - if @num_draft == 0
+        p.static-page-desc You don't have any drafts.
+      - else
+        p.static-page-desc.marginBot-sm These are proposals that you've started, but haven't submitted yet.
+        - @nonprofit_applications.each do |na|
+          - if na.draft?
+            div
+              = link_to "Continue proposal last updated #{na.updated_at.localtime.strftime("%B %d, %Y at %I:%M")}", edit_nonprofit_application_path(id: na.id)
+      div.marginTop-lg
+        = link_to "Begin New Proposal", new_nonprofit_application_path

@@ -7,7 +7,7 @@ en:
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
-      # html: '<abbr title="required">*</abbr>'
+      html: '<span class="required-symbol" title="required">*</span>'
     error_notification:
       default_message: "Please review the problems below:"
     # Labels and hints examples
@@ -24,20 +24,20 @@ en:
         purpose: What is your organization’s mission statement?
         cs169_pool: >
           Do you want your application to be considered for <a target="_blank"
-          href="https://sites.google.com/site/ucbsaas/project/external-customer">CS
+          href="https://sites.google.com/site/ucbsaas/faq/external-customer">CS
           169</a>?
         history: >
           Give us a brief history of your organization. Tell us about some of your
           organization’s key accomplishments.
         date_established: When was your organization established?
-        legal: Is your organization a 501(c)3?
-        short_summary: Give us a two sentence summary of your project. (255 characters max)
+        legal: Is your organization a 501(c)(3)?
+        short_summary: Give us a two sentence summary of your project.
         goals: What are the goals of this project, and what problems does it address?
         key_features: >
           What are some of the key features of this project,
           and how do they help achieve the goals you mentioned above?
         devices: >
-          On what devices do you expect it to work? Check all that apply.
+          On what devices do you expect it to work?
         target_audience: >
           What is the target audience for this project? How large would you estimate
           this audience to be?
@@ -46,6 +46,15 @@ en:
           Does your project have any specific technical requirements (such as Salesforce,
           or a strong preference to use Django)?
         client_status: Are you a returning CS169 customer from past semesters?
+
+    hints:
+      nonprofit_application:
+        cs169_pool: If you choose yes, your project will also be submitted to UC Berkeley's CS169 class. Students in the course will develop your requested application for their class project.
+        client_status: >
+          Please be sure to review <a target="_blank" href="https://sites.google.com/site/ucbsaas/faq/external-customer">these</a> guidelines to confirm if your project qualifies for CS169.
+        devices: Check all that apply.
+        short_summary: 255 characters max
+
 
     # placeholders:
     #   defaults:

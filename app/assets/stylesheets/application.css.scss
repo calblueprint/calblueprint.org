@@ -1,36 +1,37 @@
-// Vendor
+// New Styles Here
+
+// Vendor -------------------------
+
+// Import Bootstrap grid
+@import "bootstrap-sprockets";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/grid";
+@import "bootstrap/dropdowns";
+
+// Reset browser-specific CSS
 @import "vendor/normalize";
-@import "bourbon";
-@import "neat";
-@import "sky-labels";
-@import "vendor/base/base";
-@import "vendor/grid";
+@import "partials/reset";
+
+// FontAwesome
+@import "font-awesome";
+
+// Other
 @import "vendor/toastr";
-@import "vendor/hint";
-@import "vendor/timeline";
-@import "vendor/devices";
 
-// Shared
-@import "shared/general";
-@import "shared/banner";
-@import "shared/flash";
-@import "shared/header";
-@import "shared/tables";
-@import "shared/footer";
-@import "shared/icons";
-@import "shared/tooltips";
-@import "shared/gear-img";
+
+// Stylesheets --------------------
+
+// Partials
+@import "partials/variables";
+@import "partials/animations";
+@import "partials/fonts";
+@import "partials/layout";
+
+// Styles
+@import "components/*";
+
+@import "pages/*";
+@import "apply/*";
+@import "nonprofit_applications/*";
 @import "shared/newsletter-subscribe";
-
-// Page specific
-@import "pages/home";
-@import "pages/about";
-@import "pages/sponsors";
-@import "contact_forms/new";
-@import "apply/apply";
-@import "apply/new_application";
-@import "applicants/sessions/new";
-@import "projects/banners";
-@import "projects/cards";
-@import "projects/case-study";
-@import "nonprofit_applications/form";

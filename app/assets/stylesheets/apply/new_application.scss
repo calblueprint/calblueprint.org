@@ -1,106 +1,37 @@
-// Application Page CSS
-.student-apply-banner {
-  @include banner(image-url("apply/students/banner.png"),
-    $height: 260px,
-    $tint: rgba(53, 53, 53, 0.35));
-  @include media(max-width $medium-screen) {
-    @include banner(image-url("apply/students/banner.png"),
-      $height: 300px,
-      $tint: rgba(53, 53, 53, 0.35));
-  }
-  margin-bottom: 0;
-}
+.student_applications,
+.external_applications, {
 
-[for~="student_application_available_for_bp_games"] {
-  display: none;
-}
-
-.apply-section {
-  label {
-    padding-bottom: 1px;
+  .container {
+    max-width: 850px;
   }
 
-  .input.text.optional {
-    padding-top: 10px;
-  }
-
-  .text.control-label {
-    padding-bottom: 5px;
+  .form-container {
+    padding-top: 100px;
+    padding-bottom: 80px;
   }
 }
 
-.apply-form {
-  .input {
-    padding-bottom: 25px;
-  }
+.apply-page-header {
+  color: $dark-gray;
+  font-family: $bptext-font;
+  font-size: 38px;
+  font-weight: 600;
 
-  .text {
-    padding-bottom: 10px;
-  }
-
-  .date {
-    select {
-      text-align: center;
-      float: none;
-      display: inline-block;
-    }
+  & h2 {
+    color: $bp-blue;
+    font-size: 28px;
+    font-weight: 400;
   }
 }
 
-.apply-info {
-  background-color: $white;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-color: $light-gray;
-  border-radius: 0 2px 2px 0;
-  border-right-style: solid;
-  border-right-width: 1px;
-  height: 100%;
+.apply-page-due {
+  color: $bp-blue;
 }
 
-.edit-spacer {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-}
-
-.apply-info-section {
-  @extend .columns;
-  @extend .small-12;
-  @extend .medium-6;
-  @extend .large-6;
-
-  strong {
-    line-height: 1.8em;
-  }
-
-  .apply-info-section-icon {
-    background-size: cover;
-    height: 32px;
-    margin: 24px auto 12px;
-    width: 32px;
-  }
-
-  .apply-info-section-text {
-    color: $dark-gray;
-    font-size: 16px;
-    line-height: 20px;
-    margin: 16px auto 52px;
-    text-align: center;
-    width: 80%;
-  }
-
-  .problem-icon {
-    @extend .apply-info-section-icon;
-    background-image: image-url("projects/problem.png");
-  }
-
-  .calendar-icon {
-    @extend .apply-info-section-icon;
-    background-image: image-url("apply/students/calendar.png");
-  }
-}
-
-.greyed {
-  color: #bbb;
+.apply-page-more-questions {
+  color: $dark-gray;
+  font-family: $bptext-font;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 60px;
 }

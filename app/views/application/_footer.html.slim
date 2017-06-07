@@ -1,48 +1,39 @@
-.footer
-  .footer__items
-    .footer__link-column
-      .footer__header General
-      .footer__links
-        = link_to "About", about_path, class: 'footer__link'
-        = link_to "Team", about_path(anchor: "team"), class: 'footer__link'
-        = link_to "Contact", new_contact_form_path, class: 'footer__link'
-        = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: 'footer__link'
-        = link_to "Projects", projects_path, class: 'footer__link'
-
-    .footer__link-column
-      .footer__header Students
-      .footer__links
-        = link_to "Apply", students_apply_path, class: 'footer__link'
-        = link_to "FAQ", students_apply_path(anchor: "faq"), class: 'footer__link'
-
-    .footer__link-column
-      .footer__header Nonprofits
-      .footer__links
-        = link_to "Apply", nonprofits_apply_path, class: 'footer__link'
-        = link_to "Login", new_nonprofit_session_path, class: 'footer__link'
-        = link_to "Process", nonprofits_apply_path(anchor: "process"), class: 'footer__link'
-        = link_to "FAQ", nonprofits_apply_path(anchor: "faq"), class: 'footer__link'
-
-    .footer__link-column
-      .footer__header Sponsors
-      .footer__links
-        .tooltip-item.footer__greyed-out
-          | Contribute
-          .tooltip
-            p Pardon our dust, this is still under construction.
-
-    .footer__newsletter-form
-      = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
-      .footer__newsletter-text Sign up for our newsletter to get updates about events, work, and applications!
-
-  .footer__icons
-    .footer__copyright
-      | © Blueprint 2015
-    = link_to SocialMediaUrls::FACEBOOK, class: 'footer__icon', target: "_blank" do
-      i.fa.fa-facebook-f
-    = link_to SocialMediaUrls::TWITTER, class: 'footer__icon', target: "_blank" do
-      i.fa.fa-twitter
-    = link_to SocialMediaUrls::GITHUB, class: 'footer__icon', target: "_blank" do
-      i.fa.fa-github-alt
-    = link_to SocialMediaUrls::MEDIUM, class: 'footer__icon', target: "_blank" do
-      i.fa.fa-medium
+.bp-footer
+  .container
+    .footer-col.footer-logo
+      .logo
+      h3 Blueprint
+    .footer-col
+      h4.footer-header General
+      = link_to "About", about_path, class: "footer-link"
+      = link_to "Team", about_path(anchor: "team"), class: "footer-link"
+      = link_to "Projects", projects_path, class: "footer-link"
+      = link_to "Contact", new_contact_form_path, class: "footer-link"
+      = link_to "Blog", SocialMediaUrls::MEDIUM, target: "_blank", class: "footer-link"
+    .footer-col
+      h4.footer-header Students
+      = link_to "Apply", students_apply_path, class: "footer-link"
+      = link_to "Process", students_apply_path(:anchor => "application-process"), class: "footer-link"
+      = link_to "FAQs", students_apply_path(:anchor => "faqs"), class: "footer-link"
+    .footer-col
+      h4.footer-header Nonprofits
+      = link_to "Apply", nonprofits_apply_path, class: "footer-link"
+      = link_to "Login", new_nonprofit_session_path, class: "footer-link"
+      = link_to "Process", nonprofits_apply_path(:anchor => "application-process"), class: "footer-link"
+      = link_to "FAQs", nonprofits_apply_path(:anchor => "faqs"), class: "footer-link"
+    .footer-col
+      h4.footer-header Social Media
+      = link_to SocialMediaUrls::FACEBOOK, class: "footer-link", target: "_blank"
+        i.fa.fa-facebook-f
+        | Facebook
+      = link_to SocialMediaUrls::TWITTER, class: "footer-link", target: "_blank"
+        i.fa.fa-twitter
+        | Twitter
+      = link_to SocialMediaUrls::GITHUB, class: "footer-link", target: "_blank"
+        i.fa.fa-github-alt
+        | Github
+      = link_to SocialMediaUrls::MEDIUM, class: "footer-link", target: "_blank"
+        i.fa.fa-medium
+        | Blog
+  .container.footer-copyright
+    | &copy; Blueprint 2017

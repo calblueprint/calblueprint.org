@@ -1,50 +1,121 @@
-#home-image.back-banner
-#home-banner.banner
-  h1.h0#home-title.white = t ".headline"
-  p#home-subtitle.white  = t ".subtitle"
-  .spacer-home
-  = link_to "Student Application", students_apply_path, class: "button home-button"
-.white-bg
-  .spacer
-  .row
-    .small-12.medium-9.large-7.small-centered.columns.center
-      h2 What We Do
-      .spacer-small
-      p
-        span.bold-blue = "Hi! "
-        span = t ".what_we_do"
-  .spacer-small
-  = link_to "Learn More", about_path, class: "button"
-  .spacer
-  .gray-bg
-    .spacer
-    .row
-      .medium-7.small-12.columns.center
-        #home-screen
-        / .device.nexus5
-        /   .top-bar
-        /   .sleep
-        /   .volume
-        /   .camera
-        /   .screen = image_tag "home/smartphone-content.png"
-      #our-projects.medium-5.small-12.columns.center
-        h2 Our Projects
-        .spacer-small
-        p = t ".our_projects"
-        .spacer-small
-        = link_to "See Our Work", projects_path, class: "button"
-      .medium-1.small-12.columns.center
-    .spacer
-  .spacer
-  .row
-    .medium-8.small-12.columns.small-centered.center
-      h2 Get Involved
-      .spacer-small
-      p = t ".get_involved"
-      .spacer-small
-      = link_to "For Nonprofits", nonprofits_apply_path, class: "button"
-      span.home-button-spacer
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      br.hide-on-medium-up
-      = link_to "For Students", students_apply_path, class: "button"
-  .spacer
+= render "navbar", className: "nav-white", animate: true
+
+section.home-section
+  .pattern: object id="pattern" data=image_path("home/pattern.svg") type="image/svg+xml"
+  .container
+    h1.main-title
+      = t ".headline"
+    p.main-subtitle
+      = t ".subtitle"
+    div.main-button-container
+      button.bp-btn.btn-white.btn-lg.marginRight-sm.learn-more Learn More
+      = link_to "Apply", apply_path, class: "bp-btn btn-white--clear btn-lg"
+
+section.about-section
+  .container
+    h2.static-page-header.marginBot-lg About Us
+    h3.homepage-mission-statement
+      = t ".what_we_do"
+    = link_to about_path, class: "homepage-link"
+      | Read More
+      span.fa.fa-angle-right
+
+section.projects-section
+  .container
+    h2.static-page-header.marginBot-lg Our Projects
+    p.static-page-desc.marginBot-xl
+      = t ".our_projects"
+    = link_to projects_path, class: "homepage-link marginBot-xl"
+      | View All Projects
+      span.fa.fa-angle-right
+
+  .projects-container
+    = link_to project_path("Lava Mae", :current => true)
+      .project-item#lavamae
+        .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
+        h4 Lava Mae
+        p Bringing humanity and collaboration through services for the homeless.
+    = link_to project_path("Re-Plate", :current => true)
+      .project-item#replate
+        .project-img.img-container: img src=image_url("home/replate.jpg") alt="" /
+        h4 Replate
+        p Reducing food waste and hunger in the community.
+    = link_to project_path("Roots of Success", :current => true)
+      .project-item#roots
+        .project-img.img-container: img src=image_url("home/roots.jpg") alt="" /
+        h4 Roots of Success
+        p Improving opportunities for people from underserved communities
+
+section.involve-section
+  .container
+    h2.static-page-header.marginBot-lg Get Involved
+    .involve-container.students-involve
+      .text.marginRight-xl
+        h4 Berkeley Students
+        p.static-page-desc.marginBot-lg
+          | Applications will open for student developers at the beginning of Fall semester. Follow our
+          a<> href="//facebook.com/calblueprint" Facebook page
+          | to stay updated!
+        = link_to students_apply_path, class: "homepage-link"
+          | Learn More
+          span.fa.fa-angle-right
+      .image.img-container.marginLeftRight-xl
+        img src=image_url("home/group_photo.jpg") alt=""/
+
+    .involve-container.npo-involve
+      .image.img-container.marginLeftRight-xl
+        img src=image_url("home/nonprofits.jpg") alt=""/
+      .text.marginLeft-xl
+        h4 Nonprofit Organizations
+        p.static-page-desc.marginBot-lg
+          | If you’re a nonprofit organization with a project in mind, we encourage you to apply! We accept NPO applications every June.
+        = link_to nonprofits_apply_path, class: "homepage-link"
+          | Learn More
+          span.fa.fa-angle-right
+
+    h4 Other Organizations
+    p.static-page-desc.marginBot-xl If your background isn’t a perfect fit for Blueprint, don’t worry! There are plenty of other student organizations at Berkeley that support nonprofits and social good.
+    .other-org-container
+      = link_to "http://theberkeleygroup.org/", target: "_blank", class: "org"
+        .img-container: img src=image_url("home/tbg.png") alt=""/
+        h5 The Berkeley Group
+        p Consulting for Non-Profits
+      = link_to "https://datasci.berkeley.edu/", target: "_blank", class: "org"
+        .img-container: img src=image_url("home/bids.png") alt=""/
+        h5 Berkeley Institute for Data Science (BIDS)
+        p Data science for social good
+
+section.contact-section
+  .container
+    h2.static-page-header.marginBot-lg Contact Us
+    .contact-items
+      h3.static-page-desc
+        | Couldn’t find what you needed? We’re easily reached via email or social media.
+      .contact-btns
+        = link_to "Email Us", new_contact_form_path, class: "bp-btn marginRight-xs"
+        a.bp-btn.btn-white href="https://facebook.com/calblueprint" target="_blank"
+          | Facebook Page
+
+javascript:
+  $(".learn-more").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".about-section").offset().top
+    }, 400);
+  })
+
+  document.getElementById("pattern").addEventListener("load", function() {
+    document.querySelector(".pattern").classList.add("show");
+    let pattern = this.getSVGDocument();
+    pattern.querySelectorAll(".polygon").forEach((item) => {
+
+      item.addEventListener("mouseover", (event) => {
+        event.target.style.transition = "150ms";
+        event.target.setAttribute("opacity", 0.6);
+      })
+
+      item.addEventListener("mouseout", (event) => {
+        const randOpacity = (Math.random() * 2 + 0.5) / 10;
+        event.target.setAttribute("opacity", randOpacity)
+      })
+    })
+  });

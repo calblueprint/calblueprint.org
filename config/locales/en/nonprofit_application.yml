@@ -1,11 +1,9 @@
 en:
   nonprofit_applications:
+    index:
+      empty_state: You haven't started or submitted an application yet! Click the button below to get started.
     edit:
       subtitle: We're looking forward to working with you.
-      cs169_disclaimer: >
-        Please be sure to review
-        <a target="_blank" href="https://sites.google.com/site/ucbsaas/project/external-customer">these</a>
-        guidelines to confirm if your project qualifies for CS 169.
     create:
       success: Application received! You should receive an email confirmation shortly.
     email:

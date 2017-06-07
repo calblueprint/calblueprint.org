@@ -1,207 +1,186 @@
-.nonprofits-banner
-  .banner-inner
-    h1.h0.title = t ".headline"
-.white-bg
-  .spacer
-  - if @settings.npo_app_open
-    .row
-      .small-12.medium-9.columns
-        p.hook = raw t ".hook"
-      .apply-button.small-12.medium-3.columns
-        = link_to "Apply as a Nonprofit", new_nonprofit_application_path, class: "button"
-  - else
-    - if @settings.cs169_app_open
-      .row
-        .small-12.medium-9.columns
-          p.hook = raw t ".cs169_hook"
-        .apply-button.small-12.medium-3.columns
-          - if @settings.cs169_app_open
-            = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "button calgold-button"
-    - else
-      .row
-        .small-12.medium-11.columns.small-centered
-          p.center = raw t ".hook"
-    .spacer-small
-    .row
-      .small-12.medium-9.columns.small-centered
-        .applications-closed
-          p.center = t ".applications_closed"
-          = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
-  .spacer
-.gray-bg
-  ul#apply_nav.submenu
-    li data-target="services" Our Services
-    li data-target="process" Application Process
-    li data-target="timeline" Project Timeline
-    li data-target="previous_work" Previous Work
-    li data-target="faq" FAQ
-  .spacer
-  .row
-    .title-column
-      h2#services.title
-        | Our
-        br/
-        | Services
-    .content-column
-      .row
-        .small-12.columns
-          p
-            strong Web Application Development
-            br/
-            = t ".services.web_application_development"
-      .spacer-small
-      .row
-        .small-12.columns
-          p
-            strong Mobile Application Development
-            br/
-            = t ".services.mobile_application_development"
-  .spacer
-  .row
-    .title-column
-      h2#process Application Process
-    .content-column
-      .row
-        .small-12.columns
-          ul.timeline-vertical
-            li.work.timeline-row
-              .relative
-                h5.title Application Open
-                span.date/
-                h5 Jun 21
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.submission"
-            li.work.timeline-row
-              .relative
-                h5.title Submission Deadline
-                span.date/
-                h5 Jul 23
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.first_round"
-            li.work.timeline-row
-              .relative
-                h5.title Organization Interviews
-                span.date/
-                h5 Jul 30
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.interviews"
-            li.work.timeline-row
-              .relative
-                h5.title Final Decisions
-                span.date/
-                h5 Aug 16
-                span.circle
-              .timeline-content
-                p = t ".application_timeline.final_decisions"
-      .row
-        .small-12.columns.decision-criteria
-          .spacer-small
-          h4.title Decision Criteria
-          .spacer-small
-          p = t ".decision_criteria.description"
-          .spacer-small
-          ul
-            li
-              strong Impact
-              p How much will your project impact the community?
-              br
-            li
-              strong Necessity
-              p How vital is your project to your non-profit organization?
-              br
-            li
-              strong Scope
-              p Is your project achievable within the alloted timeline?
-              br
-            li
-              strong Technical Fit
-              p Does your project use the capabilities of technology? For example, an application to manage a classroom is more interesting than a website redesign.
-              br
-            li
-              strong Credibility
-              p Is there evidence that your project will have an impact?
-  .spacer
-  .row
-    .small-12.columns
-      .quote-block
-        q = t ".quote.text"
-        h5.reference = t ".quote.reference"
-  .spacer
-  .row
-    .title-column
-      h2#timeline Project Timeline
-    .content-column
-      .row
-        .small-12.columns
-          ul.timeline-slim
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.spec"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.begin"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.midterm"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.user_iteration"
-            li.work.timeline-row
-              .relative
-                span.circle
-              .timeline-content
-                p = t ".timeline.deliver"
-  .spacer-large
-  .row
-    .title-column
-      h2#previous_work Previous Work
-    .content-column
-      .row
-        .small-12.small-centered.columns.center
-          .spacer-small
-          ul.small-block-grid-3.example-images
-            li
-              = image_tag "apply/nonprofits/elevate-africa.png"
-            li
-              = image_tag "apply/nonprofits/food-shift.png"
-            li
-              = image_tag "apply/nonprofits/worldreader.png"
-          = link_to "See More", projects_path, class: "button"
-  .spacer-large
-  .row
-    .title-column
-      h2#faq FAQ
-    .content-column
-      .row
-        #faq.small-12.columns
-          .drawer
-            h5
-              = t ".faq.q1.question"
-              span<
-                | (+)
-            p = t ".faq.q1.answer"
-          .drawer
-            h5
-              = t ".faq.q2.question"
-              span<
-                | (+)
-            p = t ".faq.q2.answer"
-          .drawer
-            h5
-              = t ".faq.q3.question"
-              span<
-                | (+)
-            p = t ".faq.q3.answer"
-  .spacer
-  .spacer-small
+= render "navbar", className: "nav-white", animate: true
+
+section.static-page-hero.npo-apply-hero
+  .static-hero-gradient
+  .container
+    h1.static-page-title.marginBot-xl
+      = t ".headline"
+    p.static-page-subtitle.light
+      = t ".subtitle"
+    .static-page-hero-btn-container.marginTop-xl
+      - if @settings.npo_app_open
+        - if current_nonprofit
+          = link_to "View Dashboard", nonprofit_applications_path, class: "bp-btn btn-white btn-lg"
+        - else
+          = link_to "Nonprofit Signup", new_nonprofit_registration_path, class: "bp-btn btn-white btn-lg marginRight-sm"
+          = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white--clear btn-lg"
+
+      - else
+        - if @settings.cs169_app_open
+          p.hero-desc = raw t ".cs169_hook"
+          = link_to "Apply to CS169", new_nonprofit_application_path(cs169: true), class: "bp-btn btn-white btn-lg"
+        - else
+          .applications-closed
+            p.hero-desc = t ".applications_closed"
+            = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
+
+  div.page-nav
+    .container
+      ul
+        li.page-nav-link section-name="our-services"
+          | Our Services
+        li.page-nav-link section-name="application-process"
+          | Application Process
+        li.page-nav-link section-name="previous-work"
+          | Previous Work
+        li.page-nav-link section-name="faqs"
+          | FAQs
+
+section.application-our-services#our-services
+  .container
+    h2.static-page-header.marginBot-xxl Our Services
+    .our-services-container
+      .item
+        .img-container: img src=image_url("apply/nonprofits/web.png") alt=""/
+        h3 Web Development
+        p = t ".services.web_application_development"
+      .item
+        .img-container: img src=image_url("apply/nonprofits/mobile.png") alt=""/
+        h3 Mobile Development
+        p = t ".services.mobile_application_development"
+
+  .photo-carousel.npo-photo-carousel
+    .wrapper
+      .photo: img src=image_url("apply/nonprofits/carousel_1.jpg") alt=""/
+      .photo: img src=image_url("apply/nonprofits/carousel_2.jpg") alt=""/
+      .photo: img src=image_url("apply/nonprofits/carousel_3.jpg") alt=""/
+      .photo: img src=image_url("apply/nonprofits/carousel_4.jpg") alt=""/
+      .photo: img src=image_url("apply/nonprofits/nonprofits.jpg") alt=""/
+
+section.application-process-section#application-process
+  .container
+    h2.static-page-header.marginBot-xxl Nonprofit Application Process
+    .npo-timeline
+      .timeline-row
+        .num-col
+          .timeline-num 01
+        .text-col
+          .timeline-row-title Application Open
+          .timeline-row-date June 6
+          .timeline-row-description
+            = raw t ".application_timeline.submission"
+          .timeline-row-btn
+            - if @settings.npo_app_open
+              = link_to "View Application", nonprofit_applications_path, class: "bp-btn"
+
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
+          .timeline-row-title Submission Deadline
+          .timeline-row-date July 23
+          .timeline-row-description
+            = t ".application_timeline.first_round"
+
+      .timeline-row
+        .num-col
+          .timeline-num 03
+        .text-col
+          .timeline-row-title Interviews
+          .timeline-row-date July 24 - 29
+          .timeline-row-description
+            = raw t ".application_timeline.interviews"
+
+      .timeline-row
+        .num-col
+          .timeline-num 04
+        .text-col
+          .timeline-row-title Final Decisions
+          .timeline-row-date July 31
+          .timeline-row-description
+            = t ".application_timeline.final_decisions"
+
+section.application-decision-criteria-section#criteria
+  .container
+    h2.static-page-header.marginBot-lg Decision Criteria
+    p.static-page-desc.marginBot-lg = t ".decision_criteria.description"
+    = link_to SocialMediaUrls::NPO_EXAMPLE, class: "homepage-link marginBot-xl", target: "_blank"
+      | Sample Application
+      span.fa.fa-angle-right
+
+    ul.decision-criteria-list-container.npo-criteria-list.marginTop-xl
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/nonprofits/impact.png") alt=""/
+        h3 Impact
+        p How much will your project impact the community?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/nonprofits/necessity.png") alt=""/
+        h3 Necessity
+        p How vital is your project to your non-profit organization?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/nonprofits/scope.png") alt=""/
+        h3 Scope
+        p Is your project achievable within the alloted timeline?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/nonprofits/technical_fit.png") alt=""/
+        h3 Technical Fit
+        p Does your project use the capabilities of technology?
+      li.decision-criteria-item
+        .img-container: img src=image_url("apply/nonprofits/credibility.png") alt=""/
+        h3 Credibility
+        p Is there evidence that your project will have an impact?
+      li.decision-criteria-item
+
+section.npo-apply-quote
+  .container
+    q = t ".quote.text"
+    h5.reference = t ".quote.reference"
+
+section.npo-apply-previous-work-section#previous-work
+  .container
+    h2.static-page-header.marginBot-lg Previous Work
+    p.static-page-desc.marginBot-lg Some of the applications we've developed for previous clients.
+    = link_to projects_path, class: "homepage-link marginBot-xl"
+      | View All Projects
+      span.fa.fa-angle-right
+    .projects-container
+      = link_to project_path("Lava Mae", :current => true)
+        .project-item#lavamae
+          .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
+          h4 Lava Mae
+          p Bringing humanity and collaboration through services for the homeless.
+      = link_to project_path("Re-Plate", :current => true)
+        .project-item#replate
+          .project-img.img-container: img src=image_url("home/replate.jpg") alt="" /
+          h4 Replate
+          p Reducing food waste and hunger in the community.
+      = link_to project_path("Roots of Success", :current => true)
+        .project-item#roots
+          .project-img.img-container: img src=image_url("home/roots.jpg") alt="" /
+          h4 Roots of Success
+          p Improving opportunities for people from underserved communities
+
+section.application-faqs-section#faqs
+  .container
+    h2.static-page-header.marginBot-xl Frequently Asked Questions
+    h3 = t ".faq.q1.question"
+    p = t ".faq.q1.answer"
+    h3 = t ".faq.q2.question"
+    p = t ".faq.q2.answer"
+    h3 = t ".faq.q3.question"
+    p = t ".faq.q3.answer"
+
+section.application-newsletter
+  .container
+    h2.static-page-header.marginBot-md Get Involved
+    p.static-page-desc.marginBot-lg = t ".newsletter"
+    = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
+
+javascript:
+  $(document).ready(function(){
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
+    if (!isTouch) {
+      $(".npo-photo-carousel .wrapper").kinetic();
+    }
+  });

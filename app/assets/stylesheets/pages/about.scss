@@ -1,357 +1,272 @@
-.about-banner {
-  @include banner(image-url("about/about.jpg"),
-    $height: 600px,
-    $tint: rgba(255, 255, 255, 0.2));
-  margin-bottom: 0;
-  background-position: center center;
+@media (min-width: 1200px) {
+  // Override bootstrap container style for about page
+  .pages-about .container {
+    width: 970px;
+  }
+}
+
+.pages-about {
+  .bp-nav {
+    @extend .static-page-nav;
+  }
+}
+
+.about-page-hero {
+  background-image: image_url("home/group_photo.jpg");
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-@include keyframes(FadeIn) {
-  0% {
-    opacity: 0;
-  }
 
-  100% {
-    opacity: 1;
-  }
-}
+.about-page-mission-section {
+  background: #F4F4F4;
+  overflow: hidden;
+  padding: 80px 0 430px;
+  position: relative;
+  text-align: center;
 
-.about-detail-block {
-  .about-value {
-    @extend .center;
-
-    .icon-wrapper {
-      color: $blue;
-      margin: auto;
-      width: 80%;
-      padding: 25px;
-    }
-
-    p {
-      margin: 0;
-      text-align: left;
-    }
+  .mission {
+    color: $dark-gray-70;
+    font-family: $bptext-font;
+    font-size: 29px;
+    margin: 0 auto;
+    max-width: 730px;
   }
 }
 
-.spacer-about {
-  height: 45px;
-  width: 100%;
+.about-page-oval {
+  background: white;
+  border-radius: 100%;
+  height: 350px;
+  width: 120%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
 }
 
-.spacer-about-bot {
-  height: 60px;
-  width: 100%;
-}
+.about-page-values-section {
+  position: relative;
+  padding: 100px 0 60px;
 
-.team-title-2 {
-  margin-top: -15px;
-}
-
-.about-title {
-  padding-top: 110px;
-}
-
-#about-padding {
-  padding-top: 250px;
-}
-
-.value-blurb {
-  @include media(max-width $medium-screen) {
-    padding: 40px 0 25px 0;
-    position: relative;
-    top: 50px;
-  }
-}
-
-.value-blurb p {
-  @include media(max-width $medium-screen) {
-    text-align: center !important;
-  }
-}
-
-.small-block-grid-2 > li {
-  @include media(max-width $medium-screen) {
+  .img-container {
+    box-shadow: 0 10px 40px $dark-gray-20;
+    border-radius: 4px;
+    margin: 0 auto;
+    max-width: 650px;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: -350px;
+    transform: translateX(-50%);
     width: 100%;
   }
-}
 
-.culture-small {
-  display: none;
+  .values-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
-  @include media(max-width $medium-screen) {
-    display: block;
+    .value {
+      position: relative;
+      width: 30%;
+    }
+
+    .value-num {
+      color: $bp-blue-10;
+      font-family: $bptext-font;
+      font-size: 80px;
+      font-weight: 600;
+      position: absolute;
+      top: -20px;
+    }
+
+    .value-title {
+      color: $bp-blue;
+      font-family: $bptext-font;
+      font-size: 26px;
+      font-weight: 600;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      margin-left: 50px;
+    }
+
+    .value-desc {
+      color: $dark-gray-60;
+    }
   }
 }
 
-.culture-medium {
-  display: block;
+.about-page-photo-carousel {
+  padding-top: 50px;
+  padding-bottom: 20px;
 
-  @include media(max-width $medium-screen) {
-    display: none;
+  .photo {
+    img {
+      width: 600px;
+      pointer-events: none;
+    }
   }
 }
 
-.about-team-block {
-  @extend .center;
+.about-page-team-section {
+  padding: 50px 0;
+}
 
-  ul.team-pictures {
-    li {
-      padding-bottom: 2em;
-      padding-left: 0;
+.about-page-team-tab {
+  margin-bottom: 60px;
 
-      a {
-        display: inline-block;
-        height: 100%;
-        position: relative;
-        border-radius: 6px;
-        overflow: hidden;
+  ul {
+    border-top: 1px solid $dark-gray-10;
+    display: flex;
+    flex-flow: row;
+  }
 
-        .member-image {
-          height: 200px;
-          width: 200px;
-        }
+  li {
+    color: $dark-gray-60;
+    margin: 0 8px;
+    margin-top: -1px;
+    padding: 10px;
 
-        .member-description {
-          color: transparent;
-          left: 13px;
-          position: absolute;
-          top: 10px;
-          width: 0;
-          z-index: 10;
+    &:first-of-type {
+      margin-left: 0;
+    }
 
-          .name {
-            font-weight: 600;
-            font-size: $h5-font-size;
-          }
-        }
+  }
+  li.active {
+    border-top: 1px solid $bp-blue;
+    color: $bp-blue;
+    font-weight: 600;
+  }
+}
 
-        &:hover {
-          .member-description {
-            color: $white;
-          }
-        }
+.about-page-members ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.about-page-member-item {
+  margin-bottom: 30px;
+  width: 17%;
+
+  &:hover .member-links {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .img-container {
+    background: $bp-blue-10;
+    border-radius: 3px;
+    height: 160px;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .member-links {
+    background: $white-80;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 150ms;
+    visibility: hidden;
+    width: 100%;
+
+    img {
+      color: black;
+      object-fit: inherit;
+      width: 25px;
+      margin: 0 7px;
+    }
+  }
+
+  .name {
+    font-family: $bptext-font;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .position {
+    color: $dark-gray-60;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $breakpt-mobile) {
+  .about-page-mission-section {
+    padding: 70px 0 370px;
+
+    .mission {
+      font-size: 24px;
+    }
+  }
+
+  .about-page-oval {
+    width: 150%;
+  }
+
+  .about-page-values-section {
+    padding-top: 60px;
+
+    .img-container {
+      height: 250px;
+      width: 90%;
+      top: -300px;
+    }
+
+    .values-container {
+      display: block;
+
+      .value {
+        width: 100%;
+      }
+
+      .value-title {
+        margin-left: 100px;
+        margin-top: 60px;
+      }
+
+      .value-num {
+        top: -55px;
       }
     }
   }
-}
 
-// Sam: We removed sponsors from this page.
-// .about-sponsor-block {
-//   background: #666;
+  .about-page-photo-carousel {
+    padding: 30px 0 20px 20px;
 
-//   h2.sponsor-title {
-//     @extend .center;
-//     color: $light-gray;
-//   }
+    .photo {
+      margin: 0 5px;
 
-//   ul.sponsor-list {
-//     padding: 0;
-
-//     li.sponsor-item {
-//       @extend .center;
-//       padding: 15px;
-//       display: inline-block;
-//       height: 150px;
-//       font: 0/0 a;
-
-//       &:before {
-//         content: ' ';
-//         display: inline-block;
-//         vertical-align: middle;  // vertical alignment of the inline element
-//         height: 100%;
-//       }
-
-//       a {
-//         display: inline-block;
-//         vertical-align: middle;
-//         font: 16px/1 Arial sans-serif;
-
-//         img {
-//           width: auto;
-//           max-height: 150px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-.hover-icon {
-  position: relative;
-
-  @include media(max-width $large-screen) {
-    img {
-      left: 0;
-      position: relative;
-    }
-
-    .icon-bottom {
-      opacity: 0;
-    }
-
-    img.icon-top:hover {
-      opacity: 1;
+      img {
+        width: 300px;
+      }
     }
   }
 
-  img {
-    @include transition(opacity 1s);
-    left: 0;
-    position: absolute;
+  .about-page-team-section {
+    padding: 30px 0;
+  }
 
-    &.icon-top:hover {
-      opacity: 0;
+  .about-page-member-item {
+    width: 31%;
+
+    .img-container {
+      height: 130px;
     }
   }
-}
-
-// NAVIGATION ARROW
-.nav-arrow {
-  display: block;
-  padding-left: 40%;
-  padding-top: 45%;
-  position: relative;
-
-  @include media(380px) {
-    padding-left: 45%;
-    padding-top: 27%;
-  }
-}
-
-.nav-circlepop {
-  position: relative;
-
-  a {
-    @include transform(translateY(-100%));
-    display: block;
-    height: 50px;
-    margin: -42px 14px;
-    outline: none;
-    position: absolute;
-    text-align: left;
-    top: 50%;
-    width: 50px;
-    z-index: 1000;
-
-    &.prev {
-      left: 0;
-    }
-
-    svg {
-      display: block;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    &::before {
-      @include transition(transform 0.3s);
-      @include transition(opacity 0.3s);
-      @include transform(scale(0.9));
-
-      background: $white;
-      border-radius: 50%;
-      content: "";
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-  }
-
-  .icon-wrap {
-    display: block;
-    height: 80%;
-    margin: 32% 0 0 33%;
-    position: relative;
-    width: 80%;
-
-    &::before,
-    &::after {
-      @include transition(transform 0.3s);
-      @include transition-property(background-color 0.3s);
-      @include backface-visibility(hidden);
-
-      background: $white;
-      content: "";
-      height: 50%;
-      left: 25%;
-      position: absolute;
-      width: 3px;
-    }
-  }
-
-  .icon-wrap::before {
-    @include transform(translateX(-50%) rotate(-60deg));
-    @include transform-origin(0 100%);
-  }
-
-  .icon-wrap::after {
-    @include transform(translateX(-50%) rotate(-120deg));
-    @include transform-origin(0 0);
-    top: 50%;
-  }
-
-  a:hover::before {
-    @include transform(scale(1));
-    opacity: 1;
-  }
-
-  a:hover .icon-wrap::before,
-  a:hover .icon-wrap::after {
-    background: $blue;
-  }
-
-  a:hover .icon-wrap::before {
-    @include transform(translateX(-50%) rotate(-45deg));
-  }
-
-  a:hover .icon-wrap::after {
-    @include transform(translateX(-50%) rotate(-135deg));
-  }
-}
-
-// SADIE EFFECTS TEST
-.effect-sadie {
-  margin: 0;
-}
-
-figure.effect-sadie figcaption::before {
-  @include background(linear-gradient(top, rgba(71, 125, 202, 0.8) 0%, rgba(71, 125, 202, 0.8) 75%));
-  border-radius: 6px;
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-figure.effect-sadie figcaption::before,
-figure.effect-sadie .member-description {
-  @include transition(opacity 0.35s, transform 0.35s);
-}
-
-figure.effect-sadie .member-description {
-  @include transform(translate3d(0, 10px, 0));
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  position: absolute;
-  width: 100%;
-}
-
-figure.effect-sadie:hover .member-description {
-  @include transform(translate3d(0, -50%, 0) translate3d(0, -40px, 0));
-  color: $white;
-}
-
-figure.effect-sadie:hover figcaption::before ,
-figure.effect-sadie:hover .member-description {
-  @include transform(translate3d(0, 0, 0));
-  opacity: 1;
 }

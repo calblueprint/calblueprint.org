@@ -3,6 +3,7 @@ en:
     students:
       headline: For Students
       subtitle: Joining Blueprint is the perfect way to use your skills to give back to the community.
+        We recruit for developer and chair positions on a regular basis, so check back frequently!
       hook: >
         We are an organization of passionate UC Berkeley students
         who develop web and mobile applications for non-profit organizations.
@@ -11,15 +12,27 @@ en:
       applications_closed: >
         Applications are closed for this semester. Sign up to be notified when they reopen!
       application_timeline:
-        information: >
-          Email team@calbluprint.org if you have any questions regarding our recruitment process.
-        submission: >
+        infosession_date: Aug 29 and 31
+        infosession: >
+          Come out and talk to us to learn more about Blueprint at one of our infosessions. They will
+          be hosted at the HP Auditorium in Soda Hall starting at 7 PM on August 29th and August 31st.
+          You only need to come to one!
+        infosession_notice: Infosession Facebook event will be posted soon!
+        application_date: Sept 1 @ 11:59pm
+        application: >
           Fill out the online application. Our inital cuts will be based on
-          the application and will be emailed out ASAP.  The deadline is January 20th at 11:59 PM.
-        second_round: >
-          Not Applicable.
-        final_decisions: >
-          The final step in the application process, we really want to feel your passion for social
+          the application, so make sure to spend some time on the free response questions! Results will be emailed
+          out ASAP. The deadline is September 1st at 11:59 PM.
+        application_notice: >
+          Student applications will be open at the beginning of the semester. Follow our
+          <a href="https://www.facebook.com/calblueprint" target="_blank">Facebook page</a> to stay updated!
+        bp_games_date: Sept 6
+        bp_games: >
+          A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
+          critically. *This round is by invitation only. Location and time will be emailed to invited candidates.
+        interview_date: Sept 9
+        interview: >
+          The final step in the application process &mdash; we really want to feel your passion for social
           good in person. Final decisions will be announced from this event.
       decision_criteria:
         description: >
@@ -48,3 +61,4 @@ en:
             at UC Berkeley, just like you. Through effective leadership, frequent check-ins, and an
             organized project timeline set with our clients, we hope that the combination of talent,
             dedication, and care will result in projects that benefit the non-profits we work with.
+      newsletter: Sign up for our newsletter to get updates about events, our work and applications!

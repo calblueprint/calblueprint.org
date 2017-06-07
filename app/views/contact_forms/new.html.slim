@@ -1,21 +1,11 @@
-.contact-banner
-  .banner-inner
-    h1.title = t '.banner'
-    p.subtitle = t '.subtitle'
-.white-bg
-  .spacer-form
+= render "navbar"
+.contact-container.container
+  h1.static-page-header = t ".banner"
+  p.static-page-desc.marginBot-lg = t ".subtitle"
   = render "form_errors", obj: @contact_form
   = simple_form_for @contact_form do |f|
-    .row
-      .medium-5.medium-offset-1.columns
-        = f.input :name, wrapper_html: { class: "field-wrapper" }
-        = f.input :email, wrapper_html: { class: "field-wrapper no-margin-small" }
-      .medium-5.end.columns
-        = f.input :subject, wrapper_html: { class: "field-wrapper" }
-        = f.input :message, wrapper_html: { class: "field-wrapper" }
-        .gear-img-small
-    .row
-      .medium-5.medium-offset-6.columns
-        .contact_form_submit
-          = f.button :submit, 'Submit', class: "full-width-button"
-  .spacer
+    = f.input :name, placeholder: "Joe Smith"
+    = f.input :email, placeholder: "example@email.com"
+    = f.input :subject, placeholder: "I have a question!"
+    = f.input :message, placeholder: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+    = f.button :submit, "Submit", class: "bp-btn btn-lg"

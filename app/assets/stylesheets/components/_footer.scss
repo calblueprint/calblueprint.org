@@ -1,0 +1,88 @@
+.bp-footer {
+  background: $dark-gray;
+  color: $white;
+  padding: 60px 0 30px;
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+
+  .footer-col {
+    padding: 0 15px;
+    width: 17%;
+  }
+
+  .footer-logo {
+    margin-right: auto;
+    opacity: 0.7;
+    padding-left: 0;
+    width: auto;
+
+    .logo {
+      background-image: image_url("logo-white.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      float: left;
+      height: 30px;
+      margin-right: 10px;
+      width: 30px;
+    }
+
+    h3 {
+      font-family: "Poppins", "Roboto";
+      font-size: 21px;
+      font-weight: 600;
+      float: left;
+    }
+  }
+
+  .footer-header {
+    color: $white-90;
+    font-family: $bptext-font;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  .footer-link {
+    color: $white-60;
+    display: block;
+    font-family: $sans-serif;
+    font-size: 15px;
+    padding: 3px 0;
+    text-decoration: none;
+    transition: 150ms;
+
+    &:hover {
+      color: $white;
+    }
+
+    .fa {
+      width: 25px;
+    }
+  }
+
+  .footer-copyright {
+    color: $white-40;
+    display: block;
+    text-align: left;
+    padding-left: 25px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: $breakpt-mobile) {
+  .bp-footer {
+    .footer-col {
+      margin-bottom: 30px;
+      width: 50%;
+    }
+    .footer-logo {
+      padding-left: 15px;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+  }
+}

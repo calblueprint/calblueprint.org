@@ -1,0 +1,58 @@
+.photo-carousel {
+  position: relative;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    position: relative;
+    padding-left: 10%;
+    padding-bottom: 10px;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    pointer-events: none;
+
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+  }
+
+  .photo {
+    height: 100%;
+    margin: 0 10px;
+
+    &:last-of-type {
+      padding-right: 100px;
+    }
+  }
+
+  img {
+    width: 600px;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: $breakpt-mobile) {
+  .photo-carousel {
+    padding: 30px 0 20px 20px;
+
+    .photo {
+      margin: 0 5px;
+
+      img {
+        width: 300px;
+      }
+    }
+  }
+}

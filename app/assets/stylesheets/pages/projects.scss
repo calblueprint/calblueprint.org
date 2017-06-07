@@ -1,0 +1,135 @@
+.projects-index {
+  .bp-nav {
+    @extend .static-page-nav;
+  }
+}
+
+.project-hero {
+  background-image: image_url("projects/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.current-projects-section {
+  background: $off-white;
+  padding: 50px 0;
+}
+
+.past-projects-section {
+  padding: 50px 0;
+}
+
+.more-projects-section {
+  background: $off-white;
+  padding: 50px 0;
+  text-align: center;
+
+  p {
+    margin: 0 auto 40px;
+    max-width: 700px;
+  }
+}
+
+.project-card-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.project-card-column {
+  margin-bottom: 40px;
+  padding: 0 20px;
+  width: 33.333%;
+}
+
+.project-card {
+  display: flex;
+  height: 100%;
+  flex-flow: column wrap;
+  padding-bottom: 20px;
+  text-decoration: none;
+  transition: 200ms;
+
+  &:hover {
+    background: white;
+    box-shadow: 2px 2px 15px $dark-gray-10;
+    transform: translateY(-5px);
+  }
+
+  &--image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &--title {
+    color: initial;
+    font-family: $bptext-font;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 20px 20px;
+  }
+
+  &--summary {
+    color: $dark-gray-70;
+    margin: 0 20px 20px;
+  }
+
+  .card-button {
+    font-family: $bptext-font;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 20px;
+    margin-top: auto;
+  }
+}
+
+.project-article-container {
+  max-width: 700px;
+
+  &:last-of-type {
+    padding-bottom: 60px;
+  }
+
+  h2 {
+    font-family: $bptext-font;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $dark-gray-70;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+}
+
+.project-article-img-container {
+  margin: 40px auto 60px;
+  max-width: 900px;
+
+  .img-container {
+    border-radius: 4px;
+    box-shadow: 0 5px 30px $dark-gray-10;
+    height: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  .project-card-column {
+    width: 50%;
+  }
+}
+
+@media (max-width: $breakpt-mobile) {
+  .project-card-column {
+    padding: 0;
+    width: 100%;
+  }
+}

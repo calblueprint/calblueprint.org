@@ -15,6 +15,7 @@ class NonprofitApplicationsController < ApplicationController
 
     @disable_cs169_choice = !@settings.cs169_app_open || !@settings.npo_app_open
     @default_check_cs169 = @nonprofit_application[:cs169_pool]
+    @default_client_status = @nonprofit_application[:client_status]
   end
 
   def save
@@ -43,6 +44,17 @@ class NonprofitApplicationsController < ApplicationController
 
   def index
     @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
+
+    @num_draft = 0
+    @num_submitted = 0
+    @nonprofit_applications.each do |na|
+      if na.submitted?
+        @num_submitted += 1
+      elsif na.draft?
+        @num_draft += 1
+      end
+    end
+
   end
 
   def revise

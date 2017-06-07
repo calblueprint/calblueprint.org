@@ -1,0 +1,64 @@
+// Navbar Blueprint logo font
+@import url('https://fonts.googleapis.com/css?family=Poppins:600');
+
+// General paragraph and body font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+// Header font
+@font-face {
+  font-family: "BPText";
+  font-weight: 400;
+  src: font-url("BPText-Regular.eot"); /* IE9*/
+  src: font-url("BPText-Regular.woff2") format("woff2"), /* chrome firefox */
+       font-url("BPText-Regular.woff") format("woff"), /* chrome firefox */
+       font-url("BPText-Regular.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
+@font-face {
+  font-family: "BPText";
+  font-weight: 300;
+  src: font-url("BPText-Light.eot"); /* IE9*/
+  src: font-url("BPText-Light.woff2") format("woff2"), /* chrome firefox */
+       font-url("BPText-Light.woff") format("woff"), /* chrome firefox */
+       font-url("BPText-Light.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
+@font-face {
+  font-family: "BPText";
+  font-weight: 500;
+  src: font-url("BPText-Medium.eot"); /* IE9*/
+  src: font-url("BPText-Medium.woff2") format("woff2"), /* chrome firefox */
+       font-url("BPText-Medium.woff") format("woff"), /* chrome firefox */
+       font-url("BPText-Medium.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
+@font-face {
+  font-family: "BPText";
+  font-weight: 600;
+  src: font-url("BPText-Semibold.eot"); /* IE9*/
+  src: font-url("BPText-Semibold.woff2") format("woff2"), /* chrome firefox */
+       font-url("BPText-Semibold.woff") format("woff"), /* chrome firefox */
+       font-url("BPText-Semibold.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
+@font-face {
+  font-family: "BPText";
+  font-weight: 400;
+  font-style: italic;
+  src: font-url("BPText-RegularItalic.eot"); /* IE9*/
+  src: font-url("BPText-RegularItalic.woff2") format("woff2"), /* chrome firefox */
+       font-url("BPText-RegularItalic.woff") format("woff"), /* chrome firefox */
+       font-url("BPText-RegularItalic.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
+@font-face {
+  font-family: "BPText";
+  font-weight: 300;
+  font-style: italic;
+  src: font-url("BPText-LightItalic.eot"); /* IE9*/
+  src: font-url("BPText-LightItalic.woff2") format("woff2"), /* chrome firefox */
+       font-url("BPText-LightItalic.woff") format("woff"), /* chrome firefox */
+       font-url("BPText-LightItalic.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
+

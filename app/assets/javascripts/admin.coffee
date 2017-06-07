@@ -21,3 +21,4 @@
 #= require shared/header
 #= require shared/resizing-textarea
 #= require admin/sortable-table
+#= require bootstrap/dropdown

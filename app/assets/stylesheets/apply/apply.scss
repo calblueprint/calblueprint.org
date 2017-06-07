@@ -1,276 +1,433 @@
-.nonprofits-banner {
-  @include banner(image-url("apply/nonprofits/nonprofits.jpg"),
-    $tint: rgba(50, 50, 50, 0.4));
-}
+// Apply Page
+.apply-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 
-.students-banner {
-  @include banner(image-url("apply/students/students.jpg"),
-    $tint: rgba(27, 117, 188, 0.4));
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-.apply {
-  .apply-container {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0;
-    width: 100%;
+  h1 {
+    animation: slideLeft 400ms both;
+    font-family: $bptext-font;
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  p {
+    animation: slideLeft 400ms both;
+    color: $dark-gray-60;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .homepage-link {
+    animation: slideLeft 400ms both;
+    color: $bp-blue;
+    font-weight: 600;
   }
 
   .panel {
-    height: 370px;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: -1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    height: 100%;
+    position: relative;
+    padding: 50px;
+    width: 50%;
   }
 
-  .panel-container {
-    background-color: rgba(0, 0, 0, 0.1);
+  .img-container {
+    animation: slideLeft 400ms both;
+    border-radius: 4px;
+    box-shadow: 0 5px 30px $dark-gray-20;
+    margin-bottom: 40px;
     height: 300px;
-    position: static;
+  }
+
+  .npo-panel {
+    .img-container { animation-delay: 300ms; }
+    h1 { animation-delay: 350ms; }
+    p { animation-delay: 400ms; }
+    .homepage-link { animation-delay: 450ms; }
+  }
+
+  .student-panel {
+    .img-container { animation-delay: 500ms; }
+    h1 { animation-delay: 550ms; }
+    p { animation-delay: 600ms; }
+    .homepage-link { animation-delay: 650ms; }
+  }
+}
+
+@media (max-width: 991px) {
+  .apply-container {
+    h1 {
+      font-size: 40px;
+    }
+
+    .panel {
+      padding: 40px 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .apply-container {
+    display: block;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .panel {
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .img-container {
+      height: 200px;
+    }
+  }
+}
+
+// Student and NPO Apply Page
+@media (min-width: 1200px) {
+  // Override bootstrap container style for about page
+  .apply-students .container,
+  .apply-nonprofits .container {
+    width: 970px;
+  }
+}
+
+.apply-students,
+.apply-nonprofits {
+  .bp-nav {
+    @extend .static-page-nav;
+  }
+}
+
+.application-process-section {
+  background: $off-white;
+  padding: 80px 0;
+
+  .static-page-header {
     text-align: center;
-    width: 100%;
-    z-index: 0;
+  }
+}
+
+.student-apply-hero {
+  background-image: image_url("apply/students/students.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.npo-apply-hero {
+  background-image: image_url("apply/nonprofits/nonprofits_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.npo-photo-carousel {
+  padding-top: 100px;
+  padding-bottom: 30px;
+
+  img {
+    width: 500px;
+  }
+}
+
+$timeline-num-width: 200px;
+.student-timeline {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.timeline-row {
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+}
+
+.num-col {
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+  width: $timeline-num-width;
+
+  &:after {
+    background: $bp-blue-40;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: -20px;
+    width: 1px;
+  }
+}
+
+.timeline-row:last-of-type .num-col:after {
+  display: none;
+}
+
+.timeline-num {
+  background: $off-white;
+  color: $bp-blue-20;
+  font-family: $bptext-font;
+  font-size: 100px;
+  font-weight: 600;
+  position: relative;
+  top: -40px;
+  z-index: 1;
+}
+
+.text-col {
+  float: right;
+  padding: 10px 0;
+  width: calc(100% - #{$timeline-num-width});
+}
+
+.timeline-row-title {
+  display: inline-block;
+  font-family: $bptext-font;
+  font-size: 27px;
+  font-weight: 600;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.timeline-row-date {
+  color: $dark-gray-60;
+  display: inline-block;
+  font-family: $bptext-font;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.timeline-row-description {
+  color: $dark-gray-70;
+}
+
+.timeline-row-btn {
+  margin: 25px 0 35px;
+}
+
+.timeline-row-notice {
+  color: $bp-blue;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.application-decision-criteria-section {
+  padding: 50px 0;
+}
+
+.decision-criteria-list-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.decision-criteria-item {
+  margin-bottom: 40px;
+  width: 28%;
+
+  .img-container {
+    margin-bottom: 10px;
+    max-width: 100px;
+  }
+
+  h3 {
+    font-family: $bptext-font;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $dark-gray-70;
+  }
+
+}
+
+.application-faqs-section {
+  padding: 50px 0;
+
+  h3 {
+    font-family: $bptext-font;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: $dark-gray-70;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
 
 
-    .title {
-      color: $white;
-      padding-top: 110px;
+.application-our-services {
+  padding: 50px 0;
+
+  .static-page-header {
+    text-align: center;
+  }
+}
+
+.our-services-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  .img-container {
+    margin: 0 auto 20px;
+    text-align: center;
+    width: 50%;
+  }
+
+  .item {
+    padding: 0 30px;
+    text-align: center;
+    width: 50%;
+  }
+
+  h3 {
+    font-family: $bptext-font;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+   p {
+    color: $dark-gray-70;
+    font-size: 18px;
+   }
+}
+
+.project-timeline-section {
+  padding: 50px 0;
+}
+
+.application-newsletter {
+  background: $off-white;
+  padding: 70px 0;
+}
+
+.npo-apply-quote {
+  background: $bp-blue;
+  color: $white;
+  padding: 80px 0 70px;
+
+  q {
+    display: block;
+    font-family: $bptext-font;
+    font-size: 35px;
+    font-weight: 500;
+    position: relative;
+
+    &:before {
+      background-image: image_url("apply/quote.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+      opacity: 0.2;
+      position: absolute;
+      left: -30px;
+      top: 0;
+      height: 70px;
+      width: 70px;
     }
   }
 
-  .panel-left,
-  .panel-right {
-    min-height: 100vh;
-    text-align: center;
-    width: 50%;
+  .reference {
+    color: $white-80;
+    float: right;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
 
-    @media only screen and (max-width: $medium-screen) {
+.npo-apply-previous-work-section {
+  background: $off-white;
+  padding: 70px 0 50px;
+}
+
+// Timeline
+@media (max-width: $breakpt-mobile) {
+  .num-col {
+    width: 100px;
+  }
+
+  .text-col {
+    margin-left: auto;
+    padding-right: 10px;
+    width: calc(100% - 120px);
+  }
+
+  .timeline-num {
+    font-size: 50px;
+    top: -20px;
+  }
+
+  .timeline-row-title {
+    margin-bottom: 5px;
+  }
+
+  .timeline-row-date {
+    margin-bottom: 10px;
+  }
+}
+
+
+// Nonprofits Page
+@media (max-width: $breakpt-mobile) {
+  .our-services-container {
+    display: block;
+
+    .item {
+      margin: 20px auto;
+      max-width: 450px;
       width: 100%;
     }
   }
 
-  .nonprofits-bg {
-    @include background-image(
-      linear-gradient(
-        rgba(50, 50, 50, 0.4),
-        rgba(50, 50, 50, 0.4)
-      ),
-      image-url("apply/nonprofits/nonprofits.jpg")
-    );
-    background-position: center top;
-    background-size: cover;
+  .npo-photo-carousel {
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
 
-  .students-bg {
-    @include background-image(
-      linear-gradient(
-        rgba(27, 117, 188, 0.4),
-        rgba(27, 117, 188, 0.4)
-      ),
-      image-url("apply/students/students.jpg")
-    );
-    background-position: center;
-    background-size: cover;
-  }
-
-  #left-title,
-  #right-title {
-    padding-top: 35vh;
-  }
-
-  .subtitle {
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.5em;
-    margin: 10px auto 14px;
-    width: 75%;
-  }
-
-  .hook {
-    text-align: left;
-  }
-
-  .apply-button {
-    padding-top: 14px;
-    text-align: center;
-  }
-
-  .submenu {
-    font-size: 0.9em;
-    font-weight: bold;
-    list-style: none;
-    text-align: center;
-
-    li {
-      border-bottom: 5px solid rgba($blue, 0);
-      border-left: 1px solid lighten($medium-gray, 20);
-      cursor: pointer;
-      display: inline-block;
-      margin: 0;
-      padding: 10px;
-      transition-duration: 0.3s;
-
-      &:first-child {
-        border: 0;
-      }
-
-      &:hover {
-        background-color: $light-gray;
-        border-bottom: 5px solid rgba($blue, 1);
-      }
-    }
-  }
-
-  .title-column {
-    @extend .large-3;
-    @extend .medium-4;
-    @extend .small-12;
-    @extend .columns;
-    text-align: right;
-
-    h2 {
-      text-align: right;
-    }
-
-    @media only screen and (max-width: $medium-screen) {
-      margin-bottom: 20px;
-      text-align: center;
-
-      h2 {
-        text-align: center;
-      }
-    }
-  }
-
-  .content-column {
-    @extend .large-9;
-    @extend .medium-8;
-    @extend .small-12;
-    @extend .columns;
-    border-left: 1px solid darken($light-gray, 10);
-    padding-left: 50px;
-    text-align: left;
-
-    p,
-    h4,
-    h5 {
-      text-align: left;
-    }
-
-    @media only screen and (max-width: $medium-screen) {
-      border: 0;
-      border-top: 1px solid darken($light-gray, 10);
-      padding-top: 20px;
-      padding-left: 15px;
-    }
-
-    .timeline-vertical {
-      margin-left: 80px;
-    }
-  }
-
-  .quote-block {
-    background-color: lighten($light-gray, 3);
-    border: 1px solid darken($light-gray, 10);
-    padding: 25px 30px;
+  .npo-apply-quote {
+    padding: 50px 0;
 
     q {
-      font-size: 1.4em;
+      font-size: 26px;
+      margin-bottom: 20px;
     }
-
-    .reference {
-      font-style: italic;
-      margin-top: 10px;
-      padding: 0 10px;
-      text-align: right;
-    }
-  }
-
-  .timeline-slim {
-    @include timeline-vertical;
-    margin: 10px;
-
-    .timeline-content {
-      margin: 0;
-      padding: 0;
-    }
-
-    .circle {
-      left: -45px;
-    }
-  }
-
-  #faq {
-    h5 {
-      cursor: pointer;
-      line-height: 2.3em;
-    }
-
-    .drawer p {
-      display: none;
-      padding-left: 10px;
-    }
-
-    .drawer .active {
-      display: block;
-    }
-
-
-    .drawer h5 {
-      padding: 5px;
-      transition-duration: 0.3s;
-
-      &:hover {
-        background-color: darken($light-gray, 10);
-      }
-    }
-  }
-
-  .white-button {
-    @extend button;
-    border: 1px solid $white;
-  }
-
-  .calgold-button {
-    color: $black;
-    background-color: $california-gold;
-
-    &:hover {
-      background-color: darken($california-gold, 10);
-    }
-  }
-
-  .white-bg {
-    background-color: $white;
-  }
-
-  .control-label {
-    color: $black;
-    font-weight: 500;
-    padding-bottom: 4px;
-  }
-
-  .applications-closed {
-    background: lighten($light-gray, 10);
-    border-color: lighten($light-gray, 5);
-    border-radius: 6px;
-    border-style: solid;
-    border-width: 1px;
-    color: $black;
-    font-size: 90%;
-    height: 100px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    width: 100%;
   }
 }
 
-@media (max-width: 40em) {
-  .example-images li {
-    display: block;
-    width: 100%;
+// Students Page
+@media (max-width: $breakpt-mobile) {
+  .application-process-section {
+    padding: 50px 0;
+  }
+
+  .decision-criteria-item {
+    width: 45%;
+  }
+
+  .decision-criteria-list-container {
+    margin-bottom: 0;
   }
 }

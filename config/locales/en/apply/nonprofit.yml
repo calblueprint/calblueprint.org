@@ -2,17 +2,15 @@ en:
   apply:
     nonprofits:
       headline: For Nonprofits
-      hook: >
-        We are an organization of passionate UC Berkeley students that
-        develops web and mobile applications for nonprofit organizations. As
-        a partner, we will work with you to develop technology that turns
+      subtitle: >
+        As a partner, Blueprint will work with you to develop technology that turns
         your vision into a reality, completely free of charge.
       cs169_hook: >
         We also partner with UC Berkeley's <a
-        href="https://sites.google.com/site/ucbsaas/project/external-customer"
+        href="https://sites.google.com/site/ucbsaas/faq/external-customer"
         target="_blank">Software Engineering</a> class (CS 169). CS 169 operates
         similarly to Blueprint except in the form of a class. You can learn more
-        <a href="https://sites.google.com/site/ucbsaas/project/external-customer"
+        <a href="https://sites.google.com/site/ucbsaas/faq/external-customer"
         target="_blank">here</a>. Applications for CS 169 are currently open.
       applications_closed: >
         Applications for Blueprint are closed for this semester. Sign up to be notified when they reopen!
@@ -23,10 +21,20 @@ en:
         mobile_application_development: >
           Mobile applications use the unique capabilities of phones to bring computing to many.
       application_timeline:
-        submission: Written application portal opened.
-        first_round: Applications are reviewed, feedback is given, then preliminary decisions are made.
-        interviews: Interviews are conducted to better understand project fit.
-        final_decisions: Each project leader chooses an organization and begins the project!
+        submission: >
+          Our written application portal opens. Simply make an account as a client and fill out an
+          application describing the kind of project you would like Blueprint to implement. If you have any
+          questions or concerns please email <a href="mailto:team@calblueprint.org">team@calblueprint.org</a>.
+        first_round: >
+          We close application submissions and will carefully read through all applications. Preliminary
+          decisions are made and thorough feedback is given.
+        interviews: >
+          In order to ensure project success, we conduct a comprehensive interview with you to better understand
+          project fit. Check out our <a href="#criteria">decision criteria</a> below!
+        final_decisions: >
+          If selected to work with Blueprint, your organization will have the opportunity to work with
+          us on a technological project over the course of a year. Once decisions are made, each project leader chooses an
+          organization and we begin the awesome journey!
       decision_criteria:
         description: >
           We want to help as many organizations as we possibly can. Unfortunately, we cannot take every
@@ -65,3 +73,5 @@ en:
             universities in computer science. Through effective leadership and frequent checkins with our
             clients we hope that the combination of talent, dedication, and care will result in a project that
             benefits your organization.
+      newsletter: Sign up for our newsletter to get updates about events, our work and applications!
+

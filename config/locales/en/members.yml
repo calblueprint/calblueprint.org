@@ -229,14 +229,14 @@ en:
     - first_name: 'Sonia'
       last_name: 'Yang'
       email: 'sonia.yang@berkeley.edu'
-      <<: *developer
+      <<: *leader
 
     - first_name: 'Eric'
       last_name: 'Liang'
       email: 'liang.eric24@gmail.com'
       linkedin: 'ericls'
       website: 'ericls.com'
-      <<: *developer
+      <<: *leader
 
     - first_name: 'Daniel'
       last_name: 'Li'
@@ -252,12 +252,12 @@ en:
     - first_name: 'Charles'
       last_name: 'Xue'
       email: 'charlesx2013@gmail.com'
-      <<: *developer
+      <<: *leader
 
     - first_name: 'Warren'
       last_name: 'Shen'
       email: 'warrenzshen@gmail.com'
-      <<: *mentor
+      <<: *leader
 
     - first_name: 'Kevin'
       last_name: 'Wu'

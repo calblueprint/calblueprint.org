@@ -73,8 +73,7 @@ Rails.application.configure do
       socket_failure_delay: 0.2 }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # TODO: UNCOMMENT BEFORE MERGING!!
-  # config.action_controller.asset_host = "d3jgn78fb4dtre.cloudfront.net"
+  config.action_controller.asset_host = "d3jgn78fb4dtre.cloudfront.net"
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

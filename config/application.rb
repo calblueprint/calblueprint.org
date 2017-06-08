@@ -22,6 +22,14 @@ module CalBlueprintOrgApp
       generate.controller_specs false
     end
 
+    # Allow CORS for font and other asset loading
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
     # Raise error when any param isn't permitted
     config.action_controller.action_on_unpermitted_parameters = :raise
 

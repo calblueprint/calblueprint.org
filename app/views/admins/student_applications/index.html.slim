@@ -1,39 +1,34 @@
-.banner
-  .banner-text
-    h1 Student Applications
-    .spacer-small
-    p.subtitle
-      | #{@student_applications.remaining.count} Potential Future Bloopers.
-      |  #{Comparison.current.count} comparisons have been made.
-      |  You made #{current_admin.comparisons.current.count} of them.
-.row
-  .small-4.columns{style="float: right"}
-    = form_tag("", method: "get") do
-      = select_tag :filter_by, options_for_select([['Current applications', 'current'],
-                                                   ['All applications', 'all']], @filter)
-      = submit_tag "Filter", name: ""
+.container
+  h1.admin-page-header Student Applications
+  p
+    | #{@student_applications.remaining.count} Potential Future Bloopers.
+    |  #{Comparison.current.count} comparisons have been made.
+    |  You made #{current_admin.comparisons.current.count} of them.
 
-.row
-  .small-12.small-centered.columns
-    = link_to "Download CSV", admin_student_applications_path(format: "csv")
-    table.tables
-      thead
-        tr
-          th Name
-          th.column-remove-small Email
-          th.column-remove-medium Semester
-          th.column-remove-medium Year
-          th.column-remove-medium Wins
-          th.column-remove-medium Losses
-          th.column-remove-medium Actions
-      tbody
-        - @student_applications.each do |app|
-          tr
-            td = app.applicant.name
-            td.column-remove-small = app.applicant.email
-            td.column-remove-medium = app.semester.season
-            td.column-remove-medium = app.semester.year
-            td.column-remove-medium = app.wins_count
-            td.column-remove-medium = app.losses_count
-            td.column-remove-medium = link_to "Details", admin_student_application_path(app.id), class: "button"
-    .spacer
+  = form_tag("", method: "get") do
+    = select_tag :filter_by, options_for_select([['Current applications', 'current'],
+                                                 ['All applications', 'all']], @filter)
+    = submit_tag "Filter", name: ""
+
+
+  = link_to "Download CSV", admin_student_applications_path(format: "csv")
+  table.bp-table
+    thead
+      tr
+        th Name
+        th.column-remove-small Email
+        th.column-remove-medium Semester
+        th.column-remove-medium Year
+        th.column-remove-medium Wins
+        th.column-remove-medium Losses
+        th.column-remove-medium Actions
+    tbody
+      - @student_applications.each do |app|
+        tr onClick="window.location = '/admins/student_applications/#{app.id}'"
+          td = app.applicant.name
+          td.column-remove-small = app.applicant.email
+          td.column-remove-medium = app.semester.season
+          td.column-remove-medium = app.semester.year
+          td.column-remove-medium = app.wins_count
+          td.column-remove-medium = app.losses_count
+          td.column-remove-medium = link_to "Details", admin_student_application_path(app.id)

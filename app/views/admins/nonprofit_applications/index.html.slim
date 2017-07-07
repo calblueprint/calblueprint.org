@@ -1,45 +1,32 @@
-.spacer-small
-.banner
-  .banner-text
-    h1 = t(".banner")
+.admin-npo-apps-container.container
+  .npo-apps-title-bar
+    h1.admin-page-header = t(".banner")
 
-/ TODO(sam): Add CSV downloading/uploading
-.row
-  .small-4.columns{style="float: right"}
-    = form_tag("", method: "get") do
-      = select_tag :filter_by, options_for_select([['Current applications', 'current'],
-                                                   ['Blueprint only', 'bp'],
-                                                   ['CS169 only', 'cs169'],
-                                                   ['All applications', 'all']], @filter)
-      = submit_tag "Filter", name: ""
+    .npo-apps-filter
+      = form_tag("", method: "get") do
+        = select_tag :filter_by, options_for_select([['Current applications', 'current'],
+                                                     ['Blueprint only', 'bp'],
+                                                     ['CS169 only', 'cs169'],
+                                                     ['All applications', 'all']], @filter)
+        = submit_tag "Filter", name: "", class: "bp-btn"
 
-table.tables.npo-apps
-  thead
-    tr
-      th.npo-apps__name NPO Name
-      th.npo-apps__email Email
-      th.npo-apps__summary Summary
-      th.npo-apps__cs169 CS169
-      th.npo-apps__submitted Submitted At
-      th.npo-apps__actions Actions
-  tbody
-    - @nonprofit_applications.each do |app|
-      tr id="#{dom_id app}"
-        td = app.organization_name
-        td = app.email
-        td = app.short_summary
-        td
-          - if app.cs169_pool
-            = fa_icon "check"
-        td
-          - if app.submitted?
-            = app.submitted_at.strftime(t("date.formats.default"))
-        td
-          = link_to [:admin, app], class: "icon hint--top", data: { hint: "View" } do
-            = fa_icon "eye"
-          = link_to [:admin, app], class: "icon hint--top", data: { hint: "Delete",
-                                   confirm: "Are you sure you want to delete #{app.organization_name}'s app?"  },
-                                   method: :delete do
-            = fa_icon "trash"
-
-.spacer
+  table.bp-table
+    thead
+      tr
+        th.npo-apps-name NPO
+        th.npo-apps-email Email
+        th.npo-apps-summary Summary
+        th.npo-apps-cs169 CS169
+        th.npo-apps-submitted Submitted
+    tbody
+      - @nonprofit_applications.each do |app|
+        tr id="#{dom_id app}" onClick="window.location = '/admins/nonprofit_applications/#{app.id}'"
+          td.col-bold = app.organization_name
+          td.npo-apps-email-col = app.email
+          td = truncate app.short_summary, :length => 200
+          td
+            - if app.cs169_pool
+              = fa_icon "check"
+          td
+            - if app.submitted?
+              = app.submitted_at.strftime(t("date.formats.default"))

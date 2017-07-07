@@ -1,0 +1,67 @@
+// Nonprofit index page
+
+.admin-page-header {
+  font-family: "BPText";
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.npo-apps-title-bar {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.npo-apps-filter {
+  margin-left: auto;
+}
+
+.npo-apps-name {
+  width: 10%;
+}
+
+.npo-apps-email {
+  width: 15%;
+}
+
+.npo-apps-summary {
+  // We don't apply a width to this column so that it takes up as much space
+  // as possible.
+}
+
+.npo-apps-cs169 {
+  width: 10%;
+}
+
+.npo-apps-submitted {
+  width: 10%;
+}
+
+.npo-apps-email-col {
+  width: 15%;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Nonprofit show page
+.admins-nonprofit_applications-show {
+  .container {
+    max-width: 900px;
+  }
+
+  .app-row {
+    margin: 30px 0;
+
+    .heading {
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    p {
+      color: $dark-gray-80;
+      font-size: 17px;
+    }
+  }
+}

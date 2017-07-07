@@ -1,6 +1,6 @@
 = render "navbar"
 
-.npo-login-container.container
+.login-container.container
   h1 Forgot your Password?
   h2.subtitle.marginBot-xl We'll help you out!
   = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|

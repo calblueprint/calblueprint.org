@@ -1,0 +1,29 @@
+.login-container {
+  margin: 20px auto 90px;
+  max-width: 500px;
+
+  h1 {
+    font-family: $bptext-font;
+    font-size: 34px;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-family: $bptext-font;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .input-group {
+    margin: 20px 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .nonprofit_remember_me,
+  .admin_remember_me {
+    label { display: inline-block; }
+  }
+}

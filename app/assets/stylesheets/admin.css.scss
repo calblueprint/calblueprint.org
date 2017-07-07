@@ -1,3 +1,5 @@
+// Vendor -------------------------
+
 // Import Bootstrap grid
 @import "bootstrap-sprockets";
 @import "bootstrap/variables";
@@ -9,30 +11,37 @@
 @import "vendor/normalize";
 @import "partials/reset";
 
+// FontAwesome
+@import "font-awesome";
+
+// Other
+@import "vendor/toastr";
+@import "bourbon";
+@import "neat";
+@import "sky-labels";
+// @import "vendor/base/base";
+// @import "vendor/toastr";
+
+// Stylesheets --------------------
+
+// Partials
 @import "partials/variables";
 @import "partials/animations";
 @import "partials/fonts";
 @import "partials/layout";
 
+// Styles
 @import "components/*";
 
-// Vendor
-@import "bourbon";
-@import "neat";
-@import "sky-labels";
-@import "vendor/base/base";
-// @import "vendor/grid";
-@import "vendor/toastr";
-// @import "vendor/hint";
-
 // Shared
-@import "shared/tables";
-@import "shared/tooltips";
-@import "shared/newsletter-subscribe";
+// @import "shared/tables";
+// @import "shared/tooltips";
+// @import "shared/newsletter-subscribe";
 
 // Admin-specific
+@import "pages/login";
 @import "admin/layout";
-@import "admin/nonprofit_applications/table";
-@import "admin/projects/table";
-@import "admin/projects/project-banner-image";
-@import "admin/projects/project-form";
+@import "admin/nonprofit_applications";
+// @import "admin/projects/table";
+// @import "admin/projects/project-banner-image";
+// @import "admin/projects/project-form";

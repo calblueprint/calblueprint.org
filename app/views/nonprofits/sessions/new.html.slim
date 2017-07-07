@@ -1,6 +1,6 @@
 = render "navbar"
 
-.npo-login-container.container
+.login-container.container
   h1 Nonprofit Log In
   h2.subtitle.marginBot-xl Welcome Back!
   = render "form_errors", obj: resource
@@ -10,5 +10,6 @@
       = f.input :password, required: false
       = f.input :remember_me, label_html: { class: "remember-me marginRight-xxs" }, as: :boolean if devise_mapping.rememberable?
     = render "nonprofits/shared/links"
+
     .form-actions
       = f.button :submit, "Log in", class: "bp-btn login-button marginTop-lg"

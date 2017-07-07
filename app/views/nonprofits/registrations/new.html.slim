@@ -1,6 +1,6 @@
 = render "navbar"
 
-.npo-login-container.container
+.login-container.container
   h1 Nonprofit Sign Up
   h2.subtitle.marginBot-xl Let's get started.
   = render "form_errors", obj: resource
@@ -11,6 +11,6 @@
       = f.input :password, placeholder: "********"
       = f.input :password_confirmation, placeholder: "********"
     = render "nonprofits/shared/links"
-    .spacer-small
+
     .form-actions
       = f.button :submit, "Sign Up", class: "bp-btn marginTop-lg login-button"

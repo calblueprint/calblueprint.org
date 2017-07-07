@@ -5,6 +5,10 @@
  * https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
  */
 
+.admin-content {
+  padding-top: 20px;
+}
+
 .admin-container {
   display: flex;
   flex-direction: column;
@@ -18,9 +22,4 @@
 
 .admin-content .row {
   max-width: 95%;
-}
-
-p {
-  line-height: 1.5em;
-  margin: 0 0 1.5em;
 }

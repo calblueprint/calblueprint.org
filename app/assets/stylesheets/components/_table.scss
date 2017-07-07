@@ -1,0 +1,36 @@
+.bp-table {
+  width: 100%;
+
+  thead {
+    margin-bottom: 10px;
+
+    th {
+      border-bottom: 1px solid $smoke-80;
+      color: $dark-gray;
+      font-family: $bptext-font;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 10px;
+      vertical-align: bottom;
+    }
+  }
+
+  tbody {
+
+    tr:hover {
+      background: $bp-blue-5;
+      cursor: pointer;
+    }
+
+    td {
+      color: $dark-gray-80;
+      font-size: 15px;
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    .col-bold {
+      font-weight: 500;
+    }
+  }
+}

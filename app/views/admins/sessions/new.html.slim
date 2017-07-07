@@ -1,19 +1,15 @@
-.spacer-small
-.banner
-  .banner-text
-    h1 Log In
-    p.subtitle Let's get started.
-.spacer-small
-.row
-  .medium-6.medium-centered.columns.center
-    = render "form_errors", obj: resource
-    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-      .form-inputs
-        = f.input :email, required: false, autofocus: true
-        = f.input :password, required: false
-        = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-      = render "admins/shared/links"
-      .spacer-small
-      .form-actions
-        = f.button :submit, "Log in"
-.spacer
+= render "navbar"
+
+.login-container.container
+  h1 Admin Login
+
+  = render "form_errors", obj: resource
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .form-inputs
+      = f.input :email, required: false, autofocus: true, placeholder: "example@calblueprint.org"
+      = f.input :password, required: false, placeholder: "********"
+      = f.input :remember_me, label_html: { class: "remember-me marginRight-xxs" }, as: :boolean if devise_mapping.rememberable?
+    = render "admins/shared/links"
+
+    .form-actions
+      = f.button :submit, "Log in", class: "bp-btn marginTop-lg login-button"

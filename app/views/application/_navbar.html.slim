@@ -24,7 +24,7 @@ nav.bp-nav[class="#{className ||= "default"}"]
       - if current_admin
         li.nav-link.dropdown-toggle#header-admin-dropdown data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
           | Admin
-        ul.dropdown-menu.dropdown-menu-right.submenu aria-labelledby="header-admin-dropdown"
+        ul.dropdown-menu.dropdown-menu-right.admin-dropdown aria-labelledby="header-admin-dropdown"
           - if can? :read, NonprofitApplication
             li = link_to "NPO Applications", admin_nonprofit_applications_path
           - if can? :read, StudentApplication
@@ -39,8 +39,7 @@ nav.bp-nav[class="#{className ||= "default"}"]
           - if can? :read, Admins
             li = link_to "Admin Users", admin_admins_path
           li.divider role="separator"
-          li.nav-link
-            = link_to "Log Out", destroy_user_session_path, method: :delete
+          li = link_to "Log Out", destroy_user_session_path, method: :delete
 
       - elsif current_user
           li.nav-link

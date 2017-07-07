@@ -16,7 +16,7 @@ class ApplicationDecorator < Draper::Decorator
   end
 
   def left_col_html(attribute)
-    h.content_tag :h3, class: "heading" do
+    h.content_tag :h3, class: "row-left" do
       if attribute.is_a?(Array)
         attribute[1]
       else
@@ -26,12 +26,14 @@ class ApplicationDecorator < Draper::Decorator
   end
 
   def right_col_html(attribute)
-    val = send(attribute.is_a?(Array) ? attribute[0] : attribute)
-    if !!val == val
-      val = yesno(val)
-    elsif val.is_a? Numeric
-      val = val.to_s
+    h.content_tag :div, class: "row-right" do
+      val = send(attribute.is_a?(Array) ? attribute[0] : attribute)
+      if !!val == val
+        val = yesno(val)
+      elsif val.is_a? Numeric
+        val = val.to_s
+      end
+      h.simple_format val
     end
-    h.simple_format val
   end
 end

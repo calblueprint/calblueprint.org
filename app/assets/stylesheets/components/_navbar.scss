@@ -70,6 +70,7 @@ nav.bp-nav {
     font-family: $bptext-font;
     font-weight: 600;
     margin-left: auto;
+    position: relative;
     text-transform: uppercase;
 
     li {
@@ -114,6 +115,16 @@ nav.bp-nav.nav-white {
 
       &:hover {
         color: $white;
+      }
+    }
+  }
+
+  .admin-dropdown {
+    li {
+      color: inherit;
+
+      &:hover {
+        color: inherit;
       }
     }
   }
@@ -181,6 +192,27 @@ nav.bp-nav-fixed {
         font-size: 24px;
         font-weight: 500;
         padding: 5px 0;
+      }
+    }
+  }
+}
+
+// Admin Dropdown Styles
+#header-admin-dropdown {
+  cursor: pointer;
+}
+
+nav.bp-nav {
+  .link-container {
+    .admin-dropdown {
+      li {
+        font-family: $sans-serif;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .divider {
+        margin: 5px 0;
       }
     }
   }

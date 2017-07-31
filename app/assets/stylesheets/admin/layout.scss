@@ -15,6 +15,16 @@
   min-height: 100vh;
 }
 
+.admin-page-title-bar {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.admin-page-title-bar-right {
+    margin-left: auto;
+}
+
 // .admin-content {
 //   flex: 1;
 //   padding: 20px;
@@ -22,4 +32,128 @@
 
 .admin-content .row {
   max-width: 95%;
+}
+
+.admin-settings-container {
+    .input-group {
+        margin: 20px 0;
+        padding: 0 10px;
+        flex: 1;
+    }
+
+    .settings-row {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 20px;
+    }
+
+    .settings-item {
+      margin: 20px 0;
+      padding: 0 10px;
+      flex: 1;
+
+      h2 {
+        font-family: $bptext-font;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+
+    input {
+        min-width: auto !important;
+    }
+}
+
+// Application Show Page
+// Nonprofit show page
+.admins-nonprofit_applications-show,
+.admins-student_applications-show, {
+  .container {
+    max-width: 900px;
+  }
+
+  .app-row {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 30px 0;
+
+    .row-left {
+      flex: 1;
+      font-size: 19px;
+      font-weight: 500;
+      padding-right: 10px;
+    }
+
+    .row-right {
+      flex: 3;
+      padding-left: 10px;
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      color: $dark-gray-80;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+  }
+}
+
+// Comparison Page
+.admins-comparisons {
+  margin-bottom: 120px;
+
+  hr {
+    border: 1px solid $dark-gray-10;
+    margin: 20px 0;
+  }
+
+  .comparison-header {
+    font-family: $bptext-font;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .comparison-row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .comparison-section-title {
+    font-family: $bptext-font;
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 20px;
+    width: 20%;
+  }
+
+  .comparison-section-item {
+    color: $dark-gray-80;
+    line-height: 1.7;
+    padding: 0 15px;
+    width: 40%;
+    flex: 1;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .comparison-decision-row {
+    .container {
+      display: flex;
+    }
+    background: white;
+    box-shadow: 0 2px 10px $dark-gray-40;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+  }
 }

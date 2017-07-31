@@ -1,34 +1,34 @@
-.spacer-small
+.container
+  .admin-page-title-bar
+    h1.admin-page-header Manage Admins
+    .admin-page-title-bar-right
+      = link_to "New Admin User", new_admin_invitation_path, class: "bp-btn"
 
-.row
-  h2 Manage Admins
-  = link_to "New Admin User", new_admin_invitation_path, class: "button"
-table.tables.admin-users
-  thead
-    tr
-      th First Name
-      th Last Name
-      th Email
-      th Role
-      th Created At
-      th # of Comparisons
-      th Actions
-  tbody
-    - @admins.each do |admin|
-      tr id="#{dom_id admin}"
-        td = admin.first_name
-        td = admin.last_name
-        td = admin.email
-        td = admin.role
-        td = admin.created_at.to_date
-        td = admin.comparisons.count
-        td
-          = link_to admin_admin_promote_path(admin), class: "icon hint--top", data: { hint: "Promote" } do
-            = fa_icon "level-up"
-          = link_to admin_admin_demote_path(admin), class: "icon hint--top", data: { hint: "Demote" } do
-            = fa_icon "level-down"
-          = link_to admin_admin_path(admin), class: "icon hint--top", data: { hint: "Delete",
-                                   confirm: "Are you sure you want to delete #{admin.email}'s account?"  },
-                                   method: :delete do
-            = fa_icon "trash"
-.spacer
+  table.bp-table
+    thead
+      tr
+        th First Name
+        th Last Name
+        th Email
+        th Role
+        th Created At
+        th # Comparisons
+        th Actions
+    tbody
+      - @admins.each do |admin|
+        tr id="#{dom_id admin}"
+          td = admin.first_name
+          td = admin.last_name
+          td = admin.email
+          td = admin.role
+          td = admin.created_at.to_date
+          td = admin.comparisons.count
+          td
+            = link_to admin_admin_promote_path(admin), class: "icon hint--top", data: { hint: "Promote" } do
+              span.marginRight-xxs Promote
+            = link_to admin_admin_demote_path(admin), class: "icon hint--top", data: { hint: "Demote" } do
+              span.marginRight-xxs Demote
+            = link_to admin_admin_path(admin), class: "icon hint--top", data: { hint: "Delete",
+                                     confirm: "Are you sure you want to delete #{admin.email}'s account?"  },
+                                     method: :delete do
+              span Delete

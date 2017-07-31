@@ -33,23 +33,22 @@ class StudentApplicationDecorator < ApplicationDecorator
   end
 
   def resume
-    h.link_to "Link", object.resume.url, target: '_blank'
+    h.link_to "View Resume", object.resume.url, target: '_blank',
+    class: 'bp-btn btn-light btn-sm'
   end
 
   def attribute_title_html(attribute)
-    h.content_tag :div, class: "small-4 columns align-left" do
-      h.content_tag :h4 do
-        if attribute.is_a?(Array)
-          attribute[1]
-        else
-          object.class.human_attribute_name(attribute)
-        end
+    h.content_tag :h2, class: "comparison-section-title" do
+      if attribute.is_a?(Array)
+        attribute[1]
+      else
+        object.class.human_attribute_name(attribute)
       end
     end
   end
 
   def comparison_attribute_html(attribute)
-    h.content_tag :div, class: "small-4 columns align-left" do
+    h.content_tag :div, class: "comparison-section-item" do
       val = send(attribute.is_a?(Array) ? attribute[0] : attribute)
       !!val == val && val = yesno(val)
       h.simple_format val

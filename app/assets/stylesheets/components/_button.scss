@@ -41,11 +41,25 @@
       color: $white;
     }
   }
+
+  &.btn-light {
+    background: $smoke-40;
+    color: $dark-gray;
+
+    &:hover {
+      background: $smoke-60;
+    }
+  }
 }
 
 .bp-btn {
   &.btn-lg {
     font-size: 19px;
     padding: 10px 15px;
+  }
+
+  &.btn-sm {
+    font-size: 15px;
+    padding: 6px 10px;
   }
 }

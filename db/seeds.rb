@@ -8,7 +8,7 @@
 
 def seed_admins
   Admin.create_with(password: 'password').find_or_create_by!(
-    first_name: 'Blueprint', last_name: 'Admin', email: 'admin@calblueprint.org'
+    first_name: 'Blueprint', last_name: 'Admin', email: 'admin@calblueprint.org', role: "super_admin"
   )
 end
 
@@ -34,7 +34,9 @@ def seed_student_applications
                                                     semester: semester,
                                                     resume_file_name: 'test.pdf',
                                                     resume_content_type: 'application/pdf',
-                                                    resume_file_size: 800
+                                                    resume_file_size: 800,
+                                                    why_no_bp_games: 'because',
+                                                    why_no_retreat: 'beacuse'
 end
 
 def seed_nonprofits

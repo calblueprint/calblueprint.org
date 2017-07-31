@@ -1,27 +1,37 @@
-.row.full-row
+.container
+  .admin-page-header.marginBot-lg Comparison
+
+  .comparison-row.comparison-header
+    .comparison-section-title
+    .comparison-section-item Student 1
+    .comparison-section-item Student 2
+
   - @left.comparison_attributes.each do |attribute|
-    .row
+    .comparison-row
       = @left.attribute_title_html attribute
       = auto_link @left.comparison_attribute_html(attribute), html: { target: '_blank' }
       = auto_link @right.comparison_attribute_html(attribute), html: { target: '_blank' }
     hr
-  .row
-    .small-4.columns.align-left
-      h4 Resume
-    .small-4.columns.align-left
+
+  .comparison-row
+    .comparison-section-title
+      h2 Resume
+    .comparison-section-item
       = @left.resume
-    .small-4.columns.align-left
+    .comparison-section-item
       = @right.resume
-  hr
-  .row
-    .small-4.columns.push-4.align-left
+
+.comparison-decision-row
+  .container
+    .comparison-section-title Comparison
+    .comparison-section-item
       = simple_form_for [:admin, @comparison] do |f|
         = f.hidden_field :winner_id, value: @left.id
         = f.hidden_field :loser_id, value: @right.id
-        = f.button :submit, "Left is better!"
+        = f.button :submit, "Left is better!", class: 'bp-btn'
 
-    .small-4.columns.align-left
+    .comparison-section-item
       = simple_form_for [:admin, @comparison] do |f|
         = f.hidden_field :winner_id, value: @right.id
         = f.hidden_field :loser_id, value: @left.id
-        = f.button :submit, "Right is better!"
+        = f.button :submit, "Right is better!", class: 'bp-btn'

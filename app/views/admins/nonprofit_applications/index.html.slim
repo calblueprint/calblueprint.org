@@ -1,8 +1,8 @@
 .admin-npo-apps-container.container
-  .npo-apps-title-bar
+  .admin-page-title-bar
     h1.admin-page-header = t(".banner")
 
-    .npo-apps-filter
+    .admin-page-title-bar-right
       = form_tag("", method: "get") do
         = select_tag :filter_by, options_for_select([['Current applications', 'current'],
                                                      ['Blueprint only', 'bp'],

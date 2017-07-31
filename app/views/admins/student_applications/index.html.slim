@@ -1,17 +1,20 @@
 .container
-  h1.admin-page-header Student Applications
-  p
-    | #{@student_applications.remaining.count} Potential Future Bloopers.
-    |  #{Comparison.current.count} comparisons have been made.
-    |  You made #{current_admin.comparisons.current.count} of them.
+  .admin-page-title-bar
+    div
+      h1.admin-page-header Student Applications
+      p
+        | #{@student_applications.remaining.count} Potential Future Bloopers.
+        |  #{Comparison.current.count} comparisons have been made.
+        |  You made #{current_admin.comparisons.current.count} of them.
 
-  = form_tag("", method: "get") do
-    = select_tag :filter_by, options_for_select([['Current applications', 'current'],
-                                                 ['All applications', 'all']], @filter)
-    = submit_tag "Filter", name: ""
+    .admin-page-title-bar-right
+      = form_tag("", method: "get") do
+        = select_tag :filter_by, options_for_select([['Current applications', 'current'],
+                                                     ['All applications', 'all']], @filter)
+        = submit_tag "Filter", name: ""
 
 
-  = link_to "Download CSV", admin_student_applications_path(format: "csv")
+      = link_to "Download CSV", admin_student_applications_path(format: "csv"), class: "bp-btn"
   table.bp-table
     thead
       tr

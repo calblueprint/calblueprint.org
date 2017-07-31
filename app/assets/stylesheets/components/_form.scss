@@ -33,7 +33,8 @@
   input[type="text"],
   input[type="email"],
   input[type="password"],
-  input[type="tel"] {
+  input[type="tel"],
+  input[type="number"] {
     background: white;
     border: 1px solid $smoke;
     border-radius: 3px;

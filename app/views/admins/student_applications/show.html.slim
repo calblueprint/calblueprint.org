@@ -7,7 +7,9 @@
   .student-app-nav-buttons.marginTopBot-md
     - if StudentApplication.where("id < ?", @app.id).last
       = link_to 'Previous', admin_student_application_path(StudentApplication.where("id < ?", @app.id).last), class: "bp-btn"
+
     = link_to 'All Student Applications', admin_student_applications_path, class: "bp-btn marginLeftRight-sm"
+
     - if StudentApplication.where("id > ?", @app.id).first
       = link_to 'Next', admin_student_application_path(StudentApplication.where("id > ?", @app.id).first), class: "bp-btn"
 

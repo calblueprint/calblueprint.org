@@ -1,26 +1,21 @@
-.banner
-  .banner-text
-    h1 External Applications
-    .spacer-small
-    p.subtitle
-      | #{@external_applications.count} Potential Future Bloopers.
+.container
+  .marginBot-lg
+    h1.admin-page-header External Applications
+    p #{@external_applications.count} Potential Future Bloopers.
 
-.row
-  .small-12.small-centered.columns
-    table.tables
-      thead
-        tr
-          th Name
-          th.column-remove-small Email
-          th.column-remove-medium Semester
-          th.column-remove-medium Year
-          th.column-remove-medium Actions
-      tbody
-        - @external_applications.each do |app|
-          tr
-            td = app.applicant.name
-            td.column-remove-small = app.applicant.email
-            td.column-remove-medium = app.semester.season
-            td.column-remove-medium = app.semester.year
-            td.column-remove-medium = link_to "Details", admin_external_application_path(app.id), class: "button"
-    .spacer
+  table.bp-table
+    thead
+      tr
+        th Name
+        th Email
+        th Semester
+        th Year
+        th Actions
+    tbody
+      - @external_applications.each do |app|
+        tr onClick="window.location = '/admins/external_applications/#{app.id}'"
+          td = app.applicant.name
+          td = app.applicant.email
+          td = app.semester.season
+          td = app.semester.year
+          td = link_to "Details", admin_external_application_path(app.id), class: "button"

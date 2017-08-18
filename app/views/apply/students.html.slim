@@ -38,11 +38,9 @@ section.application-process-section#application-process
           .timeline-row-date = t ".application_timeline.infosession_date"
           .timeline-row-description = t ".application_timeline.infosession"
           .timeline-row-btn
-            - if SocialMediaUrls::INFOSESSION_1
-              = link_to "Infosession #1", SocialMediaUrls::INFOSESSION_1, class: "bp-btn marginRight-xs", target: "_blank"
-            - if SocialMediaUrls::INFOSESSION_2
-              = link_to "Infosession #2", SocialMediaUrls::INFOSESSION_2, class: "bp-btn marginRight-xs", target: "_blank"
-            - if not SocialMediaUrls::INFOSESSION_1 and not SocialMediaUrls::INFOSESSION_2
+            - if SocialMediaUrls::INFOSESSION
+              = link_to "Facebook Event", SocialMediaUrls::INFOSESSION, class: "bp-btn", target: "_blank"
+            - else
               .timeline-row-notice = t ".application_timeline.infosession_notice"
 
       .timeline-row

@@ -12,6 +12,10 @@
 #  resume_content_type    :string(255)
 #  resume_file_size       :integer
 #  resume_updated_at      :datetime
+#  design_portfolio_file_name    :string(255)
+#  design_portfolio_content_type :string(255)
+#  design_portfolio_file_size    :integer
+#  design_portfolio_updated_at   :datetime
 #  year                   :string(255)
 #  phone                  :string(255)
 #  name                   :string
@@ -38,11 +42,17 @@ class StudentApplication < ActiveRecord::Base
   has_many :right_hold, class_name: 'Hold', foreign_key: 'right_id'
 
   has_attached_file :resume
+  has_attached_file :design_portfolio
   validates_attachment :resume,
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..1.megabytes }
 
+  validates_attachment :design_portfolio,
+                       content_type: { content_type: "application/pdf" },
+                       size: { in: 0..10.megabytes }
+
   validates_attachment_presence :resume
+  #validates_attachment_presence :design_portfolio
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true

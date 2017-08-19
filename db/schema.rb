@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422003501) do
+ActiveRecord::Schema.define(version: 20170819215619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -195,17 +195,21 @@ ActiveRecord::Schema.define(version: 20170422003501) do
     t.string   "phone"
     t.string   "name"
     t.string   "email"
-    t.boolean  "available_for_bp_games", default: false
-    t.boolean  "available_for_retreat",  default: false
-    t.integer  "wins_count",             default: 0
-    t.integer  "losses_count",           default: 0
+    t.boolean  "available_for_bp_games",        default: false
+    t.boolean  "available_for_retreat",         default: false
+    t.integer  "wins_count",                    default: 0
+    t.integer  "losses_count",                  default: 0
     t.text     "experience"
     t.text     "projects"
     t.text     "service"
     t.text     "why_no_bp_games"
     t.text     "why_no_retreat"
-    t.boolean  "applied_before",         default: false
-    t.integer  "version",                default: 2
+    t.boolean  "applied_before",                default: false
+    t.integer  "version",                       default: 2
+    t.string   "design_portfolio_file_name"
+    t.string   "design_portfolio_content_type"
+    t.integer  "design_portfolio_file_size"
+    t.datetime "design_portfolio_updated_at"
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

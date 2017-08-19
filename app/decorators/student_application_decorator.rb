@@ -16,7 +16,8 @@ class StudentApplicationDecorator < ApplicationDecorator
      [:why_no_retreat, "Why unavailable for Retreat?"],
      :phone,
      :email,
-     :resume]
+     :resume,
+     :design_portfolio]
   end
 
   def comparison_attributes
@@ -34,6 +35,11 @@ class StudentApplicationDecorator < ApplicationDecorator
 
   def resume
     h.link_to "View Resume", object.resume.url, target: '_blank',
+    class: 'bp-btn btn-light btn-sm'
+  end
+
+  def design_portfolio
+    h.link_to "View Design Portfolio", object.design_portfolio.url, target: '_blank',
     class: 'bp-btn btn-light btn-sm'
   end
 

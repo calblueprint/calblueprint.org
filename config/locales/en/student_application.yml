@@ -34,7 +34,7 @@ en:
         design_portfolio: Design Portfolio (Optional)
         available_for_bp_games: Will you be able to attend BP Games?
         why_no_bp_games: Why are you unable to attend BP Games?
-        available_for_retreat: Will you be able to attend Blueprint Retreat?
+        available_for_retreat: Will you be able to attend Blueprint Retreat and BTSG?
         why_no_retreat: Why are you unable to attend retreat?
 
     hints:
@@ -47,9 +47,9 @@ en:
         experience: Let us know the organization, your postition, and a brief description of your responsiblities and achievements. Fewer than 250 words, please!
         projects: We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. Fewer than 250 words, please!
         service: You can use this space to list your previous service experience. However, you can also choose to describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!
-        available_for_bp_games: 7-9pm on January 30
+        available_for_bp_games: 6:30PM-9:00PM on September 6
         why_no_bp_games: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
-        available_for_retreat: Evening of February 3 - Morning of February 5
+        available_for_retreat: Retreat will be Evening of September 15 - Morning of September 17; BTSG is a speaker panel organized by Blueprint where industry professionals speak on how they use technology in the social impact space.
         why_no_retreat: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
 
     placeholders:

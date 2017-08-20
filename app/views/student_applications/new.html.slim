@@ -46,6 +46,8 @@
         input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
         = t '.available_for_gm'
 
+      = f.input :add_to_newsletter, as: :radio_buttons, checked: true
+
       div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 

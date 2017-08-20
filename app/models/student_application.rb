@@ -22,6 +22,7 @@
 #  email                  :string
 #  available_for_bp_games :boolean          default(FALSE)
 #  available_for_retreat  :boolean          default(FALSE)
+#  add_to_newsletter      :boolean          default(TRUE)
 #  wins_count             :integer          default(0)
 #  losses_count           :integer          default(0)
 #  experience             :text

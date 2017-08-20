@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170819215619) do
+ActiveRecord::Schema.define(version: 20170820150625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -210,6 +210,7 @@ ActiveRecord::Schema.define(version: 20170819215619) do
     t.string   "design_portfolio_content_type"
     t.integer  "design_portfolio_file_size"
     t.datetime "design_portfolio_updated_at"
+    t.boolean  "add_to_newsletter",             default: true
   end
 
   add_index "student_applications", ["applicant_id"], name: "index_student_applications_on_applicant_id", using: :btree

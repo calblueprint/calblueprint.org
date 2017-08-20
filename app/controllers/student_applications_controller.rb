@@ -23,7 +23,7 @@ class StudentApplicationsController < ApplicationController
     params.require(:student_application).permit(
       :why_join, :resume, :design_portfolio, :phone, :year, :applicant_id, :semester_id, :name,
       :email, :experience, :projects, :service, :applied_before,
-      :available_for_retreat, :available_for_bp_games, :why_no_bp_games, :why_no_retreat).merge(
+      :available_for_retreat, :available_for_bp_games, :add_to_newsletter, :why_no_bp_games, :why_no_retreat).merge(
         semester: @settings.current_semester
       )
   end

@@ -7,8 +7,9 @@
         = select_tag :filter_by, options_for_select([['Current applications', 'current'],
                                                      ['Blueprint only', 'bp'],
                                                      ['CS169 only', 'cs169'],
-                                                     ['All applications', 'all']], @filter)
-        = submit_tag "Filter", name: "", class: "bp-btn marginLeft-sm"
+                                                     ['All applications', 'all']], @filter),
+                                 class: "bp-select select-sm"
+        = submit_tag "Filter", name: "", class: "bp-btn btn-sm marginLeft-xxs"
 
   table.bp-table
     thead

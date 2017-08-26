@@ -19,8 +19,6 @@
 @import "bourbon";
 @import "neat";
 @import "sky-labels";
-// @import "vendor/base/base";
-// @import "vendor/toastr";
 
 // Stylesheets --------------------
 
@@ -33,15 +31,7 @@
 // Styles
 @import "components/*";
 
-// Shared
-// @import "shared/tables";
-// @import "shared/tooltips";
-// @import "shared/newsletter-subscribe";
-
 // Admin-specific
 @import "pages/login";
 @import "admin/layout";
 @import "admin/nonprofit_applications";
-// @import "admin/projects/table";
-// @import "admin/projects/project-banner-image";
-// @import "admin/projects/project-form";

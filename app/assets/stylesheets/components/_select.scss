@@ -1,6 +1,6 @@
 .bp-select {
-	appearance: none;
-	-webkit-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
   background-color: $smoke-20;
   background-image: image-url("icons/menulist.svg");
   background-repeat: no-repeat;
@@ -14,9 +14,9 @@
   padding: 8px 12px;
   padding-right: 30px;
 
-	&.select-sm {
+  &.select-sm {
     font-size: 15px;
-		padding: 8px 10px;
-		padding-right: 28px;
-	}
+    padding: 8px 10px;
+    padding-right: 28px;
+  }
 }

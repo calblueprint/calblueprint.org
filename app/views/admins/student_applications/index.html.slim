@@ -8,13 +8,13 @@
         |  You made #{current_admin.comparisons.current.count} of them.
 
     .admin-page-title-bar-right
-      = form_tag("", method: "get") do
+      = link_to "Download CSV", admin_student_applications_path(format: "csv"), class: "bp-btn btn-light btn-sm"
+      = form_tag("", method: "get", class: "marginLeft-md") do
         = select_tag :filter_by, options_for_select([['Current applications', 'current'],
-                                                     ['All applications', 'all']], @filter)
-        = submit_tag "Filter", name: ""
+                                                     ['All applications', 'all']], @filter),
+                     class: "bp-select select-sm"
+        = submit_tag "Filter", name: "", class: "bp-btn btn-sm marginLeft-xxs"
 
-
-      = link_to "Download CSV", admin_student_applications_path(format: "csv"), class: "bp-btn"
   table.bp-table
     thead
       tr

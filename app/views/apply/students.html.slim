@@ -36,7 +36,7 @@ section.application-process-section#application-process
         .text-col
           .timeline-row-title Infosessions
           .timeline-row-date = t ".application_timeline.infosession_date"
-          .timeline-row-description = t ".application_timeline.infosession"
+          .timeline-row-description = raw t ".application_timeline.infosession"
           .timeline-row-btn
             - if SocialMediaUrls::INFOSESSION
               = link_to "Facebook Event", SocialMediaUrls::INFOSESSION, class: "bp-btn", target: "_blank"
@@ -49,7 +49,7 @@ section.application-process-section#application-process
         .text-col
           .timeline-row-title Applications Due
           .timeline-row-date = t ".application_timeline.application_date"
-          .timeline-row-description = t ".application_timeline.application"
+          .timeline-row-description = raw t ".application_timeline.application"
           .timeline-row-btn
             - if @settings.student_app_open
               = link_to "Student Application", new_student_application_path, class: "bp-btn"

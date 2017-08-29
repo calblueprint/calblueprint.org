@@ -36,7 +36,7 @@ en:
         short_summary: >
           Lava Mae is a nonprofit organization founded in 2014 in San Francisco, CA. Lava Mae's
           main goal is to serve the city's homeless who lack access to basic sanitation.
-        link: http://lavamae.herokuapp.com/
+        link: https://buildit.lavamae.org/
         github_link: https://github.com/calblueprint/lavamae
         color: 16ACE6
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/lavamae_banner.jpg
@@ -86,7 +86,8 @@ en:
           The Data Science Education Program is an initiative at UC Berkeley that aims to
           expand data science learning for undergrads, and is designed for
           students from non-technical backgrounds.
-        link: https://docs.google.com/a/berkeley.edu/document/d/1SYRloAtMdLOtpLKUseexAkrF-9dF86A5dC5Y1121Ffs/edit?usp=sharing
+        link: https://zero-to-jupyterhub.readthedocs.io/en/latest/
+        github_link: https://github.com/data-8/
         color: 3C4858
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/data_science_banner.jpg
         full_description: |
@@ -110,7 +111,7 @@ en:
         short_summary: >
           Forte is a Berkeley nonprofit that strives to make music lessons more affordable for children from
           underserved communities. They match K-12 students with college-age teachers, and offer over 12 instruments.
-        link: http://forte-staging.herokuapp.com/
+        link: https://www.forteacademy.org/
         github_link: https://github.com/calblueprint/forte
         color: F89406
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/forte_banner.jpg

@@ -19,19 +19,20 @@
     thead
       tr
         th Name
-        th.column-remove-small Email
-        th.column-remove-medium Semester
-        th.column-remove-medium Year
-        th.column-remove-medium Wins
-        th.column-remove-medium Losses
-        th.column-remove-medium Actions
+        th Email
+        th Grade
+        th Semester
+        th Wins
+        th Losses
+        th Actions
     tbody
       - @student_applications.each do |app|
         tr onClick="window.location = '/admins/student_applications/#{app.id}'"
           td = app.applicant.name
-          td.column-remove-small = app.applicant.email
-          td.column-remove-medium = app.semester.season
-          td.column-remove-medium = app.semester.year
-          td.column-remove-medium = app.wins_count
-          td.column-remove-medium = app.losses_count
-          td.column-remove-medium = link_to "Details", admin_student_application_path(app.id)
+          td = app.applicant.email
+          td = app.year
+          td = "#{app.semester.season.capitalize} #{app.semester.year}"
+          / td = app.semester.year
+          td = app.wins_count
+          td = app.losses_count
+          td = link_to "Details", admin_student_application_path(app.id)

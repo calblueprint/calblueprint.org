@@ -10,8 +10,8 @@
       tr
         th Name
         th Email
+        th Grade
         th Semester
-        th Class
         th Wins
         th Losses
         th Actions
@@ -20,8 +20,8 @@
         tr onClick="window.location = '/admins/student_applications/#{app.id}'"
           td = app.applicant.name
           td = app.applicant.email
-          td = "#{app.semester.season} #{app.semester.year}"
           td = app.year
+          td = "#{app.semester.season.capitalize} #{app.semester.year}"
           td = app.wins_count
           td = app.losses_count
           td = link_to "Details", admin_student_application_path(app.id), class: "button"

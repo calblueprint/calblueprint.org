@@ -1,7 +1,8 @@
 .container.admin-settings-container
   .admin-page-title-bar
     h1.admin-page-header Settings
-    = link_to "Edit Settings", edit_admin_settings_path, class: "bp-btn admin-page-title-bar-right"
+    .admin-page-title-bar-right
+      = link_to "Edit Settings", edit_admin_settings_path, class: "bp-btn"
 
   .settings-row
     .settings-item

@@ -14,9 +14,8 @@ html
     = javascript_include_tag "admin", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
-    .container
-      = render "navbar"
-      = render "flash"
+    = render "navbar"
+    = render "flash"
 
-      .admin-content class="#{body_class}"
-        = yield
+    .admin-content class="#{body_class}"
+      = yield

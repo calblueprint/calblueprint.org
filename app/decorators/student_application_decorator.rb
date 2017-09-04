@@ -39,8 +39,13 @@ class StudentApplicationDecorator < ApplicationDecorator
   end
 
   def design_portfolio
-    h.link_to "View Design Portfolio", object.design_portfolio.url, target: '_blank',
-    class: 'bp-btn btn-light btn-sm'
+    # Super hacky method to check for existence of design attachment
+    if object.design_portfolio.url == '/design_portfolios/original/missing.png'
+      'No Attachment'
+    else
+      h.link_to 'View Design Portfolio', object.design_portfolio.url, target: '_blank',
+      class: 'bp-btn btn-light btn-sm'
+    end
   end
 
   def attribute_title_html(attribute)

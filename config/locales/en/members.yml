@@ -163,6 +163,8 @@ en:
     - first_name: 'Ken'
       last_name: 'Chen'
       email: 'lbkchen@gmail.com'
+      linkedin: 'kenzchen'
+      website: 'kenchen.io'
       <<: *developer
 
     - first_name: 'Casey'
@@ -173,11 +175,6 @@ en:
     - first_name: 'Greta'
       last_name: 'Huang'
       email: 'gretahuang@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Allan'
-      last_name: 'Wu'
-      email: 'allanlwu@gmail.com'
       <<: *developer
 
     - first_name: 'Pooja'
@@ -215,6 +212,45 @@ en:
       website: 'vanesng.com'
       <<: *developer
 
+    - first_name: 'Michelle'
+      last_name: 'Kwon'
+      email: 'michellejkwon@berkeley.edu'
+      linkedin: 'michellejkwon'
+      <<: *developer
+
+    - first_name: 'Ethan'
+      last_name: 'Lee'
+      email: 'ethan@calblueprint.org'
+      linkedin: 'thatethanlee'
+      website: 'ethanl.ee'
+      <<: *developer
+
+    - first_name: 'Arpan'
+      last_name: 'Pal'
+      email: 'arpan.pal1234@gmail.com'
+      <<: *developer
+
+    - first_name: 'Justin'
+      last_name: 'Mi'
+      email: 'justin.mi@berkeley.edu'
+      linkedin: 'justin-mi'
+      website: 'justinmi.me'
+      <<: *developer
+
+    - first_name: 'Claire'
+      last_name: 'Lin'
+      email: 'clairelin135@gmail.com'
+      linkedin: 'clairelin135'
+      website: 'claireylin.com'
+      <<: *developer
+
+    - first_name: 'Neel'
+      last_name: 'Somani'
+      email: 'neel@berkeley.edu'
+      linkedin: 'neelsomani'
+      website: 'apptic.me'
+      <<: *developer
+
     # Mentors
 
     # Other positions:
@@ -225,6 +261,11 @@ en:
       <<: *historian
 
   alumni:
+
+    - first_name: 'Allan'
+      last_name: 'Wu'
+      email: 'allanlwu@gmail.com'
+      <<: *developer
 
     - first_name: 'Sonia'
       last_name: 'Yang'

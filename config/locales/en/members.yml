@@ -172,25 +172,9 @@ en:
       email: 'caseytaka@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Greta'
-      last_name: 'Huang'
-      email: 'gretahuang@berkeley.edu'
-      <<: *developer
-
     - first_name: 'Pooja'
       last_name: 'Nagpal'
       email: 'poojanagpal@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Kenneth'
-      last_name: 'Steele'
-      email: 'kvsteele@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Micah'
-      last_name: 'Carroll'
-      email: 'micah.d.carroll@gmail.com'
-      linkedin: 'micah-carroll'
       <<: *developer
 
     - first_name: 'Jason'
@@ -261,6 +245,22 @@ en:
       <<: *historian
 
   alumni:
+
+    - first_name: 'Kenneth'
+      last_name: 'Steele'
+      email: 'kvsteele@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Micah'
+      last_name: 'Carroll'
+      email: 'micah.d.carroll@gmail.com'
+      linkedin: 'micah-carroll'
+      <<: *developer
+
+    - first_name: 'Greta'
+      last_name: 'Huang'
+      email: 'gretahuang@berkeley.edu'
+      <<: *developer
 
     - first_name: 'Allan'
       last_name: 'Wu'

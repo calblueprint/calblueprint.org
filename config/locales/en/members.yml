@@ -235,6 +235,12 @@ en:
       website: 'apptic.me'
       <<: *developer
 
+    - first_name: 'Florence'
+      last_name: 'Lau'
+      email: 'florence.lau@berkeley.edu'
+      linkedin: 'florence-lau'
+      <<: *developer
+
     # Mentors
 
     # Other positions:

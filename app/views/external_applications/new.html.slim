@@ -27,6 +27,10 @@
 
       .apply-page-jumbotron
         h3 Positions Applying For
+        p
+          ' See
+          a href="https://bit.ly/bpexternal" target="_blank" this doc
+          '  for more information about the positions.
         = f.input :operations, label: "Director of Operations", input_html: { checked: false }
         = f.input :design, label: "Director of Design", input_html: { checked: false }
         = f.input :additional_option, label: "Additional Option (Do you think you can contribute something else?)"

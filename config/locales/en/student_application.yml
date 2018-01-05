@@ -1,7 +1,7 @@
 en:
   student_applications:
     new:
-      banner: Hello, and thank you for your interest! We apologize for asking you to submit your application again, as we lost application data in a technical incident.
+      banner: Hello, and thank you for your interest! We’re excited to read your application.
       apps_due: >
         Applications Due By
       contact: if you have any questions
@@ -34,7 +34,7 @@ en:
         design_portfolio: Design Portfolio (Optional)
         available_for_bp_games: Will you be able to attend BP Games?
         why_no_bp_games: Why are you unable to attend BP Games?
-        available_for_retreat: Will you be able to attend Blueprint Retreat and BTSG?
+        available_for_retreat: Will you be able to attend Blueprint Retreat?
         why_no_retreat: Why are you unable to attend retreat?
         add_to_newsletter: Subscribe to Blueprint newsletter for latest updates!
 
@@ -50,7 +50,7 @@ en:
         service: You can use this space to list your previous service experience. However, you can also choose to describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!
         available_for_bp_games: 6:30PM-9:00PM on September 6
         why_no_bp_games: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
-        available_for_retreat: Retreat will be Evening of September 15 - Morning of September 17; Bridging Tech and Social Good (BTSG) at 6PM to 9PM, November 1 is a speaker panel organized by Blueprint where industry professionals speak on how they use technology in the social impact space.
+        available_for_retreat: Retreat will be Evening of February 2 - Morning of February 4.
         why_no_retreat: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
 
     placeholders:

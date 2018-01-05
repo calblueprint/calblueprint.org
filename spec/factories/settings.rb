@@ -14,6 +14,7 @@
 #  comparison_penalty   :integer          default(0)
 #  comparison_threshold :integer          default(0)
 #  applicants_remaining :integer          default(0)
+#  external_app_open    :boolean          default(TRUE)
 #
 
 FactoryGirl.define do

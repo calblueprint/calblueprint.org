@@ -30,22 +30,10 @@ section.application-process-section#application-process
   .container
     h2.static-page-header.marginBot-xxl Developer Application Process
     .student-timeline
-      .timeline-row
-        .num-col
-          .timeline-num 01
-        .text-col
-          .timeline-row-title Infosessions
-          .timeline-row-date = t ".application_timeline.infosession_date"
-          .timeline-row-description = raw t ".application_timeline.infosession"
-          .timeline-row-btn
-            - if SocialMediaUrls::INFOSESSION
-              = link_to "Facebook Event", SocialMediaUrls::INFOSESSION, class: "bp-btn", target: "_blank"
-            - if not SocialMediaUrls::INFOSESSION
-              .timeline-row-notice = t ".application_timeline.infosession_notice"
 
       .timeline-row
         .num-col
-          .timeline-num 02
+          .timeline-num 01
         .text-col
           .timeline-row-title Applications Due
           .timeline-row-date = t ".application_timeline.application_date"
@@ -58,15 +46,7 @@ section.application-process-section#application-process
 
       .timeline-row
         .num-col
-          .timeline-num 03
-        .text-col
-          .timeline-row-title Blueprint Games
-          .timeline-row-date = t ".application_timeline.bp_games_date"
-          .timeline-row-description = t ".application_timeline.bp_games"
-
-      .timeline-row
-        .num-col
-          .timeline-num 04
+          .timeline-num 02
         .text-col
           .timeline-row-title Interviews
           .timeline-row-date = t ".application_timeline.interview_date"

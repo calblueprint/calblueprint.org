@@ -28,6 +28,10 @@
 #  resume_content_type    :string
 #  resume_file_size       :integer
 #  resume_updated_at      :datetime
+#  social_links           :text
+#  personal_growth        :text
+#  additional_option      :string
+#  commitments            :text
 #
 
 require 'rails_helper'

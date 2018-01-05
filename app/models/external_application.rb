@@ -28,6 +28,10 @@
 #  resume_content_type    :string
 #  resume_file_size       :integer
 #  resume_updated_at      :datetime
+#  social_links           :text
+#  personal_growth        :text
+#  additional_option      :string
+#  commitments            :text
 #
 
 class ExternalApplication < ActiveRecord::Base
@@ -44,10 +48,13 @@ class ExternalApplication < ActiveRecord::Base
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
 
+  validates :social_links, presence: true
+  validates :personal_growth, presence: true
   validates :why_join, presence: true
   validates :phone, presence: true
   validates :year, presence: true
   validates :name, presence: true
+  validates :commitments, presence: true
   validate :at_least_one_position
 
   validates_presence_of :design_experience, if: :design?
@@ -62,8 +69,9 @@ class ExternalApplication < ActiveRecord::Base
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
 
+
   def at_least_one_position
-    if not [self.content, self.design, self.operations].include? true
+    if (not [self.operations, self.design].include? true) && self.additional_option.blank?
       errors[:base] << ("Please choose at least one position to apply for.")
     end
   end

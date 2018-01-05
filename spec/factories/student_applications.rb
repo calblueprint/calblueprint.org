@@ -2,31 +2,36 @@
 #
 # Table name: student_applications
 #
-#  id                     :integer          not null, primary key
-#  created_at             :datetime
-#  updated_at             :datetime
-#  applicant_id           :integer
-#  semester_id            :integer
-#  why_join               :text
-#  resume_file_name       :string(255)
-#  resume_content_type    :string(255)
-#  resume_file_size       :integer
-#  resume_updated_at      :datetime
-#  year                   :string(255)
-#  phone                  :string(255)
-#  name                   :string
-#  email                  :string
-#  available_for_bp_games :boolean          default(FALSE)
-#  available_for_retreat  :boolean          default(FALSE)
-#  wins_count             :integer          default(0)
-#  losses_count           :integer          default(0)
-#  experience             :text
-#  projects               :text
-#  service                :text
-#  why_no_bp_games        :text
-#  why_no_retreat         :text
-#  applied_before         :boolean          default(FALSE)
-#  version                :integer          default(2)
+#  id                            :integer          not null, primary key
+#  created_at                    :datetime
+#  updated_at                    :datetime
+#  applicant_id                  :integer
+#  semester_id                   :integer
+#  why_join                      :text
+#  resume_file_name              :string
+#  resume_content_type           :string
+#  resume_file_size              :integer
+#  resume_updated_at             :datetime
+#  year                          :string
+#  phone                         :string
+#  name                          :string
+#  email                         :string
+#  available_for_bp_games        :boolean          default(FALSE)
+#  available_for_retreat         :boolean          default(FALSE)
+#  wins_count                    :integer          default(0)
+#  losses_count                  :integer          default(0)
+#  experience                    :text
+#  projects                      :text
+#  service                       :text
+#  why_no_bp_games               :text
+#  why_no_retreat                :text
+#  applied_before                :boolean          default(FALSE)
+#  version                       :integer          default(2)
+#  design_portfolio_file_name    :string
+#  design_portfolio_content_type :string
+#  design_portfolio_file_size    :integer
+#  design_portfolio_updated_at   :datetime
+#  add_to_newsletter             :boolean          default(TRUE)
 #
 
 FactoryGirl.define do

@@ -23,20 +23,21 @@
       = f.input :email
       = f.input :phone
       = f.input :major
-      = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
+      / = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
+      = f.input :year, as: :radio_buttons, collection: ["2018", "2019", "2020", "2021"]
 
       h5 Positions Applying For
-      = f.input :operations, label: "Operations Director", input_html: { checked: false }
-      = f.input :design, label: "Design Director", input_html: { checked: false }
-      = f.input :content, label: "Content Director", input_html: { checked: false }
+      = f.input :operations, label: "Director of Operations", input_html: { checked: false }
+      = f.input :design, label: "Director of Design", input_html: { checked: false }
+      = f.input :additional_option, label: "Additional Option (Do you think you can contribute something else?)"
 
       = f.input :applied_before, as: :radio_buttons
-      = f.input :resume, as: :file
 
-      = f.input :website
+      = f.input :social_links
+      = f.input :personal_growth
       = f.input :why_join
-      = f.input :experience
-      = f.input :design_experience
+      = f.input :commitments
+      = f.input :resume, as: :file
 
       label for='available_for_gm'
         input type='checkbox' name='available_for_gm' id='available_for_gm'
@@ -46,17 +47,17 @@
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 
 javascript:
-  $('.external_application_why_no_bp_games').hide();
+  // $('.external_application_why_no_bp_games').hide();
   $('.external_application_why_no_retreat').hide();
   $('.external_application_website').hide();
 
-  $('#external_application_available_for_bp_games').on('click', function() {
-    if($(this).is(':checked')) {
-      $('.external_application_why_no_bp_games').hide();
-    } else {
-      $('.external_application_why_no_bp_games').show();
-    }
-  });
+  // $('#external_application_available_for_bp_games').on('click', function() {
+  //   if($(this).is(':checked')) {
+  //     $('.external_application_why_no_bp_games').hide();
+  //   } else {
+  //     $('.external_application_why_no_bp_games').show();
+  //   }
+  // });
 
   $('#external_application_available_for_retreat').on('click', function() {
     if($(this).is(':checked')) {

@@ -41,7 +41,8 @@ en:
         email: Please use your Berkeley email
         resume: Please attach the most recent copy of your resume as a PDF
         website: Please link your personal website or portfolio of past design work
-        why_join: Use this space to explain why you’re interested in Blueprint. What about Blueprint appeals to you? What do you hope to get out of the experience? Fewer than 250 words, please!
+        personal_growth: In what ways are you looking to grow personally. Fewer than 250 words, please!
+        why_join: Use this space to explain why you’re interested in Blueprint's External Team. What about Blueprint appeals to you? What do you hope to get out of the experience? Fewer than 250 words, please!
         experience: Let us know the organization, your postition, and a brief description of your responsiblities and achievements. Fewer than 250 words, please!
         design_experience: Please share your design experience if you are applying for Design Director. Fewer than 250 words, please!
         projects: We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. Fewer than 250 words, please!
@@ -62,4 +63,3 @@ en:
         experience: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
         projects: "Project\nLink (if possible)\nBrief description"
         service: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-

@@ -50,6 +50,7 @@ class ExternalApplication < ActiveRecord::Base
   validates :phone, presence: true
   validates :year, presence: true
   validates :name, presence: true
+  validates :commitments, presence: true
   validate :at_least_one_position
 
   validates_presence_of :design_experience, if: :design?
@@ -64,14 +65,9 @@ class ExternalApplication < ActiveRecord::Base
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
 
-  # def at_least_one_position
-  #   if not [self.content, self.design, self.operations].include? true
-  #     errors[:base] << ("Please choose at least one position to apply for.")
-  #   end
-  # end
 
   def at_least_one_position
-    if not [self.operations, self.design].include? true || self.additional_option.blank?
+    if (not [self.operations, self.design].include? true) && self.additional_option.blank?
       errors[:base] << ("Please choose at least one position to apply for.")
     end
   end

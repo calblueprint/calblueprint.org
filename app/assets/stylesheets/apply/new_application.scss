@@ -8,6 +8,13 @@
   .form-container {
     padding-top: 100px;
     padding-bottom: 80px;
+
+    & h3 {
+      color: $dark-gray;
+      font-family: $bptext-font;
+      font-size: 24px;
+      font-weight: 600;
+    }
   }
 }
 
@@ -34,4 +41,10 @@
   font-size: 24px;
   font-weight: 600;
   margin-top: 60px;
+}
+
+.apply-page-jumbotron {
+  padding: 40px;
+  background-color: $smoke-20;
+  border-radius: 8px;
 }

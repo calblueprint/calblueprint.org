@@ -15,6 +15,7 @@ class Semester < ActiveRecord::Base
 
   has_many :student_applications
   has_many :nonprofit_applications
+  has_many :external_applications
 
   validates :year, uniqueness: { scope: [:season], case_sensitive: false }, presence: true
 

@@ -10,8 +10,6 @@ class StudentApplicationDecorator < ApplicationDecorator
      :experience,
      :projects,
      :service,
-     [:available_for_bp_games, "Available for BP Games?"],
-     [:why_no_bp_games, "Why unavailable for BP Games?"],
      [:available_for_retreat, "Available for Retreat?"],
      [:why_no_retreat, "Why unavailable for Retreat?"],
      :phone,

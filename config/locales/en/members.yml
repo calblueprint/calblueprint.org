@@ -220,7 +220,8 @@ en:
 
     - first_name: 'Melody'
       last_name: 'Wei'
-      email: 'melodywei861016@berkeley.edu'
+      email: 'melodywei861016@gmail.com'
+      linkedin: 'wei-melody'
       <<: *developer
 
     - first_name: 'Kevin'
@@ -314,6 +315,7 @@ en:
     - first_name: 'Charles'
       last_name: 'Xue'
       email: 'charlesx2013@gmail.com'
+      linkedin: 'charlesx2013'
       <<: *leader
 
     - first_name: 'Warren'

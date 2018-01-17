@@ -87,11 +87,6 @@ en:
 
     # External Team
 
-    - first_name: 'Steven'
-      last_name: 'Zheng'
-      email: 'stnzheng@gmail.com'
-      <<: *external
-
     - first_name: 'Vivian'
       last_name: 'Yao'
       email: 'vivyao31@berkeley.edu'
@@ -234,6 +229,11 @@ en:
       <<: *developer
 
     # Mentors
+
+    - first_name: 'Steven'
+      last_name: 'Zheng'
+      email: 'stnzheng@gmail.com'
+      <<: *mentor
 
     # Other positions:
 

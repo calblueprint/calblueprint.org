@@ -221,7 +221,7 @@ en:
     - first_name: 'Melody'
       last_name: 'Wei'
       email: 'melodywei861016@berkeley.edu'
-      <<: *develoer
+      <<: *developer
 
     - first_name: 'Kevin'
       last_name: 'Li'

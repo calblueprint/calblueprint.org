@@ -227,7 +227,8 @@ en:
 
     - first_name: 'Kevin'
       last_name: 'Li'
-      email: 'kevintli@berkeley.edu'
+      email: 'kevintli98@gmail.com'
+      website: 'kevintli.com'
       <<: *developer
 
     # Mentors

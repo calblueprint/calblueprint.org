@@ -105,6 +105,7 @@ en:
     - first_name: 'Michael'
       last_name: 'Do'
       email: 'michaeldo@berkeley.edu'
+      linkedin: 'michaeldo2'
       <<: *leader
 
     - first_name: 'Jason'

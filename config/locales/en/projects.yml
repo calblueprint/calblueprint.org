@@ -31,6 +31,52 @@ en:
           Re-Plate doesn’t have to manually track each donation, which would allow them to
           scale to cities across the US and potentially feed thousands of additional individuals.
 
+      DREAM:
+        title: The DREAM Project
+        short_summary: >
+          The DREAM Project is a nonprofit focused on education located in the Dominican Republic. The goal of DREAM is to provide high quality, holistic, and sustainable education to children, youth, and young adults in communities where there may not exist programs or opportunities for them to effectively take part in otherwise.
+        link: https://github.com/calblueprint/dream-mobile
+        github_link: https://github.com/calblueprint/dream-rails
+        color: FFEB42
+        banner_image: https://static1.squarespace.com/static/56e068dc2eeb814053c52d43/t/56e3434af8baf38bbe1d13f5/1457734495368/?format=300w
+        full_description: |
+          The Problem
+          -----------
+          DREAM is rapidly growing in both the number of teachers and students and it has become crucial for DREAM to digitalize student enrollment and attendance tracking so that they can meet the rising demand for their educational programs.
+
+          The Solution
+          -----------
+          Blueprint is creating a React Native mobile application for DREAM to help teachers manage their classes, students, and attendances offline. The importance of offline access is due to inconsistent internet/electricity access at schools and program sites. We hope to be able to alleviate the growing pains of the nonprofit and help them impact thousands of more students.
+
+      Veterans 360:
+        title: Veterans 360
+        short_summary: >
+          Veterans 360 is a nonprofit organization founded in 2011 by Rick Collins. It is an organization that has had six years of active operations helping young veterans cope with transition and PTS/TBI challenges and has supported hundreds of young veterans with everything from simple financial support to complete PTS and mental health support.
+        link: https://github.com/calblueprint/veterans360-mobile
+        github_link: https://github.com/calblueprint/veterans360-web
+        color: 13A370
+        banner_image: http://www.msnbc.com/sites/msnbc/files/styles/ratio--3-2--830x553/public/458810912.jpg?itok=3R2lAbza
+        full_description: |
+          The Problem
+          -----------
+          Currently, veterans are provided hard copy resources which are easy to lose track of and they have a hard time connecting to each other and to the rest of society. Veteran organizations are not able to connect veterans early enough in order to avoid crises as they can only reach them when veterans call in for help.  The more Veterans 360 grows, the more important it becomes for them to maintain a centralized digital collection of resources that veterans can come back to as well as connect veterans to each other and to helpful organizations early on in order to prevent crises.
+
+          The Solution
+          -----------
+          Blueprint is working with Veterans 360 to create a web platform that allows Veterans 360 and partnering organizations to provide resources and support to these veterans. In order to help veterans have access to this information immediately, at any time and place, Blueprint has also created a mobile application through which veterans can read these resources and connect with other veterans and organizations in their area.
+
+      RMI:
+        title: Rocky Mountain Institute
+        short_summary: > 
+          RMI seeks to transform global energy use to create a cleaner, low-carbon future. To do this, they collect large amounts of detailed information on commercial buildings in order to analyze and suggest policies for reducing energy consumption. Our project aims to help RMI collect this immense amount of valuable data in a flexible, efficient way.
+        link: https://github.com/calblueprint/RMI
+        github_link: https://github.com/calblueprint/RMI
+        color: 15438C
+        banner_image: https://d231jw5ce53gcq.cloudfront.net/wp-content/uploads/2017/03/About_NewsPress.jpg
+        full_description: |
+
+    past_projects:
+
       Lava Mae:
         title: Lava Mae
         short_summary: >
@@ -106,6 +152,7 @@ en:
           Cloud, Microsoft Azure, Amazon Web Services. Blueprint’s completed application will potentially
           impact thousands of students in Berkeley alone — and if it is used by other universities, countless
           more students will be exposed to the power of data science.
+
       Forte:
         title: Forte
         short_summary: >
@@ -130,7 +177,6 @@ en:
           and profiles for individual students and teachers. Through this system, Forte will be able to
           handle more demand, ultimately fostering lifelong passions for music.
 
-    past_projects:
       bpsf:
         title: Berkeley Public Schools Fund
         short_summary: >

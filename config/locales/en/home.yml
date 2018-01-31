@@ -12,6 +12,10 @@ en:
         to help them better serve their communities. We've designed and built a crowdfunding application for
         Berkeley's public schools, a professional development platform for digital literacy in Oakland, and
         much more!
-      get_involved: >
-        Are you a nonprofit looking to partner? Are you a student looking to join? Find out how you can get
-        involved in bridging technology and social good!
+      student_get_involved: >
+        Applications will open for student developers at the beginning of each semester. Follow our
+        <a href="//facebook.com/calblueprint">Facebook page</a> to stay updated!
+      npo_get_involved: >
+        If you’re a nonprofit organization with a project in mind, we encourage you to apply!
+        We accept NPO applications every June. Follow our <a href="//facebook.com/calblueprint">Facebook page</a>
+        to stay updated!

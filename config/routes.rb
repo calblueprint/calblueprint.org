@@ -40,6 +40,8 @@ Rails.application.routes.draw do
 
   # Admin
   namespace :admins, as: :admin do
+    root to: "pages#index"
+
     resources :student_applications, only: [:index, :show]
     get "remaining", to: "student_applications#remaining"
 

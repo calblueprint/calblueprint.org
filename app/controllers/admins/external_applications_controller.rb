@@ -3,7 +3,9 @@ module Admins
     load_and_authorize_resource
 
     def index
-      @external_applications = ExternalApplication.all
+      @external_applications = ExternalApplication.where(
+        semester_id: Settings.instance.current_semester_id
+      )
     end
 
     def show

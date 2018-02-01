@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Static pages
   get "/about", to: "pages#about"
   get "/sponsors", to: "pages#sponsors"
+  get "/bitcoin", to: "pages#bitcoin"
 
   # Devise
   devise_for :admins, controllers: { invitations: "admins/invitations" }

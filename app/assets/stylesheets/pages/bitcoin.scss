@@ -1,0 +1,15 @@
+.bitcoin-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 300px 100px;
+}
+
+.bitcoin-address-container {
+  padding: 50px;
+  background-color: $bp-blue-10;
+  font-family: $bptext-font;
+  font-size: 30px;
+  font-weight: 600;
+  color: $bp-blue;
+}

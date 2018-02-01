@@ -11,6 +11,10 @@ class PagesController < ApplicationController
   def sponsors
   end
 
+  def bitcoin
+    @address = ENV['BITCOIN_ADDRESS']
+  end
+
   def lets_encrypt
     render text: "4zimu9T1gQAs2IjSQBxTBC4QP8Gsvui4wfrXnsQ0XlU.7J9hcMdJvtoGXRre2NQKXRPnyf0SIsM90W5TGGdGaRI"
   end

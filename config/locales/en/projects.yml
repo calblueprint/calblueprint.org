@@ -67,13 +67,14 @@ en:
 
       RMI:
         title: Rocky Mountain Institute
-        short_summary: > 
+        short_summary: >
           RMI seeks to transform global energy use to create a cleaner, low-carbon future. To do this, they collect large amounts of detailed information on commercial buildings in order to analyze and suggest policies for reducing energy consumption. Our project aims to help RMI collect this immense amount of valuable data in a flexible, efficient way.
         link: https://github.com/calblueprint/RMI
         github_link: https://github.com/calblueprint/RMI
         color: 15438C
         banner_image: https://d231jw5ce53gcq.cloudfront.net/wp-content/uploads/2017/03/About_NewsPress.jpg
         full_description: |
+
 
     past_projects:
 

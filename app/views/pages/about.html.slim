@@ -68,21 +68,17 @@ section.about-page-team-section#team
         - t("members").each do |member|
           li.about-page-member-item
             figure
-              a href="javascript:void(0)"
-                .img-container
-                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
-                  - if member[:linkedin] || member[:website]
-                    .member-links
-                      - if member[:linkedin]
-                        a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
-                          img src=image_url("icons/linkedin.svg") alt=""/
-                      - if member[:website]
-                        a href="http://#{member[:website]}" target="_blank"
-                          img src=image_url("icons/website.svg") alt=""/
-                figcaption
+              .img-container
+                = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
+              figcaption
+                .text-container
                   .name
                     = "#{member[:first_name]} #{member[:last_name]}"
                   .position = member[:role]
+                - if member[:linkedin]
+                    div.icon-container
+                      a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
+                        img src=image_url("icons/linkedin.svg") class="linkedin-icon" alt="LinkedIn"/
         - (0...(5 - t("members").length % 5)).each do |member|
           li.about-page-member-item
 
@@ -95,21 +91,17 @@ section.about-page-team-section
         - t("alumni").each do |member|
           li.about-page-member-item
             figure
-              a href="javascript:void(0)"
-                .img-container
-                  = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
-                  - if member[:linkedin] || member[:website]
-                    .member-links
-                      - if member[:linkedin]
-                        a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
-                          img src=image_url("icons/linkedin.svg") alt=""/
-                      - if member[:website]
-                        a href="http://#{member[:website]}" target="_blank"
-                          img src=image_url("icons/website.svg") alt=""/
-                figcaption
+              .img-container
+                = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
+              figcaption
+                .text-container
                   .name
                     = "#{member[:first_name]} #{member[:last_name]}"
                   .position = member[:role]
+                - if member[:linkedin]
+                    div.icon-container
+                      a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
+                        img src=image_url("icons/linkedin.svg") class="linkedin-icon" alt="LinkedIn"/
         - (0...(5 - t("alumni").length % 5)).each do |member|
           li.about-page-member-item
 

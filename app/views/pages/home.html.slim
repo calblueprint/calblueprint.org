@@ -42,7 +42,7 @@ section.projects-section
         p Bringing education services to the Dominican Republic.
     = link_to project_path("Veterans 360", :current => true)
       .project-item#lavamae
-        .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
+        .project-img.img-container: img src=image_url("home/veterans.jpg") alt="" /
         h4 Veterans 360
         p Connecting veterans to each other and to public resources.
 
@@ -53,9 +53,7 @@ section.involve-section
       .text.marginRight-xl
         h4 Berkeley Students
         p.static-page-desc.marginBot-lg
-          | Applications will open for student developers at the beginning of Fall semester. Follow our
-          a<> href="//facebook.com/calblueprint" Facebook page
-          | to stay updated!
+          = raw t ".student_get_involved"
         = link_to students_apply_path, class: "homepage-link"
           | Learn More
           span.fa.fa-angle-right
@@ -68,7 +66,7 @@ section.involve-section
       .text.marginLeft-xl
         h4 Nonprofit Organizations
         p.static-page-desc.marginBot-lg
-          | If you’re a nonprofit organization with a project in mind, we encourage you to apply! We accept NPO applications every June.
+          = raw t ".npo_get_involved"
         = link_to nonprofits_apply_path, class: "homepage-link"
           | Learn More
           span.fa.fa-angle-right

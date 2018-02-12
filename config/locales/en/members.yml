@@ -4,6 +4,9 @@ en:
     president: &president
       role: "President"
 
+    founder: &founder
+      role: "President / Founder"
+
     internal: &internal
       role: "Internal VP"
 
@@ -52,6 +55,9 @@ en:
     historian: &historian
       role: "Historian"
 
+    sponsor: &sponsor
+      role: "Sponsor"
+
   members:
 
     # E-Team
@@ -91,7 +97,7 @@ en:
       last_name: 'Yao'
       email: 'vivyao31@berkeley.edu'
       linkedin: 'vivianyao31'
-      <<: *community
+      <<: *expansion
 
     - first_name: 'Tao'
       last_name: 'Ong'
@@ -99,6 +105,20 @@ en:
       linkedin: 'taoong'
       website: 'taoong.me'
       <<: *community
+
+    - first_name: 'Jimmy'
+      last_name: 'Liu'
+      email: 'sicong.liu98@gmail.com'
+      linkedin: 'jimmyliu98'
+      website: 'jimmyliu.co'
+      <<: *operations
+
+    - first_name: 'Grant'
+      last_name: 'Kalasky'
+      email: 'grant.kalasky@berkeley.edu'
+      linkedin: 'grantkalasky'
+      website: 'grantkalasky.me'
+      <<: *design
 
     # Project Leaders
 
@@ -229,6 +249,39 @@ en:
       last_name: 'Li'
       email: 'kevintli98@gmail.com'
       website: 'kevintli.com'
+      <<: *developer
+
+    - first_name: 'Wilson'
+      last_name: 'Wang'
+      email: 'wilsonw926@gmail.com'
+      linkedin: 'wilsonw926'
+      website: 'wilsonw926.github.io'
+      <<: *developer
+
+    - first_name: 'Mukil'
+      last_name: 'Loganathan'
+      email: 'mukil.loganathan@gmail.com'
+      linkedin: 'mukilloganathan'
+      <<: *developer
+
+    - first_name: 'Emily'
+      last_name: 'Zhong'
+      email: 'emily.zhong@berkeley.edu'
+      linkedin: 'emily-zhong'
+      website: 'emilyzhong.github.io'
+      <<: *developer
+
+    - first_name: 'Franco'
+      last_name: 'Monterrosa'
+      email: 'francogments@gmail.com'
+      linkedin: 'francomonterrosa'
+      website: 'francogments.com'
+      <<: *developer
+
+    - first_name: 'Aivant'
+      last_name: 'Goyal'
+      email: 'aivantg@berkeley.edu'
+      linkedin: 'aivantgoyal'
       <<: *developer
 
     # Mentors
@@ -577,3 +630,23 @@ en:
       last_name: 'Wu'
       email: 'tony.wu@berkeley.edu'
       <<: *projects
+
+    - first_name: 'Chen-Chen'
+      last_name: 'Huo'
+      email: 'chenchen@getmacd.com'
+      website: 'getmacd.com'
+      <<: *sponsor
+
+    - first_name: 'Kevin'
+      last_name: 'Gong'
+      email: 'jay.ryoo@gmail.com'
+      linkedin: 'kevinkgong'
+      website: 'kgong.github.io'
+      <<: *founder
+
+    - first_name: 'Jae'
+      last_name: 'Ryoo'
+      email: 'jay.ryoo@gmail.com'
+      linkedin: 'jae-ryoo-267a0132'
+      website: 'ryoo.io'
+      <<: *founder

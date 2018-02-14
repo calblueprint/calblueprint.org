@@ -639,7 +639,7 @@ en:
 
     - first_name: 'Kevin'
       last_name: 'Gong'
-      email: 'jay.ryoo@gmail.com'
+      email: 'kevinkgong@gmail.com'
       linkedin: 'kevinkgong'
       website: 'kgong.github.io'
       <<: *founder

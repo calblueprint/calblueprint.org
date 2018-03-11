@@ -1,23 +1,42 @@
-.dream-banner-bg {
+.dream-banner-container {
   position: absolute;
-  width: 100%;
-  height: 760px;
-  left: 0px;
-  top: 0px;
+  width: 200%;
+  height: 1000px;
+  left: -50%;
+  top: -300px;
   transform: skewY(-15deg);
 
+  .stripe {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .skew-x-30 {
+    display: block;
+    transform: skewX(30deg);
+  }
+  .skew-x-neg30 {
+    transform: skewX(-30deg);
+  }
+
   .stripe-0 {
-    transform: skewY(-30deg);
+    @extend .stripe;
+    height: 80%;
+
     .left {
+      flex: 1;
+      @extend .skew-x-30;
       background: linear-gradient(
-        90deg,
-        $dream-pale-yellow,
-        $dream-light-yellow
+        0deg,
+        $dream-main-yellow,
+        $dream-orange
       );
     }
     .right {
+      flex: 1;
+      @extend .skew-x-30;
       background: linear-gradient(
-        90deg, 
+        90deg,
         $dream-main-yellow,
         $dream-light-yellow
       );
@@ -25,12 +44,31 @@
   }
 
   .stripe-1 {
-    transform: skewY(30deg);
-    .left {
+    @extend .stripe;
+    height: 20%;
 
+    .left {
+      flex: 1;
+      @extend .skew-x-neg30;
+      background: linear-gradient(
+        45deg,
+        $dream-light-yellow,
+        $dream-main-yellow
+      );
     }
     .right {
-
+      flex: 1;
+      @extend .skew-x-neg30;
+      background: linear-gradient(
+        45deg,
+        $dream-main-yellow,
+        $dream-orange
+      );
     }
   }
+}
+
+.dream-banner-placeholder {
+  width: 100%;
+  height: 760px;
 }

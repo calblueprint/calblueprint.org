@@ -38,7 +38,7 @@
       background: linear-gradient(
         90deg,
         $dream-main-yellow,
-        $dream-light-yellow
+        $dream-orange
       );
     }
   }
@@ -48,12 +48,12 @@
     height: 20%;
 
     .left {
-      flex: 1;
+      flex: 1.5;
       @extend .skew-x-neg30;
       background: linear-gradient(
         45deg,
-        $dream-light-yellow,
-        $dream-main-yellow
+        $dream-main-yellow,
+        $dream-light-yellow
       );
     }
     .right {
@@ -61,8 +61,8 @@
       @extend .skew-x-neg30;
       background: linear-gradient(
         45deg,
-        $dream-main-yellow,
-        $dream-orange
+        $dream-orange,
+        $dream-main-yellow
       );
     }
   }
@@ -71,4 +71,102 @@
 .dream-banner-placeholder {
   width: 100%;
   height: 760px;
+}
+
+.dream-ctas-container {
+  position: absolute;
+  left: 15%;
+  top: 35%;
+
+  .title {
+    margin-bottom: $md;
+    font-size: 42px;
+    color: $white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .github {
+    color: $dream-orange;
+  }
+
+  .project {
+    margin-left: $sm;
+    color: $dream-pink;
+  }
+}
+
+.dream-phone-display {
+  position: absolute;
+  width: 360px;
+  height: 720px;
+  right: 15%;
+  top: 5%;
+  padding: 102px 34px 102px 34px;
+  background-image: image_url("projects/apple-iphone-silver.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform: matrix3d(
+0.9598609939885592,	0.07266365582603722,	0,	-0.0000922022480089358,
+-0.18604651162790697,	0.936740947827425,	0,	-0.00026637902155499235,
+0,	0,	1,	0,
+32,	3,	0,	1
+);
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.dream-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+
+
+  .mission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+
+    .title {
+      color: $dream-pink;
+      text-transform: uppercase;
+    }
+
+    .description {
+      font-size: 16px;
+    }
+  }
+
+  .graphics-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    .section-students {
+
+    }
+
+    .section-sites {
+
+    }
+
+    .section-classrooms {
+
+    }
+  }
 }

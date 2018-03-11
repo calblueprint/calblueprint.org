@@ -1,0 +1,36 @@
+.dream-banner-bg {
+  position: absolute;
+  width: 100%;
+  height: 760px;
+  left: 0px;
+  top: 0px;
+  transform: skewY(-15deg);
+
+  .stripe-0 {
+    transform: skewY(-30deg);
+    .left {
+      background: linear-gradient(
+        90deg,
+        $dream-pale-yellow,
+        $dream-light-yellow
+      );
+    }
+    .right {
+      background: linear-gradient(
+        90deg, 
+        $dream-main-yellow,
+        $dream-light-yellow
+      );
+    }
+  }
+
+  .stripe-1 {
+    transform: skewY(30deg);
+    .left {
+
+    }
+    .right {
+
+    }
+  }
+}

@@ -82,15 +82,21 @@
     font-size: 36px;
     color: $white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    animation: slideLeft 400ms both;
+    animation-delay: 200ms;
   }
 
   .github {
     color: $dream-orange;
+    animation: slideDown 400ms both;
+    animation-delay: 400ms;
   }
 
   .project {
     margin-left: $sm;
     color: $dream-pink;
+    animation: slideDown 400ms both;
+    animation-delay: 400ms;
   }
 }
 
@@ -112,6 +118,9 @@
     0,	     0,	      1,	0,
     32,	     3,	      0,	1
   );
+
+  animation: scaleInSkew 500ms both;
+  animation-delay: 500ms;
 
   img {
     width: 100%;

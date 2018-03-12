@@ -1,6 +1,5 @@
 class ProjectsController < ApplicationController
   def show
-    # @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     unless params[:current]
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
       render :show

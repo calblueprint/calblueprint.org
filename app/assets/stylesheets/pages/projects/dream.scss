@@ -12,7 +12,6 @@
     width: 100%;
   }
   .skew-x-30 {
-    display: block;
     transform: skewX(30deg);
   }
   .skew-x-neg30 {
@@ -51,9 +50,9 @@
       flex: 1.5;
       @extend .skew-x-neg30;
       background: linear-gradient(
-        45deg,
-        $dream-main-yellow,
-        $dream-light-yellow
+        190deg,
+        $dream-light-yellow,
+        white
       );
     }
     .right {
@@ -80,7 +79,7 @@
 
   .title {
     margin-bottom: $md;
-    font-size: 42px;
+    font-size: 36px;
     color: $white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   }
@@ -108,11 +107,11 @@
   background-repeat: no-repeat;
 
   transform: matrix3d(
-0.9598609939885592,	0.07266365582603722,	0,	-0.0000922022480089358,
--0.18604651162790697,	0.936740947827425,	0,	-0.00026637902155499235,
-0,	0,	1,	0,
-32,	3,	0,	1
-);
+    0.959,	 0.0726,	0,	-0.0000922,
+    -0.186,  0.936,	  0,	-0.000266,
+    0,	     0,	      1,	0,
+    32,	     3,	      0,	1
+  );
 
   img {
     width: 100%;
@@ -156,17 +155,81 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 100px;
+
+    .section-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: $lg;
+      color: $dream-pink;
+      text-align: center;
+    }
+
+    .section-icon {
+      @extend .section-card;
+      font-size: 60px;
+      margin: $md;
+    }
 
     .section-students {
-
+      @extend .section-card;
     }
 
     .section-sites {
-
+      @extend .section-card;
     }
 
     .section-classrooms {
-
+      @extend .section-card;
     }
+
+    .section-stat {
+      font-size: 48px;
+      font-weight: 300;
+    }
+
+    .section-label {
+      font-size: 16px;
+      font-weight: bold;
+      color: $dark-gray;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.dream-why-technology-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  margin-top: 100px;
+  padding: $lg 150px;
+
+  .title {
+    color: $dream-pink;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: $sm;
+  }
+
+  .testimonial-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonial-image {
+    max-width: 30%;
+    max-height: 30%;
+    margin: $lg;
+  }
+
+  .testimonial {
+    margin: $lg;
   }
 }

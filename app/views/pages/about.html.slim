@@ -19,6 +19,8 @@ section.static-page-hero.about-page-hero
           | Values
         li.page-nav-link section-name="team"
           | The Team
+        li.page-nav-link section-name="chapters"
+          | Chapters
 
 section.about-page-mission-section#mission
   .container
@@ -104,6 +106,16 @@ section.about-page-team-section
                         img src=image_url("icons/linkedin.svg") class="linkedin-icon" alt="LinkedIn"/
         - (0...(5 - t("alumni").length % 5)).each do |member|
           li.about-page-member-item
+
+
+section.about-page-chapters-section#chapters
+  .container
+    h2.static-page-header.marginBot-lg Chapters
+    - t(".chapters").each do |chapter|
+      = link_to chapter[:url], class: "chapter-card" do |x|
+        .chapter-card--image style="background-image: url(#{chapter[:image]})"
+        h3.chapter-card--title = chapter[:name]
+        p.chapter-card--summary = chapter[:description]
 
 
 javascript:

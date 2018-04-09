@@ -203,6 +203,53 @@
   }
 }
 
+.about-page-chapters-section {
+
+}
+
+.chapter-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 30px;
+  padding-right: 15px;
+  text-decoration: none;
+  transition: 200ms;
+
+  &:hover {
+    background: $bp-blue-10;
+    color: white;
+    box-shadow: 2px 2px 15px $dark-gray-10;
+    outline: 0.5px solid $bp-blue-20;
+    transform: translateY(-5px);
+  }
+
+  &--image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 200px;
+    min-height: 200px;
+    margin-right: 30px;
+  }
+
+  &--title {
+    color: initial;
+    font-family: $bptext-font;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 30px 15px;
+    min-width: 150px;
+  }
+
+  &--summary {
+    color: $dark-gray-70;
+    margin: 30px 15px;
+  }
+}
+
 @media (max-width: $breakpt-mobile) {
   .about-page-mission-section {
     padding: 70px 0 370px;

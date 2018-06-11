@@ -23,7 +23,7 @@ For the tech savvy, our projects usually run on a [Ruby on Rails](https://rubyon
 
 ## Timeline and Development Cycle
 
-We are based at the University of Berkeley, California, and our developers are all students attending the university. We ask you to be cognizant of our development cycle, which is closely tied our semesterly system of recruitment and breaks.
+We are based at the University of California, Berkeley, and our developers are all students attending the university. We ask you to be cognizant of our development cycle, which is closely tied our semesterly system of recruitment and breaks.
 
 ### Timeline
 *Dates may vary slightly.*
@@ -49,4 +49,4 @@ Blueprint's services are offered **completely pro bono**. Our developers are hig
 
 Looking foward to working with you,
 
-<img src="app/assets/images/banner.png" alt="drawing" width="250px"/>
+<img src="https://user-images.githubusercontent.com/5278006/32311415-bcdef6f6-bf55-11e7-9e8c-e43e786685cf.png" alt="drawing" width="250px"/>

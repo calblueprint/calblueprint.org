@@ -1,0 +1,39 @@
+.mdContent {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  em {
+    font-style: oblique;
+  }
+
+  ul {
+    list-style: disc inside;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 16pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+}

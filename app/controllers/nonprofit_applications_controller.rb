@@ -2,6 +2,10 @@ class NonprofitApplicationsController < ApplicationController
   before_action :authenticate_nonprofit
   before_action :verify_app_open
 
+  def contract
+    render "contract"
+  end
+
   def new
     default_check_cs169 = params.key?(:cs169) || (@settings.cs169_app_open && !@settings.npo_app_open)
     nonprofit_application = current_nonprofit.nonprofit_applications.create(cs169_pool: default_check_cs169,
@@ -44,6 +48,9 @@ class NonprofitApplicationsController < ApplicationController
 
   def index
     @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
+    @interest_form = current_nonprofit.current_interest_form.first
+    @statement_open = @settings.npo_statement_of_interest_open
+    @proposal_open = @interest_form #@settings.npo_project_proposal_open
 
     @num_draft = 0
     @num_submitted = 0

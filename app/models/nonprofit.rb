@@ -25,7 +25,12 @@ class Nonprofit < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   has_many :nonprofit_applications
+  has_many :nonprofit_interest_forms
 
   validates :email, presence: true
   validates :organization_name, presence: true
+
+  def current_interest_form
+    nonprofit_interest_forms.where(semester: Settings.instance.current_semester)
+  end
 end

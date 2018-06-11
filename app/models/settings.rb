@@ -20,6 +20,8 @@
 class Settings < ActiveRecord::Base
   validates :singleton_guard, numericality: 0
   validates :npo_app_open, inclusion: [true, false]
+  validates :npo_statement_of_interest_open, inclusion: [true, false]
+  validates :npo_project_proposal_open, inclusion: [true, false]
   validates :cs169_app_open, inclusion: [true, false]
   validates :student_app_open, inclusion: [true, false]
   validates :current_semester_id, presence: true

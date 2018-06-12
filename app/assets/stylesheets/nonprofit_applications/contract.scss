@@ -5,6 +5,7 @@
   padding: 30px;
 
   p {
+    color: $dark-gray-70;
     margin-bottom: 10px;
   }
 
@@ -17,23 +18,26 @@
   }
 
   li {
+    color: $dark-gray-70;
     margin-bottom: 5px;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: $bptext-font;
     font-weight: 700;
     margin-top: 20px;
+    color: $dark-gray;
   }
 
   h1 {
-    font-size: 24pt;
+    font-size: 28pt;
   }
 
   h2 {
-    font-size: 16pt;
+    font-size: 24pt;
   }
 
   h3 {
-    font-size: 14pt;
+    font-size: 18pt;
   }
 }

@@ -20,6 +20,20 @@ en:
         full_description: >
           Full description for this project as Markdown. This will be shown as a separate
           page for this specific project.
+      nonprofit_interest_form:
+        contact_name: Your First and Last Name
+        phone: Your Phone Number
+        role: Your Role in Your Organization
+        website: Website (optional)
+        category: >
+          Blueprint offers a number of technical services for nonprofit partners. Please select
+          the kind of work that would most benefit your organization.
+        org_description: >
+          Please give a brief description of your organization.
+        agree_to_terms: >
+          I have read and understood Blueprint's <a target="_blank"
+          href="/nonprofit_applications/contract">Terms of Work for Nonprofit Partners</a>.
+
       nonprofit_application:
         purpose: What is your organization’s mission statement?
         cs169_pool: >
@@ -54,6 +68,10 @@ en:
           Please be sure to review <a target="_blank" href="https://sites.google.com/site/ucbsaas/faq/external-customer">these</a> guidelines to confirm if your project qualifies for CS169.
         devices: Check all that apply.
         short_summary: 255 characters max
+      nonprofit_interest_form:
+        agree_to_terms: >
+          Please read this carefully to ensure that Blueprint's work is a good fit for your needs
+          and timeline.
 
 
     # placeholders:

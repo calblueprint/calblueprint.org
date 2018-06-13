@@ -29,3 +29,41 @@
     font-size: 14px;
   }
 }
+
+p.npo-application-notify {
+  transition: 0.5s all;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  cursor: auto;
+  pointer-events: auto;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  opacity: 0;
+}
+
+p.npo-application-notify:hover {
+  opacity: 1;
+}
+
+.npo-application-section--disabled::before {
+  opacity: 1;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+.npo-application-section--disabled > * {
+  opacity: 0.1;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.npo-application-section--disabled {
+  position: relative;
+  cursor: not-allowed;
+}

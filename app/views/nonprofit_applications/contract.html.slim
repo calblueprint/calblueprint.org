@@ -1,0 +1,20 @@
+= render "navbar"
+.mdContent
+<script type="text/javascript" src=""></script>
+script
+  |
+    var showdownJs = document.createElement("script");
+    showdownJs.src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js";
+    document.body.appendChild(showdownJs);
+
+    showdownJs.onload = showdownJs.onreadystatechange = function () {
+      var converter = new showdown.Converter();
+      var request = new XMLHttpRequest();
+      request.addEventListener("load", function() {
+        var html = converter.makeHtml(this.responseText);
+        console.log(html);
+        document.querySelector(".mdContent").innerHTML = html;
+      });
+      request.open("GET", "https://raw.githubusercontent.com/calblueprint/calblueprint.org/master/CONTRACT.md");
+      request.send();
+    };

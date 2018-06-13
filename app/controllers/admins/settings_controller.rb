@@ -22,7 +22,7 @@ module Admins
       params.require(:settings).permit(
         :npo_app_open, :cs169_app_open, :student_app_open, :current_semester_id,
         :comparison_bonus, :comparison_penalty, :comparison_threshold, :applicants_remaining,
-        :external_app_open
+        :external_app_open, :npo_statement_of_interest_open, :npo_project_proposal_open
       )
     end
   end

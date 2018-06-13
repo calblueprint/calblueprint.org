@@ -1,0 +1,108 @@
+= render 'navbar'
+
+.npo-application-edit-container.container
+  = link_to "Back to dashboard", nonprofit_applications_path
+  h1.npo-application-header.marginBot-md Statement of Interest
+  p.static-page-desc
+    | Hi #{current_user.organization_name}!
+    / =< t(".subtitle")
+    |  The Statement of Interest is due on
+    strong.apply-page-due< July 14th, 2018, 11:59pm,
+    |  but submissions will be reviewed on a rolling basis.
+    =<> link_to "Contact us", new_contact_form_path
+    | if you have any questions.
+
+  = render "form_errors", obj: @nonprofit_interest_form
+  = simple_form_for @nonprofit_interest_form, method: 'post' do |f|
+    = f.input :agree_to_terms
+    = f.input :contact_name
+    = f.input :phone, input_html: { type: "tel" }
+    = f.input :role
+    = f.input :website
+    .input-group.string.required.nonprofit_interest_form_website
+      label.string.required.control-label for="nonprofit_interest_form_website" Address of Office (closest to Berkeley, CA)
+      input.string.required#address type="text" autocomplete="off"
+    #map
+    #infowindow-content
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name" class="title"></span><br>
+      <span id="place-address"></span>
+    div style="display: none"
+      = f.input :office_lat, input_html: { id: "lat" }
+      = f.input :office_lng, input_html: { id: "lng" }
+    = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
+    = f.input :org_description
+
+    .form-btn-container.marginBot-md
+      = f.button :submit, 'Submit', class: "bp-btn"
+
+script
+  |
+    var googleJS = document.createElement('script');
+    googleJS.src = "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{@google_maps_key}";
+    document.body.appendChild(googleJS);
+
+    googleJS.onload = googleJS.onreadystatechange = function googleLoad() {
+      var otherLabel = document.querySelector("label[for='nonprofit_interest_form_category_other']");
+      var otherInput = otherLabel.querySelector("input");
+      var input = document.createElement('input');
+      input.type = "text";
+      input.style = "padding: 2px; margin-left: 5px; min-width: 0px; width: 250px;";
+      input.addEventListener("change", function(event) {
+        otherInput.value = event.target.value;
+      });
+      otherLabel.appendChild(input);
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 37.871861, lng: -122.259549 },
+        zoom: 13
+      });
+      var address = document.getElementById('address');
+
+      if (address) {
+        var autocomplete = new google.maps.places.Autocomplete(address, { types: ['geocode'] });
+        google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+        google.maps.event.addListener(autocomplete, 'place_changed', updateMap);
+        google.maps.event.addDomListener(address, 'keydown', function(e) {
+          if (e.key === "Enter") {
+            e.preventDefault(); // Do not submit the form on Enter.
+          }
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+        var infowindowContent = document.getElementById('infowindow-content');
+        infowindow.setContent(infowindowContent);
+        var marker = new google.maps.Marker({
+          map: map,
+          anchorPoint: new google.maps.Point(0, -29)
+        });
+
+        function updateMap() {
+          infowindow.close();
+          marker.setVisible(false);
+          var place = autocomplete.getPlace();
+          if (!place.geometry) return;
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);  // Why 17? Because it looks good.
+          }
+
+          if (place.address_components) {
+            var addressText = [
+              (place.address_components[0] && place.address_components[0].short_name || ''),
+              (place.address_components[1] && place.address_components[1].short_name || ''),
+              (place.address_components[2] && place.address_components[2].short_name || '')
+            ].join(' ');
+          }
+
+          marker.setPosition(place.geometry.location);
+          marker.setVisible(true);
+          infowindowContent.children['place-icon'].src = place.icon;
+          infowindowContent.children['place-name'].textContent = place.name;
+          infowindowContent.children['place-address'].textContent = addressText;
+          infowindow.open(map, marker);
+        }
+      }
+    };

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180105150300) do
+ActiveRecord::Schema.define(version: 20180607011545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,6 +141,22 @@ ActiveRecord::Schema.define(version: 20180105150300) do
     t.datetime "submitted_at"
   end
 
+  create_table "nonprofit_interest_forms", force: :cascade do |t|
+    t.string   "contact_name"
+    t.string   "phone"
+    t.string   "role"
+    t.decimal  "office_lat"
+    t.decimal  "office_lng"
+    t.text     "org_description"
+    t.string   "website"
+    t.string   "category"
+    t.boolean  "agree_to_terms"
+    t.integer  "nonprofit_id"
+    t.integer  "semester_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "nonprofits", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -175,11 +191,13 @@ ActiveRecord::Schema.define(version: 20180105150300) do
     t.boolean  "npo_app_open"
     t.boolean  "student_app_open"
     t.boolean  "cs169_app_open"
-    t.integer  "comparison_bonus",     default: 0
-    t.integer  "comparison_penalty",   default: 0
-    t.integer  "comparison_threshold", default: 0
-    t.integer  "applicants_remaining", default: 0
-    t.boolean  "external_app_open",    default: true
+    t.integer  "comparison_bonus",               default: 0
+    t.integer  "comparison_penalty",             default: 0
+    t.integer  "comparison_threshold",           default: 0
+    t.integer  "applicants_remaining",           default: 0
+    t.boolean  "external_app_open",              default: true
+    t.boolean  "npo_statement_of_interest_open"
+    t.boolean  "npo_project_proposal_open"
   end
 
   add_index "settings", ["current_semester_id"], name: "index_settings_on_current_semester_id", using: :btree

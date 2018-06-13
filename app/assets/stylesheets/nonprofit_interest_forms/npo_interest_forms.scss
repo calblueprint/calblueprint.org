@@ -1,0 +1,25 @@
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+#map {
+  height: 125px;
+  width: 300px;
+  float: right;
+  margin-top: -160px;
+}
+
+@media only screen and (max-width : 500px) {
+  #map {
+    float: none;
+    margin-top: 0;
+  }
+}

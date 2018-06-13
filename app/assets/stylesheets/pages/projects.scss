@@ -133,3 +133,30 @@
     width: 100%;
   }
 }
+
+.project-feature-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: $xxxl 0px;
+  max-width: 540px; 
+
+  .feature-video {
+    width: 500px;
+    height: 375px;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.16), 0 5px 8px rgba(0,0,0,0.23);
+  }
+
+  .feature-title {
+    margin-top: $lg;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .feature-description {
+    // font-size: 18px;
+    margin-top: $sm;
+  }
+}

@@ -136,11 +136,14 @@
   justify-content: flex-start;
   align-items: center;
 
-  margin-top: 800px;
+  margin-top: $xl;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
 
+  &--pushdown {
+    margin-top: 800px;
+  }
 
   .mission-container {
     display: flex;

@@ -6,7 +6,8 @@ class ProjectsController < ApplicationController
     end
 
     slug_to_view = {
-      "DREAM" => :dream
+      "DREAM" => :dream,
+      "SJC" => :sjc, 
     }
     unless slug_to_view.has_key? params[:slug]
       render '/public/404'

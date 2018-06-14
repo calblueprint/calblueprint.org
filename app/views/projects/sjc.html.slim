@@ -9,19 +9,9 @@ div.sjc-parallax
       button.bp-btn.btn-white.btn-lg.github GitHub
       button.bp-btn.btn-white.btn-lg.project Project
 
-
   div.sjc-mission-container.sjc-mission-container--pushdown
     h2.static-page-header.title The Mission
     p.description.marginTop-md Providing education services for underserved communities in the Dominican Republic.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-  / div.dream-why-technology-container
-  /   div.static-page-header.title Why Technology
-  /   div.testimonial-row
-  /     img.testimonial-image src=image_url("about/2.jpg")
-  /     div.testimonial Providing education services for underserved communities in the Dominican Republic.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  /   div.testimonial-row
-  /     div.testimonial Providing education services for underserved communities in the Dominican Republic.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  /     img.testimonial-image src=image_url("about/3.jpg")
 
   div.sjc-content-container
     div.static-page-header.title.marginBot-sm Our Solution
@@ -37,3 +27,17 @@ div.sjc-parallax
       iframe.feature-video id="ytplayer" type="text/html" src="https://www.youtube.com/embed/a1Y73sPHKxw?modestbranding=1&controls=0&showinfo=0&rel=0"
       div.feature-title Foreign Language Support
       div.feature-description DREAM is based in the Dominican Republic and the primary language for many of their volunteers and teachers is Spanish. We support versions of the application both in English and Spanish.
+
+    div.static-page-header.title.marginTop-lg.marginBot-md Our Team
+
+    = render "avatars", people: [ \
+        { name: "Amy Shan", email: "amyshan@berkeley.edu" },
+        { name: "Eric Liang", email: "liang.eric24@gmail.com" },
+        { name: "Calvin Dong", email: "amyshan@berkeley.edu" },
+        { name: "Claire Lin", email: "amyshan@berkeley.edu" },
+        { name: "Franco Monterrosa", email: "amyshan@berkeley.edu" },
+        { name: "Peter Veerman", email: "amyshan@berkeley.edu" },
+        { name: "Florence Lau", email: "amyshan@berkeley.edu" },
+        { name: "Michael Do", email: "amyshan@berkeley.edu" },
+        { name: "Neel Somani", email: "amyshan@berkeley.edu" },
+      ]

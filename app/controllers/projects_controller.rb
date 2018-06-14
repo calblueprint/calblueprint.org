@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  include ApplicationHelper
+
   def show
     unless params[:current]
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
@@ -7,7 +9,7 @@ class ProjectsController < ApplicationController
 
     slug_to_view = {
       "DREAM" => :dream,
-      "SJC" => :sjc, 
+      "SJC" => :sjc,
     }
     unless slug_to_view.has_key? params[:slug]
       render '/public/404'

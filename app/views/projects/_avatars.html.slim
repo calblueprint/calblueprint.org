@@ -1,0 +1,5 @@
+div.avatars-container
+  - people.each do |person|
+    div.tooltip
+      = image_tag(gravatar_url(person[:email]), class: "avatar-image")
+      div.tooltip.tooltiptext = person[:name]

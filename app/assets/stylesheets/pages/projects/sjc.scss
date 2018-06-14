@@ -1,0 +1,192 @@
+.sjc-float-container {
+  position: absolute;
+  right: 60px;
+  top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sjc-macbook-display {
+  width: 1000px;
+  height: 600px;
+  padding: 50px 120px 80px 120px;
+  background-image: image_url("projects/apple-macbook-pro.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  animation: scaleIn 500ms both;
+  animation-delay: 500ms;
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.sjc-ctas-container {
+  min-width: 450px;
+  margin-left: $xl;
+  .title {
+    margin-bottom: $md;
+    font-size: 36px;
+    color: $sjc-main-green;
+    // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    animation: slideLeft 400ms both;
+    animation-delay: 200ms;
+  }
+
+  .cta-button {
+    color: $dark-gray;
+    animation: slideDown 400ms both;
+    animation-delay: 400ms;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: 200ms;
+
+    &:hover {
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .github {
+    @extend .cta-button;
+  }
+
+  .project {
+    margin-left: $sm;
+    @extend .cta-button;
+  }
+}
+
+.sjc-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 40px 120px;
+
+  background-color: $white;
+
+  &--pushdown {
+    margin-top: 900px;
+  }
+
+  .mission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+
+    .title {
+      color: $sjc-main-green;
+      font-size: 36px;
+      text-transform: uppercase;
+      transform: translateY(-20px);
+    }
+
+    .description {
+      font-size: 18px;
+    }
+  }
+
+  .graphics-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px;
+
+    .section-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: $lg;
+      color: $dream-pink;
+      text-align: center;
+    }
+
+    .section-icon {
+      @extend .section-card;
+      font-size: 60px;
+      margin: $md;
+    }
+
+    .section-students {
+      @extend .section-card;
+    }
+
+    .section-sites {
+      @extend .section-card;
+    }
+
+    .section-classrooms {
+      @extend .section-card;
+    }
+
+    .section-stat {
+      font-size: 48px;
+      font-weight: 300;
+    }
+
+    .section-label {
+      font-size: 16px;
+      font-weight: bold;
+      color: $dark-gray;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.sjc-mission-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-gray-80;
+  margin-top: 100px;
+  padding: 60px $xl;
+
+  &--pushdown {
+    margin-top: 900px;
+  }
+
+  .title {
+    padding: $sm $md;
+    color: $sjc-main-green;
+    background-color: $white;
+    border-radius: 4px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: $sm;
+  }
+
+  .description {
+    font-size: 18px;
+    color: $white;
+    max-width: 50%;
+    text-align: center;
+  }
+}
+
+.sjc-parallax {
+    height: 100%;
+
+    background-image: image_url("home/group_photo.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

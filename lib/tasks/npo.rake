@@ -35,7 +35,15 @@ namespace :npo do
         airtable_npo["Contact Name"] = form.contact_name
         airtable_npo["Contact Role"] = form.role
         airtable_npo["Website"] = form.website
-        airtable_npo["Service"] = form.category
+
+        if NonprofitInterestForm::CATEGORIES.index(form.category).nil?
+          airtable_npo["Service"] = "Other"
+          airtable_npo["Service (if other)"] = form.category
+        else
+          airtable_npo["Service"] = form.category
+        end
+
+        airtable_npo["Description"] = form.org_description
 
         coords = [form.office_lat, form.office_lng]
         reversed_results = gmaps.reverse_geocode(coords)
@@ -55,7 +63,7 @@ namespace :npo do
         airtable_npo["Project Summary"] = app.short_summary
         airtable_npo["Project Goals"] = app.goals
         airtable_npo["Project Key Features"] = app.key_features
-        airtable_npo["Project Target Devices"] = app.devices
+        airtable_npo["Project Target Devices"] = app.devices.select { |d| d != "" }
         airtable_npo["Project Target Audience"] = app.target_audience
         airtable_npo["Project Importance"] = app.why
         airtable_npo["Project Technical Requirements"] = app.technical_requirements

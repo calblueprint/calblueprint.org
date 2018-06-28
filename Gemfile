@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.0'
+ruby '2.2.5'
 
 # Core gems
 gem 'rails', '4.2.0'
@@ -10,6 +10,8 @@ gem 'sucker_punch', '~> 1.3.1'
 gem 'aasm', '~> 4.1.0'
 gem 'activesupport-json_encoder', '1.1.0'
 gem 'dalli' # memcache
+gem 'airrecord', '~> 0.2.4'
+gem 'google_maps_service'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
@@ -76,7 +78,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
 
-  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails', '~> 4.5.0', require: false
   gem 'i18n-tasks'
 end
@@ -98,6 +100,6 @@ group :staging, :production do
   gem 'newrelic_rpm'
 
   # SSL
-  gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
+  gem 'platform-api'
   gem 'letsencrypt-rails-heroku'
 end

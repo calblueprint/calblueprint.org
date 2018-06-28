@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/jalada/platform-api
-  revision: 4a06e57bd32d805248f3b8e1358ed4833296c659
-  branch: master
-  specs:
-    platform-api (0.8.0)
-      heroics (~> 0.0.17)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -259,7 +251,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    moneta (1.0.0)
+    moneta (0.8.1)
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
@@ -305,6 +297,9 @@ GEM
     parser (2.5.1.0)
       ast (~> 2.4.0)
     pg (0.17.1)
+    platform-api (2.1.0)
+      heroics (~> 0.0.23)
+      moneta (~> 0.8.1)
     powerpack (0.1.2)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -530,7 +525,7 @@ DEPENDENCIES
   omniauth-google-oauth2 (~> 0.2.6)
   paperclip (~> 4.2)
   pg (~> 0.17.1)
-  platform-api!
+  platform-api
   pry-byebug
   pry-rails
   quiet_assets

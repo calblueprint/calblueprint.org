@@ -100,6 +100,6 @@ group :staging, :production do
   gem 'newrelic_rpm'
 
   # SSL
-  gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
+  gem 'platform-api'
   gem 'letsencrypt-rails-heroku'
 end

@@ -176,6 +176,8 @@ section.application-newsletter
     p.static-page-desc.marginBot-lg = t ".newsletter"
     = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
 
+= render "with_mailchimp_js"
+
 javascript:
   $(document).ready(function(){
     var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));

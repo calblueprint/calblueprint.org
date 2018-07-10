@@ -22,6 +22,7 @@
 #= require shared/google-analytics
 #= require shared/header
 #= require shared/mailchimp
+#= require shared/heap
 #= require shared/static_hero_nav
 #= require bootstrap/dropdown
 #=

@@ -217,3 +217,27 @@ nav.bp-nav {
     }
   }
 }
+
+// Notify bar Styles
+.notify-bar-link + nav.bp-nav.nav-white {
+  top: 40px;
+}
+
+.notify-bar-link {
+  text-decoration: none;
+}
+
+.notify-bar-container {
+  display: flex;
+  height: 40px;
+  font-size: 80%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.notify-bar-container:hover {
+  background-color: $bp-blue-10;
+}
+

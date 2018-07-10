@@ -21,4 +21,5 @@
 #= require shared/header
 #= require shared/resizing-textarea
 #= require admin/sortable-table
+#= require ckeditor/init
 #= require bootstrap/dropdown

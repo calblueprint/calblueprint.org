@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180607011545) do
+ActiveRecord::Schema.define(version: 20180710033449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -198,6 +198,9 @@ ActiveRecord::Schema.define(version: 20180607011545) do
     t.boolean  "external_app_open",              default: true
     t.boolean  "npo_statement_of_interest_open"
     t.boolean  "npo_project_proposal_open"
+    t.boolean  "notify_bar_active"
+    t.text     "notify_bar_content"
+    t.string   "notify_bar_link"
   end
 
   add_index "settings", ["current_semester_id"], name: "index_settings_on_current_semester_id", using: :btree

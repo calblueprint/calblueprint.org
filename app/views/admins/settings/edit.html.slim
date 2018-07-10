@@ -18,5 +18,11 @@
       = f.input :comparison_threshold, label: 'Comparison Threshold', item_wrapper_class: 'inline'
       = f.input :applicants_remaining, label: 'Applicant Cutoff', item_wrapper_class: 'inline'
 
+    .settings-row
+      .inline
+        = f.input :notify_bar_active, label: 'Notify bar enabled'
+        = f.input :notify_bar_link, label: 'Notify bar link'
+      = f.input :notify_bar_content, label: 'Notify bar content', item_wrapper_class: 'inline', as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }
+
     = link_to "Cancel", admin_settings_path, class: 'bp-btn btn-light marginRight-sm'
     = f.button :submit, 'Update Settings', class: 'bp-btn'

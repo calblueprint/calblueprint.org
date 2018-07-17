@@ -30,3 +30,8 @@ script
         title: "#{current_user ? current_user.organization_name : ''}"
       });
     });
+
+    if (window.__DRIFTT_WIDGET_INCLUDED__) {
+      window.__DRIFTT_WIDGET_INCLUDED__ = false;
+      drift.init();
+    }

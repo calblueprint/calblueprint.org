@@ -47,12 +47,15 @@ namespace :npo do
 
         airtable_npo["Description"] = form.org_description
 
-        coords = [form.office_lat, form.office_lng]
-        reversed_results = gmaps.reverse_geocode(coords)
+        if form.office_lat
+          coords = [form.office_lat, form.office_lng]
+          reversed_results = gmaps.reverse_geocode(coords)
 
-        if reversed_results.length > 0
-          airtable_npo["Address"] = reversed_results.first[:formatted_address]
+          if reversed_results.length > 0
+            airtable_npo["Address"] = reversed_results.first[:formatted_address]
+          end
         end
+
         airtable_npo["Application Phase"] = "Completed Phase 1"
         airtable_npo.save
       end

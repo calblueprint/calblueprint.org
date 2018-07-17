@@ -1,3 +1,5 @@
+require 'google_maps_service'
+
 class NonprofitInterestFormsController < ApplicationController
   before_action :set_nonprofit_interest_form, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_nonprofit
@@ -27,6 +29,24 @@ class NonprofitInterestFormsController < ApplicationController
     @nonprofit_interest_form.nonprofit = current_nonprofit
     @nonprofit_interest_form.semester = Settings.instance.current_semester
 
+    # Catch empty office validation errors early
+    if !@nonprofit_interest_form.save
+      return render :new
+    end
+
+    # Attempt to geocode the submission, if the front-end did not
+    if !@nonprofit_interest_form.office_lat
+      gmaps = GoogleMapsService::Client.new(key: ENV["GOOGLE_MAPS_API"])
+      results = gmaps.geocode(nonprofit_interest_form_params["office"])
+      if results.length > 0
+        print results
+        coords = results.first[:geometry][:location]
+        print coords
+        @nonprofit_interest_form.office_lat = coords[:lat]
+        @nonprofit_interest_form.office_lng = coords[:lng]
+      end
+    end
+
     if @nonprofit_interest_form.save
       redirect_to nonprofit_applications_path, notice: 'Your Statement of Interest was received!'
     else
@@ -51,6 +71,6 @@ class NonprofitInterestFormsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def nonprofit_interest_form_params
-      params.require(:nonprofit_interest_form).permit(:contact_name, :role, :agree_to_terms, :phone, :office_lat, :office_lng, :org_description, :website, :category, :idea)
+      params.require(:nonprofit_interest_form).permit(:contact_name, :role, :agree_to_terms, :phone, :office, :office_lat, :office_lng, :org_description, :website, :category, :idea)
     end
 end

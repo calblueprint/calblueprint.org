@@ -4,8 +4,9 @@ en:
       title: Our Projects
       subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
-    current_projects:
-      Re-Plate:
+    projects_list:
+      re-plate:
+        status: current
         title: Re-Plate
         short_summary: >
           Re-Plate is a Berkeley nonprofit that aims to use technology to eliminate food
@@ -31,14 +32,15 @@ en:
           Re-Plate doesn’t have to manually track each donation, which would allow them to
           scale to cities across the US and potentially feed thousands of additional individuals.
 
-      DREAM:
+      dream:
+        status: current
         title: The DREAM Project
         short_summary: >
           The DREAM Project is a nonprofit focused on education located in the Dominican Republic. The goal of DREAM is to provide high quality, holistic, and sustainable education to children, youth, and young adults in communities where there may not exist programs or opportunities for them to effectively take part in otherwise.
         link: https://github.com/calblueprint/dream-mobile
         github_link: https://github.com/calblueprint/dream-rails
         color: FFEB42
-        banner_image: https://static1.squarespace.com/static/56e068dc2eeb814053c52d43/t/56e3434af8baf38bbe1d13f5/1457734495368/?format=300w
+        banner_image: /assets/projects/dream.png
         full_description: |
           The Problem
           -----------
@@ -48,14 +50,15 @@ en:
           -----------
           Blueprint is creating a React Native mobile application for DREAM to help teachers manage their classes, students, and attendances offline. The importance of offline access is due to inconsistent internet/electricity access at schools and program sites. We hope to be able to alleviate the growing pains of the nonprofit and help them impact thousands of more students.
 
-      Veterans 360:
+      veterans-360:
+        status: current
         title: Veterans 360
         short_summary: >
           Veterans 360 is a nonprofit organization founded in 2011 by Rick Collins. It is an organization that has had six years of active operations helping young veterans cope with transition and PTS/TBI challenges and has supported hundreds of young veterans with everything from simple financial support to complete PTS and mental health support.
         link: https://github.com/calblueprint/veterans360-mobile
         github_link: https://github.com/calblueprint/veterans360-web
         color: 13A370
-        banner_image: http://www.msnbc.com/sites/msnbc/files/styles/ratio--3-2--830x553/public/458810912.jpg?itok=3R2lAbza
+        banner_image: /assets/projects/veterans-360.jpg
         full_description: |
           The Problem
           -----------
@@ -65,20 +68,22 @@ en:
           -----------
           Blueprint is working with Veterans 360 to create a web platform that allows Veterans 360 and partnering organizations to provide resources and support to these veterans. In order to help veterans have access to this information immediately, at any time and place, Blueprint has also created a mobile application through which veterans can read these resources and connect with other veterans and organizations in their area.
 
-      RMI:
+      rmi:
+        status: current
         title: Rocky Mountain Institute
         short_summary: >
           RMI seeks to transform global energy use to create a cleaner, low-carbon future. To do this, they collect large amounts of detailed information on commercial buildings in order to analyze and suggest policies for reducing energy consumption. Our project aims to help RMI collect this immense amount of valuable data in a flexible, efficient way.
         link: https://github.com/calblueprint/RMI
         github_link: https://github.com/calblueprint/RMI
         color: 15438C
-        banner_image: https://d231jw5ce53gcq.cloudfront.net/wp-content/uploads/2017/03/About_NewsPress.jpg
+        banner_image: /assets/projects/rmi.jpg
         full_description: |
+          Read more about how we're helping tackle climate change with RMI:
 
+          [_How We’re Helping Tackle Climate Change_](https://medium.com/blueprint/how-were-helping-tackle-climate-change-2115d11379a6)
 
-    past_projects:
-
-      Lava Mae:
+      lava-mae:
+        status: past
         title: Lava Mae
         short_summary: >
           Lava Mae is a nonprofit organization founded in 2014 in San Francisco, CA. Lava Mae's
@@ -102,7 +107,8 @@ en:
           interactive map to showcase their growing network. Through this tool, Lava Mae can connect
           users and continue to scale.
 
-      Roots of Success:
+      roots-of-success:
+        status: past
         title: Roots of Success
         short_summary: >
           Roots of Success is an international organization that provides educational
@@ -127,7 +133,8 @@ en:
           people in correctional facilities and untapped schools. By creating this app, Blueprint
           hopes to ease educational access for students and potentially impact thousands of individuals.
 
-      Data Science:
+      data-science:
+        status: past
         title: UC Berkeley Data Science Education Program
         short_summary: >
           The Data Science Education Program is an initiative at UC Berkeley that aims to
@@ -154,7 +161,8 @@ en:
           impact thousands of students in Berkeley alone — and if it is used by other universities, countless
           more students will be exposed to the power of data science.
 
-      Forte:
+      forte:
+        status: past
         title: Forte
         short_summary: >
           Forte is a Berkeley nonprofit that strives to make music lessons more affordable for children from
@@ -179,6 +187,7 @@ en:
           handle more demand, ultimately fostering lifelong passions for music.
 
       bpsf:
+        status: past
         title: Berkeley Public Schools Fund
         short_summary: >
           Provides a way for Berkeley public school teachers to fund classroom projects.
@@ -200,6 +209,7 @@ en:
           raise almost $30,000 thus far.
 
       phc:
+        status: past
         title: Project Homeless Connect
         short_summary: >
           Provides a secure way for the homeless to sign up for services and for
@@ -230,6 +240,7 @@ en:
           of data entry every event.
 
       odalc:
+        status: past
         title: Oakland Digital Arts and Literacy
         short_summary: >
           Allows tech and design professionals around the Bay Area to teach courses
@@ -252,6 +263,7 @@ en:
           the 21st century.
 
       ros:
+        status: past
         title: Roots of Success
         short_summary: >
           Provides a way for Roots of Success teachers to manage various curricula

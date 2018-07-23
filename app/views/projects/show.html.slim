@@ -1,22 +1,20 @@
-- project = (params[:current] == 'true' ? t("projects.current_projects.#{params[:slug]}") : t("projects.past_projects.#{params[:slug]}"))
-
 = render "navbar"
 
 .container.project-article-container.marginTop-xl
-  h1.static-page-header.marginBot-md = project[:title]
-  p = project[:short_summary]
+  h1.static-page-header.marginBot-md = @project[:title]
+  p = @project[:short_summary]
   .project-article-links-container.marginBot-md
-    - if project[:link]
-      = link_to project[:link], class: "homepage-link marginRight-lg", target: "_blank"
+    - if @project[:link]
+      = link_to @project[:link], class: "homepage-link marginRight-lg", target: "_blank"
         | View Project
         span.fa.fa-angle-right
-    - if project[:github_link]
-      = link_to project[:github_link], class: "homepage-link", target: "_blank"
-        | View Github Repository
+    - if @project[:github_link]
+      = link_to @project[:github_link], class: "homepage-link", target: "_blank"
+        | View GitHub Repository
         span.fa.fa-angle-right
 
 .project-article-img-container
-  .img-container: img src="#{project[:banner_image]}" alt="#{project[:title]} photo"/
+  .img-container: img src="#{image_path(@project[:banner_image])}" alt="#{@project[:title]} photo"/
 
 .container.project-article-container.marginBot-xxxl
-  = raw @markdown.render project[:full_description]
+  = raw @markdown.render @project[:full_description]

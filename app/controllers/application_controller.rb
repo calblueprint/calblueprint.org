@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
   def load_settings
     @settings = Settings.instance
   end
+
+  def not_found
+    render :file => "#{Rails.root}/public/404.html",  layout: false, status: :not_found
+  end
 end

@@ -113,7 +113,7 @@ section.about-page-chapters-section#chapters
     h2.static-page-header.marginBot-lg Chapters
     - t(".chapters").each do |chapter|
       = link_to chapter[:url], class: "chapter-card" do |x|
-        .chapter-card--image style="background-image: url(#{chapter[:image]})"
+        .chapter-card--image style="background-image: url(#{image_path(chapter[:image])})"
         h3.chapter-card--title = chapter[:name]
         p.chapter-card--summary = chapter[:description]
 

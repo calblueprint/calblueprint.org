@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     begin
       @project = t("projects.projects_list.#{params[:slug]}", raise: true)
-    rescue
+    rescue I18n::MissingTranslationData
       not_found
     end
   end

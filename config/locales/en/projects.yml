@@ -40,7 +40,7 @@ en:
         link: https://github.com/calblueprint/dream-mobile
         github_link: https://github.com/calblueprint/dream-rails
         color: FFEB42
-        banner_image: /assets/projects/dream.png
+        banner_image: projects/dream.png
         full_description: |
           The Problem
           -----------
@@ -58,7 +58,7 @@ en:
         link: https://github.com/calblueprint/veterans360-mobile
         github_link: https://github.com/calblueprint/veterans360-web
         color: 13A370
-        banner_image: /assets/projects/veterans-360.jpg
+        banner_image: projects/veterans-360.jpg
         full_description: |
           The Problem
           -----------
@@ -76,7 +76,7 @@ en:
         link: https://github.com/calblueprint/RMI
         github_link: https://github.com/calblueprint/RMI
         color: 15438C
-        banner_image: /assets/projects/rmi.jpg
+        banner_image: projects/rmi.jpg
         full_description: |
           Read more about how we're helping tackle climate change with RMI:
 

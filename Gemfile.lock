@@ -88,7 +88,7 @@ GEM
       thor (~> 0.19)
     builder (3.2.3)
     byebug (10.0.2)
-    cancancan (1.9.2)
+    cancancan (2.2.0)
     capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -502,7 +502,7 @@ DEPENDENCIES
   bitters (~> 1.0.0)
   bootstrap-sass (~> 3.3.6)
   bourbon (~> 4.2.2)
-  cancancan (~> 1.9.2)
+  cancancan (~> 2.2.0)
   capybara (~> 2.4.4)
   ckeditor
   codeclimate-test-reporter

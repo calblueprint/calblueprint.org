@@ -26,8 +26,6 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-  config.active_record.raise_in_transactional_callbacks = true
-
   # Do not compress assets
   config.assets.compress = false
 

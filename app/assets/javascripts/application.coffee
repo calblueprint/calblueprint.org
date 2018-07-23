@@ -14,8 +14,6 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
-#= require sky-labels
-#= require ./sky-labels-setup
 #= require vendor/toastr
 #= require vendor/scrolldrag
 #= require shared/utilities
@@ -26,6 +24,5 @@
 #= require shared/static_hero_nav
 #= require bootstrap/dropdown
 #=
-#= require ./slider
 #= require_tree ./pages
 #= require_tree ./apply

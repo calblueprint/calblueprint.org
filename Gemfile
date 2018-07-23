@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.5'
+ruby '2.2.10'
 
 # Core gems
 gem 'rails', '5.2.0'
@@ -43,7 +43,7 @@ gem 'coffee-rails', '~> 4.2.2'
 gem 'jquery-rails', '~> 4.3.3'
 gem 'slim-rails', '~> 3.1.3'
 gem 'uglifier', '>= 1.3.0'
-gem 'autoprefixer-rails', '~> 5.2.1'
+gem 'autoprefixer-rails', '~> 9.0.0'
 gem 'rails_autolink'
 
 gem 'flutie', '~> 2.0.0'

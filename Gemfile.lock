@@ -61,9 +61,8 @@ GEM
       rake (>= 10.4, < 13.0)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (5.2.1.3)
+    autoprefixer-rails (9.0.0)
       execjs
-      json
     awesome_print (1.8.0)
     aws-sdk (1.5.8)
       httparty (~> 0.7)
@@ -495,7 +494,7 @@ DEPENDENCIES
   acts_as_list (~> 0.7.2)
   airrecord (~> 0.2.4)
   annotate
-  autoprefixer-rails (~> 5.2.1)
+  autoprefixer-rails (~> 9.0.0)
   awesome_print
   aws-sdk (~> 1.5.7)
   better_errors
@@ -566,7 +565,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
 
 RUBY VERSION
-   ruby 2.2.5p319
+   ruby 2.2.10p489
 
 BUNDLED WITH
-   1.16.2
+   1.16.3

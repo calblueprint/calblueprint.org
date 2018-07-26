@@ -8,10 +8,9 @@
     '  before applying.
   .marginBot-lg class=('npo-application-section--disabled' if !@statement_open)
     h2.npo-application-subheader Phase 1: Statement of Interest
-    - if !@statement_open
+    - if !@statement_open && !@interest_form
       p.npo-application-notify.static-page-desc
-        span style="font-weight: 700; display: block" This part of the application is not available to you just yet!
-        ' We will notify you when the Statement of Interest form is available.
+        span style="font-weight: 700; display: block" This part of the application is closed. Please check back next year!
     p.static-page-desc.marginBot-sm The short Statement of Interest form helps us get to know your organization and its needs. If your organization might be a good fit for Blueprint, we'll follow up to ask for a Project Proposal.
     - if @interest_form
       p We've received your Statement of Interest! We strongly encourage you to complete Phase 2, the project proposal, within a week.

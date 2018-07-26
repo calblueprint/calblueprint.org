@@ -22,19 +22,31 @@ en:
           Mobile applications use the unique capabilities of phones to bring computing to many.
       application_timeline:
         submission: >
-          Our written application portal opens. Simply make an account as a client and fill out an
-          application describing the kind of project you would like Blueprint to implement. If you have any
-          questions or concerns please email <a href="mailto:team@calblueprint.org">team@calblueprint.org</a>.
+          Our written application portal opens. The application is split into two components
+          with separate deadlines: the Statement of Interest and Project Proposal, described in detail below.
+          If you have any questions or concerns please email
+          <a href="mailto:team@calblueprint.org">team@calblueprint.org</a>.
         first_round: >
-          We close application submissions and will carefully read through all applications. Preliminary
-          decisions are made and thorough feedback is given.
+          The Statement of Interest is a short form for us to get to know your organization
+          and mission better.
+        second_round: >
+          The Project Proposal is the second component of our written application that helps
+          us understand what you need from Blueprint. You'll have the opportunity to explain
+          why Blueprint's development services are important for your organization and provide
+          specifics on what you'd like us to build with you.
+        phone_screen: >
+          A Phone Screen interview will allow you to introduce yourself in a call with our
+          project leaders and get some questions answered about who we are and what we do.
+          Our applications are reviewed as they are submitted, so your interviews may be
+          scheduled before application deadlines.
         interviews: >
-          In order to ensure project success, we conduct a comprehensive interview with you to better understand
-          project fit. Check out our <a href="#criteria">decision criteria</a> below!
+          In order to ensure project success, we conduct a final, comprehensive interview with
+          you to better understand your project and if it's a fit for Blueprint.
+          Check out our <a href="#criteria">decision criteria</a> below!
         final_decisions: >
           If selected to work with Blueprint, your organization will have the opportunity to work with
-          us on a technological project over the course of a year. Once decisions are made, each project leader chooses an
-          organization and we begin the awesome journey!
+          us on a project over the course of a year. Once decisions are made, each project leader chooses an
+          organization and we begin the journey!
       decision_criteria:
         description: >
           We want to help as many organizations as we possibly can. Unfortunately, we cannot take every

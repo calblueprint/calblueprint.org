@@ -17,9 +17,7 @@ section.static-page-hero.npo-apply-hero
             = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white--clear btn-lg"
           - else
             = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white btn-lg"
-            p.hero-desc.marginTop-sm Our Statement of Interest deadline has passed, and we are no longer accepting new applications.
-
-
+            p.hero-desc.marginTop-md Our Statement of Interest deadline has passed, and we are no longer accepting new applications. If you have already submitted your Statement of Interest, you can login to view your application.
 
       - else
         - if @settings.cs169_app_open

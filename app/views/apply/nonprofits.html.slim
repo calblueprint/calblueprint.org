@@ -12,8 +12,14 @@ section.static-page-hero.npo-apply-hero
         - if current_nonprofit
           = link_to "View Dashboard", nonprofit_applications_path, class: "bp-btn btn-white btn-lg"
         - else
-          = link_to "Nonprofit Signup", new_nonprofit_registration_path, class: "bp-btn btn-white btn-lg marginRight-sm"
-          = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white--clear btn-lg"
+          - if @settings.npo_statement_of_interest_open
+            = link_to "Nonprofit Signup", new_nonprofit_registration_path, class: "bp-btn btn-white btn-lg marginRight-sm"
+            = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white--clear btn-lg"
+          - else
+            = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white btn-lg"
+            p.hero-desc.marginTop-sm Our Statement of Interest deadline has passed, and we are no longer accepting new applications.
+
+
 
       - else
         - if @settings.cs169_app_open

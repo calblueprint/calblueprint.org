@@ -8,7 +8,7 @@
   p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
-    strong.apply-page-due< Friday, January 19th at 11:59 pm.
+    strong.apply-page-due< Friday, August 31st at 11:59 pm.
 
   p.static-page-desc
     | If you have any questions, please contact us
@@ -25,25 +25,37 @@
       = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
 
       = f.input :applied_before, as: :radio_buttons
+      = f.input :heard_from
       = f.input :resume, as: :file
 
       = f.input :design_portfolio, as: :file
 
+      = f.input :available_for_bp_games, as: :radio_buttons, checked: true
+      = f.input :why_no_bp_games
+
       = f.input :available_for_retreat, as: :radio_buttons, checked: true
       = f.input :why_no_retreat
 
+      .input-group.required
+        label.text.control-label.required for='available_for_gm'
+          span.required-symbol * 
+          = t '.available_for_gm'
+        span.hint
+          = t '.available_for_gm_hint'
+        input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
+
+      = f.input :commitments
+
+      h3.apply-page-more-questions Short Answer Questions
+      p.static-page-desc Please keep your responses to these short answer questions to 250 words or fewer.
       = f.input :why_join
+      = f.input :hardest_achievement
 
       h3.apply-page-more-questions More Questions
       p.static-page-desc Feel free to copy and paste from your resume for the questions below.
       = f.input :experience
       = f.input :projects
       = f.input :service
-
-      label for='available_for_gm'
-        input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
-        = t '.available_for_gm'
-
       = f.input :add_to_newsletter, as: :radio_buttons, checked: true
 
       div.marginTop-lg

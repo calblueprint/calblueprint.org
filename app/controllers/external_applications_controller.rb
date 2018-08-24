@@ -24,7 +24,7 @@ class ExternalApplicationsController < ApplicationController
       :why_join, :resume, :phone, :year, :major, :applicant_id, :semester_id, :name,
       :email, :experience, :applied_before, :available_for_retreat,
       :available_for_bp_games, :why_no_bp_games, :why_no_retreat,
-      :operations, :design, :content, :design_experience, :website,
+      :operations, :design, :content, :outreach, :design_experience, :website,
       :additional_option, :social_links, :personal_growth, :commitments).merge(
         semester: @settings.current_semester
       )

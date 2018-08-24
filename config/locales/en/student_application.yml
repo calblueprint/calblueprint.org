@@ -5,7 +5,8 @@ en:
       apps_due: >
         Applications Due By
       contact: if you have any questions
-      available_for_gm: Check this box if you can attend Blueprint’s General Meetings (Mondays at 8pm).
+      available_for_gm: Will you be able to attend Blueprint General Meetings?
+      available_for_gm_hint: Blueprint GM's are mandatory and are held on Mondays at 8 PM. Please check this box to acknowledge that you are available at this time.
     create:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
@@ -14,7 +15,7 @@ en:
       message: |
        Hello %{student}!
 
-       We have received your application. Thank you for your time, and we will get back to you by Sunday, January 21st.
+       We have received your application. Thank you for your time, and we will get back to you by Monday, September 3rd.
 
        Best,
        Blueprint Team
@@ -25,40 +26,46 @@ en:
       student_application:
         year: What year in school are you?
         phone: Phone Number
-        why_join: Why do you want to join Blueprint?
+        why_join: What unique experiences, skills, or other aspects of your identity (race, gender, social status, etc.) have shaped your worldview, and how have those perspectives led you to want to be a part of Blueprint?
+        hardest_achievement: Talk about one thing you believe you worked the hardest to achieve. What motivated you throughout that experience?
         experience: Please list and briefly describe past work experience or extracurricular activities.
         projects: Please list and briefly describe a few personal projects.
-        service: Please tell us about your past community service experience or describe a moment that shaped what social good means to you.
+        service: Please list and briefly describe your past community service experiences.
         applied_before: Have you applied to Blueprint before?
+        heard_from: How did you first hear about Blueprint?
         resume: Resume
         design_portfolio: Design Portfolio (Optional)
         available_for_bp_games: Will you be able to attend BP Games?
         why_no_bp_games: Why are you unable to attend BP Games?
         available_for_retreat: Will you be able to attend Blueprint Retreat?
         why_no_retreat: Why are you unable to attend retreat?
+        commitments: Please describe your time commitments for this semester.
         add_to_newsletter: Subscribe to Blueprint newsletter for latest updates!
 
     hints:
       student_application:
         name: First and Last
         email: Please use your Berkeley email
-        resume: Please attach the most recent copy of your resume as a PDF
-        design_portfolio: Attach your design portfolio if you want your design talent to be considered as part of your application! If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website.
-        why_join: Use this space to explain why you’re interested in Blueprint. What about Blueprint appeals to you? What do you hope to get out of the experience? Fewer than 250 words, please!
+        resume: Please attach the most recent copy of your resume as a PDF (1 MB size limit).
+        design_portfolio: Attach your design portfolio if you want your design talent to be considered as part of your application! If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
+        why_join: Take note of the next question and make sure you can differentiate your responses!
+        #hardest_achievement: Please answer in 250 words or fewer.
         experience: Let us know the organization, your postition, and a brief description of your responsiblities and achievements. Fewer than 250 words, please!
         projects: We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. Fewer than 250 words, please!
-        service: You can use this space to list your previous service experience. However, you can also choose to describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!
-        available_for_bp_games: 6:30PM-9:00PM on September 6
+        service: You can use this space to list your previous service experiences. Feel free to also describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!
+        heard_from: Please let us know how you first heard about Blueprint, whether it’s through social media, through a friend, through classes, through Sproul, etc.
+        available_for_bp_games: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on September 5, from 8-11 PM.
         why_no_bp_games: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
-        available_for_retreat: Retreat will be Evening of February 2 - Morning of February 4.
+        available_for_retreat: Retreat will be the evening of September 14 to the morning of September 16.
         why_no_retreat: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
+        commitments: Feel free to include your coursework, any extracurricular work for other student organizations, and any part-time jobs, along with how many hours per week you expect each to take.
 
     placeholders:
       student_application:
         name: Alyssa P. Hacker
         email: example@berkeley.edu
         phone: (626) 123-4567
-        why_join: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         experience: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
         projects: "Project\nLink (if possible)\nBrief description"
-        service: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        service: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
+        commitments: Ruby on Rails DeCal (5 hours/week), Tutoring (2 hours/week), ...

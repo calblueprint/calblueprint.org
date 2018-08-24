@@ -59,6 +59,8 @@ class StudentApplication < ActiveRecord::Base
   validates :semester_id, presence: true
 
   validates :why_join, presence: true
+  validates :hardest_achievement, presence: true
+  validates :commitments, presence: true
   validates :phone, presence: true
   validates :year, presence: true
   validates :name, presence: true
@@ -67,12 +69,10 @@ class StudentApplication < ActiveRecord::Base
             format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
             presence: true
 
-  # NOTE: For Fall 2018, uncomment this:
-
-  # validates_presence_of :why_no_bp_games, if: :v2?, unless: :available_for_bp_games?
+  validates_presence_of :why_no_bp_games, if: :v2?, unless: :available_for_bp_games?
   validates_presence_of :why_no_retreat, if: :v2?, unless: :available_for_retreat?
 
-  validates_each :why_join, :experience, :projects, :service do |record, attr, value|
+  validates_each :why_join, :hardest_achievement, :experience, :projects, :service do |record, attr, value|
     record.errors.add attr, ' - your response must be less than 250 words' if record.v2? && !value.nil? && value.split(" ").length > 260
   end
 

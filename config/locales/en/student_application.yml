@@ -48,8 +48,8 @@ en:
         email: Please use your Berkeley email
         resume: Please attach the most recent copy of your resume as a PDF (1 MB size limit).
         design_portfolio: Attach your design portfolio if you want your design talent to be considered as part of your application! If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
-        why_join: Please answer in 250 words or fewer. Also take note of the next question and make sure you can differentiate your responses!
-        hardest_achievement: Please answer in 250 words or fewer.
+        why_join: Take note of the next question and make sure you can differentiate your responses!
+        #hardest_achievement: Please answer in 250 words or fewer.
         experience: Let us know the organization, your postition, and a brief description of your responsiblities and achievements. Fewer than 250 words, please!
         projects: We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. Fewer than 250 words, please!
         service: You can use this space to list your previous service experiences. Feel free to also describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!

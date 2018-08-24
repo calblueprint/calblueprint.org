@@ -71,7 +71,7 @@ class ExternalApplication < ActiveRecord::Base
 
 
   def at_least_one_position
-    if (not [self.operations, self.design].include? true) && self.additional_option.blank?
+    if (not [self.operations, self.outreach, self.content].include? true) && self.additional_option.blank?
       errors[:base] << ("Please choose at least one position to apply for.")
     end
   end

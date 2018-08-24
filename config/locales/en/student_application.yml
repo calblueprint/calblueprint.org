@@ -5,7 +5,8 @@ en:
       apps_due: >
         Applications Due By
       contact: if you have any questions
-      available_for_gm: Check this box if you can attend Blueprint’s General Meetings (Mondays at 8 PM).
+      available_for_gm: Will you be able to attend Blueprint General Meetings?
+      available_for_gm_hint: Blueprint GM's are mandatory and are held on Mondays at 8 PM. Please check this box to acknowledge that you are available at this time.
     create:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
@@ -64,8 +65,6 @@ en:
         name: Alyssa P. Hacker
         email: example@berkeley.edu
         phone: (626) 123-4567
-        why_join: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        hardest_achievement: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         experience: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
         projects: "Project\nLink (if possible)\nBrief description"
         service: "Organization\nPosition\nBriefly describe your responsibilities and achievements"

@@ -36,7 +36,17 @@
       = f.input :available_for_retreat, as: :radio_buttons, checked: true
       = f.input :why_no_retreat
 
+      .input-group.required
+        label.text.control-label.required for='available_for_gm'
+          span.required-symbol * 
+          = t '.available_for_gm'
+        span.hint
+          = t '.available_for_gm_hint'
+        input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
+
       = f.input :commitments
+
+      h3.apply-page-more-questions Short Answer Questions
       = f.input :why_join
       = f.input :hardest_achievement
 
@@ -45,11 +55,6 @@
       = f.input :experience
       = f.input :projects
       = f.input :service
-
-      label for='available_for_gm'
-        input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
-        = t '.available_for_gm'
-
       = f.input :add_to_newsletter, as: :radio_buttons, checked: true
 
       div.marginTop-lg

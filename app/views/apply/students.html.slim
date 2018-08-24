@@ -35,6 +35,20 @@ section.application-process-section#application-process
         .num-col
           .timeline-num 01
         .text-col
+          .timeline-row-title Infosessions
+          .timeline-row-date = t ".application_timeline.infosession_date"
+          .timeline-row-description = raw t ".application_timeline.infosession"
+          .timeline-row-btn
+            - if SocialMediaUrls::INFOSESSION
+              = link_to "Infosession 1 - August 28", "https://www.facebook.com/events/237249963799140/", class: "bp-btn marginRight-xxs", target: "_blank"
+              = link_to "Infosession 2 - August 29", "https://www.facebook.com/events/2361830727191199/", class: "bp-btn", target: "_blank"
+            - if not SocialMediaUrls::INFOSESSION
+              .timeline-row-notice = t ".application_timeline.infosession_notice"
+
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
           .timeline-row-title Applications Due
           .timeline-row-date = t ".application_timeline.application_date"
           .timeline-row-description = raw t ".application_timeline.application"
@@ -46,7 +60,15 @@ section.application-process-section#application-process
 
       .timeline-row
         .num-col
-          .timeline-num 02
+          .timeline-num 03
+        .text-col
+          .timeline-row-title Blueprint Games
+          .timeline-row-date = t ".application_timeline.bp_games_date"
+          .timeline-row-description = t ".application_timeline.bp_games"
+
+      .timeline-row
+        .num-col
+          .timeline-num 04
         .text-col
           .timeline-row-title Interviews
           .timeline-row-date = t ".application_timeline.interview_date"

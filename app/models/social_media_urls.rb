@@ -1,6 +1,6 @@
 class SocialMediaUrls
   # Post links to infosession Facebook events here
-  INFOSESSION = "https://www.facebook.com/events/1543504379044286"
+  INFOSESSION = "https://www.facebook.com/calblueprint"
   FACEBOOK = "http://www.facebook.com/calblueprint"
   TWITTER = "https://twitter.com/calblueprint"
   GITHUB = "https://github.com/calblueprint/"

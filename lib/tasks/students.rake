@@ -20,6 +20,8 @@ namespace :students do
         "Heard about Blueprint from": app.heard_from,
         "Can attend BP Games?": app.available_for_bp_games,
         "Can attend retreat?": app.available_for_retreat,
+        "Why no retreat?": app.why_no_retreat,
+        "Why no BP Games?": app.why_no_bp_games,
         "Time commitments": app.commitments,
         "Identity/Why Join": app.why_join,
         "Hardest Achievement": app.hardest_achievement,

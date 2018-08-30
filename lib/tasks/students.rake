@@ -29,13 +29,14 @@ namespace :students do
         "Personal Projects": app.projects,
         "Service Experience": app.service,
         "Wins": app.wins_count,
-        "Losses": app.losses_count
+        "Losses": app.losses_count,
+        "Add to newsletter?": app.add_to_newsletter
       }
 
-      if !app.resume.nil?
+      if app.resume.exists?
         app_params["Resume"] = [{ url: app.resume.url }]
       end
-      if !app.design_portfolio.nil?
+      if app.design_portfolio.exists?
         app_params["Design Portfolio"] = [{ url: app.design_portfolio.url }]
       end
 

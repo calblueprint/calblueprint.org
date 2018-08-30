@@ -62,56 +62,39 @@ en:
 
     # E-Team
 
-    - first_name: 'Jonathan'
-      last_name: 'Chu'
-      email: 'jonmchu@berkeley.edu'
-      <<: *president
-
-    - first_name: 'Alice'
-      last_name: 'Deng'
-      email: 'alicevdeng@gmail.com'
-      linkedin: 'alicedeng'
-      website: 'alicedeng.com'
-      <<: *external
-
-    - first_name: 'Sonia'
-      last_name: 'Yang'
-      email: 'sonia.yang@berkeley.edu'
-      <<: *internal
-
-    - first_name: 'Jason'
-      last_name: 'Xie'
-      email: 'jasonxie9801@gmail.com'
-      <<: *projects
-
     - first_name: 'Ken'
       last_name: 'Chen'
       email: 'lbkchen@gmail.com'
       linkedin: 'kenzchen'
       website: 'kenchen.io'
-      <<: *tech
-
-    # External Team
-
-    - first_name: 'Vivian'
-      last_name: 'Yao'
-      email: 'vivyao31@berkeley.edu'
-      linkedin: 'vivianyao31'
-      <<: *expansion
+      <<: *president
 
     - first_name: 'Tao'
       last_name: 'Ong'
       email: 'taoong@berkeley.edu'
       linkedin: 'taoong'
       website: 'taoong.me'
-      <<: *community
+      <<: *external
 
-    - first_name: 'Jimmy'
-      last_name: 'Liu'
-      email: 'sicong.liu98@gmail.com'
-      linkedin: 'jimmyliu98'
-      website: 'jimmyliu.co'
-      <<: *operations
+    - first_name: 'Amy'
+      last_name: 'Shan'
+      email: 'amyshan@berkeley.edu'
+      linkedin: 'shanamy'
+      <<: *internal
+
+    - first_name: 'Lois'
+      last_name: 'Chang'
+      email: 'loischang@berkeley.edu'
+      <<: *projects
+
+    - first_name: 'Ethan'
+      last_name: 'Lee'
+      email: 'ethan@calblueprint.org'
+      linkedin: 'thatethanlee'
+      website: 'ethanl.ee'
+      <<: *tech
+
+    # External Team
 
     - first_name: 'Grant'
       last_name: 'Kalasky'
@@ -122,71 +105,48 @@ en:
 
     # Project Leaders
 
-    - first_name: 'Michael'
-      last_name: 'Do'
-      email: 'michaeldo@berkeley.edu'
-      linkedin: 'michaeldo2'
+    - first_name: 'Pooja'
+      last_name: 'Nagpal'
+      email: 'poojanagpal@berkeley.edu'
       <<: *leader
+
+    - first_name: 'Michelle'
+      last_name: 'Kwon'
+      email: 'michellejkwon@berkeley.edu'
+      linkedin: 'michellejkwon'
+      <<: *leader
+
+    - first_name: 'Arpan'
+      last_name: 'Pal'
+      email: 'arpan.pal1234@gmail.com'
+      <<: *leader
+
+    - first_name: 'Justin'
+      last_name: 'Mi'
+      email: 'justin.mi@berkeley.edu'
+      linkedin: 'justin-mi'
+      website: 'justinmi.me'
+      <<: *leader
+
+    - first_name: 'Claire'
+      last_name: 'Lin'
+      email: 'clairelin135@gmail.com'
+      linkedin: 'clairelin135'
+      website: 'claireylin.com'
+      <<: *leader
+
+    # Developers
+
+    - first_name: 'Calvin'
+      last_name: 'Dong'
+      email: 'calvind777@gmail.com'
+      linkedin: 'calvindong'
+      <<: *developer
 
     - first_name: 'Jason'
       last_name: 'Bao'
       email: 'jzbao@berkeley.edu'
       linkedin: 'jasonzb'
-      <<: *leader
-
-    - first_name: 'Amy'
-      last_name: 'Shan'
-      email: 'amyshan@berkeley.edu'
-      linkedin: 'shanamy'
-      <<: *leader
-
-    - first_name: 'Vanessa'
-      last_name: 'Ng'
-      email: 'vanesng96@berkeley.edu'
-      linkedin: 'vanesng'
-      website: 'vanesng.com'
-      <<: *leader
-
-    - first_name: 'Ethan'
-      last_name: 'Lee'
-      email: 'ethan@calblueprint.org'
-      linkedin: 'thatethanlee'
-      website: 'ethanl.ee'
-      <<: *leader
-
-    # Developers
-
-    - first_name: 'Nhi'
-      last_name: 'Quach'
-      email: 'nhiquach@berkeley.edu'
-      linkedin: 'nhiquach'
-      <<: *developer
-
-    - first_name: 'Helen'
-      last_name: 'Che'
-      email: 'helenc@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Greta'
-      last_name: 'Huang'
-      email: 'gretahuang@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Eric'
-      last_name: 'Liang'
-      email: 'liang.eric24@gmail.com'
-      linkedin: 'ericls'
-      website: 'ericls.com'
-      <<: *developer
-
-    - first_name: 'Casey'
-      last_name: 'Takahashi'
-      email: 'caseytaka@berkeley.edu'
-      <<: *developer
-
-    - first_name: 'Pooja'
-      last_name: 'Nagpal'
-      email: 'poojanagpal@berkeley.edu'
       <<: *developer
 
     - first_name: 'Peter'
@@ -199,38 +159,6 @@ en:
       last_name: 'Yang'
       email: 'tonyyanga@gmail.com'
       linkedin: 'yucheng-tony-yang'
-      <<: *developer
-
-    - first_name: 'Michelle'
-      last_name: 'Kwon'
-      email: 'michellejkwon@berkeley.edu'
-      linkedin: 'michellejkwon'
-      <<: *developer
-
-    - first_name: 'Arpan'
-      last_name: 'Pal'
-      email: 'arpan.pal1234@gmail.com'
-      <<: *developer
-
-    - first_name: 'Justin'
-      last_name: 'Mi'
-      email: 'justin.mi@berkeley.edu'
-      linkedin: 'justin-mi'
-      website: 'justinmi.me'
-      <<: *developer
-
-    - first_name: 'Claire'
-      last_name: 'Lin'
-      email: 'clairelin135@gmail.com'
-      linkedin: 'clairelin135'
-      website: 'claireylin.com'
-      <<: *developer
-
-    - first_name: 'Neel'
-      last_name: 'Somani'
-      email: 'neel@berkeley.edu'
-      linkedin: 'neelsomani'
-      website: 'apptic.me'
       <<: *developer
 
     - first_name: 'Florence'
@@ -286,25 +214,96 @@ en:
 
     # Mentors
 
+    - first_name: 'Vanessa'
+      last_name: 'Ng'
+      email: 'vanesng96@berkeley.edu'
+      linkedin: 'vanesng'
+      website: 'vanesng.com'
+      <<: *mentor
+
+    - first_name: 'Neel'
+      last_name: 'Somani'
+      email: 'neel@berkeley.edu'
+      linkedin: 'neelsomani'
+      website: 'apptic.me'
+      role: 'External Advisor'
+
+    # Other positions:
+
+  alumni:
+    - first_name: 'Michael'
+      last_name: 'Do'
+      email: 'michaeldo@berkeley.edu'
+      linkedin: 'michaeldo2'
+      <<: *leader
+
+    - first_name: 'Vivian'
+      last_name: 'Yao'
+      email: 'vivyao31@berkeley.edu'
+      linkedin: 'vivianyao31'
+      <<: *expansion
+
+    - first_name: 'Jimmy'
+      last_name: 'Liu'
+      email: 'sicong.liu98@gmail.com'
+      linkedin: 'jimmyliu98'
+      website: 'jimmyliu.co'
+      <<: *operations
+
+    - first_name: 'Nhi'
+      last_name: 'Quach'
+      email: 'nhiquach@berkeley.edu'
+      linkedin: 'nhiquach'
+      <<: *developer
+
+    - first_name: 'Helen'
+      last_name: 'Che'
+      email: 'helenc@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Greta'
+      last_name: 'Huang'
+      email: 'gretahuang@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Eric'
+      last_name: 'Liang'
+      email: 'liang.eric24@gmail.com'
+      linkedin: 'ericls'
+      website: 'ericls.com'
+      <<: *developer
+
+    - first_name: 'Casey'
+      last_name: 'Takahashi'
+      email: 'caseytaka@berkeley.edu'
+      <<: *developer
+
     - first_name: 'Steven'
       last_name: 'Zheng'
       email: 'stnzheng@gmail.com'
       <<: *mentor
 
-    # Other positions:
+    - first_name: 'Jonathan'
+      last_name: 'Chu'
+      email: 'jonmchu@berkeley.edu'
+      <<: *president
 
-  alumni:
+    - first_name: 'Alice'
+      last_name: 'Deng'
+      email: 'alicevdeng@gmail.com'
+      linkedin: 'alicedeng'
+      website: 'alicedeng.com'
+      <<: *external
 
-    - first_name: 'Lois'
-      last_name: 'Chang'
-      email: 'loischang@berkeley.edu'
-      <<: *leader
+    - first_name: 'Sonia'
+      last_name: 'Yang'
+      email: 'sonia.yang@berkeley.edu'
+      <<: *internal
 
-    - first_name: 'Calvin'
-      last_name: 'Dong'
-      email: 'calvind777@gmail.com'
-      linkedin: 'calvindong'
-      <<: *leader
+    - first_name: 'Jason'
+      last_name: 'Xie'
+      email: 'jasonxie9801@gmail.com'
+      <<: *projects
 
     - first_name: 'Andrew'
       last_name: 'Millman'

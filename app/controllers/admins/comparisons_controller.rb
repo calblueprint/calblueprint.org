@@ -43,6 +43,14 @@ module Admins
     end
 
     def create
+      last_comp_by_user = Comparison.order(:created_at).where(admin: current_admin).last
+      if last_comp_by_user && (Time.now - last_comp_by_user.created_at).to_i < 60.seconds
+        redirect_to root_path, flash: {
+          error: "You can't create comparisons that quickly. Please read applications carefully."
+        }
+        return
+      end
+
       hold = Hold.find_hold(current_admin.id, comparison_params[:winner_id], comparison_params[:loser_id])
       if hold || (!Hold.current_hold(comparison_params[:winner_id]) && !Hold.current_hold(comparison_params[:loser_id]))
         hold.release if hold

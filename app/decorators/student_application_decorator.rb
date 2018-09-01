@@ -11,6 +11,7 @@ class StudentApplicationDecorator < ApplicationDecorator
      :experience,
      :projects,
      :service,
+     :commitments,
      [:available_for_retreat, "Available for Retreat?"],
      [:why_no_retreat, "Why unavailable for Retreat?"],
      :phone,

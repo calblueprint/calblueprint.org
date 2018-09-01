@@ -33,15 +33,15 @@ namespace :students do
         "Add to newsletter?": app.add_to_newsletter
       }
 
-      if app.resume.exists?
-        app_params["Resume"] = [{ url: app.resume.url }]
-      end
-      if app.design_portfolio.exists?
-        app_params["Design Portfolio"] = [{ url: app.design_portfolio.url }]
-      end
-
       pos = air_emails.index(app.email)
       if pos.nil?
+        # Assume resume/portfolio uploads will not change
+        if app.resume.exists?
+          app_params["Resume"] = [{ url: app.resume.url }]
+        end
+        if app.design_portfolio.exists?
+          app_params["Design Portfolio"] = [{ url: app.design_portfolio.url }]
+        end
         air_app = AirtableApp.new(app_params)
         air_app.create
       else

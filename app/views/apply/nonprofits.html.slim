@@ -1,4 +1,6 @@
 = render "navbar", className: "nav-white", animate: true
+= render "with_mailchimp_js"
+= render "with_drift_js"
 
 section.static-page-hero.npo-apply-hero
   .static-hero-gradient
@@ -197,9 +199,6 @@ section.application-newsletter
     h2.static-page-header.marginBot-md Get Involved
     p.static-page-desc.marginBot-lg = t ".newsletter"
     = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
-
-= render "with_mailchimp_js"
-= render "with_drift_js"
 
 javascript:
   $(document).ready(function(){

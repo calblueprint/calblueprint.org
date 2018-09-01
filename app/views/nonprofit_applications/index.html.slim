@@ -1,4 +1,6 @@
 = render "navbar"
+= render "with_mailchimp_js"
+/ = render "with_drift_js"
 
 .npo-application-home-container.container
   h1.npo-application-header Nonprofit Dashboard
@@ -46,6 +48,3 @@
                 = link_to "Proposal submitted on #{na.submitted_at.localtime.strftime("%B %d, %Y at %I:%M")}", nonprofit_application_revise_path(nonprofit_application_id: na.id)
     div.marginTop-lg
       = link_to "Begin New Proposal", new_nonprofit_application_path, class: "bp-btn"
-
-= render "with_mailchimp_js"
-= render "with_drift_js"

@@ -26,8 +26,8 @@ script
     drift.load('xinevfsw4gfw');
     drift.on('ready', function() {
       drift.api.setUserAttributes({
-        email: "#{current_user ? current_user.email : ''}",
-        title: "#{current_user ? current_user.organization_name : ''}"
+        email: "#{(current_user && current_user.instance_of?(Nonprofit)) ? current_user.email : ''}",
+        title: "#{(current_user && current_user.instance_of?(Nonprofit)) ? current_user.organization_name : ''}"
       });
     });
 

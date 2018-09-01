@@ -1,5 +1,5 @@
-.row
-  h2 = t 'devise.invitations.edit.header'
+.container
+  h1.admin-page-header = t 'devise.invitations.edit.header'
 
   = simple_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f|
     = devise_error_messages!
@@ -11,6 +11,6 @@
     = f.input :password
     = f.input :password_confirmation
 
-    = f.button :submit, t("devise.invitations.edit.submit_button")
+    = f.button :submit, t("devise.invitations.edit.submit_button"), class: "bp-btn marginBot-md"
 
 .spacer

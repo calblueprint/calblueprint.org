@@ -53,12 +53,12 @@ module Admins
 
       hold = Hold.find_hold(current_admin.id, comparison_params[:winner_id], comparison_params[:loser_id])
       if hold || (!Hold.current_hold(comparison_params[:winner_id]) && !Hold.current_hold(comparison_params[:loser_id]))
-        hold.release if hold
         if Comparison.create(comparison_params)
           redirect_to new_admin_comparison_path, flash: { success: t('admins.comparisons.create.success') }
         else
           redirect_to root_path, flash: { error: t('admins.comparisons.create.error') }
         end
+        hold.release if hold
       else
         redirect_to new_admin_comparison_path, flash: { error: t('admins.comparisons.create.held') }
       end

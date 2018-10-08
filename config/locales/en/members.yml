@@ -37,6 +37,12 @@ en:
     design: &design
       role: "Design Director"
 
+    content: &content
+      role: "Content Director"
+
+    outreach: &outreach
+      role: "Outreach Director"
+
     intersocietal: &intersocietal
       role: "Intersocietal Relations Director"
 
@@ -102,6 +108,25 @@ en:
       linkedin: 'grantkalasky'
       website: 'grantkalasky.me'
       <<: *design
+
+    - first_name: 'Karina'
+      last_name: 'Nguyen'
+      email: 'karinanguyen@berkeley.edu'
+      linkedin: 'karina-nguyen-248073143'
+      <<: *content
+
+    - first_name: 'Erin'
+      last_name: 'Song'
+      email: 'erinsong@berkeley.edu'
+      linkedin: 'erinsong'
+      website: 'erinysong.github.io'
+      <<: *outreach
+
+    - first_name: 'Spring'
+      last_name: 'Ma'
+      email: 'springma@berkeley.edu'
+      linkedin: 'spring-ma'
+      <<: *operations
 
     # Project Leaders
 
@@ -176,6 +201,7 @@ en:
     - first_name: 'Kevin'
       last_name: 'Li'
       email: 'kevintli98@gmail.com'
+      linkedin: 'kevintli'
       website: 'kevintli.com'
       <<: *developer
 
@@ -201,9 +227,9 @@ en:
 
     - first_name: 'Franco'
       last_name: 'Monterrosa'
-      email: 'francogments@gmail.com'
-      linkedin: 'francomonterrosa'
-      website: 'francogments.com'
+      email: 'francotorium@gmail.com'
+      linkedin: 'francotorium'
+      website: 'francotorium.com'
       <<: *developer
 
     - first_name: 'Aivant'
@@ -227,6 +253,58 @@ en:
       linkedin: 'neelsomani'
       website: 'apptic.me'
       role: 'External Advisor'
+
+    - first_name: 'Barbara'
+      last_name: 'Yang'
+      email: 'by@berkeley.edu'
+      linkedin: 'xbarbarayang'
+      website: 'barbarayang.co'
+      <<: *developer
+
+    - first_name: 'Alison'
+      last_name: 'Dowski'
+      email: 'adowski@berkeley.edu'
+      linkedin: 'alison-dowski'
+      <<: *developer
+
+    - first_name: 'Kyu Won'
+      last_name: 'Kim'
+      email: 'freddy.kim8@gmail.com'
+      linkedin: 'kwk'
+      website: 'www.kyuwonkim.com'
+      <<: *developer
+
+    - first_name: 'Alice'
+      last_name: 'Zhao'
+      email: 'alicezhao@berkeley.edu'
+      linkedin: 'aliceyezhao'
+      website: 'github.com/aliceyezhao'
+      <<: *developer
+
+    - first_name: 'Kevin'
+      last_name: 'Deguzman'
+      email: 'deguzmankevin@berkeley.edu'
+      linkedin: 'kevin-deguzman'
+      website: 'kevindeguzman.com'
+      <<: *developer
+
+    - first_name: 'Annie'
+      last_name: 'Ro'
+      email: 'annie.ro98@gmail.com'
+      linkedin: 'anniero'
+      <<: *developer
+
+    - first_name: 'Asli'
+      last_name: 'Akalin'
+      email: 'asliakalin@berkeley.edu'
+      linkedin: 'asliakalin'
+      website: 'asliakalin.com/'
+      <<: *developer
+
+    - first_name: 'Cassandra'
+      last_name: 'Melax'
+      email: 'cmelax@berkeley.edu'
+      <<: *developer
 
     # Other positions:
 

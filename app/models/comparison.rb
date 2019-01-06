@@ -11,8 +11,8 @@
 #
 
 class Comparison < ActiveRecord::Base
-  belongs_to :winner, class_name: StudentApplication, counter_cache: :wins_count
-  belongs_to :loser, class_name: StudentApplication, counter_cache: :losses_count
+  belongs_to :winner, class_name: "StudentApplication", counter_cache: :wins_count
+  belongs_to :loser, class_name: "StudentApplication", counter_cache: :losses_count
   belongs_to :admin
 
   validates :winner_id, presence: true

@@ -26,8 +26,6 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-  config.active_record.raise_in_transactional_callbacks = true
-
   # Do not compress assets
   config.assets.compress = false
 
@@ -53,6 +51,7 @@ Rails.application.configure do
   #   s3_credentials: {
   #     access_key_id: ENV['AWS_ACCESS_KEY_ID'],
   #     secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
-  #   }
+  #   },
+  #   s3_region: ENV['AWS_REGION']
   # }
 end

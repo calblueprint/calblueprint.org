@@ -12,8 +12,8 @@
 #
 
 class Hold < ActiveRecord::Base
-  belongs_to :left, class_name: StudentApplication
-  belongs_to :right, class_name: StudentApplication
+  belongs_to :left, class_name: "StudentApplication"
+  belongs_to :right, class_name: "StudentApplication"
   belongs_to :admin
 
   validates :left_id, presence: true

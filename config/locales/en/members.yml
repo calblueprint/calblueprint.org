@@ -301,6 +301,12 @@ en:
       website: 'asliakalin.com/'
       <<: *developer
 
+    - first_name: 'Audrey '
+      last_name: 'Ku'
+      email: 'ku.audrey@gmail.com'
+      linkedin: 'audrey-ku'
+      <<: *developer
+
     - first_name: 'Cassandra'
       last_name: 'Melax'
       email: 'cmelax@berkeley.edu'

@@ -1,4 +1,4 @@
-class CreateExternalApplications < ActiveRecord::Migration
+class CreateExternalApplications < ActiveRecord::Migration[4.2]
   def change
     create_table :external_applications do |t|
       t.string :name

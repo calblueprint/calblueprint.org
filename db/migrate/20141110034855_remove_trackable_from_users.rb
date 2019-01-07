@@ -1,4 +1,4 @@
-class RemoveTrackableFromUsers < ActiveRecord::Migration
+class RemoveTrackableFromUsers < ActiveRecord::Migration[4.2]
   def change
     remove_column :users, :sign_in_count, :integer, default: 0, null: false
     remove_column :users, :current_sign_in_at, :datetime

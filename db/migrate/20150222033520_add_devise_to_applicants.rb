@@ -1,4 +1,4 @@
-class AddDeviseToApplicants < ActiveRecord::Migration
+class AddDeviseToApplicants < ActiveRecord::Migration[4.2]
   def change
     change_table(:applicants) do |t|
       ## Database authenticatable

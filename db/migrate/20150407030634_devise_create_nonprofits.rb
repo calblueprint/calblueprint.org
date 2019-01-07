@@ -1,4 +1,4 @@
-class DeviseCreateNonprofits < ActiveRecord::Migration
+class DeviseCreateNonprofits < ActiveRecord::Migration[4.2]
   def change
     create_table(:nonprofits) do |t|
       ## Database authenticatable

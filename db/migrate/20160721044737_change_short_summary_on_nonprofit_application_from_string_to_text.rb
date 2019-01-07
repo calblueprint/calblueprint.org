@@ -1,4 +1,4 @@
-class ChangeShortSummaryOnNonprofitApplicationFromStringToText < ActiveRecord::Migration
+class ChangeShortSummaryOnNonprofitApplicationFromStringToText < ActiveRecord::Migration[4.2]
   def up
     change_column :nonprofit_applications, :short_summary, :text, :limit => nil
   end

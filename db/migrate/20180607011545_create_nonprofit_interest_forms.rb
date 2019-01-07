@@ -1,4 +1,4 @@
-class CreateNonprofitInterestForms < ActiveRecord::Migration
+class CreateNonprofitInterestForms < ActiveRecord::Migration[4.2]
   def change
     create_table :nonprofit_interest_forms do |t|
       t.string :contact_name

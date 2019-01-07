@@ -1,4 +1,4 @@
-class CreateContactForms < ActiveRecord::Migration
+class CreateContactForms < ActiveRecord::Migration[4.2]
   def change
     create_table :contact_forms do |t|
       t.timestamps

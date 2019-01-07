@@ -1,4 +1,4 @@
-class AddFieldsToStudentApplication < ActiveRecord::Migration
+class AddFieldsToStudentApplication < ActiveRecord::Migration[4.2]
   def up
     add_column :student_applications, :why_you, :text
     add_column :student_applications, :experience, :text

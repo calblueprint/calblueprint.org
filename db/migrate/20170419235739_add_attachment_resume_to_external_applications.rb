@@ -1,4 +1,4 @@
-class AddAttachmentResumeToExternalApplications < ActiveRecord::Migration
+class AddAttachmentResumeToExternalApplications < ActiveRecord::Migration[4.2]
   def self.up
     change_table :external_applications do |t|
       t.attachment :resume

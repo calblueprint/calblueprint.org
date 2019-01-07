@@ -66,6 +66,8 @@ group :development do
   gem 'guard-rubocop'
   gem 'letter_opener'
   gem 'rubocop'
+  gem 'rails-erd'
+
   gem 'scss_lint', require: false
   gem 'spring'
   gem 'spring-commands-rspec'
@@ -75,7 +77,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'pry-rails'
   gem 'pry-byebug'
-
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails', '~> 4.5.0', require: false
   gem 'i18n-tasks'

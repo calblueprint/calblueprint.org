@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_153707) do
+ActiveRecord::Schema.define(version: 2019_01_20_000100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,13 +50,20 @@ ActiveRecord::Schema.define(version: 2018_08_24_153707) do
     t.index ["email"], name: "index_applicants_on_email", unique: true
   end
 
+  create_table "comparison_categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comparisons", id: :serial, force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "winner_id", null: false
     t.integer "loser_id", null: false
     t.integer "admin_id", null: false
+    t.bigint "comparison_category_id"
     t.index ["admin_id"], name: "index_comparisons_on_admin_id"
+    t.index ["comparison_category_id"], name: "index_comparisons_on_comparison_category_id"
     t.index ["loser_id"], name: "index_comparisons_on_loser_id"
     t.index ["winner_id"], name: "index_comparisons_on_winner_id"
   end
@@ -172,6 +179,54 @@ ActiveRecord::Schema.define(version: 2018_08_24_153707) do
     t.index ["reset_password_token"], name: "index_nonprofits_on_reset_password_token", unique: true
   end
 
+  create_table "question_semesters", force: :cascade do |t|
+    t.integer "question_order"
+    t.bigint "question_id"
+    t.bigint "semester_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_question_semesters_on_question_id"
+    t.index ["semester_id"], name: "index_question_semesters_on_semester_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "title"
+    t.text "hint"
+    t.integer "question_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "required", default: true
+    t.bigint "comparison_category_id"
+    t.string "tag"
+    t.integer "question_category"
+    t.string "choices"
+    t.string "placeholder"
+    t.integer "word_limit", default: 0
+    t.integer "file_size_limit", default: 10
+    t.integer "input_type", default: 0
+    t.index ["comparison_category_id"], name: "index_questions_on_comparison_category_id"
+  end
+
+  create_table "questions_semesters", id: false, force: :cascade do |t|
+    t.bigint "question_id", null: false
+    t.bigint "semester_id", null: false
+    t.integer "sort_order"
+  end
+
+  create_table "responses", force: :cascade do |t|
+    t.text "answer"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "file_file_name"
+    t.string "file_content_type"
+    t.integer "file_file_size"
+    t.datetime "file_updated_at"
+    t.bigint "student_application_id"
+    t.index ["question_id"], name: "index_responses_on_question_id"
+    t.index ["student_application_id"], name: "index_responses_on_student_application_id"
+  end
+
   create_table "semesters", id: :serial, force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -238,4 +293,10 @@ ActiveRecord::Schema.define(version: 2018_08_24_153707) do
     t.index ["semester_id"], name: "index_student_applications_on_semester_id"
   end
 
+  add_foreign_key "comparisons", "comparison_categories"
+  add_foreign_key "question_semesters", "questions"
+  add_foreign_key "question_semesters", "semesters"
+  add_foreign_key "questions", "comparison_categories"
+  add_foreign_key "responses", "questions"
+  add_foreign_key "responses", "student_applications"
 end

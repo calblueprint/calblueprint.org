@@ -1,0 +1,2 @@
+class ComparisonCategory < ApplicationRecord
+end

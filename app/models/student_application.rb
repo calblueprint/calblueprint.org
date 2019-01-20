@@ -37,43 +37,32 @@
 class StudentApplication < ActiveRecord::Base
   belongs_to :applicant
   belongs_to :semester
+  has_many :responses
+  has_many :questions, through: :responses
+
   has_many :wins, class_name: 'Comparison', foreign_key: 'winner_id'
   has_many :losses, class_name: 'Comparison', foreign_key: 'loser_id'
   has_many :left_hold, class_name: 'Hold', foreign_key: 'left_id'
   has_many :right_hold, class_name: 'Hold', foreign_key: 'right_id'
 
-  has_attached_file :resume
-  has_attached_file :design_portfolio
-  validates_attachment :resume,
-                       content_type: { content_type: "application/pdf" },
-                       size: { in: 0..1.megabytes }
+  validate :validate_responses
 
-  validates_attachment :design_portfolio,
-                       content_type: { content_type: "application/pdf" },
-                       size: { in: 0..10.megabytes }
+  def email
+    self.response_to("email")
+  end
 
-  validates_attachment_presence :resume
-  #validates_attachment_presence :design_portfolio
+  def name
+    self.response_to("name")
+  end
 
-  validates :applicant_id, presence: true
-  validates :semester_id, presence: true
+  def response_to(tag)
+    self.responses.select {|r| r.question.tag.to_s == tag}.first.answer
+  end
 
-  validates :why_join, presence: true
-  validates :hardest_achievement, presence: true
-  validates :commitments, presence: true
-  validates :phone, presence: true
-  validates :year, presence: true
-  validates :name, presence: true
-
-  validates :email,
-            format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
-            presence: true
-
-  validates_presence_of :why_no_bp_games, if: :v2?, unless: :available_for_bp_games?
-  validates_presence_of :why_no_retreat, if: :v2?, unless: :available_for_retreat?
-
-  validates_each :why_join, :hardest_achievement, :experience, :projects, :service do |record, attr, value|
-    record.errors.add attr, ' - your response must be less than 250 words' if record.v2? && !value.nil? && value.split(" ").length > 260
+  def validate_responses
+    self.responses.each do |response|
+      response.validate_response errors
+    end
   end
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
@@ -87,13 +76,7 @@ class StudentApplication < ActiveRecord::Base
     remaining.where('wins_count + losses_count = ?', StudentApplication.remaining.minimum("wins_count + losses_count"))
   }
 
-  def v1?
-    self.version == 1
-  end
 
-  def v2?
-    self.version == 2
-  end
 
   def comparisons
     Comparison.where('winner_id = ? OR loser_id = ?', self.id, self.id)

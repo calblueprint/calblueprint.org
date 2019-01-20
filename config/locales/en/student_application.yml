@@ -24,6 +24,7 @@ en:
   simple_form:
     labels:
       student_application:
+        name: What is your name?
         year: What year in school are you?
         phone: Phone Number
         why_join: What unique experiences, skills, or other aspects of your identity (race, gender, social status, etc.) have shaped your worldview, and how have those perspectives led you to want to be a part of Blueprint?

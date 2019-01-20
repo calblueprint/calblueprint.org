@@ -17,62 +17,40 @@
 
   .application-form.marginTop-xl
     = render "form_errors", obj: @student_application
+
     = simple_form_for @student_application, url: student_applications_path do |f|
+      = f.simple_fields_for :responses do |form|
+        -  @student_application.responses.select {|r| r.question.question_category == "general"}.each do |r|
+          = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
-      = f.input :name
-      = f.input :email
-      = f.input :phone
-      = f.input :year, as: :radio_buttons, collection: [ "Freshman", "Sophomore", "Junior", "Senior", "Other" ]
+        h3.apply-page-more-questions Short Answer Questions
+        p.static-page-desc Please keep your responses to these short answer questions to 250 words or fewer.
 
-      = f.input :applied_before, as: :radio_buttons
-      = f.input :heard_from
-      = f.input :resume, as: :file
+        -  @student_application.responses.select {|r| r.question.question_category == "short_answer"}.each do |r|
+          = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
-      = f.input :design_portfolio, as: :file
+        h3.apply-page-more-questions More Questions
+        p.static-page-desc Feel free to copy and paste from your resume for the questions below.
 
-      = f.input :available_for_bp_games, as: :radio_buttons, checked: true
-      = f.input :why_no_bp_games
-
-      = f.input :available_for_retreat, as: :radio_buttons, checked: true
-      = f.input :why_no_retreat
-
-      .input-group.required
-        label.text.control-label.required for='available_for_gm'
-          span.required-symbol * 
-          = t '.available_for_gm'
-        span.hint
-          = t '.available_for_gm_hint'
-        input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
-
-      = f.input :commitments
-
-      h3.apply-page-more-questions Short Answer Questions
-      p.static-page-desc Please keep your responses to these short answer questions to 250 words or fewer.
-      = f.input :why_join
-      = f.input :hardest_achievement
-
-      h3.apply-page-more-questions More Questions
-      p.static-page-desc Feel free to copy and paste from your resume for the questions below.
-      = f.input :experience
-      = f.input :projects
-      = f.input :service
-      = f.input :add_to_newsletter, as: :radio_buttons, checked: true
+        -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
+          = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
       div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 
 javascript:
-  $('.student_application_why_no_bp_games').hide();
-  $('.student_application_why_no_retreat').hide();
+  $('.student_application_responses_why_no_bp_games').hide();
+  $('.student_application_responses_why_no_retreat').hide();
+  $('input[type="submit"]').prop("disabled", !$('#student_application_responses_available_for_gm').is(':checked'));
 
-  $BPGamesTrue = $("#student_application_available_for_bp_games_true");
-  $BPGamesFalse = $("#student_application_available_for_bp_games_false");
+  $BPGamesTrue = $("#student_application_responses_available_for_bp_games_yes");
+  $BPGamesFalse = $("#student_application_responses_available_for_bp_games_no");
 
   function toggleBPGames() {
     if ($BPGamesTrue.prop("checked")) {
-      $('.student_application_why_no_bp_games').hide();
+      $('.student_application_responses_why_no_bp_games').hide();
     } else {
-      $('.student_application_why_no_bp_games').show();
+      $('.student_application_responses_why_no_bp_games').show();
     }
   }
 
@@ -82,21 +60,21 @@ javascript:
 
 
 
-  $retreatTrue = $("#student_application_available_for_retreat_true");
-  $retreatFalse = $("#student_application_available_for_retreat_false");
+  $retreatTrue = $("#student_application_responses_available_for_retreat_yes");
+  $retreatFalse = $("#student_application_responses_available_for_retreat_no");
 
   function toggleRetreat() {
     if ($retreatTrue.prop("checked")) {
-      $('.student_application_why_no_retreat').hide();
+      $('.student_application_responses_why_no_retreat').hide();
     } else {
-      $('.student_application_why_no_retreat').show();
+      $('.student_application_responses_why_no_retreat').show();
     }
   }
 
   $retreatTrue.click(toggleRetreat);
   $retreatFalse.click(toggleRetreat);
 
-  $('#available_for_gm').on('click', function() {
+  $('#student_application_responses_available_for_gm').on('click', function() {
     if($(this).is(':checked')) {
       $('input[type="submit"]').prop("disabled", false)
     } else {

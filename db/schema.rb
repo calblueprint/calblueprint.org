@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_20_000100) do
+ActiveRecord::Schema.define(version: 2019_01_20_225101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,10 @@ ActiveRecord::Schema.define(version: 2019_01_20_000100) do
     t.string "additional_option"
     t.text "commitments"
     t.boolean "outreach"
+    t.string "design_portfolio_file_name"
+    t.string "design_portfolio_content_type"
+    t.integer "design_portfolio_file_size"
+    t.datetime "design_portfolio_updated_at"
   end
 
   create_table "holds", id: :serial, force: :cascade do |t|

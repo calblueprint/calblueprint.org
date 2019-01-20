@@ -5,7 +5,7 @@ en:
       apps_due: >
         Applications Due By
       contact: if you have any questions
-      available_for_gm: Check this box if you can attend Blueprint’s General Meetings (Mondays at 8pm).
+      available_for_gm: Check this box to acknowledge that you can attend Blueprint’s General Meetings Mondays at 8pm (Required).
     create:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
@@ -23,13 +23,14 @@ en:
   simple_form:
     labels:
       external_application:
-        year: What year in school are you?
+        year: What is your expected graduation year?
         phone: Phone Number
-        why_join: What unique experiences, skills, or other aspects of your identity (race, gender, social status, etc.) have shaped your worldview, and how have those perspectives led you to want to be a part of Blueprint?
+        why_join: As Design Director, how do you feel you’d contribute to Blueprint’s design practices (projects) and Blueprint’s brand (marketing, visual identity, etc.)?
         experience: Please list and briefly describe past work experience or extracurricular activities.
         design_experience: Past Design Experience
         applied_before: Have you applied to Blueprint before?
         resume: Resume
+        design_portfolio: Design Portfolio
         website: Website
         available_for_bp_games: Will you be able to attend BP Games?
         why_no_bp_games: Why are you unable to attend BP Games?
@@ -39,7 +40,8 @@ en:
       external_application:
         name: First and Last
         email: Please use your Berkeley email
-        resume: Please attach the most recent copy of your resume as a PDF
+        resume: Please attach the most recent copy of your resume as a PDF (1 MB limit)
+        design_portfolio: Please share an updated version of your digital portfolio as a PDF. If you have a digital portfolio, upload a PDF with the link (10 MB limit)
         website: Please link your personal website or portfolio of past design work
         social_links: LinkedIn, Facebook, Twitter, Medium, personal website...any links that help us get to know you better! (We click on everything you send, and especially love to read anything you've written.)
         personal_growth: In what ways are you looking to grow personally. Fewer than 250 words, please!

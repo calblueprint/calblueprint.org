@@ -39,25 +39,36 @@ class ExternalApplication < ActiveRecord::Base
   belongs_to :semester
 
   has_attached_file :resume
+  has_attached_file :design_portfolio
+
   validates_attachment :resume,
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..1.megabytes }
 
+  validates_attachment :resume,
+                       content_type: { content_type: "application/pdf" },
+                       size: { in: 0..10.megabytes }
+
   validates_attachment_presence :resume
+  validates_attachment_presence :design_portfolio
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
 
+  # INFO: Removed some validations for Spring 2019 Changes
+
   validates :social_links, presence: true
-  validates :personal_growth, presence: true
+  # validates :personal_growth, presence: true
   validates :why_join, presence: true
   validates :phone, presence: true
   validates :year, presence: true
   validates :name, presence: true
   validates :commitments, presence: true
-  validate :at_least_one_position
+  validates :major, presence: true
+  validates :applied_before, presence: true
+  # validate :at_least_one_position
 
-  validates_presence_of :design_experience, if: :design?
+  # validates_presence_of :design_experience, if: :design?
 
   validates :email,
             format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,

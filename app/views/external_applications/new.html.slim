@@ -3,15 +3,15 @@
 .container.form-container
   .apply-page-header.marginBot-lg
     h1 Student Application
-    h2 External Team
+    h2 External Team — Design Director
 
   p.static-page-desc.marginBot-md
     = t ".banner"
     | The application is due on
-    strong.apply-page-due< Friday, August 31st at 11:59 pm.
+    strong.apply-page-due< Friday, February 1st at 11:59 pm.
 
   p.static-page-desc
-    | If you have any questions, please contact us
+    | This semester, we are only looking for a Design Director. If you have any questions, please contact us
     span< = link_to "here", new_contact_form_path
     |. Good luck!
 
@@ -23,26 +23,26 @@
       = f.input :email
       = f.input :phone
       = f.input :major
-      = f.input :year, as: :radio_buttons, collection: ["2018", "2019", "2020", "2021", "2022"]
+      = f.input :year
 
-      .apply-page-jumbotron
-        h3 Positions Applying For
-        p
-          ' See
-          a href="https://paper.dropbox.com/doc/Blueprint-External-were-recruiting--ALC4fPNxNMynyemsKDc7jqvxAQ-5gkLEDk0SawSTLGOrWt1P" target="_blank" this doc
-          '  for more information about the positions.
-        = f.input :operations, label: "Director of Operations", input_html: { checked: false }
-        = f.input :content, label: "Director of Content", input_html: { checked: false }
-        = f.input :outreach, label: "Director of Outreach", input_html: { checked: false }
-        = f.input :additional_option, label: "Additional Option (Do you think you can contribute something else?)"
+      / .apply-page-jumbotron
+      /   h3 Positions Applying For
+      /   p
+      /     ' See
+      /     a href="https://paper.dropbox.com/doc/Blueprint-External-were-recruiting--ALC4fPNxNMynyemsKDc7jqvxAQ-5gkLEDk0SawSTLGOrWt1P" target="_blank" this doc
+      /     '  for more information about the positions.
+      /   = f.input :operations, label: "Director of Operations", input_html: { checked: false }
+      /   = f.input :content, label: "Director of Content", input_html: { checked: false }
+      /   = f.input :outreach, label: "Director of Outreach", input_html: { checked: false }
+      /   = f.input :additional_option, label: "Additional Option (Do you think you can contribute something else?)"
 
       = f.input :applied_before, as: :radio_buttons
 
-      = f.input :social_links
-      = f.input :personal_growth
       = f.input :why_join
       = f.input :commitments
-      = f.input :resume, as: :file
+      = f.input :social_links
+      = f.input :resume, as: :file, required: true
+      = f.input :design_portfolio, as: :file, required: true
 
       label for='available_for_gm'
         input.marginRight-xs.marginBot-xxl type='checkbox' name='available_for_gm' id='available_for_gm'

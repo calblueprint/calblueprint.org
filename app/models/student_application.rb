@@ -47,6 +47,13 @@ class StudentApplication < ActiveRecord::Base
 
   validate :validate_responses
 
+  # Call on each response object to validate itself. Pass Student Application Error Object
+  def validate_responses
+    self.responses.each do |response|
+      response.validate_response errors
+    end
+  end
+
   def email
     self.response_to("email")
   end
@@ -59,11 +66,6 @@ class StudentApplication < ActiveRecord::Base
     self.responses.select {|r| r.question.tag.to_s == tag}.first.answer
   end
 
-  def validate_responses
-    self.responses.each do |response|
-      response.validate_response errors
-    end
-  end
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
   scope :comparable, -> { where.not(id: Hold.current.pluck(:left_id, :right_id).try(:flatten)) }

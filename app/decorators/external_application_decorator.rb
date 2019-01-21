@@ -4,23 +4,22 @@ class ExternalApplicationDecorator < ApplicationDecorator
   def display_attributes
     [:year,
      :major,
-     [:operations, "Applied for Operations Director"],
-     [:outreach, "Applied for Outreach Director"],
-     [:content, "Applied for Content Director"],
-     :additional_option,
      [:applied_before, "Applied before?"],
      :social_links,
-     :personal_growth,
-     [:why_join, ::I18n.t("simple_form.labels.student_application.why_join")],
+     [:why_join, ::I18n.t("simple_form.labels.external_application.why_join")],
      :commitments,
-     :design_experience,
      :phone,
      :email,
-     :resume]
+     :resume,
+     :design_portfolio]
   end
 
   def resume
     h.link_to "Link", object.resume.url, target: '_blank'
+  end
+
+  def design_portfolio
+    h.link_to "Link", object.design_portfolio.url, target: '_blank'
   end
 
   def attribute_title_html(attribute)

@@ -31,19 +31,18 @@ class StudentApplicationsController < ApplicationController
             @student_application.responses.build question: question, answer: response_params[key]
           end
         else
-          puts "Couldn't find a value for #{key}, adding empty response"
+          # Will be the case for unattached files
           @student_application.responses.build question: question
         end
 
         if key == "name"
           applicant_name = value
-          puts "Set applicant name to #{applicant_name}"
         end
-        puts "Set #{key} to #{value}"
+        @student_application.semester = @settings.current_semester
       end
 
 
-      if @student_application.valid?
+      if @student_application.save
         applicant.update_attributes(name: @student_application.name)
         SendStudentApplicationEmail.execute @student_application
         redirect_to students_apply_path, flash: { success: t('student_applications.create.success') }

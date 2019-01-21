@@ -37,7 +37,7 @@
 class StudentApplication < ActiveRecord::Base
   belongs_to :applicant
   belongs_to :semester
-  has_many :responses
+  has_many :responses, dependent: :destroy
   has_many :questions, through: :responses
 
   has_many :wins, class_name: 'Comparison', foreign_key: 'winner_id'
@@ -62,8 +62,17 @@ class StudentApplication < ActiveRecord::Base
     self.response_to("name")
   end
 
+  def file_for(tag)
+    self.responses.select {|r| r.question.tag.to_s == tag}.first.file
+  end
+
   def response_to(tag)
     self.responses.select {|r| r.question.tag.to_s == tag}.first.answer
+  end
+
+  def sorted_responses
+    cur_semester = Settings.instance.current_semester
+    self.responses.sort_by {|r| QuestionSemester.find_by(question: r.question, semester: cur_semester).question_order}
   end
 
 
@@ -74,10 +83,10 @@ class StudentApplication < ActiveRecord::Base
       where("wins_count * #{Settings.instance.comparison_bonus} + losses_count * #{Settings.instance.comparison_penalty} >= #{Settings.instance.comparison_threshold}").
       order('wins_count + losses_count ASC')
   }
+
   scope :needs_comparison, -> {
     remaining.where('wins_count + losses_count = ?', StudentApplication.remaining.minimum("wins_count + losses_count"))
   }
-
 
 
   def comparisons

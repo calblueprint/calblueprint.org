@@ -76,13 +76,6 @@ available_for_retreat:
   question_type: multiple_choice_radio
   choices: Yes,No
 
-available_for_gm:
-  title: Will you be able to attend Blueprint General Meetings?
-  hint: Blueprint GM's are mandatory and are held on Mondays at 8 PM. Please select yes to acknowledge that you are available at this time.
-  question_category: general
-  question_type: checkbox
-  choices: Yes
-
 why_no_bp_games:
   title: Why are you unable to attend BP Games?
   hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
@@ -144,6 +137,13 @@ service:
   question_category: more_questions
   question_type: long_text
   word_limit: 250
+
+available_for_gm:
+  title: Will you be able to attend Blueprint General Meetings?
+  hint: Blueprint GM's are mandatory and are held on Mondays at 8 PM. Please select yes to acknowledge that you are available at this time.
+  question_category: more_questions
+  question_type: checkbox
+  choices: Yes
 
 add_to_newsletter:
   title: Subscribe to Blueprint newsletter for latest updates!

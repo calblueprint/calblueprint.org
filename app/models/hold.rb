@@ -15,10 +15,12 @@ class Hold < ActiveRecord::Base
   belongs_to :left, class_name: "StudentApplication"
   belongs_to :right, class_name: "StudentApplication"
   belongs_to :admin
+  belongs_to :comparison_category
 
   validates :left_id, presence: true
   validates :right_id, presence: true
   validates :admin_id, presence: true
+  validates :comparison_category_id, presence: true
 
   validate :check_left_and_right
   validate :unique_application

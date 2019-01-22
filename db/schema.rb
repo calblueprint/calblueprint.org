@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_20_225101) do
+ActiveRecord::Schema.define(version: 2019_01_21_192535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,19 @@ ActiveRecord::Schema.define(version: 2019_01_20_225101) do
   create_table "comparison_categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "weight"
+    t.decimal "comparison_bonus"
+    t.decimal "comparison_penalty"
+    t.string "name"
+  end
+
+  create_table "comparison_category_questions", force: :cascade do |t|
+    t.bigint "question_id"
+    t.bigint "comparison_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comparison_category_id"], name: "index_comparison_category_questions_on_comparison_category_id"
+    t.index ["question_id"], name: "index_comparison_category_questions_on_question_id"
   end
 
   create_table "comparisons", id: :serial, force: :cascade do |t|
@@ -121,7 +134,9 @@ ActiveRecord::Schema.define(version: 2019_01_20_225101) do
     t.integer "right_id", null: false
     t.integer "admin_id", null: false
     t.datetime "current_until"
+    t.bigint "comparison_category_id"
     t.index ["admin_id"], name: "index_holds_on_admin_id"
+    t.index ["comparison_category_id"], name: "index_holds_on_comparison_category_id"
     t.index ["left_id"], name: "index_holds_on_left_id"
     t.index ["right_id"], name: "index_holds_on_right_id"
   end
@@ -297,7 +312,10 @@ ActiveRecord::Schema.define(version: 2019_01_20_225101) do
     t.index ["semester_id"], name: "index_student_applications_on_semester_id"
   end
 
+  add_foreign_key "comparison_category_questions", "comparison_categories"
+  add_foreign_key "comparison_category_questions", "questions"
   add_foreign_key "comparisons", "comparison_categories"
+  add_foreign_key "holds", "comparison_categories"
   add_foreign_key "question_semesters", "questions"
   add_foreign_key "question_semesters", "semesters"
   add_foreign_key "questions", "comparison_categories"

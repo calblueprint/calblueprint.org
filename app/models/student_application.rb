@@ -54,6 +54,7 @@ class StudentApplication < ActiveRecord::Base
     end
   end
 
+  # Helper functions because some other places in the code need these accessors to exist
   def email
     self.response_to("email")
   end

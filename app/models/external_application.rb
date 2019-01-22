@@ -45,12 +45,12 @@ class ExternalApplication < ActiveRecord::Base
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..1.megabytes }
 
-  validates_attachment :resume,
+  validates_attachment :design_portfolio,
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..10.megabytes }
 
   validates_attachment_presence :resume
-  validates_attachment_presence :design_portfolio
+  validate :design_portfolio_present
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
@@ -66,6 +66,7 @@ class ExternalApplication < ActiveRecord::Base
   validates :commitments, presence: true
   validates :major, presence: true
   validates :applied_before, presence: true
+  validates :design_portfolio_link, url: true, allow_blank: true
   # validate :at_least_one_position
 
   # validates_presence_of :design_experience, if: :design?
@@ -80,6 +81,11 @@ class ExternalApplication < ActiveRecord::Base
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
 
+  def design_portfolio_present
+    unless self.design_portfolio_file_size || (not self.design_portfolio_link.empty?)
+      errors[:base] << ("Please either upload or provide a link to your design portfolio")
+    end
+  end
 
   def at_least_one_position
     if (not [self.operations, self.outreach, self.content].include? true) && self.additional_option.blank?

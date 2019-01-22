@@ -35,7 +35,7 @@ gem 'redcarpet', '~> 3.3.4'
 gem 'acts_as_list', '~> 0.7.2'
 gem 'state_machine', '~> 1.2.0'
 gem 'rack-cors', :require => 'rack/cors'
-
+gem 'validate_url', '~> 1.0.2'
 # Frontend
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0.6'

@@ -31,6 +31,7 @@ en:
         applied_before: Have you applied to Blueprint before?
         resume: Resume
         design_portfolio: Design Portfolio
+        design_portfolio_link: Design Portfolio Link
         website: Website
         available_for_bp_games: Will you be able to attend BP Games?
         why_no_bp_games: Why are you unable to attend BP Games?
@@ -41,7 +42,8 @@ en:
         name: First and Last
         email: Please use your Berkeley email
         resume: Please attach the most recent copy of your resume as a PDF (1 MB limit)
-        design_portfolio: Please share an updated version of your digital portfolio as a PDF. If you have a digital portfolio, upload a PDF with the link (10 MB limit)
+        design_portfolio: Please share an updated version of your digital portfolio as either a PDF (10 MB limit) or a link. This is a required question
+        design_portfolio_link: Please make sure to prefix your URL with 'http://' or 'https://' as necessary
         website: Please link your personal website or portfolio of past design work
         social_links: LinkedIn, Facebook, Twitter, Medium, personal website...any links that help us get to know you better! (We click on everything you send, and especially love to read anything you've written.)
         personal_growth: In what ways are you looking to grow personally. Fewer than 250 words, please!

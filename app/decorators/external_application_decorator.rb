@@ -11,7 +11,8 @@ class ExternalApplicationDecorator < ApplicationDecorator
      :phone,
      :email,
      :resume,
-     :design_portfolio]
+     :design_portfolio,
+     :design_portfolio_link]
   end
 
   def resume
@@ -19,7 +20,12 @@ class ExternalApplicationDecorator < ApplicationDecorator
   end
 
   def design_portfolio
-    h.link_to "Link", object.design_portfolio.url, target: '_blank'
+    if object.design_portfolio_file_size
+      h.link_to 'View Design Portfolio', object.design_portfolio.url, target: '_blank',
+      class: 'bp-btn btn-light btn-sm'
+    else
+      'No Attachment'
+    end
   end
 
   def attribute_title_html(attribute)

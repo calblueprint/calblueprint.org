@@ -34,7 +34,7 @@ class Response < ActiveRecord::Base
 
   def validate_attachment(errors)
     q = self.question
-    if self.file_file_size # check if file exists, can't use file because of default file
+    if self.file_file_size # check if file exists, can't use file to check this because of default file
       if self.file_file_size > (q.file_size_limit * 1000000) && q.file_size_limit > 0
         errors.add(q.title, "is too large, limit is #{q.file_size_limit} Megabytes")
       end

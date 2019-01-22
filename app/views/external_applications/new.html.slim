@@ -42,7 +42,8 @@
       = f.input :commitments
       = f.input :social_links
       = f.input :resume, as: :file, required: true
-      = f.input :design_portfolio, as: :file, required: true
+      = f.input :design_portfolio, as: :file
+      = f.input :design_portfolio_link
 
       label for='available_for_gm'
         input.marginRight-xs.marginBot-xxl type='checkbox' name='available_for_gm' id='available_for_gm'

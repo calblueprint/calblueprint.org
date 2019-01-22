@@ -11,12 +11,11 @@ end
 # Seed multiple categories by loading the YAML file
 def db_seed_categories
   path = Rails.root.join('db','seeds','categories.yml')
-  puts "Seeding from file #{path}"
   File.open(path) do |file|
     YAML.load_documents(file) do |doc|
       doc.keys.sort.each do |key|
-        puts "Seeding comparison category structure #{key}"
-        puts "Warning this will delete any comparison category <-> question relationships existing for any duplicate categories"
+        # puts "Seeding comparison category structure #{key}"
+        # puts "Warning this will delete any comparison category <-> question relationships existing for any duplicate categories"
         attributes = doc[key]
         db_seed_category(attributes)
       end
@@ -36,7 +35,7 @@ def db_seed_category(attributes)
     if question
       questions.push question
     else
-      puts "Could not find question with tag #{q}"
+      puts "Could not find question with tag #{q} while seeding categories"
     end
   end
   # Create QuestionSemester objects for valid questions

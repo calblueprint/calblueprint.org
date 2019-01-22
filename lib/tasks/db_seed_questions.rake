@@ -11,11 +11,11 @@ end
 # Seed multiple questions by loading the YAML file
 def db_seed_questions
   path = Rails.root.join('db','seeds','questions.yml')
-  puts "Seeding from file #{path}"
   File.open(path) do |file|
+    # puts "Seeding App Questions from #{path}"
     YAML.load_documents(file) do |doc|
       doc.keys.sort.each do |tag|
-        puts "Seeding question with tag #{tag}"
+        # puts "Seeding question with tag #{tag}"
         attributes = doc[tag]
         db_seed_question(tag, attributes)
       end
@@ -29,6 +29,6 @@ def db_seed_question(tag, attributes)
     question.update!(attributes)
     # update the user with user.update(name: attributes['name'])
   else
-    puts "Couldn't create this quesiton"
+    puts "Couldn't create question with tag #{tag} while seeding questions"
   end
 end

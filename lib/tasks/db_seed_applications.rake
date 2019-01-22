@@ -11,12 +11,10 @@ end
 # Seed multiple applications by loading the YAML file
 def db_seed_applications
   path = Rails.root.join('db','seeds','applications.yml')
-  puts "Seeding from file #{path}"
   File.open(path) do |file|
     YAML.load_documents(file) do |doc|
       doc.keys.sort.each do |key|
-        puts "Seeding application structure #{key}"
-        puts "Warning this will delete the existing application structure for this semester"
+        # puts "Seeding application structure #{key}"
         attributes = doc[key]
         db_seed_application(attributes)
       end
@@ -34,7 +32,7 @@ def db_seed_application(attributes)
     if question
       questions.push question
     else
-      puts "Could not find question with tag #{q}"
+      puts "Could not find question with tag #{q} while seeding applications"
     end
   end
   # Create QuestionSemester objects for valid questions

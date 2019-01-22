@@ -14,7 +14,6 @@ sp19:
     - why_no_bp_games
     - available_for_retreat
     - why_no_retreat
-    - available_for_gm
     - commitments
     - unique_experiences
     - hardest_achievement
@@ -22,3 +21,4 @@ sp19:
     - projects
     - service
     - add_to_newsletter
+    - available_for_gm

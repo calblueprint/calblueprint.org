@@ -1,6 +1,6 @@
 class SocialMediaUrls
   # Post links to infosession Facebook events here
-  INFOSESSION = "https://www.facebook.com/calblueprint"
+  INFOSESSION = nil
   FACEBOOK = "http://www.facebook.com/calblueprint"
   TWITTER = "https://twitter.com/calblueprint"
   GITHUB = "https://github.com/calblueprint/"

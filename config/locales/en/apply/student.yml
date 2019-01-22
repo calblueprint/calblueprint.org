@@ -12,25 +12,28 @@ en:
       applications_closed: >
         Applications are closed for this semester. Sign up to be notified when they reopen!
       application_timeline:
-        infosession_date: Aug 28, 6-9 PM and Aug 29, 8:30-10 PM
+        infosession_date: Jan 30, 6:30-8PM
         infosession: >
-          Come out and talk to us to learn more about Blueprint at one of our infosessions.
-          The infosession on August 28 will be in Cory 521, and the infosession on August 29 will be in Soda 310.
-          You only need to come to one!
+          Come out and talk to us to learn more about Blueprint at our infosession.
+          The infosession will be on January 30th in HP Auditorium in Soda Hall.
         infosession_notice: Infosession Facebook event will be posted soon!
-        application_date: Aug 31 @ 11:59pm
+        application_date: Feb 1 @ 11:59pm
         application: >
           Fill out the online application. Our inital cuts will be based on
           the application, so make sure to spend some time on the free response questions! Results will be emailed
-          out ASAP. <strong>The deadline is August 31st at 11:59 PM.</strong>
+          out ASAP. <strong>The deadline is February 1st at 11:59 PM.</strong>
         application_notice: >
           Student applications will be open at the beginning of the semester. Follow our
           <a href="https://www.facebook.com/calblueprint" target="_blank">Facebook page</a> to stay updated!
-        bp_games_date: Sept 5
+        tech_round_date: Feb 3 - 9
+        tech_round: >
+          A challenging technical project to give you an opportunity to showcase how you learn and work through
+          difficult technical scenarios. The project will be emailed to invited candidates.
+        bp_games_date: Feb 9
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
-          critically. *This round is by invitation only. Location and time will be emailed to invited candidates.
-        interview_date: Sept 7 - 8
+          critically. This round is by invitation only. Location and time will be emailed to invited candidates.
+        interview_date: None
         interview: >
           The final step in the application process &mdash; we really want to feel your passion for social
           good in person. Final decisions will be announced from this event.

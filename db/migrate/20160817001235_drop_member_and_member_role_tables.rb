@@ -1,4 +1,4 @@
-class DropMemberAndMemberRoleTables < ActiveRecord::Migration
+class DropMemberAndMemberRoleTables < ActiveRecord::Migration[4.2]
   def change
     drop_table :member_roles
     drop_table :members

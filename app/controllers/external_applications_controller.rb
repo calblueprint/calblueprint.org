@@ -23,7 +23,7 @@ class ExternalApplicationsController < ApplicationController
     params.require(:external_application).permit(
       :why_join, :resume, :phone, :year, :major, :applicant_id, :semester_id, :name,
       :email, :experience, :applied_before, :available_for_retreat,
-      :available_for_bp_games, :why_no_bp_games, :why_no_retreat,
+      :available_for_bp_games, :why_no_bp_games, :why_no_retreat, :design_portfolio, :design_portfolio_link,
       :operations, :design, :content, :outreach, :design_experience, :website,
       :additional_option, :social_links, :personal_growth, :commitments).merge(
         semester: @settings.current_semester

@@ -1,34 +1,22 @@
 .container
-  .admin-page-header.marginBot-lg Comparison
+  .admin-page-header.marginBot-lg = "#{@category.name} Comparison"
 
   .comparison-row.comparison-header
     .comparison-section-title
     .comparison-section-item Student 1
     .comparison-section-item Student 2
 
-  - @left.comparison_attributes.each do |attribute|
+  - @category.questions.each do |q|
     .comparison-row
-      = @left.attribute_title_html attribute
-      = auto_link @left.comparison_attribute_html(attribute), html: { target: '_blank' }
-      = auto_link @right.comparison_attribute_html(attribute), html: { target: '_blank' }
+      h2.comparison-section-title = q.title
+      - if q.question_type == "attachment"
+        p.comparison-section-item = link_to "View Attachment", @left.file_for(q.tag).url, target: '_blank'
+        p.comparison-section-item = link_to "View Attachment", @right.file_for(q.tag).url, target: '_blank'
+      - else
+        p.comparison-section-item = @left.response_to q.tag
+        p.comparison-section-item = @right.response_to q.tag
     hr
 
-  .comparison-row
-    .comparison-section-title
-      h2 Resume
-    .comparison-section-item
-      = @left.resume
-    .comparison-section-item
-      = @right.resume
-
-  hr
-  .comparison-row
-    .comparison-section-title
-      h2 Design Portfolio
-    .comparison-section-item
-      = @left.design_portfolio
-    .comparison-section-item
-      = @right.design_portfolio
 
 .comparison-decision-row
   .container
@@ -37,10 +25,12 @@
       = simple_form_for [:admin, @comparison] do |f|
         = f.hidden_field :winner_id, value: @left.id
         = f.hidden_field :loser_id, value: @right.id
+        = f.hidden_field :comparison_category_id, value: @category.id
         = f.button :submit, "Left is better!", class: 'bp-btn'
 
     .comparison-section-item
       = simple_form_for [:admin, @comparison] do |f|
         = f.hidden_field :winner_id, value: @right.id
         = f.hidden_field :loser_id, value: @left.id
+        = f.hidden_field :comparison_category_id, value: @category.id
         = f.button :submit, "Right is better!", class: 'bp-btn'

@@ -1,4 +1,4 @@
-class CreateNonprofitApplications < ActiveRecord::Migration
+class CreateNonprofitApplications < ActiveRecord::Migration[4.2]
   def change
     create_table :nonprofit_applications do |t|
       t.integer :nonprofit_id

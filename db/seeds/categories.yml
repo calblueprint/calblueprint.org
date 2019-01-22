@@ -1,0 +1,22 @@
+technical:
+  name: "Technical"
+  bonus: 1
+  penalty: -1
+  weight: 1
+  questions:
+    - year
+    - experience
+    - projects
+    - resume
+    - design_portfolio
+
+culture:
+  name: "Culture"
+  bonus: 1
+  penalty: -1
+  weight: 1
+  questions:
+    - year
+    - unique_experiences
+    - hardest_achievement
+    - service

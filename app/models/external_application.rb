@@ -39,25 +39,37 @@ class ExternalApplication < ActiveRecord::Base
   belongs_to :semester
 
   has_attached_file :resume
+  has_attached_file :design_portfolio
+
   validates_attachment :resume,
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..1.megabytes }
 
+  validates_attachment :design_portfolio,
+                       content_type: { content_type: "application/pdf" },
+                       size: { in: 0..10.megabytes }
+
   validates_attachment_presence :resume
+  validate :design_portfolio_present
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
 
+  # INFO: Removed some validations for Spring 2019 Changes
+
   validates :social_links, presence: true
-  validates :personal_growth, presence: true
+  # validates :personal_growth, presence: true
   validates :why_join, presence: true
   validates :phone, presence: true
   validates :year, presence: true
   validates :name, presence: true
   validates :commitments, presence: true
-  validate :at_least_one_position
+  validates :major, presence: true
+  validates :applied_before, presence: true
+  validates :design_portfolio_link, url: true, allow_blank: true
+  # validate :at_least_one_position
 
-  validates_presence_of :design_experience, if: :design?
+  # validates_presence_of :design_experience, if: :design?
 
   validates :email,
             format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
@@ -69,6 +81,11 @@ class ExternalApplication < ActiveRecord::Base
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
 
+  def design_portfolio_present
+    unless self.design_portfolio_file_size || (not self.design_portfolio_link.empty?)
+      errors[:base] << ("Please either upload or provide a link to your design portfolio")
+    end
+  end
 
   def at_least_one_position
     if (not [self.operations, self.outreach, self.content].include? true) && self.additional_option.blank?

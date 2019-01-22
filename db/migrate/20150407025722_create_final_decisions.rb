@@ -1,4 +1,4 @@
-class CreateFinalDecisions < ActiveRecord::Migration
+class CreateFinalDecisions < ActiveRecord::Migration[4.2]
   def change
     create_table :final_decisions do |t|
       t.boolean :admitted

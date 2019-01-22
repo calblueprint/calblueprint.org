@@ -1,0 +1,24 @@
+sp19:
+  season: "spring"
+  year: "2019"
+  questions:
+    - name
+    - email
+    - phone
+    - year
+    - applied_before
+    - heard_from
+    - resume
+    - design_portfolio
+    - available_for_bp_games
+    - why_no_bp_games
+    - available_for_retreat
+    - why_no_retreat
+    - commitments
+    - unique_experiences
+    - hardest_achievement
+    - experience
+    - projects
+    - service
+    - available_for_gm
+    - add_to_newsletter

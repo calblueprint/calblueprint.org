@@ -1,0 +1,152 @@
+# Question Category Options: general, short_answer, more_questions
+# Question Type Options: short_text, long_text, multiple_choice_radio, checkbox, attachment
+
+# Notes:
+# - This document functions as a question bank shared across ALL semesters
+# - Use applications.yml to assign questions to a semester in a particular order
+# - Attributes are directly loaded into question model
+# - question tags (name, phone, email) must be unique
+
+# General Questions
+name:
+  title: What is your name?
+  hint: First and Last
+  question_category: general
+  question_type: short_text
+  placeholder: Alyssa P. Hacker
+
+phone:
+  title: Phone Number
+  question_category: general
+  question_type: short_text
+  placeholder: (626) 123-4567
+  input_type: phone
+
+email:
+  title: Email
+  hint: Please use your Berkeley email
+  question_category: general
+  question_type: short_text
+  placeholder: example@berkeley.edu
+  input_type: email
+
+year:
+  title: What year in school are you?
+  question_category: general
+  question_type: short_text
+
+applied_before:
+  title: Have you applied to Blueprint before?
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Yes,No
+
+heard_from:
+  title: How did you first hear about Blueprint?
+  hint: Please let us know how you first heard about Blueprint, whether it’s through social media, through a friend, through classes, through Sproul, etc.
+  question_category: general
+  question_type: short_text
+
+resume:
+  title: Resume
+  hint: Please attach the most recent copy of your resume as a PDF (1 MB size limit).
+  question_category: general
+  question_type: attachment
+  file_size_limit: 1 #MB
+
+design_portfolio:
+  title: Design Portfolio (Optional)
+  hint: Attach your design portfolio if you want your design talent to be considered as part of your application! If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
+  question_category: general
+  question_type: attachment
+  required: false
+  file_size_limit: 10 #MB
+
+available_for_bp_games:
+  title: Will you be able to attend BP Games?
+  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on February 9, from 2-5 PM.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Yes,No
+
+available_for_retreat:
+  title: Will you be able to attend Blueprint Retreat?
+  hint: Retreat will be the evening of February 15 to the morning of February 17.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Yes,No
+
+why_no_bp_games:
+  title: Why are you unable to attend BP Games?
+  hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
+  question_category: general
+  question_type: long_text
+  required: false
+
+why_no_retreat:
+  title: Why are you unable to attend retreat?
+  hint: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
+  question_category: general
+  question_type: long_text
+  required: false
+
+commitments:
+  title: Please describe your time commitments for this semester.
+  hint: Feel free to include your coursework, any extracurricular work for other student organizations, and any part-time jobs, along with how many hours per week you expect each to take.
+  placeholder: Ruby on Rails DeCal (5 hours/week), Tutoring (2 hours/week), ...
+  question_category: general
+  question_type: long_text
+
+# Short Answer Questions
+
+unique_experiences:
+  title: What unique experiences, skills, or other aspects of your identity have shaped your worldview, and how have those perspectives led you to want to be a part of Blueprint?
+  hint: Take note of the next question and make sure you can differentiate your responses!
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 250
+
+hardest_achievement:
+  title: Talk about one thing you believe you worked the hardest to achieve. What motivated you throughout that experience?
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 250
+
+# More Questions
+
+experience:
+  title: Please list and briefly describe past work experience or extracurricular activities.
+  hint: Let us know the organization, your postition, and a brief description of your responsiblities and achievements. Fewer than 250 words, please!
+  placeholder: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
+  question_category: more_questions
+  question_type: long_text
+  word_limit: 250
+
+projects:
+  title: Please list and briefly describe a few personal projects.
+  hint: We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. Fewer than 250 words, please!
+  placeholder: "Project\nLink (if possible)\nBrief description"
+  question_category: more_questions
+  question_type: long_text
+  word_limit: 250
+
+service:
+  title: Please list and briefly describe your past community service experiences.
+  hint: You can use this space to list your previous service experiences. Feel free to also describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!
+  placeholder: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
+  question_category: more_questions
+  question_type: long_text
+  word_limit: 250
+
+available_for_gm:
+  title: Will you be able to attend Blueprint General Meetings?
+  hint: Blueprint GM's are mandatory and are held on Mondays at 8 PM. Please select yes to acknowledge that you are available at this time.
+  question_category: more_questions
+  question_type: checkbox
+  choices: Yes
+
+add_to_newsletter:
+  title: Subscribe to Blueprint newsletter for latest updates!
+  question_category: more_questions
+  question_type: multiple_choice_radio
+  choices: Yes,No

@@ -1,4 +1,4 @@
-class RemoveAndAddColumnsFromNonprofits < ActiveRecord::Migration
+class RemoveAndAddColumnsFromNonprofits < ActiveRecord::Migration[4.2]
   def change
     remove_column :nonprofits, :name, :string
     remove_column :nonprofits, :address, :string

@@ -30,7 +30,7 @@
         tr onClick="window.location = '/admins/student_applications/#{app.id}'"
           td = app.applicant.name
           td = app.applicant.email
-          td = app.year
+          td = app.response_to 'year'
           td = "#{app.semester.season.capitalize} #{app.semester.year}"
           td = app.wins_count
           td = app.losses_count

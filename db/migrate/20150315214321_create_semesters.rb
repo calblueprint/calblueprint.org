@@ -1,4 +1,4 @@
-class CreateSemesters < ActiveRecord::Migration
+class CreateSemesters < ActiveRecord::Migration[4.2]
   def change
     create_table :semesters do |t|
       t.timestamps

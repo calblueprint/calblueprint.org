@@ -3,12 +3,45 @@ class StudentApplicationsController < ApplicationController
 
   def new
     @student_application = StudentApplication.new
+    questions = Question.sorted(@settings.current_semester)
+    questions.each {|q| @student_application.responses.build question: q}
   end
 
   def create
-    applicant = Applicant.find_or_create_by(email: student_application_params[:email])
+    response_params = student_application_params[:responses]
+    applicant = Applicant.find_or_create_by(email: response_params[:email])
     if verify_unique_semester_application applicant
-      @student_application = applicant.student_applications.build student_application_params
+      # Start with a fresh student app object
+      # TODO: Should really build this using strong params as intended.
+      # Just don't have the time right now to fix the form
+      @student_application = applicant.student_applications.build
+
+      applicant_name = ""
+      # Validate individual responses
+      questions = Question.sorted(@settings.current_semester)
+      questions.each do |question|
+        key = question.tag
+        value = response_params[key]
+
+        if value
+          if question.question_type == "attachment"
+            puts "Found attachment with file: #{response_params[key]}"
+            @student_application.responses.build question: question, file: response_params[key]
+          else
+            @student_application.responses.build question: question, answer: response_params[key]
+          end
+        else
+          # Will be the case for unattached files
+          @student_application.responses.build question: question
+        end
+
+        if key == "name"
+          applicant_name = value
+        end
+        @student_application.semester = @settings.current_semester
+      end
+
+
       if @student_application.save
         applicant.update_attributes(name: @student_application.name)
         SendStudentApplicationEmail.execute @student_application
@@ -20,10 +53,9 @@ class StudentApplicationsController < ApplicationController
   end
 
   def student_application_params
-    params.require(:student_application).permit(
-      :why_join, :heard_from, :commitments, :hardest_achievement, :resume, :design_portfolio, :phone, :year, :applicant_id, :semester_id, :name,
-      :email, :experience, :projects, :service, :applied_before,
-      :available_for_retreat, :available_for_bp_games, :add_to_newsletter, :why_no_bp_games, :why_no_retreat).merge(
+    allowed_response_types = QuestionSemester.where(semester: @settings.current_semester).map {|x| x.question.tag.to_sym}
+    puts "Allowed Response Types: #{allowed_response_types}"
+    params.require(:student_application).permit(responses: allowed_response_types).merge(
         semester: @settings.current_semester
       )
   end

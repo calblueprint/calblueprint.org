@@ -17,8 +17,7 @@ module Admins
     end
 
     def show
-      app = StudentApplication.find(params[:id])
-      @app = StudentApplicationDecorator.new app
+      @app = StudentApplication.find(params[:id])
     end
 
     def remaining

@@ -1,4 +1,4 @@
-class CreateHolds < ActiveRecord::Migration
+class CreateHolds < ActiveRecord::Migration[4.2]
   def change
     create_table :holds do |t|
       t.timestamps

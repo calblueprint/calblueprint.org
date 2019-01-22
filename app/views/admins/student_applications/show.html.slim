@@ -1,8 +1,14 @@
 .container
   h1.admin-page-header = @app.name
 
-  - @app.display_attributes.each do |attribute|
-    = auto_link @app.attribute_html(attribute), html: { target: '_blank' }
+  - @app.sorted_responses.each do |r|
+    div.app-row
+      h3.row-left = r.question.title
+      - if r.question.question_type == "attachment" and r.file_file_size
+        p.row-right = link_to "View Attachment", r.file.url, target: '_blank'
+      - else
+        p.row-right = r.answer
+
 
   .student-app-nav-buttons.marginTopBot-md
     - if StudentApplication.where("id < ?", @app.id).last
@@ -12,4 +18,3 @@
 
     - if StudentApplication.where("id > ?", @app.id).first
       = link_to 'Next', admin_student_application_path(StudentApplication.where("id > ?", @app.id).first), class: "bp-btn"
-

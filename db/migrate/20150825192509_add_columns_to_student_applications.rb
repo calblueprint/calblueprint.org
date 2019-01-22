@@ -1,4 +1,4 @@
-class AddColumnsToStudentApplications < ActiveRecord::Migration
+class AddColumnsToStudentApplications < ActiveRecord::Migration[4.2]
   def change
     add_column :student_applications, :name, :string
     add_column :student_applications, :email, :string

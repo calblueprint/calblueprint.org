@@ -1,4 +1,4 @@
-class AddColumnsToNonprofitApplications < ActiveRecord::Migration
+class AddColumnsToNonprofitApplications < ActiveRecord::Migration[4.2]
   def change
     add_column :nonprofit_applications, :history, :text
     add_column :nonprofit_applications, :date_established, :date

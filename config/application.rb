@@ -33,6 +33,7 @@ module CalBlueprintOrgApp
       end
     end
 
+
     # Raise error when any param isn't permitted
     config.action_controller.action_on_unpermitted_parameters = :raise
 

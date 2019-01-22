@@ -1,0 +1,21 @@
+Comparison
+  - comparison_category  :references
+  - winner               :references (application)
+  - loser                :references (application)
+  - admin                :references
+
+ComparisonCategory
+  - name                 :string
+  - comparison_bonus     :integer
+  - comparison_penalty   :integer
+  - weight               :integer
+
+ComparisonCategoryQuestion
+  - question             :references
+  - comparison_category  :references
+
+
+- Student Application has a win/loss count for each category
+- App's "Score" in a category is (wins*bonus + loss*penalty)
+- To stay in comparison pool, sum of weight*score for all categories
+  must be greater than threshold set in settings

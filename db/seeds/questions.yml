@@ -33,7 +33,8 @@ email:
 year:
   title: What year in school are you?
   question_category: general
-  question_type: short_text
+  question_type: multiple_choice_radio
+  choices: Freshman,Sophomore,Junior,Senior,Graduate
 
 applied_before:
   title: Have you applied to Blueprint before?

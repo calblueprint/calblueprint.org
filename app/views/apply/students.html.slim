@@ -40,8 +40,7 @@ section.application-process-section#application-process
           .timeline-row-description = raw t ".application_timeline.infosession"
           .timeline-row-btn
             - if SocialMediaUrls::INFOSESSION
-              = link_to "Infosession 1 - August 28", "https://www.facebook.com/events/237249963799140/", class: "bp-btn marginRight-xxs", target: "_blank"
-              = link_to "Infosession 2 - August 29", "https://www.facebook.com/events/2361830727191199/", class: "bp-btn", target: "_blank"
+              = link_to "Infosession - January 30", "https://www.facebook.com/events/2187575501559158", class: "bp-btn marginRight-xxs", target: "_blank"
             - if not SocialMediaUrls::INFOSESSION
               .timeline-row-notice = t ".application_timeline.infosession_notice"
 

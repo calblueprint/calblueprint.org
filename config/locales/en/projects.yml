@@ -6,7 +6,7 @@ en:
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
       re-plate:
-        status: current
+        status: past
         title: Re-Plate
         short_summary: >
           Re-Plate is a Berkeley nonprofit that aims to use technology to eliminate food
@@ -33,7 +33,7 @@ en:
           scale to cities across the US and potentially feed thousands of additional individuals.
 
       dream:
-        status: current
+        status: past
         title: The DREAM Project
         short_summary: >
           The DREAM Project is a nonprofit focused on education located in the Dominican Republic. The goal of DREAM is to provide high quality, holistic, and sustainable education to children, youth, and young adults in communities where there may not exist programs or opportunities for them to effectively take part in otherwise.
@@ -51,7 +51,7 @@ en:
           Blueprint is creating a React Native mobile application for DREAM to help teachers manage their classes, students, and attendances offline. The importance of offline access is due to inconsistent internet/electricity access at schools and program sites. We hope to be able to alleviate the growing pains of the nonprofit and help them impact thousands of more students.
 
       veterans-360:
-        status: current
+        status: past
         title: Veterans 360
         short_summary: >
           Veterans 360 is a nonprofit organization founded in 2011 by Rick Collins. It is an organization that has had six years of active operations helping young veterans cope with transition and PTS/TBI challenges and has supported hundreds of young veterans with everything from simple financial support to complete PTS and mental health support.
@@ -69,7 +69,7 @@ en:
           Blueprint is working with Veterans 360 to create a web platform that allows Veterans 360 and partnering organizations to provide resources and support to these veterans. In order to help veterans have access to this information immediately, at any time and place, Blueprint has also created a mobile application through which veterans can read these resources and connect with other veterans and organizations in their area.
 
       rmi:
-        status: current
+        status:
         title: Rocky Mountain Institute
         short_summary: >
           RMI seeks to transform global energy use to create a cleaner, low-carbon future. To do this, they collect large amounts of detailed information on commercial buildings in order to analyze and suggest policies for reducing energy consumption. Our project aims to help RMI collect this immense amount of valuable data in a flexible, efficient way.

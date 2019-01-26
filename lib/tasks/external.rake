@@ -24,12 +24,11 @@ namespace :external do
       }
 
       if app.resume.exists?
-        puts "RESUME: #{app.resume.url}"
-        app_params["Resume"] = [{ url: app.resume.url }]
+        app_params["Resume"] = [app.resume.url]
       end
 
       if app.design_portfolio.exists?
-        app_params["Design Portfolio"] = [{ url: app.design_portfolio.url }]
+        app_params["Design Portfolio"] = [app.design_portfolio.url]
       end
 
       pos = air_emails.index(app.email)

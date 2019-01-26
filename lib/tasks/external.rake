@@ -11,16 +11,6 @@ namespace :external do
     air_emails = air_apps.map { |app| app[:email] }
 
     db_apps.each do |app|
-      positions = []
-      if app.operations
-        positions.push("Operations")
-      end
-      if app.content
-        positions.push("Content")
-      end
-      if app.outreach
-        positions.push("Outreach")
-      end
       app_params = {
         "Name": app.name,
         "Email": app.email,
@@ -28,16 +18,17 @@ namespace :external do
         "Year": app.year,
         "Major": app.major,
         "Applied before?": app.applied_before,
-        "Positions applying for": positions,
-        "Additional position": app.additional_option,
         "Social links": app.social_links,
-        "Personal growth": app.personal_growth,
-        "Identity/Why Join": app.why_join,
+        "Contribute to Design": app.why_join,
         "Time commitments": app.commitments
       }
 
       if app.resume.exists?
         app_params["Resume"] = [{ url: app.resume.url }]
+      end
+
+      if app.design_portfolio.exists?
+        app_params["Design Portfolio"] = [{ url: app.design_portfolio.url }]
       end
 
       pos = air_emails.index(app.email)

@@ -24,11 +24,11 @@ namespace :external do
       }
 
       if app.resume.exists?
-        app_params["Resume"] = ['https:' + app.resume.url]
+        app_params["Resume"] = 'https:' + app.resume.url
       end
 
       if app.design_portfolio.exists?
-        app_params["Design Portfolio"] = ['https:' + app.design_portfolio.url]
+        app_params["Design Portfolio"] = 'https:' + app.design_portfolio.url
       end
 
       pos = air_emails.index(app.email)

@@ -17,7 +17,7 @@ module Admins
       @category = ComparisonCategory.all.sample
 
       # TODO: This should be the count per category
-      if current_admin.student_reviewer? && current_admin.comparisons.current.count > (110 * ComparisonCategory.count)
+      if current_admin.student_reviewer? && current_admin.comparisons.current.count > (100 * ComparisonCategory.count)
         return redirect_to root_path, flash: { success: t('admins.comparisons.almost_done') }
       end
 

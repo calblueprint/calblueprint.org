@@ -18,5 +18,14 @@ culture:
   questions:
     - year
     - unique_experiences
+    - service
+
+culture:
+  name: "Culture"
+  bonus: 1
+  penalty: -1
+  weight: 1
+  questions:
+    - year
     - hardest_achievement
     - service

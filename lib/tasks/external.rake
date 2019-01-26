@@ -24,6 +24,7 @@ namespace :external do
       }
 
       if app.resume.exists?
+        puts "RESUME: #{app.resume.url}"
         app_params["Resume"] = [{ url: app.resume.url }]
       end
 

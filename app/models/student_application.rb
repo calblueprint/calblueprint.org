@@ -68,7 +68,8 @@ class StudentApplication < ActiveRecord::Base
   end
 
   def response_to(tag)
-    self.responses.select {|r| r.question.tag.to_s == tag}.first.answer
+    response = self.responses.select {|r| r.question.tag.to_s == tag}.first
+    answer if response else ""
   end
 
   def sorted_responses

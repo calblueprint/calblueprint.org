@@ -11,7 +11,7 @@ technical:
     - design_portfolio
 
 culture:
-  name: "Culture"
+  name: "Culture (Identity/Experiences)"
   bonus: 1
   penalty: -1
   weight: 1
@@ -21,7 +21,7 @@ culture:
     - service
 
 culture:
-  name: "Culture"
+  name: "Culture (Hardest Achievement)"
   bonus: 1
   penalty: -1
   weight: 1

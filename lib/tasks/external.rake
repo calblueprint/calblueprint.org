@@ -3,7 +3,7 @@ namespace :external do
   task sync: :environment do
     settings = Settings.instance
     semester_str = "#{settings.current_semester.season.capitalize} #{settings.current_semester.year}"
-    AirtableApp = Airrecord.table(ENV["AIRTABLE_API"], ENV["AIRTABLE_EXTERNAL_TABLE"], semester_str)
+    AirtableApp = Airrecord.table(ENV["AIRTABLE_API"], ENV["AIRTABLE_EXTERNAL_TABLE"], semester_str + " Applications")
 
     air_apps = AirtableApp.all
     db_apps = ExternalApplication.where(semester: settings.current_semester)
@@ -27,8 +27,12 @@ namespace :external do
         app_params["Resume"] = 'https:' + app.resume.url
       end
 
+      if not app.design_portfolio_link.empty?
+        app_params["Design Portfolio Link"] = app.design_portfolio_link
+      end
+
       if app.design_portfolio.exists?
-        app_params["Design Portfolio"] = 'https:' + app.design_portfolio.url
+        app_params["Design Portfolio File"] = 'https:' + app.design_portfolio.url
       end
 
       pos = air_emails.index(app.email)

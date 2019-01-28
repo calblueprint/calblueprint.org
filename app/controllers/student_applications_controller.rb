@@ -25,10 +25,9 @@ class StudentApplicationsController < ApplicationController
 
         if value
           if question.question_type == "attachment"
-            puts "Found attachment with file: #{response_params[key]}"
             @student_application.responses.build question: question, file: response_params[key]
           else
-            @student_application.responses.build question: question, answer: response_params[key]
+            @student_application.responses.build question: question, answer: response_params[key].gsub("\u0000", '')
           end
         else
           # Will be the case for unattached files

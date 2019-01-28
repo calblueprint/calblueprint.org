@@ -9,7 +9,7 @@
           p = link_to "View Attachment", r.file.url, target: '_blank'
       - else
         div.row-right
-          p = simple_format r.answer
+          p = r.answer.gsub(/\n/, 'br />').html_safe
 
 
   .student-app-nav-buttons.marginTopBot-md

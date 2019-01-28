@@ -25,7 +25,7 @@ namespace :students do
         "Time commitments": app.response_to("commitments"),
         "Identity/Experiences": app.response_to("unique_experiences"),
         "Hardest Achievement": app.response_to("hardest_achievement"),
-        "Past work experience/Extracurriculars": app.response_to("experiences"),
+        "Past work experience/Extracurriculars": app.response_to("experience"),
         "Personal Projects": app.response_to("projects"),
         "Service Experience": app.response_to("service"),
         "Total Wins": app.wins_count,
@@ -42,10 +42,10 @@ namespace :students do
       resume = app.file_for("resume")
       design_portfolio = app.file_for("design_portfolio")
       if resume.exists?
-        app_params["Resume"] = resume.url
+        app_params["Resume"] = "https:" + resume.url
       end
       if design_portfolio.exists?
-        app_params["Design Portfolio"] = design_portfolio.url
+        app_params["Design Portfolio"] = "https:" + design_portfolio.url
       end
 
       pos = air_emails.index(app.email)

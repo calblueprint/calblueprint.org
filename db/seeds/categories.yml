@@ -10,7 +10,7 @@ technical:
     - resume
     - design_portfolio
 
-culture:
+culture1:
   name: "Culture (Identity/Experiences)"
   bonus: 1
   penalty: -1
@@ -20,7 +20,7 @@ culture:
     - unique_experiences
     - service
 
-culture:
+culture2:
   name: "Culture (Hardest Achievement)"
   bonus: 1
   penalty: -1

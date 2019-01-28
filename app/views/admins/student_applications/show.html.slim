@@ -5,9 +5,11 @@
     div.app-row
       h3.row-left = r.question.title
       - if r.question.question_type == "attachment" and r.file_file_size
-        p.row-right = link_to "View Attachment", r.file.url, target: '_blank'
+        div.row-right
+          p = link_to "View Attachment", r.file.url, target: '_blank'
       - else
-        p.row-right = simple_format r.answer
+        div.row-right
+          p = simple_format r.answer
 
 
   .student-app-nav-buttons.marginTopBot-md

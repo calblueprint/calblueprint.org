@@ -13,8 +13,8 @@
         p.comparison-section-item = link_to "View Attachment", @left.file_for(q.tag).url, target: '_blank'
         p.comparison-section-item = link_to "View Attachment", @right.file_for(q.tag).url, target: '_blank'
       - else
-        p.comparison-section-item = simple_format @left.response_to q.tag
-        p.comparison-section-item = simple_format @right.response_to q.tag
+        p.comparison-section-item = @left.response_to(q.tag).gsub(/\n/, 'br />').html_safe
+        p.comparison-section-item = @right.response_to(q.tag).gsub(/\n/, '<br />').html_safe
     hr
 
 

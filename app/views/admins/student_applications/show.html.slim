@@ -7,7 +7,7 @@
       - if r.question.question_type == "attachment" and r.file_file_size
         p.row-right = link_to "View Attachment", r.file.url, target: '_blank'
       - else
-        p.row-right = r.answer
+        p.row-right = simple_format r.answer
 
 
   .student-app-nav-buttons.marginTopBot-md

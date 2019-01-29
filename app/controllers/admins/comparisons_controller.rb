@@ -33,7 +33,6 @@ module Admins
         else
           @right = StudentApplication.comparable.remaining.where.not(id: @left.id).first
         end
-        puts "Brand new comparison #{hold.comparison_category.title}"
       else
         puts "Found existing hold, populating with category #{hold.comparison_category.title}"
         @left = hold.left

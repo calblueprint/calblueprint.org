@@ -34,7 +34,7 @@ module Admins
           @right = StudentApplication.comparable.remaining.where.not(id: @left.id).first
         end
       else
-        puts "Found existing hold, populating with category #{hold.comparison_category.title}"
+        puts "Found existing hold, populating with category #{hold.comparison_category.name}"
         @left = hold.left
         @right = hold.right
         @category = hold.comparison_category

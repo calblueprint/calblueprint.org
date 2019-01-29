@@ -50,7 +50,7 @@ module Admins
 
     def create
       last_comp_by_user = Comparison.order(:created_at).where(admin: current_admin).last
-      if last_comp_by_user && (Time.now - last_comp_by_user.created_at).to_i < 5.seconds
+      if last_comp_by_user && (Time.now - last_comp_by_user.created_at).to_i < 30.seconds
         redirect_to root_path, flash: {
           error: "You can't create comparisons that quickly. Please read applications carefully."
         }

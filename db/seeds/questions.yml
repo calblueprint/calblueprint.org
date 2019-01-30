@@ -35,7 +35,7 @@ year:
   question_category: general
   question_type: multiple_choice_radio
   choices: Freshman,Sophomore,Junior,Senior,Graduate
-  hint: 
+  hint:
 
 applied_before:
   title: Have you applied to Blueprint before?

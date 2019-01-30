@@ -4,12 +4,16 @@
   - @app.sorted_responses.each do |r|
     div.app-row
       h3.row-left = r.question.title
-      - if r.question.question_type == "attachment" and r.file_file_size
-        div.row-right
-          p = link_to "View Attachment", r.file.url, target: '_blank'
+      - if r.question.question_type == "attachment"
+        - if r.file_file_size
+          div.row-right
+            p = link_to "View Attachment", r.file.url, target: '_blank'
+        - else
+          div.row-right
+            p = "No Attachment"
       - elsif r and r.answer
         div.row-right
-          p = r.answer.gsub(/\n/, '<br/><br/>').html_safe
+          p = r.answer.gsub(/\n/, '<br/>').html_safe
       - else
         - puts "Response answer was empty for question #{r.question.title}"
 

@@ -9,7 +9,7 @@
           p = link_to "View Attachment", r.file.url, target: '_blank'
       - elsif r and r.answer
         div.row-right
-          p = r.answer.gsub(/\n/, 'br />').html_safe
+          p = r.answer.gsub(/\n/, '<br/><br/>').html_safe
       - else
         - puts "Response answer was empty for question #{r.question.title}"
 

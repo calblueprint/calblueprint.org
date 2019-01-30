@@ -7,9 +7,11 @@
       - if r.question.question_type == "attachment" and r.file_file_size
         div.row-right
           p = link_to "View Attachment", r.file.url, target: '_blank'
-      - else
+      - elsif r and r.answer
         div.row-right
           p = r.answer.gsub(/\n/, 'br />').html_safe
+      - else
+        - puts "Response answer was empty for question #{r.question.title}"
 
 
   .student-app-nav-buttons.marginTopBot-md

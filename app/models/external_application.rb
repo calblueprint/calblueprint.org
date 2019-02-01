@@ -65,7 +65,6 @@ class ExternalApplication < ActiveRecord::Base
   validates :name, presence: true
   validates :commitments, presence: true
   validates :major, presence: true
-  # validates :applied_before, presence: true
   validates :design_portfolio_link, url: true, allow_blank: true
   # validate :at_least_one_position
 

@@ -12,7 +12,7 @@
         th Email
         th Role
         th Created At
-        th # Comparisons
+        th # Comparisons (this semester)
         th Actions
     tbody
       - @admins.each do |admin|
@@ -22,7 +22,7 @@
           td = admin.email
           td = admin.role
           td = admin.created_at.to_date
-          td = admin.comparisons.count
+          td = admin.comparisons.current.count
           td
             = link_to admin_admin_promote_path(admin), class: "icon hint--top", data: { hint: "Promote" } do
               span.marginRight-xxs Promote

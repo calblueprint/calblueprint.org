@@ -5,8 +5,8 @@ technical:
   weight: 1
   questions:
     - year
-    - experience
     - projects
+    - experience
     - resume
     - design_portfolio
 

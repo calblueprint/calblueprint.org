@@ -15,7 +15,7 @@
         th # Comparisons (this semester)
         th Actions
     tbody
-      - @admins.each do |admin|
+      - @admins.all.sort_by {|a| -a.comparisons.current.count}.each do |admin|
         tr id="#{dom_id admin}"
           td = admin.first_name
           td = admin.last_name

@@ -8,7 +8,7 @@
       tr
         th Name
         th Email
-        th Semester
+        th Major
         th Year
         th Actions
     tbody
@@ -16,6 +16,6 @@
         tr onClick="window.location = '/admins/external_applications/#{app.id}'"
           td = app.applicant.name
           td = app.applicant.email
-          td = app.semester.season
-          td = app.semester.year
+          td = app.major
+          td = app.year
           td = link_to "Details", admin_external_application_path(app.id), class: "button"

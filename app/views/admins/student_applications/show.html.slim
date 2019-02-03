@@ -13,7 +13,7 @@
             p = "No Attachment"
       - elsif r and r.answer
         div.row-right
-          p = r.answer.gsub(/\n/, '<br/>').html_safe
+          p = auto_link(r.answer.gsub(/\n/, '<br/>').html_safe)
       - else
         - puts "Response answer was empty for question #{r.question.title}"
 

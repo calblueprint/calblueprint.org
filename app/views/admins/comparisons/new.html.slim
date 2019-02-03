@@ -19,8 +19,8 @@
         - else
           p.comparison-section-item = "No Attachment"
       - else
-        p.comparison-section-item = @left.response_to(q.tag).gsub(/\n/, '<br/>').html_safe
-        p.comparison-section-item = @right.response_to(q.tag).gsub(/\n/, '<br/>').html_safe
+        p.comparison-section-item = auto_link(@left.response_to(q.tag).gsub(/\n/, '<br/>').html_safe)
+        p.comparison-section-item = auto_link(@right.response_to(q.tag).gsub(/\n/, '<br/>').html_safe)
     hr
 
 

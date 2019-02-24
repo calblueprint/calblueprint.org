@@ -104,11 +104,13 @@ en:
     - first_name: 'Jemma'
       last_name: 'Kwak'
       email: 'yeogyoungkwak@berkeley.edu'
+      linkedin: 'jemma-kwak'
       <<: *design
     
     - first_name: 'Rachel'
       last_name: 'He'
       email: 'rlhe1307@berkeley.edu'
+      linkedin: 'rachel-he-543081158'
       <<: *design
 
     - first_name: 'Karina'
@@ -284,11 +286,13 @@ en:
     - first_name: 'Cathleen'
       last_name: 'Jia'
       email: 'cathleenjia@berkeley.edu'
+      linkedin: 'cathleenjia'
       <<: *developer
 
     - first_name: 'Thu'
       last_name: 'Nguyen'
       email: 'tmnguyen@berkeley.edu'
+      linkedin: 'thumn'
       <<: *developer
 
     - first_name: 'Divi'
@@ -299,16 +303,19 @@ en:
     - first_name: 'Tommy'
       last_name: 'Poa'
       email: 'tommypoa@berkeley.edu'
+      linkedin: 'tommy-poa-543458140'
       <<: *developer
 
     - first_name: 'Fang'
       last_name: 'Shuo Deng'
       email: 'dfs.arthur@berkeley.edu'
+      linkedin: "dfangshuo"
       <<: *developer
 
     - first_name: 'Ashley'
       last_name: 'Nguyen'
       email: 'ashley.nguyen27@berkeley.edu'
+      linkedin: 'ashley-nguyen-15a799125'
       <<: *developer
     
 

@@ -16,7 +16,6 @@ module Admins
       # The category is choosen randomly to give us a fairly even spread
       @category = ComparisonCategory.all.sample
 
-      # TODO: This should be the count per category
       if current_admin.student_reviewer? && current_admin.comparisons.current.count > (100 * ComparisonCategory.count)
         return redirect_to root_path, flash: { success: t('admins.comparisons.almost_done') }
       end
@@ -24,7 +23,7 @@ module Admins
       @comparison = Comparison.new comparison_category: @category
       hold = Hold.where(admin_id: current_admin.id).last
       if hold.nil? || !hold.current?
-        needs_comparison = StudentApplication.comparable.needs_comparison.sample(2)
+        needs_comparison = a.sample(2)
         @left = needs_comparison.first
         if @left.nil?
           return redirect_to admin_student_applications_path, flash: { error: t('admins.comparisons.insufficient')}

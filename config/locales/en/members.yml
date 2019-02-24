@@ -321,12 +321,6 @@ en:
       email: 'poojanagpal@berkeley.edu'
       <<: *mentor
 
-    - first_name: 'Michelle'
-      last_name: 'Kwon'
-      email: 'michellejkwon@berkeley.edu'
-      linkedin: 'michellejkwon'
-      <<: *mentor
-
     - first_name: 'Justin'
       last_name: 'Mi'
       email: 'justin.mi@berkeley.edu'
@@ -341,26 +335,30 @@ en:
       website: 'claireylin.com'
       <<: *mentor
 
+    # Other positions:
+
+  alumni:
+
     - first_name: 'Vanessa'
       last_name: 'Ng'
       email: 'vanesng96@berkeley.edu'
       linkedin: 'vanesng'
       website: 'vanesng.com'
-      <<: *mentor
+      <<: *leader
 
     - first_name: 'Tao'
       last_name: 'Ong'
       email: 'taoong@berkeley.edu'
       linkedin: 'taoong'
       website: 'taoong.me'
-      <<: *mentor
+      <<: *external
 
     - first_name: 'Ken'
       last_name: 'Chen'
       email: 'lbkchen@gmail.com'
       linkedin: 'kenzchen'
       website: 'kenchen.io'
-      <<: *mentor
+      <<: *president
 
     - first_name: 'Neel'
       last_name: 'Somani'
@@ -369,9 +367,11 @@ en:
       website: 'apptic.me'
       role: 'External Advisor'
 
-    # Other positions:
-
-  alumni:
+    - first_name: 'Michelle'
+      last_name: 'Kwon'
+      email: 'michellejkwon@berkeley.edu'
+      linkedin: 'michellejkwon'
+      <<: *leader
 
     - first_name: 'Michael'
       last_name: 'Do'

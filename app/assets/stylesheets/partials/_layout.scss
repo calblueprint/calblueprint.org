@@ -40,6 +40,17 @@ a {
   }
 }
 
+.img-container-wide {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+}
+
 $xxs: 6px;
 $xs: 12px;
 $sm: 16px;

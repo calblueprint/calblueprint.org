@@ -89,7 +89,7 @@ en:
       email: 'grant.kalasky@berkeley.edu'
       linkedin: 'grantkalasky'
       website: 'grantkalasky.me'
-      <<: *design
+      <<: *external
 
     - first_name: 'Aivant'
       last_name: 'Goyal'
@@ -194,12 +194,6 @@ en:
       linkedin: 'peter-veerman'
       <<: *developer
 
-    - first_name: 'Tony'
-      last_name: 'Yang'
-      email: 'tonyyanga@gmail.com'
-      linkedin: 'yucheng-tony-yang'
-      <<: *developer
-
     - first_name: 'Florence'
       last_name: 'Lau'
       email: 'florence.lau@berkeley.edu'
@@ -281,6 +275,7 @@ en:
     - first_name: 'Cassandra'
       last_name: 'Melax'
       email: 'cmelax@berkeley.edu'
+      linkedin: 'cassandra-m-085731158'
       <<: *developer
       
     - first_name: 'Cathleen'

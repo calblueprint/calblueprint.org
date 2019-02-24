@@ -344,7 +344,7 @@ en:
       email: 'vanesng96@berkeley.edu'
       linkedin: 'vanesng'
       website: 'vanesng.com'
-      <<: *leader
+      <<: *design
 
     - first_name: 'Tao'
       last_name: 'Ong'

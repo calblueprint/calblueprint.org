@@ -73,8 +73,8 @@ en:
       email: 'loischang@berkeley.edu'
       <<: *president
 
-    - first_name: 'Arpan'
-      last_name: 'Pal'
+    - first_name: 'MR.ARPI-MAN-'
+      last_name: ''
       email: 'arpan.pal1234@gmail.com'
       <<: *internal
 

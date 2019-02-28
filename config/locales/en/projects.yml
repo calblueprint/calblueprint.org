@@ -20,7 +20,7 @@ en:
         title: Free Software Foundation
         banner_image: projects/fsf.png
         short_summary: >
-          FreeSoftwareFoundation(FSF) is a non-profit in Boston, MA with a mission to promote computer user freedom. The organization aims to secure freedom for computer users by promoting the development and use of free software and documentation—particularly the GNU operating system—and by campaigning against threats to computer user freedom like Digital Restrictions Management (DRM) and software patents. 
+          Free Software Foundation (FSF) is a non-profit in Boston, MA with a mission to promote computer user freedom. The organization aims to secure freedom for computer users by promoting the development and use of free software and documentation—particularly the GNU operating system—and by campaigning against threats to computer user freedom like Digital Restrictions Management (DRM) and software patents. 
         link: https://www.fsf.org
         github_link: 
         full_description: |           
@@ -30,7 +30,7 @@ en:
         title: San Francisco Art Institute
         banner_image: projects/sfai.png
         short_summary: >
-          We are partnering with the San Francisco Art Institute to tackle this challenge by contributing to the development of the digital art market. SFAI is a non-profit college with a diverse community of artists and scholars, dedicated to the intrinsic value of art. Technology is always redefining creativity and art in many different forms. But, how can we make it more accessible to everyone? 
+           SFAI is a non-profit college with a diverse community of artists and scholars, dedicated to the intrinsic value of art. Technology is always redefining creativity and art in many different forms. But, how can we make it more accessible to everyone? We are partnering with the San Francisco Art Institute to tackle this challenge by contributing to the development of the digital art market.
         link: https://www.sfai.edu
         github_link: 
         full_description: |           

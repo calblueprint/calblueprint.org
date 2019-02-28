@@ -80,7 +80,7 @@ section.about-page-team-section#team
                 - if member[:linkedin]
                     div.icon-container
                       a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
-                        img src=image_url("icons/linkedin.svg") class="linkedin-icon" alt="LinkedIn"/
+                        img src=image_url("icons/linkedin.svg") class="linkedin-icon" alt="LinkedIn"/                  
         - (0...(5 - t("members").length % 5)).each do |member|
           li.about-page-member-item
 

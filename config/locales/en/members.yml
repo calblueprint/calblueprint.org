@@ -163,7 +163,8 @@ en:
 
     - first_name: 'Steve'
       last_name: 'Shi'
-      email: 'steveshi@berkeley.edu'
+      email: 'steveshi7@gmail.com'
+      linkedin: 'steveshi7'
       <<: *leader
 
 

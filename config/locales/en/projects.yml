@@ -231,7 +231,6 @@ en:
         title: Berkeley Public Schools Fund
         short_summary: >
           Provides a way for Berkeley public school teachers to fund classroom projects.
-        link: https://schoolsfund-friendsandfamily.herokuapp.com/
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/bpsf.png
         full_description: |
           The Problem
@@ -285,7 +284,6 @@ en:
         short_summary: >
           Allows tech and design professionals around the Bay Area to teach courses
           at the Oakland Digital Office.
-        link: https://odalc-stage.herokuapp.com/
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/odalc.png
         full_description: |
           The Problem
@@ -308,7 +306,6 @@ en:
         short_summary: >
           Provides a way for Roots of Success teachers to manage various curricula
           and classes.
-        link: http://ros-staging.herokuapp.com/
         banner_image: https://s3.amazonaws.com/calblueprint-prod/images/rootsofsuccess.png
         full_description: |
           The Problem

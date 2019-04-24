@@ -746,6 +746,13 @@ en:
       last_name: 'Du'
       email: 'johnldu@gmail.com'
       <<: *developer
+      
+    - first_name: 'Brian'
+      last_name: 'Liou'
+      email: 'brian@teamleada.com'
+      linkedin: 'brian-liou-44166223'
+      website: 'www.brianliou.com'
+      <<: *developer
 
     - first_name: 'Alton'
       last_name: 'Zheng'

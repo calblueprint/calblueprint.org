@@ -22,3 +22,6 @@ config/application.yml
 
 # Ignore logfile
 logfile
+
+# RubyMine 
+.idea/

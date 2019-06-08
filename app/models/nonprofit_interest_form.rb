@@ -14,6 +14,7 @@ class NonprofitInterestForm < ActiveRecord::Base
   validates :role, presence: true
   validates :agree_to_terms, presence: true
   validates :office, presence: true
+  validates :website, presence: true
 
   CATEGORIES = [
     "Web application",

@@ -32,6 +32,8 @@ en:
           Please give a brief description of your organization.
         agree_to_terms: >
           I have read and understood Blueprint's Terms of Work for Nonprofit Partners.
+        referrer: >
+          How did you hear about Blueprint?
 
       nonprofit_application:
         purpose: What is your organization’s mission statement?

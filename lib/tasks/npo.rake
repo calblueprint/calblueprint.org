@@ -46,6 +46,7 @@ namespace :npo do
         end
 
         airtable_npo["Description"] = form.org_description
+        airtable_npo["Referrer"] = form.referrer
 
         if form.office_lat
           coords = [form.office_lat, form.office_lng]

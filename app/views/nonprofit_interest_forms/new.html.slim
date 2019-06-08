@@ -34,6 +34,7 @@
       = f.input :office_lng, input_html: { id: "lng" }
     = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
     = f.input :org_description
+    = f.input :referrer
 
     .form-btn-container.marginBot-md
       = f.button :submit, 'Submit', class: "bp-btn"

@@ -19,7 +19,7 @@ section.static-page-hero.npo-apply-hero
             = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white--clear btn-lg"
           - else
             = link_to "Nonprofit Login", new_nonprofit_session_path, class: "bp-btn btn-white btn-lg"
-            p.hero-desc.marginTop-md Our Statement of Interest deadline has passed, and we are no longer accepting new applications. If you have already submitted your Statement of Interest, you can login to view your application.
+            p.hero-desc.marginTop-md Our Interest Form deadline has passed, and we are no longer accepting new applications. If you have already submitted your Interest Form, you can login to view your application.
 
       - else
         - if @settings.cs169_app_open
@@ -83,23 +83,14 @@ section.application-process-section#application-process
         .num-col
           .timeline-num 02
         .text-col
-          .timeline-row-title Statement of Interest Due
-          .timeline-row-date July 25
-          .timeline-row-description
-            = t ".application_timeline.first_round"
-
-      .timeline-row
-        .num-col
-          .timeline-num 03
-        .text-col
           .timeline-row-title Project Proposal Due
-          .timeline-row-date July 30
+          .timeline-row-date July 10
           .timeline-row-description
             = raw t ".application_timeline.second_round"
 
       .timeline-row
         .num-col
-          .timeline-num 04
+          .timeline-num 03
         .text-col
           .timeline-row-title Phone Screen Interviews
           .timeline-row-date July 22 - August 8
@@ -108,7 +99,7 @@ section.application-process-section#application-process
 
       .timeline-row
         .num-col
-          .timeline-num 05
+          .timeline-num 04
         .text-col
           .timeline-row-title Final Interviews
           .timeline-row-date August 8 - 19
@@ -117,7 +108,7 @@ section.application-process-section#application-process
 
       .timeline-row
         .num-col
-          .timeline-num 06
+          .timeline-num 05
         .text-col
           .timeline-row-title Decisions Released
           .timeline-row-date August 20

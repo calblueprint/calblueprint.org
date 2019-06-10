@@ -9,21 +9,21 @@
     = link_to "Terms of Work for Nonprofit Partners", nonprofit_applications_contract_path, target: "_blank"
     '  before applying.
   .marginBot-lg class=('npo-application-section--disabled' if !@statement_open)
-    h2.npo-application-subheader Phase 1: Statement of Interest
+    h2.npo-application-subheader Phase 1: Interest Form
     - if !@statement_open && !@interest_form
       p.npo-application-notify.static-page-desc
         span style="font-weight: 700; display: block" This part of the application is closed. Please check back next year!
-    p.static-page-desc.marginBot-sm The short Statement of Interest form helps us get to know your organization and its needs. If your organization might be a good fit for Blueprint, we'll follow up to ask for a Project Proposal.
+    p.static-page-desc.marginBot-sm The short Interest Form helps us get to know your organization and its needs. If your organization might be a good fit for Blueprint, we'll follow up to ask for a Project Proposal.
     - if @interest_form
-      p We've received your Statement of Interest! We strongly encourage you to complete Phase 2, the project proposal, within a week.
+      p We've received your Interest Form submission! We strongly encourage you to complete Phase 2, the project proposal, within a week.
     - else
-      = link_to "Begin Statement of Interest", new_nonprofit_interest_form_path, class: "bp-btn"
+      = link_to "Begin Interest Form", new_nonprofit_interest_form_path, class: "bp-btn"
   .marginBot-lg class=('npo-application-section--disabled' if !@proposal_open)
     h2.npo-application-subheader.marginBot-sm Phase 2: Project Proposals
     - if !@proposal_open
       p.npo-application-notify.static-page-desc
         span style="font-weight: 700; display: block" This part of the application is not available to you just yet!
-        '  We will allow you to submit a project proposal after a team member has reviewed your Statement of Interest. Please 
+        '  We will allow you to submit a project proposal after a team member has reviewed your Interest Form. Please 
         = link_to "contact us", new_contact_form_path
         '  if we have not notified you of an application update within a week of submitting.
     - if @num_draft == 0 && @num_submitted == 0

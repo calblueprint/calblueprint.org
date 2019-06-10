@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_22_065124) do
+ActiveRecord::Schema.define(version: 2019_06_08_090930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -179,6 +179,7 @@ ActiveRecord::Schema.define(version: 2019_01_22_065124) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "office"
+    t.string "referrer"
   end
 
   create_table "nonprofits", id: :serial, force: :cascade do |t|
@@ -225,12 +226,6 @@ ActiveRecord::Schema.define(version: 2019_01_22_065124) do
     t.integer "file_size_limit", default: 10
     t.integer "input_type", default: 0
     t.index ["comparison_category_id"], name: "index_questions_on_comparison_category_id"
-  end
-
-  create_table "questions_semesters", id: false, force: :cascade do |t|
-    t.bigint "question_id", null: false
-    t.bigint "semester_id", null: false
-    t.integer "sort_order"
   end
 
   create_table "responses", force: :cascade do |t|

@@ -56,8 +56,7 @@ en:
           this audience to be?
         why: Why is this project important to your organization?
         technical_requirements: >
-          Does your project have any specific technical requirements (such as Salesforce,
-          or a strong preference to use Django)?
+          Does your project have any specific technical requirements?
         client_status: Are you a returning CS169 customer from past semesters?
 
     hints:
@@ -67,6 +66,8 @@ en:
           Please be sure to review these guidelines to confirm if your project qualifies for CS169.
         devices: Check all that apply.
         short_summary: 255 characters max
+        technical_requirements: Examples include security concerns or a strong preference for a particular programming language or library. 
+          Don't worry if you don't have any or aren't sure - we'll help you decide what's best for your project!
       nonprofit_interest_form:
         agree_to_terms: >
           Please read this carefully to ensure that Blueprint's work is a good fit for your needs

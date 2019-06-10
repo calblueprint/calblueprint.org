@@ -48,7 +48,7 @@ class NonprofitInterestFormsController < ApplicationController
     # end
 
     if @nonprofit_interest_form.save
-      redirect_to nonprofit_applications_path, notice: 'Your Statement of Interest was received!'
+      redirect_to nonprofit_applications_path, notice: 'Your Interest Form submission was received!'
     else
       render :new
     end

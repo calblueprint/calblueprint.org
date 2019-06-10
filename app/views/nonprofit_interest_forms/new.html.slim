@@ -4,11 +4,11 @@
 
 .npo-application-edit-container.container
   = link_to "Back to dashboard", nonprofit_applications_path
-  h1.npo-application-header.marginBot-md Statement of Interest
+  h1.npo-application-header.marginBot-md Interest Form
   p.static-page-desc
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
-    |  The Statement of Interest is due on
+    |  The Interest Form is due on
     strong.apply-page-due< July 10th, 2019, 11:59pm,
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path

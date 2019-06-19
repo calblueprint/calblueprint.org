@@ -5,7 +5,7 @@ namespace :npo do
   task import: :environment do
     gmaps = GoogleMapsService::Client.new(key: ENV["GOOGLE_MAPS_API"])
     settings = Settings.instance
-    semester_str = "#{settings.current_semester.season.capitalize} #{settings.current_semester.year}"
+    semester_str = "#{settings.current_semester.season.capitalize} #{settings.current_semester.year} Applications"
 
     AirtableNonprofit = Airrecord.table(ENV["AIRTABLE_API"], ENV["AIRTABLE_NPO_TABLE"], semester_str)
 

@@ -66,7 +66,7 @@ namespace :npo do
       if !app.nil? && airtable_npo["Project Summary"].nil?
         # App was completed, but phase 2 hasn't been updated in Airtable yet
         airtable_npo["Project Summary"] = app.short_summary
-        airtable_npo["Project Current Resources"} = app.current_resources
+        airtable_npo["Project Current Resources"] = app.current_resources
         airtable_npo["Project Key Features"] = app.key_features
         airtable_npo["Project Goals and Audience"] = app.goals
         airtable_npo["Project Future Plans"] = app.future_plans

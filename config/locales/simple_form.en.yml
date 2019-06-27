@@ -45,11 +45,13 @@ en:
           organization’s key accomplishments.
         date_established: When was your organization established?
         legal: Is your organization a 501(c)(3)?
-        short_summary: Give us a two sentence summary of your project.
-        goals: What are the goals of this project, and what problems does it address?
+        short_summary: To begin, please give us a two sentence summary of your project.
+        goals: 
+          What are the goals of this project, and what problems does it address? 
+          Who is affected by these problems?
         key_features: >
-          What are some of the key features of this project,
-          and how do they help achieve the goals you mentioned above?
+          What are some of the key features of a project that would solve this problem? 
+          Walk us through the flow of someone using this project.
         devices: >
           On what devices do you expect it to work?
         target_audience: >
@@ -59,6 +61,12 @@ en:
         technical_requirements: >
           Does your project have any specific technical requirements?
         client_status: Are you a returning CS169 customer from past semesters?
+        current_resources:
+          How have you tried to address this problem using your current resources? 
+          What is the current state of your technology, if any?
+        future_plans: 
+          If Blueprint develops and hands off this project to you, 
+          what resources and plans do you have for maintaining the project?
 
     hints:
       nonprofit_application:

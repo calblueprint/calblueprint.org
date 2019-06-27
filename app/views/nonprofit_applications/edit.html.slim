@@ -31,19 +31,16 @@
         checked: @default_check_cs169
 
     = f.input :client_status, collection: NonprofitApplication::CLIENT_STATUSES, as: :radio_buttons
-    = f.input :purpose
-    = f.input :history
-    .date-dropdown
-      = f.input :date_established, start_year: 1900, end_year: Date.today.year
-    .new-line
-    = f.input :legal, as: :radio_buttons
     = f.input :short_summary
-    = f.input :goals
+
+    p.static-page-desc
+      | Over the phone we talked about some of the biggest problems your organization 
+      | is having in achieving more impact. We'd like you to elaborate on them in this next section.
+    
+    = f.input :current_resources
     = f.input :key_features
-    = f.input :devices, collection: NonprofitApplication::POSSIBLE_DEVICES, as: :check_boxes
-    = f.input :target_audience
-    = f.input :why
-    = f.input :technical_requirements
+    = f.input :goals
+    = f.input :future_plans
 
     .form-btn-container
       button#save_button.bp-btn.btn-dark data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}"

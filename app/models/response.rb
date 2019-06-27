@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: responses
+#
+#  id                     :bigint(8)        not null, primary key
+#  answer                 :text
+#  question_id            :bigint(8)
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  file_file_name         :string
+#  file_content_type      :string
+#  file_file_size         :integer
+#  file_updated_at        :datetime
+#  student_application_id :bigint(8)
+#
+
 class Response < ActiveRecord::Base
   belongs_to :question
 

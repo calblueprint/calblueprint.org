@@ -20,12 +20,16 @@
         ​​In the meantime, you can start your application, which is due on July 10.
     - else
       = link_to "Begin Interest Form", new_nonprofit_interest_form_path, class: "bp-btn"
-  .marginBot-lg class=('npo-application-section--disabled' if !@proposal_open)
-    h2.npo-application-subheader.marginBot-sm : Application
-    - if !@proposal_open
+  .marginBot-lg class=('npo-application-section--disabled' if !@interest_form || !@proposal_open)
+    h2.npo-application-subheader Application
+    - if !@interest_form
       p.npo-application-notify.static-page-desc
-        span style="font-weight: 700; display: block" This part of the application is not available to you just yet!
-        '  We will allow you to submit an application you have finished filling out the Interest Form from the previous step.
+          span style="font-weight: 700; display: block" You must fill out the Interest Form from the previous step first.
+    - elsif !@proposal_open
+      p.npo-application-notify.static-page-desc
+        span style="font-weight: 700; display: block" This part of the application is not available to you just yet
+        '  We will allow you to submit an application after completing a short phone call with us. If we don't contact you within a couple days,
+        ' feel free to email us at team@calblueprint.org!
     - if @num_draft == 0 && @num_submitted == 0
       p.static-page-desc You don't have any applications.
     - else

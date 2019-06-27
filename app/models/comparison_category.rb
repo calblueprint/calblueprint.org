@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: comparison_categories
+#
+#  id                 :bigint(8)        not null, primary key
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  weight             :decimal(, )
+#  comparison_bonus   :decimal(, )
+#  comparison_penalty :decimal(, )
+#  name               :string
+#
+
 class ComparisonCategory < ActiveRecord::Base
   has_many :comparison_category_questions
   has_many :questions, through: :comparison_category_questions

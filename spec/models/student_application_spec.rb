@@ -32,6 +32,9 @@
 #  design_portfolio_file_size    :integer
 #  design_portfolio_updated_at   :datetime
 #  add_to_newsletter             :boolean          default(TRUE)
+#  hardest_achievement           :text
+#  commitments                   :text
+#  heard_from                    :string
 #
 
 require 'rails_helper'

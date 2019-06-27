@@ -2,12 +2,13 @@
 #
 # Table name: comparisons
 #
-#  id         :integer          not null, primary key
-#  created_at :datetime
-#  updated_at :datetime
-#  winner_id  :integer          not null
-#  loser_id   :integer          not null
-#  admin_id   :integer          not null
+#  id                     :integer          not null, primary key
+#  created_at             :datetime
+#  updated_at             :datetime
+#  winner_id              :integer          not null
+#  loser_id               :integer          not null
+#  admin_id               :integer          not null
+#  comparison_category_id :bigint(8)
 #
 
 class Comparison < ActiveRecord::Base

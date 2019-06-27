@@ -50,7 +50,7 @@ class NonprofitApplicationsController < ApplicationController
     @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
     @interest_form = current_nonprofit.current_interest_form.first
     @statement_open = @settings.npo_statement_of_interest_open
-    @proposal_open = @interest_form #@settings.npo_project_proposal_open
+    @proposal_open = completed_phone_screen
 
     @num_draft = 0
     @num_submitted = 0
@@ -97,5 +97,24 @@ class NonprofitApplicationsController < ApplicationController
   def verify_app_open
     return if @settings.npo_app_open || @settings.cs169_app_open
     redirect_to nonprofits_apply_path, flash: { error: t('nonprofit_applications.closed') }
+  end
+
+  def completed_phone_screen
+    if current_nonprofit.nil?
+      return false
+    end
+
+    # Find the current NPO's Airtable record by email address
+    settings = Settings.instance
+    semester_str = "#{settings.current_semester.season.capitalize} #{settings.current_semester.year} Applications"
+    airtable_npos = Airrecord.table(ENV["AIRTABLE_API"], ENV["AIRTABLE_NPO_TABLE"], semester_str).all
+    emails = airtable_npos.map { |npo| npo[:email] }
+    pos = emails.index(current_nonprofit.email)
+
+    if pos.nil?
+      false
+    else
+      airtable_npos[pos]["Unlocked Phase 2"]
+    end
   end
 end

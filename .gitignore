@@ -25,3 +25,5 @@ logfile
 
 # RubyMine 
 .idea/
+
+.env

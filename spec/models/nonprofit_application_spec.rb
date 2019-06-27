@@ -22,6 +22,8 @@
 #  technical_requirements :text
 #  state                  :string           default("draft"), not null
 #  submitted_at           :datetime
+#  current_resources      :text
+#  future_plans           :text
 #
 
 require 'rails_helper'

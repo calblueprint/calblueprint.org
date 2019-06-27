@@ -41,18 +41,12 @@ class NonprofitApplication < ActiveRecord::Base
   validates :cs169_pool, inclusion: [true, false], if: -> (na) { na.submitted? }
   validates :nonprofit_id, presence: true
   validates :semester_id, presence: true
-  validates :purpose, presence: true, if: -> (na) { na.submitted? }
-  validates :history, presence: true, if: -> (na) { na.submitted? }
-  validates :date_established, presence: true, if: -> (na) { na.submitted? }
-  # legal is validated by database
   validates :short_summary, presence: true, if: -> (na) { na.submitted? }
   validates_length_of :short_summary, maximum: 255, if: -> (na) { na.submitted? }
-  validates :goals, presence: true, if: -> (na) { na.submitted? }
+  validates :current_resources, presence: true, if: -> (na) { na.submitted? }
   validates :key_features, presence: true, if: -> (na) { na.submitted? }
-  validates :devices, presence: true, if: -> (na) { na.submitted? }
-  validates :target_audience, presence: true, if: -> (na) { na.submitted? }
-  validates :why, presence: true, if: -> (na) { na.submitted? }
-  validates :technical_requirements, presence: true, if: -> (na) { na.submitted? }
+  validates :goals, presence: true, if: -> (na) { na.submitted? }
+  validates :future_plans, presence: true, if: -> (na) { na.submitted? }
 
   CLIENT_STATUSES = ["Yes, my current app works but I want to add more features",
                      "Yes, but the app is not currently in a usable state",

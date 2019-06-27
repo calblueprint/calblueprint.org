@@ -33,6 +33,7 @@ namespace :npo do
 
       form = db_forms.where(nonprofit: npo).first
       if !form.nil? && airtable_npo["Phone Number"].nil?
+        # NPO filled out phase 1, but hasn't been updated in Airtable yet
         airtable_npo["Phone Number"] = form.phone
         airtable_npo["Contact Name"] = form.contact_name
         airtable_npo["Contact Role"] = form.role
@@ -62,17 +63,14 @@ namespace :npo do
       end
 
       app = db_apps.where(nonprofit: npo).first
-      if !app.nil? && airtable_npo["Founded"].nil?
-        airtable_npo["Mission Statement"] = app.purpose
-        airtable_npo["History and Accomplishments"] = app.history
-        airtable_npo["Founded"] = app.date_established
+      if !app.nil? && airtable_npo["Project Summary"].nil?
+        # App was completed, but phase 2 hasn't been updated in Airtable yet
         airtable_npo["Project Summary"] = app.short_summary
-        airtable_npo["Project Goals"] = app.goals
+        airtable_npo["Project Current Resources"} = app.current_resources
         airtable_npo["Project Key Features"] = app.key_features
-        airtable_npo["Project Target Devices"] = app.devices.select { |d| d != "" }
-        airtable_npo["Project Target Audience"] = app.target_audience
-        airtable_npo["Project Importance"] = app.why
-        airtable_npo["Project Technical Requirements"] = app.technical_requirements
+        airtable_npo["Project Goals and Audience"] = app.goals
+        airtable_npo["Project Future Plans"] = app.future_plans
+
         airtable_npo["Application Phase"] = "Completed Phase 2"
         airtable_npo.save
       end

@@ -1,5 +1,6 @@
 = render "navbar"
 = render "with_mailchimp_js"
+= render "with_hubspot_js"
 / = render "with_drift_js"
 
 .npo-application-edit-container.container
@@ -34,9 +35,9 @@
     = f.input :short_summary
 
     p.static-page-desc
-      | Over the phone we talked about some of the biggest problems your organization 
+      | Over the phone we talked about some of the biggest problems your organization
       | is having in achieving more impact. We'd like you to elaborate on them in this next section.
-    
+
     = f.input :current_resources
     = f.input :key_features
     = f.input :goals

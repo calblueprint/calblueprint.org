@@ -22,6 +22,7 @@
 #= require shared/mailchimp
 #= require shared/heap
 #= require shared/static_hero_nav
+#= require shared/fullstory
 #= require bootstrap/dropdown
 #=
 #= require_tree ./pages

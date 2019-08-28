@@ -3,12 +3,12 @@
 .container.form-container
   .apply-page-header.marginBot-lg
     h1 Student Application
-    h2 Developer Position
+    h2 Developer/Designer Position
 
   p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
-    strong.apply-page-due< Friday, February 1st at 11:59 pm.
+    strong.apply-page-due< Friday, September 6th at 11:59 pm.
 
   p.static-page-desc
     | If you have any questions, please contact us
@@ -26,16 +26,16 @@
           = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
         h3.apply-page-more-questions Short Answer Questions
-        p.static-page-desc Please keep your responses to these short answer questions to 250 words or fewer.
+        p.static-page-desc These questions help us get to know you and your connection to our mission!
 
         -  @student_application.responses.select {|r| r.question.question_category == "short_answer"}.each do |r|
           = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
-        h3.apply-page-more-questions More Questions
-        p.static-page-desc Feel free to copy and paste from your resume for the questions below.
-
-        -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
-          = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
+        - if @student_application.responses.select {|r| r.question.question_category == "more_questions"}.count > 0
+          h3.apply-page-more-questions More Questions
+          p.static-page-desc Feel free to copy and paste from your resume for the questions below.
+          -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
+            = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
       div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
@@ -45,13 +45,16 @@ javascript:
   $('.student_application_responses_why_no_retreat').hide();
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_available_for_gm').is(':checked'));
 
+  const devOption = $('#student_application_responses_application_type_developer');
+  const designOption = $('#student_application_responses_application_type_designer'); 
+  const combinedOption = $('#student_application_responses_application_type_developer_and_designer');
   $BPGamesTrue = $("#student_application_responses_available_for_bp_games_yes");
   $BPGamesFalse = $("#student_application_responses_available_for_bp_games_no");
 
   function toggleBPGames() {
-    if ($BPGamesTrue.prop("checked")) {
+    if ($BPGamesTrue.prop("checked") || designOption.prop("checked")) {
       $('.student_application_responses_why_no_bp_games').hide();
-    } else {
+    } else if ($BPGamesFalse.prop("checked")) {
       $('.student_application_responses_why_no_bp_games').show();
     }
   }
@@ -59,7 +62,21 @@ javascript:
   $BPGamesTrue.click(toggleBPGames);
   $BPGamesFalse.click(toggleBPGames);
 
-
+  devOption.click(function() {
+    $('.student_application_responses_design_portfolio').hide();
+    $('.student_application_responses_available_for_bp_games').show();
+    toggleBPGames();
+  });
+  designOption.click(function() {
+    $('.student_application_responses_design_portfolio').show();
+    $('.student_application_responses_available_for_bp_games').hide();
+    toggleBPGames();
+  });
+  combinedOption.click(function() {
+    $('.student_application_responses_design_portfolio').show();
+    $('.student_application_responses_available_for_bp_games').show();
+    toggleBPGames();
+  });
 
 
   $retreatTrue = $("#student_application_responses_available_for_retreat_yes");

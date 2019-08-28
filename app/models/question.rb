@@ -38,4 +38,9 @@ class Question < ActiveRecord::Base
     QuestionSemester.where(semester: semester).sort_by(&:question_order).map {|qs| qs.question }
   end
 
+  def hint
+    "" if self[:hint].nil?
+    self[:hint]
+  end
+
 end

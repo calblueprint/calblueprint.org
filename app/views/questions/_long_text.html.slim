@@ -1,1 +1,1 @@
-= form.input question.tag, label: question.title, input_html: {value: response.answer}, hint: question.hint, placeholder: question.placeholder, required: question.required, as: :text
+= form.input question.tag, label: question.title, input_html: {value: response.answer}, hint: simple_format(question.hint).html_safe, placeholder: question.placeholder, required: question.required, as: :text

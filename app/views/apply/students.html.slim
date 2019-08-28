@@ -9,9 +9,9 @@ section.static-page-hero.student-apply-hero
       = t ".subtitle"
     .static-page-hero-btn-container.marginTop-xl
       - if @settings.student_app_open
-        = link_to "Apply Student Developer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
+        = link_to "Apply as a Developer/Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
       - if @settings.external_app_open
-        = link_to "Apply External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs"
+        = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs"
       - if !@settings.student_app_open && !@settings.external_app_open
         p.hero-desc = t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
@@ -27,7 +27,7 @@ section.static-page-hero.student-apply-hero
           | FAQs
 
 section.application-process-section#application-process
-  .container
+  .container.marginBot-lg
     h2.static-page-header.marginBot-xxl Developer Application Process
     .student-timeline
 
@@ -61,17 +61,62 @@ section.application-process-section#application-process
         .num-col
           .timeline-num 03
         .text-col
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+
+      .timeline-row
+        .num-col
+          .timeline-num 04
+        .text-col
           .timeline-row-title Build with Blueprint
           .timeline-row-date = t ".application_timeline.tech_round_date"
           .timeline-row-description = t ".application_timeline.tech_round"
 
       .timeline-row
         .num-col
-          .timeline-num 04
+          .timeline-num 05
         .text-col
           .timeline-row-title Blueprint Games
           .timeline-row-date = t ".application_timeline.bp_games_date"
           .timeline-row-description = t ".application_timeline.bp_games"
+
+  .container
+    h2.static-page-header.marginBot-xxl Designer Application Process
+    .student-timeline
+      .timeline-row
+        .num-col
+          .timeline-num 01
+        .text-col
+          .timeline-row-title Applications Due
+          .timeline-row-date = t ".application_timeline.application_date"
+          .timeline-row-description = raw t ".application_timeline.designer_application"
+          .timeline-row-btn
+            - if @settings.student_app_open
+              = link_to "Designer Application", new_student_application_path, class: "bp-btn"
+            - else
+              .timeline-row-notice = raw t ".application_timeline.application_notice"
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
+          .timeline-row-title Designer Interviews
+          .timeline-row-date = t ".application_timeline.designer_interviews_date"
+          .timeline-row-description = raw t ".application_timeline.designer_interviews" 
+      .timeline-row
+        .num-col
+          .timeline-num 03
+        .text-col
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+      .timeline-row
+        .num-col
+          .timeline-num 04
+        .text-col
+          .timeline-row-title Design Challenge due
+          .timeline-row-date = t ".application_timeline.designer_challenge_date"
+          .timeline-row-description = t ".application_timeline.designer_challenge"
 
 section.application-decision-criteria-section#decision-criteria
   .container

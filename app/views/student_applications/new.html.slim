@@ -32,8 +32,7 @@
           = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
         - if @student_application.responses.select {|r| r.question.question_category == "more_questions"}.count > 0
-          h3.apply-page-more-questions More Questions
-          p.static-page-desc Feel free to copy and paste from your resume for the questions below.
+          h3.apply-page-more-questions Additional Info
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
@@ -61,6 +60,9 @@ javascript:
 
   $BPGamesTrue.click(toggleBPGames);
   $BPGamesFalse.click(toggleBPGames);
+
+  $('.student_application_responses_design_portfolio').hide();
+  $('.student_application_responses_available_for_bp_games').hide();
 
   devOption.click(function() {
     $('.student_application_responses_design_portfolio').hide();

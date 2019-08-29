@@ -32,17 +32,22 @@ fa19:
     - phone
     - year
     - applied_before
-    - resume
+
     - commitments
     - available_for_gm
+  
     - application_type
-    - design_portfolio
     - available_for_bp_games
-    - why_no_bp_games
-    - available_for_retreat
-    - why_no_retreat
+    - design_portfolio
+
     - mission_first
     - always_innovate
     - be_humble
+
+    - resume
+    - why_no_bp_games
+    - available_for_retreat
+    - why_no_retreat
+
     - heard_from
     - add_to_newsletter

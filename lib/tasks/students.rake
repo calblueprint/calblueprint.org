@@ -17,20 +17,19 @@ namespace :students do
         "Phone Number": app.response_to("phone"),
         "Year": app.response_to("year"),
         "Applied before?": app.response_to("applied_before"),
-        "Heard about Blueprint from": app.response_to("heard_from"),
+        "Time commitments": app.response_to("commitments"),
+        "Application type": app.response_to("application_type"),
         "Can attend BP Games?": app.response_to("available_for_bp_games"),
+        "Why no BP Games?": app.response_to("why_no_bp_games"),
         "Can attend retreat?": app.response_to("available_for_retreat"),
         "Why no retreat?": app.response_to("why_no_retreat"),
-        "Why no BP Games?": app.response_to("why_no_bp_games"),
-        "Time commitments": app.response_to("commitments"),
-        "Identity/Experiences": app.response_to("unique_experiences"),
-        "Hardest Achievement": app.response_to("hardest_achievement"),
-        "Past work experience/Extracurriculars": app.response_to("experience"),
-        "Personal Projects": app.response_to("projects"),
-        "Service Experience": app.response_to("service"),
+        "Passionate cause": app.response_to("mission_first"),
+        "Built/learned from scratch": app.response_to("always_innovate"),
+        "Personal growth": app.response_to("be_humble"),
+        "Heard about Blueprint from": app.response_to("heard_from"),
+        "Add to newsletter?": app.response_to("add_to_newsletter"),
         "Total Wins": app.wins_count,
         "Total Losses": app.losses_count,
-        "Add to newsletter?": app.response_to("add_to_newsletter")
       }
 
       ComparisonCategory.all.each do |category|

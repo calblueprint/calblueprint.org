@@ -120,7 +120,7 @@ resume:
   title: Resume (Remove all identifying information before submitting)
   hint:
     "Please remove all identifying information (name, email, phone number) from your resume, and attach it as a PDF (1 MB size limit).\n\n
-    In an effort to <a href=\"https://alliesatwork.com/resume-screening/\" target=\"_blank\">reduce our biases</a> during this
+    In an effort to reduce our biases during this
     part of the application process, all applications are reviewed without identifying information. Please help us by doing
     the same for your resume!"
   question_category: more_questions

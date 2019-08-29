@@ -40,7 +40,8 @@ section.application-process-section#application-process
           .timeline-row-description = raw t ".application_timeline.infosession"
           .timeline-row-btn
             - if SocialMediaUrls::INFOSESSION
-              = link_to "Infosession - January 30", "https://www.facebook.com/events/2187575501559158", class: "bp-btn marginRight-xxs", target: "_blank"
+              = link_to "Infosession 1 (Sep 3)", "https://www.facebook.com/events/377972689556632/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              = link_to "Infosession 2 (Sep 4)", "https://www.facebook.com/events/756476104772962/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
             - if not SocialMediaUrls::INFOSESSION
               .timeline-row-notice = t ".application_timeline.infosession_notice"
 
@@ -88,6 +89,19 @@ section.application-process-section#application-process
         .num-col
           .timeline-num 01
         .text-col
+          .timeline-row-title Infosessions
+          .timeline-row-date = t ".application_timeline.infosession_date"
+          .timeline-row-description = raw t ".application_timeline.infosession"
+          .timeline-row-btn
+            - if SocialMediaUrls::INFOSESSION
+              = link_to "Infosession 1 (Sep 3)", "https://www.facebook.com/events/377972689556632/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              = link_to "Infosession 2 (Sep 4)", "https://www.facebook.com/events/756476104772962/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+            - if not SocialMediaUrls::INFOSESSION
+              .timeline-row-notice = t ".application_timeline.infosession_notice"
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
           .timeline-row-title Applications Due
           .timeline-row-date = t ".application_timeline.application_date"
           .timeline-row-description = raw t ".application_timeline.designer_application"
@@ -98,21 +112,21 @@ section.application-process-section#application-process
               .timeline-row-notice = raw t ".application_timeline.application_notice"
       .timeline-row
         .num-col
-          .timeline-num 02
+          .timeline-num 03
         .text-col
           .timeline-row-title Designer Interviews
           .timeline-row-date = t ".application_timeline.designer_interviews_date"
           .timeline-row-description = raw t ".application_timeline.designer_interviews" 
       .timeline-row
         .num-col
-          .timeline-num 03
+          .timeline-num 04
         .text-col
           .timeline-row-title Meet the Club
           .timeline-row-date = t ".application_timeline.meet_the_club_date"
           .timeline-row-description = raw t ".application_timeline.meet_the_club"
       .timeline-row
         .num-col
-          .timeline-num 04
+          .timeline-num 05
         .text-col
           .timeline-row-title Design Challenge due
           .timeline-row-date = t ".application_timeline.designer_challenge_date"

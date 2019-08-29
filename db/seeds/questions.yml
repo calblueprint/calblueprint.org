@@ -19,7 +19,7 @@ phone:
   title: Phone Number
   question_category: general
   question_type: short_text
-  placeholder: (626) 123-4567
+  placeholder: (123) 456-7890
   input_type: phone
 
 email:
@@ -34,7 +34,7 @@ year:
   title: What year in school are you?
   question_category: general
   question_type: multiple_choice_radio
-  choices: Freshman,Sophomore,Junior,Senior,Graduate
+  choices: 1st,2nd,3rd,4th,5th+
   hint:
 
 applied_before:
@@ -43,54 +43,7 @@ applied_before:
   question_type: multiple_choice_radio
   choices: Yes,No
 
-heard_from:
-  title: How did you first hear about Blueprint?
-  hint: Please let us know how you first heard about Blueprint, whether it’s through social media, through a friend, through classes, through Sproul, etc.
-  question_category: general
-  question_type: short_text
-
-resume:
-  title: Resume
-  hint: Please attach the most recent copy of your resume as a PDF (1 MB size limit).
-  question_category: general
-  question_type: attachment
-  file_size_limit: 1 #MB
-
-design_portfolio:
-  title: Design Portfolio (Optional)
-  hint: Attach your design portfolio if you want your design talent to be considered as part of your application! If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
-  question_category: general
-  question_type: attachment
-  required: false
-  file_size_limit: 10 #MB
-
-available_for_bp_games:
-  title: Will you be able to attend BP Games?
-  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on February 9, from 2-5 PM.
-  question_category: general
-  question_type: multiple_choice_radio
-  choices: Yes,No
-
-available_for_retreat:
-  title: Will you be able to attend Blueprint Retreat?
-  hint: Retreat will be the evening of February 15 to the morning of February 17.
-  question_category: general
-  question_type: multiple_choice_radio
-  choices: Yes,No
-
-why_no_bp_games:
-  title: Why are you unable to attend BP Games?
-  hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
-  question_category: general
-  question_type: long_text
-  required: false
-
-why_no_retreat:
-  title: Why are you unable to attend retreat?
-  hint: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
-  question_category: general
-  question_type: long_text
-  required: false
+# Time Commitments
 
 commitments:
   title: Please describe your time commitments for this semester.
@@ -99,7 +52,116 @@ commitments:
   question_category: general
   question_type: long_text
 
-# Short Answer Questions
+available_for_gm:
+  title: I acknowledge that I can meet the time commitment of working on a Blueprint team!
+  hint:
+    "Blueprint teams meet twice a week for 1-2 hours and have about 10-15 hours of work
+    outside of meetings. Blueprint General Meetings are mandatory and are held on Mondays at
+    8 PM."
+  question_category: general
+  question_type: checkbox
+
+# Designer/Dev application type
+
+application_type:
+  title: Are you applying as a developer or as a designer (or both)?
+  hint: "You may apply to both positions, but you must make a decision for which
+    application to continue by September 8 at 11:59 PM.\n\n
+    Interview requests for designers will be sent out on September 7, and initial
+    application results for developers will be sent out on September 8 at 10 PM.
+    If you applied to both and we do not hear from you, we will assume you will be
+    continuing with your developer application."
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Developer,Designer,Developer and designer
+
+available_for_bp_games:
+  title: Will you be able to attend BP Games?
+  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on September 14, from 2-5 PM.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Yes,No
+  required: false
+
+design_portfolio:
+  title: Design Portfolio
+  hint: Attach your design portfolio. If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
+  question_category: general
+  question_type: attachment
+  required: false
+  file_size_limit: 10 #MB
+
+# Short answer questions
+
+mission_first:
+  title: What is a cause you're passionate about? Describe your experiences and perspectives from this cause, and how this led you to apply to Blueprint.
+  hint: Please limit your response to 200 words.
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+always_innovate:
+  title: Tell us about a project you've built or something you've learned from scratch. What inspired you to do this, and what was the greatest challenge you overcame along the way?
+  hint: Please limit your response to 200 words.
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+be_humble:
+  title: In what ways are you looking to grow personally right now?
+  hint: Please limit your response to 100 words.
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 100
+
+# Additional Info
+
+resume:
+  title: Resume (Remove all identifying information before submitting)
+  hint:
+    "Please remove all identifying information (name, email, phone number) from your resume, and attach it as a PDF (1 MB size limit).\n\n
+    In an effort to reduce our biases during this
+    part of the application process, all applications are reviewed without identifying information. Please help us by doing
+    the same for your resume!"
+  question_category: more_questions
+  question_type: attachment
+  file_size_limit: 1 #MB
+
+available_for_retreat:
+  title: Will you be able to attend Blueprint Retreat?
+  hint: Retreat will be the evening of September 20 to the morning of September 22.
+  question_category: more_questions
+  question_type: multiple_choice_radio
+  choices: Yes,No
+
+why_no_bp_games:
+  title: Why are you unable to attend BP Games?
+  hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
+  question_category: more_questions
+  question_type: long_text
+  required: false
+
+why_no_retreat:
+  title: Why are you unable to attend retreat?
+  hint: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
+  question_category: more_questions
+  question_type: long_text
+  required: false
+
+heard_from:
+  title: How did you first hear about Blueprint?
+  hint: Please let us know how you first heard about Blueprint, whether it’s through social media, through a friend, through classes, through Sproul, etc.
+  question_category: more_questions
+  question_type: short_text
+
+add_to_newsletter:
+  title: Would you like to subscribe to Blueprint's newsletter for latest updates?
+  hint: This will not affect your candidacy in any way.
+  question_category: more_questions
+  question_type: multiple_choice_radio
+  choices: Yes,No
+
+# ===== OLD QUESTIONS =====
 
 unique_experiences:
   title: What unique experiences, skills, or other aspects of your identity have shaped your worldview, and how have those perspectives led you to want to be a part of Blueprint?
@@ -139,16 +201,3 @@ service:
   question_category: more_questions
   question_type: long_text
   word_limit: 250
-
-available_for_gm:
-  title: Will you be able to attend Blueprint General Meetings?
-  hint: Blueprint GM's are mandatory and are held on Mondays at 8 PM. Please select yes to acknowledge that you are available at this time.
-  question_category: more_questions
-  question_type: checkbox
-  choices: Yes
-
-add_to_newsletter:
-  title: Subscribe to Blueprint newsletter for latest updates!
-  question_category: more_questions
-  question_type: multiple_choice_radio
-  choices: Yes,No

@@ -2,8 +2,9 @@ en:
   apply:
     students:
       headline: For Students
-      subtitle: Joining Blueprint is the perfect way to use your skills to give back to the community.
-        We recruit for developer and chair positions on a regular basis, so check back frequently!
+      subtitle:
+        Joining Blueprint is the perfect way to use your skills to give back to the community.
+        We accept applications at the beginning of every semester.
       hook: >
         We are an organization of passionate UC Berkeley students
         who develop web and mobile applications for non-profit organizations.
@@ -12,24 +13,45 @@ en:
       applications_closed: >
         Applications are officially closed for this semester. We will be recruiting again next semester. Sign up to be notified when apps are ready!
       application_timeline:
-        infosession_date: Jan 30, 6:30-8PM
+        infosession_date: Sep 3, 7:00 PM and Sep 4, 7:00 PM
         infosession: >
           Come out and talk to us to learn more about Blueprint at our infosession.
-          The infosession will be on January 30th in HP Auditorium in Soda Hall.
+          Our infosessions will be on Sep 3rd and 4th, in HP Auditorium in Soda Hall.
         infosession_notice: Infosession Facebook event will be posted soon!
-        application_date: Feb 1 @ 11:59pm
+        application_date: Sep 6, 11:59 PM
         application: >
-          Fill out the online application. Our inital cuts will be based on
-          the application, so make sure to spend some time on the free response questions! Results will be emailed
-          out ASAP. <strong>The deadline is February 1st at 11:59 PM.</strong>
+          The application includes 3 short response questions to help us understand your connection to
+          Blueprint's mission. Decisions will be emailed after this round on Sep 8 by 10 PM.
+          <strong>The application is due on September 6th at 11:59 PM.</strong>
+        designer_application: >
+          The application includes 3 short response questions to help us understand your connection to
+          Blueprint's mission. Requests for design interviews will be sent out on Sep 7 by 10 PM.
+          <strong>The application is due on September 6th at 11:59 PM.</strong>
+        designer_interviews_date: Sep 8 - 9
+        designer_interviews: >
+          We will ask you to brainstorm with us and sketch out low-fidelity solutions in response to a
+          design challenge. After the interview, you will have a chance to refine your solutions and
+          submit a final, high-fidelity version on Friday, September 13. Invited candidates will receive
+          an interview sign-up link via email.
+        designer_challenge_date: Sep 13, 10:00 PM
+        designer_challenge: >
+          Building on top of your solution from the interview, this continuation will give you a chance to
+          showcase your abilities to iterate upon a sketch and create a more polished product. The prompt
+          will be introduced in the interview.
         application_notice: >
           Student applications will be open at the beginning of the semester. Follow our
           <a href="https://www.facebook.com/calblueprint" target="_blank">Facebook page</a> to stay updated!
-        tech_round_date: Feb 3 - 9
+        meet_the_club_date: Sep 11 - 12
+        meet_the_club: >
+          Meet the Club is an event for you to get to know
+          <a href="/about#team">our membership</a> in a casual setting! This event
+          is by invitation only.
+        tech_round_date: Sep 9 - 13
         tech_round: >
-          A challenging technical project to give you an opportunity to showcase how you learn and work through
-          difficult technical scenarios. The project will be emailed to invited candidates.
-        bp_games_date: Feb 9
+          A small exercise to give you a chance to showcase your technical resourcefulness and learning speed.
+          We'll provide office hours and support documents throughout this time! The project will be emailed to
+          invited candidates.
+        bp_games_date: Sep 14
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
           critically. This round is by invitation only. Location and time will be emailed to invited candidates.

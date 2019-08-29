@@ -22,3 +22,32 @@ sp19:
     - service
     - available_for_gm
     - add_to_newsletter
+
+fa19:
+  season: "fall"
+  year: "2019"
+  questions:
+    - name
+    - email
+    - phone
+    - year
+    - applied_before
+
+    - commitments
+    - available_for_gm
+  
+    - application_type
+    - available_for_bp_games
+    - design_portfolio
+
+    - mission_first
+    - always_innovate
+    - be_humble
+
+    - resume
+    - why_no_bp_games
+    - available_for_retreat
+    - why_no_retreat
+
+    - heard_from
+    - add_to_newsletter

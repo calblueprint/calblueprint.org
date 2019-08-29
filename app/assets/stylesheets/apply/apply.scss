@@ -49,17 +49,33 @@
   }
 
   .npo-panel {
-    .img-container { animation-delay: 300ms; }
-    h1 { animation-delay: 350ms; }
-    p { animation-delay: 400ms; }
-    .homepage-link { animation-delay: 450ms; }
+    .img-container {
+      animation-delay: 300ms;
+    }
+    h1 {
+      animation-delay: 350ms;
+    }
+    p {
+      animation-delay: 400ms;
+    }
+    .homepage-link {
+      animation-delay: 450ms;
+    }
   }
 
   .student-panel {
-    .img-container { animation-delay: 500ms; }
-    h1 { animation-delay: 550ms; }
-    p { animation-delay: 600ms; }
-    .homepage-link { animation-delay: 650ms; }
+    .img-container {
+      animation-delay: 500ms;
+    }
+    h1 {
+      animation-delay: 550ms;
+    }
+    p {
+      animation-delay: 600ms;
+    }
+    .homepage-link {
+      animation-delay: 650ms;
+    }
   }
 }
 
@@ -168,7 +184,7 @@ $timeline-num-width: 200px;
 
   &:after {
     background: $bp-blue-40;
-    content: '';
+    content: "";
     height: 100%;
     position: absolute;
     top: -20px;
@@ -262,7 +278,6 @@ $timeline-num-width: 200px;
   p {
     color: $dark-gray-70;
   }
-
 }
 
 .application-faqs-section {
@@ -281,7 +296,6 @@ $timeline-num-width: 200px;
     margin-bottom: 40px;
   }
 }
-
 
 .application-our-services {
   padding: 50px 0;
@@ -314,10 +328,10 @@ $timeline-num-width: 200px;
     margin-bottom: 10px;
   }
 
-   p {
+  p {
     color: $dark-gray-70;
     font-size: 18px;
-   }
+  }
 }
 
 .project-timeline-section {
@@ -393,7 +407,6 @@ $timeline-num-width: 200px;
     margin-bottom: 10px;
   }
 }
-
 
 // Nonprofits Page
 @media (max-width: $breakpt-mobile) {

@@ -51,27 +51,25 @@ class ExternalApplication < ActiveRecord::Base
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..1.megabytes }
 
-  validates_attachment :design_portfolio,
-                       content_type: { content_type: "application/pdf" },
-                       size: { in: 0..10.megabytes }
+  # validates_attachment :design_portfolio,
+  #                      content_type: { content_type: "application/pdf" },
+  #                      size: { in: 0..10.megabytes }
 
   validates_attachment_presence :resume
-  validate :design_portfolio_present
+  # validate :design_portfolio_present
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
 
-  # INFO: Removed some validations for Spring 2019 Changes
-
   validates :social_links, presence: true
-  # validates :personal_growth, presence: true
+  validates :personal_growth, presence: true
   validates :why_join, presence: true
   validates :phone, presence: true
   validates :year, presence: true
   validates :name, presence: true
   validates :commitments, presence: true
   validates :major, presence: true
-  validates :design_portfolio_link, url: true, allow_blank: true
+  # validates :design_portfolio_link, url: true, allow_blank: true
   # validate :at_least_one_position
 
   # validates_presence_of :design_experience, if: :design?

@@ -12,12 +12,12 @@ en:
     email:
       subject: "Submission of application was successful!"
       message: |
-       Hello %{student}!
+        Hello %{student}!
 
-       We have received your application. Thank you for your time, and we will get back to you by Wednesday, September 5th.
+        We have received your application. Thank you for your time, and we will get back to you by Wednesday, September 5th.
 
-       Best,
-       Blueprint Team
+        Best,
+        Blueprint Team
     closed: External applications are now closed for this semester. Thank you for your interest!
 
   simple_form:
@@ -25,8 +25,9 @@ en:
       external_application:
         year: What is your expected graduation year?
         phone: Phone Number
-        why_join: As Design Director, how do you feel you’d contribute to Blueprint’s design practices (projects) and Blueprint’s brand (marketing, visual identity, etc.)?
-        experience: Please list and briefly describe past work experience or extracurricular activities.
+        why_join: What is a cause you're passionate about? Describe your experiences and perspectives from this cause, and how this led you to apply to Blueprint.
+        experience: "Tell us about a project that you're proud of: something you've led or played an integral part in organizing. What inspired you to do this, and what was the greatest takeaway you learned from this experience?"
+        personal_growth: In what ways are you looking to grow personally right now?
         design_experience: Past Design Experience
         applied_before: Have you applied to Blueprint before?
         resume: Resume
@@ -46,10 +47,10 @@ en:
         design_portfolio_link: Please make sure to prefix your URL with 'http://' or 'https://' as necessary
         website: Please link your personal website or portfolio of past design work
         social_links: LinkedIn, Facebook, Twitter, Medium, personal website...any links that help us get to know you better! (We click on everything you send, and especially love to read anything you've written.)
-        personal_growth: In what ways are you looking to grow personally. Fewer than 250 words, please!
+        personal_growth: Fewer than 250 words, please!
         why_join: Fewer than 250 words, please!
         commitments: What are your commitments for next semester?
-        experience: Let us know the organization, your postition, and a brief description of your responsiblities and achievements. Fewer than 250 words, please!
+        experience: Fewer than 250 words, please!
         design_experience: Please share your design experience if you are applying for Design Director. Fewer than 250 words, please!
         projects: We usually prefer to hear about something you did outside of class, but if you feel particularly proud of a specific class project, definitely still list it! Feel free to include any relevant links. Fewer than 250 words, please!
         service: You can use this space to list your previous service experience. However, you can also choose to describe certain experiences or events in more detail to better explain your background. Fewer than 250 words, please!
@@ -62,14 +63,14 @@ en:
       external_application:
         name: Alyssa P. Hacker
         email: example@berkeley.edu
-        phone: (626) 123-4567
+        phone: (123) 456-7890
         major: Psychology
         additional_option: e.g., Director of Marketing
         social_links: "https://www.linkedin.com/in/your_name/\nhttps://facebook.com/your_name/"
-        personal_growth: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        why_join: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        design_experience: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        experience: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
+        # personal_growth: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        # why_join: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        # design_experience: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        # experience: "Organization\nPosition\nBriefly describe your responsibilities and achievements"
         projects: "Project\nLink (if possible)\nBrief description"
         service: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         commitments: "Classes: CS 188, CS 189, CS 170 \nClubs: MLH, Yoga, Salsa Dancing\nOther: Part-time work"

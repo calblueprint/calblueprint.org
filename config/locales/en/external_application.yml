@@ -25,8 +25,8 @@ en:
       external_application:
         year: What is your expected graduation year?
         phone: Phone Number
-        why_join: What is a cause you're passionate about? Describe your experiences and perspectives from this cause, and how this led you to apply to Blueprint.
-        experience: "Tell us about a project that you're proud of: something you've led or played an integral part in organizing. What inspired you to do this, and what was the greatest takeaway you learned from this experience?"
+        why_join: Tell us about a cause you're passionate about and can help further advance through Blueprint. Feel free to include any experiences and perspectives related to this cause.
+        experience: "Tell us about a project that you're proud of: something you've led or played an integral part in organizing. What inspired you to do this, and what was the greatest takeaway you learned from this experience? "
         personal_growth: In what ways are you looking to grow personally right now?
         design_experience: Past Design Experience
         applied_before: Have you applied to Blueprint before?

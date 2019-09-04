@@ -64,6 +64,7 @@ class ExternalApplication < ActiveRecord::Base
   validates :social_links, presence: true
   validates :personal_growth, presence: true
   validates :why_join, presence: true
+  validates :experience, presence: true
   validates :phone, presence: true
   validates :year, presence: true
   validates :name, presence: true
@@ -78,8 +79,12 @@ class ExternalApplication < ActiveRecord::Base
             format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
             presence: true
 
-  validates_each :why_join, :experience, :design_experience do |record, attr, value|
-    record.errors.add attr, ' - your response must be less than 250 words' if !value.nil? && value.split(" ").length > 260
+  validates_each :why_join, :experience do |record, attr, value|
+    record.errors.add attr, ' - your response must be less than 200 words' if !value.nil? && value.split(" ").length > 200
+  end
+
+  validates_each :personal_growth do |record, attr, value|
+    record.errors.add attr, ' - your resopnse must be less than 100 words' if !value.nil? && value.split(" ").length > 100
   end
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }

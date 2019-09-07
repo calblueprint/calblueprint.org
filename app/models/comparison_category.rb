@@ -9,9 +9,12 @@
 #  comparison_bonus   :decimal(, )
 #  comparison_penalty :decimal(, )
 #  name               :string
+#  application_types  :text             default([]), is an Array
+#  semester_id        :bigint(8)
 #
 
 class ComparisonCategory < ActiveRecord::Base
+  belongs_to :semester
   has_many :comparison_category_questions
   has_many :questions, through: :comparison_category_questions
 

@@ -9,6 +9,8 @@
 #  comparison_bonus   :decimal(, )
 #  comparison_penalty :decimal(, )
 #  name               :string
+#  application_types  :text             default([]), is an Array
+#  semester_id        :bigint(8)
 #
 
 require 'rails_helper'

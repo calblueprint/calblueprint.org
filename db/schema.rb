@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_27_045151) do
+ActiveRecord::Schema.define(version: 2019_09_07_175917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,21 +18,21 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
   create_table "admins", id: :serial, force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: ""
-    t.string "reset_password_token"
+    t.string "first_name", limit: 255
+    t.string "last_name", limit: 255
+    t.string "email", limit: 255, default: "", null: false
+    t.string "encrypted_password", limit: 255, default: ""
+    t.string "reset_password_token", limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "role", default: "npo_reviewer", null: false
-    t.string "invitation_token"
+    t.string "invitation_token", limit: 255
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
     t.integer "invitation_limit"
-    t.string "invited_by_type"
     t.integer "invited_by_id"
+    t.string "invited_by_type", limit: 255
     t.integer "invitations_count", default: 0
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["invitation_token"], name: "index_admins_on_invitation_token", unique: true
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
   create_table "applicants", id: :serial, force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "name"
-    t.string "email", default: "", null: false
+    t.string "name", limit: 255
+    t.string "email", limit: 255, default: "", null: false
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_applicants_on_email", unique: true
   end
@@ -57,6 +57,10 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
     t.decimal "comparison_bonus"
     t.decimal "comparison_penalty"
     t.string "name"
+    t.text "application_types", default: [], array: true
+    t.string "gory"
+    t.bigint "semester_id"
+    t.index ["semester_id"], name: "index_comparison_categories_on_semester_id"
   end
 
   create_table "comparison_category_questions", force: :cascade do |t|
@@ -84,9 +88,9 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
   create_table "contact_forms", id: :serial, force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "name"
-    t.string "email"
-    t.string "subject"
+    t.string "name", limit: 255
+    t.string "email", limit: 255
+    t.string "subject", limit: 255
     t.text "message"
   end
 
@@ -154,7 +158,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
     t.text "short_summary"
     t.text "goals"
     t.text "key_features"
-    t.string "devices"
+    t.string "devices", limit: 255
     t.text "target_audience"
     t.text "why"
     t.boolean "cs169_pool", null: false
@@ -185,9 +189,9 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
   end
 
   create_table "nonprofits", id: :serial, force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
+    t.string "email", limit: 255, default: "", null: false
+    t.string "encrypted_password", limit: 255, default: "", null: false
+    t.string "reset_password_token", limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer "sign_in_count", default: 0, null: false
@@ -197,7 +201,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "organization_name"
+    t.string "organization_name", limit: 255
     t.index ["email"], name: "index_nonprofits_on_email", unique: true
     t.index ["reset_password_token"], name: "index_nonprofits_on_reset_password_token", unique: true
   end
@@ -247,8 +251,8 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
   create_table "semesters", id: :serial, force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "season"
-    t.string "year"
+    t.string "season", limit: 255
+    t.string "year", limit: 255
   end
 
   create_table "settings", id: :serial, force: :cascade do |t|
@@ -279,12 +283,12 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
     t.integer "applicant_id"
     t.integer "semester_id"
     t.text "why_join"
-    t.string "resume_file_name"
-    t.string "resume_content_type"
+    t.string "resume_file_name", limit: 255
+    t.string "resume_content_type", limit: 255
     t.integer "resume_file_size"
     t.datetime "resume_updated_at"
-    t.string "year"
-    t.string "phone"
+    t.string "year", limit: 255
+    t.string "phone", limit: 255
     t.string "name"
     t.string "email"
     t.boolean "available_for_bp_games", default: false
@@ -310,6 +314,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_045151) do
     t.index ["semester_id"], name: "index_student_applications_on_semester_id"
   end
 
+  add_foreign_key "comparison_categories", "semesters"
   add_foreign_key "comparison_category_questions", "comparison_categories"
   add_foreign_key "comparison_category_questions", "questions"
   add_foreign_key "comparisons", "comparison_categories"

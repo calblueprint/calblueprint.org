@@ -1,31 +1,40 @@
 technical:
-  name: "Technical"
+  name: "Technical (Developer)"
+  bonus: 1
+  penalty: -1
+  weight: 1
+  filter:
+    - "Developer"
+    - "Developer and designer"
+  questions:
+    - year
+    - application_type
+    - resume
+
+learning:
+  name: "Learning Speed/Independence (Always Innovate)"
   bonus: 1
   penalty: -1
   weight: 1
   questions:
     - year
-    - projects
-    - experience
-    - resume
-    - design_portfolio
+    - application_type
+    - always_innovate
 
 culture1:
-  name: "Culture (Identity/Experiences)"
+  name: "Culture (Mission First)"
   bonus: 1
   penalty: -1
   weight: 1
   questions:
     - year
-    - unique_experiences
-    - service
+    - mission_first
 
 culture2:
-  name: "Culture (Hardest Achievement)"
+  name: "Culture (Be Humble)"
   bonus: 1
   penalty: -1
   weight: 1
   questions:
     - year
-    - hardest_achievement
-    - service
+    - be_humble

@@ -12,6 +12,7 @@
 #
 
 class ComparisonCategory < ActiveRecord::Base
+  belongs_to :semester
   has_many :comparison_category_questions
   has_many :questions, through: :comparison_category_questions
 

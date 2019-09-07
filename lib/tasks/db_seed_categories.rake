@@ -25,7 +25,13 @@ end
 
 def db_seed_category(attributes)
   category = ComparisonCategory.where(name: attributes['name']).first_or_create
-  category.update! comparison_bonus: attributes['bonus'], comparison_penalty: attributes['penalty'], weight: attributes['weight']
+  category.update!(
+    comparison_bonus: attributes['bonus'],
+    comparison_penalty: attributes['penalty'],
+    weight: attributes['weight'],
+    application_types: attributes['filter'],
+    semester: Settings.instance.current_semester
+  )
   ComparisonCategoryQuestion.where(comparison_category: category).destroy_all
 
   # Find valid questions

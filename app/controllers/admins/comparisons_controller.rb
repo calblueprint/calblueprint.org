@@ -32,23 +32,37 @@ module Admins
       hold = Hold.where(admin_id: current_admin.id).last
       if hold.nil? || !hold.current?
         if !@category.application_types.nil? && @category.application_types.length > 0
-          needs_comparison = StudentApplication.needs_comparison
+
+          pool = StudentApplication.needs_comparison
             .joins(:responses)
             .where(responses: {
               question_id: question_filter_id,
               answer: @category.application_types
-            })
-            .sample(2)
+            }, current_category: @category.name)
         else
-          needs_comparison = StudentApplication.needs_comparison.sample(2)
+          pool = StudentApplication.needs_comparison.where(current_category: @category.name)
         end
+
+        needs_comparison = pool.sample(2)
         @left = needs_comparison.first
+
         if @left.nil?
           return redirect_to admin_student_applications_path, flash: { error: t('admins.comparisons.insufficient')}
         elsif needs_comparison.count > 1
           @right = needs_comparison.second
         else
-          @right = StudentApplication.comparable.remaining.where.not(id: @left.id).first
+          if !@category.application_types.nil? && @category.application_types.length > 0
+            @right = StudentApplication.comparable.remaining.joins(:responses)
+            .where(
+              responses: {
+                question_id: question_filter_id,
+                answer: @category.application_types
+              }, 
+              current_category: @category.name)
+            .where.not(id: @left.id).first
+          else 
+            @right = StudentApplication.comparable.remaining.where(current_category: @category.name).where.not(id: @left.id).first
+          end
         end
       else
         puts "Found existing hold, populating with category #{hold.comparison_category.name}"
@@ -61,8 +75,30 @@ module Admins
       if @right.nil?
         redirect_to admin_student_applications_path, flash: { error: t('admins.comparisons.insufficient')}
       else
+        # Sanity check 
+        if @left.current_category != @right.current_category
+          redirect_to admin_student_applications_path, flash: { error: 'SOMETHING IS HORRIBLY WRONG (current categories don\'t match'}
+        end
+
         Hold.create(admin: current_admin, left: @left, right: @right, comparison_category: @category)
+        update_state(@left)
+        update_state(@right)
       end
+    end
+
+    def update_state(application)
+      # TODO: Please make less hack
+      states = ['Technical (Developer)', 'Learning Speed/Independence (Always Innovate)', 'Culture (Mission First)', 'Culture (Be Humble)']
+      cur_category_index = states.find(application.current_category)
+      next_category = cur_category_index + 1 if !cur_category_index.nil? else 1
+      if next_category == 4
+        if application.application_type.downcase.include?("developer")
+          next_category = 0
+        else
+          next_category = 1
+        end
+      end
+      application.update current_category: next_category
     end
 
     def create

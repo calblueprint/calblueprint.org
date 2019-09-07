@@ -35,6 +35,7 @@
 #  hardest_achievement           :text
 #  commitments                   :text
 #  heard_from                    :string
+#  current_category              :string
 #
 
 class StudentApplication < ActiveRecord::Base

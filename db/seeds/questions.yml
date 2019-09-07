@@ -84,7 +84,7 @@ available_for_bp_games:
   required: false
 
 design_portfolio:
-  title: Design Portfolio
+  title: Design Portfolio (REQUIRED for designer applicants)
   hint: Attach your design portfolio. If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
   question_category: general
   question_type: attachment

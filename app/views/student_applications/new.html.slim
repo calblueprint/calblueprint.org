@@ -61,9 +61,13 @@ javascript:
   $BPGamesTrue.click(toggleBPGames);
   $BPGamesFalse.click(toggleBPGames);
 
-  $('.student_application_responses_design_portfolio').hide();
-  $('.student_application_responses_available_for_bp_games').hide();
-
+  if (designOption.prop("checked")) {
+    $('.student_application_responses_available_for_bp_games').hide();
+  }
+  if (devOption.prop("checked")) {
+    $('.student_application_responses_design_portfolio').hide();
+  }
+  
   devOption.click(function() {
     $('.student_application_responses_design_portfolio').hide();
     $('.student_application_responses_available_for_bp_games').show();

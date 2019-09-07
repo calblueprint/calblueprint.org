@@ -57,8 +57,8 @@ class Response < ActiveRecord::Base
       if self.file_content_type != "application/pdf"
         errors.add(q.title, "must be a PDF")
       end
-    elsif q.required
-        errors.add(q.title, "is missing")
+    elsif attachment_required(q)
+      errors.add(q.title, "is missing")
     end
   end
 
@@ -66,7 +66,7 @@ class Response < ActiveRecord::Base
     q = self.question
     # Validate required questions
     if q.required && self.answer && self.answer.empty?
-        errors.add(q.tag, "can't be left blank")
+      errors.add(q.tag, "can't be left blank")
     end
 
     case q.question_type
@@ -77,5 +77,9 @@ class Response < ActiveRecord::Base
     when "attachment"
       self.validate_attachment errors
     end
+  end
+
+  def attachment_required(q)
+    q.required || q.tag == "design_portfolio" && student_application.response_to("application_type").downcase.include?("designer")
   end
 end

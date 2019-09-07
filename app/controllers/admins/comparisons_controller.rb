@@ -89,10 +89,10 @@ module Admins
     def update_state(application)
       # TODO: Please make less hack
       states = ['Technical (Developer)', 'Learning Speed/Independence (Always Innovate)', 'Culture (Mission First)', 'Culture (Be Humble)']
-      cur_category_index = states.find(application.current_category)
+      cur_category_index = states.index(application.current_category)
       next_category = cur_category_index + 1 if !cur_category_index.nil? else 1
       if next_category == 4
-        if application.application_type.downcase.include?("developer")
+        if application.response_to('application_type').downcase.include?("developer")
           next_category = 0
         else
           next_category = 1

@@ -80,6 +80,8 @@ class Response < ActiveRecord::Base
   end
 
   def attachment_required(q)
-    q.required || q.tag == "design_portfolio" && student_application.response_to("application_type").downcase.include?("designer")
+    # TODO: Replace this later. this is temporary because some designers submitted aplications without portfolios
+    q.required
+    #q.required || q.tag == "design_portfolio" && student_application.response_to("application_type").downcase.include?("designer")
   end
 end

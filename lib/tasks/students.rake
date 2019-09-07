@@ -16,35 +16,33 @@ namespace :students do
         "Email": app.response_to("email"),
         "Phone Number": app.response_to("phone"),
         "Year": app.response_to("year"),
-        "Applied before?": app.response_to("applied_before"),
+        "Applied before?": app.response_to("applied_before") == "Yes",
         "Time commitments": app.response_to("commitments"),
         "Application type": app.response_to("application_type"),
-        "Can attend BP Games?": app.response_to("available_for_bp_games"),
+        "Can attend BP Games?": app.response_to("available_for_bp_games") == "Yes",
         "Why no BP Games?": app.response_to("why_no_bp_games"),
-        "Can attend retreat?": app.response_to("available_for_retreat"),
+        "Can attend retreat?": app.response_to("available_for_retreat") == "yes",
         "Why no retreat?": app.response_to("why_no_retreat"),
         "Passionate cause": app.response_to("mission_first"),
         "Built/learned from scratch": app.response_to("always_innovate"),
         "Personal growth": app.response_to("be_humble"),
         "Heard about Blueprint from": app.response_to("heard_from"),
-        "Add to newsletter?": app.response_to("add_to_newsletter"),
-        "Total Wins": app.wins_count,
-        "Total Losses": app.losses_count,
+        "Add to newsletter?": app.response_to("add_to_newsletter") == "Yes"
       }
 
-      ComparisonCategory.all.each do |category|
-        puts "Finding apps with category #{category}"
-        app_params[category.name + " Wins"] = Comparison.where(comparison_category: category, winner_id: app.id).count
-        app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
-      end
+      # ComparisonCategory.all.each do |category|
+      #   puts "Finding apps with category #{category}"
+      #   app_params[category.name + " Wins"] = Comparison.where(comparison_category: category, winner_id: app.id).count
+      #   app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
+      # end
 
       resume = app.file_for("resume")
       design_portfolio = app.file_for("design_portfolio")
       if resume.exists?
-        app_params["Resume"] = "https:" + resume.url
+        app_params["Resume"] = [{url: "https:" + resume.url}]
       end
       if design_portfolio.exists?
-        app_params["Design Portfolio"] = "https:" + design_portfolio.url
+        app_params["Design Portfolio"] = [{url: "https:" + design_portfolio.url}]
       end
 
       pos = air_emails.index(app.email)

@@ -71,14 +71,16 @@ class StudentApplication < ActiveRecord::Base
   end
 
   def response_to(tag)
-    response = self.responses.select {|r| r.question.tag.to_s == tag}.first
-    if response and response.answer
-        response.answer
+    response = self.responses.where(question_id: Question.where(tag: tag)).first
+    if response.question.question_type == "checkbox"
+      return true if response.answer == "yes"
+      return false
+    elsif response and response.answer
+      response.answer
     else
-        puts "couldn't find answer for tag: #{tag}"
-        ""
+      puts "couldn't find answer for tag: #{tag}"
+      ""
     end
-
   end
 
   def sorted_responses

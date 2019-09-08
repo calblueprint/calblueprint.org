@@ -22,8 +22,7 @@ namespace :external do
         "Project Experience": app.experience,
         "Personal Growth": app.personal_growth,
         "Social links": app.social_links,
-        "Time commitments": app.commitments,
-        "Available for GM": app.available_for_gm
+        "Time commitments": app.commitments
       }
 
       if app.resume.exists?

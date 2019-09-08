@@ -98,7 +98,7 @@ module Admins
           next_category = 1
         end
       end
-      application.update current_category: next_category
+      application.update current_category: states[next_category]
     end
 
     def create

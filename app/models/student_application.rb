@@ -35,6 +35,7 @@
 #  hardest_achievement           :text
 #  commitments                   :text
 #  heard_from                    :string
+#  current_category              :string
 #
 
 class StudentApplication < ActiveRecord::Base
@@ -52,7 +53,7 @@ class StudentApplication < ActiveRecord::Base
 
   # Call on each response object to validate itself. Pass Student Application Error Object
   def validate_responses
-    self.responses.each do |response|
+    StudentApplication.includes(:responses).find(self.id).responses.each do |response|
       response.validate_response errors
     end
   end
@@ -71,7 +72,7 @@ class StudentApplication < ActiveRecord::Base
   end
 
   def response_to(tag)
-    response = self.responses.where(question_id: Question.where(tag: tag)).first
+    response = self.responses.includes(:question).select { |r| r.question.tag == tag }.first
     if response.question.question_type == "checkbox"
       return true if response.answer == "yes"
       return false

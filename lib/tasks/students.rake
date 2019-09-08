@@ -21,7 +21,7 @@ namespace :students do
         "Application type": app.response_to("application_type"),
         "Can attend BP Games?": app.response_to("available_for_bp_games") == "Yes",
         "Why no BP Games?": app.response_to("why_no_bp_games"),
-        "Can attend retreat?": app.response_to("available_for_retreat") == "yes",
+        "Can attend retreat?": app.response_to("available_for_retreat") == "Yes",
         "Why no retreat?": app.response_to("why_no_retreat"),
         "Passionate cause": app.response_to("mission_first"),
         "Built/learned from scratch": app.response_to("always_innovate"),
@@ -30,20 +30,20 @@ namespace :students do
         "Add to newsletter?": app.response_to("add_to_newsletter") == "Yes"
       }
 
-      # ComparisonCategory.all.each do |category|
-      #   puts "Finding apps with category #{category}"
-      #   app_params[category.name + " Wins"] = Comparison.where(comparison_category: category, winner_id: app.id).count
-      #   app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
-      # end
+      ComparisonCategory.where(semester: settings.current_semester).each do |category|
+        puts "Finding apps with category #{category}"
+        app_params[category.name + " Wins"] = Comparison.where(comparison_category: category, winner_id: app.id).count
+        app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
+      end
 
-      resume = app.file_for("resume")
-      design_portfolio = app.file_for("design_portfolio")
-      if resume.exists?
-        app_params["Resume"] = [{url: "https:" + resume.url}]
-      end
-      if design_portfolio.exists?
-        app_params["Design Portfolio"] = [{url: "https:" + design_portfolio.url}]
-      end
+      # resume = app.file_for("resume")
+      # design_portfolio = app.file_for("design_portfolio")
+      # if resume.exists?
+      #   app_params["Resume"] = [{url: "https:" + resume.url}]
+      # end
+      # if design_portfolio.exists?
+      #   app_params["Design Portfolio"] = [{url: "https:" + design_portfolio.url}]
+      # end
 
       pos = air_emails.index(app.email)
       if pos.nil?

@@ -22,16 +22,18 @@
         th Email
         th Grade
         th Semester
+        th Category
         th Wins
         th Losses
         th Actions
     tbody
-      - @student_applications.each do |app|
+      - @student_applications.includes(:applicant, :semester).each do |app|
         tr onClick="window.location = '/admins/student_applications/#{app.id}'"
           td = app.applicant.name
           td = app.applicant.email
           td = app.response_to 'year'
           td = "#{app.semester.season.capitalize} #{app.semester.year}"
+          td = app.current_category[0..11]
           td = app.wins_count
           td = app.losses_count
           td = link_to "Details", admin_student_application_path(app.id)

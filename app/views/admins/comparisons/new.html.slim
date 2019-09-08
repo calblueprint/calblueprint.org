@@ -6,15 +6,15 @@
     .comparison-section-item Student 1
     .comparison-section-item Student 2
 
-  - @category.questions.each do |q|
+  - ComparisonCategory.includes(:questions).find(@category.id).questions.each do |q|
     .comparison-row
       h2.comparison-section-title = q.title
       - if q.question_type == "attachment"
-        - if @left.file_for(q.tag).exists?
+        - if !@left.file_for(q.tag).nil?
           p.comparison-section-item = link_to "View Attachment", @left.file_for(q.tag).url, target: '_blank'
         - else
           p.comparison-section-item = "No Attachment"
-        - if @right.file_for(q.tag).exists?
+        - if !@right.file_for(q.tag).nil?
           p.comparison-section-item = link_to "View Attachment", @right.file_for(q.tag).url, target: '_blank'
         - else
           p.comparison-section-item = "No Attachment"

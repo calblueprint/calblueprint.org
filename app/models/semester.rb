@@ -18,6 +18,7 @@ class Semester < ActiveRecord::Base
   has_many :external_applications
   has_many :question_semesters
   has_many :questions, through: :question_semesters
+  has_many :comparison_categories
 
   validates :year, uniqueness: { scope: [:season], case_sensitive: false }, presence: true
 

@@ -30,11 +30,11 @@ namespace :students do
         "Add to newsletter?": app.response_to("add_to_newsletter") == "Yes"
       }
 
-      # ComparisonCategory.all.each do |category|
-      #   puts "Finding apps with category #{category}"
-      #   app_params[category.name + " Wins"] = Comparison.where(comparison_category: category, winner_id: app.id).count
-      #   app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
-      # end
+      ComparisonCategory.all.each do |category|
+        puts "Finding apps with category #{category}"
+        app_params[category.name + " Wins"] = Comparison.where(comparison_category: category, winner_id: app.id).count
+        app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
+      end
 
       resume = app.file_for("resume")
       design_portfolio = app.file_for("design_portfolio")

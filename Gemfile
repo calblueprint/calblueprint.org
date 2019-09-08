@@ -3,7 +3,7 @@ ruby '2.2.10'
 
 # Core gems
 gem 'rails', '5.2.0'
-gem 'thin', '~> 1.7.0'
+gem 'puma', '3.11'
 gem 'pg', '~> 0.18.4'
 gem 'figaro', '~> 1.0.0'
 gem 'sucker_punch', '~> 1.3.1'

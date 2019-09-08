@@ -18,21 +18,16 @@ namespace :external do
         "Year": app.year,
         "Major": app.major,
         "Applied before?": app.applied_before,
+        "Passionate Cause": app.why_join,
+        "Project Experience": app.experience,
+        "Personal Growth": app.personal_growth,
         "Social links": app.social_links,
-        "Contribute to Design": app.why_join,
-        "Time commitments": app.commitments
+        "Time commitments": app.commitments,
+        "Available for GM": app.available_for_gm
       }
 
       if app.resume.exists?
         app_params["Resume"] = 'https:' + app.resume.url
-      end
-
-      if not app.design_portfolio_link.empty?
-        app_params["Design Portfolio Link"] = app.design_portfolio_link
-      end
-
-      if app.design_portfolio.exists?
-        app_params["Design Portfolio File"] = 'https:' + app.design_portfolio.url
       end
 
       pos = air_emails.index(app.email)

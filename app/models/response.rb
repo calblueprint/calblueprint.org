@@ -63,7 +63,7 @@ class Response < ActiveRecord::Base
   end
 
   def validate_response(errors)
-    q = self.question
+    q = Response.includes(:question).find(self.id).question
     # Validate required questions
     if q.required && self.answer && self.answer.empty?
       errors.add(q.tag, "can't be left blank")

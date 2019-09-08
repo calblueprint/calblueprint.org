@@ -5,14 +5,14 @@ class ExternalApplicationDecorator < ApplicationDecorator
     [:year,
      :major,
      [:applied_before, "Applied before?"],
-     :social_links,
      [:why_join, ::I18n.t("simple_form.labels.external_application.why_join")],
+     [:experience, ::I18n.t("simple_form.labels.external_application.experience")],
+     [:personal_growth, ::I18n.t("simple_form.labels.external_application.personal_growth")],
+     :social_links,
      :commitments,
-     :phone,
-     :email,
      :resume,
-     :design_portfolio,
-     :design_portfolio_link]
+     :phone,
+     :email]
   end
 
   def resume

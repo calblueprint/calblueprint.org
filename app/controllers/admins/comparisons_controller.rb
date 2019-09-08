@@ -33,14 +33,14 @@ module Admins
       if hold.nil? || !hold.current?
         if !@category.application_types.nil? && @category.application_types.length > 0
 
-          pool = StudentApplication.needs_comparison
+          pool = StudentApplication.comparable.needs_comparison
             .joins(:responses)
             .where(responses: {
               question_id: question_filter_id,
               answer: @category.application_types
             }, current_category: @category.name)
         else
-          pool = StudentApplication.needs_comparison.where(current_category: @category.name)
+          pool = StudentApplication.comparable.needs_comparison.where(current_category: @category.name)
         end
 
         needs_comparison = pool.sample(2)

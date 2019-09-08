@@ -36,14 +36,14 @@ namespace :students do
         app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
       end
 
-      resume = app.file_for("resume")
-      design_portfolio = app.file_for("design_portfolio")
-      if resume.exists?
-        app_params["Resume"] = [{url: "https:" + resume.url}]
-      end
-      if design_portfolio.exists?
-        app_params["Design Portfolio"] = [{url: "https:" + design_portfolio.url}]
-      end
+      # resume = app.file_for("resume")
+      # design_portfolio = app.file_for("design_portfolio")
+      # if resume.exists?
+      #   app_params["Resume"] = [{url: "https:" + resume.url}]
+      # end
+      # if design_portfolio.exists?
+      #   app_params["Design Portfolio"] = [{url: "https:" + design_portfolio.url}]
+      # end
 
       pos = air_emails.index(app.email)
       if pos.nil?

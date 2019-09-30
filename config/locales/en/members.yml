@@ -25,6 +25,9 @@ en:
     developer: &developer
       role: "Project Developer"
 
+    designer: &designer
+      role: "Designer"
+
     alumni_relations: &alumni_relations
       role: "Alumni Relations Director"
 
@@ -34,7 +37,7 @@ en:
     operations: &operations
       role: "Operations Director"
 
-    design: &design
+    design_director: &design_director
       role: "Design Director"
 
     content: &content
@@ -106,13 +109,13 @@ en:
       email: 'emily.zhong@berkeley.edu'
       linkedin: 'emily-zhong'
       website: 'emilyzhong.github.io'
-      <<: *design
+      <<: *design_director
     
     - first_name: 'Rachel'
       last_name: 'He'
       email: 'rlhe1307@berkeley.edu'
       linkedin: 'rachel-he-543081158'
-      <<: *design
+      <<: *design_director
 
     - first_name: 'Karina'
       last_name: 'Nguyen'
@@ -256,7 +259,81 @@ en:
       email: 'ashley.nguyen27@berkeley.edu'
       linkedin: 'ashley-nguyen-15a799125'
       <<: *developer
+
+    - first_name: 'Ace'
+      last_name: 'Chen'
+      email: '12aschen@berkeley.edu'
+      <<: *designer
+
+    - first_name: 'Joelene'
+      last_name: 'Latief'
+      email: 'joelenelatief@berkeley.edu'
+      <<: *designer
     
+    - first_name: 'Annie'
+      last_name: 'Zheng'
+      email: 'anzheng@berkeley.edu'
+      <<: *designer
+    
+    - first_name: 'Iris'
+      last_name: 'Hou'
+      email: 'irishou@berkeley.edu'
+      <<: *designer
+    
+    - first_name: 'Annie'
+      last_name: 'Wang'
+      email: 'wangannie@berkeley.edu'
+      <<: *designer
+    
+    - first_name: 'Jen'
+      last_name: 'Hoang'
+      email: 'jenmyang@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Micah'
+      last_name: 'Yong'
+      email: 'micahtyong@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Kyle'
+      last_name: 'Hua'
+      email: 'kylehuuuaaa@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Julian'
+      last_name: 'Kung'
+      email: 'julianrkung@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Maria'
+      last_name: 'Terrenal'
+      email: 'mdterrenal@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Myles'
+      last_name: 'Domingo'
+      email: 'mylesdomingo@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Jinsu'
+      last_name: 'Elhance'
+      email: 'jelhance@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Johnathan'
+      last_name: 'Zhou'
+      email: 'johnathanz@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Avery'
+      last_name: 'Yip'
+      email: 'averyyip@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Noah'
+      last_name: 'Alcus'
+      email: 'averyyip@berkeley.edu'
+      <<: *developer
 
     # Mentors
 
@@ -336,14 +413,14 @@ en:
       last_name: 'Kwak'
       email: 'yeogyoungkwak@berkeley.edu'
       linkedin: 'jemma-kwak'
-      <<: *design
+      <<: *design_director
 
     - first_name: 'Vanessa'
       last_name: 'Ng'
       email: 'vanesng96@berkeley.edu'
       linkedin: 'vanesng'
       website: 'vanesng.com'
-      <<: *design
+      <<: *design_director
 
     - first_name: 'Tao'
       last_name: 'Ong'
@@ -467,7 +544,7 @@ en:
     - first_name: 'Pamela'
       last_name: 'Hu'
       email: 'pamelahu@berkeley.edu'
-      <<: *design
+      <<: *design_director
 
     - first_name: 'Jason'
       last_name: 'Wang'

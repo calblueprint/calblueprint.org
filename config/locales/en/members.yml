@@ -130,6 +130,11 @@ en:
       website: 'justinmi.me'
       <<: *content
 
+    - first_name: 'Gibson'
+      last_name: 'Chu'
+      email: 'gibsonchu@berkeley.edu'
+      <<: *outreach
+
     # Project Leaders
 
     - first_name: 'Aivant'

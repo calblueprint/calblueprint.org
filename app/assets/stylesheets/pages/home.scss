@@ -224,8 +224,12 @@
 
     .img-container {
       margin: 0 auto 20px;
-      max-width: 150px;
-      max-height: 90px;
+      
+      img {
+        max-width: 150px;
+        max-height: 80px;
+        object-fit: scale-down;
+      }
     }
 
     .img-container-wide {

@@ -340,6 +340,11 @@ en:
       email: 'averyyip@berkeley.edu'
       <<: *developer
 
+    - first_name: 'Nick'
+      last_name: 'Wong'
+      email: 'nickwong@berkeley.edu'
+      <<: *developer
+
     # Mentors
 
     # Other positions:

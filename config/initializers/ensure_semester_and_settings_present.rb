@@ -1,5 +1,6 @@
 # Makes sure at least one semester and one settings model is in the system
 # before the app starts.
+# TODO: This should not run on setup
 class EnsureSemesterAndSettingsPresent
   class << self
     def execute

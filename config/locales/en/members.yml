@@ -338,6 +338,7 @@ en:
     - first_name: 'Noah'
       last_name: 'Alcus'
       email: 'ntalcus@berkeley.edu'
+      website: 'ntalcus.github.io'
       <<: *developer
 
     - first_name: 'Nick'

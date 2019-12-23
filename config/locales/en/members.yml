@@ -210,11 +210,11 @@ en:
       website: 'erinysong.github.io'
       <<: *developer
 
-    - first_name: 'Kyu Won'
+    - first_name: 'Frederick'
       last_name: 'Kim'
-      email: 'freddy.kim8@gmail.com'
+      email: 'kwk@berkeley.edu'
       linkedin: 'kwk'
-      website: 'www.kyuwonkim.com'
+      website: 'kwfk.dev'
       <<: *developer
 
     - first_name: 'Asli'
@@ -337,7 +337,8 @@ en:
 
     - first_name: 'Noah'
       last_name: 'Alcus'
-      email: 'averyyip@berkeley.edu'
+      email: 'ntalcus@berkeley.edu'
+      website: 'ntalcus.github.io'
       <<: *developer
 
     - first_name: 'Nick'

@@ -7,16 +7,26 @@ en:
         To make beautiful engineering accessible and useful
         for those who create communities and promote public welfare.
       values:
-        craft: >
-          Our projects are carefully constructed from the first contact with the nonprofit to project
-          deployment and live use. We are meticulous about our design, our process, and our code.
-        culture: >
-          Bloopers work hard and play hard. When we’re not developing, we eat, play,
-          and volunteer together. We value a good sense of humor and think that there's fun to be had
-          wherever we go.
-        heart: >
-          We believe that our education and abilities should be used for good. Our motivation pushes us to
-          constantly learn, work hard, and find solutions where others haven't looked.
+        mission: >
+          We as Blueprint members ultimately unify under one goal - achieving our mission. We place the interests of
+          the people and partners we serve above our own. Our primary measure of success is the amount of positive
+          impact we create through our work.
+        growth: >
+          We as Blueprint members value the academic, social, and personal growth of our peers. We constantly seek
+          to perpetuate the cycle of learning and teaching, for our benefit and for others. We strive to offer a helping
+          hand in times of need and push each other to succeed.
+        cherish: >
+          We as Blueprint members seek to cherish our time spent together. We develop meaningful relationships that
+          extend well beyond the scope of the organization. We value each other as individuals and appreciate our
+          differences.
+        innovate: >
+          We as Blueprint members recognize that change is both inevitable and necessary. We are committed to
+          innovate and emphasize effective solutions as needed in order to remain relevant - nothing is sacred. We
+          welcome new ideas and diverse thinking.
+        humble: >
+          We as Blueprint members strive to remain humble, accept our imperfections, and be receptive to feedback.
+          We approach challenges with an open mind and remember that anyone can pursue social good, not just
+          Blueprint.
       team:
         title: The Team
         description: >

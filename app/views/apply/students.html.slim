@@ -8,11 +8,15 @@ section.static-page-hero.student-apply-hero
     p.static-page-subtitle.light.marginBot-lg
       = t ".subtitle"
     .static-page-hero-btn-container.marginTop-xl
-      - if @settings.student_app_open
+      - if @settings.dev_app_open && @settings.designer_app_open == 'open'
         = link_to "Apply as a Developer/Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
+      - elsif @settings.dev_app_open
+        = link_to "Apply as a Developer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
+      - elsif @settings.designer_app_open == 'open'
+        = link_to "Apply as a Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
       - if @settings.external_app_open
         = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs"
-      - if !@settings.student_app_open && !@settings.external_app_open
+      - if !@settings.dev_app_open && @settings.designer_app_open != 'open' && !@settings.external_app_open
         p.hero-desc = t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
 
@@ -53,8 +57,8 @@ section.application-process-section#application-process
           .timeline-row-date = t ".application_timeline.application_date"
           .timeline-row-description = raw t ".application_timeline.application"
           .timeline-row-btn
-            - if @settings.student_app_open
-              = link_to "Student Application", new_student_application_path, class: "bp-btn"
+            - if @settings.dev_app_open
+              = link_to "Developer Application", new_student_application_path, class: "bp-btn"
             - else
               .timeline-row-notice = raw t ".application_timeline.application_notice"
 
@@ -84,53 +88,56 @@ section.application-process-section#application-process
 
   .container
     h2.static-page-header.marginBot-xxl Designer Application Process
-    .student-timeline
-      .timeline-row
-        .num-col
-          .timeline-num 01
-        .text-col
-          .timeline-row-title Infosessions
-          .timeline-row-date = t ".application_timeline.infosession_date"
-          .timeline-row-description = raw t ".application_timeline.infosession"
-          .timeline-row-btn
-            - if SocialMediaUrls::INFOSESSION
-              = link_to "Infosession 1 (Sep 3)", "https://www.facebook.com/events/377972689556632/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-              = link_to "Infosession 2 (Sep 4)", "https://www.facebook.com/events/756476104772962/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-            - if not SocialMediaUrls::INFOSESSION
-              .timeline-row-notice = t ".application_timeline.infosession_notice"
-      .timeline-row
-        .num-col
-          .timeline-num 02
-        .text-col
-          .timeline-row-title Applications Due
-          .timeline-row-date = t ".application_timeline.application_date"
-          .timeline-row-description = raw t ".application_timeline.designer_application"
-          .timeline-row-btn
-            - if @settings.student_app_open
-              = link_to "Designer Application", new_student_application_path, class: "bp-btn"
-            - else
-              .timeline-row-notice = raw t ".application_timeline.application_notice"
-      .timeline-row
-        .num-col
-          .timeline-num 03
-        .text-col
-          .timeline-row-title Designer Interviews
-          .timeline-row-date = t ".application_timeline.designer_interviews_date"
-          .timeline-row-description = raw t ".application_timeline.designer_interviews" 
-      .timeline-row
-        .num-col
-          .timeline-num 04
-        .text-col
-          .timeline-row-title Meet the Club
-          .timeline-row-date = t ".application_timeline.meet_the_club_date"
-          .timeline-row-description = raw t ".application_timeline.meet_the_club"
-      .timeline-row
-        .num-col
-          .timeline-num 05
-        .text-col
-          .timeline-row-title Design Challenge due
-          .timeline-row-date = t ".application_timeline.designer_challenge_date"
-          .timeline-row-description = t ".application_timeline.designer_challenge"
+    - if @settings.designer_app_open == 'not_accepting'
+      p.static-page-desc = t ".application_timeline.designer_not_accepted"
+    - else
+      .student-timeline
+        .timeline-row
+          .num-col
+            .timeline-num 01
+          .text-col
+            .timeline-row-title Infosessions
+            .timeline-row-date = t ".application_timeline.infosession_date"
+            .timeline-row-description = raw t ".application_timeline.infosession"
+            .timeline-row-btn
+              - if SocialMediaUrls::INFOSESSION
+                = link_to "Infosession 1 (Sep 3)", "https://www.facebook.com/events/377972689556632/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+                = link_to "Infosession 2 (Sep 4)", "https://www.facebook.com/events/756476104772962/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              - if not SocialMediaUrls::INFOSESSION
+                .timeline-row-notice = t ".application_timeline.infosession_notice"
+        .timeline-row
+          .num-col
+            .timeline-num 02
+          .text-col
+            .timeline-row-title Applications Due
+            .timeline-row-date = t ".application_timeline.application_date"
+            .timeline-row-description = raw t ".application_timeline.designer_application"
+            .timeline-row-btn
+              - if @settings.designer_app_open == 'open'
+                = link_to "Designer Application", new_student_application_path, class: "bp-btn"
+              - elsif @settings.designer_app_open == 'closed'
+                .timeline-row-notice = raw t ".application_timeline.application_notice"
+        .timeline-row
+          .num-col
+            .timeline-num 03
+          .text-col
+            .timeline-row-title Designer Interviews
+            .timeline-row-date = t ".application_timeline.designer_interviews_date"
+            .timeline-row-description = raw t ".application_timeline.designer_interviews" 
+        .timeline-row
+          .num-col
+            .timeline-num 04
+          .text-col
+            .timeline-row-title Meet the Club
+            .timeline-row-date = t ".application_timeline.meet_the_club_date"
+            .timeline-row-description = raw t ".application_timeline.meet_the_club"
+        .timeline-row
+          .num-col
+            .timeline-num 05
+          .text-col
+            .timeline-row-title Design Challenge Due
+            .timeline-row-date = t ".application_timeline.designer_challenge_date"
+            .timeline-row-description = t ".application_timeline.designer_challenge"
 
 section.application-decision-criteria-section#decision-criteria
   .container

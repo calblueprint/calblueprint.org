@@ -4,7 +4,7 @@ class EnsureSemesterAndSettingsPresent
   class << self
     def execute
       create_first_semester if should_create? Semester
-      create_first_settings if should_create? Settings
+      # create_first_settings if should_create? Settings
     end
 
     private
@@ -16,12 +16,14 @@ class EnsureSemesterAndSettingsPresent
       Semester.create year: year, season: season
     end
 
-    def create_first_settings
-      Settings.create npo_app_open: true,
-                      student_app_open: true,
-                      current_semester_id: Semester.first.id,
-                      singleton_guard: 0
-    end
+    # def create_first_settings
+    #   Settings.create npo_app_open: true,
+    #                   dev_app_open: true,
+    #                   designer_app_open: 2,
+    #                   external_app_open: true,
+    #                   current_semester_id: Semester.first.id,
+    #                   singleton_guard: 0
+    # end
 
     def should_create?(klass)
       table_name = klass.to_s.tableize

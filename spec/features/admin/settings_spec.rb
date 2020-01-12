@@ -15,7 +15,7 @@ RSpec.describe "Settings" do
     before do
       visit edit_admin_settings_path
       choose "settings_npo_app_open_true"
-      choose "settings_student_app_open_true"
+      choose "settings_dev_app_open_true"
       select semester.to_s, from: "Semester"
     end
     it "displays updated settings" do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_07_222638) do
+ActiveRecord::Schema.define(version: 2020_01_12_024543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -260,7 +260,7 @@ ActiveRecord::Schema.define(version: 2019_09_07_222638) do
     t.integer "singleton_guard"
     t.integer "current_semester_id"
     t.boolean "npo_app_open"
-    t.boolean "student_app_open"
+    t.boolean "dev_app_open"
     t.boolean "cs169_app_open"
     t.integer "comparison_bonus", default: 0
     t.integer "comparison_penalty", default: 0
@@ -272,6 +272,7 @@ ActiveRecord::Schema.define(version: 2019_09_07_222638) do
     t.boolean "notify_bar_active"
     t.text "notify_bar_content"
     t.string "notify_bar_link"
+    t.integer "designer_app_open", default: 0
     t.index ["current_semester_id"], name: "index_settings_on_current_semester_id"
     t.index ["singleton_guard"], name: "index_settings_on_singleton_guard", unique: true
   end

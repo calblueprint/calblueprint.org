@@ -5,8 +5,8 @@
 #  id         :integer          not null, primary key
 #  created_at :datetime
 #  updated_at :datetime
-#  season     :string
-#  year       :string
+#  season     :string(255)
+#  year       :string(255)
 #
 
 class Semester < ActiveRecord::Base

@@ -18,7 +18,9 @@ class EnsureSemesterAndSettingsPresent
 
     def create_first_settings
       Settings.create npo_app_open: true,
-                      student_app_open: true,
+                      dev_app_open: true,
+                      designer_app_open: 2,
+                      external_app_open: true,
                       current_semester_id: Semester.first.id,
                       singleton_guard: 0
     end

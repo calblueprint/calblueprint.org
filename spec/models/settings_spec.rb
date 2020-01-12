@@ -8,7 +8,7 @@
 #  singleton_guard                :integer
 #  current_semester_id            :integer
 #  npo_app_open                   :boolean
-#  student_app_open               :boolean
+#  dev_app_open                   :boolean
 #  cs169_app_open                 :boolean
 #  comparison_bonus               :integer          default(0)
 #  comparison_penalty             :integer          default(0)
@@ -20,6 +20,7 @@
 #  notify_bar_active              :boolean
 #  notify_bar_content             :text
 #  notify_bar_link                :string
+#  designer_app_open              :integer          default("not_accepting")
 #
 
 require 'rails_helper'

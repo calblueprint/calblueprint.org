@@ -13,20 +13,20 @@ en:
       applications_closed: >
         Applications are officially closed for this semester. We will be recruiting again next semester. Sign up to be notified when apps are ready!
       application_timeline:
-        infosession_date: Sep 3, 7:00 PM and Sep 4, 7:00 PM
+        infosession_date: Jan 27, 7:00 PM and Jan 30, 7:00 PM
         infosession: >
           Come out and talk to us to learn more about Blueprint at our infosession.
-          Our infosessions will be on Sep 3rd and 4th, in HP Auditorium in Soda Hall.
+          Our infosessions will be on Jan 27th and 30th, in HP Auditorium in Soda Hall.
         infosession_notice: Infosession Facebook event will be posted soon!
-        application_date: Sep 6, 11:59 PM
+        application_date: Jan 31, 11:59 PM
         application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blueprint's mission. Decisions will be emailed after this round on Sep 8 by 10 PM.
-          <strong>The application is due on September 6th at 11:59 PM.</strong>
+          Blueprint's mission. Decisions will be emailed after this round on Feb 2 by 10 PM.
+          <strong>The application is due on January 31th at 11:59 PM.</strong>
         designer_application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blueprint's mission. Requests for design interviews will be sent out on Sep 7 by 10 PM.
-          <strong>The application is due on September 6th at 11:59 PM.</strong>
+          Blueprint's mission. Requests for design interviews will be sent out on Feb 2 by 10 PM.
+          <strong>The application is due on January 31th at 11:59 PM.</strong>
         designer_interviews_date: Sep 8 - 9
         designer_interviews: >
           We will ask you to brainstorm with us and sketch out low-fidelity solutions in response to a
@@ -41,20 +41,22 @@ en:
         application_notice: >
           Student applications will be open at the beginning of the semester. Follow our
           <a href="https://www.facebook.com/calblueprint" target="_blank">Facebook page</a> to stay updated!
-        meet_the_club_date: Sep 11 - 12
+        meet_the_club_date: Feb 5 - 6
         meet_the_club: >
           Meet the Club is an event for you to get to know
           <a href="/about#team">our membership</a> in a casual setting! This event
           is by invitation only.
-        tech_round_date: Sep 9 - 13
+        tech_round_date: Feb 3 - 7
         tech_round: >
           A small exercise to give you a chance to showcase your technical resourcefulness and learning speed.
           We'll provide office hours and support documents throughout this time! The project will be emailed to
           invited candidates.
-        bp_games_date: Sep 14
+        bp_games_date: Feb 8
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
           critically. This round is by invitation only. Location and time will be emailed to invited candidates.
+        designer_not_accepted: >
+          We are not accepting any designers this semester. Check back next semester!
         interview_date: None
         interview: >
           The final step in the application process &mdash; we really want to feel your passion for social

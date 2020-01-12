@@ -14,7 +14,7 @@
 #  short_summary          :text
 #  goals                  :text
 #  key_features           :text
-#  devices                :string
+#  devices                :string(255)
 #  target_audience        :text
 #  why                    :text
 #  cs169_pool             :boolean          not null

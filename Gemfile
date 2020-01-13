@@ -14,7 +14,7 @@ gem 'google_maps_service'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
-gem 'devise', '~> 4.4.3'
+gem 'devise', '~> 4.7.1'
 gem 'devise_invitable', '~> 1.7.4'
 gem 'omniauth-facebook', '~> 2.0.1'
 gem 'omniauth-google-oauth2', '~> 0.2.6'

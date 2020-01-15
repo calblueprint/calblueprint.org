@@ -3,12 +3,17 @@
 .container.form-container
   .apply-page-header.marginBot-lg
     h1 Student Application
-    h2 Developer/Designer Position
+    - if @settings.dev_app_open && @settings.designer_app_open == 'open'
+      h2 Developer/Designer Position
+    - elsif @settings.dev_app_open
+      h2 Developer Position
+    - elsif @settings.designer_app_open == 'open'
+      h2 Designer Position
 
   p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
-    strong.apply-page-due< Friday, September 6th at 11:59 pm.
+    strong.apply-page-due< Friday, January 31st at 11:59 pm.
 
   p.static-page-desc
     | If you have any questions, please contact us

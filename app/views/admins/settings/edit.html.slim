@@ -9,7 +9,8 @@
       = f.input :npo_statement_of_interest_open, label: 'NPO Phase 1 Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.npo_statement_of_interest_open, item_wrapper_class: 'inline'
       = f.input :npo_project_proposal_open, label: 'NPO Phase 2 Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.npo_project_proposal_open, item_wrapper_class: 'inline'
       = f.input :cs169_app_open, label: 'CS169 Application Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.cs169_app_open, item_wrapper_class: 'inline'
-      = f.input :student_app_open, label: 'Student Application Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.student_app_open, item_wrapper_class: 'inline'
+      = f.input :dev_app_open, label: 'Developer Application Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.dev_app_open, item_wrapper_class: 'inline'
+      = f.input :designer_app_open, label: 'Designer Application Status', collection: [['open', 'Open'], ['closed', 'Closed'], ['not_accepting', 'Not Accepting']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.designer_app_open, item_wrapper_class: 'inline'
       = f.input :external_app_open, label: 'External Application Status', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.external_app_open, item_wrapper_class: 'inline'
 
     .settings-row

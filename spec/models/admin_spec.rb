@@ -18,8 +18,8 @@
 #  invitation_sent_at     :datetime
 #  invitation_accepted_at :datetime
 #  invitation_limit       :integer
-#  invited_by_id          :integer
 #  invited_by_type        :string
+#  invited_by_id          :integer
 #  invitations_count      :integer          default(0)
 #
 

@@ -51,3 +51,29 @@ fa19:
 
     - heard_from
     - add_to_newsletter
+
+sp20:
+  season: "spring"
+  year: "2020"
+  questions:
+    - name
+    - email
+    - phone
+    - year
+    - applied_before
+
+    - commitments
+    - available_for_gm
+    - available_for_bp_games
+
+    - mission_first
+    - always_innovate
+    - be_humble
+
+    - resume
+    - why_no_bp_games
+    - available_for_retreat
+    - why_no_retreat
+
+    - heard_from
+    - add_to_newsletter

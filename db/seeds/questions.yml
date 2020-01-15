@@ -77,7 +77,8 @@ application_type:
 
 available_for_bp_games:
   title: Will you be able to attend BP Games?
-  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on September 14, from 2-5 PM.
+  # TODO: Change time
+  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on February 8, from 2-5 PM.
   question_category: general
   question_type: multiple_choice_radio
   choices: Yes,No
@@ -129,7 +130,7 @@ resume:
 
 available_for_retreat:
   title: Will you be able to attend Blueprint Retreat?
-  hint: Retreat will be the evening of September 20 to the morning of September 22.
+  hint: Retreat will be the evening of February 14 to the morning of February 16.
   question_category: more_questions
   question_type: multiple_choice_radio
   choices: Yes,No

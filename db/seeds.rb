@@ -6,49 +6,49 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-def seed_semesters
-  Semester.find_or_create_by! season: 'spring', year: '2019'
-end
-
-def seed_questions
-  Question.find_or_create_by! tag: :name,
-                              title: "What's your name?",
-                              hint: "No hint",
-                              question_category: 0,
-                              question_type: 0,
-                              required: true
-  Question.find_or_create_by! tag: :why_join,
-                              title: "Why are you here?",
-                              hint: "",
-                              question_category: 0,
-                              question_type: 1,
-                              required: true
-  Question.find_or_create_by! tag: :year,
-                              title: "What year are you?",
-                              hint: "graduate students only",
-                              question_category: 0,
-                              question_type: 0,
-                              required: true
-end
-
-QuestionSemester.destroy_all
-Semester.destroy_all
-Question.destroy_all
-seed_semesters
-seed_questions
-
-QuestionSemester.create! question: Question.first, semester: Semester.first, question_order: 5
-QuestionSemester.create! question: Question.second, semester: Semester.first, question_order: 3
-QuestionSemester.create! question: Question.third, semester: Semester.first, question_order: 2
-
-
-
-
-# def seed_admins
-#   Admin.create_with(password: 'password').find_or_create_by!(
-#     first_name: 'Blueprint', last_name: 'Admin', email: 'admin@calblueprint.org', role: "super_admin"
-#   )
+# def seed_semesters
+#   Semester.find_or_create_by! season: 'spring', year: '2019'
 # end
+
+# def seed_questions
+#   Question.find_or_create_by! tag: :name,
+#                               title: "What's your name?",
+#                               hint: "No hint",
+#                               question_category: 0,
+#                               question_type: 0,
+#                               required: true
+#   Question.find_or_create_by! tag: :why_join,
+#                               title: "Why are you here?",
+#                               hint: "",
+#                               question_category: 0,
+#                               question_type: 1,
+#                               required: true
+#   Question.find_or_create_by! tag: :year,
+#                               title: "What year are you?",
+#                               hint: "graduate students only",
+#                               question_category: 0,
+#                               question_type: 0,
+#                               required: true
+# end
+
+# QuestionSemester.destroy_all
+# Semester.destroy_all
+# Question.destroy_all
+# seed_semesters
+# seed_questions
+
+# QuestionSemester.create! question: Question.first, semester: Semester.first, question_order: 5
+# QuestionSemester.create! question: Question.second, semester: Semester.first, question_order: 3
+# QuestionSemester.create! question: Question.third, semester: Semester.first, question_order: 2
+
+
+
+
+def seed_admins
+  Admin.create_with(password: 'password').find_or_create_by!(
+    first_name: 'Blueprint', last_name: 'Admin', email: 'admin@calblueprint.org', role: "super_admin"
+  )
+end
 #
 # def seed_semesters
 #   Semester.find_or_create_by! season: 'spring', year: '2013'
@@ -128,7 +128,7 @@ QuestionSemester.create! question: Question.third, semester: Semester.first, que
 #   `rake update:members`
 # end
 #
-# seed_admins
+seed_admins
 # seed_semesters
 # seed_applicants
 # seed_student_applications

@@ -20,13 +20,14 @@
       = f.input :applicants_remaining, label: 'Applicant Cutoff', item_wrapper_class: 'inline'
 
     .settings-row
-      = f.input :infosession_open, label: 'Infosession Open', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.infosession_open, item_wrapper_class: 'inline'
       .input-group.inline
-        = f.input :infosession_link_one, label: 'Infosession 1 Link'
-        = f.input :infosession_date_one, label: 'Infosession 1 Date', as: :datetime
+        = f.input :infosession_one, label: 'Infosession 1 Open', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.infosession_one, item_wrapper_class: 'inline'
+        = f.input :infosession_one_link, label: 'Infosession 1 Link'
+        = f.input :infosession_one_date, label: 'Infosession 1 Date', as: :datetime
       .input-group.inline
-        = f.input :infosession_link_two, label: 'Infosession 2 Link'
-        = f.input :infosession_date_two, label: 'Infosession 2 Date', as: :datetime
+        = f.input :infosession_two, label: 'Infosession 2 Open', collection: [[true, 'Open'], [false, 'Closed']], as: :radio_buttons, label_method: :last, value_method: :first, checked: @settings.infosession_two, item_wrapper_class: 'inline'
+        = f.input :infosession_two_link, label: 'Infosession 2 Link'
+        = f.input :infosession_two_date, label: 'Infosession 2 Date', as: :datetime
 
     .settings-row
       .inline

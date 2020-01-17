@@ -42,16 +42,19 @@
   
   .settings-row
     .settings-item
-      h2 Infosession Open
-      p = @settings.infosession_open
-    .settings-item
       h2 Infosession 1
-      p = not @settings.infosession_link_one.empty?
-      p = @settings.infosession_date_one
+      p = @settings.infosession_one
+      strong Link
+      p = not @settings.infosession_one_link.empty?
+      strong Date and Time
+      p = @settings.infosession_one_date
     .settings-item
       h2 Infosession 2
-      p = not @settings.infosession_link_two.empty?
-      p = @settings.infosession_date_two
+      p = @settings.infosession_two
+      strong Link
+      p = not @settings.infosession_two_link.empty?
+      strong Date and Time
+      p = @settings.infosession_two_date
     
   .settings-row
     .settings-item

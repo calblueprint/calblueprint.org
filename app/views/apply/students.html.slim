@@ -40,27 +40,32 @@ section.application-process-section#application-process
         .num-col
           .timeline-num 01
         .text-col
-          - if !@settings.infosession_link_one.empty? && !@settings.infosession_link_two.empty?
+          - if @settings.infosession_one && @settings.infosession_two
             / Two infosessions
-            .timeline-row-title = t ".application_timeline.infosession.title_plural"
-            .timeline-row-date = "#{@info1date},#{@info1time} and #{@info2date},#{@info2time}"
-            .timeline-row-description = t ".application_timeline.infosession.description", date: "#{@info1date} and #{@info2date}"
+            .timeline-row-title = t(".application_timeline.infosession.title").pluralize
+            .timeline-row-date = "#{@info1_date},#{@info1_time} and #{@info2_date},#{@info2_time}"
+            .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: "#{@info1_date} and #{@info2_date}"}"
             .timeline-row-btn
-              - if @settings.infosession_open
-                = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1date})", @settings.infosession_link_one, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-                = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2date})", @settings.infosession_link_two, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-              - else
-                .timeline-row-notice = t ".application_timeline.infosession_notice"
-          - else
+              - if not @settings.infosession_one_link.empty?
+                = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1_date})", @settings.infosession_one_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              - if not @settings.infosession_two_link.empty?
+                = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2_date})", @settings.infosession_two_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              - if @settings.infosession_one_link.empty? && @settings.infosession_two_link.empty?
+                .timeline-row-notice = t ".application_timeline.infosession.notice"
+          - elsif @settings.infosession_one || @settings.infosession_two
             / One infosession
             .timeline-row-title #{t ".application_timeline.infosession.title"}
-            .timeline-row-date = "#{@info1date},#{@info1time}"
-            .timeline-row-description = t ".application_timeline.infosession.description", date: @info1date
+            .timeline-row-date = "#{@info_date},#{@info_time}"
+            .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: @info_date}"
             .timeline-row-btn
-              - if @settings.infosession_open
-                = link_to "#{t ".application_timeline.infosession.title"} (#{@info1date})", @settings.infosession_link_one, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              - if not @info_link.empty?
+                = link_to "#{t ".application_timeline.infosession.title"} (#{@info_date})", @info_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
               - else
                 .timeline-row-notice = t ".application_timeline.infosession.notice"
+          - else
+            / Closed
+            .timeline-row-title #{t ".application_timeline.infosession.title"}
+            .timeline-row-description = t ".application_timeline.infosession.description"
       / Application
       .timeline-row
         .num-col
@@ -110,27 +115,32 @@ section.application-process-section#application-process
           .num-col
             .timeline-num 01
           .text-col
-            - if !@settings.infosession_link_one.empty? && !@settings.infosession_link_two.empty?
+            - if @settings.infosession_one && @settings.infosession_two
               / Two infosessions
-              .timeline-row-title = t ".application_timeline.infosession.title_plural"
-              .timeline-row-date = "#{@info1date},#{@info1time} and #{@info2date},#{@info2time}"
-              .timeline-row-description = t ".application_timeline.infosession.description", date: "#{@info1date} and #{@info2date}"
+              .timeline-row-title = t(".application_timeline.infosession.title").pluralize
+              .timeline-row-date = "#{@info1_date},#{@info1_time} and #{@info2_date},#{@info2_time}"
+              .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: "#{@info1_date} and #{@info2_date}"}"
               .timeline-row-btn
-                - if @settings.infosession_open
-                  = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1date})", @settings.infosession_link_one, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-                  = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2date})", @settings.infosession_link_two, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-                - else
-                  .timeline-row-notice = t ".application_timeline.infosession_notice"
-            - else
+                - if not @settings.infosession_one_link.empty?
+                  = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1_date})", @settings.infosession_one_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+                - if not @settings.infosession_two_link.empty?
+                  = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2_date})", @settings.infosession_two_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+                - if @settings.infosession_one_link.empty? && @settings.infosession_two_link.empty?
+                  .timeline-row-notice = t ".application_timeline.infosession.notice"
+            - elsif @settings.infosession_one || @settings.infosession_two
               / One infosession
               .timeline-row-title #{t ".application_timeline.infosession.title"}
-              .timeline-row-date = "#{@info1date},#{@info1time}"
-              .timeline-row-description = t ".application_timeline.infosession.description", date: @info1date
+              .timeline-row-date = "#{@info_date},#{@info_time}"
+              .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: @info_date}"
               .timeline-row-btn
-                - if @settings.infosession_open
-                  = link_to "#{t ".application_timeline.infosession.title"} (#{@info1date})", @settings.infosession_link_one, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+                - if not @info_link.empty?
+                  = link_to "#{t ".application_timeline.infosession.title"} (#{@info_date})", @info_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
                 - else
                   .timeline-row-notice = t ".application_timeline.infosession.notice"
+            - else
+              / Closed
+              .timeline-row-title #{t ".application_timeline.infosession.title"}
+              .timeline-row-description = t ".application_timeline.infosession.description"
         / Application
         .timeline-row
           .num-col

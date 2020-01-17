@@ -12,12 +12,15 @@ en:
         and skills to make the world a better place.
       applications_closed: >
         Applications are officially closed for this semester. We will be recruiting again next semester. Sign up to be notified when apps are ready!
+
       application_timeline:
-        infosession_date: Jan 30, 6:30 PM
-        infosession: >
-          Come out and talk to us to learn more about Blueprint at our infosession.
-          Our infosessions will be on Jan 30th, in HP Auditorium in Soda Hall.
-        infosession_notice: Infosession Facebook event will be posted soon!
+        infosession:
+          title: Infosession
+          description: >
+            Come out and talk to us to learn more about Blueprint at our infosession.
+          detail: >
+            Our infosession will be on %{date} in HP Auditorium, Soda Hall.
+          notice: Infosession Facebook event will be posted soon!
         application_date: Jan 31, 11:59 PM
         application: >
           The application includes 3 short response questions to help us understand your connection to
@@ -49,29 +52,45 @@ en:
         tech_round_date: Feb 3 - 7
         tech_round: >
           A small exercise to give you a chance to showcase your technical resourcefulness and learning speed.
-          We'll provide office hours and support documents throughout this time! The project will be emailed to
-          invited candidates.
+          It will be kicked off with an introductory workshop followed by a take-home portion.
+          Time and location will be emailed to invited candidates.
         bp_games_date: Feb 8
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
-          critically. This round is by invitation only. Location and time will be emailed to invited candidates.
+          critically. This round is by invitation only. Time and location will be emailed to invited candidates.
         designer_not_accepted: >
-          We are not accepting any designers this semester. Check back next semester!
+          We are not accepting any designers this semester 😞<br>Check back next semester!
         interview_date: None
         interview: >
           The final step in the application process &mdash; we really want to feel your passion for social
           good in person. Final decisions will be announced from this event.
+
       decision_criteria:
+        title: Decision Criteria
         description: >
           If we could, we would accept every applicant but unfortunately we cannot manage the volume
           of people and administrative overhead while still fulfilling our mission to the best of
           our abilities. The following criteria are what we use to evaluate applicants.
+        passion: Passion
+        passion_description: Do you demonstrate a genuine passion for social good?
+        growth: Growth
+        growth_description: Do you push yourself to grow in any setting? Do you seek out new ways to grow?
+        adaptability: Resourceful
+        adaptability_description: Do you adapt and explore in order to overcome difficulties?
+        attitude: Attitude
+        attitude_description: Do you demonstrate positive, hard-working attitude?
+        teamwork: Teamwork
+        teamwork_description: Do you display the ability to work well in a team?
+        culture: Culture
+        culture_description: Do you value empowering non-profits to achieve their missions through tech?
+
       faq:
+        title: Frequently Asked Questions
         q1:
           question: What is Blueprint's project structure?
           answer: >
-            Blueprint's project structure consists of 4-5 project teams, each with a project leader and 4
-            developers on the team. Each project team is in charge of creating technology resources
+            Blueprint's project structure consists of 4-5 project teams, each with a project leader, a designer, 
+            and 4 developers on the team. Each project team is in charge of creating technology resources
             for a specific non-profit they work with.
         q2:
           question: How are client team interactions conducted?
@@ -88,4 +107,7 @@ en:
             at UC Berkeley, just like you. Through effective leadership, frequent check-ins, and an
             organized project timeline set with our clients, we hope that the combination of talent,
             dedication, and care will result in projects that benefit the non-profits we work with.
-      newsletter: Sign up for our newsletter to get updates about events, our work and applications!
+
+      get_involved:
+        title: Get Involved
+        newsletter: Sign up for our newsletter to get updates about events, our work and applications!

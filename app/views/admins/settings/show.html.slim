@@ -8,6 +8,7 @@
     .settings-item
       h2 Current Semester
       p = @settings.current_semester
+  
   .settings-row
     .settings-item
       h2 NPO Applications Open
@@ -38,3 +39,24 @@
     .settings-item
       h2 Remaining Applicant Cutoff
       p = @settings.applicants_remaining
+  
+  .settings-row
+    .settings-item
+      h2 Infosession 1
+      p = @settings.infosession_one
+      strong Link
+      p = not @settings.infosession_one_link.empty?
+      strong Date and Time
+      p = @settings.infosession_one_date
+    .settings-item
+      h2 Infosession 2
+      p = @settings.infosession_two
+      strong Link
+      p = not @settings.infosession_two_link.empty?
+      strong Date and Time
+      p = @settings.infosession_two_date
+    
+  .settings-row
+    .settings-item
+      h2 Notify Bar Active
+      p = @settings.notify_bar_active

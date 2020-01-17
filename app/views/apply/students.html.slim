@@ -7,6 +7,7 @@ section.static-page-hero.student-apply-hero
       = t ".headline"
     p.static-page-subtitle.light.marginBot-lg
       = t ".subtitle"
+    / Application Buttons
     .static-page-hero-btn-container.marginTop-xl
       - if @settings.dev_app_open && @settings.designer_app_open == 'open'
         = link_to "Apply as a Developer/Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs"
@@ -26,7 +27,7 @@ section.static-page-hero.student-apply-hero
         li.page-nav-link section-name="application-process"
           | Application Process
         li.page-nav-link section-name="decision-criteria"
-          | Decision Criteria
+          = t ".decision_criteria.title"
         li.page-nav-link section-name="faqs"
           | FAQs
 
@@ -34,21 +35,38 @@ section.application-process-section#application-process
   .container.marginBot-lg
     h2.static-page-header.marginBot-xxl Developer Application Process
     .student-timeline
-
+      / Infosession
       .timeline-row
         .num-col
           .timeline-num 01
         .text-col
-          .timeline-row-title Infosessions
-          .timeline-row-date = t ".application_timeline.infosession_date"
-          .timeline-row-description = raw t ".application_timeline.infosession"
-          .timeline-row-btn
-            - if SocialMediaUrls::INFOSESSION
-              = link_to "Infosession 1 (Sep 3)", "https://www.facebook.com/events/377972689556632/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-              = link_to "Infosession 2 (Sep 4)", "https://www.facebook.com/events/756476104772962/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-            - if not SocialMediaUrls::INFOSESSION
-              .timeline-row-notice = t ".application_timeline.infosession_notice"
-
+          - if @settings.infosession_one && @settings.infosession_two
+            / Two infosessions
+            .timeline-row-title = t(".application_timeline.infosession.title").pluralize
+            .timeline-row-date = "#{@info1_date},#{@info1_time} and #{@info2_date},#{@info2_time}"
+            .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: "#{@info1_date} and #{@info2_date}"}"
+            .timeline-row-btn
+              - if not @settings.infosession_one_link.empty?
+                = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1_date})", @settings.infosession_one_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              - if not @settings.infosession_two_link.empty?
+                = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2_date})", @settings.infosession_two_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              - if @settings.infosession_one_link.empty? && @settings.infosession_two_link.empty?
+                .timeline-row-notice = t ".application_timeline.infosession.notice"
+          - elsif @settings.infosession_one || @settings.infosession_two
+            / One infosession
+            .timeline-row-title #{t ".application_timeline.infosession.title"}
+            .timeline-row-date = "#{@info_date},#{@info_time}"
+            .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: @info_date}"
+            .timeline-row-btn
+              - if not @info_link.empty?
+                = link_to "#{t ".application_timeline.infosession.title"} (#{@info_date})", @info_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+              - else
+                .timeline-row-notice = t ".application_timeline.infosession.notice"
+          - else
+            / Closed
+            .timeline-row-title #{t ".application_timeline.infosession.title"}
+            .timeline-row-description = t ".application_timeline.infosession.description"
+      / Application
       .timeline-row
         .num-col
           .timeline-num 02
@@ -61,23 +79,23 @@ section.application-process-section#application-process
               = link_to "Developer Application", new_student_application_path, class: "bp-btn"
             - else
               .timeline-row-notice = raw t ".application_timeline.application_notice"
-
+      / Build with Blueprint
       .timeline-row
         .num-col
           .timeline-num 03
         .text-col
-          .timeline-row-title Meet the Club
-          .timeline-row-date = t ".application_timeline.meet_the_club_date"
-          .timeline-row-description = raw t ".application_timeline.meet_the_club"
-
+          .timeline-row-title Build with Blueprint
+          .timeline-row-date = t ".application_timeline.tech_round_date"
+          .timeline-row-description = t ".application_timeline.tech_round"
+      / Meet the Club
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
-          .timeline-row-title Build with Blueprint
-          .timeline-row-date = t ".application_timeline.tech_round_date"
-          .timeline-row-description = t ".application_timeline.tech_round"
-
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+      / Blueprint Games
       .timeline-row
         .num-col
           .timeline-num 05
@@ -89,22 +107,41 @@ section.application-process-section#application-process
   .container
     h2.static-page-header.marginBot-xxl Designer Application Process
     - if @settings.designer_app_open == 'not_accepting'
-      p.static-page-desc = t ".application_timeline.designer_not_accepted"
+      p.static-page-desc = raw t ".application_timeline.designer_not_accepted"
     - else
       .student-timeline
+        / Infosession
         .timeline-row
           .num-col
             .timeline-num 01
           .text-col
-            .timeline-row-title Infosessions
-            .timeline-row-date = t ".application_timeline.infosession_date"
-            .timeline-row-description = raw t ".application_timeline.infosession"
-            .timeline-row-btn
-              - if SocialMediaUrls::INFOSESSION
-                = link_to "Infosession 1 (Sep 3)", "https://www.facebook.com/events/377972689556632/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-                = link_to "Infosession 2 (Sep 4)", "https://www.facebook.com/events/756476104772962/", class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-              - if not SocialMediaUrls::INFOSESSION
-                .timeline-row-notice = t ".application_timeline.infosession_notice"
+            - if @settings.infosession_one && @settings.infosession_two
+              / Two infosessions
+              .timeline-row-title = t(".application_timeline.infosession.title").pluralize
+              .timeline-row-date = "#{@info1_date},#{@info1_time} and #{@info2_date},#{@info2_time}"
+              .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: "#{@info1_date} and #{@info2_date}"}"
+              .timeline-row-btn
+                - if not @settings.infosession_one_link.empty?
+                  = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1_date})", @settings.infosession_one_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+                - if not @settings.infosession_two_link.empty?
+                  = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2_date})", @settings.infosession_two_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+                - if @settings.infosession_one_link.empty? && @settings.infosession_two_link.empty?
+                  .timeline-row-notice = t ".application_timeline.infosession.notice"
+            - elsif @settings.infosession_one || @settings.infosession_two
+              / One infosession
+              .timeline-row-title #{t ".application_timeline.infosession.title"}
+              .timeline-row-date = "#{@info_date},#{@info_time}"
+              .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: @info_date}"
+              .timeline-row-btn
+                - if not @info_link.empty?
+                  = link_to "#{t ".application_timeline.infosession.title"} (#{@info_date})", @info_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
+                - else
+                  .timeline-row-notice = t ".application_timeline.infosession.notice"
+            - else
+              / Closed
+              .timeline-row-title #{t ".application_timeline.infosession.title"}
+              .timeline-row-description = t ".application_timeline.infosession.description"
+        / Application
         .timeline-row
           .num-col
             .timeline-num 02
@@ -117,6 +154,7 @@ section.application-process-section#application-process
                 = link_to "Designer Application", new_student_application_path, class: "bp-btn"
               - elsif @settings.designer_app_open == 'closed'
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
+        / Interview
         .timeline-row
           .num-col
             .timeline-num 03
@@ -124,6 +162,7 @@ section.application-process-section#application-process
             .timeline-row-title Designer Interviews
             .timeline-row-date = t ".application_timeline.designer_interviews_date"
             .timeline-row-description = raw t ".application_timeline.designer_interviews" 
+        / Meet the Club
         .timeline-row
           .num-col
             .timeline-num 04
@@ -131,6 +170,7 @@ section.application-process-section#application-process
             .timeline-row-title Meet the Club
             .timeline-row-date = t ".application_timeline.meet_the_club_date"
             .timeline-row-description = raw t ".application_timeline.meet_the_club"
+        / Design Challenge
         .timeline-row
           .num-col
             .timeline-num 05
@@ -139,40 +179,42 @@ section.application-process-section#application-process
             .timeline-row-date = t ".application_timeline.designer_challenge_date"
             .timeline-row-description = t ".application_timeline.designer_challenge"
 
+/ Decision Criteria
 section.application-decision-criteria-section#decision-criteria
   .container
-    h2.static-page-header.marginBot-lg Decision Criteria
+    h2.static-page-header.marginBot-lg = t ".decision_criteria.title"
     p.static-page-desc.marginBot-xxl = t ".decision_criteria.description"
 
     ul.decision-criteria-list-container.marginBot-lg
       li.decision-criteria-item
         .img-container: img src=image_url("apply/students/passion.png") alt=""/
-        h3 Passion
-        p Do you demonstrate a genuine passion for social good?
+        h3 = t ".decision_criteria.passion"
+        p = t ".decision_criteria.passion_description"
       li.decision-criteria-item
-        .img-container: img src=image_url("apply/students/skill.png") alt=""/
-        h3 Skill
-        p Do you have the necessary skills to productively contribute to the mission?
+        .img-container: img src=image_url("apply/students/growth.png") alt=""/
+        h3 = t ".decision_criteria.growth"
+        p = t ".decision_criteria.growth_description"
       li.decision-criteria-item
-        .img-container: img src=image_url("apply/students/experience.png") alt=""/
-        h3 Experience
-        p Do you have relevant work experience? Volunteering experience?
+        .img-container: img src=image_url("apply/students/adaptability.png") alt=""/
+        h3 = t ".decision_criteria.adaptability"
+        p = t ".decision_criteria.adaptability_description"
       li.decision-criteria-item
         .img-container: img src=image_url("apply/students/attitude.png") alt=""/
-        h3 Attitude
-        p Do you demonstrate positive, hard-working attitude?
+        h3 = t ".decision_criteria.attitude"
+        p = t ".decision_criteria.attitude_description"
       li.decision-criteria-item
         .img-container: img src=image_url("apply/students/teamwork.png") alt=""/
-        h3 Teamwork
-        p Do you display the ability to work well in a team?
+        h3 = t ".decision_criteria.teamwork"
+        p = t ".decision_criteria.teamwork_description"
       li.decision-criteria-item
         .img-container: img src=image_url("apply/students/culture.png") alt=""/
-        h3 Culture
-        p Will you get along well with the rest of Blueprint?
+        h3 = t ".decision_criteria.culture"
+        p = t ".decision_criteria.culture_description"
 
+/ Frequently Asked Questions
 section.application-faqs-section#faqs
   .container
-    h2.static-page-header.marginBot-xl Frequently Asked Questions
+    h2.static-page-header.marginBot-xl = t ".faq.title"
     h3 = t ".faq.q1.question"
     p = t ".faq.q1.answer"
     h3 = t ".faq.q2.question"
@@ -180,8 +222,9 @@ section.application-faqs-section#faqs
     h3 = t ".faq.q3.question"
     p = t ".faq.q3.answer"
 
+/ Get Involved
 section.application-newsletter
   .container
-    h2.static-page-header.marginBot-md Get Involved
-    p.static-page-desc.marginBot-lg = t ".newsletter"
+    h2.static-page-header.marginBot-md = t ".get_involved.title"
+    p.static-page-desc.marginBot-lg = t ".get_involved.newsletter"
     = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"

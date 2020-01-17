@@ -23,6 +23,7 @@ module Admins
         :npo_app_open, :cs169_app_open, :dev_app_open, :designer_app_open, :current_semester_id,
         :comparison_bonus, :comparison_penalty, :comparison_threshold, :applicants_remaining,
         :external_app_open, :npo_statement_of_interest_open, :npo_project_proposal_open,
+        :infosession_open, :infosession_link_one, :infosession_date_one, :infosession_link_two, :infosession_date_two,
         :notify_bar_active, :notify_bar_content, :notify_bar_link
       )
     end

@@ -21,6 +21,11 @@
 #  notify_bar_content             :text
 #  notify_bar_link                :string
 #  designer_app_open              :integer          default("closed")
+#  infosession_open               :boolean          default(FALSE)
+#  infosession_link_one           :string           default("")
+#  infosession_date_one           :datetime
+#  infosession_link_two           :string           default("")
+#  infosession_date_two           :datetime
 #
 
 class Settings < ActiveRecord::Base
@@ -34,6 +39,7 @@ class Settings < ActiveRecord::Base
   validates :dev_app_open, inclusion: [true, false]
   validates :external_app_open, inclusion: [true, false]
   validates :current_semester_id, presence: true
+  validates :infosession_open, inclusion: [true, false]
 
   def self.instance
     first_or_create npo_app_open: false,
@@ -45,6 +51,7 @@ class Settings < ActiveRecord::Base
                     external_app_open: false,
                     current_semester_id: Semester.first_or_create(season: :spring, year: '2020').id,
                     notify_bar_active: false,
+                    infosession_open: false,
                     singleton_guard: 0
   end
 

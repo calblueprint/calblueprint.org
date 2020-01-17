@@ -21,6 +21,11 @@
 #  notify_bar_content             :text
 #  notify_bar_link                :string
 #  designer_app_open              :integer          default("closed")
+#  infosession_open               :boolean          default(FALSE)
+#  infosession_link_one           :string           default("")
+#  infosession_date_one           :datetime
+#  infosession_link_two           :string           default("")
+#  infosession_date_two           :datetime
 #
 
 require 'rails_helper'

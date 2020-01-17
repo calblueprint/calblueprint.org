@@ -275,9 +275,9 @@ ActiveRecord::Schema.define(version: 2020_01_16_223444) do
     t.integer "designer_app_open", default: 1
     t.boolean "infosession_open", default: false
     t.string "infosession_link_one", default: ""
-    t.datetime "infosession_date_one"
+    t.datetime "infosession_date_one", default: -> { "CURRENT_TIMESTAMP" }
     t.string "infosession_link_two", default: ""
-    t.datetime "infosession_date_two"
+    t.datetime "infosession_date_two", default: -> { "CURRENT_TIMESTAMP" }
     t.index ["current_semester_id"], name: "index_settings_on_current_semester_id"
     t.index ["singleton_guard"], name: "index_settings_on_singleton_guard", unique: true
   end

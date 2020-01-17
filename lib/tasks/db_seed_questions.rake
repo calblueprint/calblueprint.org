@@ -13,7 +13,7 @@ def db_seed_questions
   path = Rails.root.join('db','seeds','questions.yml')
   File.open(path) do |file|
     # puts "Seeding App Questions from #{path}"
-    YAML.load_documents(file) do |doc|
+    YAML.load_stream(file) do |doc|
       doc.keys.sort.each do |tag|
         # puts "Seeding question with tag #{tag}"
         attributes = doc[tag]

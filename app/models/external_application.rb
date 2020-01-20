@@ -51,16 +51,17 @@ class ExternalApplication < ActiveRecord::Base
                        content_type: { content_type: "application/pdf" },
                        size: { in: 0..1.megabytes }
 
-  # validates_attachment :design_portfolio,
-  #                      content_type: { content_type: "application/pdf" },
-  #                      size: { in: 0..10.megabytes }
+  validates_attachment :design_portfolio,
+                       content_type: { content_type: "application/pdf" },
+                       size: { in: 0..10.megabytes }
 
   validates_attachment_presence :resume
-  # validate :design_portfolio_present
+  validate :design_portfolio_present, if: :design?
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true
 
+  validates :applied_before, inclusion: [true, false]
   validates :social_links, presence: true
   validates :personal_growth, presence: true
   validates :why_join, presence: true
@@ -70,8 +71,8 @@ class ExternalApplication < ActiveRecord::Base
   validates :name, presence: true
   validates :commitments, presence: true
   validates :major, presence: true
-  # validates :design_portfolio_link, url: true, allow_blank: true
-  # validate :at_least_one_position
+  validates :design_portfolio_link, url: true, allow_blank: true
+  validate :at_least_one_position
 
   # validates_presence_of :design_experience, if: :design?
 
@@ -96,7 +97,7 @@ class ExternalApplication < ActiveRecord::Base
   end
 
   def at_least_one_position
-    if (not [self.operations, self.outreach, self.content].include? true) && self.additional_option.blank?
+    if (not [self.operations, self.content, self.design].include? true) && self.additional_option.blank?
       errors[:base] << ("Please choose at least one position to apply for.")
     end
   end

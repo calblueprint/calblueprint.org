@@ -3,18 +3,16 @@
 .container.form-container
   .apply-page-header.marginBot-lg
     h1 Student Application
-    h2 External Team — Community Outreach Director
+    h2 External Team
 
   p.static-page-desc.marginBot-md
     = t ".banner"
     | The application is due on
-    strong.apply-page-due< Friday, September 6th at 11:59 pm.
+    strong.apply-page-due< Friday, January 31st at 11:59 pm.
 
   p.static-page-desc
-    | This semester, we are only looking for a Community Outreach Director.
-      If you have any questions or would like to learn more about the position,
-      please check
-    span< = link_to "here", 'https://paper.dropbox.com/doc/Blueprint-External-were-recruiting-bpw-bp-bpw--AjI7GHz7Z6ll1jlARFjJ9Dx7Ag-cUSfc4QS1yIL08IYY60I5'
+    | If you have any questions, please contact us
+    span< = link_to "here", new_contact_form_path
     |. Good luck!
 
   .application-form.marginTop-xl
@@ -27,25 +25,28 @@
       = f.input :major
       = f.input :year
 
-      / .apply-page-jumbotron
-      /   h3 Positions Applying For
-      /   p
-      /     ' See
-      /     a href="https://paper.dropbox.com/doc/Blueprint-External-were-recruiting--ALC4fPNxNMynyemsKDc7jqvxAQ-5gkLEDk0SawSTLGOrWt1P" target="_blank" this doc
-      /     '  for more information about the positions.
-      /   = f.input :operations, label: "Director of Operations", input_html: { checked: false }
-      /   = f.input :content, label: "Director of Content", input_html: { checked: false }
-      /   = f.input :outreach, label: "Director of Outreach", input_html: { checked: false }
-      /   = f.input :additional_option, label: "Additional Option (Do you think you can contribute something else?)"
+      .apply-page-jumbotron
+        h3 Positions Applying For
+        p
+          ' See
+          a href="https://paper.dropbox.com/published/blueprint-Blueprint-External-were-recruiting-s4IWvqvWIgSwTLclmxG3gX2" target="_blank" this doc
+          '  for more information about the positions.
+        = f.input :operations, label: "Director of Operations", as: :boolean
+        = f.input :content, label: "Director of Content", as: :boolean
+        = f.input :design, label: "Director of Marketing", as: :boolean
+        / = f.input :additional_option, label: "Additional Option (Do you think you can contribute something else?)"
 
-      = f.input :applied_before, as: :radio_buttons
+      = f.input :applied_before, as: :radio_buttons, required: true
 
       = f.input :why_join
       = f.input :experience
       = f.input :personal_growth
       = f.input :commitments
+    
       = f.input :social_links
       = f.input :resume, as: :file, required: true
+      = f.input :design_portfolio, as: :file, required: true
+      = f.input :design_portfolio_link
 
       label for='available_for_gm'
         input.marginRight-xs.marginBot-xxl type='checkbox' name='available_for_gm' id='available_for_gm'
@@ -58,6 +59,14 @@ javascript:
   // $('.external_application_why_no_bp_games').hide();
   $('.external_application_why_no_retreat').hide();
   $('.external_application_website').hide();
+  if($('#external_application_design').is(':checked')) {
+    $('.external_application_design_portfolio').show();
+    $('.external_application_design_portfolio_link').show();
+  } else {
+    $('.external_application_design_portfolio').hide();
+    $('.external_application_design_portfolio_link').hide();
+  }
+  
 
   // $('#external_application_available_for_bp_games').on('click', function() {
   //   if($(this).is(':checked')) {
@@ -85,11 +94,13 @@ javascript:
 
   $('#external_application_design').on('click', function() {
     if($(this).is(':checked')) {
-      $('.external_application_website').show();
+      $('.external_application_design_portfolio').show();
+      $('.external_application_design_portfolio_link').show();
     } else {
-      $('.external_application_website').hide();
+      $('.external_application_design_portfolio').hide();
+      $('.external_application_design_portfolio_link').hide();
     }
-  })
+  });
 
   // HACK: Can't do multiline placeholders any other way. Lots of code repetition here. Delete soon.
 

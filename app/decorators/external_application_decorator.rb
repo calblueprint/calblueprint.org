@@ -4,6 +4,9 @@ class ExternalApplicationDecorator < ApplicationDecorator
   def display_attributes
     [:year,
      :major,
+     [:operations, "Applied for Operations Director"],
+     [:content, "Applied for Content Director"],
+     [:design, "Applied for Marketing Director"],
      [:applied_before, "Applied before?"],
      [:why_join, ::I18n.t("simple_form.labels.external_application.why_join")],
      [:experience, ::I18n.t("simple_form.labels.external_application.experience")],
@@ -12,7 +15,9 @@ class ExternalApplicationDecorator < ApplicationDecorator
      :commitments,
      :resume,
      :phone,
-     :email]
+     :email,
+     :design_portfolio,
+     :design_portfolio_link]
   end
 
   def resume

@@ -53,7 +53,7 @@ class StudentApplication < ActiveRecord::Base
 
   # Call on each response object to validate itself. Pass Student Application Error Object
   def validate_responses
-    StudentApplication.includes(:responses).find(self.id).responses.each do |response|
+    self.responses.each do |response|
       response.validate_response errors
     end
   end

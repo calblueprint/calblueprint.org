@@ -25,9 +25,9 @@ class StudentApplicationsController < ApplicationController
 
         if value
           if question.question_type == "attachment"
-            @student_application.responses.build question: question, file: response_params[key]
+            @student_application.responses.build question: question, file: value
           else
-            @student_application.responses.build question: question, answer: response_params[key].gsub("\u0000", '')
+            @student_application.responses.build question: question, answer: value.gsub("\u0000", '')
           end
         else
           # Will be the case for unattached files
@@ -39,7 +39,6 @@ class StudentApplicationsController < ApplicationController
         end
         @student_application.semester = @settings.current_semester
       end
-
 
       if @student_application.save
         applicant.update_attributes(name: @student_application.name)

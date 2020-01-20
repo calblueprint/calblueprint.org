@@ -95,7 +95,7 @@ design_portfolio:
 # Short answer questions
 
 mission_first:
-  title: What is a cause you're passionate about? Describe your experiences and perspectives from this cause, and how this led you to apply to Blueprint.
+  title: Given all the other opportunities available to you at Cal, why do you want to join Blueprint? What does tech for social good mean to you?
   hint: Please limit your response to 200 words.
   question_category: short_answer
   question_type: long_text

@@ -1,5 +1,6 @@
 .student_applications,
-.external_applications {
+.external_applications,
+.demographic_surveys {
   .container {
     max-width: 850px;
   }
@@ -34,7 +35,8 @@
   }
 }
 
-.apply-page-due {
+.apply-page-due,
+.emph-optional {
   color: $bp-blue;
 }
 
@@ -50,4 +52,14 @@
   padding: 40px;
   background-color: $smoke-20;
   border-radius: 8px;
+}
+
+.demographic_surveys {
+  .form-group {
+    margin: 50px 0;
+  }
+
+  .input-group {
+    margin: 0;
+  }
 }

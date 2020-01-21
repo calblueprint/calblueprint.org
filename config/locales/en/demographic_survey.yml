@@ -1,0 +1,38 @@
+en:
+  demographic_surveys:
+    new:
+      banner: >
+        Our club values diversity, equity and inclusion, to learn more how we can increase diversity in our candidate pool, 
+        we invite you to voluntarily provide demographic information in a confidential survey at the end of this application. 
+        Providing this information is <strong class="emph-optional">optional</strong>. 
+        It will not be accessible or used in the evaluation process and has no effect on your opportunity to join our club.
+      contact: if you have any questions
+      race_hint: >
+        Visit this <a href="https://www.universityofcalifornia.edu/sites/default/files/Race-Eth%20Data%20Collection.pdf" target="_blank">link</a> 
+        under UC Collection to see the definitions of each race & ethnicity.
+      gender_hint: >
+        Visit this <a href="https://campusclimate.berkeley.edu/students/ejce/geneq/resources/lgbtq-resources/definition-terms" target="_blank">link</a> 
+        to see the definitions of each gender.
+      labels:
+        race:
+          african_american: African American / Black
+          latino: Hispanic / Latino(a)
+          american_indian: American Indian / Alaskan Native
+          asian: Asian / Asian American
+          pacific_islander: Pacific Islander
+          sw_asian_n_african: Southwest Asian and North African
+          white: White / Caucasian
+          decline_race: Decline to State
+        gender:
+          male: Male
+          female: Female
+          nonbinary: Non-Binary
+          transgender: Transgender
+          intersex: Intersex
+          two_spirit: Two-Spirit
+          gender_nonconforming: Gender Non-Conforming
+          something_else_gender: Something Else
+          decline_gender: Decline to State
+    create:
+      success: You have successfully submitted a survey. Thank you!
+    closed: Please submit an application first.

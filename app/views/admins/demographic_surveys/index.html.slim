@@ -1,0 +1,51 @@
+.container
+  .marginBot-lg
+    h1.admin-page-header Demographic Surveys
+    p #{@demographic_surveys.count} Surveyed.
+
+  h2 Race / Ethnicity
+  table.bp-table
+    thead
+      tr
+        th African American / Black
+        th Hispanic / Latino(a)
+        th American Indian / Alaskan Native
+        th Asian / Asian American
+        th Pacific Islander
+        th Southwest Asian and North African
+        th White / Caucasian
+        th Decline to State
+    tbody
+      tr
+        td = @african_american_count
+        td = @latino_count
+        td = @american_indian_count
+        td = @asian_count
+        td = @pacific_islander_count
+        td = @sw_asian_n_african_count
+        td = @white_count
+        td = @decline_race_count
+  h2 Gender
+  table.bp-table
+    thead
+      tr
+        th Male
+        th Female
+        th Non-Binary
+        th Transgender
+        th Intersex
+        th Two-Spirit
+        th Gender Non-Conforming
+        th Something Else
+        th Decline to State
+    tbody
+      tr
+        td = @male_count
+        td = @female_count
+        td = @nonbinary_count
+        td = @transgender_count
+        td = @intersex_count
+        td = @two_spirit_count
+        td = @gender_nonconforming_count
+        td = @something_else_gender_count
+        td = @decline_gender_count

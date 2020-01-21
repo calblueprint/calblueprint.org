@@ -38,6 +38,13 @@
   max-width: 95%;
 }
 
+h2 {
+  font-family: $bptext-font;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
 .admin-settings-container {
   .input-group {
     margin: 20px 0;
@@ -73,7 +80,7 @@
 // Nonprofit show page
 .admins-nonprofit_applications-show,
 .admins-student_applications-show,
-.admins-external_applications-show, {
+.admins-external_applications-show {
   .container {
     max-width: 900px;
   }

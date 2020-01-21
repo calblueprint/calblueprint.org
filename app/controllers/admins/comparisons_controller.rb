@@ -90,7 +90,7 @@ module Admins
       # TODO: Please make less hack
       states = ['Technical (Developer)', 'Learning Speed/Independence (Always Innovate)', 'Culture (Mission First)', 'Culture (Be Humble)']
       cur_category_index = states.index(application.current_category)
-      next_category = cur_category_index + 1 if !cur_category_index.nil? else 1
+      next_category = !cur_category_index.nil? ? cur_category_index + 1 : 1
       if next_category == 4
         if application.response_to('application_type').downcase.include?("developer")
           next_category = 0

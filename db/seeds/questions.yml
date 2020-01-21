@@ -46,7 +46,7 @@ applied_before:
 # Time Commitments
 
 commitments:
-  title: Please describe your time commitments for this semester.
+  title: Please describe your time commitments for this semester
   hint: Feel free to include your coursework, any extracurricular work for other student organizations, and any part-time jobs, along with how many hours per week you expect each to take.
   placeholder: Ruby on Rails DeCal (5 hours/week), Tutoring (2 hours/week), ...
   question_category: general
@@ -95,7 +95,7 @@ design_portfolio:
 # Short answer questions
 
 mission_first:
-  title: What is a cause you're passionate about? Describe your experiences and perspectives from this cause, and how this led you to apply to Blueprint.
+  title: Given all the other opportunities available to you at Cal, why do you want to join Blueprint? What does tech for social good mean to you?
   hint: Please limit your response to 200 words.
   question_category: short_answer
   question_type: long_text
@@ -118,12 +118,8 @@ be_humble:
 # Additional Info
 
 resume:
-  title: Resume (Remove all identifying information before submitting)
-  hint:
-    "Please remove all identifying information (name, email, phone number) from your resume, and attach it as a PDF (1 MB size limit).\n\n
-    In an effort to reduce our biases during this
-    part of the application process, all applications are reviewed without identifying information. Please help us by doing
-    the same for your resume!"
+  title: Resume
+  hint: Please attach the most recent copy of your resume as a PDF (1 MB size limit).
   question_category: more_questions
   question_type: attachment
   file_size_limit: 1 #MB

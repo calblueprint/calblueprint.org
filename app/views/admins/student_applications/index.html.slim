@@ -22,7 +22,7 @@
         th Email
         th Grade
         th Semester
-        th Category
+        / th Category
         th Wins
         th Losses
         th Actions
@@ -33,7 +33,7 @@
           td = app.applicant.email
           td = app.response_to 'year'
           td = "#{app.semester.season.capitalize} #{app.semester.year}"
-          td = app.current_category[0..11]
+          / td = app.current_category[0..11]
           td = app.wins_count
           td = app.losses_count
           td = link_to "Details", admin_student_application_path(app.id)

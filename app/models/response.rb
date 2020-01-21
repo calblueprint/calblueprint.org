@@ -63,7 +63,7 @@ class Response < ActiveRecord::Base
   end
 
   def validate_response(errors)
-    q = Response.includes(:question).find(self.id).question
+    q = self.question
     # Validate required questions
     if q.required && self.answer && self.answer.empty?
       errors.add(q.tag, "can't be left blank")
@@ -81,7 +81,7 @@ class Response < ActiveRecord::Base
 
   def attachment_required(q)
     # TODO: Replace this later. this is temporary because some designers submitted aplications without portfolios
-    q.required
-    #q.required || q.tag == "design_portfolio" && student_application.response_to("application_type").downcase.include?("designer")
+    # q.required
+    q.required || q.tag == "design_portfolio" && student_application.response_to("application_type").downcase.include?("designer")
   end
 end

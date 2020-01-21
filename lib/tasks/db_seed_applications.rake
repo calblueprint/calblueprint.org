@@ -12,7 +12,7 @@ end
 def db_seed_applications
   path = Rails.root.join('db','seeds','applications.yml')
   File.open(path) do |file|
-    YAML.load_documents(file) do |doc|
+    YAML.load_stream(file) do |doc|
       doc.keys.sort.each do |key|
         # puts "Seeding application structure #{key}"
         attributes = doc[key]

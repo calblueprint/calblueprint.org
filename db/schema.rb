@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_16_223444) do
+ActiveRecord::Schema.define(version: 2020_01_21_023017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,32 @@ ActiveRecord::Schema.define(version: 2020_01_16_223444) do
     t.string "email"
     t.string "subject"
     t.text "message"
+  end
+
+  create_table "demographic_surveys", force: :cascade do |t|
+    t.bigint "semester_id"
+    t.boolean "african_american"
+    t.boolean "latino"
+    t.boolean "american_indian"
+    t.boolean "asian"
+    t.boolean "white"
+    t.boolean "sw_asian_n_african"
+    t.boolean "pacific_islander"
+    t.boolean "male"
+    t.boolean "female"
+    t.boolean "nonbinary"
+    t.boolean "transgender"
+    t.boolean "intersex"
+    t.boolean "two_spirit"
+    t.boolean "gender_nonconforming"
+    t.boolean "something_else_gender"
+    t.string "other_gender"
+    t.boolean "decline_gender"
+    t.boolean "decline_race"
+    t.integer "applicant_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["semester_id"], name: "index_demographic_surveys_on_semester_id"
   end
 
   create_table "external_applications", id: :serial, force: :cascade do |t|
@@ -325,6 +351,7 @@ ActiveRecord::Schema.define(version: 2020_01_16_223444) do
   add_foreign_key "comparison_category_questions", "comparison_categories"
   add_foreign_key "comparison_category_questions", "questions"
   add_foreign_key "comparisons", "comparison_categories"
+  add_foreign_key "demographic_surveys", "semesters"
   add_foreign_key "holds", "comparison_categories"
   add_foreign_key "question_semesters", "questions"
   add_foreign_key "question_semesters", "semesters"

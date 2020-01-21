@@ -21,6 +21,10 @@ class Applicant < ActiveRecord::Base
     student_applications.where(semester: semester).present?
   end
 
+  def external_applied_for?(semester)
+    external_applications.where(semester: semester).present?
+  end
+
   def first_name
     name.split(" ")[0]
   end

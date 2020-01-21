@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   resources :student_applications, only: [:new, :create], path: "apply/students"
   # External Applicants
   resources :external_applications, only: [:new, :create], path: "apply/external"
+  # Demographic Survey
+  resources :demographic_surveys, only: [:new, :create], path: "apply/survey"
   # Projects
   resources :projects, only: [:show, :index], param: :slug
 
@@ -62,5 +64,6 @@ Rails.application.routes.draw do
     end
 
     resources :external_applications, only: [:index, :show]
+    resources :demographic_surveys, only: [:index]
   end
 end

@@ -12,7 +12,7 @@ end
 def db_seed_categories
   path = Rails.root.join('db','seeds','categories.yml')
   File.open(path) do |file|
-    YAML.load_documents(file) do |doc|
+    YAML.load_stream(file) do |doc|
       doc.keys.sort.each do |key|
         # puts "Seeding comparison category structure #{key}"
         # puts "Warning this will delete any comparison category <-> question relationships existing for any duplicate categories"

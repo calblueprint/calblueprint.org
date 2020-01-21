@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.10'
+ruby '2.6.5'
 
 # Core gems
 gem 'rails', '5.2.0'
@@ -14,12 +14,12 @@ gem 'google_maps_service'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
-gem 'devise', '~> 4.4.3'
+gem 'devise', '~> 4.7.1'
 gem 'devise_invitable', '~> 1.7.4'
 gem 'omniauth-facebook', '~> 2.0.1'
 gem 'omniauth-google-oauth2', '~> 0.2.6'
 gem 'cancancan', '~> 2.2.0'
-gem 'simple_form', '~> 4.0.1'
+gem 'simple_form', '~> 5.0.1'
 gem 'gon', '~> 5.2.3'
 gem 'kaminari', '~> 0.16.1'
 gem 'email_validator', '~> 1.4.0'
@@ -57,6 +57,8 @@ gem 'ckeditor'
 
 # Error logging - requires setup with service
 gem 'rollbar'
+# Sentry issue tracking
+gem 'sentry-raven'
 
 group :development do
   gem 'annotate'

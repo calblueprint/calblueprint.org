@@ -7,6 +7,9 @@ module Admins
         semester_id: Settings.instance.current_semester_id
       )
 
+      @developer_count = @demographic_surveys.where(applicant_type: 'developer').count
+      @external_count = @demographic_surveys.where(applicant_type: 'external').count
+
       @african_american_count = @demographic_surveys.where(african_american: true).count
       @latino_count = @demographic_surveys.where(latino: true).count
       @american_indian_count = @demographic_surveys.where(american_indian: true).count

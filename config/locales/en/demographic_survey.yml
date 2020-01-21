@@ -34,5 +34,5 @@ en:
           something_else_gender: Something Else
           decline_gender: Decline to State
     create:
-      success: You have successfully submitted a survey. Thank you!
+      success: Thank you for filling out our diversity survey!
     closed: Please submit an application first.

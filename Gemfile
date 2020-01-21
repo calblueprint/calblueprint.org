@@ -57,6 +57,8 @@ gem 'ckeditor'
 
 # Error logging - requires setup with service
 gem 'rollbar'
+# Sentry issue tracking
+gem 'sentry-raven'
 
 group :development do
   gem 'annotate'

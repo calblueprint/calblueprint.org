@@ -10,6 +10,11 @@ Bundler.require(*Rails.groups)
 
 module CalBlueprintOrgApp
   class Application < Rails::Application
+    # Sentry issue tracking config
+    Raven.configure do |config|
+      config.dsn = 'https://3e22e232412f4339af121555fd3986af:7a4c60879dc0410eae00461e7f4757b5@sentry.io/1864594'
+    end
+
     # Generator config
     config.generators do |generate|
       generate.helper false

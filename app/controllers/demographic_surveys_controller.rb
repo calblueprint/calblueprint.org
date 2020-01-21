@@ -3,19 +3,11 @@ class DemographicSurveysController < ApplicationController
 
   def new
     @demographic_survey = DemographicSurvey.new
-    # puts URI(request.referrer).path
-    # session[:demographic_referrer] = URI(request.referrer).path if request.referrer
   end
 
   def create
     @demographic_survey = DemographicSurvey.new demographic_survey_params
 
-    # referrer  = session[:demographic_referrer]
-    # if referrer == url_for(new_student_application_path)
-    #   @demographic_survey.applicant_type = 0
-    # elsif referrer == url_for(new_external_application_path)
-    #   @demographic_survey.applicant_type = 2
-    # end
     @demographic_survey.applicant_type = session[:applicant_type]
 
     if @demographic_survey.save

@@ -8,11 +8,9 @@ en:
         It will not be accessible or used in the evaluation process and has no effect on your opportunity to join our club.
       contact: if you have any questions
       race_hint: >
-        Visit this <a href="https://www.universityofcalifornia.edu/sites/default/files/Race-Eth%20Data%20Collection.pdf" target="_blank">link</a> 
-        under UC Collection to see the definitions of each race & ethnicity.
+        Which of the following groups best describes your background. Check as many categories as may apply.
       gender_hint: >
-        Visit this <a href="https://campusclimate.berkeley.edu/students/ejce/geneq/resources/lgbtq-resources/definition-terms" target="_blank">link</a> 
-        to see the definitions of each gender.
+        Check one or more options that reflect your gender.
       labels:
         race:
           african_american: African American / Black

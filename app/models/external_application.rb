@@ -56,7 +56,7 @@ class ExternalApplication < ActiveRecord::Base
                        size: { in: 0..10.megabytes }
 
   validates_attachment_presence :resume
-  validate :design_portfolio_present, if: :design?
+  # validate :design_portfolio_present, if: :design?
 
   validates :applicant_id, presence: true
   validates :semester_id, presence: true

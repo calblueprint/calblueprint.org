@@ -77,12 +77,11 @@ application_type:
 
 available_for_bp_games:
   title: Will you be able to attend BP Games?
-  # TODO: Change time
-  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on February 8, from 2-5 PM.
+  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on February 8, from 3-5 PM.
   question_category: general
   question_type: multiple_choice_radio
   choices: Yes,No
-  required: false
+  required: true
 
 design_portfolio:
   title: Design Portfolio (REQUIRED for designer applicants)

@@ -1,0 +1,92 @@
+# African American / Black
+african_american_or_black:
+  - African American
+  - African
+  - Black Caribbean
+  - Other African American / Black
+
+# Hispanic / Latino(a)
+hispanic_or_latino:
+  - Mexican / Mexican American / Chicano
+  - Cuban / Cuban American
+  - Latin American / Latino
+  - Puerto Rican
+  - Other Hispanic, Latin American or of Spanish Origin
+
+# American Indian / Alaskan Native
+american_indian_or_alaskan_native:
+  - American Indian / Alaskan Native
+
+# Asian / Asian American
+asian_or_asian_american:
+  - Asian Indian
+  - Bangladeshi
+  - Cambodian
+  - Chinese / Chinese American (except Taiwanese)
+  - Filipino / Filipino American
+  - Hmong
+  - Indonesian
+  - Japanese / Japanese American
+  - Korean / Korean American
+  - Laotian
+  - Malaysian
+  - Other Asian (Not including Middle Eastern)
+  - Pakistani
+  - Sri Lankan
+  - Taiwanese / Taiwanese American
+  - Thai
+  - Vietnamese / Vietnamese American
+
+# Pacific Islander
+pacific_islander:
+  - Fijian
+  - Guamanian / Chamorro
+  - Hawaiian
+  - Samoan
+  - Tongan
+  - Other Pacific Islander
+
+# Southwest Asian and North African
+southwest_asian_and_north_african:
+  - Afghan
+  - Algerian
+  - Armenian
+  - Assyrian / Chaldean
+  - Azerbaijani
+  - Bahraini
+  - Berber
+  - Circassian
+  - Djiboutian
+  - Egyptian
+  - Emirati
+  - Georgian
+  - Iranian
+  - Iraqi
+  - Israeli
+  - Jordanian
+  - Kurdish
+  - Kuwaiti
+  - Lebanese
+  - Libyan
+  - Mauritanian
+  - Moroccan
+  - Omani
+  - Palestinian
+  - Qatari
+  - Saudi Arabian
+  - Somali
+  - Sudanese
+  - Syrian
+  - Tunisian
+  - Turkish
+  - Yemeni 
+  - Other North African
+  - Other Southwest Asian
+
+# White / Caucasian
+white_or_caucasian:
+  - European / European descent
+  - Other White / Caucasian
+
+decline_to_state:
+  - Decline to State

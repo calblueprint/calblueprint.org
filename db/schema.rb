@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_21_023017) do
+ActiveRecord::Schema.define(version: 2020_01_21_195221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,13 +95,6 @@ ActiveRecord::Schema.define(version: 2020_01_21_023017) do
 
   create_table "demographic_surveys", force: :cascade do |t|
     t.bigint "semester_id"
-    t.boolean "african_american"
-    t.boolean "latino"
-    t.boolean "american_indian"
-    t.boolean "asian"
-    t.boolean "white"
-    t.boolean "sw_asian_n_african"
-    t.boolean "pacific_islander"
     t.boolean "male"
     t.boolean "female"
     t.boolean "nonbinary"
@@ -112,11 +105,22 @@ ActiveRecord::Schema.define(version: 2020_01_21_023017) do
     t.boolean "something_else_gender"
     t.string "other_gender"
     t.boolean "decline_gender"
-    t.boolean "decline_race"
     t.integer "applicant_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["semester_id"], name: "index_demographic_surveys_on_semester_id"
+  end
+
+  create_table "demographic_surveys_ethnicities", id: false, force: :cascade do |t|
+    t.bigint "demographic_survey_id", null: false
+    t.bigint "ethnicity_id", null: false
+  end
+
+  create_table "ethnicities", force: :cascade do |t|
+    t.string "name"
+    t.integer "group", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "external_applications", id: :serial, force: :cascade do |t|

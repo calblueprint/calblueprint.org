@@ -8,24 +8,12 @@
   table.bp-table
     thead
       tr
-        th African American / Black
-        th Hispanic / Latino(a)
-        th American Indian / Alaskan Native
-        th Asian / Asian American
-        th Pacific Islander
-        th Southwest Asian and North African
-        th White / Caucasian
-        th Decline to State
+        - @ethnicities.keys.each do |name|
+          th = name
     tbody
       tr
-        td = @african_american_count
-        td = @latino_count
-        td = @american_indian_count
-        td = @asian_count
-        td = @pacific_islander_count
-        td = @sw_asian_n_african_count
-        td = @white_count
-        td = @decline_race_count
+        - @ethnicities.values.each do |val|
+          td = val
   h2 Gender
   table.bp-table
     thead

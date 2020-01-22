@@ -10,14 +10,10 @@ module Admins
       @developer_count = @demographic_surveys.where(applicant_type: 'developer').count
       @external_count = @demographic_surveys.where(applicant_type: 'external').count
 
-      @african_american_count = @demographic_surveys.where(african_american: true).count
-      @latino_count = @demographic_surveys.where(latino: true).count
-      @american_indian_count = @demographic_surveys.where(american_indian: true).count
-      @asian_count = @demographic_surveys.where(asian: true).count
-      @white_count = @demographic_surveys.where(white: true).count
-      @sw_asian_n_african_count = @demographic_surveys.where(sw_asian_n_african: true).count
-      @pacific_islander_count = @demographic_surveys.where(pacific_islander: true).count
-      @decline_race_count = @demographic_surveys.where(decline_race: true).count
+      @ethnicities = {}
+      Ethnicity.all.each do |e|
+        @ethnicities[e.name] = e.demographic_surveys.where(semester_id: Settings.instance.current_semester_id).count
+      end
       
       @male_count = @demographic_surveys.where(male: true).count
       @female_count = @demographic_surveys.where(female: true).count

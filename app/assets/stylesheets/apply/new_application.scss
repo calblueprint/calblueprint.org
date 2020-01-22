@@ -15,10 +15,53 @@
       font-size: 24px;
       font-weight: 600;
     }
+
+    & h4 {
+      color: $dark-gray;
+      font-family: $bptext-font;
+      font-size: 18px;
+      font-weight: 600;
+    }
   }
 
   .hint > p {
     margin-bottom: 5px;
+  }
+
+  .collection-group {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media only screen and (min-width: 481px) {
+    .collection-group {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .collection-group {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  label.checkbox {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: flex-start;
+  
+    input[type="checkbox"] {
+      margin-right: 5px;
+      margin-top: 5px;
+    }
+  }
+
+  .race-group {
+    margin-top: 10px;
+
+    h4 {
+      margin-bottom: 5px;
+    }
   }
 }
 

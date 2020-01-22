@@ -29,6 +29,7 @@
 
 class DemographicSurvey < ApplicationRecord
   belongs_to :semester
+  has_and_belongs_to_many :ethnicities
 
   enum applicant_type: { developer: 0, designer: 1, external: 2 }
 
@@ -42,7 +43,7 @@ class DemographicSurvey < ApplicationRecord
   end
 
   def at_least_one_race
-    if (not [self.african_american, self.latino, self.american_indian, self.asian, self.pacific_islander, self.sw_asian_n_african, self.white, self.decline_race].include? true)
+    if (self.ethnicity_ids.empty?)
       errors[:base] << ("Please choose at least one for the race/ethnicity section.")
     end
   end

@@ -39,14 +39,6 @@ end
 
 def demographic_survey_params
   params.require(:demographic_survey).permit(
-    :african_american,
-    :latino,
-    :american_indian,
-    :asian,
-    :white,
-    :sw_asian_n_african,
-    :pacific_islander,
-    :decline_race,
     :male,
     :female,
     :nonbinary,
@@ -56,7 +48,8 @@ def demographic_survey_params
     :gender_nonconforming,
     :something_else_gender,
     :other_gender,
-    :decline_gender
+    :decline_gender,
+    ethnicity_ids: []
   ).merge(
     semester: @settings.current_semester
   )

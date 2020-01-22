@@ -1,2 +1,2 @@
 web: bundle exec puma -C config/puma.rb
-release: bin/rails db:migrate && bin/rails db:seed:questions && bin/rails db:seed:applications
+release: bin/rails db:migrate && bin/rails db:seed:questions && bin/rails db:seed:applications && bin/rails db:seed:ethnicities

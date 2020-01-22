@@ -4,16 +4,6 @@
     p #{@demographic_surveys.count} Surveyed.
     p #{@developer_count} developers and #{@external_count} external members.
 
-  h2 Race / Ethnicity
-  table.bp-table
-    thead
-      tr
-        - @ethnicities.keys.each do |name|
-          th = name
-    tbody
-      tr
-        - @ethnicities.values.each do |val|
-          td = val
   h2 Gender
   table.bp-table
     thead
@@ -38,3 +28,14 @@
         td = @gender_nonconforming_count
         td = @something_else_gender_count
         td = @decline_gender_count
+
+  h2 Race / Ethnicity
+  table.bp-table
+    thead
+      tr
+        - @ethnicities.keys.each do |name|
+          th = name
+    tbody
+      tr
+        - @ethnicities.values.each do |val|
+          td = val

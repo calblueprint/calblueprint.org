@@ -18,7 +18,7 @@ namespace :students do
         "Year": app.response_to("year"),
         "Applied before?": app.response_to("applied_before") == "Yes",
         "Time commitments": app.response_to("commitments"),
-        "Application type": app.response_to("application_type"),
+        # "Application type": app.response_to("application_type"),
         "Can attend BP Games?": app.response_to("available_for_bp_games") == "Yes",
         "Why no BP Games?": app.response_to("why_no_bp_games"),
         "Can attend retreat?": app.response_to("available_for_retreat") == "Yes",

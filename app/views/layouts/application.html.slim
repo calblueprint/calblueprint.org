@@ -15,6 +15,7 @@ html
   body
     = render "flash"
 
+    = render "notify-bar"
     .content class=" #{body_class}"
       = yield
-      = render "footer"
+    = render "footer"

@@ -1,4 +1,5 @@
 # rake db:seed:questions
+# Run this once on a new db or when a new ethnicity is added
 namespace :db do
   namespace :seed do
     desc "Seed Questions from /db/seeds/ethnicities.yml"

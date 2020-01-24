@@ -33,19 +33,17 @@
       .form-group
         h3 Race/Ethnicity
         p = raw t ".race_hint"
-        / = f.association :ethnicities, as: :check_boxes, label_method: :name
         - Ethnicity.groups.keys[1..-1].each do |group|
           .race-group
             h4 = group.humanize.titleize
             .collection-group
-              = f.collection_check_boxes :ethnicity_ids, Ethnicity.where(group: group), :id, :name, item_label_class: 'checkbox'
+              = f.collection_check_boxes :ethnicity_ids, Ethnicity.where(group: group), :id, :name, item_label_class: 'checkbox marginBot-xxs'
         .race-group
           h4 Decline to State
-          = f.collection_check_boxes :ethnicity_ids, Ethnicity.where(group: 'decline_to_state'), :id, :name, item_label_class: 'checkbox'
+          = f.collection_check_boxes :ethnicity_ids, Ethnicity.where(group: 'decline_to_state'), :id, :name, item_label_class: 'checkbox marginBot-xxs'
 
       div
         = f.button :submit, 'Submit Survey', class: "bp-btn btn-lg marginRight-sm"
-        = link_to 'Skip', students_apply_path, class: "bp-btn btn-lg btn-light"
 
 javascript:
   if ($('#demographic_survey_something_else_gender').is(':checked')) {

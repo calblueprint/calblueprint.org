@@ -48,9 +48,9 @@
       = f.input :design_portfolio, as: :file
       = f.input :design_portfolio_link
 
-      label for='available_for_gm'
-        input.marginRight-xs.marginBot-xxl type='checkbox' name='available_for_gm' id='available_for_gm'
-        = t '.available_for_gm'
+      label.checkbox.marginBot-xxl
+        input.marginRight-xs type='checkbox' name='available_for_gm' id='available_for_gm'
+        label for='available_for_gm' = t '.available_for_gm'
 
       div
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"

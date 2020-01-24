@@ -293,6 +293,12 @@ en:
       website: 'justinmi.me'
       <<: *mentor
 
+    - first_name: 'Peter' # tech
+      last_name: 'Veerman'
+      email: 'peterkangveerman@berkeley.edu'
+      linkedin: 'peter-veerman'
+      <<: *mentor
+
     - first_name: 'Wilson' # leader
       last_name: 'Wang'
       email: 'wilsonw926@gmail.com'
@@ -302,6 +308,8 @@ en:
 
     # Other positions:
 
+  alumni:
+
     # Inactive
 
     - first_name: 'Alice' # leader
@@ -309,54 +317,48 @@ en:
       email: 'alicezhao@berkeley.edu'
       linkedin: 'aliceyezhao'
       website: 'github.com/aliceyezhao'
-      <<: *inactive
+      <<: *leader
 
     - first_name: 'Asli'
       last_name: 'Akalin'
       email: 'asliakalin@berkeley.edu'
       linkedin: 'asliakalin'
       website: 'asliakalin.com/'
-      <<: *inactive
+      <<: *developer
 
     - first_name: 'Cassandra'
       last_name: 'Melax'
       email: 'cmelax@berkeley.edu'
       linkedin: 'cassandra-m-085731158'
-      <<: *inactive
+      <<: *developer
 
     - first_name: 'Cathleen'
       last_name: 'Jia'
       email: 'cathleenjia@berkeley.edu'
       linkedin: 'cathleenjia'
-      <<: *inactive
+      <<: *developer
 
     - first_name: 'Claire' # leader
       last_name: 'Lin'
       email: 'clairelin135@gmail.com'
       linkedin: 'clairelin135'
       website: 'claireylin.com'
-      <<: *inactive
+      <<: *leader
 
     - first_name: 'Kevin' # tech
       last_name: 'Li'
       email: 'kevintli98@gmail.com'
       linkedin: 'kevintli'
       website: 'kevintli.com'
-      <<: *inactive
-      
-    - first_name: 'Peter' # tech
-      last_name: 'Veerman'
-      email: 'peterkangveerman@berkeley.edu'
-      linkedin: 'peter-veerman'
-      <<: *inactive
+      <<: *tech
 
     - first_name: 'Spring' # external
       last_name: 'Ma'
       email: 'springma@berkeley.edu'
       linkedin: 'spring-ma'
-      <<: *inactive
+      <<: *external
 
-  alumni:
+    # Actual alumni
 
     - first_name: 'Melody'
       last_name: 'Wei'

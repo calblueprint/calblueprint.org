@@ -162,6 +162,10 @@ nav.bp-nav-fixed {
 }
 
 @media (max-width: 700px) {
+  .notify-bar-link + .content > nav.bp-nav .link-container  {
+    top: -100px;
+  }
+
   nav.bp-nav {
     .mobile-nav-btn {
       display: block;
@@ -182,6 +186,7 @@ nav.bp-nav-fixed {
       transform: translateY(-100%);
 
       &.mobile-show {
+        top: 0 !important;
         opacity: 1;
         transform: translateY(0);
       }
@@ -218,24 +223,20 @@ nav.bp-nav {
   }
 }
 
-// Notify bar Styles
-.notify-bar-link + nav.bp-nav.nav-white {
-  top: 40px;
-}
-
 .notify-bar-link {
   text-decoration: none;
 }
 
 .notify-bar-container {
   display: flex;
-  height: 40px;
+  height: auto;
   font-size: 80%;
   justify-content: center;
   align-items: center;
   text-align: center;
   text-decoration: none;
   transition: all 0.5s ease;
+  padding: 8px 0;
 }
 
 .notify-bar-container:hover {

@@ -21,6 +21,8 @@ namespace :students do
         # "Application type": app.response_to("application_type"),
         "Can attend BP Games?": app.response_to("available_for_bp_games") == "Yes",
         "Why no BP Games?": app.response_to("why_no_bp_games"),
+        "Can attend Build with BP?": app.response_to("available_for_bwbp"),
+        "Why no Build with BP?": app.response_to("why_no_bwbp"),
         "Can attend retreat?": app.response_to("available_for_retreat") == "Yes",
         "Why no retreat?": app.response_to("why_no_retreat"),
         "Passionate cause": app.response_to("mission_first"),
@@ -36,11 +38,11 @@ namespace :students do
         app_params[category.name + " Losses"] = Comparison.where(comparison_category: category, loser_id: app.id).count
       end
 
-      # resume = app.file_for("resume")
+      resume = app.file_for("resume")
       # design_portfolio = app.file_for("design_portfolio")
-      # if resume.exists?
-      #   app_params["Resume"] = [{url: "https:" + resume.url}]
-      # end
+      if resume.exists?
+        app_params["Resume"] = [{url: "https:" + resume.url}]
+      end
       # if design_portfolio.exists?
       #   app_params["Design Portfolio"] = [{url: "https:" + design_portfolio.url}]
       # end

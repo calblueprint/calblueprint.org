@@ -12,8 +12,16 @@ namespace :demographics do
     air_ids = air_apps.map { |app| app[:id] }
 
     db_apps.each do |app|
+      race_group = []
+      races = []
+      app.ethnicities.each do |race|
+        race_group << race.group
+        races << race.name
+      end
+
       app_params = {
-        "Race / Ethnicity": app.ethnicities.map { |race| race.name },
+        "Race / Ethnicity Group": race_group.uniq,
+        "Race / Ethnicity": races,
         "Gender": genders.select { |gender| app[gender.parameterize(separator: '_').to_sym] }
       }
 

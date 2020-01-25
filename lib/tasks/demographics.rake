@@ -13,7 +13,7 @@ namespace :demographics do
 
     db_apps.each do |app|
       app_params = {
-        "Race / Ethnicities": app.ethnicities.map { |race| race.name },
+        "Race / Ethnicity": app.ethnicities.map { |race| race.name },
         "Gender": genders.select { |gender| app[gender.parameterize(separator: '_').to_sym] }
       }
 

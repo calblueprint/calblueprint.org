@@ -73,6 +73,7 @@ class StudentApplication < ActiveRecord::Base
 
   def response_to(tag)
     response = self.responses.includes(:question).select { |r| r.question.tag == tag }.first
+    return nil if response.nil?
     if response.question.question_type == "checkbox"
       return true if response.answer == "yes"
       return false

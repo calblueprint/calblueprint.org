@@ -20,6 +20,7 @@ namespace :demographics do
       end
 
       app_params = {
+        "ID": app.id,
         "Race / Ethnicity Group": race_group.uniq,
         "Race / Ethnicity": races,
         "Gender": genders.select { |gender| app[gender.parameterize(separator: '_').to_sym] }

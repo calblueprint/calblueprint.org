@@ -15,7 +15,7 @@ namespace :demographics do
       race_group = []
       races = []
       app.ethnicities.each do |race|
-        race_group << race.group.humanize.titlize
+        race_group << race.group.humanize.titleize
         races << race.name
       end
 

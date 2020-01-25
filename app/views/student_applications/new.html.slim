@@ -47,6 +47,7 @@
 javascript:
   $('.student_application_responses_why_no_bp_games').hide();
   $('.student_application_responses_why_no_retreat').hide();
+  $('.student_application_responses_why_no_bwbp').hide();
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_available_for_gm').is(':checked'));
 
   var devOption = $('#student_application_responses_application_type_developer');
@@ -65,6 +66,21 @@ javascript:
 
   $BPGamesTrue.click(toggleBPGames);
   $BPGamesFalse.click(toggleBPGames);
+
+  // Toggle why no BWBP question
+  $("input[type=radio][name='student_application[responses][available_for_bwbp]']").change(function() {
+    if ($(this).val() == 'Neither') {
+      $('.student_application_responses_why_no_bwbp').show()
+    } else {
+      $('.student_application_responses_why_no_bwbp').hide()
+    }
+  });
+  // Check on initial
+  if ($("#student_application_responses_available_for_bwbp_neither").prop('checked')) {
+    $('.student_application_responses_why_no_bwbp').show()
+  } else {
+    $('.student_application_responses_why_no_bwbp').hide()
+  }
 
   if (designOption.prop("checked")) {
     $('.student_application_responses_available_for_bp_games').hide();

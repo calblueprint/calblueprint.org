@@ -65,6 +65,7 @@ sp20:
     - commitments
     - available_for_gm
     - available_for_bp_games
+    - available_for_bwbp
 
     - mission_first
     - always_innovate
@@ -72,6 +73,7 @@ sp20:
 
     - resume
     - why_no_bp_games
+    - why_no_bwbp
     - available_for_retreat
     - why_no_retreat
 

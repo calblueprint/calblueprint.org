@@ -17,6 +17,11 @@ namespace :external do
         "Phone Number": app.phone,
         "Year": app.year,
         "Major": app.major,
+        "Positions Applying For": [
+          app.operations? ? 'Operations' : nil,
+          app.content? ? 'Content' : nil,
+          app.design? ? 'Marketing' : nil
+        ].compact,
         "Applied before?": app.applied_before,
         "Passionate Cause": app.why_join,
         "Project Experience": app.experience,
@@ -26,7 +31,15 @@ namespace :external do
       }
 
       if app.resume.exists?
-        app_params["Resume"] = 'https:' + app.resume.url
+        app_params["Resume"] = [{url: "https:" + app.resume.url}]
+      end
+
+      if app.design_portfolio.exists?
+        app_params["Design Portfolio File"] = [{url: 'https:' + app.design_portfolio.url}]
+      end
+
+      if app.design_portfolio_link.present?
+        app_params["Design Portfolio Link"] = app.design_portfolio_link
       end
 
       pos = air_emails.index(app.email)

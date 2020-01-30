@@ -42,6 +42,9 @@
       = f.input :experience
       = f.input :personal_growth
       = f.input :commitments
+
+      = f.input :available_for_meet_the_club, as: :radio_buttons, collection: [:date1, :date2, :both, :neither]
+      = f.input :why_no_meet_the_club
     
       = f.input :social_links
       = f.input :resume, as: :file, required: true
@@ -56,6 +59,7 @@
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 
 javascript:
+  $('.external_application_why_no_meet_the_club').hide();
   // $('.external_application_why_no_bp_games').hide();
   $('.external_application_why_no_retreat').hide();
   $('.external_application_website').hide();
@@ -65,6 +69,22 @@ javascript:
   } else {
     $('.external_application_design_portfolio').hide();
     $('.external_application_design_portfolio_link').hide();
+  }
+
+
+  // Toggle why no Meet the Club question
+  $("input[type=radio][name='external_application[available_for_meet_the_club]']").change(function() {
+    if ($(this).val() == 'neither') {
+      $('.external_application_why_no_meet_the_club').show()
+    } else {
+      $('.external_application_why_no_meet_the_club').hide()
+    }
+  });
+  // Check on initial
+  if ($("#external_application_available_for_meet_the_club_neither").prop('checked')) {
+    $('.external_application_why_no_meet_the_club').show()
+  } else {
+    $('.external_application_why_no_meet_the_club').hide()
   }
   
 

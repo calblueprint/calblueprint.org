@@ -38,6 +38,8 @@
 #  design_portfolio_file_size    :integer
 #  design_portfolio_updated_at   :datetime
 #  design_portfolio_link         :string
+#  available_for_meet_the_club   :string
+#  why_no_meet_the_club          :text
 #
 
 class ExternalApplication < ActiveRecord::Base
@@ -70,6 +72,7 @@ class ExternalApplication < ActiveRecord::Base
   validates :year, presence: true
   validates :name, presence: true
   validates :commitments, presence: true
+  validates :available_for_meet_the_club, presence: true
   validates :major, presence: true
   validates :design_portfolio_link, url: true, allow_blank: true
   validate :at_least_one_position

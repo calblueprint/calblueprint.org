@@ -30,6 +30,16 @@ namespace :external do
         "Time commitments": app.commitments
       }
 
+      case app.available_for_meet_the_club
+      when 'date1'
+        app_params["Can attend Meet the Club?"] = 'February 5'
+      when 'date2'
+        app_params["Can attend Meet the Club?"] = 'February 6'
+      else
+        app_params["Can attend Meet the Club?"] = app.available_for_meet_the_club
+      end
+      app_params["Why no Meet the Club?"] = app.why_no_meet_the_club
+
       if app.resume.exists?
         app_params["Resume"] = [{url: "https:" + app.resume.url}]
       end

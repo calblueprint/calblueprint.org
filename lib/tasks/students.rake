@@ -23,6 +23,8 @@ namespace :students do
         "Why no BP Games?": app.response_to("why_no_bp_games"),
         "Can attend Build with BP?": app.response_to("available_for_bwbp"),
         "Why no Build with BP?": app.response_to("why_no_bwbp"),
+        "Can attend Meet the Club?": app.response_to("available_for_meet_the_club"),
+        "Why no Meet the Club?": app.response_to("why_no_meet_the_club"),
         "Can attend retreat?": app.response_to("available_for_retreat") == "Yes",
         "Why no retreat?": app.response_to("why_no_retreat"),
         "Passionate cause": app.response_to("mission_first"),

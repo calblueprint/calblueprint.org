@@ -91,6 +91,14 @@ available_for_bwbp:
   choices: February 3rd 7-8:30 PM,February 4th 7-8:30 PM,Both,Neither
   required: true
 
+available_for_meet_the_club:
+  title: Which Meet the Club section are you able to attend?
+  hint: Meet the Club is an event in our application process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other. You only need to attend one section.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: February 5th 8-10 PM,February 6th 8-10 PM,Both,Neither
+  required: true
+
 design_portfolio:
   title: Design Portfolio (REQUIRED for designer applicants)
   hint: Attach your design portfolio. If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
@@ -147,6 +155,13 @@ why_no_bp_games:
 
 why_no_bwbp:
   title: Why are you unable to attend either Build with Blueprint workshop sections?
+  hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
+  question_category: more_questions
+  question_type: long_text
+  required: false
+
+why_no_meet_the_club:
+  title: Why are you unable to attend either Meet the Club sections?
   hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
   question_category: more_questions
   question_type: long_text

@@ -38,6 +38,8 @@
 #  design_portfolio_file_size    :integer
 #  design_portfolio_updated_at   :datetime
 #  design_portfolio_link         :string
+#  available_for_meet_the_club   :string
+#  why_no_meet_the_club          :text
 #
 
 require 'rails_helper'

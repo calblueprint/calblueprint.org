@@ -13,6 +13,8 @@ class ExternalApplicationDecorator < ApplicationDecorator
      [:personal_growth, ::I18n.t("simple_form.labels.external_application.personal_growth")],
      :social_links,
      :commitments,
+     :available_for_meet_the_club,
+     :why_no_meet_the_club,
      :resume,
      :phone,
      :email,

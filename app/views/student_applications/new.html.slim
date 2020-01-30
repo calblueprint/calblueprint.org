@@ -48,6 +48,7 @@ javascript:
   $('.student_application_responses_why_no_bp_games').hide();
   $('.student_application_responses_why_no_retreat').hide();
   $('.student_application_responses_why_no_bwbp').hide();
+  $('.student_application_responses_why_no_meet_the_club').hide();
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_available_for_gm').is(':checked'));
 
   var devOption = $('#student_application_responses_application_type_developer');
@@ -80,6 +81,21 @@ javascript:
     $('.student_application_responses_why_no_bwbp').show()
   } else {
     $('.student_application_responses_why_no_bwbp').hide()
+  }
+
+  // Toggle why no Meet the Club question
+  $("input[type=radio][name='student_application[responses][available_for_meet_the_club]']").change(function() {
+    if ($(this).val() == 'Neither') {
+      $('.student_application_responses_why_no_meet_the_club').show()
+    } else {
+      $('.student_application_responses_why_no_meet_the_club').hide()
+    }
+  });
+  // Check on initial
+  if ($("#student_application_responses_available_for_meet_the_club_neither").prop('checked')) {
+    $('.student_application_responses_why_no_meet_the_club').show()
+  } else {
+    $('.student_application_responses_why_no_meet_the_club').hide()
   }
 
   if (designOption.prop("checked")) {

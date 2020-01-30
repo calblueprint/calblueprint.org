@@ -38,6 +38,8 @@ en:
         why_no_bp_games: Why are you unable to attend BP Games?
         available_for_retreat: Check this box if you can attend Blueprint Retreat. (Evening of February 3 - Morning of February 5)
         why_no_retreat: Why are you unable to attend the retreat?
+        available_for_meet_the_club: Which Meet the Club section are you able to attend?
+        why_no_meet_the_club: Why are you unable to attend either Meet the Club sections?
     hints:
       external_application:
         name: First and Last
@@ -58,6 +60,7 @@ en:
         why_no_bp_games: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
         available_for_retreat: Evening of February 3 - Morning of February 5
         why_no_retreat: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
+        why_no_meet_the_club: It's important for integrating and welcoming new members, but we will do our best to be accomodating, especially for exceptional circumstances.
 
     placeholders:
       external_application:
@@ -74,3 +77,10 @@ en:
         projects: "Project\nLink (if possible)\nBrief description"
         service: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         commitments: "Classes: CS 188, CS 189, CS 170 \nClubs: MLH, Yoga, Salsa Dancing\nOther: Part-time work"
+    options:
+      external_application:
+        available_for_meet_the_club:
+          date1: February 5th 8-10 PM
+          date2: February 6th 8-10 PM
+          both: Both
+          neither: Neither

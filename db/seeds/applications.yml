@@ -66,6 +66,7 @@ sp20:
     - available_for_gm
     - available_for_bp_games
     - available_for_bwbp
+    - available_for_meet_the_club
 
     - mission_first
     - always_innovate
@@ -74,6 +75,7 @@ sp20:
     - resume
     - why_no_bp_games
     - why_no_bwbp
+    - why_no_meet_the_club
     - available_for_retreat
     - why_no_retreat
 

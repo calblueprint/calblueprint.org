@@ -205,7 +205,7 @@ describe StudentApplication do
     let!(:comparison_3) { create(:comparison, winner: app_2) }
     let!(:comparison_4) { create(:comparison, winner: app_2, loser: app_3) }
 
-    it 'returns associated comparions' do
+    it 'returns associated comparisons' do
       app_1.comparisons.should include(comparison_1, comparison_2)
       app_2.comparisons.should include(comparison_3, comparison_4)
       app_3.comparisons.should include(comparison_4)

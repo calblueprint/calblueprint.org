@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_26_005817) do
+ActiveRecord::Schema.define(version: 2020_02_01_163737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -311,6 +311,7 @@ ActiveRecord::Schema.define(version: 2020_01_26_005817) do
     t.boolean "infosession_two", default: false
     t.string "infosession_two_link", default: ""
     t.datetime "infosession_two_date", default: -> { "CURRENT_TIMESTAMP" }
+    t.boolean "notify_bar_admins_only", default: false
     t.index ["current_semester_id"], name: "index_settings_on_current_semester_id"
     t.index ["singleton_guard"], name: "index_settings_on_singleton_guard", unique: true
   end

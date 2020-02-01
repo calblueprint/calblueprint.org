@@ -18,10 +18,7 @@ namespace :students do
     devs.shuffle.in_groups(3, false).each_with_index do |group, i|
       group.each do |applicant|
         applicant.current_category = STATES[i]
-        # puts applicant
-        puts group
-        puts STATES[i]
-        # applicant.save!
+        applicant.save!
       end
     end
     puts "Finished Updating #{devs.count} Developers"

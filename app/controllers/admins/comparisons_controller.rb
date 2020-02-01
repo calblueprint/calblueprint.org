@@ -1,3 +1,5 @@
+STATES = ['Learning Speed/Independence (Always Innovate)', 'Culture (Mission First)', 'Culture (Be Humble)'].freeze
+# 'Technical (Developer)', 
 module Admins
   class ComparisonsController < BaseController
     load_and_authorize_resource
@@ -88,17 +90,17 @@ module Admins
 
     def update_state(application)
       # TODO: Please make less hack
-      states = ['Technical (Developer)', 'Learning Speed/Independence (Always Innovate)', 'Culture (Mission First)', 'Culture (Be Humble)']
-      cur_category_index = states.index(application.current_category)
-      next_category = !cur_category_index.nil? ? cur_category_index + 1 : 1
-      if next_category == 4
-        if application.response_to('application_type').downcase.include?("developer")
-          next_category = 0
-        else
-          next_category = 1
-        end
-      end
-      application.update current_category: states[next_category]
+      
+      cur_category_index = STATES.index(application.current_category)
+      next_category = !cur_category_index.nil? ? (cur_category_index + 1) % STATES.length : 0
+      # if next_category == 3
+      #   if application.response_to('application_type').downcase.include?("developer")
+      #     next_category = 0
+      #   else
+      #     next_category = 1
+      #   end
+      # end
+      application.update current_category: STATES[next_category]
     end
 
     def create

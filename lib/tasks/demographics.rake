@@ -1,4 +1,4 @@
-genders = ['Male', 'Female', 'Nonbinary', 'Transgender', 'Intersex', 'Two Spirit', 'Gender Nonconforming'].freeze
+genders = ['Male', 'Female', 'Nonbinary', 'Transgender', 'Intersex', 'Two Spirit', 'Gender Nonconforming', 'Decline Gender'].freeze
 namespace :demographics do
   desc "Demographic survey-related tasks to be run by Heroku Scheduler"
   task sync: :environment do

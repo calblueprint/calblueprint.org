@@ -1,4 +1,5 @@
 - if Settings.instance.notify_bar_active
-  a.notify-bar-link href="#{Settings.instance.notify_bar_link}"
-    .notify-bar-container
-      = Settings.instance.notify_bar_content.html_safe
+  - if !Settings.instance.notify_bar_admins_only || current_user.is_a?(Admin)
+    a.notify-bar-link href="#{Settings.instance.notify_bar_link}"
+      .notify-bar-container
+        = Settings.instance.notify_bar_content.html_safe

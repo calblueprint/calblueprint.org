@@ -32,6 +32,7 @@
     .settings-row
       .inline
         = f.input :notify_bar_active, label: 'Notify bar enabled', as: :boolean
+        = f.input :notify_bar_admins_only, lable: 'Notify bar for only admins', as: :boolean
         = f.input :notify_bar_link, label: 'Notify bar link'
       = f.input :notify_bar_content, label: 'Notify bar content', item_wrapper_class: 'inline', as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }
 

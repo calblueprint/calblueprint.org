@@ -4,6 +4,10 @@
   h1.static-page-header.marginBot-md = @project[:title]
   p = @project[:short_summary]
   .project-article-links-container.marginBot-md
+    - if @project[:org_link]
+      = link_to @project[:org_link], class: "homepage-link marginRight-lg", target: '_blank'
+        | View Organization
+        span.fa.fa-angle-right
     - if @project[:link]
       = link_to @project[:link], class: "homepage-link marginRight-lg", target: "_blank"
         | View Project

@@ -18,7 +18,7 @@ section.current-projects-section
       .project-card-container
         - @current_projects.each do |slug, project|
           .project-card-column
-            = link_to project_path(slug), class: "project-card" do ||
+            = link_to project_path(slug), class: "project-card" do
               .project-card--image style="background-image: url(#{image_path(project[:banner_image])})"
               h3.project-card--title = project[:title]
               p.project-card--summary = project[:short_summary]
@@ -34,11 +34,11 @@ section.past-projects-section
     .project-card-container
       - @past_projects.each do |slug, project|
         .project-card-column
-          = link_to project_path(slug), class: "project-card" do ||
+          = link_to project_path(slug), class: "project-card" do
             .project-card--image style="background-image: url(#{image_path(project[:banner_image])})"
             h3.project-card--title = project[:title]
             p.project-card--summary = project[:short_summary]
-            .card-button Read More
+            .card-button style="color: ##{project[:color]}" Read More
 
 section.more-projects-section
   .container

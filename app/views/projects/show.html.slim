@@ -9,8 +9,12 @@
         | View Project
         span.fa.fa-angle-right
     - if @project[:github_link]
-      = link_to @project[:github_link], class: "homepage-link", target: "_blank"
+      = link_to @project[:github_link], class: "homepage-link marginRight-lg", target: "_blank"
         | View GitHub Repository
+        span.fa.fa-angle-right
+    - if @project[:org_link]
+      = link_to @project[:org_link], class: "homepage-link", target: '_blank'
+        | View Organization
         span.fa.fa-angle-right
 
 .project-article-img-container

@@ -49,7 +49,7 @@ module Admins
         @left = needs_comparison.first
 
         if @left.nil?
-          return redirect_to admin_student_applications_path, flash: { error: t('admins.comparisons.insufficient')}
+          return redirect_to root_path, flash: { error: t('admins.comparisons.insufficient')}
         elsif needs_comparison.count > 1
           @right = needs_comparison.second
         else
@@ -75,7 +75,7 @@ module Admins
       end
 
       if @right.nil?
-        redirect_to admin_student_applications_path, flash: { error: t('admins.comparisons.insufficient')}
+        redirect_to root_path, flash: { error: t('admins.comparisons.insufficient')}
       else
         # Sanity check 
         if @left.current_category != @right.current_category

@@ -102,48 +102,68 @@ en:
         title: Rising Tides
         banner_image: projects/arctic.png
         short_summary: >
-          The Arctic Institute is a Washington, D.C. based non-profit, which helps many coastal communities in the American Arctic to recover from climate change disasters. The affected communities need volunteers, who would guide them through adaptation and cultural preservation. 
+          The Arctic Institute is a Washington, D.C. based non-profit, which helps many coastal communities 
+          in the American Arctic to recover from climate change disasters. The affected communities need volunteers, 
+          who would guide them through adaptation and cultural preservation. 
+        link: https://risingtides.calblueprint.org
+        github_link: https://github.com/calblueprint/rising-tides
         org_link: https://www.facebook.com/ArcticInstituteOrg
-        github_link: 
         full_description: |           
-          Blueprint's developers build a skills-based matchmaking platform, where volunteers could connect with coastal communities to complete all the projects more efficiently. 
+          Blueprint's developers build a skills-based matchmaking platform, where volunteers could 
+          connect with coastal communities to complete all the projects more efficiently. 
       fsf: 
         status: past
         title: Free Software Foundation
         banner_image: projects/fsf.png
         short_summary: >
-          Free Software Foundation (FSF) is a non-profit in Boston, MA with a mission to promote computer user freedom. The organization aims to secure freedom for computer users by promoting the development and use of free software and documentation—particularly the GNU operating system—and by campaigning against threats to computer user freedom like Digital Restrictions Management (DRM) and software patents. 
+          Free Software Foundation (FSF) is a non-profit in Boston, MA with a mission to promote computer user freedom. 
+          The organization aims to secure freedom for computer users by promoting the development and use of free software 
+          and documentation—particularly the GNU operating system—and by campaigning against threats to computer user freedom 
+          like Digital Restrictions Management (DRM) and software patents. 
         org_link: https://www.fsf.org
-        github_link: 
+        github_link: https://github.com/calblueprint/fsf-mobile
         full_description: |           
-          Blueprint builds a mobile app that brings digital rights activism to people's fingertips. With the app, people will be able to stay informed with the latest news in digital rights and take action against rights infringements by signing petitions or donating. 
+          Blueprint builds a mobile app that brings digital rights activism to people's fingertips. With the app, people will 
+          be able to stay informed with the latest news in digital rights and take action against rights infringements by 
+          signing petitions or donating. 
       sfai: 
         status: past
         title: San Francisco Art Institute
         banner_image: projects/sfai.png
         short_summary: >
-           SFAI is a non-profit college with a diverse community of artists and scholars, dedicated to the intrinsic value of art. Technology is always redefining creativity and art in many different forms. But, how can we make it more accessible to everyone? We are partnering with the San Francisco Art Institute to tackle this challenge by contributing to the development of the digital art market.
-        org_link: https://www.sfai.edu
+          SFAI is a non-profit college with a diverse community of artists and scholars, dedicated to the intrinsic value 
+          of art. Technology is always redefining creativity and art in many different forms. But, how can we make it more 
+          accessible to everyone? We are partnering with the San Francisco Art Institute to tackle this challenge by contributing 
+          to the development of the digital art market.
         link: https://registry.sfai.edu/
-        github_link: 
+        github_link: https://github.com/SFAI/artistregistry
+        org_link: https://www.sfai.edu
         full_description: |           
-          Blueprint's solution is a web-based online gallery, making it more simple for college students at SFAI to showcase and sell their artworks. Prospective buyers, in this way, will be able to easily browse those pieces online before purchasing, as it would be in a store. 
+          Blueprint's solution is a web-based online gallery, making it more simple for college students at SFAI to showcase and
+          sell their artworks. Prospective buyers, in this way, will be able to easily browse those pieces online before purchasing, 
+          as it would be in a store. 
       homepointr: 
         status: past
         title: HomePointr
         banner_image: projects/homepointr.png
         short_summary: >
-          How do we provide the homeless with quality shelter no matter where they are in the world? HomePointr CIC is a Scotland based non-profit that connects housing providers with referral agencies to efficiently pair homeless to the most suitable housing options.         
-        org_link: https://homepointr.com/
-        github_link: 
+          How do we provide the homeless with quality shelter no matter where they are in the world? HomePointr CIC is a Scotland 
+          based non-profit that connects housing providers with referral agencies to efficiently pair homeless to the most suitable 
+          housing options.         
+        org_link: https://homepointr.com/ome
+        github_link: https://github.com/calblueprint/HomePointrCIC
         full_description: | 
-          Blueprint's developers focus on building an easy-to-use platform that will store data, removing the time involved in sifting through paperwork. We organize and streamline the application process to allow referral agencies to match homeless and vulnerable individuals to the best landlord's home.      
+          Blueprint's developers focus on building an easy-to-use platform that will store data, removing the time involved in 
+          sifting through paperwork. We organize and streamline the application process to allow referral agencies to match homeless 
+          and vulnerable individuals to the best landlord's home.      
 
       rmi:
         status: past
         title: Rocky Mountain Institute
         short_summary: >
-          RMI seeks to transform global energy use to create a cleaner, low-carbon future. To do this, they collect large amounts of detailed information on commercial buildings in order to analyze and suggest policies for reducing energy consumption. Our project aims to help RMI collect this immense amount of valuable data in a flexible, efficient way.
+          RMI seeks to transform global energy use to create a cleaner, low-carbon future. To do this, they collect large amounts 
+          of detailed information on commercial buildings in order to analyze and suggest policies for reducing energy consumption. 
+          Our project aims to help RMI collect this immense amount of valuable data in a flexible, efficient way.
         link: https://github.com/calblueprint/RMI
         github_link: https://github.com/calblueprint/RMI
         color: 15438C

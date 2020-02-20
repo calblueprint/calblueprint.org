@@ -120,14 +120,25 @@ en:
 
     # External Team
 
-      # Operations
-      # Content
-      # Marketing
-
     - first_name: 'Gibson'
       last_name: 'Chu'
       email: 'gibsonchu@berkeley.edu'
       <<: *outreach
+
+    - first_name: 'Tanthai'
+      last_name: 'Pongstein'
+      email: 'tanthaipongstien@gmail.com'
+      <<: *content
+
+    - first_name: 'Shannon'
+      last_name: 'Bonet'
+      email: 'shanshanlola@gmail.com'
+      <<: *operations
+    
+    - first_name: 'Grace'
+      last_name: 'Ng'
+      email: 'gracexng@berkeley.edu'
+      <<: *marketing
 
     # Project Leaders
 
@@ -185,6 +196,21 @@ en:
       linkedin: 'ashley-nguyen-15a799125'
       <<: *developer
 
+    - first_name: 'Calvin'
+      last_name: 'Chen'
+      email: 'chencalvin99@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Christopher'
+      last_name: 'Grey'
+      email: 'christophergrey@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Cindy'
+      last_name: 'Zhang'
+      email: 'cindyzhang7@berkeley.edu'
+      <<: *developer
+
     - first_name: 'Erin'
       last_name: 'Song'
       email: 'erinsong@berkeley.edu'
@@ -218,6 +244,11 @@ en:
       linkedin: 'karina-nguyen-248073143'
       <<: *developer
 
+    - first_name: 'Kenneth'
+      last_name: 'Lien'
+      email: 'kennethlien@berkeley.edu'
+      <<: *developer
+
     - first_name: 'Kyle'
       last_name: 'Hua'
       email: 'kylehuuuaaa@berkeley.edu'
@@ -236,6 +267,21 @@ en:
     - first_name: 'Nick'
       last_name: 'Wong'
       email: 'nickwong@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Suhas'
+      last_name: 'Rao'
+      email: 'suhasr@berkeley.edu'
+      <<: *developer
+    
+    - first_name: 'Susan'
+      last_name: 'Lin'
+      email: 'susan.lin@berkeley.edu'
+      <<: *developer
+
+    - first_name: 'Syndey'
+      last_name: 'Bui'
+      email: 'sydbui@berkeley.edu'
       <<: *developer
 
     - first_name: 'Thu'

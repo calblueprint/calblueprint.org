@@ -279,7 +279,7 @@ en:
       email: 'susan.lin@berkeley.edu'
       <<: *developer
 
-    - first_name: 'Syndey'
+    - first_name: 'Sydney'
       last_name: 'Bui'
       email: 'sydbui@berkeley.edu'
       <<: *developer

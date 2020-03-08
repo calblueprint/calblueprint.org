@@ -126,7 +126,7 @@ en:
       <<: *outreach
 
     - first_name: 'Tanthai'
-      last_name: 'Pongstein'
+      last_name: 'Pongstien'
       email: 'tanthaipongstien@gmail.com'
       <<: *content
 

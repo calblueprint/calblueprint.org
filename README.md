@@ -1,4 +1,4 @@
-The Blueprint Website
+The Blooprint Website
 ====
 [![Code Climate](https://codeclimate.com/github/calblueprint/calblueprint.org/badges/gpa.svg)](https://codeclimate.com/github/calblueprint/calblueprint.org)
 [![Test Coverage](https://codeclimate.com/github/calblueprint/calblueprint.org/badges/coverage.svg)](https://codeclimate.com/github/calblueprint/calblueprint.org)
@@ -16,11 +16,11 @@ Setup:
   - `config/database.yml.sample` is provided as an example; you'll need to tweak it a bit.
 2. Run `./bin/setup` from the project root.
 
-## Cal Blueprint
+## Cal Blooprint
 ![screenshot 2015-12-24 16 43 33](https://user-images.githubusercontent.com/5278006/32311415-bcdef6f6-bf55-11e7-9e8c-e43e786685cf.png)
 
 
-**[Cal Blueprint](http://www.calblueprint.org/)** is a student-run UC Berkeley organization devoted to matching the skills of its members to our desire to see social good enacted in our community. Each semester, teams of 4-5 students work closely with a non-profit to bring technological solutions to the problems they face every day.
+**[Cal Blooprint](http://www.calblueprint.org/)** is a student-run UC Berkeley organization devoted to matching the skills of its members to our desire to see social good enacted in our community. Each semester, teams of 4-5 students work closely with a non-profit to bring technological solutions to the problems they face every day.
 
 ## License
 

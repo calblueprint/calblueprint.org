@@ -2,43 +2,33 @@ en:
   pages:
     about:
       headline: About The Club
-      subtitle: We’re a club at UC Berkeley that develops pro-bono apps for nonprofits and promotes tech for social good.
+      subtitle: We’re a club at Berk that develops top dollar apps and promotes tech for social bad.
       mission: >
-        To make beautiful engineering accessible and useful
-        for those who create communities and promote public welfare.
+        To make ugly engineering everywhere
+        in order to rake in the cash money.
       values:
         mission: >
-          We as Blueprint members ultimately unify under one goal - achieving our mission. We place the interests of
-          the people and partners we serve above our own. Our primary measure of success is the amount of positive
-          impact we create through our work.
+          Make that money.
         growth: >
-          We as Blueprint members value the academic, social, and personal growth of our peers. We constantly seek
-          to perpetuate the cycle of learning and teaching, for our benefit and for others. We strive to offer a helping
-          hand in times of need and push each other to succeed.
+          Grow that money.
         cherish: >
-          We as Blueprint members seek to cherish our time spent together. We develop meaningful relationships that
-          extend well beyond the scope of the organization. We value each other as individuals and appreciate our
-          differences.
+          Rake that money.
         innovate: >
-          We as Blueprint members recognize that change is both inevitable and necessary. We are committed to
-          innovate and emphasize effective solutions as needed in order to remain relevant - nothing is sacred. We
-          welcome new ideas and diverse thinking.
+          Get that money
         humble: >
-          We as Blueprint members strive to remain humble, accept our imperfections, and be receptive to feedback.
-          We approach challenges with an open mind and remember that anyone can pursue social good, not just
-          Blueprint.
+          Double that money.
       team:
         title: The Team
         description: >
-          Blueprint is made up of innovative designers, diligent hackers, and thoughtful leaders.
+          Blooprint is made up of innovative designers, diligent hackers, and thoughtful leaders.
           We recognize that the individual might be talented but only a team has the power
           to take on the challenges of an organization.
       chapters:
-        - name: National Blueprint
-          description: Blueprint is on its way to becoming a national nonprofit organization. Stay tuned for updates!
+        - name: National Blooprint
+          description: Blooprint is on its way to becoming a national for-profit organization. Stay tuned for updates!
           url: "https://www.calblueprint.org/"
           image: "banner.png"
-        - name: UW Blueprint
-          description: Blueprint at the University of Waterloo is our first chapter, founded in 2015.
+        - name: UW Blooprint
+          description: Blooprint at the University of Waterloo is our first chapter, founded in 2015.
           url: "https://uwblueprint.org/"
           image: "https://uwblueprint.org/assets/logos/uw_logo.png"

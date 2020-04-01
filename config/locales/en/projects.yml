@@ -2,7 +2,7 @@ en:
   projects:
     index:
       title: Our Projects
-      subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
+      subtitle: All of Blooprint’s work is open source because we believe in building technology that makes us more open and connected.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
       # 2019-20
@@ -109,7 +109,7 @@ en:
         github_link: https://github.com/calblueprint/rising-tides
         org_link: https://www.facebook.com/ArcticInstituteOrg
         full_description: |           
-          Blueprint's developers build a skills-based matchmaking platform, where volunteers could 
+          Blooprint's developers build a skills-based matchmaking platform, where volunteers could 
           connect with coastal communities to complete all the projects more efficiently. 
       fsf: 
         status: past
@@ -123,7 +123,7 @@ en:
         org_link: https://www.fsf.org
         github_link: https://github.com/calblueprint/fsf-mobile
         full_description: |           
-          Blueprint builds a mobile app that brings digital rights activism to people's fingertips. With the app, people will 
+          Blooprint builds a mobile app that brings digital rights activism to people's fingertips. With the app, people will 
           be able to stay informed with the latest news in digital rights and take action against rights infringements by 
           signing petitions or donating. 
       sfai: 
@@ -139,7 +139,7 @@ en:
         github_link: https://github.com/SFAI/artistregistry
         org_link: https://www.sfai.edu
         full_description: |           
-          Blueprint's solution is a web-based online gallery, making it more simple for college students at SFAI to showcase and
+          Blooprint's solution is a web-based online gallery, making it more simple for college students at SFAI to showcase and
           sell their artworks. Prospective buyers, in this way, will be able to easily browse those pieces online before purchasing, 
           as it would be in a store. 
       homepointr: 
@@ -153,7 +153,7 @@ en:
         org_link: https://homepointr.com/ome
         github_link: https://github.com/calblueprint/HomePointrCIC
         full_description: | 
-          Blueprint's developers focus on building an easy-to-use platform that will store data, removing the time involved in 
+          Blooprint's developers focus on building an easy-to-use platform that will store data, removing the time involved in 
           sifting through paperwork. We organize and streamline the application process to allow referral agencies to match homeless 
           and vulnerable individuals to the best landlord's home.      
 
@@ -193,7 +193,7 @@ en:
 
           The Solution
           ------------
-          Blueprint’s team is developing an online marketplace for food donations. This
+          Blooprint’s team is developing an online marketplace for food donations. This
           system will allow anybody with surplus food — not just businesses — to post a
           donation and for nearby recipients to claim the donation. Re-Plate’s staff would be
           able to facilitate the process and monitor the marketplace. Through this system,
@@ -216,7 +216,7 @@ en:
 
           The Solution
           -----------
-          Blueprint is creating a React Native mobile application for DREAM to help teachers manage their classes, students, and attendances offline. The importance of offline access is due to inconsistent internet/electricity access at schools and program sites. We hope to be able to alleviate the growing pains of the nonprofit and help them impact thousands of more students.
+          Blooprint is creating a React Native mobile application for DREAM to help teachers manage their classes, students, and attendances offline. The importance of offline access is due to inconsistent internet/electricity access at schools and program sites. We hope to be able to alleviate the growing pains of the nonprofit and help them impact thousands of more students.
 
       veterans-360:
         status: past
@@ -234,7 +234,7 @@ en:
 
           The Solution
           -----------
-          Blueprint is working with Veterans 360 to create a web platform that allows Veterans 360 and partnering organizations to provide resources and support to these veterans. In order to help veterans have access to this information immediately, at any time and place, Blueprint has also created a mobile application through which veterans can read these resources and connect with other veterans and organizations in their area.
+          Blooprint is working with Veterans 360 to create a web platform that allows Veterans 360 and partnering organizations to provide resources and support to these veterans. In order to help veterans have access to this information immediately, at any time and place, Blooprint has also created a mobile application through which veterans can read these resources and connect with other veterans and organizations in their area.
 
       lava-mae:
         status: past
@@ -255,7 +255,7 @@ en:
 
           The Solution
           -----------
-          Blueprint's project team will build this capability in a web application to help Lava Mae
+          Blooprint's project team will build this capability in a web application to help Lava Mae
           grow and manage this network. It will consist of a discussion forum for people to ask questions
           and give responses, a page for Lava Mae to upload relevant toolkits and resources, and an
           interactive map to showcase their growing network. Through this tool, Lava Mae can connect
@@ -280,11 +280,11 @@ en:
 
           The Solution
           ------------
-          Blueprint’s is partnering with Roots of Success to bring their material onto
+          Blooprint’s is partnering with Roots of Success to bring their material onto
           an accessible digital platform. The organization will be able to create online
           modules, consolidating their materials into one central location. This can reach
           students who have traditionally not been included in such education programs, including
-          people in correctional facilities and untapped schools. By creating this app, Blueprint
+          people in correctional facilities and untapped schools. By creating this app, Blooprint
           hopes to ease educational access for students and potentially impact thousands of individuals.
 
       data-science:
@@ -308,10 +308,10 @@ en:
 
           The Solution
           ------------
-          Blueprint’s project team will be creating a new deployment system that is easy for other classes
+          Blooprint’s project team will be creating a new deployment system that is easy for other classes
           and universities to use. This new system will deploy in one step with minimal configuration. be
           easily monitored for traffic and errors, and work across multiple cloud providers, including Google
-          Cloud, Microsoft Azure, Amazon Web Services. Blueprint’s completed application will potentially
+          Cloud, Microsoft Azure, Amazon Web Services. Blooprint’s completed application will potentially
           impact thousands of students in Berkeley alone — and if it is used by other universities, countless
           more students will be exposed to the power of data science.
 
@@ -334,7 +334,7 @@ en:
 
           The Solution
           ------------
-          Blueprint’s Forte team will build a web application to help automate a large part of this
+          Blooprint’s Forte team will build a web application to help automate a large part of this
           process. This web application will include an application system for interested students and
           teachers, a scheduling dashboard for students and teachers to see upcoming and past lessons,
           and profiles for individual students and teachers. Through this system, Forte will be able to
@@ -356,7 +356,7 @@ en:
 
           The Solution
           ------------
-          Blueprint was able to work with the Schools Fund to create Friends and
+          Blooprint was able to work with the Schools Fund to create Friends and
           Family, a local crowdfunding platform for Berkeley School District
           teachers to utilize. With this new platform, teachers have been able to
           raise almost $30,000 thus far.
@@ -383,7 +383,7 @@ en:
 
           The Solution
           ------------
-          Blueprint was able to work with Project Homeless Connect by developing an
+          Blooprint was able to work with Project Homeless Connect by developing an
           Android application that allowed clients to check in to the event. The
           application removed the cost of carbon copy paper, while adding the
           security of not carrying their personal information along with them, but
@@ -409,7 +409,7 @@ en:
 
           The Solution
           ------------
-          Blueprint was able to work with ODALC to create a platform that seamlessly
+          Blooprint was able to work with ODALC to create a platform that seamlessly
           bridges technology, design and low-income communities. This platform
           serves to empower individuals to harness the digital tools to succeed in
           the 21st century.
@@ -432,6 +432,6 @@ en:
 
           The Solution
           ------------
-          Blueprint was able to work with Roots of Success to create a platform that
+          Blooprint was able to work with Roots of Success to create a platform that
           allows teachers to gracefully manage multiple classrooms, modules and
           surveys.

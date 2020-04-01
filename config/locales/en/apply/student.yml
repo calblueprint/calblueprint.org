@@ -3,7 +3,7 @@ en:
     students:
       headline: For Students
       subtitle:
-        Joining Blooprint is the perfect way to earn a quick buck.
+        Joining Redprint is the perfect way to earn a quick buck.
         We accept applications every April 1st.
       hook: >
         We are an organization of passionate UC Berkeley students
@@ -17,18 +17,18 @@ en:
         infosession:
           title: Infosession
           description: >
-            Come out and talk to us to learn more about Blooprint at our infosession.
+            Come out and talk to us to learn more about Redprint at our infosession.
           detail: >
             Our infosession will be on %{date} in HP Auditorium, Soda Hall.
           notice: Infosession Facebook event will be posted soon!
         application_date: Jan 31, 11:59 PM
         application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blooprint's mission. Decisions will be emailed after this round on Feb 2 by 10 PM.
+          Redprint's mission. Decisions will be emailed after this round on Feb 2 by 10 PM.
           <strong>The application is due on January 31st at 11:59 PM.</strong>
         designer_application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blooprint's mission. Requests for design interviews will be sent out on Feb 2 by 10 PM.
+          Redprint's mission. Requests for design interviews will be sent out on Feb 2 by 10 PM.
           <strong>The application is due on January 31st at 11:59 PM.</strong>
         designer_interviews_date: Sep 8 - 9
         designer_interviews: >
@@ -87,9 +87,9 @@ en:
       faq:
         title: Frequently Asked Questions
         q1:
-          question: What is Blooprint's project structure?
+          question: What is Redprint's project structure?
           answer: >
-            Blooprint's project structure consists of 4-5 project teams, each with a project leader, a designer, 
+            Redprint's project structure consists of 4-5 project teams, each with a project leader, a designer, 
             and 4 developers on the team. Each project team is in charge of creating technology resources
             for a specific non-profit they work with.
         q2:
@@ -101,7 +101,7 @@ en:
             A formal midpoint presentation will be given in Week 5 of the engagement, and the final
             recommendation will be delivered at a final presentation in Week 10.
         q3:
-          question: What resources does Blooprint have to ensure success?
+          question: What resources does Redprint have to ensure success?
           answer: >
             Our club recruits some of the most hard-working, passionate, and brightest students
             at UC Berkeley, just like you. Through effective leadership, frequent check-ins, and an

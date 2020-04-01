@@ -20,15 +20,15 @@ en:
       team:
         title: The Team
         description: >
-          Blooprint is made up of innovative designers, diligent hackers, and thoughtful leaders.
+          Redprint is made up of innovative designers, diligent hackers, and thoughtful leaders.
           We recognize that the individual might be talented but only a team has the power
           to take on the challenges of an organization.
       chapters:
-        - name: National Blooprint
-          description: Blooprint is on its way to becoming a national for-profit organization. Stay tuned for updates!
+        - name: National Redprint
+          description: Redprint is on its way to becoming a national for-profit organization. Stay tuned for updates!
           url: "https://www.calblueprint.org/"
           image: "banner.png"
-        - name: UW Blooprint
-          description: Blooprint at the University of Waterloo is our first chapter, founded in 2015.
+        - name: UW Redprint
+          description: Redprint at the University of Waterloo is our first chapter, founded in 2015.
           url: "https://uwblueprint.org/"
           image: "https://uwblueprint.org/assets/logos/uw_logo.png"

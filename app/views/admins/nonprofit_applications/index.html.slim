@@ -5,7 +5,7 @@
     .admin-page-title-bar-right
       = form_tag("", method: "get") do
         = select_tag :filter_by, options_for_select([['Current applications', 'current'],
-                                                     ['Blueprint only', 'bp'],
+                                                     ['Redprint only', 'bp'],
                                                      ['CS169 only', 'cs169'],
                                                      ['All applications', 'all']], @filter),
                                  class: "bp-select select-sm"

@@ -1,19 +1,19 @@
 en:
   apply:
     nonprofits:
-      headline: For Nonprofits
+      headline: For Profits
       subtitle: >
-        As a partner, Blueprint will work with you to develop technology that turns
-        your vision into a reality, completely free of charge.
+        As a partner, Redprint will work with you to develop technology that turns
+        your vision into money, fast.
       cs169_hook: >
         We also partner with UC Berkeley's <a
         href="https://sites.google.com/site/ucbsaas/faq/external-customer"
         target="_blank">Software Engineering</a> class (CS 169). CS 169 operates
-        similarly to Blueprint except in the form of a class. You can learn more
+        similarly to Redprint except in the form of a class. You can learn more
         <a href="https://sites.google.com/site/ucbsaas/faq/external-customer"
         target="_blank">here</a>. Applications for CS 169 are currently open.
       applications_closed: >
-        Applications for Blueprint are closed for this semester. Sign up to be notified when they reopen!
+        Applications for Redprint are closed for this semester. Sign up to be notified when they reopen!
       services:
         web_application_development: >
           Our platform of choice, web applications leverage the power of the internet to expand reach and
@@ -30,8 +30,8 @@ en:
           The Interest Form is a short form for us to get to know your organization
           and mission better.
         second_round: >
-          The Application helps us understand what you need from Blueprint. You'll have the opportunity to explain
-          why Blueprint's development services are important for your organization and provide
+          The Application helps us understand what you need from Redprint. You'll have the opportunity to explain
+          why Redprint's development services are important for your organization and provide
           specifics on what you'd like us to build with you.
         phone_screen: >
           A Phone Screen interview will allow you to introduce yourself in a call with our
@@ -40,10 +40,10 @@ en:
           scheduled before application deadlines.
         interviews: >
           In order to ensure project success, we conduct a final, comprehensive interview with
-          you to better understand your project and if it's a fit for Blueprint.
+          you to better understand your project and if it's a fit for Redprint.
           Check out our <a href="#criteria">decision criteria</a> below!
         final_decisions: >
-          If selected to work with Blueprint, your organization will have the opportunity to work with
+          If selected to work with Redprint, your organization will have the opportunity to work with
           us on a project over the course of a year. Once decisions are made, each project leader chooses an
           organization and we begin the journey!
       decision_criteria:
@@ -53,7 +53,7 @@ en:
           we use to determine project fit.
       quote:
         text: >
-          Working with Blueprint has been an incredible pleasure. We have used their application to raise
+          Working with Redprint has been an incredible pleasure. We have used their application to raise
           hundreds of thousands of dollars for Berkeley's teachers.
         reference: "- Berkeley Public Schools Fund"
       timeline:
@@ -78,7 +78,7 @@ en:
             crucial. At our meetings, we discuss updates on project features, check the timeline, and have
             discussion on the progress of the project and the nonprofit itself.
         q3:
-          question: How does Blueprint ensure success?
+          question: How does Redprint ensure success?
           answer: >
             Our club recruits the brightest and most hard-working students at UC Berkeley, one of the best
             universities in computer science. Through effective leadership and frequent checkins with our

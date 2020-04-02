@@ -35,27 +35,27 @@ section.about-page-values-section#values
     .values-container
       .value
         div.value-num 01
-        h3.value-title Money
+        h3.value-title Mission First
         p.value-desc = t ".values.mission"
 
       .value
         div.value-num 02
-        h3.value-title Money
+        h3.value-title Perpetual Growth
         p.value-desc = t ".values.growth"
 
       .value
         div.value-num 03
-        h3.value-title Money
+        h3.value-title Cherish Each Other
         p.value-desc = t ".values.cherish"
 
       .value
         div.value-num 04
-        h3.value-title Money
+        h3.value-title Always Innovate
         p.value-desc = t ".values.innovate"
 
       .value
         div.value-num 05
-        h3.value-title Money
+        h3.value-title Be Humble
         p.value-desc = t ".values.humble"
 
 section.photo-carousel.about-page-photo-carousel
@@ -87,8 +87,8 @@ section.about-page-team-section#team
               figcaption
                 .text-container
                   .name
-                    = "#{member[:last_name]} #{member[:first_name]}"
-                  .position = "Moneymaker"
+                    = "#{member[:first_name]} #{member[:last_name]}"
+                  .position = member[:role]
                 - if member[:linkedin]
                     div.icon-container
                       a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"
@@ -110,8 +110,8 @@ section.about-page-team-section
               figcaption
                 .text-container
                   .name
-                    = "#{member[:first_name][0]}#{member[:last_name][0]}"
-                  .position = "Former Moneymaker"
+                    = "#{member[:first_name]} #{member[:last_name]}"
+                  .position = member[:role]
                 - if member[:linkedin]
                     div.icon-container
                       a href="https://linkedin.com/in/#{member[:linkedin]}" target="_blank"

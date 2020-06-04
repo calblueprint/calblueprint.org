@@ -13,9 +13,12 @@
     strong.apply-page-due< July 10th, 2019, 11:59pm,
     |  but applications will be reviewed on a rolling basis.
     |  We encourage you to submit your application within a week of your
-    |  Interest Form.
+    |  Interest Form. Review our 
+    =<> link_to "our Terms of Work", nonprofit_applications_contract_path
+    |  .
     =<> link_to "Contact us", new_contact_form_path
-    | if you have any questions.
+    | if you have any questions.  
+
 
   = render "form_errors", obj: @nonprofit_application
   = simple_form_for @nonprofit_application, url: nonprofit_application_submit_path(@nonprofit_application.id), method: 'post' do |f|

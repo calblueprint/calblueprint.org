@@ -17,8 +17,8 @@
     p.static-page-desc.marginBot-sm Start by telling us a few basic details about your organization in the Interest Form.
       After you complete the Interest Form, you will have access to the application.
     - if @interest_form
-      p ​​Thanks for sending us your Interest Form! We’ll be in touch soon.
-        ​​In the meantime, you can start your application, which is due on July 10.
+      p ​​Thanks for sending us your Interest Form! We’ll be in touch soon. 
+        ​​ In the meantime, you can start your application, which is due on July 10.
     - else
       = link_to "Begin Interest Form", new_nonprofit_interest_form_path, class: "bp-btn"
   .marginBot-lg class=('npo-application-section--disabled' if !@interest_form || !@proposal_open)
@@ -30,7 +30,7 @@
       p.npo-application-notify.static-page-desc
         span style="font-weight: 700; display: block" This part of the application is not available to you just yet
         '  We will allow you to submit an application after completing a short phone call with us. If we don't contact you within a couple days,
-        ' feel free to email us at team@calblueprint.org!
+        ' feel free to email us at projects@calblueprint.org!
     - if @num_draft == 0 && @num_submitted == 0
       p.static-page-desc You don't have any applications.
     - else
@@ -45,7 +45,7 @@
 
       - if @num_submitted != 0
         h2.npo-application-subheader style="text-transform: uppercase; color: gray; font-size: 12pt; font-weight: 700" Submitted
-        p.static-page-desc These are applications that you've submitted. You can always edit your application by clicking below. We will review applications and get back to you shortly!
+        p.static-page-desc These are applications that you've submitted. You can always edit your application by clicking below. Feel free to submit applications for multiple projects. We will review each independently and get back to you shortly!
         div.marginBot-sm
           - @nonprofit_applications.each do |na|
             - if na.submitted?

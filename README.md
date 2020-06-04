@@ -11,11 +11,12 @@ Dependencies:
 - Ruby `v2.6.5` (run `rvm install 2.6.5` to install)
 
 Setup:
+(currently very mac-centric)
 
 1. Clone repo
-2. Install RVM [Instructions for mac](https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/)
+2. Install RVM [Instructions for mac](https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) and [Homebrew](https://brew.sh/) (if on mac)
 3. Go to codebase folder, switch to ruby 2.6.5: `rvm use 2.6.5`  (You'll have to do this everytime you open terminal in this folder)
-4. Install Postgresql locally, on mac `brew install postgresql`. (If errors, try [this article on completely reinstalling](https://medium.com/@bitadj/completely-uninstall-and-reinstall-psql-on-osx-551390904b86)
+4. Install Postgresql locally, on mac `brew install postgresql`. (If errors, try [this article on completely reinstalling](https://medium.com/@bitadj/completely-uninstall-and-reinstall-psql-on-osx-551390904b86))
 5. Create a new file called `config/database.yml` and copy over contents of `config/database.yml.sample`. leave defaults in place, remove username and password lines. 
 6. Create a new file called `config/application.yml` and get contents from E-Team
 7. Run `bundle install`

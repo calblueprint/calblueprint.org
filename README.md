@@ -8,7 +8,7 @@ The Blueprint Website
 
 Dependencies:
 - `rvm` (https://rvm.io/)
-- Ruby `v2.2.0` (run `rvm install 2.2.0` to install)
+- Ruby `v2.6.5` (run `rvm install 2.6.5` to install)
 
 Setup:
 

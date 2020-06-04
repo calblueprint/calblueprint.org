@@ -2,7 +2,7 @@
 en:
   simple_form:
     error_notification:
-      default_message: 'Please review the problems below:'
+      default_message: "Please review the problems below:"
     hints:
       nonprofit_application:
         client_status: |
@@ -16,8 +16,8 @@ en:
           Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
     labels:
       defaults:
-        email: 
-        password: 
+        email:
+        password:
         remember_me: Keep me signed in
       nonprofit_application:
         client_status: Are you a returning CS169 customer from past semesters?
@@ -46,20 +46,20 @@ en:
           I have read and understood  Blueprint's Terms of Work for Nonprofit Partners.
         category: |
           Blueprint offers a number of technical services for nonprofit partners. Please select the kind of work that would most benefit your organization.
-        contact_name: Your First and Last Name
+        contact_name: Your first and last name
         org_description: |
           Please give a brief description of your organization.
         phone: Your Phone Number
         referrer: |
           How did you hear about Blueprint?
-        role: Your Role in Your Organization
+        role: Your role in your organization
         website: Website
       project:
         full_description: |
           Full description for this project as Markdown. This will be shown as a separate page for this specific project.
-    'no': 'No'
+    "no": "No"
     required:
       html: <span class="required-symbol" title="required">*</span>
       mark: "*"
       text: required
-    'yes': 'Yes'
+    "yes": "Yes"

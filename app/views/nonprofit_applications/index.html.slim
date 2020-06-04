@@ -18,7 +18,6 @@
       After you complete the Interest Form, you will have access to the application.
     - if @interest_form
       p ​​Thanks for sending us your Interest Form! We’ll be in touch soon. 
-        ​​ In the meantime, you can start your application, which is due on July 10.
     - else
       = link_to "Begin Interest Form", new_nonprofit_interest_form_path, class: "bp-btn"
   .marginBot-lg class=('npo-application-section--disabled' if !@interest_form || !@proposal_open)

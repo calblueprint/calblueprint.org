@@ -12,9 +12,15 @@ Dependencies:
 
 Setup:
 
-1. Create a `database.yml` file in `config/`.
-  - `config/database.yml.sample` is provided as an example; you'll need to tweak it a bit.
-2. Run `./bin/setup` from the project root.
+1. Clone repo
+2. Install RVM (Instructions for mac): https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/
+3. Go to codebase folder, switch to ruby 2.6.5: `rvm use 2.6.5`  (You'll have to do this everytime you open terminal in this folder)
+4. Install Postgresql locally, on mac `brew install postgresql`. (If errors, try [this article on completely reinstalling](https://medium.com/@bitadj/completely-uninstall-and-reinstall-psql-on-osx-551390904b86)
+5. Create a new file called `config/database.yml` and copy over contents of `config/database.yml.sample`. leave defaults in place, remove username and password lines. 
+6. Create a new file called `config/application.yml` and get contents from E-Team
+7. Run `bundle install`
+8. Run `rails db:setup`
+9. Run `rails server`!
 
 ## Cal Blueprint
 ![screenshot 2015-12-24 16 43 33](https://user-images.githubusercontent.com/5278006/32311415-bcdef6f6-bf55-11e7-9e8c-e43e786685cf.png)

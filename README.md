@@ -20,8 +20,9 @@ Setup:
 5. Create a new file called `config/database.yml` and copy over contents of `config/database.yml.sample`. leave defaults in place, remove username and password lines. 
 6. Create a new file called `config/application.yml` and get contents from E-Team
 7. Run `bundle install`
-8. Run `rails db:setup`
-9. Run `rails server`!
+8. Run `gem install bundler:2.1.4` if the above command does not work
+9. Run `rails db:setup`
+10. Run `rails server`!
 
 ## Cal Blueprint
 ![screenshot 2015-12-24 16 43 33](https://user-images.githubusercontent.com/5278006/32311415-bcdef6f6-bf55-11e7-9e8c-e43e786685cf.png)

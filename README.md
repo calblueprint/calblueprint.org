@@ -6,15 +6,24 @@ The Blueprint Website
 
 ## Contributing
 
-Dependencies:
-- `rvm` (https://rvm.io/)
-- Ruby `v2.2.0` (run `rvm install 2.2.0` to install)
+### Dependencies
 
-Setup:
+- Ruby `v2.5.6`
+- Rails `v5.2.0`
 
-1. Create a `database.yml` file in `config/`.
-  - `config/database.yml.sample` is provided as an example; you'll need to tweak it a bit.
-2. Run `./bin/setup` from the project root.
+### Setup
+
+Run setup script
+
+```bash
+./bin/setup
+```
+
+Run server
+
+```bash
+rails s
+```
 
 ## Cal Blueprint
 ![screenshot 2015-12-24 16 43 33](https://user-images.githubusercontent.com/5278006/32311415-bcdef6f6-bf55-11e7-9e8c-e43e786685cf.png)

@@ -2,7 +2,7 @@
 en:
   simple_form:
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: 'Please review the problems below:'
     hints:
       nonprofit_application:
         client_status: |
@@ -14,6 +14,8 @@ en:
       nonprofit_interest_form:
         agree_to_terms: |
           Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
+        submitted_calendly: |
+          Once you have scheduled a call, check this box and press submit!
     labels:
       defaults:
         email:
@@ -44,6 +46,8 @@ en:
       nonprofit_interest_form:
         agree_to_terms: |
           I have read and understood  Blueprint's Terms of Work for Nonprofit Partners.
+        submitted_calendly: |
+          Please sign up for a phone call with us by clicking on this link: "https://calendly.com/calblueprint/npo-learn-more"
         category: |
           Blueprint offers a number of technical services for nonprofit partners. Please select the kind of work that would most benefit your organization.
         contact_name: Your first and last name
@@ -57,9 +61,9 @@ en:
       project:
         full_description: |
           Full description for this project as Markdown. This will be shown as a separate page for this specific project.
-    "no": "No"
+    'no': 'No'
     required:
       html: <span class="required-symbol" title="required">*</span>
-      mark: "*"
+      mark: '*'
       text: required
-    "yes": "Yes"
+    'yes': 'Yes'

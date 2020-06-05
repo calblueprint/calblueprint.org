@@ -22,30 +22,22 @@ en:
           Mobile applications use the unique capabilities of phones to bring computing to many.
       application_timeline:
         submission: >
-          Our written application portal opens. This part is split into two components - the Interest Form
-          and the Application itself.
-          If you have any questions or concerns please email
-          <a href="mailto:team@calblueprint.org">team@calblueprint.org</a>.
+          The first part of our application is an interest form where you will provide contact and basic information about your organization.
+          If you have any questions or concerns about anything in this timeline, please email
+          <a href="mailto:projects@calblueprint.org">projects@calblueprint.org</a>.
         first_round: >
           The Interest Form is a short form for us to get to know your organization
           and mission better.
-        second_round: >
-          The Application helps us understand what you need from Blueprint. You'll have the opportunity to explain
-          why Blueprint's development services are important for your organization and provide
-          specifics on what you'd like us to build with you.
         phone_screen: >
-          A Phone Screen interview will allow you to introduce yourself in a call with our
-          project leaders and get some questions answered about who we are and what we do.
-          Our applications are reviewed as they are submitted, so your interviews may be
-          scheduled before application deadlines.
+          One of our Project Leaders will reach out to you to schedule a 15 - 30 minute informational phone call that will help you get to know the work we do, and vice versa! We'll also be able to answer any questions you have about the application process. If you decide that you'd like to potentially work with us and we feel our services could fit your needs, we'll open up the second part of our application.
+        second_round: >
+          The second part of our application helps us understand what you need from Blueprint. You'll have the opportunity to explain why our services could be helpful to your organization, identify any pain points within your current operations, and expand on what you'd like us to build for you. If your proposed project sounds like something we can build, we'll be in touch for a final interview.
         interviews: >
-          In order to ensure project success, we conduct a final, comprehensive interview with
-          you to better understand your project and if it's a fit for Blueprint.
-          Check out our <a href="#criteria">decision criteria</a> below!
+          The final interview will be with a handful of our Project Leaders and Designers. Together, we'll dive into more detail about your proposed project, discuss how it could be designed to best fit your needs, and leave room for any remaining questions.
         final_decisions: >
-          If selected to work with Blueprint, your organization will have the opportunity to work with
-          us on a project over the course of a year. Once decisions are made, each project leader chooses an
-          organization and we begin the journey!
+          We'll reach out and let you know whether your organization has been selected to work with Blueprint!
+        project_scoping: >
+          If selected, your organization will have the opportunity to work with us on a project over the course of the school year (August - May). Each Project Leader and Designer will choose an organization, and over the course of August, they will work with you to finalize the plans for your project.
       decision_criteria:
         description: >
           We want to help as many organizations as we possibly can. Unfortunately, we cannot take every
@@ -85,4 +77,3 @@ en:
             clients we hope that the combination of talent, dedication, and care will result in a project that
             benefits your organization.
       newsletter: Sign up for our newsletter to get updates about events, our work and applications!
-

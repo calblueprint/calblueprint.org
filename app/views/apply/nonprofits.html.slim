@@ -67,12 +67,12 @@ section.application-our-services#our-services
 section.application-process-section#application-process
   .container
     h2.static-page-header.marginBot-xxl Nonprofit Application Process
-    .npo-timeline
+    .npo-timeline 
       .timeline-row
         .num-col
           .timeline-num 01
         .text-col
-          .timeline-row-title Application Open
+          .timeline-row-title Interest Form/Application Opens
           .timeline-row-date June 6
           .timeline-row-description
             = raw t ".application_timeline.submission"
@@ -84,26 +84,26 @@ section.application-process-section#application-process
         .num-col
           .timeline-num 02
         .text-col
-          .timeline-row-title Application Due
-          .timeline-row-date July 10
+          .timeline-row-title Informational Phone Call
+          .timeline-row-date June 6 - July 8 
           .timeline-row-description
-            = raw t ".application_timeline.second_round"
+            = raw t ".application_timeline.phone_screen"
 
       .timeline-row
         .num-col
           .timeline-num 03
         .text-col
-          .timeline-row-title Phone Screen Interviews
-          .timeline-row-date July 22 - August 8
+          .timeline-row-title Application Due
+          .timeline-row-date July 11
           .timeline-row-description
-            = t ".application_timeline.phone_screen"
+            = t ".application_timeline.second_round"
 
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
           .timeline-row-title Final Interviews
-          .timeline-row-date August 8 - 19
+          .timeline-row-date July 12 - July 30
           .timeline-row-description
             = raw t ".application_timeline.interviews"
 
@@ -112,9 +112,18 @@ section.application-process-section#application-process
           .timeline-num 05
         .text-col
           .timeline-row-title Decisions Released
-          .timeline-row-date August 20
+          .timeline-row-date August 3
           .timeline-row-description
             = t ".application_timeline.final_decisions"
+
+      .timeline-row
+        .num-col
+          .timeline-num 06
+        .text-col
+          .timeline-row-title Project Scoping
+          .timeline-row-date August 4 - August 21
+          .timeline-row-description
+            = t ".application_timeline.project_scoping"
 
 section.application-decision-criteria-section#criteria
   .container
@@ -160,21 +169,21 @@ section.npo-apply-previous-work-section#previous-work
       | View All Projects
       span.fa.fa-angle-right
     .projects-container
-      = link_to project_path("lava-mae")
-        .project-item#lavamae
-          .project-img.img-container: img src=image_url("home/lavamae.jpg") alt="" /
-          h4 Lava Mae
-          p Bringing humanity and collaboration through services for the homeless.
-      = link_to project_path("re-plate")
-        .project-item#replate
-          .project-img.img-container: img src=image_url("home/replate.jpg") alt="" /
-          h4 Replate
-          p Reducing food waste and hunger in the community.
-      = link_to project_path("roots-of-success")
-        .project-item#roots
-          .project-img.img-container: img src=image_url("home/roots.jpg") alt="" /
-          h4 Roots of Success
-          p Improving opportunities for people from underserved communities
+      = link_to project_path("1951coffee")
+        .project-item#1951coffee
+          .project-img.img-container: img src=image_url("home/1951.png") alt="" /
+          h4 1951
+          p Building communities to make successful refugee resettlement possible.
+      = link_to project_path("unloop")
+        .project-item#unloop
+          .project-img.img-container: img src=image_url("home/unloop.png") alt="" /
+          h4 Unloop
+          p Building a pipeline from prison to tech.
+      = link_to project_path("dckitchen")
+        .project-item#dckitchen
+          .project-img.img-container: img src=image_url("home/dckitchen.png") alt="" /
+          h4 DC Central Kitchen 
+          p Expanding access to affordable healthy food through corner stores.
 
 section.application-faqs-section#faqs
   .container

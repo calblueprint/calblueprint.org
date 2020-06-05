@@ -23,7 +23,7 @@ en:
         client_status: Are you a returning CS169 customer from past semesters?
         cs169_pool: |
           Do you want your application to be considered for CS 169?
-        current_resources: How have you tried to address this problem using your current resources? What is the current state of your technology, if any?
+        current_resources: How have you tried to address this problem using your current resources? Do you currently use any technology (e.g. Google Forms and Excel, Salesforce, text messaging, etc) to address this problem? If so, how are the existing systems failing to meet your needs?
         date_established: When was your organization established?
         devices: |
           On what devices do you expect it to work?

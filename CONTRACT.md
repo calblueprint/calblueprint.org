@@ -1,6 +1,6 @@
 # Blueprint: Contract and Terms of Work
 
-*Last updated: June 2018*
+_Last updated: June 2018_
 
 This document serves as a repository for Blueprint's general terms of work with its nonprofit partners. It should set the expectations for Blueprint's **specialization of work**, **development cycle**, and **work contract**, so you can see if your organization is a good fit for Blueprint's services. Once an organization is selected to work with Blueprint, a customized version of this contract, along with all details of the project deliverables, will be signed by both parties.
 
@@ -9,9 +9,10 @@ This document serves as a repository for Blueprint's general terms of work with 
 Our projects require a large time investment for our developers (see the next section, "Timeline"), and our commitment towards your organization's success is proportionally grand. The type of project that we look for is one that will enable your organization to scale and achieve a level of operation otherwise unreachable without the assistance of our technology. It does not matter how big or small you are already--**if you believe that we can help you create meaningful change, pitch us your idea**.
 
 ### Examples of Accepted Projects
-* A platform for collecting leftover foods from cafeterias and redistributing it for the homeless. [See Replate →](http://replate.org/)
-* A web application to digitalize an entire curriculum for helping the underprivileged find careers. [See Roots of Success →](https://medium.com/blueprint/roots-of-success-1955f3a769e1)
-* A digital form system to consolidate building data in order to better regulate and reduce energy usage.  [See Rocky Mountain Institute →](https://medium.com/blueprint/how-were-helping-tackle-climate-change-2115d11379a6)
+
+- A platform for collecting leftover foods from cafeterias and redistributing it for the homeless. [See Replate →](http://replate.org/)
+- A web application to digitalize an entire curriculum for helping the underprivileged find careers. [See Roots of Success →](https://medium.com/blueprint/roots-of-success-1955f3a769e1)
+- A digital form system to consolidate building data in order to better regulate and reduce energy usage. [See Rocky Mountain Institute →](https://medium.com/blueprint/how-were-helping-tackle-climate-change-2115d11379a6)
 
 **Examples of projects that will NOT be accepted:** Redesigning a static website, refactoring old codebases to use newer technology, creating a mobile app "version" of already existing technology
 
@@ -26,18 +27,42 @@ For the tech savvy, our projects usually run on a [Ruby on Rails](https://rubyon
 We are based at the University of California, Berkeley, and our developers are all students attending the university. We ask you to be cognizant of our development cycle, which is closely tied our semesterly system of recruitment and breaks.
 
 ### Timeline
-*Dates may vary slightly.*
 
-* **Early August: After the interviewing process, we work together with you to scope out the details of your project.** We will meet in person if possible. At the end of this, we produce a first-draft project proposal that delineates the major features and specifications of what we will create for you.
-* 9/8: We have recruited all developers for the semester, and they are introduced to their respective projects
-* 9/30: Developers and the project leader finalize project scoping, and create the final contract of work between Blueprint and the nonprofit. This needs to be signed by both parties.
-* 10/20: First-quarter check-in: developers, project leader, and the nonprofit meet (either in-person or remotely) to check-in.
-* 12/1: Midpoint check-in: developers, project, leader, and the nonprofit meet to check-in. The minimum viable product (MVP) should be mostly complete.
-* **12/14 - 1/21: Developers are on university break during this period.**
-* 1/22-2/3: We recruit new developers to fill the spots of those who've graduated.
-* 2/4: Development resumes.
-* 3/25: Third-quarter check-in: developers, project leader, and the nonprofit meet to check-in. Any final feature adjustments and refinements should be made at this point.
-* **5/6 - 5/20: developers and the project leader meet at the NPO's office to give a live presentation and hand off the final product. If this is not possible it will be held remotely.**
+_Dates may vary slightly._
+
+**Week 1 — September 8th**
+
+We have recruited all designers and developers for the semester. They are introduced to their respective project teams.
+
+**Week 4 — September 30th**
+
+Developers, designers and the project leader finalize project scoping and create the final contract of work between Blueprint and the nonprofit, signed by both parties. Digital prototype has been designed and approved, and tickets for feature development are underway.
+
+Note: When both parties agree to this project proposal, it should be agreed upon and set unless in otherwise unforeseen circumstances. There may be pivots or revalued features, but not a revamp that fundamentally changes the purpose and/or mission of what we are trying to achieve.
+
+**Week 8 — October 20th**
+
+First-quarter check-in. Project team and the nonprofit meet (either in-person or remotely) to check-in to peer into design and development progress.
+
+**Week 14 — December 1st**
+
+Midpoint check-in: project team and the nonprofit meet to check-in. The minimum viable product (MVP) should be mostly complete.
+
+**Week 16-21 — December 14th - January 21st**
+
+Project team remains on university break during this period.
+
+**Week 23 — February 3rd**
+
+Blueprint recruits new members to fill in project team members that have graduated. Design and development resume.
+
+**Week 30 — March 25th**
+
+Third-quarter check-in: developers, project leader, and the nonprofit meet to check-in. Any final feature adjustments and refinements **should be made at this point.**
+
+**Week 38 — May 6th - 20th**
+
+Project team meet at the NPO's office to give a live presentation and hand off final product. If this is not possible it will be held remotely.
 
 ### Communication
 

@@ -64,17 +64,6 @@ Third-quarter check-in: developers, project leader, and the nonprofit meet to ch
 
 Project team meet at the NPO's office to give a live presentation and hand off final product. If this is not possible it will be held remotely.
 
-<!-- * **Early August: After the interviewing process, we work together with you to scope out the details of your project.** We will meet in person if possible. At the end of this, we produce a first-draft project proposal that delineates the major features and specifications of what we will create for you.
-* 9/8: We have recruited all developers for the semester, and they are introduced to their respective projects
-* 9/30: Developers and the project leader finalize project scoping, and create the final contract of work between Blueprint and the nonprofit. This needs to be signed by both parties.
-* 10/20: First-quarter check-in: developers, project leader, and the nonprofit meet (either in-person or remotely) to check-in.
-* 12/1: Midpoint check-in: developers, project, leader, and the nonprofit meet to check-in. The minimum viable product (MVP) should be mostly complete.
-* **12/14 - 1/21: Developers are on university break during this period.**
-* 1/22-2/3: We recruit new developers to fill the spots of those who've graduated.
-* 2/4: Development resumes.
-* 3/25: Third-quarter check-in: developers, project leader, and the nonprofit meet to check-in. Any final feature adjustments and refinements should be made at this point.
-* **5/6 - 5/20: developers and the project leader meet at the NPO's office to give a live presentation and hand off the final product. If this is not possible it will be held remotely.** -->
-
 ### Communication
 
 Project teams and their nonprofits will try to meet every other week to give brief status updates and answer any questions. More in-depth check-ins will be held quarterly over the entire development cycle. We want to have as open of a communication channel as possible, so we will always be open via email or phone to answer any questions or concerns.

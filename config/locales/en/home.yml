@@ -2,13 +2,14 @@ en:
   pages:
     home:
       headline: Tech for Social Good
-      subtitle: We’re a team of UC Berkeley students that develops software pro bono for nonprofits and
+      subtitle:
+        We’re a team of UC Berkeley students that develops software pro bono for nonprofits and
         promotes technology for social good.
       what_we_do: >
         Blueprint strives to make technology accessible and useful for those who create communities and
         promote public welfare.
       our_projects: >
-        Each year, teams of five students work with non-profit organizations on projects
+        Each year, small teams of students work with non-profit organizations on projects
         to help them better serve their communities. We've designed and built a crowdfunding application for
         Berkeley's public schools, a professional development platform for digital literacy in Oakland, and
         much more!

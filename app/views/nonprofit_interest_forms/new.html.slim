@@ -9,7 +9,7 @@
   p.static-page-desc
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
-    |  The Interest Form and Application are due on
+    |  The interest form and application are due on
     strong.apply-page-due< July 11th, 2020, 11:59pm,
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
@@ -17,7 +17,7 @@
 
   p.static-page-desc.marginBot-md
     | Before beginning, please make sure to read and understand our
-    span< = link_to "Terms of Work", nonprofit_applications_contract_path
+    span< = link_to "terms of work", nonprofit_applications_contract_path
     |. Good luck!
 
   = render "form_errors", obj: @nonprofit_interest_form
@@ -28,7 +28,7 @@
     = f.input :role
     = f.input :website
     .input-group.string.required.nonprofit_interest_form_website
-      label.string.required.control-label for="nonprofit_interest_form_website" * Address of Office (closest to Berkeley, CA)
+      label.string.required.control-label for="nonprofit_interest_form_website" * Address of office (closest to Berkeley, CA)
       input.string.required#address type="text" autocomplete="off" name="nonprofit_interest_form[office]"
     #map
     #infowindow-content

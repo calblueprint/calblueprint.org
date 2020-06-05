@@ -43,16 +43,16 @@ en:
         why: Why is this project important to your organization?
       nonprofit_interest_form:
         agree_to_terms: |
-          I have read and understood  Blueprint's Terms of Work for Nonprofit Partners.
+          I have read and understood  Blueprint's terms of work for nonprofit partners.
         category: |
           Blueprint offers a number of technical services for nonprofit partners. Please select the kind of work that would most benefit your organization.
-        contact_name: Your first and last name
+        contact_name: First and last name
         org_description: |
           Please give a brief description of your organization.
-        phone: Your Phone Number
+        phone: Phone number
         referrer: |
           How did you hear about Blueprint?
-        role: Your role in your organization
+        role: Role in your organization
         website: Website
       project:
         full_description: |

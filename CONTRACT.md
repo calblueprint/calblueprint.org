@@ -10,6 +10,9 @@ Our projects require a large time investment for our developers (see the next se
 
 ### Examples of Accepted Projects
 
+- A web portal for solar panel co-op owners to view their shares, take action on them, and see the environmental impact they are making with their ownership. [See People Power Solar Cooperative →](https://medium.com/blueprint/people-power-solar-cooperative-a-case-study-137e9958b9c)
+- A mobile app to help program staff communicate with barista trainees and provide digital resources like brew guides and job opportunities. [See 1951 Coffee Company →](https://apps.apple.com/us/app/1951-coffee-trainee/id1496686726)
+- A customer rewards program and store locator mobile app to increase access to affordable healthy food in DC's food deserts through DC Central Kitchen's Healthy Corners stores. [See DC Central Kitchen →](https://apps.apple.com/us/app/healthy-corners-rewards/id1503424404)
 - A platform for collecting leftover foods from cafeterias and redistributing it for the homeless. [See Replate →](http://replate.org/)
 - A web application to digitalize an entire curriculum for helping the underprivileged find careers. [See Roots of Success →](https://medium.com/blueprint/roots-of-success-1955f3a769e1)
 - A digital form system to consolidate building data in order to better regulate and reduce energy usage. [See Rocky Mountain Institute →](https://medium.com/blueprint/how-were-helping-tackle-climate-change-2115d11379a6)

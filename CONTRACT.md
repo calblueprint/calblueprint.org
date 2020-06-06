@@ -33,6 +33,8 @@ We are based at the University of California, Berkeley, and our developers are a
 
 _Dates may vary slightly._
 
+_Though we typically only work with nonprofits for one school year, we are currently considering doing the Nonprofit selection process again in the winter. Please let us know if you would like to stay in contact, either for the winter selection process or next year's_
+
 **Week 1 — September 8th**
 
 We have recruited all designers and developers for the semester. They are introduced to their respective project teams.

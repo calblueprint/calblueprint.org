@@ -41,7 +41,9 @@
     = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
     = f.input :org_description
     = f.input :referrer
-    = f.input :submitted_calendly, label: 'Please sign up for a phone call with us using <a  target="_blank" href="https://calendly.com/calblueprint/npo-learn-more">this link</a>'.html_safe
+    = f.input :submitted_calendly, label: 'Please sign up for a phone call with us below'
+    <div class="calendly-inline-widget" data-url="https://calendly.com/calblueprint/npo-learn-more" style="min-width:320px;height:1000px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 
 
     .form-btn-container.marginBot-md

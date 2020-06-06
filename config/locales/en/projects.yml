@@ -7,43 +7,43 @@ en:
     projects_list:
       # 2019-20
       1951coffee:
-        status: current
+        status: past
         title: 1951 Coffee Company
         short_summary: >
-          1951 Coffee Company is a nonprofit specialty coffee organization that promotes the well-being 
-          of the refugee community in the United States by providing job training and employment to refugees, 
-          asylees, and special immigrant visa holders while educating the surrounding community about refugee 
-          life and issues. They are a local nonprofit, and you can support them in by visiting any of their 
-          coffee shops in Berkeley!
+          1951 Coffee is a non-profit coffee organization that provides job training and employment to refugees, asylums, and special immigrant visa holders in the Bay Area. Many newly resettled refugees struggle to attain living-wage jobs — 1951 Coffees hopes to provide opportunity amongst lacking resources and language barriers through its barista training program.
         org_link: https://1951coffee.com/
-        # github_link: https://github.com/calblueprint/forte
+        github_link: https://medium.com/@anniezheng/1951-coffee-mobile-app-a-case-study-e4bbede9054
         color: ed195b
         banner_image: projects/1951.png
         full_description: |
-          Our Project
+          The Problem
           -----------
-          We’re building a mobile app for 1951 that allows them to communicate with their barista trainees 
-          and provide them with digital resources like brew guides and job opportunities.
+          1951 Coffee runs two-week long training programs that teach students the essential skills to be successful in barista roles. During this program, individual texting makes up 80-90% of communications with trainees. 1951 Coffee is in need for a central, scaleable method for administrators to communicate with its trainees and graduates with limited technology experience.
+
+          The Solution
+          -----------
+          Blueprint developed a mobile communication platform to connect 1951 Coffee's staff and alumni. This mobile application features ways to display internal announcements, job postings, events, and resources — an essential tool for information and forming digital community.
 
       dckitchen:
-        status: current
+        status: past
         title: DC Central Kitchen
         short_summary: >
-          DC Central Kitchen is a nationally-recognized community kitchen that recycles food from 
-          around Washington, D.C. and uses it as a tool to train unemployed adults to develop work 
-          skills while providing thousands of meals for local service agencies in the process.
+          DC Central Kitchen develops innovative social ventures targeting the cycle of hunger and poverty. They create opportunities for meaningful careers, expand access to healthy food, and test innovative solutions to systemic failures. DC Central Kitchen's Healthy Corners initiative sustainably expands healthy food access in DC’s food deserts by delivering fresh produce at discount prices to corner stores in DC’s low-income communities.
         org_link: https://dccentralkitchen.org/
-        github_link: https://github.com/calblueprint/dccentralkitchen
-        color: b20e2b
+        github_link: https://apps.apple.com/us/app/healthy-corners-rewards/id1503424404
+        color: 008550
         banner_image: projects/dckitchen.png
         full_description: |
-          Our Project
+          The Problem
           -----------
-          We’re building a dashboard and tablet application that allows cashiers at participating grocery 
-          stores to track and accept coupons provided by DC Central Kitchen for [free produce](https://dccentralkitchen.org/5for5/).
+          Healthy Corners provides many benefits to their customers, but since they operate in partnership with the 50+ stores in their network, the Healthy Corners team lacked a direct channel of communication with the customers they serve. Healthy Corners needed a new customer engagement strategy that would allow the team to serve customers more directly.
+
+          The Solution
+          -----------
+          Blueprint developed a customer rewards program to give Healthy Corners a direct channel to engage and serve their customers.  This includes a [customer-facing mobile app](https://tiny.cc/HealthyCornersApp) with a store and product locator, as well as a [tablet app for store clerks](https://play.google.com/store/apps/details?id=org.calblueprint.HealthyCornersClerk) to record purchases and points to redeem free produce rewards.
 
       peoplepower:
-        status: current
+        status: past
         title: People Power Solar Collective
         short_summary: >
           People Power Solar Cooperative is building a movement toward expanding access to affordable 
@@ -56,45 +56,49 @@ en:
         color: cd6795
         banner_image: projects/peoplepower.png
         full_description: |
-          Our Project
+          The Problem
           -----------
-          We’re building an online portal for solar panel co-op owners to view their shares, 
-          take action on them, and see the environmental impact they are making with their ownership.
+          People Power Solar Cooperative is leading the way to a just, community-led future with renewable energy. They provide the financial, logistical, and legal backbone for communities to organize and invest in community solar. Facilitating this process and providing transparency into the cooperative for all invested owners is difficult to manage and does not scale well. 
+
+          The Solution
+          ------------
+          Blueprint developed a platform that lets people sign on and begin investing in the cooperative. Owners of the cooperative can use it to  track their investments, keep up to date with news, and see their impact. This will help PPSC scale quickly and help support more communities!
 
       rlc:
-        status: current
+        status: past
         title: Rescuing Leftover Cuisine
         short_summary: >
-          Rescuing Leftover Cuisine (RLC) aims to become the world’s most widely used solution for 
-          companies and individuals to eliminate food waste in their communities, making food rescue 
-          sustainable and universal, and food hunger a thing of the past. By connecting companies and 
-          individuals with leftover food with food pantries and homeless shelters who need food donations, 
-          RLC strives to reduce food waste and food hunger at the same time.
+          Rescuing Leftover Cuisine is a national 501(c)3 non-profit food rescue organization, operating in 16 cities and headquartered in New York City, that provides solutions to prevent excess wholesome cuisine from being wasted. RLC provides services such as food waste consulting, excess food delivery, co-branding services, and tax credit assistance.
         org_link: https://www.rescuingleftovercuisine.org/
-        # github_link: https://dccentralkitchen.org/
+        github_link: https://tiny.cc/RescuingLeftoverCuisine
         color: 4dc9ec
         banner_image: projects/rlc.png
         full_description: |
-          Our Project
+          The Problem
           -----------
-          We’re building a companion mobile application for RLC that allows their volunteers to find and join food rescuing opportunities.
+          Rescuing Leftover Cuisine is a national 501(c)3 non-profit food rescue organization, operating in 16 cities and headquartered in New York City, that provides solutions to prevent excess wholesome cuisine from being wasted. RLC provides services such as food waste consulting, excess food delivery, co-branding services, and tax credit assistance.
+
+          The Solution
+          ------------
+          Blueprint developed a mobile app to give Rescuing Leftover Cuisine a direct channel to engage with their volunteers. The app helps connect volunteers at RLC to food rescuing missions around their city, enabling them to sign up for, withdraw from, and complete missions in an intuitive and user-friendly manner.
 
       unloop:
-        status: current
+        status: past
         title: Unloop
         short_summary: >
-          Unloop works with individuals with criminal records to provide an end-to-end educational pathway 
-          into careers in software development and tech adjacent roles. By empowering ex-offenders with 
-          relevant job skills, Unloop is driven to reduce the prison recidivism rate in America.
+          Unloop is providing a pipeline from prison to tech through education, support, and opportunity. They partner with community colleges to educate students in Washington State prisons, giving them the skills and knowledge they need to pursue careers in web development. In addition to education, Unloop connects students with resources that address barriers to their professional success, and creates opportunities for students after release by bringing together employers, professionals, and educators.
         org_link: https://www.un-loop.org
         github_link: https://github.com/calblueprint/unloop
         color: 059fae
         banner_image: projects/unloop.png
         full_description: |
-          Our Project
+          The Problem
           -----------
-          We’re building an online portal for Unloop students to view their action items and provide easy access 
-          to job opportunities, documents, and visualized results of their progress in the program.
+          Unloop is providing a pipeline from prison to tech through education, support, and opportunity. They partner with community colleges to educate students in Washington State prisons, giving them the skills and knowledge they need to pursue careers in web development. In addition to education, Unloop connects students with resources that address barriers to their professional success, and creates opportunities for students after release by bringing together employers, professionals, and educators.
+
+          The Solution
+          -----------
+          Blueprint created a web-based portal for both Unloop staff and participants that will allow Unloop to better organize their assignments/notes and increase transparency between members of their organization. This new dashboard includes features that track student growth and streamline every step of the education pipeline, ultimately allowing staff to focus their time and energy on moving Unloop forward and ensuring student success.
 
       # 2018-19
       risingtides:
@@ -104,14 +108,14 @@ en:
         short_summary: >
           The Arctic Institute is a Washington, D.C. based non-profit, which helps many coastal communities 
           in the American Arctic to recover from climate change disasters. The affected communities need volunteers, 
-          who would guide them through adaptation and cultural preservation. 
+          who would guide them through adaptation and cultural preservation.
         link: https://risingtides.calblueprint.org
         github_link: https://github.com/calblueprint/rising-tides
         org_link: https://www.facebook.com/ArcticInstituteOrg
-        full_description: |           
+        full_description: |
           Blueprint's developers build a skills-based matchmaking platform, where volunteers could 
-          connect with coastal communities to complete all the projects more efficiently. 
-      fsf: 
+          connect with coastal communities to complete all the projects more efficiently.
+      fsf:
         status: past
         title: Free Software Foundation
         banner_image: projects/fsf.png
@@ -119,14 +123,14 @@ en:
           Free Software Foundation (FSF) is a non-profit in Boston, MA with a mission to promote computer user freedom. 
           The organization aims to secure freedom for computer users by promoting the development and use of free software 
           and documentation—particularly the GNU operating system—and by campaigning against threats to computer user freedom 
-          like Digital Restrictions Management (DRM) and software patents. 
+          like Digital Restrictions Management (DRM) and software patents.
         org_link: https://www.fsf.org
         github_link: https://github.com/calblueprint/fsf-mobile
-        full_description: |           
+        full_description: |
           Blueprint builds a mobile app that brings digital rights activism to people's fingertips. With the app, people will 
           be able to stay informed with the latest news in digital rights and take action against rights infringements by 
-          signing petitions or donating. 
-      sfai: 
+          signing petitions or donating.
+      sfai:
         status: past
         title: San Francisco Art Institute
         banner_image: projects/sfai.png
@@ -138,24 +142,24 @@ en:
         link: https://registry.sfai.edu/
         github_link: https://github.com/SFAI/artistregistry
         org_link: https://www.sfai.edu
-        full_description: |           
+        full_description: |
           Blueprint's solution is a web-based online gallery, making it more simple for college students at SFAI to showcase and
           sell their artworks. Prospective buyers, in this way, will be able to easily browse those pieces online before purchasing, 
-          as it would be in a store. 
-      homepointr: 
+          as it would be in a store.
+      homepointr:
         status: past
         title: HomePointr
         banner_image: projects/homepointr.png
         short_summary: >
           How do we provide the homeless with quality shelter no matter where they are in the world? HomePointr CIC is a Scotland 
           based non-profit that connects housing providers with referral agencies to efficiently pair homeless to the most suitable 
-          housing options.         
+          housing options.
         org_link: https://homepointr.com/ome
         github_link: https://github.com/calblueprint/HomePointrCIC
-        full_description: | 
+        full_description: |
           Blueprint's developers focus on building an easy-to-use platform that will store data, removing the time involved in 
           sifting through paperwork. We organize and streamline the application process to allow referral agencies to match homeless 
-          and vulnerable individuals to the best landlord's home.      
+          and vulnerable individuals to the best landlord's home.
 
       rmi:
         status: past

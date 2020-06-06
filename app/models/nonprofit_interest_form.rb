@@ -12,6 +12,7 @@
 #  website         :string
 #  category        :string
 #  agree_to_terms  :boolean
+#  submitted_calendly  :boolean
 #  nonprofit_id    :integer
 #  semester_id     :integer
 #  created_at      :datetime         not null
@@ -35,6 +36,7 @@ class NonprofitInterestForm < ActiveRecord::Base
   validates :category, presence: true
   validates :role, presence: true
   validates :agree_to_terms, presence: true
+  validates :submitted_calendly, presence: true
   validates :office, presence: true
   validates :website, presence: true
   validates :referrer, presence: true

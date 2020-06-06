@@ -10,7 +10,7 @@
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
     |  The Interest Form and Application are due on
-    strong.apply-page-due< July 10th, 2019, 11:59pm,
+    strong.apply-page-due< July 11th, 2020, 11:59pm,
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
     | if you have any questions.
@@ -28,7 +28,7 @@
     = f.input :role
     = f.input :website
     .input-group.string.required.nonprofit_interest_form_website
-      label.string.required.control-label for="nonprofit_interest_form_website" Address of Office (closest to Berkeley, CA)
+      label.string.required.control-label for="nonprofit_interest_form_website" * Address of Office (closest to Berkeley, CA)
       input.string.required#address type="text" autocomplete="off" name="nonprofit_interest_form[office]"
     #map
     #infowindow-content
@@ -41,6 +41,8 @@
     = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
     = f.input :org_description
     = f.input :referrer
+    = f.input :submitted_calendly, label: 'Please sign up for a phone call with us using <a  target="_blank" href="https://calendly.com/calblueprint/npo-learn-more">this link</a>'.html_safe
+
 
     .form-btn-container.marginBot-md
       = f.button :submit, 'Submit', class: "bp-btn"

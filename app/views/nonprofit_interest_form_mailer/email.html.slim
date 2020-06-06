@@ -1,0 +1,8 @@
+html
+  head
+    meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
+  body
+    h3
+      = t("nonprofit_applications.interest_form_email.subject")
+    p
+      = t("nonprofit_applications.interest_form_email.html_message", :nonprofit => @nonprofit_interest_form.nonprofit.organization_name).html_safe

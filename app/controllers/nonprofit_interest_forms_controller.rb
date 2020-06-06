@@ -48,6 +48,7 @@ class NonprofitInterestFormsController < ApplicationController
     # end
 
     if @nonprofit_interest_form.save
+      SendNonprofitInterestFormEmail.execute @nonprofit_interest_form
       redirect_to nonprofit_applications_path, notice: 'Your Interest Form submission was received!'
     else
       render :new
@@ -71,6 +72,6 @@ class NonprofitInterestFormsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def nonprofit_interest_form_params
-      params.require(:nonprofit_interest_form).permit(:contact_name, :role, :agree_to_terms, :phone, :office, :office_lat, :office_lng, :org_description, :website, :category, :idea, :referrer)
+      params.require(:nonprofit_interest_form).permit(:contact_name, :role, :agree_to_terms, :submitted_calendly, :phone, :office, :office_lat, :office_lng, :org_description, :website, :category, :idea, :referrer)
     end
 end

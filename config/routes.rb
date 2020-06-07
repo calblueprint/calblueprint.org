@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/about", to: "pages#about"
   get "/sponsors", to: "pages#sponsors"
   get "/bitcoin", to: "pages#bitcoin"
+  get '/nonprofit_applications/contract', to: "pages#contract"
 
   # Devise
   devise_for :admins, controllers: { invitations: "admins/invitations" }

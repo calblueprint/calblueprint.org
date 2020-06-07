@@ -15,7 +15,7 @@
       p.npo-application-notify.static-page-desc
         span style="font-weight: 700; display: block" This part of the application is closed. Please check back next year!
     p.static-page-desc.marginBot-sm Start by telling us a few basic details about your organization in the Interest Form.
-      After you complete the Interest Form, you will have access to the application.
+      After you complete the Interest Form, you will be contacted by our team for a quick informational phone call!
     - if @interest_form
       p ​​Thanks for sending us your Interest Form! We’ll be in touch soon. 
     - else
@@ -24,11 +24,11 @@
     h2.npo-application-subheader Application
     - if !@interest_form
       p.npo-application-notify.static-page-desc
-          span style="font-weight: 700; display: block" You must fill out the Interest Form from the previous step first.
+          span style="font-weight: 700; display: block" You must fill out the interest form and complete a quick informational phone call first!
     - elsif !@proposal_open
       p.npo-application-notify.static-page-desc
         span style="font-weight: 700; display: block" This part of the application is not available to you just yet
-        '  We will allow you to submit an application after completing a short phone call with us. If we don't contact you within a couple days,
+        ' We'll open the second part of the application after you complete a short phone call with us. If you have questions,
         ' feel free to email us at projects@calblueprint.org!
     - if @num_draft == 0 && @num_submitted == 0
       p.static-page-desc You don't have any applications.

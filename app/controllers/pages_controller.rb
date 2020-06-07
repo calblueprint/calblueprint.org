@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   def sponsors
   end
 
+  def contract
+  end
+
   def bitcoin
     @address = ENV['BITCOIN_ADDRESS']
   end

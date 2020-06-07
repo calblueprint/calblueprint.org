@@ -2,9 +2,7 @@ class NonprofitApplicationsController < ApplicationController
   before_action :authenticate_nonprofit
   before_action :verify_app_open
 
-  def contract
-    render "contract"
-  end
+
 
   def new
     default_check_cs169 = params.key?(:cs169) || (@settings.cs169_app_open && !@settings.npo_app_open)

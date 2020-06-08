@@ -31,14 +31,14 @@ class NonprofitInterestForm < ActiveRecord::Base
   validates :nonprofit_id, presence: true
   validates :semester_id, presence: true
   validates :contact_name, presence: true
-  validates :phone, presence: true
+  validates :phone, presence: true, format: { with: /\A\d{3}-?\d{3}-?\d{4}\z/, message: "not a valid phone number" }
   validates :org_description, presence: true
   validates :category, presence: true
   validates :role, presence: true
   validates :agree_to_terms, presence: true
   validates :submitted_calendly, presence: true
   validates :office, presence: true
-  validates :website, presence: true
+  validates :website, presence: true, http_url: true
   validates :referrer, presence: true
 
   CATEGORIES = [

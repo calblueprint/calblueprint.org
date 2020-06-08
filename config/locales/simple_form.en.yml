@@ -15,7 +15,7 @@ en:
         agree_to_terms: |
           Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
         submitted_calendly: |
-          Once you have scheduled a call, check this box and press submit!
+          Once you have scheduled a call, check this box and press submit! This call is required to move on to the next step in our application process.
     labels:
       defaults:
         email:

@@ -16,7 +16,7 @@ en:
         Applications for Blueprint are closed for this semester. Sign up to be notified when they reopen!
       services:
         web_application_development: >
-          Web applications let your users access information from their computer or on a browser. This might be better for applications that need to be publicly available or ones that help facilitate management tasks.
+          Web applications let your users access information from any browser. This might be better for applications that need to be publicly available or ones that help facilitate task management.
         mobile_application_development: >
           Mobile applications let your users download an app and access it on their phone. This might be better for applications that need to be portable or accessed with no internet connection.
       application_timeline:

@@ -44,7 +44,7 @@
     = f.input :referrer
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    = f.input :submitted_calendly, label: 'Please sign up for a call with us <a href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/npo-learn-more\'});return false;">through this Calendly link</a>.'.html_safe
+    = f.input :submitted_calendly, hint: 'This call is <strong>required</strong> to move on to the next step in our application process. Once you have scheduled a call, check this box and press submit!'.html_safe, label: 'Please sign up for a call with us <a href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/npo-learn-more\'});return false;">through this Calendly link</a>.'.html_safe
     <br/>
     .form-btn-container.marginBot-md
       = f.button :submit, 'Submit', class: "bp-btn"

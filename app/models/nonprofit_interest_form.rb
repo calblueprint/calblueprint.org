@@ -28,10 +28,12 @@ class NonprofitInterestForm < ActiveRecord::Base
   delegate :email, to: :nonprofit
   delegate :organization_name, to: :nonprofit
 
+  phony_normalize :phone, default_country_code: 'US'
+  validates :phone, presence: true, phony_plausible: true
+
   validates :nonprofit_id, presence: true
   validates :semester_id, presence: true
   validates :contact_name, presence: true
-  validates :phone, presence: true, format: { with: /\A\d{3}-?\d{3}-?\d{4}\z/, message: "not a valid phone number" }
   validates :org_description, presence: true
   validates :category, presence: true
   validates :role, presence: true

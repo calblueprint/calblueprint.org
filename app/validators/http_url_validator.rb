@@ -9,7 +9,7 @@ class HttpUrlValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value)
     unless value.present? && self.class.compliant?(value)
-      record.errors.add(attribute, "is not a valid HTTP URL")
+      record.errors.add(attribute, "is not a valid URL (https://calblueprint.org)")
     end
   end
 

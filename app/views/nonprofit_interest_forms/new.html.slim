@@ -25,6 +25,7 @@
   = simple_form_for @nonprofit_interest_form, method: 'post' do |f|
     = f.input :agree_to_terms
     = f.input :contact_name
+    - @nonprofit_interest_form.phone = @nonprofit_interest_form.phone.phony_formatted
     = f.input :phone, as: :tel
     = f.input :role
     = f.input :website, as: :url
@@ -65,12 +66,10 @@ javascript:
 
     // Calendly check disabled before click
     var calendly_checkbox = $('input#nonprofit_interest_form_submitted_calendly');
-    calendly_checkbox.attr("disabled", true);
     var calendly_checkbox_hint = $("<span id='calendly-checkbox-hint'>Please schedule a call before checking this box</span>");
     calendly_checkbox.after(calendly_checkbox_hint);
 
     var $links = $('#calendly-link').click(function () {
-      calendly_checkbox.attr("disabled", false);
       calendly_checkbox_hint.text("I have scheduled a call");
     });
 

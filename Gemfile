@@ -11,6 +11,8 @@ gem 'aasm', '~> 4.1.0'
 gem 'dalli' # memcache
 gem 'airrecord', '~> 0.2.4'
 gem 'google_maps_service'
+# Phone number normalization and validation
+gem 'phony_rails'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'

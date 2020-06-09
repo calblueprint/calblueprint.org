@@ -320,6 +320,10 @@ GEM
     parser (2.7.0.2)
       ast (~> 2.4.0)
     pg (0.18.4)
+    phony (2.18.13)
+    phony_rails (0.14.13)
+      activesupport (>= 3.0)
+      phony (> 2.15)
     platform-api (2.1.0)
       heroics (~> 0.0.23)
       moneta (~> 0.8.1)
@@ -555,6 +559,7 @@ DEPENDENCIES
   omniauth-google-oauth2 (~> 0.2.6)
   paperclip (~> 6.0.0)
   pg (~> 0.18.4)
+  phony_rails
   platform-api
   pry-byebug
   pry-rails

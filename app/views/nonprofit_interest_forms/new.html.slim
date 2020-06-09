@@ -25,7 +25,7 @@
   = simple_form_for @nonprofit_interest_form, method: 'post' do |f|
     = f.input :agree_to_terms
     = f.input :contact_name
-    - @nonprofit_interest_form.phone = @nonprofit_interest_form.phone.phony_formatted
+    - @nonprofit_interest_form.phone = @nonprofit_interest_form.phone && @nonprofit_interest_form.phone.phony_formatted
     = f.input :phone, as: :tel
     = f.input :role
     = f.input :website, as: :url

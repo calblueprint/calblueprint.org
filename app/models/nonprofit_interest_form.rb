@@ -31,6 +31,9 @@ class NonprofitInterestForm < ActiveRecord::Base
   phony_normalize :phone, default_country_code: 'US'
   validates :phone, presence: true, phony_plausible: true
 
+  before_validation :url_normalize
+  validates :website, presence: true, http_url: true
+
   validates :nonprofit_id, presence: true
   validates :semester_id, presence: true
   validates :contact_name, presence: true
@@ -40,7 +43,6 @@ class NonprofitInterestForm < ActiveRecord::Base
   validates :agree_to_terms, presence: true
   validates :submitted_calendly, presence: true
   validates :office, presence: true
-  validates :website, presence: true, http_url: true
   validates :referrer, presence: true
 
   CATEGORIES = [
@@ -48,5 +50,12 @@ class NonprofitInterestForm < ActiveRecord::Base
     "Mobile application",
     "Other"
   ]
+
+  private
+
+  def url_normalize
+    uri = URI.parse(self.website)
+    self.website = uri.is_a?(URI::HTTP) ? self.website : "http://#{self.website}"
+  end
 
 end

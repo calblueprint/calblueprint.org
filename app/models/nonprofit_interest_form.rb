@@ -56,6 +56,8 @@ class NonprofitInterestForm < ActiveRecord::Base
   def url_normalize
     uri = URI.parse(self.website)
     self.website = uri.is_a?(URI::HTTP) ? self.website : "http://#{self.website}"
+  rescue URI::InvalidURIError
+    self.website
   end
 
 end

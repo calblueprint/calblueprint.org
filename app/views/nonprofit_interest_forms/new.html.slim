@@ -66,11 +66,11 @@ javascript:
 
     // Calendly check disabled before click
     var calendly_checkbox = $('input#nonprofit_interest_form_submitted_calendly');
-    var calendly_checkbox_hint = $("<span id='calendly-checkbox-hint'>Please schedule a call before checking this box</span>");
+    var calendly_checkbox_hint = $("<span id='calendly-checkbox-hint'>Please schedule a call using the link above before checking this box</span>");
     calendly_checkbox.after(calendly_checkbox_hint);
 
     var $links = $('#calendly-link').click(function () {
-      calendly_checkbox_hint.text("I have scheduled a call");
+      calendly_checkbox_hint.text("I have scheduled a call!");
     });
 
     // Google Maps

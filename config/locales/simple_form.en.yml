@@ -2,7 +2,7 @@
 en:
   simple_form:
     error_notification:
-      default_message: 'Please review the problems below:'
+      default_message: "Please review the problems below:"
     hints:
       nonprofit_application:
         client_status: |
@@ -11,11 +11,6 @@ en:
         devices: Check all that apply.
         short_summary: 255 characters max
         technical_requirements: Examples include security concerns or a strong preference for a particular programming language or library. Don't worry if you don't have any or aren't sure - we'll help you decide what's best for your project!
-      nonprofit_interest_form:
-        agree_to_terms: |
-          Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
-        submitted_calendly: |
-          Once you have scheduled a call, check this box and press submit! This call is required to move on to the next step in our application process.
     labels:
       defaults:
         email:
@@ -43,27 +38,12 @@ en:
         technical_requirements: |
           Does your project have any specific technical requirements?
         why: Why is this project important to your organization?
-      nonprofit_interest_form:
-        agree_to_terms: |
-          I have read and understood  Blueprint's Terms of Work for Nonprofit Partners.
-        submitted_calendly: |
-          Please sign up for a phone call with us by clicking on this link: "https://calendly.com/calblueprint/npo-learn-more"
-        category: |
-          Blueprint offers a number of technical services for nonprofit partners. Please select the kind of work that would most benefit your organization.
-        contact_name: Your first and last name
-        org_description: |
-          Please give a brief description of your organization.
-        phone: Your Phone Number
-        referrer: |
-          How did you hear about Blueprint?
-        role: Your role in your organization
-        website: Website
       project:
         full_description: |
           Full description for this project as Markdown. This will be shown as a separate page for this specific project.
-    'no': 'No'
+    "no": "No"
     required:
       html: <span class="required-symbol" title="required">*</span>
       mark: '*'
       text: required
-    'yes': 'Yes'
+    "yes": "Yes"

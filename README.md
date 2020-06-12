@@ -6,22 +6,30 @@ The Blueprint Website
 
 ## Contributing
 
-Dependencies:
-- `rvm` (https://rvm.io/)
-- Ruby `v2.6.5` (run `rvm install 2.6.5` to install)
+### Dependencies
 
-Setup:
-(currently very mac-centric)
+- Ruby `v2.5.6`
+- Rails `v5.2.0`
 
-1. Clone repo
-2. Install RVM [Instructions for mac](https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) and [Homebrew](https://brew.sh/) (if on mac)
-3. Go to codebase folder, switch to ruby 2.6.5: `rvm use 2.6.5`  (You'll have to do this everytime you open terminal in this folder)
-4. Install Postgresql locally, on mac `brew install postgresql`. (If errors, try [this article on completely reinstalling](https://medium.com/@bitadj/completely-uninstall-and-reinstall-psql-on-osx-551390904b86))
-5. Create a new file called `config/database.yml` and copy over contents of `config/database.yml.sample`. leave defaults in place, remove username and password lines. 
-6. Create a new file called `config/application.yml` and get contents from E-Team
-7. Run `bundle install`
-8. Run `rails db:setup`
-9. Run `rails server`!
+## Installation
+
+1. Install RVM [Instructions for mac](https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) and [Homebrew](https://brew.sh/) (if on mac)
+2. Go to codebase folder, switch to ruby 2.6.5: `rvm use 2.5.6`  (You'll have to do this everytime you open terminal in this folder)
+3. Install Postgresql locally, on mac `brew install postgresql`. (If errors, try [this article on completely reinstalling](https://medium.com/@bitadj/completely-uninstall-and-reinstall-psql-on-osx-551390904b86))
+
+### Setup
+
+Run setup script
+
+```bash
+./bin/setup
+```
+
+Run server
+
+```bash
+rails s
+```
 
 ## Cal Blueprint
 ![screenshot 2015-12-24 16 43 33](https://user-images.githubusercontent.com/5278006/32311415-bcdef6f6-bf55-11e7-9e8c-e43e786685cf.png)

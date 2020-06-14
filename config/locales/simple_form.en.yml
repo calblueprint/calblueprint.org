@@ -11,9 +11,6 @@ en:
         devices: Check all that apply.
         short_summary: 255 characters max
         technical_requirements: Examples include security concerns or a strong preference for a particular programming language or library. Don't worry if you don't have any or aren't sure - we'll help you decide what's best for your project!
-      nonprofit_interest_form:
-        agree_to_terms: |
-          Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
     labels:
       defaults:
         email:
@@ -41,6 +38,7 @@ en:
         technical_requirements: |
           Does your project have any specific technical requirements?
         why: Why is this project important to your organization?
+<<<<<<< HEAD
       nonprofit_interest_form:
         agree_to_terms: |
           I have read and understood  Blueprint's terms of work for nonprofit partners.
@@ -54,12 +52,14 @@ en:
           How did you hear about Blueprint?
         role: Role in your organization
         website: Website
+=======
+>>>>>>> 174b7ce6dc03319c0e45b0a67206cfd7dbfc667f
       project:
         full_description: |
           Full description for this project as Markdown. This will be shown as a separate page for this specific project.
     "no": "No"
     required:
       html: <span class="required-symbol" title="required">*</span>
-      mark: "*"
+      mark: '*'
       text: required
     "yes": "Yes"

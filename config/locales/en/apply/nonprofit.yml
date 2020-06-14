@@ -16,10 +16,9 @@ en:
         Applications for Blueprint are closed for this semester. Sign up to be notified when they reopen!
       services:
         web_application_development: >
-          Our platform of choice, web applications leverage the power of the internet to expand reach and
-          increase communication.
+          Web applications let your users access information from any browser. This might be better for applications that need to be publicly available or ones that help facilitate task management.
         mobile_application_development: >
-          Mobile applications use the unique capabilities of phones to bring computing to many.
+          Mobile applications let your users download an app and access it on their phone. This might be better for applications that need to be portable or accessed with no internet connection.
       application_timeline:
         submission: >
           The first part of our application is an interest form where you will provide contact and basic information about your organization.
@@ -47,7 +46,7 @@ en:
         text: >
           Working with Blueprint has been an incredible pleasure. We have used their application to raise
           hundreds of thousands of dollars for Berkeley's teachers.
-        reference: "- Berkeley Public Schools Fund"
+        reference: '- Berkeley Public Schools Fund'
       timeline:
         spec: Agree upon project's vision and scope out primary features.
         begin: Form team and begin development.

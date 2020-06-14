@@ -17,13 +17,13 @@ Our projects require a large time investment for our developers (see the next se
 - A web application to digitalize an entire curriculum for helping the underprivileged find careers. [See Roots of Success →](https://medium.com/blueprint/roots-of-success-1955f3a769e1)
 - A digital form system to consolidate building data in order to better regulate and reduce energy usage. [See Rocky Mountain Institute →](https://medium.com/blueprint/how-were-helping-tackle-climate-change-2115d11379a6)
 
-**Examples of projects that will NOT be accepted:** Redesigning a static website, refactoring old codebases to use newer technology, creating a mobile app "version" of already existing technology
+**Examples of projects that will NOT be accepted:** Redesigning a static website, refactoring old codebases to use newer technology, creating a mobile app "version" of already existing technology that is already effectively solving the problem.
 
 ### Technology
 
 Blueprint's developers have created many kinds of software. We specialize in **web application and mobile application development**, but these are by no means stict limitations. We are eager to hear your proposals.
 
-For the tech savvy, our projects usually run on a [Ruby on Rails](https://rubyonrails.org/) backend with a [React](https://reactjs.org/) or [React Native](https://facebook.github.io/react-native/) frontend.
+For the tech savvy, our projects usually run on a [Ruby on Rails](https://rubyonrails.org/) backend with a [React](https://reactjs.org/) or [React Native](https://facebook.github.io/react-native/) frontend. Recently, we've also started to use [Airtable](https://airtable.com) as a backend for some of our web and mobile apps.
 
 ## Timeline and Development Cycle
 
@@ -32,6 +32,8 @@ We are based at the University of California, Berkeley, and our developers are a
 ### Timeline
 
 _Dates may vary slightly._
+
+_Though we typically only work with nonprofits for one school year, we are currently considering doing the Nonprofit selection process again in the winter. Please let us know if you would like to stay in contact, either for the winter selection process or next year's_
 
 **Week 1 — September 8th**
 

@@ -30,7 +30,11 @@ en:
         short_summary: >
           DC Central Kitchen develops innovative social ventures targeting the cycle of hunger and poverty. They create opportunities for meaningful careers, expand access to healthy food, and test innovative solutions to systemic failures. DC Central Kitchen's Healthy Corners initiative sustainably expands healthy food access in DC’s food deserts by delivering fresh produce at discount prices to corner stores in DC’s low-income communities.
         org_link: https://dccentralkitchen.org/
+<<<<<<< HEAD
         github_link: https://apps.apple.com/us/app/healthy-corners-rewards/id1503424404
+=======
+        github_link: https://healthycorners.calblueprint.org/
+>>>>>>> 174b7ce6dc03319c0e45b0a67206cfd7dbfc667f
         color: 008550
         banner_image: projects/dckitchen.png
         full_description: |

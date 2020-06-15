@@ -8,16 +8,17 @@
   p.static-page-desc.marginBot-md
     | Hi #{current_user.organization_name}!
     =< t(".subtitle")
-  p.static-page-desc
+  p.static-page-desc.marginBot-md
     | The application is due on
-    strong.apply-page-due< July 10th, 2019, 11:59pm,
+    strong.apply-page-due< July 17th, 2020, 11:59pm,
     |  but applications will be reviewed on a rolling basis.
-    |  We encourage you to submit your application within a week of your
-    |  Interest Form. Review our 
+    |  We encourage you to submit your application within one to two weeks of your
+    |  informational phone call. 
+  p.static-page-desc
+    | Make sure to review  
     =<> link_to "our Terms of Work", nonprofit_applications_contract_path
-    |  .
-    =<> link_to "Contact us", new_contact_form_path
-    | if you have any questions.  
+    |  , and feel free to email us at projects@calblueprint.org 
+    |  if you have any questions! 
 
 
   = render "form_errors", obj: @nonprofit_application
@@ -47,7 +48,7 @@
     = f.input :future_plans
 
     p.static-page-desc
-      | Finally, we'd like to get to know more about your organization and how you're supporting
+      | Finally, we'd like to get to know more about your organization and how you're supporting 
       | the communities that you serve.
     
     = f.input :inclusivity

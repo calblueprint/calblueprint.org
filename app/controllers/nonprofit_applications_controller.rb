@@ -86,7 +86,7 @@ class NonprofitApplicationsController < ApplicationController
   def nonprofit_application_params
     params.require(:nonprofit_application)
       .permit(:cs169_pool, :purpose, :history, :date_established, :legal,
-              :short_summary, :goals, :key_features, :target_audience, :why,
+              :short_summary, :goals, :key_features, :inclusivity, :target_audience, :why,
               :technical_requirements, :client_status, :nonprofit_application_id,
               :current_resources, :future_plans, devices: [])
       .merge(semester: @settings.current_semester)

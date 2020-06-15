@@ -14,6 +14,7 @@
 #  short_summary          :text
 #  goals                  :text
 #  key_features           :text
+#  inclusivity            :text
 #  devices                :string
 #  target_audience        :text
 #  why                    :text
@@ -45,6 +46,7 @@ class NonprofitApplication < ActiveRecord::Base
   validates_length_of :short_summary, maximum: 255, if: -> (na) { na.submitted? }
   validates :current_resources, presence: true, if: -> (na) { na.submitted? }
   validates :key_features, presence: true, if: -> (na) { na.submitted? }
+  validates :inclusivity, presence: true, if: -> (na) { na.submitted? }
   validates :goals, presence: true, if: -> (na) { na.submitted? }
   validates :future_plans, presence: true, if: -> (na) { na.submitted? }
 

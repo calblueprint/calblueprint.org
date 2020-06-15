@@ -14,6 +14,7 @@
 #  short_summary          :text
 #  goals                  :text
 #  key_features           :text
+#  inclusivity            :text
 #  devices                :string
 #  target_audience        :text
 #  why                    :text
@@ -48,6 +49,7 @@ RSpec.describe NonprofitApplication, type: :model do
     it { should validate_presence_of :target_audience }
     it { should validate_presence_of :why }
     it { should validate_presence_of :technical_requirements }
+    it { should validate_presence_of :inclusivity }
   end
 
   context "if draft" do
@@ -63,6 +65,7 @@ RSpec.describe NonprofitApplication, type: :model do
     it { should_not validate_presence_of :target_audience }
     it { should_not validate_presence_of :why }
     it { should_not validate_presence_of :technical_requirements }
+    it { should_not validate_presence_of :inclusivity }
   end
 
   it { should delegate_method(:email).to(:nonprofit) }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_05_023515) do
+ActiveRecord::Schema.define(version: 2020_06_15_042111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -199,6 +199,7 @@ ActiveRecord::Schema.define(version: 2020_06_05_023515) do
     t.datetime "submitted_at"
     t.text "current_resources"
     t.text "future_plans"
+    t.text "inclusivity"
   end
 
   create_table "nonprofit_interest_forms", id: :serial, force: :cascade do |t|

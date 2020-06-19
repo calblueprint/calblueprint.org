@@ -34,6 +34,7 @@
   input[type="email"],
   input[type="password"],
   input[type="tel"],
+  input[type="url"],
   input[type="number"] {
     background: white;
     border: 1px solid $smoke;
@@ -80,7 +81,8 @@
     input[type="text"],
     input[type="email"],
     input[type="password"],
-    input[type="tel"] {
+    input[type="tel"],
+    input[type="url"] {
       max-width: none;
       width: 100%;
     }

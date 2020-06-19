@@ -73,7 +73,7 @@ class NonprofitApplicationsController < ApplicationController
   private
 
   def authenticate_nonprofit
-    redirect_to new_nonprofit_registration_path,
+    redirect_to new_nonprofit_session_path,
                 flash: { alert: "Please sign up or sign in before continuing." } unless current_nonprofit
   end
 

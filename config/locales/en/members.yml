@@ -374,11 +374,11 @@ en:
       website: "ntalcus.github.io"
       <<: *internal
 
-    - first_name: "Peter" # tech
-      last_name: "Veerman"
-      email: "peterkangveerman@berkeley.edu"
-      linkedin: "peter-veerman"
-      <<: *tech
+    - first_name: 'Peter' # projects
+      last_name: 'Veerman'
+      email: 'peterkangveerman@berkeley.edu'
+      linkedin: 'peter-veerman'
+      <<: *projects
 
     - first_name: "Suhas"
       last_name: "Rao"

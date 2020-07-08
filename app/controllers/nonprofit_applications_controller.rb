@@ -102,9 +102,11 @@ class NonprofitApplicationsController < ApplicationController
       return false
     end
 
+    # EDIT: Phone screen is optional
     return true
 
-    # Find the current NPO's Airtable record by email address
+    # Find the current NPO's Airtable record by email address. Use this if phone screen is NOT optional. 
+    
     settings = Settings.instance
     semester_str = "#{settings.current_semester.season.capitalize} #{settings.current_semester.year} Applications"
     airtable_npos = Airrecord.table(ENV["AIRTABLE_API"], ENV["AIRTABLE_NPO_TABLE"], semester_str).all

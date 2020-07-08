@@ -102,12 +102,15 @@ class NonprofitApplicationsController < ApplicationController
       return false
     end
 
+    return true
+
     # Find the current NPO's Airtable record by email address
     settings = Settings.instance
     semester_str = "#{settings.current_semester.season.capitalize} #{settings.current_semester.year} Applications"
     airtable_npos = Airrecord.table(ENV["AIRTABLE_API"], ENV["AIRTABLE_NPO_TABLE"], semester_str).all
     emails = airtable_npos.map { |npo| npo[:email] }
     pos = emails.index(current_nonprofit.email)
+    airtable_npos[pos]["Unlocked Phase 2"]
 
     if pos.nil?
       false

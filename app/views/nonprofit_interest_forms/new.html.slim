@@ -10,7 +10,7 @@
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
     |  The Interest Form is due on
-    strong.apply-page-due< July 11th, 2020, 11:59pm,
+    strong.apply-page-due< July 14th, 2020, 11:59pm,
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
     | if you have any questions.
@@ -70,7 +70,7 @@ javascript:
     calendly_checkbox.after(calendly_checkbox_hint);
 
     var $links = $('#calendly-link').click(function () {
-      calendly_checkbox_hint.text("I have scheduled a call!");
+      calendly_checkbox_hint.text("I acknowledge that my information will be submitted to Blueprint at this point.");
     });
 
     // Google Maps

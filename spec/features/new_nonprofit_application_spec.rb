@@ -13,7 +13,7 @@ RSpec.describe "Nonprofit Application Form" do
   def fill_in_form
     app = build :finished_nonprofit_application
     [:purpose, :history, :short_summary, :goals,
-     :key_features, :target_audience, :why, :technical_requirements].each do |attribute|
+     :key_features, :inclusivity, :target_audience, :why, :technical_requirements].each do |attribute|
       fill_in "nonprofit_application_#{attribute}", with: app.send(attribute)
     end
   end

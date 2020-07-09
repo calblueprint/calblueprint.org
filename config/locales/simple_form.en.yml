@@ -28,6 +28,8 @@ en:
         goals: What are the goals of this project, and what problems does it address? Who is affected by these problems?
         history: |
           Give us a brief history of your organization. Tell us about some of your organization’s key accomplishments.
+        inclusivity: |
+          How is your organization working to be inclusive, both internally and externally? How is your organization supporting, encouraging, and respecting diverse voices and perspectives?
         key_features: |
           What are some of the key features of a project that would solve this problem?  Walk us through the flow of someone using this project.
         legal: Is your organization a 501(c)(3)?

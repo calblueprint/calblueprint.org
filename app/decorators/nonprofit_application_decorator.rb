@@ -3,7 +3,7 @@ class NonprofitApplicationDecorator < ApplicationDecorator
 
   def display_attributes
     [:email, :cs169_pool, :purpose, :history, :date_established, :legal,
-     :short_summary, :goals, :key_features, :devices, :target_audience, :why,
+     :short_summary, :goals, :key_features, :inclusivity, :devices, :target_audience, :why,
      :technical_requirements, :client_status, :current_resources, :future_plans]
   end
 

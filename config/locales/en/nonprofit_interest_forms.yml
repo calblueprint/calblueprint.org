@@ -22,7 +22,8 @@ en:
         agree_to_terms: |
           Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
         submitted_calendly: |
-          This call is <strong>required</strong> to move on to the next step in our application process. Once you have scheduled a call, check this box and press submit!
+          This call is <strong>recommended</strong> but not required to move on to the next step in our application process. <br><br>
+
     placeholders:
       nonprofit_interest_form:
         phone: 123-456-7890

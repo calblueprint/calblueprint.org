@@ -10,7 +10,7 @@
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
     |  The Interest Form is due on
-    strong.apply-page-due< July 11th, 2020, 11:59pm,
+    strong.apply-page-due< July 14th, 2020, 11:59pm,
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
     | if you have any questions.
@@ -47,7 +47,7 @@
     = f.input :referrer
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    = f.input :submitted_calendly, label: 'Please sign up for a call with us <a id="calendly-link" href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/npo-learn-more\'});return false;">through this Calendly link</a>.'.html_safe
+    = f.input :submitted_calendly, label: 'Optional: Sign up for a call with us <a id="calendly-link" href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/npo-learn-more\'});return false;">through this Calendly link</a>.'.html_safe
     <br/>
     .form-btn-container.marginBot-md
       = f.button :submit, 'Submit', class: "bp-btn"
@@ -66,11 +66,11 @@ javascript:
 
     // Calendly check disabled before click
     var calendly_checkbox = $('input#nonprofit_interest_form_submitted_calendly');
-    var calendly_checkbox_hint = $("<span id='calendly-checkbox-hint'>Please schedule a call using the link above before checking this box</span>");
+    var calendly_checkbox_hint = $("<span id='calendly-checkbox-hint'>Check this box to acknowledge that your information will be submitted to Blueprint at this point.</span>");
     calendly_checkbox.after(calendly_checkbox_hint);
 
     var $links = $('#calendly-link').click(function () {
-      calendly_checkbox_hint.text("I have scheduled a call!");
+      calendly_checkbox_hint.text("I acknowledge that my information will be submitted to Blueprint at this point.");
     });
 
     // Google Maps

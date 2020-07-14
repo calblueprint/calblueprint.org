@@ -41,7 +41,7 @@ class NonprofitInterestForm < ActiveRecord::Base
   validates :category, presence: true
   validates :role, presence: true
   validates :agree_to_terms, presence: true
-  validates :submitted_calendly, presence: true
+  # validates :submitted_calendly, presence: true
   validates :office, presence: true
   validates :referrer, presence: true
 

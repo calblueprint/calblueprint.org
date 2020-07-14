@@ -66,12 +66,13 @@ javascript:
 
     // Calendly check disabled before click
     var calendly_checkbox = $('input#nonprofit_interest_form_submitted_calendly');
-    var calendly_checkbox_hint = $("<span id='calendly-checkbox-hint'>Check this box to acknowledge that your information will be submitted to Blueprint at this point.</span>");
-    calendly_checkbox.after(calendly_checkbox_hint);
+    calendly_checkbox.remove();
+    // var calendly_checkbox_hint = $("<span id='calendly-checkbox-hint'>Check this box to acknowledge that your information will be submitted to Blueprint at this point.</span>");
+    // calendly_checkbox.after(calendly_checkbox_hint);
 
-    var $links = $('#calendly-link').click(function () {
-      calendly_checkbox_hint.text("I acknowledge that my information will be submitted to Blueprint at this point.");
-    });
+    // var $links = $('#calendly-link').click(function () {
+    //   calendly_checkbox_hint.text("I acknowledge that my information will be submitted to Blueprint at this point.");
+    // });
 
     // Google Maps
     var googleJS = document.createElement('script');

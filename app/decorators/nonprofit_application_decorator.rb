@@ -3,15 +3,8 @@ class NonprofitApplicationDecorator < ApplicationDecorator
 
   def display_attributes
     [:email, :cs169_pool, :purpose, :history, :date_established, :legal,
-     :short_summary, :goals, :key_features, :inclusivity, :devices, :target_audience, :why,
-     :technical_requirements, :client_status, :current_resources, :future_plans]
+     :short_summary,:current_resources, :key_features, :goals, :future_plans, :inclusivity, :devices, :target_audience, :why,
+     :technical_requirements, :client_status]
   end
 
-  def date_established
-    object.date_established.readable_inspect
-  end
-
-  def devices
-    object.devices.reject(&:empty?).join(", ")
-  end
 end

@@ -67,6 +67,10 @@ class NonprofitApplication < ActiveRecord::Base
     end
   end
 
+  def org_description
+    nonprofit.nonprofit_interest_forms[0].org_description
+  end
+
   delegate :email, to: :nonprofit
   delegate :organization_name, to: :nonprofit
 end

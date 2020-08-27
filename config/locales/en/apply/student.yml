@@ -11,50 +11,56 @@ en:
         As a member, you will join a family of fellow students working to use our education
         and skills to make the world a better place.
       applications_closed: >
-        Applications are officially closed for this semester. We will be recruiting again next semester. Sign up to be notified when apps are ready!
+        Our application for Fall 2020 will open by Sunday, August 30. Sign up to get an email when apps are ready!
 
       application_timeline:
         infosession:
-          title: Infosession
+          title: Infosession Series
           description: >
-            Come out and talk to us to learn more about Blueprint at our infosession.
+            Instead of having one large infosession this (virtual) fall, <strong>Blueprint is hosting an infosession series! Every day from 8/30 to 9/4, we'll have four mini sessions, each limited to 10 applicants.</strong> These small sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
+            <br/><br/>
+            Visit <strong>👉 <a href="https://bit.ly/bp-infosessions-about">https://bit.ly/bp-infosessions-about</a> 👈</strong> to sign up and learn more!
           detail: >
-            Our infosession will be on %{date} in HP Auditorium, Soda Hall.
+            Visit 👉 bit.ly/bp-infosession 👈 to sign up and learn more!
           notice: Infosession Facebook event will be posted soon!
-        application_date: Jan 31, 11:59 PM
+        application_date: Sept 4, 11:59 PM
         application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blueprint's mission. Decisions will be emailed after this round on Feb 2 by 10 PM.
-          <strong>The application is due on January 31st at 11:59 PM.</strong>
+          Blueprint's mission. Decisions will be emailed after this round on Sept 6 by 10 PM.
+          <strong>The application is due on September 4th at 11:59 PM.</strong>
         designer_application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blueprint's mission. Requests for design interviews will be sent out on Feb 2 by 10 PM.
-          <strong>The application is due on January 31st at 11:59 PM.</strong>
-        designer_interviews_date: Sep 8 - 9
+          Blueprint's mission. Requests for design interviews will be sent out on Sept 6 by 10 PM.
+          <strong>The application is due on September 4 at 11:59 PM.</strong>
+        designer_interviews_date: Sept 7 - 8
         designer_interviews: >
           We will ask you to brainstorm with us and sketch out low-fidelity solutions in response to a
           design challenge. After the interview, you will have a chance to refine your solutions and
-          submit a final, high-fidelity version on Friday, September 13. Invited candidates will receive
+          submit a final, high-fidelity version on Friday, September 11. Invited candidates will receive
           an interview sign-up link via email.
-        designer_challenge_date: Sep 13, 10:00 PM
+        external_interviews_date: Sept 7 - 11
+        external_interviews: >
+          We will be conducting interviews for the external team throughout the entire week. Invited candidates will receive
+          an interview sign-up link via email.
+        designer_challenge_date: Sept 11, 10:00 PM
         designer_challenge: >
           Building on top of your solution from the interview, this continuation will give you a chance to
           showcase your abilities to iterate upon a sketch and create a more polished product. The prompt
           will be introduced in the interview.
         application_notice: >
-          Student applications will be open at the beginning of the semester. Follow our
+          Student applications will be open by Sunday August 30. Follow our
           <a href="https://www.facebook.com/calblueprint" target="_blank">Facebook page</a> to stay updated!
-        meet_the_club_date: Feb 5 - 6
+        meet_the_club_date: Sept 9 - 10
         meet_the_club: >
           Meet the Club is an event for you to get to know
           <a href="/about#team">our membership</a> in a casual setting! This event
           is by invitation only.
-        tech_round_date: Feb 3 - 7
+        tech_round_date: Sept 7 - 11
         tech_round: >
           A small exercise to give you a chance to showcase your technical resourcefulness and learning speed.
           It will be kicked off with an introductory workshop followed by a small project.
           Time and location will be emailed to invited candidates.
-        bp_games_date: Feb 8
+        bp_games_date: Sept 10 - 11
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
           critically. This round is by invitation only. Time and location will be emailed to invited candidates.

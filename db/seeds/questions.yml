@@ -177,6 +177,7 @@ fa20_technical_gauge:
 fa20_classes_additional_info:
   title: Feel free to add anything else we should know about your answer to the above (ex. currently auditing, applied for WDD, took a class but dropped partway due to COVID).
   hint: There is no need to elaborate on the classes you have taken beyond the ones on the list above (for example, we don't need to specific upper div courses). Please limit your response to 100 words.
+  required: false
   question_category: background
   question_type: long_text
   word_limit: 100
@@ -185,13 +186,15 @@ fa20_background_question:
   title: Is there any additional information or circumstances we should know about to understand you better? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.
   hint: This question is optional. Please limit your response to 250 words.
   question_category: background
+  required: false
   question_type: long_text
   word_limit: 250
 
 fa20_project_link:
   title: Our intentions are to be as equitable as possible in this process, though we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else!
-  hint: If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio.
+  hint: If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio. This question is optional.
   question_category: background
+  required: false
   question_type: short_text
   placeholder: 'https://....'
 

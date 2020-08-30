@@ -52,7 +52,7 @@ section.application-process-section#application-process
           .timeline-row-description = raw t ".application_timeline.application"
           .timeline-row-btn
             - if @settings.dev_app_open
-              = link_to "Developer Application", new_student_application_path, class: "bp-btn"
+              = link_to "Start Application", new_student_application_path, class: "bp-btn"
             - else
               .timeline-row-notice = raw t ".application_timeline.application_notice"
       / Build with Blueprint
@@ -103,7 +103,7 @@ section.application-process-section#application-process
             .timeline-row-description = raw t ".application_timeline.application"
             .timeline-row-btn
               - if @settings.designer_app_open == 'open'
-                = link_to "Designer Application", new_student_application_path, class: "bp-btn"
+                = link_to "Start Application", new_student_application_path, class: "bp-btn"
               - elsif @settings.designer_app_open == 'closed'
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
         / Interview
@@ -151,7 +151,7 @@ section.application-process-section#application-process
           .timeline-row-btn
             .timeline-row-btn
               - if @settings.dev_app_open
-                = link_to "External Application", new_student_application_path, class: "bp-btn"
+                = link_to "Start Application", new_student_application_path, class: "bp-btn"
               - else
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
 

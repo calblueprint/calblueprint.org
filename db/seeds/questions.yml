@@ -59,10 +59,7 @@ commitments:
 
 time_commitment_acknowledgement:
   title: I acknowledge that I can meet the time commitment of working on a Blueprint team!
-  hint:
-    'Blueprint teams meet twice a week for 2-3 hours and have about 10-15 hours of work
-    outside of meetings. Blueprint General Meetings are mandatory and are held on Mondays at
-    8 PM (Time subject to change).'
+  hint: 'Members spend 8-12 hours per week on Blueprint, including team/club-wide meetings, time spent outside of meetings to complete work, and team/club-wide socials.'
   question_category: more_questions
   question_type: checkbox
 
@@ -124,8 +121,8 @@ design_portfolio:
 # Short answer questions
 
 fa20_mission_first:
-  title: "What does social good mean to you?<br/><br/>If you're applying as a developer or designer, why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, why do you want to promote tech for social good?"
-  hint: Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words.
+  title: 'What does social good mean to you?'
+  hint: "If you're applying for a Developer/Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words."
   question_category: short_answer
   question_type: long_text
   word_limit: 200
@@ -168,14 +165,14 @@ be_humble:
 # Background
 
 fa20_technical_gauge:
-  title: 'If you are applying as a developer, from the following courses, list out the ones you have taken/are currently taking:'
+  title: '[Optional] If you are applying as a developer, from the following courses, list out the ones you have taken/are currently taking:'
   hint: "- CS 10\n- CS 61A\n- Data 8\n- CS 88\n- CS 61B\n- Atleast 1 CS upper div course (answer yes or no)\n- Other: (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)"
   required: false
   question_type: short_text
   question_category: background
 
 fa20_classes_additional_info:
-  title: Feel free to add anything else we should know about your answer to the above (ex. currently auditing, applied for WDD, took a class but dropped partway due to COVID).
+  title: '[Optional] Feel free to add anything else we should know about your answer to the above (ex. currently auditing, applied for WDD, took a class but dropped partway due to COVID).'
   hint: There is no need to elaborate on the classes you have taken beyond the ones on the list above (for example, we don't need to specific upper div courses). Please limit your response to 100 words.
   required: false
   question_category: background
@@ -183,7 +180,7 @@ fa20_classes_additional_info:
   word_limit: 100
 
 fa20_background_question:
-  title: Is there any additional information or circumstances we should know about to understand you better? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.
+  title: '[Optional] Is there any additional information or circumstances we should know about to understand you better? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.'
   hint: This question is optional. Please limit your response to 250 words.
   question_category: background
   required: false
@@ -191,7 +188,7 @@ fa20_background_question:
   word_limit: 250
 
 fa20_project_link:
-  title: Our intentions are to be as equitable as possible in this process, though we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else!
+  title: "[Optional] Our intentions are to be as equitable as possible in this process, though we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else!"
   hint: If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio. This question is optional.
   question_category: background
   required: false

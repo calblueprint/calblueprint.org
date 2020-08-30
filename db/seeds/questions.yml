@@ -87,7 +87,7 @@ application_type:
   choices: Developer,Designer,Developer and designer
 
 available_for_bp_games:
-  title: Are you be able to attend atleast one of the BP Games sessions?
+  title: Are you be able to attend at least one of the BP Games sessions?
   hint: 'BP Games is an event in our application process that you may be invited to after application decisions are released. There will be 3 BP Games sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
   question_category: more_questions
   question_type: multiple_choice_radio

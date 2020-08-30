@@ -72,7 +72,7 @@ fa20_application_type:
   title: What positions are you applying to this semester?
   hint:
     'You may apply to more than one, but if you get accepted for more than one, you must make a decision for which
-    application to continue by September 6 at 11:59 PM.'
+    application to continue by September 6 at 11:59 PM. You only need to fill out one application regardless of how many positions you apply for.'
   question_category: general
   question_type: multiple_choice_radio
   choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External

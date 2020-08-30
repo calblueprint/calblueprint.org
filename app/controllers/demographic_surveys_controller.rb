@@ -22,6 +22,7 @@ end
 private
 
 def verify_from_app
+  session[:applicant_type] = 0
   return 
   if session[:applicant_type]
     return

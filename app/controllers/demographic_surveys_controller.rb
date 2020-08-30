@@ -22,6 +22,7 @@ end
 private
 
 def verify_from_app
+  return 
   if session[:applicant_type]
     return
   elsif request.referrer

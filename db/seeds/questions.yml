@@ -90,7 +90,7 @@ application_type:
   choices: Developer,Designer,Developer and designer
 
 available_for_bp_games:
-  title: Are you be able to attend atleast one of the BP Games sessions?
+  title: Are you be able to attend at least one of the BP Games sessions?
   hint: 'BP Games is an event in our application process that you may be invited to after application decisions are released. There will be 3 BP Games sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
   question_category: more_questions
   question_type: multiple_choice_radio
@@ -169,7 +169,7 @@ be_humble:
 
 fa20_technical_gauge:
   title: 'If you are applying as a developer, from the following courses, list out the ones you have taken/are currently taking:'
-  hint: "- CS 10\n- CS 61A\n- Data 8\n- CS 88\n- CS 61B\n- Atleast 1 CS upper div course (answer yes or no)\n- Other: (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)"
+  hint: "- CS 10\n- CS 61A\n- Data 8\n- CS 88\n- CS 61B\n- At least 1 CS upper div course (answer yes or no)\n- Other: (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)"
   required: false
   question_type: short_text
   question_category: background

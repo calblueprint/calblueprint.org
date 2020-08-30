@@ -30,7 +30,7 @@ class Question < ActiveRecord::Base
   validates :question_category, presence: true
 
   enum question_category: [:general, :short_answer, :more_questions, :background]
-  enum question_type: [:short_text, :long_text, :multiple_choice_radio, :checkbox, :attachment]
+  enum question_type: [:short_text, :long_text, :multiple_choice_radio, :checkbox, :attachment, :multiple_choice_checkbox]
   enum input_type: [:normal, :email, :phone]
 
 

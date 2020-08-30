@@ -183,7 +183,7 @@ fa20_classes_additional_info:
 
 fa20_background_question:
   title: Is there any additional information or circumstances we should know about to understand you better? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.
-  hint: Please limit your response to 250 words.
+  hint: This question is optional. Please limit your response to 250 words.
   question_category: background
   question_type: long_text
   word_limit: 250

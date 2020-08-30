@@ -36,6 +36,12 @@
         -  @student_application.responses.select {|r| r.question.question_category == "short_answer"}.each do |r|
           = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
 
+        - if @student_application.responses.select {|r| r.question.question_category == "background"}.count > 0
+          h3.apply-page-more-questions Background Questions
+          p.static-page-desc These questions are to give you space to tell us about your background and experiences. 
+          -  @student_application.responses.select {|r| r.question.question_category == "background"}.each do |r|
+            = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
+
         - if @student_application.responses.select {|r| r.question.question_category == "more_questions"}.count > 0
           h3.apply-page-more-questions Additional Info
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|

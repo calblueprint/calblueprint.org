@@ -17,7 +17,7 @@
     = simple_form_for @demographic_survey, url: demographic_surveys_path do |f|
 
       .form-group
-        h3 Gender
+        h3 Gender Identity
         p = raw t ".gender_hint"
         = f.input :male, inline_label: "#{t ".labels.gender.male"}", as: :boolean, label: false
         = f.input :female, inline_label: "#{t ".labels.gender.female"}", as: :boolean, label: false

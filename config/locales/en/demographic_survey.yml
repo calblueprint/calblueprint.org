@@ -10,7 +10,7 @@ en:
       race_hint: >
         Which of the following groups best describes your background. Check as many categories as may apply.
       gender_hint: >
-        Check one or more options that reflect your gender.
+        Check one or more options that reflect your gender identity.
       labels:
         race:
           african_american: African American / Black

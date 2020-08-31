@@ -120,6 +120,7 @@ design_portfolio:
 
 # Short answer questions
 
+# Word limit extended for external + design/developer applicants
 fa20_mission_first:
   title: 'What does social good mean to you? (200 Words)'
   hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words. If you're applying to both an external and a developer/designer position, feel free to use up to 250 words to answer both questions."
@@ -174,14 +175,14 @@ fa20_technical_gauge:
 
 fa20_classes_additional_info:
   title: '[Optional] Feel free to add anything else we should know about your answer to the above (ex. relevant learning experience if you selected ‘Other’ in the previous question, currently auditing, applied for WDD, took a class but dropped partway due to COVID).'
-  hint: There is no need to elaborate on the classes you have taken beyond the ones on the list above (for example, we don't need to specific upper div courses). Please limit your response to 100 words.
+  hint: There is no need to elaborate on the classes you have taken beyond the ones on the list above (for example, we don't need to know specific upper div courses). Please limit your response to 100 words.
   required: false
   question_category: background
   question_type: long_text
   word_limit: 100
 
 fa20_background_question:
-  title: '[Optional] Are there any additional circumstances we should know about to better understand? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.'
+  title: '[Optional] Are there any additional circumstances we should know about to better understand you? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.'
   hint: This question is optional. Please limit your response to 250 words.
   question_category: background
   required: false

@@ -72,7 +72,7 @@ fa20_application_type:
     application to continue by September 6 at 11:59 PM PST. You only need to fill out one application regardless of how many positions you apply for.'
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External
+  choices: Developer,Designer,External,Developer and Designer,Developer and External,Designer and External,All three positions
 
 application_type:
   title: Are you applying as a developer or as a designer (or both)?
@@ -87,8 +87,8 @@ application_type:
   choices: Developer,Designer,Developer and designer
 
 available_for_bp_games:
-  title: Are you be able to attend atleast one of the BP Games sessions?
-  hint: 'BP Games is an event in our application process that you may be invited to after application decisions are released.<br/><br/>There will be 3 BP Games sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
+  title: Are you be able to attend atleast one of the Blueprint Games sessions?
+  hint: 'Blueprint Games is an event in our application process that you may be invited to after application decisions are released.<br/><br/>There will be 3 Blueprint Games sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
   question_category: more_questions
   question_type: multiple_choice_radio
   choices: Yes,No
@@ -128,7 +128,7 @@ fa20_mission_first:
   word_limit: 200
 
 fa20_perpetual_growth:
-  title: Talk about a time where you went through a period of growth. What motivated you, what challenged you, and how has it impacted you today?
+  title: Talk about a time when you went through a period of growth. What motivated you, what challenged you, and how has it impacted you today?
   hint: Please limit your response to 200 words.
   question_category: short_answer
   question_type: long_text
@@ -181,7 +181,7 @@ fa20_classes_additional_info:
   word_limit: 100
 
 fa20_background_question:
-  title: '[Optional] Is there any additional information or circumstances we should know about to understand you better? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.'
+  title: '[Optional] Are there any additional circumstances we should know about to better understand? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.'
   hint: This question is optional. Please limit your response to 250 words.
   question_category: background
   required: false
@@ -214,7 +214,7 @@ available_for_retreat:
   choices: Yes,No
 
 why_no_bp_games:
-  title: Why are you unable to attend BP Games?
+  title: Why are you unable to attend Blueprint Games?
   hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
   question_category: more_questions
   question_type: long_text
@@ -249,7 +249,7 @@ fa20_heard_from:
 
 heard_from:
   title: How did you first hear about Blueprint?
-  hint: Please let us know how you first heard about Blueprint, whether it’s through social media, through a friend, through classes, through Sproul, etc.
+  hint: Whether it’s through social media, through a friend, through classes, through Sproul, etc.
   question_category: more_questions
   question_type: short_text
 

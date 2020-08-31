@@ -38,8 +38,10 @@ class ExternalApplicationsController < ApplicationController
   end
 
   def verify_external_app_open
-    return if @settings.external_app_open
-    redirect_to students_apply_path, flash: { error: t('student_applications.closed') }
+    # Temp Fix
+    redirect_to students_apply_path
+    # return if @settings.external_app_open
+    # redirect_to students_apply_path, flash: { error: t('student_applications.closed') }
   end
 
 end

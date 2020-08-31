@@ -46,7 +46,7 @@
           h3.apply-page-more-questions Additional Info
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
-
+        h3.apply-page-more-questions Thanks so much for taking the time to complete our application! We look forward to learning more about you 
       div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 

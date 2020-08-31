@@ -88,7 +88,7 @@ application_type:
 
 available_for_bp_games:
   title: If you are a developer, are you be able to attend at least one of the Blueprint Games sessions?
-  hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST.'
+  hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be 3 sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST.'
   question_category: more_questions
   question_type: multiple_choice_radio
   choices: Yes,No,N/A

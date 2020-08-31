@@ -87,7 +87,7 @@ application_type:
   choices: Developer,Designer,Developer and designer
 
 available_for_bp_games:
-  title: Are you be able to attend at least one of the BP Games sessions?
+  title: Are you be able to attend atleast one of the BP Games sessions?
   hint: 'BP Games is an event in our application process that you may be invited to after application decisions are released.<br/><br/>There will be 3 BP Games sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
   question_category: more_questions
   question_type: multiple_choice_radio
@@ -103,7 +103,7 @@ available_for_bwbp:
   required: true
 
 available_for_meet_the_club:
-  title: Are you be able to attend at least one of the Meet the Club sessions?
+  title: Are you be able to attend atleast one of the Meet the Club sessions?
   hint: 'Meet the Club is an event in our application process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 Meet the Club sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST.'
   question_category: more_questions
   question_type: multiple_choice_radio
@@ -165,10 +165,11 @@ be_humble:
 # Background
 
 fa20_technical_gauge:
-  title: '[Optional] If you are applying as a developer, from the following courses, list out the ones you have taken/are currently taking:'
-  hint: "- CS 10\n- CS 61A\n- Data 8\n- CS 88\n- CS 61B\n- Atleast 1 CS upper div course (answer yes or no)\n- Other: (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)"
+  title: 'If you are applying as a developer, please check any course(s) you have taken/are currently taking'
+  hint: 'Please skip this question if you are not applying as a developer.'
+  choices: 'CS 10,CS 88,Data 8,CS 61A,CS 61B,Atleast 1 CS upper div course,Other: (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)'
   required: false
-  question_type: short_text
+  question_type: multiple_choice_checkbox
   question_category: background
 
 fa20_classes_additional_info:

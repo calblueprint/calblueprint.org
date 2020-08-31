@@ -1,0 +1,14 @@
+
+.input-group
+    .control-label
+        - if question.required
+            span.required-symbol
+                |* 
+        = question.title
+    .hint
+        = question.hint
+    = form.collection_check_boxes(question.tag, question.choices.split(','), :first, :last, options: {required: question.required}) do |b|
+        = b.label(class: "check_box") do 
+            = b.check_box(class: "check_box")
+            = ' ' + b.object
+            br

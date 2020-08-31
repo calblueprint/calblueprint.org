@@ -21,7 +21,7 @@ namespace :students do
         "Application type": app.response_to("fa20_application_type"),
         "Can attend BP Games?": app.response_to("available_for_bp_games") == "Yes",
         "Why no BP Games?": app.response_to("why_no_bp_games"),
-        "Can attend Meet the Club?": app.response_to("available_for_meet_the_club"),
+        "Can attend Meet the Club?": app.response_to("available_for_meet_the_club") == "Yes",
         "Why no Meet the Club?": app.response_to("why_no_meet_the_club"),
         "Mission First": app.response_to("fa20_mission_first"),
         "Perpetual Growth": app.response_to("fa20_perpetual_growth"),

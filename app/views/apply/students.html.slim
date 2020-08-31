@@ -10,13 +10,13 @@ section.static-page-hero.student-apply-hero
     / Application Buttons
     .static-page-hero-btn-container.marginTop-xl
       - if @settings.dev_app_open && @settings.designer_app_open == 'open'
-        = link_to "Apply as a Developer/Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
+        = link_to "Start Application", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - elsif @settings.dev_app_open
         = link_to "Apply as a Developer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - elsif @settings.designer_app_open == 'open'
         = link_to "Apply as a Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
-      - if @settings.external_app_open
-        = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
+      / - if @settings.external_app_open
+      /   = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - if !@settings.dev_app_open && @settings.designer_app_open != 'open' && !@settings.external_app_open
         p.hero-desc = t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
@@ -52,7 +52,7 @@ section.application-process-section#application-process
           .timeline-row-description = raw t ".application_timeline.application"
           .timeline-row-btn
             - if @settings.dev_app_open
-              = link_to "Developer Application", new_student_application_path, class: "bp-btn"
+              = link_to "Start Application", new_student_application_path, class: "bp-btn"
             - else
               .timeline-row-notice = raw t ".application_timeline.application_notice"
       / Build with Blueprint
@@ -103,7 +103,7 @@ section.application-process-section#application-process
             .timeline-row-description = raw t ".application_timeline.application"
             .timeline-row-btn
               - if @settings.designer_app_open == 'open'
-                = link_to "Designer Application", new_student_application_path, class: "bp-btn"
+                = link_to "Start Application", new_student_application_path, class: "bp-btn"
               - elsif @settings.designer_app_open == 'closed'
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
         / Interview
@@ -150,8 +150,8 @@ section.application-process-section#application-process
           .timeline-row-description = raw t ".application_timeline.application"
           .timeline-row-btn
             .timeline-row-btn
-              - if @settings.dev_app_open == 'open'
-                = link_to "External Application", new_student_application_path, class: "bp-btn"
+              - if @settings.dev_app_open
+                = link_to "Start Application", new_student_application_path, class: "bp-btn"
               - else
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
 

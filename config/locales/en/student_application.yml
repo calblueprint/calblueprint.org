@@ -11,14 +11,14 @@ en:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
     email:
-      subject: "Submission of application was successful!"
+      subject: 'Submission of application was successful!'
       message: |
-       Hello %{student}!
+        Hello %{student}!
 
-       We have received your application. Thank you for your time, and we will get back to you by Sunday, February 2nd.
+        We have received your application. Thank you for your time, and we will get back to you by Sunday, September 6th.
 
-       Best,
-       Blueprint Team
+        Best,
+        Blueprint Team
     closed: Student applications are now closed for this semester. Thank you for your interest!
 
   simple_form:

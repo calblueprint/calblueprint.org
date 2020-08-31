@@ -10,5 +10,5 @@
     = form.collection_check_boxes(question.tag, question.choices.split(',').map {|c| c.split('|')}, :first, :last) do |b|
         = b.label(class: "check_box") do 
             = b.check_box(class: "check_box")
-            = ' ' + b.object.to_s
+            = ' ' + b.object[1]
             br

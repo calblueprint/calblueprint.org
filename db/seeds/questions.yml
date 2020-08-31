@@ -72,7 +72,7 @@ fa20_application_type:
     application to continue by September 6 at 11:59 PM PST. You only need to fill out one application regardless of how many positions you apply for.'
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,External,Developer and Designer,Developer and External,Designer and External,All three positions
+  choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External
 
 application_type:
   title: Are you applying as a developer or as a designer (or both)?
@@ -122,7 +122,7 @@ design_portfolio:
 
 fa20_mission_first:
   title: 'What does social good mean to you? (150 Words)'
-  hint: "If you're applying for a Developer/Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words."
+  hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words."
   question_category: short_answer
   question_type: long_text
   word_limit: 200
@@ -243,7 +243,7 @@ why_no_retreat:
 
 fa20_heard_from:
   title: How did you first hear about Blueprint?
-  hint: Please let us know how you first heard about Blueprint, whether it’s through social media, through a friend, through classes, through a certain Sproul-alternative, etc.
+  hint: Whether it’s through social media, through a friend, through classes, through a certain Sproul-alternative, etc.
   question_category: more_questions
   question_type: short_text
 

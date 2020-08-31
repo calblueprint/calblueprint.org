@@ -26,7 +26,7 @@ namespace :students do
         "Mission First": app.response_to("fa20_mission_first"),
         "Perpetual Growth": app.response_to("fa20_perpetual_growth"),
         "Resourcefulness": app.response_to("fa20_resourcefulness"),
-        "Tech Classes": app.response_to("fa20_technical_gauge"),
+        "Tech Classes": app.response_to("fa20_technical_gauge").split(','),
         "Tech Classes Additional Info": app.response_to("fa20_classes_additional_info"),
         "Optional Background Question": app.response_to("fa20_background_question"),
         "Project Link": app.response_to("fa20_project_link"),

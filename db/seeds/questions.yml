@@ -173,7 +173,7 @@ fa20_technical_gauge:
   question_category: background
 
 fa20_classes_additional_info:
-  title: '[Optional] Feel free to add anything else we should know about your answer to the above (ex. currently auditing, applied for WDD, took a class but dropped partway due to COVID).'
+  title: '[Optional] Feel free to add anything else we should know about your answer to the above (ex. relevant learning experience if you selected ‘Other’ in the previous question, currently auditing, applied for WDD, took a class but dropped partway due to COVID).'
   hint: There is no need to elaborate on the classes you have taken beyond the ones on the list above (for example, we don't need to specific upper div courses). Please limit your response to 100 words.
   required: false
   question_category: background

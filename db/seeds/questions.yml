@@ -229,7 +229,7 @@ why_no_bwbp:
   required: false
 
 why_no_meet_the_club:
-  title: Why are you unable to attend either Meet the Club sections?
+  title: Why are you unable to attend Meet the Club?
   hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
   question_category: more_questions
   question_type: long_text

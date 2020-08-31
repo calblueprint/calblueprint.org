@@ -87,8 +87,8 @@ application_type:
   choices: Developer,Designer,Developer and designer
 
 available_for_bp_games:
-  title: If you are a developer, are you be able to attend atleast one of the Blueprint Games sessions?
-  hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
+  title: If you are a developer, are you be able to attend at least one of the Blueprint Games sessions?
+  hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST.'
   question_category: more_questions
   question_type: multiple_choice_radio
   choices: Yes,No,N/A
@@ -103,7 +103,7 @@ available_for_bwbp:
   required: true
 
 available_for_meet_the_club:
-  title: Are you be able to attend atleast one of the Meet the Club sessions?
+  title: Are you be able to attend at least one of the Meet the Club sessions?
   hint: 'Meet the Club is an event in our recruitment process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST.'
   question_category: more_questions
   question_type: multiple_choice_radio
@@ -121,14 +121,14 @@ design_portfolio:
 # Short answer questions
 
 fa20_mission_first:
-  title: 'What does social good mean to you? (150 Words)'
-  hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words."
+  title: 'What does social good mean to you? (200 Words)'
+  hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words. If you're applying to both an external and a developer/designer position, feel free to use 50 more words. "
   question_category: short_answer
   question_type: long_text
-  word_limit: 200
+  word_limit: 250
 
 fa20_perpetual_growth:
-  title: Talk about a time when you went through a period of growth. What motivated you, what challenged you, and how has it impacted you today? (150 Words)
+  title: Talk about a time when you went through a period of growth. What motivated you, what challenged you, and how has it impacted you today? (200 Words)
   hint: Please limit your response to 200 words.
   question_category: short_answer
   question_type: long_text
@@ -136,7 +136,7 @@ fa20_perpetual_growth:
 
 fa20_resourcefulness:
   title: Tell us about a project or experience that you're proud of! It does not have to be technical in nature. Feel free to explain it using bullet points instead of full sentences. (150 Words)
-  hint: Don't include a link to your project in this section, there will be space for that later. Please limit your response to 150 words
+  hint: Don't include a link to your project in this section, there will be space for that later. Please limit your response to 150 words.
   question_category: short_answer
   question_type: long_text
   word_limit: 150
@@ -167,7 +167,7 @@ be_humble:
 fa20_technical_gauge:
   title: 'If you are applying as a developer, please check any course(s) you have taken/are currently taking'
   hint: 'Please skip this question if you are not applying as a developer.'
-  choices: 'cs10|CS 10,cs88|CS 88,data8|Data 8,cs61a|CS 61A,cs61b|CS 61B,upperdiv|Atleast 1 CS upper div course,other|Other — expand below (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)'
+  choices: 'cs10|CS 10,cs88|CS 88,data8|Data 8,cs61a|CS 61A,cs61b|CS 61B,upperdiv|At least 1 CS upper div course,other|Other — expand below (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)'
   required: false
   question_type: multiple_choice_checkbox
   question_category: background

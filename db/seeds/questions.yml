@@ -122,7 +122,7 @@ design_portfolio:
 
 fa20_mission_first:
   title: 'What does social good mean to you? (200 Words)'
-  hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words. If you're applying to both an external and a developer/designer position, feel free to use 50 more words. "
+  hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words. If you're applying to both an external and a developer/designer position, feel free to use up to 250 words to answer both questions."
   question_category: short_answer
   question_type: long_text
   word_limit: 250

@@ -4,10 +4,10 @@
         - if question.required
             span.required-symbol
                 |* 
-        = question.title
+        = question.title.html_safe
     .hint
         = question.hint
-    = form.collection_check_boxes(question.tag, question.choices.split(','), :first, :last, options: {required: question.required}) do |b|
+    = form.collection_check_boxes(question.tag, question.choices.split(',').map({|c| c.split('|')}), :first, :last, options: {required: question.required}) do |b|
         = b.label(class: "check_box") do 
             = b.check_box(class: "check_box")
             = ' ' + b.object

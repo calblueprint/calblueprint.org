@@ -167,7 +167,7 @@ be_humble:
 fa20_technical_gauge:
   title: 'If you are applying as a developer, please check any course(s) you have taken/are currently taking'
   hint: 'Please skip this question if you are not applying as a developer.'
-  choices: 'CS 10,CS 88,Data 8,CS 61A,CS 61B,Atleast 1 CS upper div course,Other: (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)'
+  choices: 'cs10|CS 10,cs88|CS 88,data8|Data 8,cs61a|CS 61A,cs61b|CS 61B,upperdiv|Atleast 1 CS upper div course,other|Other (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)'
   required: false
   question_type: multiple_choice_checkbox
   question_category: background

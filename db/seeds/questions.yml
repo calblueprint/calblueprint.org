@@ -87,11 +87,11 @@ application_type:
   choices: Developer,Designer,Developer and designer
 
 available_for_bp_games:
-  title: Are you be able to attend atleast one of the Blueprint Games sessions?
-  hint: 'Blueprint Games is an event in our application process that you may be invited to after application decisions are released.<br/><br/>There will be 3 Blueprint Games sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
+  title: If you are a developer, are you be able to attend atleast one of the Blueprint Games sessions?
+  hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be sessions: Sept 11 6-8PM, Sept 12 10-12PM, Sept 12 12-2PM'
   question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Yes,No
+  choices: Yes,No,N/A
   required: true
 
 available_for_bwbp:
@@ -104,7 +104,7 @@ available_for_bwbp:
 
 available_for_meet_the_club:
   title: Are you be able to attend atleast one of the Meet the Club sessions?
-  hint: 'Meet the Club is an event in our application process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 Meet the Club sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST.'
+  hint: 'Meet the Club is an event in our recruitment process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST.'
   question_category: more_questions
   question_type: multiple_choice_radio
   choices: Yes,No
@@ -215,7 +215,7 @@ available_for_retreat:
 
 why_no_bp_games:
   title: Why are you unable to attend Blueprint Games?
-  hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
+  hint: It's an important part of our application process for developers, but we will do our best to be accomodating, especially for exceptional circumstances.
   question_category: more_questions
   question_type: long_text
   required: false

@@ -71,8 +71,8 @@ javascript:
     }
   }
 
-  $BPGamesTrue.click(toggleBPGames);
-  $BPGamesFalse.click(toggleBPGames);
+  // $BPGamesTrue.click(toggleBPGames);
+  // $BPGamesFalse.click(toggleBPGames);
 
   // Toggle why no BWBP question
   $("input[type=radio][name='student_application[responses][available_for_bwbp]']").change(function() {
@@ -102,6 +102,21 @@ javascript:
     $('.student_application_responses_why_no_meet_the_club').show()
   } else {
     $('.student_application_responses_why_no_meet_the_club').hide()
+  }
+
+  // Toggle why no BP Games question
+  $("input[type=radio][name='student_application[responses][available_for_bp_games]']").change(function() {
+    if ($(this).val() == 'No') {
+      $('.student_application_responses_why_no_bp_games').show()
+    } else {
+      $('.student_application_responses_why_no_bp_games').hide()
+    }
+  });
+  // Check on initial
+  if ($("#student_application_responses_available_for_bp_games_no").prop('checked')) {
+    $('.student_application_responses_why_no_bp_games').show()
+  } else {
+    $('.student_application_responses_why_no_bp_games').hide()
   }
 
   if (designOption.prop("checked")) {

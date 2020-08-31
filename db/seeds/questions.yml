@@ -121,25 +121,25 @@ design_portfolio:
 # Short answer questions
 
 fa20_mission_first:
-  title: 'What does social good mean to you?'
+  title: 'What does social good mean to you? (150 Words)'
   hint: "If you're applying for a Developer/Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words."
   question_category: short_answer
   question_type: long_text
   word_limit: 200
 
 fa20_perpetual_growth:
-  title: Talk about a time when you went through a period of growth. What motivated you, what challenged you, and how has it impacted you today?
+  title: Talk about a time when you went through a period of growth. What motivated you, what challenged you, and how has it impacted you today? (150 Words)
   hint: Please limit your response to 200 words.
   question_category: short_answer
   question_type: long_text
   word_limit: 200
 
 fa20_resourcefulness:
-  title: Tell us about a project or experience that you're proud of! It does not have to be technical in nature. Feel free to explain it using bullet points instead of full sentences.
+  title: Tell us about a project or experience that you're proud of! It does not have to be technical in nature. Feel free to explain it using bullet points instead of full sentences. (150 Words)
   hint: Don't include a link to your project in this section, there will be space for that later. Please limit your response to 150 words
   question_category: short_answer
   question_type: long_text
-  word_limit: 200
+  word_limit: 150
 
 mission_first:
   title: Given all the other opportunities available to you at Cal, why do you want to join Blueprint? What does tech for social good mean to you?

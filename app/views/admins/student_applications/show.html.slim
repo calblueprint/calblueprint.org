@@ -1,5 +1,5 @@
 .container
-  h1.admin-page-header = "Applicaiton ID: " + @app.id
+  h1.admin-page-header = "Application ID: " + @app.id.to_s
 
   - @app.sorted_filtered_responses.each do |r|
     div.app-row

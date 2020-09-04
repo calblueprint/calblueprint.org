@@ -18,8 +18,7 @@
   table.bp-table
     thead
       tr
-        th Name
-        th Email
+        th ID
         th Grade
         th Semester
         th Category
@@ -29,8 +28,7 @@
     tbody
       - @student_applications.includes(:applicant, :semester).each do |app|
         tr onClick="window.location = '/admins/student_applications/#{app.id}'"
-          td = app.applicant.name
-          td = app.applicant.email
+          td = app.id
           td = app.response_to 'year'
           td = "#{app.semester.season.capitalize} #{app.semester.year}"
           td = app.current_category[0..11] if not app.current_category.nil?

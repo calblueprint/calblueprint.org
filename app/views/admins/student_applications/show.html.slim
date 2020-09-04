@@ -1,7 +1,7 @@
 .container
-  h1.admin-page-header = @app.name
+  h1.admin-page-header = "Applicaiton ID: " + @app.id
 
-  - @app.sorted_responses.each do |r|
+  - @app.sorted_filtered_responses.each do |r|
     div.app-row
       h3.row-left = r.question.title
       - if r.question.question_type == "attachment"

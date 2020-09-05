@@ -12,6 +12,7 @@ namespace :students do
 
     db_apps.each do |app|
       app_params = {
+        "App ID": app.id,
         "Name": app.response_to("name"),
         "Pronouns": app.response_to("pronouns"),
         "Email": app.response_to("email"),

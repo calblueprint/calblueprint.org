@@ -156,20 +156,24 @@ en:
       email: "gracexng@berkeley.edu"
       <<: *marketing
 
-    - first_name: "Shannon"
-      last_name: "Bonet"
-      email: "shanshanlola@gmail.com"
-      <<: *operations
-
-    - first_name: "Spring" # external
-      last_name: "Ma"
-      email: "springma@berkeley.edu"
-      linkedin: "spring-ma"
+    - first_name: "Lucy"
+      last_name: "Song"
+      email: "lucysong@berkeley.edu"
       <<: *community
 
-    - first_name: "Tanthai"
-      last_name: "Pongstien"
-      email: "tanthaipongstien@gmail.com"
+    - first_name: "Noah"
+      last_name: "Hernandez"
+      email: "noahh_@berkeley.edu"
+      <<: *operations
+
+    - first_name: "Joyce"
+      last_name: "Guo"
+      email: "noahh_@berkeley.edu"
+      <<: *community
+
+    - first_name: "Ivee"
+      last_name: "Zhou"
+      email: "iveezhou@berkeley.edu"
       <<: *content
 
     # Developers
@@ -238,6 +242,56 @@ en:
       email: "sydbui@berkeley.edu"
       <<: *developer
 
+    - first_name: "Sonja"
+      last_name: "Johanson"
+      email: "johanson@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Joy"
+      last_name: "Dong"
+      email: "joydong@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Bryanna"
+      last_name: "Gavino"
+      email: "bry_gavino01@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Tiffany"
+      last_name: "Wang"
+      email: "tiffanywang@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Emma"
+      last_name: "Stephan"
+      email: "estephan@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Phoebe"
+      last_name: "Li"
+      email: "Phoebe Li"
+      <<: *developer
+
+    - first_name: "Jared"
+      last_name: "Keating"
+      email: "jkeating0002@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Andi"
+      last_name: "Halim"
+      email: "andihalim@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Shannon"
+      last_name: "Hong"
+      email: "shannon.hong@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Shannon"
+      last_name: "Bonet"
+      email: "shanshanlola@gmail.com"
+      <<: *developer
+
     # Designers
 
     - first_name: "Fang"
@@ -250,6 +304,22 @@ en:
       last_name: "He"
       email: "rlhe1307@berkeley.edu"
       linkedin: "rachel-he-543081158"
+      <<: *designer
+
+    - first_name: "Ashley"
+      last_name: "Kim"
+      email: "ashley.yj@berkeley.edu"
+      <<: *designer
+
+    - first_name: "Spring"
+      last_name: "Ma"
+      email: "springma@berkeley.edu"
+      linkedin: "spring-ma"
+      <<: *designer
+
+    - first_name: "Elizabeth"
+      last_name: "Wu"
+      email: "elizawu@berkeley.edu"
       <<: *designer
 
     # Mentors
@@ -277,6 +347,11 @@ en:
 
   alumni:
     # Inactive
+
+    - first_name: "Tanthai"
+      last_name: "Pongstien"
+      email: "tanthaipongstien@gmail.com"
+      <<: *content
 
     - first_name: "Cassandra"
       last_name: "Melax"
@@ -374,10 +449,10 @@ en:
       website: "ntalcus.github.io"
       <<: *internal
 
-    - first_name: 'Peter' # projects
-      last_name: 'Veerman'
-      email: 'peterkangveerman@berkeley.edu'
-      linkedin: 'peter-veerman'
+    - first_name: "Peter" # projects
+      last_name: "Veerman"
+      email: "peterkangveerman@berkeley.edu"
+      linkedin: "peter-veerman"
       <<: *projects
 
     - first_name: "Suhas"

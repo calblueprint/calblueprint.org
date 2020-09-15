@@ -1,7 +1,9 @@
 .container
-  h1.admin-page-header = @app.name
+  h1.admin-page-header = "Application ID: " + @app.id.to_s
+  p = "<a href=\"https://airtable.com/shrqOt5Btxbdi28dB\">Grading Form</a>".html_safe
+  p = "<a href=\"https://www.notion.so/calblueprint/App-Reading-Guide-ca02faf541764479b7b49d95da873b4d\">App Reading Guide</a>".html_safe
 
-  - @app.sorted_responses.each do |r|
+  - @app.sorted_filtered_responses.each do |r|
     div.app-row
       h3.row-left = r.question.title
       - if r.question.question_type == "attachment"

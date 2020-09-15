@@ -91,7 +91,11 @@ available_for_bp_games:
   hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be 3 sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST.'
   question_category: more_questions
   question_type: multiple_choice_radio
+<<<<<<< HEAD
   choices: Yes,No,N/A
+=======
+  choices: Yes,No,N/A - not applying as a developer
+>>>>>>> cd873d54cea4c9c95cb01ba788c8383ad5472cee
   required: true
 
 available_for_bwbp:
@@ -244,7 +248,11 @@ why_no_retreat:
 
 fa20_heard_from:
   title: How did you first hear about Blueprint?
+<<<<<<< HEAD
   hint: Whether it’s through social media, through a friend, through classes, through a certain Sproul-alternative, etc.
+=======
+  hint: 'For example: through social media, through a friend, through classes, through a virtual club fair, or through another sproul-alternative etc.'
+>>>>>>> cd873d54cea4c9c95cb01ba788c8383ad5472cee
   question_category: more_questions
   question_type: short_text
 

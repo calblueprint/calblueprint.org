@@ -147,6 +147,8 @@ en:
     - first_name: "Nick"
       last_name: "Wong"
       email: "nickwong@berkeley.edu"
+      linkedin: "nickwongio"
+      website: "nickwong.io"
       <<: *leader
 
     # External Team

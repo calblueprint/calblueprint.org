@@ -2,9 +2,7 @@ class NonprofitApplicationsController < ApplicationController
   before_action :authenticate_nonprofit
   before_action :verify_app_open
 
-  def contract
-    render "contract"
-  end
+
 
   def new
     default_check_cs169 = params.key?(:cs169) || (@settings.cs169_app_open && !@settings.npo_app_open)
@@ -75,7 +73,7 @@ class NonprofitApplicationsController < ApplicationController
   private
 
   def authenticate_nonprofit
-    redirect_to new_nonprofit_registration_path,
+    redirect_to new_nonprofit_session_path,
                 flash: { alert: "Please sign up or sign in before continuing." } unless current_nonprofit
   end
 
@@ -88,7 +86,7 @@ class NonprofitApplicationsController < ApplicationController
   def nonprofit_application_params
     params.require(:nonprofit_application)
       .permit(:cs169_pool, :purpose, :history, :date_established, :legal,
-              :short_summary, :goals, :key_features, :target_audience, :why,
+              :short_summary, :goals, :key_features, :inclusivity, :target_audience, :why,
               :technical_requirements, :client_status, :nonprofit_application_id,
               :current_resources, :future_plans, devices: [])
       .merge(semester: @settings.current_semester)
@@ -104,12 +102,17 @@ class NonprofitApplicationsController < ApplicationController
       return false
     end
 
-    # Find the current NPO's Airtable record by email address
+    # EDIT: Phone screen is optional
+    return true
+
+    # Find the current NPO's Airtable record by email address. Use this if phone screen is NOT optional. 
+    
     settings = Settings.instance
     semester_str = "#{settings.current_semester.season.capitalize} #{settings.current_semester.year} Applications"
     airtable_npos = Airrecord.table(ENV["AIRTABLE_API"], ENV["AIRTABLE_NPO_TABLE"], semester_str).all
     emails = airtable_npos.map { |npo| npo[:email] }
     pos = emails.index(current_nonprofit.email)
+    airtable_npos[pos]["Unlocked Phase 2"]
 
     if pos.nil?
       false

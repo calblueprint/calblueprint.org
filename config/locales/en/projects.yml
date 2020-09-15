@@ -5,6 +5,72 @@ en:
       subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
+      # 2020-21
+      ogsc:
+        status: current
+        title: Oakland Genesis Soccer Club
+        short_summary: >
+          Oakland Genesis Soccer Club is a Bay Area based nonprofit that provides socially and economically disadvantaged youth with free academic support and athletic programs. Their three main services involve free access to club soccer programs, free academic support and college advising to players, and free transportation to and from team practices and games.
+        org_link: https://www.oaklandgenesis.org/
+        color: b2d2ee
+        banner_image: projects/ogsc.png
+        full_description: |
+          Our Project
+          -----------
+          We are building an online portal allowing Oakland Genesis staff to track participants’ personal progress and communicate with all stakeholders (participants, parents, volunteers, donors) on student progress and activities.
+
+      nbjc:
+        status: current
+        title: National Black Justice Coalition
+        short_summary: >
+          National Black Justice Coalition (NBJC) is a civil rights organization based in Washington, D.C. dedicated to empowering Black LGBTQ/SGL plus people and people living with HIV/AIDS by making it their mission to end racism, homophobia, and LGBTQ/SGL bias and stigma through federal public policy advocacy. They have a number of different initiatives they are advocating ranging from employment non-discrimination to criminal justice.
+        org_link: http://nbjc.org/
+        color: 805fa7
+        banner_image: projects/nbjc.png
+        full_description: |
+          Our Project
+          -----------
+          We’re building a web platform for NBJC that will enable people to easily find and engage with various organizations that focus on helping Black LGBTQ/SGL and other marginalized communities.
+
+      meepanyar:
+        status: current
+        title: Mee Panyar
+        short_summary: >
+          Mee Panyar supports rural communities in Myanmar in the operation and maintenance of decentralized solar mini-grids that provide reliable, sustainable energy. This work aims to not only help rural electricians transition from diesel to solar (reducing carbon emissions by 60% and electricity prices by 50%) but to ensure long-term maintenance and proper operation of these new systems through the provision of formal education and support to rural electricians.
+        org_link: https://www.meepanyar.com/
+        color: fc4e09
+        banner_image: projects/meepanyar.png
+        full_description: |
+          Our Project
+          -----------
+          We’re building an instructional mobile app with offline functionality for local technicians/engineers in rural areas to help them operate and maintain decentralized solar mini-grids that provide reliable, sustainable energy.
+
+      wecaresolar:
+        status: current
+        title: We Care Solar
+        short_summary: >
+          We Care Solar is a nonprofit saving lives in childbirth through the design, delivery, and installation of rugged, compact solar suitcases. Hundreds of thousands of health facilities lack reliable electricity, and the consequences are often tragic. The organization works closely with partners such as the Ministries of Health, UN agencies, and international non-government organizations to promote clean energy for safe motherhood.
+        org_link: https://wecaresolar.org/
+        color: 643501
+        banner_image: projects/wecaresolar.png
+        full_description: |
+          Our Project
+          -----------
+          We’re building a low-bandwidth friendly mobile app for health workers to access educational resources, important communications, and personalized support so they can make the most impact with each solar suitcase.
+
+      kamehamehaschools:
+        status: current
+        title: Kamehameha Schools
+        short_summary: >
+          Kamehameha Schools (KS) is more than just a network of schools, but an active player in shaping the socio-economic landscape in the Hawaiian islands. KS leverages it’s massive land-ownership in Hawai’i to fund early education programs, support agricultural endeavors, operate retail spaces, and more. KS is a complex conglomerate — a mix of global diversified financial assets and an educational network for native Hawaiians.
+        org_link: https://www.ksbe.edu/
+        color: 03224c
+        banner_image: projects/ks.png
+        full_description: |
+          Our Project
+          -----------
+          We’re building a web dashboard for farmers and land asset managers to crowd-source and report relevant metrics on the health and productivity of Kamehameha Schools’ agricultural lands.
+
       # 2019-20
       1951coffee:
         status: past
@@ -17,11 +83,19 @@ en:
         banner_image: projects/1951.png
         full_description: |
           The Problem
+<<<<<<< HEAD
           -----------
           1951 Coffee runs two-week long training programs that teach students the essential skills to be successful in barista roles. During this program, individual texting makes up 80-90% of communications with trainees. 1951 Coffee is in need for a central, scaleable method for administrators to communicate with its trainees and graduates with limited technology experience.
 
           The Solution
           -----------
+=======
+          -----------
+          1951 Coffee runs two-week long training programs that teach students the essential skills to be successful in barista roles. During this program, individual texting makes up 80-90% of communications with trainees. 1951 Coffee is in need for a central, scaleable method for administrators to communicate with its trainees and graduates with limited technology experience.
+
+          The Solution
+          -----------
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
           Blueprint developed a mobile communication platform to connect 1951 Coffee's staff and alumni. This mobile application features ways to display internal announcements, job postings, events, and resources — an essential tool for information and forming digital community.
 
       dckitchen:
@@ -30,16 +104,28 @@ en:
         short_summary: >
           DC Central Kitchen develops innovative social ventures targeting the cycle of hunger and poverty. They create opportunities for meaningful careers, expand access to healthy food, and test innovative solutions to systemic failures. DC Central Kitchen's Healthy Corners initiative sustainably expands healthy food access in DC’s food deserts by delivering fresh produce at discount prices to corner stores in DC’s low-income communities.
         org_link: https://dccentralkitchen.org/
+<<<<<<< HEAD
         github_link: https://apps.apple.com/us/app/healthy-corners-rewards/id1503424404
+=======
+        github_link: https://healthycorners.calblueprint.org/
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
         color: 008550
         banner_image: projects/dckitchen.png
         full_description: |
           The Problem
+<<<<<<< HEAD
           -----------
           Healthy Corners provides many benefits to their customers, but since they operate in partnership with the 50+ stores in their network, the Healthy Corners team lacked a direct channel of communication with the customers they serve. Healthy Corners needed a new customer engagement strategy that would allow the team to serve customers more directly.
 
           The Solution
           -----------
+=======
+          -----------
+          Healthy Corners provides many benefits to their customers, but since they operate in partnership with the 50+ stores in their network, the Healthy Corners team lacked a direct channel of communication with the customers they serve. Healthy Corners needed a new customer engagement strategy that would allow the team to serve customers more directly.
+
+          The Solution
+          -----------
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
           Blueprint developed a customer rewards program to give Healthy Corners a direct channel to engage and serve their customers.  This includes a [customer-facing mobile app](https://tiny.cc/HealthyCornersApp) with a store and product locator, as well as a [tablet app for store clerks](https://play.google.com/store/apps/details?id=org.calblueprint.HealthyCornersClerk) to record purchases and points to redeem free produce rewards.
 
       peoplepower:
@@ -93,11 +179,19 @@ en:
         banner_image: projects/unloop.png
         full_description: |
           The Problem
+<<<<<<< HEAD
           -----------
           Unloop is providing a pipeline from prison to tech through education, support, and opportunity. They partner with community colleges to educate students in Washington State prisons, giving them the skills and knowledge they need to pursue careers in web development. In addition to education, Unloop connects students with resources that address barriers to their professional success, and creates opportunities for students after release by bringing together employers, professionals, and educators.
 
           The Solution
           -----------
+=======
+          -----------
+          Unloop is providing a pipeline from prison to tech through education, support, and opportunity. They partner with community colleges to educate students in Washington State prisons, giving them the skills and knowledge they need to pursue careers in web development. In addition to education, Unloop connects students with resources that address barriers to their professional success, and creates opportunities for students after release by bringing together employers, professionals, and educators.
+
+          The Solution
+          -----------
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
           Blueprint created a web-based portal for both Unloop staff and participants that will allow Unloop to better organize their assignments/notes and increase transparency between members of their organization. This new dashboard includes features that track student growth and streamline every step of the education pipeline, ultimately allowing staff to focus their time and energy on moving Unloop forward and ensuring student success.
 
       # 2018-19

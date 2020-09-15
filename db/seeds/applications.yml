@@ -1,6 +1,6 @@
 sp19:
-  season: "spring"
-  year: "2019"
+  season: 'spring'
+  year: '2019'
   questions:
     - name
     - email
@@ -20,12 +20,12 @@ sp19:
     - experience
     - projects
     - service
-    - available_for_gm
+    - time_commitment_acknowledgement
     - add_to_newsletter
 
 fa19:
-  season: "fall"
-  year: "2019"
+  season: 'fall'
+  year: '2019'
   questions:
     - name
     - email
@@ -34,8 +34,8 @@ fa19:
     - applied_before
 
     - commitments
-    - available_for_gm
-  
+    - time_commitment_acknowledgement
+
     - application_type
     - available_for_bp_games
     - design_portfolio
@@ -53,8 +53,8 @@ fa19:
     - add_to_newsletter
 
 sp20:
-  season: "spring"
-  year: "2020"
+  season: 'spring'
+  year: '2020'
   questions:
     - name
     - email
@@ -63,7 +63,7 @@ sp20:
     - applied_before
 
     - commitments
-    - available_for_gm
+    - time_commitment_acknowledgement
     - available_for_bp_games
     - available_for_bwbp
     - available_for_meet_the_club
@@ -81,3 +81,33 @@ sp20:
 
     - heard_from
     - add_to_newsletter
+
+fa20:
+  season: 'fall'
+  year: '2020'
+  questions:
+    - name
+    - pronouns
+    - email
+    - phone
+    - year
+    - applied_before
+    - fa20_application_type
+
+    - time_commitment_acknowledgement
+    - available_for_bp_games
+    - available_for_meet_the_club
+
+    - fa20_mission_first
+    - fa20_perpetual_growth
+    - fa20_resourcefulness
+
+    - fa20_technical_gauge
+    - fa20_classes_additional_info
+    - fa20_background_question
+    - fa20_project_link
+
+    - why_no_bp_games
+    - why_no_meet_the_club
+
+    - fa20_heard_from

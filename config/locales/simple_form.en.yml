@@ -2,7 +2,7 @@
 en:
   simple_form:
     error_notification:
-      default_message: 'Please review the problems below:'
+      default_message: "Please review the problems below:"
     hints:
       nonprofit_application:
         client_status: |
@@ -11,11 +11,14 @@ en:
         devices: Check all that apply.
         short_summary: 255 characters max
         technical_requirements: Examples include security concerns or a strong preference for a particular programming language or library. Don't worry if you don't have any or aren't sure - we'll help you decide what's best for your project!
+<<<<<<< HEAD
       nonprofit_interest_form:
         agree_to_terms: |
           Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
         submitted_calendly: |
           Once you have scheduled a call, check this box and press submit!
+=======
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
     labels:
       defaults:
         email:
@@ -33,6 +36,8 @@ en:
         goals: What are the goals of this project, and what problems does it address? Who is affected by these problems?
         history: |
           Give us a brief history of your organization. Tell us about some of your organization’s key accomplishments.
+        inclusivity: |
+          How is your organization working to be inclusive, both internally and externally? How is your organization supporting, encouraging, and respecting diverse voices and perspectives?
         key_features: |
           What are some of the key features of a project that would solve this problem?  Walk us through the flow of someone using this project.
         legal: Is your organization a 501(c)(3)?
@@ -43,6 +48,7 @@ en:
         technical_requirements: |
           Does your project have any specific technical requirements?
         why: Why is this project important to your organization?
+<<<<<<< HEAD
       nonprofit_interest_form:
         agree_to_terms: |
           I have read and understood  Blueprint's Terms of Work for Nonprofit Partners.
@@ -58,12 +64,14 @@ en:
           How did you hear about Blueprint?
         role: Your role in your organization
         website: Website
+=======
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
       project:
         full_description: |
           Full description for this project as Markdown. This will be shown as a separate page for this specific project.
-    'no': 'No'
+    "no": "No"
     required:
       html: <span class="required-symbol" title="required">*</span>
       mark: '*'
       text: required
-    'yes': 'Yes'
+    "yes": "Yes"

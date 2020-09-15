@@ -34,7 +34,7 @@ namespace :npo do
       form = db_forms.where(nonprofit: npo).first
       if !form.nil? && airtable_npo["Phone Number"].nil?
         # NPO filled out phase 1, but hasn't been updated in Airtable yet
-        airtable_npo["Phone Number"] = form.phone
+        airtable_npo["Phone Number"] = form.phone.phony_formatted!
         airtable_npo["Contact Name"] = form.contact_name
         airtable_npo["Contact Role"] = form.role
         airtable_npo["Website"] = form.website
@@ -70,6 +70,7 @@ namespace :npo do
         airtable_npo["Project Key Features"] = app.key_features
         airtable_npo["Project Goals and Audience"] = app.goals
         airtable_npo["Project Future Plans"] = app.future_plans
+        airtable_npo["NPO Inclusivity"] = app.inclusivity
         airtable_npo["Unlocked Phase 2"] = true
 
         airtable_npo["Application Phase"] = "Completed Phase 2"

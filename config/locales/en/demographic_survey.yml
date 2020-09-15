@@ -2,7 +2,7 @@ en:
   demographic_surveys:
     new:
       banner: >
-        Our club values diversity, equity and inclusion, to learn more how we can increase diversity in our candidate pool, 
+        Our club values diversity, equity and inclusion. To learn more how we can increase diversity in our candidate pool, 
         we invite you to voluntarily provide demographic information in a confidential survey at the end of this application. 
         Providing this information is <strong class="emph-optional">optional</strong>. 
         It will not be accessible or used in the evaluation process and has no effect on your opportunity to join our club.
@@ -10,7 +10,7 @@ en:
       race_hint: >
         Which of the following groups best describes your background. Check as many categories as may apply.
       gender_hint: >
-        Check one or more options that reflect your gender.
+        Check one or more options that you identify with.
       labels:
         race:
           african_american: African American / Black

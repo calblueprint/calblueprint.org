@@ -10,13 +10,13 @@ section.static-page-hero.student-apply-hero
     / Application Buttons
     .static-page-hero-btn-container.marginTop-xl
       - if @settings.dev_app_open && @settings.designer_app_open == 'open'
-        = link_to "Apply as a Developer/Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
+        = link_to "Start Application", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - elsif @settings.dev_app_open
         = link_to "Apply as a Developer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - elsif @settings.designer_app_open == 'open'
         = link_to "Apply as a Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
-      - if @settings.external_app_open
-        = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
+      / - if @settings.external_app_open
+      /   = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - if !@settings.dev_app_open && @settings.designer_app_open != 'open' && !@settings.external_app_open
         p.hero-desc = t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
@@ -40,32 +40,8 @@ section.application-process-section#application-process
         .num-col
           .timeline-num 01
         .text-col
-          - if @settings.infosession_one && @settings.infosession_two
-            / Two infosessions
-            .timeline-row-title = t(".application_timeline.infosession.title").pluralize
-            .timeline-row-date = "#{@info1_date},#{@info1_time} and #{@info2_date},#{@info2_time}"
-            .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: "#{@info1_date} and #{@info2_date}"}"
-            .timeline-row-btn
-              - if not @settings.infosession_one_link.empty?
-                = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1_date})", @settings.infosession_one_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-              - if not @settings.infosession_two_link.empty?
-                = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2_date})", @settings.infosession_two_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-              - if @settings.infosession_one_link.empty? && @settings.infosession_two_link.empty?
-                .timeline-row-notice = t ".application_timeline.infosession.notice"
-          - elsif @settings.infosession_one || @settings.infosession_two
-            / One infosession
-            .timeline-row-title #{t ".application_timeline.infosession.title"}
-            .timeline-row-date = "#{@info_date},#{@info_time}"
-            .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: @info_date}"
-            .timeline-row-btn
-              - if not @info_link.empty?
-                = link_to "#{t ".application_timeline.infosession.title"} (#{@info_date})", @info_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-              - else
-                .timeline-row-notice = t ".application_timeline.infosession.notice"
-          - else
-            / Closed
-            .timeline-row-title #{t ".application_timeline.infosession.title"}
-            .timeline-row-description = t ".application_timeline.infosession.description"
+          .timeline-row-title #{t ".application_timeline.infosession.title"}
+          .timeline-row-description = raw t ".application_timeline.infosession.description"
       / Application
       .timeline-row
         .num-col
@@ -76,7 +52,7 @@ section.application-process-section#application-process
           .timeline-row-description = raw t ".application_timeline.application"
           .timeline-row-btn
             - if @settings.dev_app_open
-              = link_to "Developer Application", new_student_application_path, class: "bp-btn"
+              = link_to "Start Application", new_student_application_path, class: "bp-btn"
             - else
               .timeline-row-notice = raw t ".application_timeline.application_notice"
       / Build with Blueprint
@@ -115,32 +91,8 @@ section.application-process-section#application-process
           .num-col
             .timeline-num 01
           .text-col
-            - if @settings.infosession_one && @settings.infosession_two
-              / Two infosessions
-              .timeline-row-title = t(".application_timeline.infosession.title").pluralize
-              .timeline-row-date = "#{@info1_date},#{@info1_time} and #{@info2_date},#{@info2_time}"
-              .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: "#{@info1_date} and #{@info2_date}"}"
-              .timeline-row-btn
-                - if not @settings.infosession_one_link.empty?
-                  = link_to "#{t ".application_timeline.infosession.title"} 1 (#{@info1_date})", @settings.infosession_one_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-                - if not @settings.infosession_two_link.empty?
-                  = link_to "#{t ".application_timeline.infosession.title"} 2 (#{@info2_date})", @settings.infosession_two_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-                - if @settings.infosession_one_link.empty? && @settings.infosession_two_link.empty?
-                  .timeline-row-notice = t ".application_timeline.infosession.notice"
-            - elsif @settings.infosession_one || @settings.infosession_two
-              / One infosession
-              .timeline-row-title #{t ".application_timeline.infosession.title"}
-              .timeline-row-date = "#{@info_date},#{@info_time}"
-              .timeline-row-description = "#{t ".application_timeline.infosession.description"} #{t ".application_timeline.infosession.detail", date: @info_date}"
-              .timeline-row-btn
-                - if not @info_link.empty?
-                  = link_to "#{t ".application_timeline.infosession.title"} (#{@info_date})", @info_link, class: "bp-btn marginRight-xxs marginBot-xxs", target: "_blank"
-                - else
-                  .timeline-row-notice = t ".application_timeline.infosession.notice"
-            - else
-              / Closed
-              .timeline-row-title #{t ".application_timeline.infosession.title"}
-              .timeline-row-description = t ".application_timeline.infosession.description"
+            .timeline-row-title #{t ".application_timeline.infosession.title"}
+            .timeline-row-description = raw t ".application_timeline.infosession.description"
         / Application
         .timeline-row
           .num-col
@@ -148,10 +100,10 @@ section.application-process-section#application-process
           .text-col
             .timeline-row-title Applications Due
             .timeline-row-date = t ".application_timeline.application_date"
-            .timeline-row-description = raw t ".application_timeline.designer_application"
+            .timeline-row-description = raw t ".application_timeline.application"
             .timeline-row-btn
               - if @settings.designer_app_open == 'open'
-                = link_to "Designer Application", new_student_application_path, class: "bp-btn"
+                = link_to "Start Application", new_student_application_path, class: "bp-btn"
               - elsif @settings.designer_app_open == 'closed'
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
         / Interview
@@ -178,6 +130,47 @@ section.application-process-section#application-process
             .timeline-row-title Design Challenge Due
             .timeline-row-date = t ".application_timeline.designer_challenge_date"
             .timeline-row-description = t ".application_timeline.designer_challenge"
+  .container
+    h2.static-page-header.marginBot-xxl External Application Process
+    .student-timeline
+      / Infosession
+      .timeline-row
+        .num-col
+          .timeline-num 01
+        .text-col
+          .timeline-row-title #{t ".application_timeline.infosession.title"}
+          .timeline-row-description = raw t ".application_timeline.infosession.description"
+      / Application
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
+          .timeline-row-title Applications Due
+          .timeline-row-date = t ".application_timeline.application_date"
+          .timeline-row-description = raw t ".application_timeline.application"
+          .timeline-row-btn
+            .timeline-row-btn
+              - if @settings.dev_app_open
+                = link_to "Start Application", new_student_application_path, class: "bp-btn"
+              - else
+                .timeline-row-notice = raw t ".application_timeline.application_notice"
+
+      / Interview
+      .timeline-row
+        .num-col
+          .timeline-num 03
+        .text-col
+          .timeline-row-title External Interviews
+          .timeline-row-date = t ".application_timeline.external_interviews_date"
+          .timeline-row-description = raw t ".application_timeline.external_interviews" 
+      / Meet the Club
+      .timeline-row
+        .num-col
+          .timeline-num 04
+        .text-col
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
 
 / Decision Criteria
 section.application-decision-criteria-section#decision-criteria

@@ -14,6 +14,7 @@
 #  short_summary          :text
 #  goals                  :text
 #  key_features           :text
+#  inclusivity            :text
 #  devices                :string
 #  target_audience        :text
 #  why                    :text
@@ -45,6 +46,7 @@ class NonprofitApplication < ActiveRecord::Base
   validates_length_of :short_summary, maximum: 255, if: -> (na) { na.submitted? }
   validates :current_resources, presence: true, if: -> (na) { na.submitted? }
   validates :key_features, presence: true, if: -> (na) { na.submitted? }
+  validates :inclusivity, presence: true, if: -> (na) { na.submitted? }
   validates :goals, presence: true, if: -> (na) { na.submitted? }
   validates :future_plans, presence: true, if: -> (na) { na.submitted? }
 
@@ -63,6 +65,10 @@ class NonprofitApplication < ActiveRecord::Base
     after_transition :draft => :submitted do |nonprofit_application, _transition|
       nonprofit_application.update_attributes(submitted_at: Time.now)
     end
+  end
+
+  def org_description
+    nonprofit.nonprofit_interest_forms[0].org_description
   end
 
   delegate :email, to: :nonprofit

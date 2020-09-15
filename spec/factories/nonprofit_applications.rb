@@ -14,6 +14,7 @@
 #  short_summary          :text
 #  goals                  :text
 #  key_features           :text
+#  inclusivity            :text
 #  devices                :string
 #  target_audience        :text
 #  why                    :text
@@ -44,6 +45,7 @@ FactoryGirl.define do
       target_audience FFaker::Lorem.paragraph
       why FFaker::Lorem.paragraph
       technical_requirements FFaker::Lorem.paragraph
+      inclusivity FFaker::Lorem.paragraph
 
       trait :submitted do
         state "submitted"

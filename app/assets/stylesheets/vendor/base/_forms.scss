@@ -29,7 +29,7 @@ label {
 
 textarea,
 #{$all-text-inputs},
-select[multiple=multiple] {
+select[multiple="multiple"] {
   @include transition(border-color);
   background-color: white;
   border-radius: $form-border-radius;
@@ -84,7 +84,7 @@ select {
   position: relative;
 }
 
-.date-dropdown select{
+.date-dropdown select {
   width: 15%;
   margin-right: 10px;
   float: left;

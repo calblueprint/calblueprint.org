@@ -1,1 +1,1 @@
-= form.input question.tag, checked: response.answer, label: question.title, hint: simple_format(question.hint).html_safe, as: :radio_buttons, required: question.required, collection: question.choices.split(',')
+= form.input question.tag, checked: response.answer, label: question.title.html_safe, hint: simple_format(question.hint).html_safe, as: :radio_buttons, required: question.required, collection: question.choices.split(',')

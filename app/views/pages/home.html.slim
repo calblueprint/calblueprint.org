@@ -1,6 +1,22 @@
 = render "navbar", className: "nav-white", animate: true
 = render "with_mailchimp_js"
 
+/! Facebook Pixel Code
+javascript:
+  !function(f,b,e,v,n,t,s)
+  | {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  | n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  | if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  | n.queue=[];t=b.createElement(e);t.async=!0;
+  | t.src=v;s=b.getElementsByTagName(e)[0];
+  | s.parentNode.insertBefore(t,s)}(window,document,'script',
+  | 'https://connect.facebook.net/en_US/fbevents.js');
+   | fbq('init', '911450052529831');
+  | fbq('track', 'PageView');
+noscript
+  img height="1" src="https://www.facebook.com/tr?id=911450052529831&ev=PageView\n&noscript=1" width="1" /
+/! End Facebook Pixel Code
+
 section.home-section
   .pattern: object id="pattern" data=image_path("home/pattern.svg") type="image/svg+xml"
   .container
@@ -31,6 +47,7 @@ section.projects-section
       span.fa.fa-angle-right
 
   .projects-container
+<<<<<<< HEAD
     = link_to project_path("rlc")
       .project-item#rlc
         .project-img.img-container: img src=image_url("home/rlc.jpg") alt="" /
@@ -46,6 +63,23 @@ section.projects-section
         .project-img.img-container: img src=image_url("home/1951.png") alt="" /
         h4 1951 Coffee Company
         p Building communities to make successful refugee resettlement possible.
+=======
+    = link_to project_path("ogsc")
+      .project-item#ogsc
+        .project-img.img-container: img src=image_url("home/ogsc.png") alt="" /
+        h4 Oakland Genesis Soccer Club
+        p Supporting socio-economically disadvantaged youth free academic support and athletic programs.
+    = link_to project_path("wecaresolar")
+      .project-item#wecaresolar
+        .project-img.img-container: img src=image_url("home/wecaresolar.png") alt="" /
+        h4 We Care Solar
+        p Saving lives in childbirth through the design, delivery, and installation of solar suitcases.
+    = link_to project_path("nbjc")
+      .project-item#nbjc
+        .project-img.img-container: img src=image_url("home/nbjc.png") alt="" /
+        h4 National Black Justice Coalition
+        p Empowering Black LGBTQ/SGL plus people and people living with HIV/AIDS.
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
 
 section.involve-section
   .container
@@ -109,10 +143,7 @@ section.involve-section
         .img-container-wide: img src=image_url("home/nib.png") alt=""/
         h5 Net Impact Berkeley
         p Bridging Business and Social Impact
-
     
-
-
 section.contact-section
   .container
     h2.static-page-header.marginBot-lg Contact Us

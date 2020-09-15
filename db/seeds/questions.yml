@@ -15,6 +15,11 @@ name:
   question_type: short_text
   placeholder: Alyssa P. Hacker
 
+pronouns:
+  title: What are your pronouns?
+  question_category: general
+  question_type: short_text
+
 phone:
   title: Phone Number
   question_category: general
@@ -52,23 +57,29 @@ commitments:
   question_category: general
   question_type: long_text
 
-available_for_gm:
+time_commitment_acknowledgement:
   title: I acknowledge that I can meet the time commitment of working on a Blueprint team!
-  hint:
-    "Blueprint teams meet twice a week for 1-2 hours and have about 10-15 hours of work
-    outside of meetings. Blueprint General Meetings are mandatory and are held on Mondays at
-    8 PM."
-  question_category: general
+  hint: 'Members spend 8-12 hours per week on Blueprint, including team/club-wide meetings, time spent outside of meetings to complete work, and team/club-wide socials.'
+  question_category: more_questions
   question_type: checkbox
 
 # Designer/Dev application type
 
+fa20_application_type:
+  title: What positions are you applying to this semester?
+  hint:
+    'You may apply to more than one, but if you get accepted for more than one, you must make a decision for which
+    application to continue by September 6 at 11:59 PM PST. You only need to fill out one application regardless of how many positions you apply for.'
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External
+
 application_type:
   title: Are you applying as a developer or as a designer (or both)?
   hint: "You may apply to both positions, but you must make a decision for which
-    application to continue by September 8 at 11:59 PM.\n\n
+    application to continue by September 8 at 11:59 PM PST.\n\n
     Interview requests for designers will be sent out on September 7, and initial
-    application results for developers will be sent out on September 8 at 10 PM.
+    application results for developers will be sent out on September 8 at 10 PM PST.
     If you applied to both and we do not hear from you, we will assume you will be
     continuing with your developer application."
   question_category: general
@@ -76,27 +87,27 @@ application_type:
   choices: Developer,Designer,Developer and designer
 
 available_for_bp_games:
-  title: Will you be able to attend BP Games?
-  hint: BP Games is an event in our application process that you may be invited to after application decisions are released. BP Games will be on February 8, from 3-5 PM.
-  question_category: general
+  title: If you are a developer, are you be able to attend at least one of the Blueprint Games sessions?
+  hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be 3 sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST.'
+  question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Yes,No
+  choices: Yes,No,N/A
   required: true
 
 available_for_bwbp:
   title: Which Build with Blueprint workshop section are you able to attend?
   hint: Build with BP workshop is an event in our application process that you may be invited to after application decisions are released. You only need to attend one section.
-  question_category: general
+  question_category: more_questions
   question_type: multiple_choice_radio
-  choices: February 3rd 7-8:30 PM,February 4th 7-8:30 PM,Both,Neither
+  choices: February 3rd 7-8:30 PM PST,February 4th 7-8:30 PM PST,Both,Neither
   required: true
 
 available_for_meet_the_club:
-  title: Which Meet the Club section are you able to attend?
-  hint: Meet the Club is an event in our application process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other. You only need to attend one section.
-  question_category: general
+  title: Are you be able to attend at least one of the Meet the Club sessions?
+  hint: 'Meet the Club is an event in our recruitment process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST.'
+  question_category: more_questions
   question_type: multiple_choice_radio
-  choices: February 5th 8-10 PM,February 6th 8-10 PM,Both,Neither
+  choices: Yes,No
   required: true
 
 design_portfolio:
@@ -108,6 +119,28 @@ design_portfolio:
   file_size_limit: 10 #MB
 
 # Short answer questions
+
+# Word limit extended for external + design/developer applicants
+fa20_mission_first:
+  title: 'What does social good mean to you? (200 Words)'
+  hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words. If you're applying to both an external and a developer/designer position, feel free to use up to 250 words to answer both questions."
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 250
+
+fa20_perpetual_growth:
+  title: Talk about a time when you went through a period of growth. What motivated you, what challenged you, and how has it impacted you today? (200 Words)
+  hint: Please limit your response to 200 words.
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+fa20_resourcefulness:
+  title: Tell us about a project or experience that you're proud of! It does not have to be technical in nature. Feel free to explain it using bullet points instead of full sentences. (150 Words)
+  hint: Don't include a link to your project in this section, there will be space for that later. Please limit your response to 150 words.
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 150
 
 mission_first:
   title: Given all the other opportunities available to you at Cal, why do you want to join Blueprint? What does tech for social good mean to you?
@@ -130,7 +163,42 @@ be_humble:
   question_type: long_text
   word_limit: 100
 
-# Additional Info
+# Background
+
+fa20_technical_gauge:
+  title: 'If you are applying as a developer, please check any course(s) you have taken/are currently taking'
+  hint: 'Please skip this question if you are not applying as a developer.'
+  choices: 'cs10|CS 10,cs88|CS 88,data8|Data 8,cs61a|CS 61A,cs61b|CS 61B,upperdiv|At least 1 CS upper div course,other|Other — expand below (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)'
+  required: false
+  question_type: multiple_choice_checkbox
+  question_category: background
+
+fa20_classes_additional_info:
+  title: '[Optional] Feel free to add anything else we should know about your answer to the above (ex. relevant learning experience if you selected ‘Other’ in the previous question, currently auditing, applied for WDD, took a class but dropped partway due to COVID).'
+  hint: There is no need to elaborate on the classes you have taken beyond the ones on the list above (for example, we don't need to know specific upper div courses). Please limit your response to 100 words.
+  required: false
+  question_category: background
+  question_type: long_text
+  word_limit: 100
+
+fa20_background_question:
+  title: '[Optional] Are there any additional circumstances we should know about to better understand you? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.'
+  hint: This question is optional. Please limit your response to 250 words.
+  question_category: background
+  required: false
+  question_type: long_text
+  word_limit: 250
+
+fa20_project_link:
+  title: "[Optional] Our intentions are to be as equitable as possible in this process, though we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else!"
+  hint: If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio. This question is optional.
+  question_category: background
+  required: false
+  question_type: short_text
+  placeholder: 'https://....'
+
+
+  # Additional Info
 
 resume:
   title: Resume
@@ -147,8 +215,8 @@ available_for_retreat:
   choices: Yes,No
 
 why_no_bp_games:
-  title: Why are you unable to attend BP Games?
-  hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
+  title: Why are you unable to attend Blueprint Games?
+  hint: It's an important part of our application process for developers, but we will do our best to be accomodating, especially for exceptional circumstances.
   question_category: more_questions
   question_type: long_text
   required: false
@@ -161,7 +229,7 @@ why_no_bwbp:
   required: false
 
 why_no_meet_the_club:
-  title: Why are you unable to attend either Meet the Club sections?
+  title: Why are you unable to attend Meet the Club?
   hint: It's an important part of our application process, but we will do our best to be accomodating, especially for exceptional circumstances.
   question_category: more_questions
   question_type: long_text
@@ -174,9 +242,15 @@ why_no_retreat:
   question_type: long_text
   required: false
 
+fa20_heard_from:
+  title: How did you first hear about Blueprint?
+  hint: Whether it’s through social media, through a friend, through classes, through a certain Sproul-alternative, etc.
+  question_category: more_questions
+  question_type: short_text
+
 heard_from:
   title: How did you first hear about Blueprint?
-  hint: Please let us know how you first heard about Blueprint, whether it’s through social media, through a friend, through classes, through Sproul, etc.
+  hint: Whether it’s through social media, through a friend, through classes, through Sproul, etc.
   question_category: more_questions
   question_type: short_text
 

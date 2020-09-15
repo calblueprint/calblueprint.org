@@ -52,7 +52,9 @@ class StudentApplicationsController < ApplicationController
 
   def student_application_params
     allowed_response_types = QuestionSemester.where(semester: @settings.current_semester).map {|x| x.question.tag.to_sym}
-    puts "Allowed Response Types: #{allowed_response_types}"
+    technical_answer = params['student_application']['responses']['fa20_technical_gauge']
+    params['student_application']['responses']['fa20_technical_gauge'] = technical_answer.join(',')
+    puts params
     params.require(:student_application).permit(responses: allowed_response_types).merge(
         semester: @settings.current_semester
       )

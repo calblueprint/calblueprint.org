@@ -24,7 +24,6 @@ namespace :demographics do
         "Race / Ethnicity Group": race_group.uniq,
         "Race / Ethnicity": races,
         "Gender": genders.select { |gender| app[gender.parameterize(separator: '_').to_sym] },
-        "Applicant Type": app.applicant_type
       }
 
       if app.other_gender.present?

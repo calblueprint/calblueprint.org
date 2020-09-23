@@ -111,6 +111,8 @@ en:
     - first_name: "Micah"
       last_name: "Yong"
       email: "micahtyong@berkeley.edu"
+      linkedin: "micah-yong"
+      website: "micahyong.me"
       <<: *tech
 
     - first_name: "Myles"
@@ -271,7 +273,7 @@ en:
 
     - first_name: "Phoebe"
       last_name: "Li"
-      email: "Phoebe Li"
+      email: "liphoebe@berkeley.edu"
       <<: *developer
 
     - first_name: "Jared"
@@ -291,7 +293,7 @@ en:
 
     - first_name: "Shannon"
       last_name: "Bonet"
-      email: "shanshanlola@gmail.com"
+      email: "shannonbonet@berkeley.edu"
       <<: *developer
 
     # Designers
@@ -344,6 +346,7 @@ en:
       linkedin: "francotorium"
       website: "francotorium.com"
       <<: *mentor
+
 
     # Other positions:
 

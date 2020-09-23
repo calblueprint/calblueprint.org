@@ -59,7 +59,7 @@ commitments:
 
 time_commitment_acknowledgement:
   title: I acknowledge that I can meet the time commitment of working on a Blueprint team!
-  hint: 'Members spend 8-12 hours per week on Blueprint, including team/club-wide meetings, time spent outside of meetings to complete work, and team/club-wide socials.'
+  hint: "Members spend 8-12 hours per week on Blueprint, including team/club-wide meetings, time spent outside of meetings to complete work, and team/club-wide socials."
   question_category: more_questions
   question_type: checkbox
 
@@ -68,8 +68,8 @@ time_commitment_acknowledgement:
 fa20_application_type:
   title: What positions are you applying to this semester?
   hint:
-    'You may apply to more than one, but if you get accepted for more than one, you must make a decision for which
-    application to continue by September 6 at 11:59 PM PST. You only need to fill out one application regardless of how many positions you apply for.'
+    "You may apply to more than one, but if you get accepted for more than one, you must make a decision for which
+    application to continue by September 6 at 11:59 PM PST. You only need to fill out one application regardless of how many positions you apply for."
   question_category: general
   question_type: multiple_choice_radio
   choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External
@@ -88,7 +88,7 @@ application_type:
 
 available_for_bp_games:
   title: If you are a developer, are you be able to attend at least one of the Blueprint Games sessions?
-  hint: 'Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be 3 sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST.'
+  hint: "Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be 3 sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST."
   question_category: more_questions
   question_type: multiple_choice_radio
   choices: Yes,No,N/A - not applying as a developer
@@ -104,7 +104,7 @@ available_for_bwbp:
 
 available_for_meet_the_club:
   title: Are you be able to attend at least one of the Meet the Club sessions?
-  hint: 'Meet the Club is an event in our recruitment process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST.'
+  hint: "Meet the Club is an event in our recruitment process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST."
   question_category: more_questions
   question_type: multiple_choice_radio
   choices: Yes,No
@@ -122,7 +122,7 @@ design_portfolio:
 
 # Word limit extended for external + design/developer applicants
 fa20_mission_first:
-  title: 'What does social good mean to you? (200 Words)'
+  title: "What does social good mean to you? (200 Words)"
   hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words. If you're applying to both an external and a developer/designer position, feel free to use up to 250 words to answer both questions."
   question_category: short_answer
   question_type: long_text
@@ -166,15 +166,15 @@ be_humble:
 # Background
 
 fa20_technical_gauge:
-  title: 'If you are applying as a developer, please check any course(s) you have taken/are currently taking'
-  hint: 'Please skip this question if you are not applying as a developer.'
-  choices: 'cs10|CS 10,cs88|CS 88,data8|Data 8,cs61a|CS 61A,cs61b|CS 61B,upperdiv|At least 1 CS upper div course,other|Other — expand below (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)'
+  title: "If you are applying as a developer, please check any course(s) you have taken/are currently taking"
+  hint: "Please skip this question if you are not applying as a developer."
+  choices: "cs10|CS 10,cs88|CS 88,data8|Data 8,cs61a|CS 61A,cs61b|CS 61B,upperdiv|At least 1 CS upper div course,other|Other — expand below (could include relevant decals such as the Web Design/React/Rails Decals or other learning experiences)"
   required: false
   question_type: multiple_choice_checkbox
   question_category: background
 
 fa20_classes_additional_info:
-  title: '[Optional] Feel free to add anything else we should know about your answer to the above (ex. relevant learning experience if you selected ‘Other’ in the previous question, currently auditing, applied for WDD, took a class but dropped partway due to COVID).'
+  title: "[Optional] Feel free to add anything else we should know about your answer to the above (ex. relevant learning experience if you selected ‘Other’ in the previous question, currently auditing, applied for WDD, took a class but dropped partway due to COVID)."
   hint: There is no need to elaborate on the classes you have taken beyond the ones on the list above (for example, we don't need to know specific upper div courses). Please limit your response to 100 words.
   required: false
   question_category: background
@@ -182,7 +182,7 @@ fa20_classes_additional_info:
   word_limit: 100
 
 fa20_background_question:
-  title: '[Optional] Are there any additional circumstances we should know about to better understand you? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.'
+  title: "[Optional] Are there any additional circumstances we should know about to better understand you? This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives."
   hint: This question is optional. Please limit your response to 250 words.
   question_category: background
   required: false
@@ -195,8 +195,7 @@ fa20_project_link:
   question_category: background
   required: false
   question_type: short_text
-  placeholder: 'https://....'
-
+  placeholder: "https://...."
 
   # Additional Info
 
@@ -244,7 +243,7 @@ why_no_retreat:
 
 fa20_heard_from:
   title: How did you first hear about Blueprint?
-  hint: 'For example: through social media, through a friend, through classes, through a virtual club fair, or through another sproul-alternative etc.'
+  hint: "For example: through social media, through a friend, through classes, through a virtual club fair, or through another sproul-alternative etc."
   question_category: more_questions
   question_type: short_text
 

@@ -10,23 +10,6 @@ section.static-page-hero.chapter-overview-hero
     .static-page-hero-btn-container.marginTop-xl
       button.bp-btn.btn-white.btn-lg.read-more Submit Interest Form
 
-
-  / div.page-nav
-  /   .container
-  /     ul
-  /       li.page-nav-link section-name="chapters"
-  /         | Chapters
-
-
-/ section.page-chapters
-/    .container
-/      h2.static-page-header.marginBot-lg Chapters
-/      - t(".chapters").each do |chapter|
-/        = link_to chapter[:url], class: "chapter-card" do |x|
-/          .chapter-card--image style="background-image: url(#{image_path(chapter[:image])})"
-/          h3.chapter-card--title = chapter[:name]
-/          p.chapter-card--summary = chapter[:description]
-
 div.page-nav
     .container
       ul

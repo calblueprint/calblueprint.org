@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Static pages
   get "/about", to: "pages#about"
   get "/sponsors", to: "pages#sponsors"
+  get "/chapters", to: "pages#chapters"
   get "/bitcoin", to: "pages#bitcoin"
   get '/nonprofit_applications/contract', to: "pages#contract"
 

@@ -8,6 +8,9 @@ class PagesController < ApplicationController
     @alumni = membersyml['alumni']
   end
 
+  def chapters
+  end
+
   def sponsors
   end
 

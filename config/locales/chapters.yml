@@ -5,9 +5,69 @@ en:
       subtitle:
         Blueprint was founded at UC Berkeley in Spring 2013. 
         Since then we started scaling our impact and further mission by establishing chapters in different colleges around the world. 
-      mission: >
-        To make beautiful engineering accessible and useful
-        for those who create communities and promote public welfare.
+      mission: > 
+        lueprint was founded at UC Berkeley in Spring 2013.
+  chapters:
+    chapters_list: 
+      uwaterloo:
+        status: current
+        title: University of Waterloo 
+        short_summary: >
+          UW Blueprint was established in September 2016. 
+        org_link: https://uwblueprint.org/
+        article_link: https://medium.com/uw-blueprint/starting-from-the-beginning-building-uw-blueprint-e346ff4d13ab
+        color: b2d2ee
+        banner_image: chapters/uw.png
+      boulder-colorado:
+        status: current
+        title: University of Boulder, Colorado  
+        short_summary: >
+          UCLA Blueprint was established in September 2019. Learn more at https://uwblueprint.org/
+        link: https://medium.com/uw-blueprint/starting-from-the-beginning-building-uw-blueprint-e346ff4d13ab
+        color: b2d2ee
+        banner_image: chapters/colorado.png
+      uot:
+        status: current
+        title: University of Toronto 
+        short_summary: >
+          UCLA Blueprint was established in September 2019. Learn more at https://uwblueprint.org/
+        link: https://medium.com/uw-blueprint/starting-from-the-beginning-building-uw-blueprint-e346ff4d13ab
+        color: b2d2ee
+        banner_image: chapters/toronto.png
+      ucla:
+        status: current
+        title: University of CA, Los Angeles 
+        short_summary: >
+          UCLA Blueprint was established in September 2019. Learn more at https://uwblueprint.org/
+        link: https://medium.com/uw-blueprint/starting-from-the-beginning-building-uw-blueprint-e346ff4d13ab
+        color: b2d2ee
+        banner_image: chapters/ucla.png
+      carleton:
+        status: current
+        title: Carleton University  
+        short_summary: >
+          UCLA Blueprint was established in September 2019. Learn more at https://uwblueprint.org/
+        link: https://medium.com/uw-blueprint/starting-from-the-beginning-building-uw-blueprint-e346ff4d13ab
+        color: b2d2ee
+        banner_image: chapters/carleton.png
+      uci:
+        status: current
+        title: University of CA, Irvine 
+        short_summary: >
+          UCLA Blueprint was established in September 2019. Learn more at https://uwblueprint.org/
+        link: https://medium.com/uw-blueprint/starting-from-the-beginning-building-uw-blueprint-e346ff4d13ab
+        color: b2d2ee
+        banner_image: chapters/uci.png
+      alabama:
+        status: current
+        title: University of Alabama  
+        short_summary: >
+          UCLA Blueprint was established in September 2019. Learn more at https://uwblueprint.org/
+        link: https://medium.com/uw-blueprint/starting-from-the-beginning-building-uw-blueprint-e346ff4d13ab
+        color: b2d2ee
+        banner_image: chapters/alabama.png
+
+
 
 
 

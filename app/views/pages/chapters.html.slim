@@ -15,7 +15,7 @@ div.page-nav
       ul
         li.page-nav-link section-name="current-chapters"
           | Current Chapters
-        li.page-nav-link section-name="why-blueprint"
+        li.page-nav-link section-name="why blueprint"
           | Why Blueprint
         li.page-nav-link section-name="establishment-process"
           | Establishment Process
@@ -23,8 +23,66 @@ div.page-nav
           | FAQs
 
 
-section.about-page-mission-section#mission
+/ .chapter-container
+/   = link_to "https://notion.so/", target: "_blank", class: "org"
+/     .img-container: img src=image_url("sponsors/notion.png") alt=""/
+/     h5 Notion
+/   = link_to "https://www.janestreet.com/", target: "_blank", class: "org"
+/     .img-container: img src=image_url("sponsors/jane_street.png") alt=""/
+/     h5 Jane Street
+/   = link_to "https://www.wealthfront.com/", target: "_blank", class: "org"
+/     .img-container: img src=image_url("sponsors/wealthfront.png") alt=""/
+/     h5 Wealthfront
+/   = link_to "https://techfund.berkeley.edu/", target: "_blank", class: "org"
+/     .img-container: img src=image_url("sponsors/stf.png") alt=""/
+/     h5 Berkeley STF
+/   = link_to "https://www.ffwd.org/", target: "_blank", class: "org"
+/     .img-container: img src=image_url("sponsors/fast_forward.png") alt=""/
+/     h5 Fast Forward
+/   = link_to "https://witi.berkeley.edu/", target: "_blank", class: "org"
+/     .img-container: img src=image_url("sponsors/wit.png") alt=""/
+/     h5 Women in Tech Initiative
+
+section.current-chapters
   .container
-    h2.static-page-header.marginBot-md Current Chapters
-    p.mission = t ".mission"
-  .about-page-oval
+    h2.static-page-header.marginBot-xxl Current Chapters
+    - if @current_chapters.count > 0
+      .chapter-card-container
+        - @current_chapters.each do |slug, chapter|
+          .chapter-card-column 
+            = link_to chapters_path(slug), class: "chapter-card" do
+              .chapter-card--image style="background-image: url(#{image_path(chapter[:banner_image])})" 
+              h3.chapter-card--title = chapter[:title]
+              p.chapter-card--summary = chapter[:short_summary]
+
+javascript:
+  $(document).ready(function(){
+    var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
+    if (!isTouch) {
+      $(".npo-photo-carousel .wrapper").kinetic();
+    }
+  });
+
+/ section.about-page-chapter-section#chapter
+/   .container
+/     h2.static-page-header.marginBot-md Current Chapters
+/     p.mission = t ".chapter"
+/   .about-page-oval
+
+/ .container.chapter-article-container.marginTop-xl
+/   h1.static-page-header.marginBot-md = @chapter[:title]
+/   p = @chapter[:short_summary]
+/   .chapter-article-links-container.marginBot-md
+/     - if @chapter[:link]
+/       = link_to @chapter[:link], class: "homepage-link marginRight-lg", target: "_blank"
+/         | View Project
+/         span.fa.fa-angle-right
+/     - if @chapter[:github_link]
+/       = link_to @chapter[:github_link], class: "homepage-link marginRight-lg", target: "_blank"
+/         | View Project
+/         span.fa.fa-angle-right
+/     - if @chapter[:org_link]
+/       = link_to @chapter[:org_link], class: "homepage-link", target: '_blank'
+/         | View Organization
+/         span.fa.fa-angle-right

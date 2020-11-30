@@ -44,82 +44,11 @@
   }
 
 
-
-  // .chapter-container {
-  //   display: flex;
-  //   flex-flow: row wrap;
-  //   justify-content: center;
-  //   align-items: center;
-
-  //   .img-container {
-  //     margin: 0 auto 20px;
-
-  //     img {
-  //       max-width: 150px;
-  //       max-height: 80px;
-  //       object-fit: scale-down;
-  //     }
-  //   }
-
-  //   .img-container-wide {
-  //     margin: 0 auto 20px;
-  //     max-width: 200px;
-  //   }
-
-  //   .org-wide {
-  //     margin: 0 20px 30px 20px;
-  //     width: 250px;
-  //     text-align: center;
-  //     text-decoration: none;
-  //   }
-
-  //   .org {
-  //     margin: 0 20px 30px 20px;
-  //     width: 220px;
-  //     text-align: center;
-  //     text-decoration: none;
-      
-  //     &:hover {
-  //       background: white;
-  //       box-shadow: 2px 2px 15px $dark-gray-10;
-  //       transform: translateY(-5px);
-  //     }
-  //   }
-
-  //   h5 {
-  //     font-size: 18px;
-  //     font-weight: 500;
-  //   }
-
-  //   p {
-  //     color: $dark-gray-60;
-  //     font-size: 16px;
-  //   }
-  // }
-
-
-
-
-  // .about-page-mission-section {
-  //   background: #F4F4F4;
-  //   overflow: hidden;
-  //   padding: 80px 0 430px;
-  //   position: relative;
-  //   text-align: center;
-  
-  //   .mission {
-  //     color: $dark-gray-70;
-  //     font-family: $bptext-font;
-  //     font-size: 29px;
-  //     margin: 0 auto;
-  //     max-width: 730px;
-  //   }
-  // }
-
   .current-chapters {
-    padding: 80px 0 430px;
+    padding: 100px 200px 0px;
     position: relative;
     text-align: center;
+    justify-content: center;
   }
 
   .chapter-card-container {
@@ -129,7 +58,7 @@
 
   .chapter-card-column {
     margin-bottom: 40px;
-    padding: 0 20px;
+    padding: 10px 20px;
     width: 33.333%;
   }
   
@@ -137,7 +66,7 @@
     display: flex;
     height: 100%;
     flex-flow: column wrap;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-decoration: none;
     transition: 200ms;
   
@@ -151,7 +80,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 200px;
+      height: 100px;
       margin-bottom: 20px;
       width: 100%;
     }
@@ -178,96 +107,129 @@
     }
   }
 
-  // .chapter-article-container {
-  //   max-width: 700px;
-  
-  //   &:last-of-type {
-  //     padding-bottom: 60px;
-  //   }
-  
-  //   h2 {
-  //     font-family: $bptext-font;
-  //     font-size: 30px;
-  //     font-weight: 600;
-  //     margin-bottom: 20px;
-  //   }
-  
-  //   p {
-  //     color: $dark-gray-70;
-  //     font-size: 20px;
-  //     line-height: 1.6;
-  //     margin-bottom: 30px;
-  //   }
-  // }
-  
-  // .chapter-article-img-container {
-  //   margin: 40px auto 60px;
-  //   max-width: 900px;
-  
-  //   .img-container {
-  //     border-radius: 4px;
-  //     box-shadow: 0 5px 30px $dark-gray-10;
-  //     height: 400px;
-  //   }
-  // }
-
-  @media (max-width: 991px) {
-    .chapter-card-column {
-      width: 50%;
-    }
+  .why-blueprint-section {
+    padding: 50px 0;
   }
   
-  @media (max-width: $breakpt-mobile) {
-    .chapter-card-column {
-      padding: 0;
-      width: 100%;
-    }
+  .why-blueprint-list-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
   }
   
+  .why-blueprint-item {
+    margin-bottom: 40px;
+    width: 100%;
+  
+    .img-container {
+      margin-bottom: 10px;
+      margin-right: 20px;
+      max-width: 100px;
+      float: left;
+    }
+  
+    h3 {
+      font-family: $bptext-font;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      margin-top: 10px;
+    }
+  
+    p {
+      font-size: 18px;
+      color: $dark-gray-70;
+    }
+  }
 
-  // .chapters-section {
-  //   padding: 50px 0px; 
-  // }
+  .establishment-process-section {
+    background: $off-white;
+    padding: 80px 0;
   
-  // .chapter-card {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: flex-start;
-  //   align-items: center;
-  //   height: 200px;
-  //   margin-bottom: 30px;
-  //   padding-right: 15px;
-  //   text-decoration: none;
-  //   transition: 200ms;
+    .static-page-header {
+      text-align: left;
+    }
   
-  //   &:hover {
-  //     background: $bp-blue-10;
-  //     color: white;
-  //     box-shadow: 2px 2px 15px $dark-gray-10;
-  //     outline: 0.5px solid $bp-blue-20;
-  //     transform: translateY(-5px);
-  //   }
+    .static-page-desc {
+      text-align: center;
+    }
+  }
+
+  .timeline-row:last-of-type .num-col:after {
+    display: none;
+  }
   
-  //   &--image {
-  //     background-size: contain;
-  //     background-position: center;
-  //     background-repeat: no-repeat;
-  //     min-width: 200px;
-  //     min-height: 200px;
-  //     margin-right: 30px;
-  //   }
+  .timeline-num {
+    background: $off-white;
+    color: $bp-blue-20;
+    font-family: $bptext-font;
+    font-size: 100px;
+    font-weight: 600;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    z-index: 1;
+  }
   
-  //   &--title {
-  //     color: initial;
-  //     font-family: $bptext-font;
-  //     font-size: 22px;
-  //     font-weight: 600;
-  //     margin: 30px 15px;
-  //     min-width: 150px;
-  //   }
+  .text-col {
+    float: right;
+    padding: 10px 0;
+    //width: calc(100% - #{$timeline-num-width});
+  }
   
-  //   &--summary {
-  //     color: $dark-gray-70;
-  //     margin: 30px 15px;
-  //   }
-  // }
+  .timeline-row-title {
+    display: inline-block;
+    font-family: $bptext-font;
+    font-size: 27px;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .timeline-row-date {
+    color: $dark-gray-60;
+    display: inline-block;
+    font-family: $bptext-font;
+    font-size: 19px;
+    font-weight: 500;
+  }
+  
+  .timeline-row-description {
+    font-size: 18px;
+    color: $dark-gray-70;
+  }
+  
+  .timeline-row-description-bold {
+    color: $dark-gray-70;
+    font-weight: bold;
+  }
+  
+  .timeline-row-btn {
+    margin: 25px 0 35px;
+  }
+  
+  .timeline-row-notice {
+    color: $bp-blue;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .chapter-faqs-section {
+    padding: 50px 0;
+  
+    h3 {
+      font-family: $bptext-font;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  
+    p {
+      color: $dark-gray-70;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  }
+.chapter-interest-form { 
+  padding: 70px 0;
+}

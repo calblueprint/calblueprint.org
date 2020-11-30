@@ -8,19 +8,6 @@ class PagesController < ApplicationController
     @alumni = membersyml['alumni']
   end
 
-  def chapters
-    all_chapters = t("chapters.chapters_list")
-    @current_chapters = all_chapters.select do |slug, chap|
-      chap[:status] == "current"
-    end
-    @markdown_chapter = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
-    begin
-    @chapter = t("chapters.chapters_list.#{params[:slug]}", raise: true)
-    rescue I18n::MissingTranslationData
-      not_found
-    end
-  end
-
   def sponsors
   end
 

@@ -83,11 +83,19 @@ en:
         banner_image: projects/1951.png
         full_description: |
           The Problem
+<<<<<<< HEAD
           -----------
           1951 Coffee runs two-week long training programs that teach students the essential skills to be successful in barista roles. During this program, individual texting makes up 80-90% of communications with trainees. 1951 Coffee is in need for a central, scaleable method for administrators to communicate with its trainees and graduates with limited technology experience.
 
           The Solution
           -----------
+=======
+          -----------
+          1951 Coffee runs two-week long training programs that teach students the essential skills to be successful in barista roles. During this program, individual texting makes up 80-90% of communications with trainees. 1951 Coffee is in need for a central, scaleable method for administrators to communicate with its trainees and graduates with limited technology experience.
+
+          The Solution
+          -----------
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
           Blueprint developed a mobile communication platform to connect 1951 Coffee's staff and alumni. This mobile application features ways to display internal announcements, job postings, events, and resources — an essential tool for information and forming digital community.
 
       dckitchen:
@@ -96,16 +104,28 @@ en:
         short_summary: >
           DC Central Kitchen develops innovative social ventures targeting the cycle of hunger and poverty. They create opportunities for meaningful careers, expand access to healthy food, and test innovative solutions to systemic failures. DC Central Kitchen's Healthy Corners initiative sustainably expands healthy food access in DC’s food deserts by delivering fresh produce at discount prices to corner stores in DC’s low-income communities.
         org_link: https://dccentralkitchen.org/
+<<<<<<< HEAD
+        github_link: https://apps.apple.com/us/app/healthy-corners-rewards/id1503424404
+=======
         github_link: https://healthycorners.calblueprint.org/
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
         color: 008550
         banner_image: projects/dckitchen.png
         full_description: |
           The Problem
+<<<<<<< HEAD
           -----------
           Healthy Corners provides many benefits to their customers, but since they operate in partnership with the 50+ stores in their network, the Healthy Corners team lacked a direct channel of communication with the customers they serve. Healthy Corners needed a new customer engagement strategy that would allow the team to serve customers more directly.
 
           The Solution
           -----------
+=======
+          -----------
+          Healthy Corners provides many benefits to their customers, but since they operate in partnership with the 50+ stores in their network, the Healthy Corners team lacked a direct channel of communication with the customers they serve. Healthy Corners needed a new customer engagement strategy that would allow the team to serve customers more directly.
+
+          The Solution
+          -----------
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
           Blueprint developed a customer rewards program to give Healthy Corners a direct channel to engage and serve their customers.  This includes a [customer-facing mobile app](https://tiny.cc/HealthyCornersApp) with a store and product locator, as well as a [tablet app for store clerks](https://play.google.com/store/apps/details?id=org.calblueprint.HealthyCornersClerk) to record purchases and points to redeem free produce rewards.
 
       peoplepower:
@@ -159,11 +179,19 @@ en:
         banner_image: projects/unloop.png
         full_description: |
           The Problem
+<<<<<<< HEAD
           -----------
           Unloop is providing a pipeline from prison to tech through education, support, and opportunity. They partner with community colleges to educate students in Washington State prisons, giving them the skills and knowledge they need to pursue careers in web development. In addition to education, Unloop connects students with resources that address barriers to their professional success, and creates opportunities for students after release by bringing together employers, professionals, and educators.
 
           The Solution
           -----------
+=======
+          -----------
+          Unloop is providing a pipeline from prison to tech through education, support, and opportunity. They partner with community colleges to educate students in Washington State prisons, giving them the skills and knowledge they need to pursue careers in web development. In addition to education, Unloop connects students with resources that address barriers to their professional success, and creates opportunities for students after release by bringing together employers, professionals, and educators.
+
+          The Solution
+          -----------
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
           Blueprint created a web-based portal for both Unloop staff and participants that will allow Unloop to better organize their assignments/notes and increase transparency between members of their organization. This new dashboard includes features that track student growth and streamline every step of the education pipeline, ultimately allowing staff to focus their time and energy on moving Unloop forward and ensuring student success.
 
       # 2018-19

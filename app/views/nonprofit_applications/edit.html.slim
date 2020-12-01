@@ -12,6 +12,14 @@
     | The application is due on
     strong.apply-page-due< July 17th, 2020, 11:59pm,
     |  but applications will be reviewed on a rolling basis.
+<<<<<<< HEAD
+    |  We encourage you to submit your application within a week of your
+    |  Interest Form. Review our 
+    =<> link_to "our Terms of Work", nonprofit_applications_contract_path
+    |  .
+    =<> link_to "Contact us", new_contact_form_path
+    | if you have any questions.  
+=======
     |  We encourage you to submit your application within one to two weeks of your
     |  informational phone call. 
   p.static-page-desc
@@ -19,6 +27,7 @@
     =<> link_to "our Terms of Work", nonprofit_applications_contract_path
     |  , and feel free to email us at projects@calblueprint.org 
     |  if you have any questions! 
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
 
 
   = render "form_errors", obj: @nonprofit_application

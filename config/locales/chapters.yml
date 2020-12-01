@@ -76,7 +76,7 @@ en:
           question: Why are projects taken on for one year?
           answer: >
             The year-long development cycle allows for a project to be completed, tested and deployed. Initially, Blueprint developed projects in a semester and found there was not enough time devoted to user testing and deployment. 
-            Now, the first semester of the development cycle is devoted to user research, desing, and developing the MVP application. The second semester is then used for user testing, refinement, and deployment of the project (handoff process to NPOs). 
+            Now, the first semester of the development cycle is devoted to user research, design, and developing the MVP application. The second semester is then used for user testing, refinement, and deployment of the project (handoff process to NPOs). 
         q3:
           question: How much time do members typically devote to Blueprint weekly?
           answer: >

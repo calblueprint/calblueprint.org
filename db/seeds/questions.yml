@@ -243,8 +243,7 @@ why_no_retreat:
 
 fa20_heard_from:
   title: How did you first hear about Blueprint?
-  hint: Whether it’s through social media, through a friend, through classes, through a certain Sproul-alternative, etc.
-  hint: 'For example: through social media, through a friend, through classes, through a virtual club fair, or through another sproul-alternative etc.'
+  hint: "For example: through social media, through a friend, through classes, through a virtual club fair, or through another sproul-alternative etc."
   question_category: more_questions
   question_type: short_text
 

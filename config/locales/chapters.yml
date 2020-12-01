@@ -70,17 +70,16 @@ en:
         q1:
           question: What kind of applications does Blueprint typically build?
           answer: >
-            Blueprint typically builds Rails applications with Postgres databases and React on the front-end. 
-            Mobile applications are built natively for the desired platform. 
-            The use of standardized frameworks helps developers switch between projects seamlessly and makes it easier for nonprofits to find developers to maintain the applications. 
+            Blueprint typically builds web and mobile applications, using the variety of combinations of tech stacks. Usually, we use React/React Native for front-end and the options 
+            for backend varies per project needs. That's said, after you onboard with CalBlueprint our guides will give you more contextualized information about the factors to consider when choosing certain frameworks, examples of previous work, etc.  
         q2:
           question: Why are projects taken on for one year?
           answer: >
             The year-long development cycle allows for a project to be completed, tested and deployed. Initially, Blueprint developed projects in a semester and found there was not enough time devoted to user testing and deployment. 
-            Now, the first semester of the development cycle is devoted to developing the MVP application. The second semester is then used for user testing, refinement, and deployment of the project. 
+            Now, the first semester of the development cycle is devoted to user research, desing, and developing the MVP application. The second semester is then used for user testing, refinement, and deployment of the project (handoff process to NPOs). 
         q3:
           question: How much time do members typically devote to Blueprint weekly?
           answer: >
-            Members typically devote 9-12 hours a week to Blueprint including general meetings and project team meetings. 
-            If the member is a project leader or in leadership they can expect to devote up to 15-20 hours a week to Blueprint.
+            Members typically devote 6-12 hours a week to Blueprint including general meetings and project team meetings. 
+            If the member is a project leader or in leadership they can expect to devote up to 10-20 hours a week to Blueprint.
           

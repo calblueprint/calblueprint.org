@@ -9,8 +9,13 @@
   p.static-page-desc
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
+<<<<<<< HEAD
+    |  The Interest Form and Application are due on
+    strong.apply-page-due< July 11th, 2020, 11:59pm,
+=======
     |  The Interest Form is due on
     strong.apply-page-due< July 14th, 2020, 11:59pm,
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
     | if you have any questions.
@@ -28,11 +33,18 @@
     - @nonprofit_interest_form.phone = @nonprofit_interest_form.phone && @nonprofit_interest_form.phone.phony_formatted
     = f.input :phone, as: :tel
     = f.input :role
+<<<<<<< HEAD
+    = f.input :website
+    .input-group.string.required.nonprofit_interest_form_website
+      label.string.required.control-label for="nonprofit_interest_form_website" * Address of Office (closest to Berkeley, CA)
+      input.string.required#address type="text" autocomplete="off" name="nonprofit_interest_form[office]"
+=======
     = f.input :website, as: :url
     = f.input :office
     / .input-group.string.required.nonprofit_interest_form_office
     /   label.string.required.control-label for="nonprofit_interest_form_office" * Address of Office (closest to Berkeley, CA)
     /   input.string.required#address type="text" autocomplete="off" name="nonprofit_interest_form[office]"
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
     #map
     #infowindow-content
       <img src="" width="16" height="16" id="place-icon">
@@ -45,10 +57,16 @@
     = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
     = f.input :org_description
     = f.input :referrer
+<<<<<<< HEAD
+    = f.input :submitted_calendly, label: 'Please sign up for a phone call with us using <a  target="_blank" href="https://calendly.com/calblueprint/npo-learn-more">this link</a>'.html_safe
+
+
+=======
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
     = f.input :submitted_calendly, label: 'Optional: Sign up for a call with us <a id="calendly-link" href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/npo-learn-more\'});return false;">through this Calendly link</a>.'.html_safe
     <br/>
+>>>>>>> 5838d2f5f88835fbbeeafa2b72463051e44b694b
     .form-btn-container.marginBot-md
       = f.button :submit, 'Submit', class: "bp-btn"
 

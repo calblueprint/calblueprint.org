@@ -1,0 +1,85 @@
+en:
+  pages: 
+    chapters: 
+      headline: Start a Blueprint Chapter
+      subtitle:
+        Blueprint was founded at UC Berkeley in Spring 2013. 
+        Since then we started scaling our impact and further mission by establishing chapters in different colleges around the world. 
+      chapters:
+        - name: University of Waterloo  
+          description: UWaterloo is our first Blueprint chapter, founded in 2015 🍁
+          url: "https://uwblueprint.org/"
+          image: "chapters/waterloo.png"
+        - name: UCLA
+          description: Blueprint at the University of California, Los Angeles was established in 2019 🚀
+          url: "https://lablueprint.org/"
+          image: "chapters/ucla.png"
+        - name: University of Toronto 
+          description: We were very excited to establish the second Canadian chapter in 2020 🌿   
+          url: "http://uoftblueprint.org/"
+          image: "chapters/toronto.png"
+        - name: UC Irvine
+          description: Our second Southern California Blueprint chapter was established in 2020 ♥️
+          url: "https://uciblueprint.org/#/"
+          image: "chapters/uci.png"
+        - name: Carleton University 
+          description: Our third Blueprint chapter in Canada 🍂
+          url: "https://cublueprint.org/"
+          image: "chapters/carleton.png"
+        - name: University of Alabama
+          description: We are super excited to see a BP chapter all the way across the country! ✨
+          url: "https://website.sdwight.workers.dev/"
+          image: "chapters/alabama.png"
+        - name: University of Colorado Boulder
+          description: We are currently in the process of establishing in CU Boulder 💕
+          url: ""
+          image: "chapters/colorado.png"
+
+      why-blueprint:
+        title: Why Blueprint? 
+        description: >
+
+        bridge: Bridge the gap between tech and non-profits. 
+        bridge_description: >
+          It’s true that non-profits lack technical resources to do their meaningful work. It’s also true that tech can’t solve global challenges. 
+          Therefore, we are creating collaborative spaces both for NPOs and aspiring technologists to make positive changes together! 
+        mark: Make a mark in your local community. 
+        mark_description: > 
+          Whether your university has a lot of clubs or not, you can be the one to bring accessible pathways for your community into technology that is inclusive and further 
+          the mission for social impact at the same time! 
+        learn: Learn and grow. 
+        learn_description: > 
+          You and your peers can develop skills in software development, digital product design, event management, and so much more. 
+          And all of this for a good cause! 
+      chapter-timeline:
+        submission: >
+          Fill out the form at the bottom of this page and someone on our team will reach out to you to get the process started!
+          If you have any questions or concerns about anything in this timeline, please email
+          <a href="mailto:team@calblueprint.org">team@calblueprint.org</a>.
+        find_team: >
+          Reach out to friends and peers to form your executive team to have a starting team in building your chapter. 
+        school_policies: >
+          Ensure that you align your chapter formation with existing student organization policies.
+        onboard: >
+          Read over the provided Outreach & Awareness, Project Leader, Designer, and Developer guides to understand the structure and function of Blueprint. Don’t hesitate to reach out if you have any questions or need any advice! 
+        recruit_members: >
+          Create marketing material to spread the word in your community and find people to join your project teams. 
+        find_npos: >
+          Reach out to NPOs in your community and tell them about what your Blueprint chapter can offer. Learn about their mission, background, projects and technological needs to decide if they would be a good fit as an NPO Partner.
+      faq:
+        q1:
+          question: What kind of applications does Blueprint typically build?
+          answer: >
+            Blueprint typically builds web and mobile applications, using the variety of combinations of tech stacks. Usually, we use React/React Native for front-end and the options 
+            for backend varies per project needs. That's said, after you onboard with CalBlueprint our guides will give you more contextualized information about the factors to consider when choosing certain frameworks, examples of previous work, etc.  
+        q2:
+          question: Why are projects taken on for one year?
+          answer: >
+            The year-long development cycle allows for a project to be completed, tested and deployed. Initially, Blueprint developed projects in a semester and found there was not enough time devoted to user testing and deployment. 
+            Now, the first semester of the development cycle is devoted to user research, design, and developing the MVP application. The second semester is then used for user testing, refinement, and deployment of the project (handoff process to NPOs). 
+        q3:
+          question: How much time do members typically devote to Blueprint weekly?
+          answer: >
+            Members typically devote 6-12 hours a week to Blueprint including general meetings and project team meetings. 
+            If the member is a project leader or in leadership they can expect to devote up to 10-20 hours a week to Blueprint.
+          

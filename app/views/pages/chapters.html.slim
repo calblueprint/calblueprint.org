@@ -10,20 +10,20 @@ section.static-page-hero.chapter-overview-hero
     .static-page-hero-btn-container.marginTop-xl
       button.bp-btn.btn-white.btn-lg.read-more Submit Interest Form
 
-  div.page-nav
-      .container
-        ul
-          li.page-nav-link section-name="currentchapters"
-            | Current Chapters
-          li.page-nav-link section-name="whyblueprint"
-            | Why Blueprint
-          li.page-nav-link section-name="establishmentprocess"
-            | Establishment Process
-          li.page-nav-link section-name="faqs"
-            | FAQs
+div.page-nav
+    .container
+      ul
+        li.page-nav-link section-name="current-chapters"
+          | Current Chapters
+        li.page-nav-link section-name="why-blueprint"
+          | Why Blueprint
+        li.page-nav-link section-name="establishment-process"
+          | Establishment Process
+        li.page-nav-link section-name="faqs"
+          | FAQs
 
 /Current Chapters
-section.current-chapters#currentchapters
+section.current-chapters#current-chapters
   h2.static-page-header.marginBot-lg Current Chapters
   .chapter-card-container
     - t(".chapters").each do |chapter|
@@ -34,7 +34,7 @@ section.current-chapters#currentchapters
           p.chapter-card--summary = chapter[:description]
 
 / Decision Criteria
-section.why-blueprint-section#whyblueprint
+section.why-blueprint-section#why-blueprint
   .container
     h2.static-page-header.marginBot-lg = t ".why-blueprint.title"
     p.static-page-desc.marginBot-xxl = t ".why-blueprint.description"
@@ -54,7 +54,7 @@ section.why-blueprint-section#whyblueprint
         p = t ".why-blueprint.learn_description"
 
 /Establishment Process 
-section.establishment-process-section#establishmentprocess
+section.establishment-process-section#establishemnt-process
   .container
     h2.static-page-header.marginBot-xxl Establisment Process
     .chapter-timeline 

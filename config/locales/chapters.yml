@@ -27,7 +27,7 @@ en:
           url: "https://cublueprint.org/"
           image: "chapters/carleton.png"
         - name: University of Alabama
-          description: We are super excited to see a BP chapter all the way across the country! ✨
+          description: We were very proud to bring yet another BP chapter in a non-tech spot ✨
           url: "https://website.sdwight.workers.dev/"
           image: "chapters/alabama.png"
         - name: University of Colorado Boulder
@@ -45,8 +45,8 @@ en:
           Therefore, we are creating collaborative spaces both for NPOs and aspiring technologists to make positive changes together! 
         mark: Make a mark in your local community. 
         mark_description: > 
-          Whether your university has a lot of clubs or not, you can be the one to bring accessible pathways for your community into technology that is inclusive and further 
-          the mission for social impact at the same time! 
+          Whether your university has a lot of clubs or not, you can be the one to bring accessible pathways to get into tech for a range of diverse voices. 
+          We want to further our DEI efforts with you! 
         learn: Learn and grow. 
         learn_description: > 
           You and your peers can develop skills in software development, digital product design, event management, and so much more. 

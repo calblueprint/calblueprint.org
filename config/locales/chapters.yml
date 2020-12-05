@@ -46,7 +46,7 @@ en:
         mark: Make a mark in your local community. 
         mark_description: > 
           Whether your university has a lot of clubs or not, you can be the one to bring accessible pathways for your community into technology that is inclusive and further 
-          We want to further our DEI efforts with you! 	          the mission for social impact at the same time! 
+          the mission for social impact at the same time!
         learn: Learn and grow. 
         learn_description: > 
           You and your peers can develop skills in software development, digital product design, event management, and so much more. 
@@ -70,8 +70,10 @@ en:
         q1:
           question: What kind of applications does Blueprint typically build?
           answer: >
-            Blueprint typically builds web and mobile applications, using the variety of combinations of tech stacks. Usually, we use React/React Native for front-end and the options 
-            for backend varies per project needs. That's said, after you onboard with CalBlueprint our guides will give you more contextualized information about the factors to consider when choosing certain frameworks, examples of previous work, etc.  
+            We develop web applications and mobile applications. 
+            Blueprint typically built Rails applications with Postgres databases and React on the front-end, however, over time we have been changing tech stack based on NPO needs and Team Leads decisions. 
+            Make sure to read  Technology Part in Project Leader Handbook and Developer Guide Tech that we send after onboarding to learn more!  Mobile applications are built natively for the desired platform. 
+            The use of standardized frameworks helps developers switch between projects seamlessly and makes it easier for nonprofits to find developers to maintain the applications.
         q2:
           question: Why are projects taken on for one year?
           answer: >
@@ -80,6 +82,20 @@ en:
         q3:
           question: How much time do members typically devote to Blueprint weekly?
           answer: >
-            Members typically devote 6-12 hours a week to Blueprint including general meetings and project team meetings. 
-            If the member is a project leader or in leadership they can expect to devote up to 10-20 hours a week to Blueprint.
+            Members typically devote 9-12 hours a week to Cal Blueprint including general meetings and project team meetings. If the member is a project leader or in leadership they can expect to devote up to 15-20 hours a week to Cal Blueprint. 
+            But, again it's up to each Chapter Leadership team to decide! 
+        q4: 
+          question: I am a senior at my school, but really want to start a chapter. How can I help / being involved?  
+          answer: > 
+            You can be an alumni and still establish the chapter. Just make sure that you found a team, who are still in the school! 
+        q5: 
+          question: How long does it take from establishing a chapter to the start of projects development?   
+          answer: > 
+            Usually it takes one semester to kick off the process, but it's up to you! It also depends on each university academic system and policies. 
+            But we are here to help and resolve every roadblock you may encounter! 
+        q6: 
+          question: Are 5 projects required every year?   
+          answer: > 
+            No! Usually early stage chapters start with 2-3 projects to see how it's like:)  
+
           

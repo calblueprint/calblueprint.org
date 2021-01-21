@@ -7,15 +7,21 @@ en:
       contact: if you have any questions
       available_for_gm: Will you be able to attend Blueprint General Meetings?
       available_for_gm_hint: Blueprint GM's are mandatory and are held on Mondays at 8 PM. Please check this box to acknowledge that you are available at this time.
+      developer_info: >
+        Learn what it means to be part of a Project Team 👉
+        <a href="https://tinyurl.com/bp-developer">https://tinyurl.com/bp-developer</a>
+      external_info: >
+        Learn what it means to be part of External 👉
+        <a href="https://tinyurl.com/bp-external">https://tinyurl.com/bp-external</a>
     create:
       success: You have successfully submitted an application. You will receive an email shortly.
       resubmit: You have already submitted an application for this semester.
     email:
-      subject: 'Submission of application was successful!'
+      subject: "Submission of application was successful!"
       message: |
         Hello %{student}!
 
-        We have received your application. Thank you for your time, and we will get back to you by Sunday, September 6th.
+        We have received your application. Thank you for your time, and we will get back to you by Sunday, 7th.
 
         Best,
         Blueprint Team

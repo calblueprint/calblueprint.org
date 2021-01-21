@@ -31,6 +31,9 @@ en:
     designer: &designer
       role: "Designer"
 
+    external_team: &external_team
+      role: "External Director"
+
     alumni_relations: &alumni_relations
       role: "Alumni Relations Director"
 
@@ -86,6 +89,7 @@ en:
     - first_name: "Grace" # Big G
       last_name: "Ng"
       email: "gracexng@berkeley.edu"
+      linkedin: "graceng1224 "
       <<: *internal
 
     - first_name: "Gibson"
@@ -103,7 +107,7 @@ en:
     - first_name: "Franco"
       last_name: "Monterrosa"
       email: "francotorium@gmail.com"
-      linkedin: "francogments"
+      linkedin: "lvlcfm"
       website: "lvlcfm.com"
       <<: *tech
 
@@ -141,25 +145,20 @@ en:
 
     # External Team
 
-    - first_name: "Lucy"
-      last_name: "Song"
-      email: "lucysong@berkeley.edu"
-      <<: *community
-
     - first_name: "Noah"
       last_name: "Hernandez"
       email: "noahh_@berkeley.edu"
-      <<: *operations
+      <<: *external_team
 
     - first_name: "Joyce"
       last_name: "Guo"
-      email: "noahh_@berkeley.edu"
-      <<: *community
+      email: "yj.guo@berkeley.edu"
+      <<: *external_team
 
     - first_name: "Ivee"
       last_name: "Zhou"
       email: "iveezhou@berkeley.edu"
-      <<: *content
+      <<: *external_team
 
     # Developers
 
@@ -304,13 +303,13 @@ en:
 
     # Mentors
 
-    # Other positions:
-    - first_name: "Frederick" #leader
+    - first_name: "Frederick" #leader mr f
       last_name: "Kim"
       email: "kwk@berkeley.edu"
       linkedin: "kwk"
       website: "kwfk.dev"
-      <<: *leader
+      <<: *mentor
+    # Other positions:
 
   alumni:
     # Inactive
@@ -361,6 +360,11 @@ en:
       last_name: "Lien"
       email: "kennethlien@berkeley.edu"
       <<: *developer
+
+    - first_name: "Lucy"
+      last_name: "Song"
+      email: "lucysong@berkeley.edu"
+      <<: *external_team
 
     - first_name: "Tanthai"
       last_name: "Pongstien"

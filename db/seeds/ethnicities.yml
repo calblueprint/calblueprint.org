@@ -5,11 +5,12 @@ african_american_or_black:
   - Black Caribbean
   - Other African American / Black
 
-# Hispanic / Latino(a)
-hispanic_or_latino:
-  - Mexican / Mexican American / Chicano
+# Hispanic / Latinx
+hispanic_or_latinx:
+  - Mexican / Mexican American / Chicanx
   - Cuban / Cuban American
-  - Latin American / Latino
+  - Latin American / Latinx
+  - Central American
   - Puerto Rican
   - Other Hispanic, Latin American or of Spanish Origin
 
@@ -79,7 +80,7 @@ southwest_asian_and_north_african:
   - Syrian
   - Tunisian
   - Turkish
-  - Yemeni 
+  - Yemeni
   - Other North African
   - Other Southwest Asian
 

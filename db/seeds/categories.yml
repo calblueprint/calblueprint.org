@@ -18,8 +18,8 @@ learning:
   weight: 1
   questions:
     - year
-    - always_innovate
-    # - application_type
+    - sp21_always_innovate
+    - application_type
 
 culture1:
   name: "Culture (Mission First)"
@@ -28,7 +28,8 @@ culture1:
   weight: 1
   questions:
     - year
-    - mission_first
+    - sp21_mission_first
+    - application_type
 
 culture2:
   name: "Culture (Be Humble)"
@@ -37,4 +38,5 @@ culture2:
   weight: 1
   questions:
     - year
-    - be_humble
+    - sp21_perpetual_growth
+    - application_type

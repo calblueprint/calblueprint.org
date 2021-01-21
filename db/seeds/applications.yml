@@ -1,6 +1,6 @@
 sp19:
-  season: 'spring'
-  year: '2019'
+  season: "spring"
+  year: "2019"
   questions:
     - name
     - email
@@ -24,8 +24,8 @@ sp19:
     - add_to_newsletter
 
 fa19:
-  season: 'fall'
-  year: '2019'
+  season: "fall"
+  year: "2019"
   questions:
     - name
     - email
@@ -53,8 +53,8 @@ fa19:
     - add_to_newsletter
 
 sp20:
-  season: 'spring'
-  year: '2020'
+  season: "spring"
+  year: "2020"
   questions:
     - name
     - email
@@ -83,8 +83,8 @@ sp20:
     - add_to_newsletter
 
 fa20:
-  season: 'fall'
-  year: '2020'
+  season: "fall"
+  year: "2020"
   questions:
     - name
     - pronouns
@@ -111,3 +111,32 @@ fa20:
     - why_no_meet_the_club
 
     - fa20_heard_from
+
+sp21:
+  season: "spring"
+  year: "2021"
+  questions:
+    - name
+    - pronouns
+    - sp21_email
+    - sp21_phone
+    - year
+    - sp21_major
+    - applied_before
+    - sp21_semesters_applied_before
+    - sp21_application_type
+    - preferred_role
+
+    - time_commitment_acknowledgement
+    - sp21_available_for_bp_games
+    - sp21_availability_for_meet_the_club
+
+    - sp21_mission_first
+    - sp21_perpetual_growth
+    - sp21_always_innovate
+
+    - sp21_background_question
+    - sp21_project_link
+
+    - sp21_heard_from
+    - survey_notice

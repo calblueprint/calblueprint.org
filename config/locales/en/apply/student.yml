@@ -11,34 +11,35 @@ en:
         As a member, you will join a family of fellow students working to use our education
         and skills to make the world a better place.
       applications_closed: >
-        Our application is now closed for the Fall 2020 semester. We will be recruiting again next semester! Sign up for our mailing list to stay up to date.
-
+        Our application is now closed for the Spring 2021 semester. We will be recruiting again next semester! Sign up for our mailing list to stay up to date.
+      developer_description: Learn what it means to be a developer <strong>👉 <a href="https://wwww.tinyurl.com/bp-developer">tinyurl.com/bp-developer</a> 👈</strong>
+      external_description: Learn what it means to be on external <strong>👉 <a href="https://wwww.tinyurl.com/bp-external">tinyurl.com/bp-external</a> 👈</strong>
       application_timeline:
         infosession:
           title: Infosession Series
           description: >
-            Instead of having one large infosession this (virtual) fall, <strong>Blueprint is hosting an infosession series! Every day from 8/30 to 9/4, we'll have four mini sessions, each limited to 10 applicants.</strong> These small sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
+            Instead of having one large infosession this (virtual) spring, <strong>Blueprint is hosting an infosession series! Every day from 1/24 to 1/29, we'll have four mini sessions, each limited to 10 applicants.</strong> These small sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
             <br/><br/>
-            Visit <strong>👉 <a href="https://bit.ly/bp-infosessions-about">https://bit.ly/bp-infosessions-about</a> 👈</strong> to sign up and learn more!
+            Visit <strong>👉 <a href="https://wwww.tinyurl.com/blueprint-infosession">tinyurl.com/blueprint-infosession</a> 👈</strong> to sign up and learn more!
           detail: >
             Visit 👉 bit.ly/bp-infosessions-about 👈 to sign up and learn more!
           notice: Infosession Facebook event will be posted soon!
-        application_date: Sept 4, 11:59 PM PST
+        application_date: Jan 29th, 11:59 PM PST
         application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blueprint's mission. Decisions will be emailed after this round on Sept 6 by 10 PM.
-          <strong>The application is due on September 4th at 11:59 PM PST.</strong>
+          Blueprint's mission. Decisions will be emailed after this round on Jan 31 by 10 PM.
+          <strong>The application is due on January 29th at 11:59 PM PST.</strong>
         designer_application: >
           The application includes 3 short response questions to help us understand your connection to
           Blueprint's mission. Requests for design interviews will be sent out on Sept 6 by 10 PM.
-          <strong>The application is due on September 4 at 11:59 PM PST.</strong>
+          <strong>The application is due on January 29th at 11:59 PM PST.</strong>
         designer_interviews_date: Sept 7 - 8
         designer_interviews: >
           We will ask you to brainstorm with us and sketch out low-fidelity solutions in response to a
           design challenge. After the interview, you will have a chance to refine your solutions and
           submit a final, high-fidelity version on Friday, September 11. Invited candidates will receive
           an interview sign-up link via email.
-        external_interviews_date: Sept 7 - 11
+        external_interviews_date: Feb 4 - 5
         external_interviews: >
           We will be conducting interviews for the external team throughout the entire week. Invited candidates will receive
           an interview sign-up link via email.
@@ -50,17 +51,17 @@ en:
         application_notice: >
           Student applications will be open by Sunday August 30. Follow our
           <a href="https://www.facebook.com/calblueprint" target="_blank">Facebook page</a> to stay updated!
-        meet_the_club_date: Sept 9 - 10
+        meet_the_club_date: Feb 3 - 4
         meet_the_club: >
           Meet the Club is an event for you to get to know
           <a href="/about#team">our membership</a> in a casual setting! This event
           is by invitation only.
-        tech_round_date: Sept 7 - 11
+        tech_round_date: Feb 1 - 5
         tech_round: >
           A small exercise to give you a chance to showcase your technical resourcefulness and learning speed.
           It will be kicked off with an introductory workshop followed by a small project.
           Time and location will be emailed to invited candidates.
-        bp_games_date: Sept 10 - 11
+        bp_games_date: Feb 5 - 6
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
           critically. This round is by invitation only. Time and location will be emailed to invited candidates.
@@ -74,45 +75,55 @@ en:
       decision_criteria:
         title: Decision Criteria
         description: >
-          If we could, we would accept every applicant but unfortunately we cannot manage the volume
-          of people and administrative overhead while still fulfilling our mission to the best of
-          our abilities. The following criteria are what we use to evaluate applicants.
+          Each semester, we are unfortunately only able to move forward a select number of applicants. This is both so that every member of our project teams may develop close relationships with our nonprofit and community partners and so that we are internally able to provide a meaningful and streamlined learning and growth experience to each member. Throughout the recruitment process, we look for the following criteria:
         passion: Passion
-        passion_description: Do you demonstrate a genuine passion for social good?
+        passion_description: Are you excited to dedicate time, energy, and compassion towards understanding and building with communities?
         growth: Growth
-        growth_description: Do you push yourself to grow in any setting? Do you seek out new ways to grow?
-        adaptability: Resourceful
-        adaptability_description: Do you adapt and explore in order to overcome difficulties?
+        growth_description: Do you actively seek out ways to grow? Do you take action to work towards that growth?
+        adaptability: Resourcefulness
+        adaptability_description: Are you self-motivated and driven? Do you adapt to new environments and challenges?
         attitude: Attitude
-        attitude_description: Do you demonstrate positive, hard-working attitude?
+        attitude_description: Do you approach problems and challenges with an open mind? Are you able to work through unfamiliar situations?
         teamwork: Teamwork
-        teamwork_description: Do you display the ability to work well in a team?
+        teamwork_description: Do you enjoy collaborating and learning with others? Do you value others' perspectives and experiences?
         culture: Culture
-        culture_description: Do you value empowering non-profits to achieve their missions through tech?
+        culture_description: Are you looking forward to developing meaningful relationships with our members and partners beyond the work environment?
 
       faq:
         title: Frequently Asked Questions
         q1:
-          question: What is Blueprint's project structure?
+          question: What is Blueprint's structure?
           answer: >
-            Blueprint's project structure consists of 4-5 project teams, each with a project leader, a designer, 
-            and 4 developers on the team. Each project team is in charge of creating technology resources
-            for a specific non-profit they work with.
+            Blueprint's project structure consists of 5 project teams, each with a Project Leader, a designer,
+            and 4-5 developers. Each project team is dedicated to one of our nonprofit and community partners
+            and works closely with our points of contact to create equitable solutions through design and development.<br>
+            Blueprint's External team consists of 4-5 directors and a team lead. External works to inspire students outside
+            of Cal Blueprint about creating change in communities through tech an design through chapter expansion,
+            public events, new programs, and more. An executive team of 6 students supports the club and all members as a whole.
         q2:
-          question: How are client team interactions conducted?
+          question: What are nonprofit and community partner relationships like?
           answer: >
-            The client and the project leader communicate on a weekly basis to ensure the
-            project’s progress. Meetings occur throughout the project engagement, beginning with
-            at least one mandatory project scoping meeting with the project leader at the onset.
-            A formal midpoint presentation will be given in Week 5 of the engagement, and the final
-            recommendation will be delivered at a final presentation in Week 10.
+            Our partners each have dedicated internal point(s) of contact who meet with our project teams on a regular
+            (weekly or bi-weekly) basis. Because interactions vary based on partner capacity, timezones, internet access,
+            and more, it's important to note that each partner relationship looks a little different. Broadly speaking,
+            these meetings help ensure that our partners are on the same page as our project teams, and that the solutions
+            we design and develop will actually be able to help the partner and communities in the best possible ways.
+            At a more detailed level, we hold project scoping meeting(s) with each partner and their Project Leader at
+            the start of the Fall semester to create a clear path for Blueprint is able to deliver. At the end of each
+            semester, we hold a final meeting to present what was accomplished during the semester
+            (and, in the case of fall, what will be accomplished in the spring).
         q3:
           question: What resources does Blueprint have to ensure success?
           answer: >
-            Our club recruits some of the most hard-working, passionate, and brightest students
-            at UC Berkeley, just like you. Through effective leadership, frequent check-ins, and an
-            organized project timeline set with our clients, we hope that the combination of talent,
-            dedication, and care will result in projects that benefit the non-profits we work with.
+            Every member of Blueprint has several layers of formal support, including their project team members, their
+            Project Leader, the executive team. To keep a pulse check on how members are feeling, leadership actively
+            seeks out constructive feedback and holds periodic one-on-ones with members. We also guide all new developers
+            and designers through our technical onboarding processes and make sure there is always space to ask for help,
+            no matter how large or small the task. Project Leaders and our External lead also ensure project success
+            through organized timelines that make tasks and expectations as clear as possible throughout the semester.<br>
+            On top of everything, Blueprint is full of people who naturally want to help each other - on any given day or night,
+            it's easy to find members squashing bugs together, holding informal critique sessions, DMing teammates for insight
+            into other parts of Blueprint, or lending a listening ear.
 
       get_involved:
         title: Get Involved

@@ -78,87 +78,68 @@ en:
 
   members:
     # E-Team
-
-    - first_name: "Alison"
-      last_name: "Dowski"
-      email: "adowski@berkeley.edu"
-      linkedin: "alison-dowski"
-      <<: *president
-
-    - first_name: "Aivant"
-      last_name: "Goyal"
-      email: "aivantg@berkeley.edu"
-      linkedin: "aivantgoyal"
-      website: "www.aivant.me"
-      <<: *president
-
     - first_name: "Ace"
       last_name: "Chen"
       email: "12aschen@berkeley.edu"
+      <<: *president
+
+    - first_name: "Grace" # Big G
+      last_name: "Ng"
+      email: "gracexng@berkeley.edu"
       <<: *internal
 
-    - first_name: "Karina"
-      last_name: "Nguyen"
-      email: "karinanguyen@berkeley.edu"
-      linkedin: "karina-nguyen-248073143"
+    - first_name: "Gibson"
+      last_name: "Chu"
+      email: "gibsonchu@berkeley.edu"
       <<: *external
-
-    - first_name: "Annie"
-      last_name: "Wang"
-      email: "wangannie@berkeley.edu"
-      <<: *projects
-
-    - first_name: "Micah"
-      last_name: "Yong"
-      email: "micahtyong@berkeley.edu"
-      linkedin: "micah-yong"
-      website: "micahyong.me"
-      <<: *tech
-
-    - first_name: "Myles"
-      last_name: "Domingo"
-      email: "mylesdomingo@berkeley.edu"
-      <<: *design
-
-    # Project Leaders
 
     - first_name: "Erin"
       last_name: "Song"
       email: "erinsong@berkeley.edu"
       linkedin: "erinsong"
       website: "erinysong.github.io"
-      <<: *leader
+      <<: *projects
 
-    - first_name: "Frederick"
-      last_name: "Kim"
-      email: "kwk@berkeley.edu"
-      linkedin: "kwk"
-      website: "kwfk.dev"
-      <<: *leader
-
-    - first_name: "Jen"
-      last_name: "Hoang"
-      email: "jenhoang@berkeley.edu"
-      <<: *leader
+    - first_name: "Franco"
+      last_name: "Monterrosa"
+      email: "francotorium@gmail.com"
+      linkedin: "francogments"
+      website: "lvlcfm.com"
+      <<: *tech
 
     - first_name: "Joelene"
       last_name: "Latief"
       email: "joelenelatief@berkeley.edu"
+      <<: *design
+
+    # Project Leaders
+
+    - first_name: "Calvin"
+      last_name: "Chen"
+      email: "chencalvin99@berkeley.edu"
       <<: *leader
 
-    - first_name: "Nick"
-      last_name: "Wong"
-      email: "nickwong@berkeley.edu"
-      linkedin: "nickwongio"
-      website: "nickwong.io"
+    - first_name: "Julian"
+      last_name: "Kung"
+      email: "julianrkung@berkeley.edu"
+      <<: *leader
+
+    - first_name: "Phoebe"
+      last_name: "Li"
+      email: "liphoebe@berkeley.edu"
+      <<: *leader
+
+    - first_name: "Susan"
+      last_name: "Lin"
+      email: "susan.lin@berkeley.edu"
+      <<: *leader
+
+    - first_name: "Sydney"
+      last_name: "Bui"
+      email: "sydbui@berkeley.edu"
       <<: *leader
 
     # External Team
-
-    - first_name: "Grace"
-      last_name: "Ng"
-      email: "gracexng@berkeley.edu"
-      <<: *marketing
 
     - first_name: "Lucy"
       last_name: "Song"
@@ -182,26 +163,19 @@ en:
 
     # Developers
 
-    - first_name: "Alice" # leader
-      last_name: "Zhao"
-      email: "alicezhao@berkeley.edu"
-      linkedin: "aliceyezhao"
-      website: "github.com/aliceyezhao"
-      <<: *developer
-
-    - first_name: "Calvin"
-      last_name: "Chen"
-      email: "chencalvin99@berkeley.edu"
-      <<: *developer
+    - first_name: "Annie" # projects
+      last_name: "Wang"
+      email: "wangannie@berkeley.edu"
+      <<: *projects
 
     - first_name: "Christopher"
       last_name: "Grey"
       email: "christophergrey@berkeley.edu"
       <<: *developer
 
-    - first_name: "Cindy"
-      last_name: "Zhang"
-      email: "cindyzhang7@berkeley.edu"
+    - first_name: "Divi" # leader
+      last_name: "Schmidt"
+      email: "divi@berkeley.edu"
       <<: *developer
 
     - first_name: "Jinsu"
@@ -209,14 +183,10 @@ en:
       email: "jelhance@berkeley.edu"
       <<: *developer
 
-    - first_name: "Julian"
-      last_name: "Kung"
-      email: "julianrkung@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Kenneth"
-      last_name: "Lien"
-      email: "kennethlien@berkeley.edu"
+    - first_name: "Karina" # external
+      last_name: "Nguyen"
+      email: "karinanguyen@berkeley.edu"
+      linkedin: "karina-nguyen-248073143"
       <<: *developer
 
     - first_name: "Kevin" # tech
@@ -231,19 +201,23 @@ en:
       email: "kylehuuuaaa@berkeley.edu"
       <<: *developer
 
-    - first_name: "Maria"
-      last_name: "Terrenal"
-      email: "mdterrenal@berkeley.edu"
+    - first_name: "Micah" # tech
+      last_name: "Yong"
+      email: "micahtyong@berkeley.edu"
+      linkedin: "micah-yong"
+      website: "micahyong.me"
       <<: *developer
 
-    - first_name: "Susan"
-      last_name: "Lin"
-      email: "susan.lin@berkeley.edu"
+    - first_name: "Myles" # design
+      last_name: "Domingo"
+      email: "mylesdomingo@berkeley.edu"
       <<: *developer
 
-    - first_name: "Sydney"
-      last_name: "Bui"
-      email: "sydbui@berkeley.edu"
+    - first_name: "Nick" # leader
+      last_name: "Wong"
+      email: "nickwong@berkeley.edu"
+      linkedin: "nickwongio"
+      website: "nickwong.io"
       <<: *developer
 
     - first_name: "Sonja"
@@ -271,9 +245,11 @@ en:
       email: "estephan@berkeley.edu"
       <<: *developer
 
-    - first_name: "Phoebe"
-      last_name: "Li"
-      email: "liphoebe@berkeley.edu"
+    - first_name: "Ethan" # president
+      last_name: "Lee"
+      email: "ethan@calblueprint.org"
+      linkedin: "thatethanlee"
+      website: "ethanl.ee"
       <<: *developer
 
     - first_name: "Jared"
@@ -328,40 +304,45 @@ en:
 
     # Mentors
 
-    - first_name: "Divi"
-      last_name: "Schmidt"
-      email: "divi@berkeley.edu"
-      <<: *mentor
-
-    - first_name: "Ethan" # president
-      last_name: "Lee"
-      email: "ethan@calblueprint.org"
-      linkedin: "thatethanlee"
-      website: "ethanl.ee"
-      <<: *mentor
-
-    - first_name: "Franco"
-      last_name: "Monterrosa"
-      email: "francotorium@gmail.com"
-      linkedin: "francotorium"
-      website: "francotorium.com"
-      <<: *mentor
-
-
     # Other positions:
+    - first_name: "Frederick" #leader
+      last_name: "Kim"
+      email: "kwk@berkeley.edu"
+      linkedin: "kwk"
+      website: "kwfk.dev"
+      <<: *leader
 
   alumni:
     # Inactive
+    - first_name: "Alison" #president
+      last_name: "Dowski"
+      email: "adowski@berkeley.edu"
+      linkedin: "alison-dowski"
+      <<: *president
 
-    - first_name: "Tanthai"
-      last_name: "Pongstien"
-      email: "tanthaipongstien@gmail.com"
-      <<: *content
+    - first_name: "Alice" #leader
+      last_name: "Zhao"
+      email: "alicezhao@berkeley.edu"
+      linkedin: "aliceyezhao"
+      website: "github.com/aliceyezhao"
+      <<: *leader
+
+    - first_name: "Aivant" #president
+      last_name: "Goyal"
+      email: "aivantg@berkeley.edu"
+      linkedin: "aivantgoyal"
+      website: "www.aivant.me"
+      <<: *president
 
     - first_name: "Cassandra"
       last_name: "Melax"
       email: "cmelax@berkeley.edu"
       linkedin: "cassandra-m-085731158"
+      <<: *developer
+
+    - first_name: "Cindy"
+      last_name: "Zhang"
+      email: "cindyzhang7@berkeley.edu"
       <<: *developer
 
     - first_name: "Claire" # leader
@@ -370,6 +351,26 @@ en:
       linkedin: "clairelin135"
       website: "claireylin.com"
       <<: *leader
+
+    - first_name: "Jen" #leader
+      last_name: "Hoang"
+      email: "jenhoang@berkeley.edu"
+      <<: *leader
+
+    - first_name: "Kenneth"
+      last_name: "Lien"
+      email: "kennethlien@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Tanthai"
+      last_name: "Pongstien"
+      email: "tanthaipongstien@gmail.com"
+      <<: *content
+
+    - first_name: "Maria"
+      last_name: "Terrenal"
+      email: "mdterrenal@berkeley.edu"
+      <<: *developer
 
     # Actual alumni
 
@@ -425,11 +426,6 @@ en:
       linkedin: "emily-zhong"
       website: "emilyzhong.github.io"
       <<: *design
-
-    - first_name: "Gibson"
-      last_name: "Chu"
-      email: "gibsonchu@berkeley.edu"
-      <<: *outreach
 
     - first_name: "Iris"
       last_name: "Hou"

@@ -9,14 +9,16 @@ section.static-page-hero.student-apply-hero
       = t ".subtitle"
     / Application Buttons
     .static-page-hero-btn-container.marginTop-xl
-      - if @settings.dev_app_open && @settings.designer_app_open == 'open'
+      - if @settings.dev_app_open && @settings.designer_app_open && @settings.external_app_open
         = link_to "Start Application", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
-      - elsif @settings.dev_app_open
+      - elsif @settings.dev_app_open && @settings.external_app_open
+        = link_to "Start Application", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
+      - elsif @settings.dev_app_open && @settings.external_app_open
         = link_to "Apply as a Developer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - elsif @settings.designer_app_open == 'open'
         = link_to "Apply as a Designer", new_student_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
-      / - if @settings.external_app_open
-      /   = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
+      - elsif @settings.external_app_open
+        = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - if !@settings.dev_app_open && @settings.designer_app_open != 'open' && !@settings.external_app_open
         p.hero-desc = t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
@@ -24,16 +26,20 @@ section.static-page-hero.student-apply-hero
   div.page-nav
     .container
       ul
-        li.page-nav-link section-name="application-process"
-          | Application Process
+        li.page-nav-link section-name="developer-application-process"
+          | Developer Application Process
+        li.page-nav-link section-name="external-application-process"
+          | External Application Process
         li.page-nav-link section-name="decision-criteria"
           = t ".decision_criteria.title"
         li.page-nav-link section-name="faqs"
           | FAQs
 
-section.application-process-section#application-process
+section.application-process-section#developer-application-process
   .container.marginBot-lg
-    h2.static-page-header.marginBot-xxl Developer Application Process
+    h2.static-page-header.marginBot-sm Developer Application Process
+    p.static-page-desc.marginBot-lg
+      = raw t ".developer_description"
     .student-timeline
       / Infosession
       .timeline-row
@@ -113,7 +119,7 @@ section.application-process-section#application-process
           .text-col
             .timeline-row-title Designer Interviews
             .timeline-row-date = t ".application_timeline.designer_interviews_date"
-            .timeline-row-description = raw t ".application_timeline.designer_interviews" 
+            .timeline-row-description = raw t ".application_timeline.designer_interviews"
         / Meet the Club
         .timeline-row
           .num-col
@@ -130,8 +136,10 @@ section.application-process-section#application-process
             .timeline-row-title Design Challenge Due
             .timeline-row-date = t ".application_timeline.designer_challenge_date"
             .timeline-row-description = t ".application_timeline.designer_challenge"
-  .container
-    h2.static-page-header.marginBot-xxl External Application Process
+  .container.marginTop-xxl#external-application-process
+    h2.static-page-header.marginBot-sm External Application Process
+    p.static-page-desc.marginBot-lg
+      = raw t ".external_description"
     .student-timeline
       / Infosession
       .timeline-row
@@ -155,22 +163,22 @@ section.application-process-section#application-process
               - else
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
 
-      / Interview
+      / Meet the Club
       .timeline-row
         .num-col
           .timeline-num 03
         .text-col
-          .timeline-row-title External Interviews
-          .timeline-row-date = t ".application_timeline.external_interviews_date"
-          .timeline-row-description = raw t ".application_timeline.external_interviews" 
-      / Meet the Club
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+      / Interview
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
-          .timeline-row-title Meet the Club
-          .timeline-row-date = t ".application_timeline.meet_the_club_date"
-          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+          .timeline-row-title External Interviews
+          .timeline-row-date = t ".application_timeline.external_interviews_date"
+          .timeline-row-description = raw t ".application_timeline.external_interviews"
 
 / Decision Criteria
 section.application-decision-criteria-section#decision-criteria

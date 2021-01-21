@@ -95,6 +95,7 @@ en:
     - first_name: "Gibson"
       last_name: "Chu"
       email: "gibsonchu@berkeley.edu"
+      linkedin: "gibsontchu"
       <<: *external
 
     - first_name: "Erin"

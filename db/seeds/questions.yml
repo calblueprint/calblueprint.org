@@ -112,6 +112,7 @@ preferred_role:
   question_category: general
   question_type: multiple_choice_radio
   choices: Developer,External
+  required: false
 
 fa20_application_type:
   title: What positions are you applying to this semester?
@@ -139,7 +140,7 @@ sp21_available_for_bp_games:
   hint: Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
   question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Saturday - February 6th 10AM-12PM PST,Saturday - February 6th 12PM-2PM PST,Neither work for me
+  choices: Saturday - February 6th 10AM-12PM PST,Saturday - February 6th 12PM-2PM PST,Both,Neither work for me
   required: true
 
 available_for_bp_games:
@@ -163,7 +164,7 @@ sp21_availability_for_meet_the_club:
   hint: Meet the Club is where you get to casually chat with our members and learn more about our team culture! This is an invite-only event. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
   question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Wednesday - Feb 3 from 6-8 PM PST, Thursday - Feb 4 from 6-8PM PST, Neither work for me
+  choices: Wednesday - Feb 3 from 6-8 PM PST,Thursday - Feb 4 from 6-8PM PST,Both,Neither work for me
   required: true
 
 available_for_meet_the_club:

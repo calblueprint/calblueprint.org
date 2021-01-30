@@ -23,7 +23,7 @@ private
 
 def verify_from_app
   session[:applicant_type] = 0
-  return 
+  return
   if session[:applicant_type]
     return
   elsif request.referrer
@@ -51,6 +51,19 @@ def demographic_survey_params
     :something_else_gender,
     :other_gender,
     :decline_gender,
+    :additional_gender_notes,
+    :additional_sexual_identity_orientation_notes,
+    :asexual,
+    :bisexual,
+    :gay,
+    :lesbian,
+    :pansexual,
+    :queer,
+    :questioning_or_unsure,
+    :same_gender_loving,
+    :straight,
+    :other_sexual_identity_orientation,
+    :applicant_type,
     ethnicity_ids: []
   ).merge(
     semester: @settings.current_semester

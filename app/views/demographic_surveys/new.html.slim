@@ -29,6 +29,22 @@
         = f.input :something_else_gender, inline_label: "#{t ".labels.gender.something_else_gender"}", as: :boolean, label: false
         = f.input :other_gender, label: false
         = f.input :decline_gender, inline_label: "#{t ".labels.gender.decline_gender"}", as: :boolean, label: false
+        = f.input :additional_gender_notes, label: "#{t ".labels.gender.additional_gender_notes"}", as: :string
+
+      .form-group
+        h3 Sexual Identity Sexual Orientation
+        p = raw t ".sexual_identity_orientation_hint"
+        = f.input :asexual, inline_label: "#{t ".labels.sexual_identity_orientation.asexual"}", as: :boolean, label: false
+        = f.input :bisexual, inline_label: "#{t ".labels.sexual_identity_orientation.bisexual"}", as: :boolean, label: false
+        = f.input :gay, inline_label: "#{t ".labels.sexual_identity_orientation.gay"}", as: :boolean, label: false
+        = f.input :lesbian, inline_label: "#{t ".labels.sexual_identity_orientation.lesbian"}", as: :boolean, label: false
+        = f.input :pansexual, inline_label: "#{t ".labels.sexual_identity_orientation.pansexual"}", as: :boolean, label: false
+        = f.input :queer, inline_label: "#{t ".labels.sexual_identity_orientation.queer"}", as: :boolean, label: false
+        = f.input :questioning_or_unsure, inline_label: "#{t ".labels.sexual_identity_orientation.questioning_or_unsure"}", as: :boolean, label: false
+        = f.input :same_gender_loving, inline_label: "#{t ".labels.sexual_identity_orientation.same_gender_loving"}", as: :boolean, label: false
+        = f.input :straight, inline_label: "#{t ".labels.sexual_identity_orientation.straight"}", as: :boolean, label: false
+        = f.input :other_sexual_identity_orientation, inline_label: "#{t ".labels.sexual_identity_orientation.other_sexual_identity_orientation"}", as: :boolean, label: false
+        = f.input :additional_sexual_identity_orientation_notes, label: "#{t ".labels.sexual_identity_orientation.additional_sexual_identity_orientation_notes"}", as: :string
 
       .form-group
         h3 Race/Ethnicity
@@ -42,6 +58,10 @@
           h4 Decline to State
           = f.collection_check_boxes :ethnicity_ids, Ethnicity.where(group: 'decline_to_state'), :id, :name, item_label_class: 'checkbox marginBot-xxs'
 
+      .form-group
+        h3 Applied Roles
+        = f.input :applicant_type, as: :radio_buttons, collection:[['developer', 'Developer'], ['external', 'External']], label_method: :second, value_method: :first
+
       div
         = f.button :submit, 'Submit Survey', class: "bp-btn btn-lg marginRight-sm"
 
@@ -50,6 +70,12 @@ javascript:
     $('.demographic_survey_other_gender').show();
   } else {
     $('.demographic_survey_other_gender').hide();
+  }
+
+  if ($('#demographic_survey_other_sexual_identity_orientation').is(':checked')) {
+    $('.demographic_survey_other_sexual_identity_orientation_info').show();
+  } else {
+    $('.demographic_survey_other_sexual_identity_orientation_info').hide();
   }
 
   $('#demographic_survey_something_else_gender').on('click', function() {

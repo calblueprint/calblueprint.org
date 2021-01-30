@@ -93,9 +93,8 @@ class StudentApplication < ActiveRecord::Base
   def sorted_filtered_responses
     cur_semester = Settings.instance.current_semester
     r = self.responses.sort_by {|r| QuestionSemester.find_by(question: r.question, semester: cur_semester).question_order}
-    r.select {|r| !(['name', 'email', 'phone', 'applied_before'].include? r.question.tag) }
+    r.select {|r| !(['name', 'sp21_email', 'sp21_phone', 'applied_before','sp21_semesters_applied_before', 'survey_notice', 'sp21_available_for_bp_games','sp21_availability_for_meet_the_club', 'time_commitment_acknowledgement', 'sp21_application_type', 'preferred_role'].include? r.question.tag) }
   end
-
 
   scope :current, -> { where(semester: Settings.instance.current_semester) }
   scope :comparable, -> { where.not(id: Hold.current.pluck(:left_id, :right_id).try(:flatten)) }

@@ -2,14 +2,16 @@ en:
   demographic_surveys:
     new:
       banner: >
-        Our club values diversity, equity and inclusion. To learn more how we can increase diversity in our candidate pool, 
-        we invite you to voluntarily provide demographic information in a confidential survey at the end of this application. 
-        Providing this information is <strong class="emph-optional">optional</strong>. 
+        Our club values diversity, equity and inclusion. To learn more how we can increase diversity in our candidate pool,
+        we invite you to voluntarily provide demographic information in a confidential survey at the end of this application.
+        Providing this information is <strong class="emph-optional">optional</strong>.
         It will not be accessible or used in the evaluation process and has no effect on your opportunity to join our club.
       contact: if you have any questions
       race_hint: >
         Which of the following groups best describes your background. Check as many categories as may apply.
       gender_hint: >
+        Check one or more options that you identify with.
+      sexual_identity_orientation_hint: >
         Check one or more options that you identify with.
       labels:
         race:
@@ -29,8 +31,21 @@ en:
           intersex: Intersex
           two_spirit: Two-Spirit
           gender_nonconforming: Gender Non-Conforming
-          something_else_gender: Something Else
+          something_else_gender: Other (elaborate below)
           decline_gender: Decline to State
+          additional_gender_notes: Additional notes on gender
+        sexual_identity_orientation:
+          asexual: Asexual
+          bisexual: Bisexual
+          gay: Gay
+          lesbian: Lesbian
+          pansexual: Pansexual
+          queer: Queer
+          questioning_or_unsure: Questioning or Unsure
+          same_gender_loving: Same Gender Loving
+          straight: Straight
+          other_sexual_identity_orientation: Other (elaborate below)
+          additional_sexual_identity_orientation_notes: Additional notes on sexual identity/orientation
     create:
       success: Thank you for filling out our diversity survey!
     closed: Please submit an application first.

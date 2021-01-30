@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_042111) do
+ActiveRecord::Schema.define(version: 2021_01_30_020308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,18 @@ ActiveRecord::Schema.define(version: 2020_06_15_042111) do
     t.integer "applicant_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "additional_gender_notes"
+    t.string "additional_sexual_identity_orientation_notes"
+    t.boolean "asexual"
+    t.boolean "bisexual"
+    t.boolean "gay"
+    t.boolean "lesbian"
+    t.boolean "pansexual"
+    t.boolean "queer"
+    t.boolean "questioning_or_unsure"
+    t.boolean "same_gender_loving"
+    t.boolean "straight"
+    t.boolean "other_sexual_identity_orientation"
     t.index ["semester_id"], name: "index_demographic_surveys_on_semester_id"
   end
 

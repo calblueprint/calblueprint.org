@@ -74,6 +74,7 @@ applied_before:
   question_category: general
   question_type: multiple_choice_radio
   choices: Yes,No
+  required: yes
 
 sp21_semesters_applied_before:
   title: What semester(s) have you applied?

@@ -72,12 +72,6 @@ javascript:
     $('.demographic_survey_other_gender').hide();
   }
 
-  if ($('#demographic_survey_other_sexual_identity_orientation').is(':checked')) {
-    $('.demographic_survey_other_sexual_identity_orientation_info').show();
-  } else {
-    $('.demographic_survey_other_sexual_identity_orientation_info').hide();
-  }
-
   $('#demographic_survey_something_else_gender').on('click', function() {
     if($(this).is(':checked')) {
       $('.demographic_survey_other_gender').show();

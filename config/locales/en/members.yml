@@ -145,15 +145,24 @@ en:
       <<: *leader
 
     # External Team
+    - first_name: "Ally"
+      last_name: "Novales"
+      email: "allynovales@berkeley.edu"
+      <<: *external_team
+
+    - first_name: "Kelly"
+      last_name: "Hu"
+      email: "hukellyy@berkeley.edu"
+      <<: *external_team
+
+    - first_name: "Eileen"
+      last_name: "Liu"
+      email: "eileen-liu@berkeley.edu"
+      <<: *external_team
 
     - first_name: "Noah"
       last_name: "Hernandez"
       email: "noahh_@berkeley.edu"
-      <<: *external_team
-
-    - first_name: "Joyce"
-      last_name: "Guo"
-      email: "yj.guo@berkeley.edu"
       <<: *external_team
 
     - first_name: "Ivee"
@@ -162,11 +171,35 @@ en:
       <<: *external_team
 
     # Developers
+    - first_name: "Samantha" # projects
+      last_name: "Oh"
+      email: "sami_oh@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Sandra" # projects
+      last_name: "Zavala"
+      email: "22szavala@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Gabe" # projects
+      last_name: "Espinosa"
+      email: "gabriel.je@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Kenny" # projects
+      last_name: "Chi"
+      email: "kennychi@berkeley.edu"
+      <<: *developer
 
     - first_name: "Annie" # projects
       last_name: "Wang"
       email: "wangannie@berkeley.edu"
-      <<: *projects
+      <<: *developer
+
+    - first_name: "Joyce"
+      last_name: "Guo"
+      email: "yj.guo@berkeley.edu"
+      <<: *developer
 
     - first_name: "Christopher"
       last_name: "Grey"
@@ -310,15 +343,14 @@ en:
       linkedin: "kwk"
       website: "kwfk.dev"
       <<: *mentor
-    # Other positions:
-
-  alumni:
-    # Inactive
     - first_name: "Alison" #president
       last_name: "Dowski"
       email: "adowski@berkeley.edu"
       linkedin: "alison-dowski"
-      <<: *president
+      <<: *mentor
+    # Other positions:
+
+  alumni:
 
     - first_name: "Alice" #leader
       last_name: "Zhao"

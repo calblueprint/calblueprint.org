@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/mimemagicrb/mimemagic.git
+  revision: d5ebc0cd846dcc68142622c76ad71d021768b7c2
+  ref: d5ebc0cd846dcc68142622c76ad71d021768b7c2
+  specs:
+    mimemagic (0.3.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -269,7 +276,6 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
@@ -553,6 +559,7 @@ DEPENDENCIES
   launchy
   letsencrypt-rails-heroku
   letter_opener
+  mimemagic!
   neat (~> 1.7.2)
   newrelic_rpm
   omniauth-facebook (~> 2.0.1)

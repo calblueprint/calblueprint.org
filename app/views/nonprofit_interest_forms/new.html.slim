@@ -14,10 +14,13 @@
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
     | if you have any questions.
+
   br
   p.static-page-desc
-    | We understand that COVID-19 has affected nonprofits in many ways. If, for any reason, you think your organization may be better fit to partner with Blueprint in a future cycle instead, contact us and we will make sure to reach out again the next time our application cycle opens.
-
+    | We understand that COVID-19 has affected nonprofits in many ways. 
+    | If, for any reason, you think your organization may be better fit to partner with Blueprint in a future cycle instead, 
+    =<> link_to "contact us", new_contact_form_path 
+    | and we will make sure to reach out again the next time our application cycle opens.
 
   br
   p.static-page-desc.marginBot-md
@@ -48,7 +51,6 @@
       = f.input :office_lng, input_html: { id: "lng" }
 
     = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
-    | Examples of projects that will NOT be accepted: Redesigning a static website, refactoring old codebases to use newer technology, creating a mobile app “version” of already existing technology that is already effectively solving the problem.
     = f.input :org_description
     = f.input :referrer
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">

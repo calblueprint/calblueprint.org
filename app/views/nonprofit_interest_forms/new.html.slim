@@ -9,8 +9,8 @@
   p.static-page-desc
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
-    |  The Interest Form is due on
-    strong.apply-page-due< July 14th, 2020, 11:59pm,
+    |  The Interest Form will close on
+    strong.apply-page-due< July 17th, 2021, 11:59pm,
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
     | if you have any questions.
@@ -47,7 +47,7 @@
     = f.input :referrer
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    = f.input :submitted_calendly, label: 'Optional: Sign up for a call with us <a id="calendly-link" href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/npo-learn-more\'});return false;">through this Calendly link</a>.'.html_safe
+    = f.input :submitted_calendly, label: 'Optional: Sign up for a call with us <a id="calendly-link" href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/learn-more\'});return false;">through this Calendly link</a>.'.html_safe
     <br/>
     .form-btn-container.marginBot-md
       = f.button :submit, 'Submit', class: "bp-btn"

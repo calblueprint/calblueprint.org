@@ -40,7 +40,7 @@ gem 'state_machine', '~> 1.2.0'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'validate_url', '~> 1.0.2'
 # Frontend
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sass-rails', '~> 5.0.6'
 gem 'coffee-rails', '~> 4.2.2'
 gem 'jquery-rails', '~> 4.3.3'

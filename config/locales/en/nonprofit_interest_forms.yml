@@ -21,6 +21,8 @@ en:
       nonprofit_interest_form:
         agree_to_terms: |
           Please read this carefully to ensure that Blueprint's work is a good fit for your needs and timeline.
+        category: |
+          Examples of projects that will NOT be accepted: Redesigning a static website, refactoring old codebases to use newer technology, or creating a mobile app “version” of already existing technology that is already effectively solving the problem.
         submitted_calendly: |
           This call is <strong>recommended</strong> but not required to move on to the next step in our application process. <br><br>
 

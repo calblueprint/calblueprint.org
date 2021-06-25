@@ -20,6 +20,8 @@
     | Before beginning, please make sure to read and understand our
     span< = link_to "Terms of Work", nonprofit_applications_contract_path
     |. Good luck!
+  | We understand that COVID-19 has affected nonprofits in many ways. If, for any reason, you think your organization may be better fit to partner with Blueprint in a future cycle instead, reply to this email saying so, and I will make sure we reach out again the next time our application cycle opens.
+
 
   = render "form_errors", obj: @nonprofit_interest_form
   = simple_form_for @nonprofit_interest_form, method: 'post' do |f|
@@ -43,6 +45,7 @@
       = f.input :office_lng, input_html: { id: "lng" }
 
     = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
+    | Examples of projects that will NOT be accepted: Redesigning a static website, refactoring old codebases to use newer technology, creating a mobile app “version” of already existing technology that is already effectively solving the problem.
     = f.input :org_description
     = f.input :referrer
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">

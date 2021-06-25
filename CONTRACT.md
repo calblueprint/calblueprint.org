@@ -10,12 +10,10 @@ Our projects require a large time investment for our developers (see the next se
 
 ### Examples of Accepted Projects
 
-- A web portal for solar panel co-op owners to view their shares, take action on them, and see the environmental impact they are making with their ownership. [See People Power Solar Cooperative →](https://medium.com/blueprint/people-power-solar-cooperative-a-case-study-137e9958b9c)
-- A mobile app to help program staff communicate with barista trainees and provide digital resources like brew guides and job opportunities. [See 1951 Coffee Company →](https://apps.apple.com/us/app/1951-coffee-trainee/id1496686726)
-- A customer rewards program and store locator mobile app to increase access to affordable healthy food in DC's food deserts through DC Central Kitchen's Healthy Corners stores. [See DC Central Kitchen →](https://apps.apple.com/us/app/healthy-corners-rewards/id1503424404)
-- A platform for collecting leftover foods from cafeterias and redistributing it for the homeless. [See Replate →](http://replate.org/)
-- A web application to digitalize an entire curriculum for helping the underprivileged find careers. [See Roots of Success →](https://medium.com/blueprint/roots-of-success-1955f3a769e1)
-- A digital form system to consolidate building data in order to better regulate and reduce energy usage. [See Rocky Mountain Institute →](https://medium.com/blueprint/how-were-helping-tackle-climate-change-2115d11379a6)
+- A mobile app for navigating and troubleshooting a solar powered suitcase used by midwives in rural areas. [See We Care Solar →](https://docs.google.com/presentation/d/e/2PACX-1vSQ_DumV0ErS2wzg12aCCsSVFWQ8n27MDkkTRks44BnkO_136Y71g3D0CZsDT08YeDg9gEX__YUPwgd/pub?start=true&loop=false&delayms=3000&slide=id.gd5b9544fd1_0_89)
+- A web portal for Black, LGBTQ+/SGL, and other marginalized communities to find and connect with organizations nationwide. [See National Black Justice Coalition →](http://nbjc-staging.herokuapp.com/)
+- A customer rewards program and store locator mobile app ([see it on the App Store](https://tiny.cc/HealthyCornersApp)) to increase access to affordable healthy food in DC's food deserts through DC Central Kitchen's Healthy Corners stores. [See DC Central Kitchen →](https://calblueprint.org/projects/dckitchen)
+- And [more of our past projects](https://calblueprint.org/projects)
 
 **Examples of projects that will NOT be accepted:** Redesigning a static website, refactoring old codebases to use newer technology, creating a mobile app "version" of already existing technology that is already effectively solving the problem.
 

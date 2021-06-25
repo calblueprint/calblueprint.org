@@ -14,13 +14,16 @@
     |  but submissions will be reviewed on a rolling basis.
     =<> link_to "Contact us", new_contact_form_path
     | if you have any questions.
+  br
+  p.static-page-desc
+    | We understand that COVID-19 has affected nonprofits in many ways. If, for any reason, you think your organization may be better fit to partner with Blueprint in a future cycle instead, contact us and we will make sure to reach out again the next time our application cycle opens.
+
 
   br
   p.static-page-desc.marginBot-md
     | Before beginning, please make sure to read and understand our
     span< = link_to "Terms of Work", nonprofit_applications_contract_path
     |. Good luck!
-  | We understand that COVID-19 has affected nonprofits in many ways. If, for any reason, you think your organization may be better fit to partner with Blueprint in a future cycle instead, reply to this email saying so, and I will make sure we reach out again the next time our application cycle opens.
 
 
   = render "form_errors", obj: @nonprofit_interest_form

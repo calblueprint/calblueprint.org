@@ -10,7 +10,7 @@ Our projects require a large time investment for our developers (see the next se
 
 ### Examples of Accepted Projects
 
-- A mobile app for navigating and troubleshooting a solar powered suitcase used by midwives in rural areas. [See We Care Solar →](https://docs.google.com/presentation/d/e/2PACX-1vSQ_DumV0ErS2wzg12aCCsSVFWQ8n27MDkkTRks44BnkO_136Y71g3D0CZsDT08YeDg9gEX__YUPwgd/pub?start=true&loop=false&delayms=3000&slide=id.gd5b9544fd1_0_89)
+- A mobile app for navigating and troubleshooting a solar powered suitcase used by midwives in rural areas. <a href="https://docs.google.com/presentation/d/e/2PACX-1vSQ_DumV0ErS2wzg12aCCsSVFWQ8n27MDkkTRks44BnkO_136Y71g3D0CZsDT08YeDg9gEX__YUPwgd/pub?start=true&loop=false&delayms=3000&slide=id.gd5b9544fd1_0_89" target="_blank">See We Care Solar →</a>
 - A web portal for Black, LGBTQ+/SGL, and other marginalized communities to find and connect with organizations nationwide. [See National Black Justice Coalition →](http://nbjc-staging.herokuapp.com/)
 - A customer rewards program and store locator mobile app ([see it on the App Store](https://tiny.cc/HealthyCornersApp)) to increase access to affordable healthy food in DC's food deserts through DC Central Kitchen's Healthy Corners stores. [See DC Central Kitchen →](https://calblueprint.org/projects/dckitchen)
 - And [more of our past projects](https://calblueprint.org/projects)

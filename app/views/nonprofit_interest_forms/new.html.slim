@@ -9,17 +9,27 @@
   p.static-page-desc
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
-    |  The Interest Form is due on
-    strong.apply-page-due< July 14th, 2020, 11:59pm,
+    |  The Interest Form will close on
+    strong.apply-page-due< July 17th, 2021, 11:59pm,
     |  but submissions will be reviewed on a rolling basis.
-    =<> link_to "Contact us", new_contact_form_path
+    =<> link_to "Contact us", new_contact_form_path, target: "_blank"
     | if you have any questions.
+
+  br
+  p.static-page-desc
+    | We understand that COVID-19 has affected nonprofits in many ways. If, for any reason, 
+    | you think your organization may be better fit to partner with Blueprint in a future cycle instead, 
+    strong make a note in the box below 
+    | where you describe your organization. We will make sure to reach out 
+    | again the next time our application cycle opens.
+
 
   br
   p.static-page-desc.marginBot-md
     | Before beginning, please make sure to read and understand our
-    span< = link_to "Terms of Work", nonprofit_applications_contract_path
+    span< = link_to "Terms of Work", nonprofit_applications_contract_path, target: "_blank"
     |. Good luck!
+
 
   = render "form_errors", obj: @nonprofit_interest_form
   = simple_form_for @nonprofit_interest_form, method: 'post' do |f|
@@ -47,7 +57,7 @@
     = f.input :referrer
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    = f.input :submitted_calendly, label: 'Optional: Sign up for a call with us <a id="calendly-link" href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/npo-learn-more\'});return false;">through this Calendly link</a>.'.html_safe
+    = f.input :submitted_calendly, label: 'Optional: Sign up for a call with us <a id="calendly-link" href="" onclick="Calendly.initPopupWidget({url: \'https://calendly.com/calblueprint/learn-more\'});return false;">through this Calendly link</a>.'.html_safe
     <br/>
     .form-btn-container.marginBot-md
       = f.button :submit, 'Submit', class: "bp-btn"

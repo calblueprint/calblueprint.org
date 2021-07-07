@@ -10,10 +10,10 @@
     =< t(".subtitle")
   p.static-page-desc.marginBot-md
     | The application is due on
-    strong.apply-page-due< July 17th, 2020, 11:59pm,
+    strong.apply-page-due< July 21st, 2021, 11:59pm,
     |  but applications will be reviewed on a rolling basis.
-    |  We encourage you to submit your application within one to two weeks of your
-    |  informational phone call. 
+    |  If you opted to do the optional informational phone call, we encourage you to submit your
+    |  application within one to two weeks afterwards.
   p.static-page-desc
     | Make sure to review  
     =<> link_to "our Terms of Work", nonprofit_applications_contract_path
@@ -42,16 +42,12 @@
       | In the following section we'd like you to elaborate on some of the biggest problems 
       | your organization is having in achieving more impact.
 
+    = f.input :history
     = f.input :current_resources
     = f.input :key_features
-    = f.input :goals
-    = f.input :future_plans
-
-    p.static-page-desc
-      | Finally, we'd like to get to know more about your organization and how you're supporting 
-      | the communities that you serve.
-    
-    = f.input :inclusivity
+    = f.input :target_audience
+    = f.input :future_plans    
+    = f.input :legal
 
     .form-btn-container
       button#save_button.bp-btn.btn-dark data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}"

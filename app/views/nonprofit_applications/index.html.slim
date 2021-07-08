@@ -43,14 +43,14 @@
 
       - if @curr_submitted_nonprofit_applications.length != 0
         h2.npo-application-subheader style="text-transform: uppercase; color: gray; font-size: 12pt; font-weight: 700" Submitted
-        p.static-page-desc These are applications that you've submitted. You can always edit your application by clicking below. Feel free to submit applications for multiple projects. We will review each independently and get back to you shortly!
+        p.static-page-desc These are applications that you've submitted. You can create a new application with the same contents by clicking below. Feel free to submit applications for multiple projects. We will review each independently and get back to you shortly!
         div.marginBot-sm
           - @curr_submitted_nonprofit_applications.each do |na|
             div
               = link_to "Application submitted on #{na.submitted_at.localtime.strftime("%B %d, %Y at %I:%M")}", nonprofit_application_revise_path(nonprofit_application_id: na.id)
       - if @old_submitted_nonprofit_applications.length != 0
         h2.npo-application-subheader style="text-transform: uppercase; color: gray; font-size: 12pt; font-weight: 700" Old Submissions
-        p.static-page-desc These are applications that you've submitted in a previous application cycle. Please submit a new application to be considered for this year's application cycle. You can click into these applications to see what you have submitted in the past.
+        p.static-page-desc These are applications that you've submitted in a previous application cycle. Please submit a new application to be considered for this year's application cycle. You can create a new application with the same contents by clicking below.
         div.marginBot-sm
           - @old_submitted_nonprofit_applications.each do |na|
             div

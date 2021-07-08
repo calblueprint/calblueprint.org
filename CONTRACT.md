@@ -37,7 +37,7 @@ We have recruited all designers and developers for the semester. They are introd
 
 **Week 4 — September 30th**
 
-Developers, designers and the project leader finalize project scoping and create the final contract of work between Blueprint and the nonprofit, signed by both parties. Digital prototype has been designed and approved, and tickets for feature development are underway.
+Developers, designers and the project manager finalize project scoping and create the final contract of work between Blueprint and the nonprofit, signed by both parties. Digital prototype has been designed and approved, and tickets for feature development are underway.
 
 Note: When both parties agree to this project proposal, it should be agreed upon and set unless in otherwise unforeseen circumstances. There may be pivots or revalued features, but not a revamp that fundamentally changes the purpose and/or mission of what we are trying to achieve.
 
@@ -59,7 +59,7 @@ Blueprint recruits new members to fill in project team members that have graduat
 
 **Week 30 — March 25th**
 
-Third-quarter check-in: developers, project leader, and the nonprofit meet to check-in. Any final feature adjustments and refinements **should be made at this point.**
+Third-quarter check-in: developers, project manager, and the nonprofit meet to check-in. Any final feature adjustments and refinements **should be made at this point.**
 
 **Week 38 — May 6th - 20th**
 

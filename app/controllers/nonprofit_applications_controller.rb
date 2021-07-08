@@ -76,6 +76,15 @@ class NonprofitApplicationsController < ApplicationController
     end
   end
 
+  def destroy
+    @nonprofit_application = NonprofitApplication.find(params[:id])
+    if @nonprofit_application.nonprofit == current_nonprofit && @nonprofit_application.draft? && @nonprofit_application.destroy
+      redirect_to nonprofit_applications_path, flash: { success: t("nonprofit_applications.destroy.success") }
+    else
+      redirect_to nonprofit_applications_path, flash: { error: t("nonprofit_applications.destroy.error") }
+    end
+  end
+
   private
 
   def authenticate_nonprofit

@@ -38,8 +38,9 @@
         p.static-page-desc These are applications that you've started, but haven't submitted yet.
         div.marginBot-sm
           - @draft_nonprofit_applications.each do |na|
-            div
+            div.marginTop-xxs style="display: flex; justify-content: space-between"
               = link_to "Continue application last updated #{na.updated_at.localtime.strftime("%B %d, %Y at %I:%M")}", edit_nonprofit_application_path(id: na.id)
+              = link_to "Delete", nonprofit_application_path(id: na.id), method: "delete", class: "bp-btn btn-light btn-sm"
 
       - if @curr_submitted_nonprofit_applications.length != 0
         h2.npo-application-subheader style="text-transform: uppercase; color: gray; font-size: 12pt; font-weight: 700" Submitted

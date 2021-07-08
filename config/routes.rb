@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get "/nonprofit_applications/contract", to: "nonprofit_applications#contract"
 
   # Nonprofits
-  resources :nonprofit_applications, only: [:new, :edit, :index], controller: "nonprofit_applications" do
+  resources :nonprofit_applications, only: [:new, :edit, :index, :destroy], controller: "nonprofit_applications" do
     post "save"
     post "submit"
     get "revise"

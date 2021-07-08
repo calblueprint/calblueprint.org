@@ -46,8 +46,8 @@ class NonprofitApplication < ActiveRecord::Base
   validates_length_of :short_summary, maximum: 255, if: -> (na) { na.submitted? }
   validates :current_resources, presence: true, if: -> (na) { na.submitted? }
   validates :key_features, presence: true, if: -> (na) { na.submitted? }
-  validates :inclusivity, presence: true, if: -> (na) { na.submitted? }
-  validates :goals, presence: true, if: -> (na) { na.submitted? }
+  validates :history, presence: true, if: -> (na) { na.submitted? }
+  validates :target_audience, presence: true, if: -> (na) { na.submitted? }
   validates :future_plans, presence: true, if: -> (na) { na.submitted? }
 
   CLIENT_STATUSES = ["Yes, my current app works but I want to add more features",

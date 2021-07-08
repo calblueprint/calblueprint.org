@@ -45,18 +45,24 @@ class NonprofitApplicationsController < ApplicationController
   end
 
   def index
+    @curr_semester = @settings.current_semester
     @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
     @interest_form = current_nonprofit.current_interest_form.first
     @statement_open = @settings.npo_statement_of_interest_open
     @proposal_open = completed_phone_screen
 
-    @num_draft = 0
-    @num_submitted = 0
+    @draft_nonprofit_applications = []
+    @curr_submitted_nonprofit_applications = []
+    @old_submitted_nonprofit_applications = []
     @nonprofit_applications.each do |na|
       if na.submitted?
-        @num_submitted += 1
+        if na.semester == @settings.current_semester
+          @curr_submitted_nonprofit_applications.push(na)
+        else
+          @old_submitted_nonprofit_applications.push(na)
+        end
       elsif na.draft?
-        @num_draft += 1
+        @draft_nonprofit_applications.push(na)
       end
     end
 

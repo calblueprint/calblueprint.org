@@ -49,6 +49,7 @@ class NonprofitApplicationsController < ApplicationController
     @nonprofit_applications = current_nonprofit.nonprofit_applications.order(created_at: :DESC)
     @interest_form = current_nonprofit.current_interest_form.first
     @statement_open = @settings.npo_statement_of_interest_open
+    @application_open = @settings.npo_project_proposal_open
     @proposal_open = completed_phone_screen
 
     @draft_nonprofit_applications = []

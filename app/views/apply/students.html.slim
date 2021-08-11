@@ -27,19 +27,21 @@ section.static-page-hero.student-apply-hero
     .container
       ul
         li.page-nav-link section-name="developer-application-process"
-          | Developer Application Process
+          | Developer
+        li.page-nav-link section-name="designer-application-process"
+          | Designer
         li.page-nav-link section-name="external-application-process"
-          | External Application Process
+          | External
         li.page-nav-link section-name="decision-criteria"
           = t ".decision_criteria.title"
         li.page-nav-link section-name="faqs"
           | FAQs
 
-section.application-process-section#developer-application-process
-  .container.marginBot-lg
+section.application-process-section
+  .container.marginBot-lg#developer-application-process
     h2.static-page-header.marginBot-sm Developer Application Process
-    p.static-page-desc.marginBot-lg
-      = raw t ".developer_description"
+    / p.static-page-desc.marginBot-lg
+    /   = raw t ".developer_description"
     .student-timeline
       / Infosession
       .timeline-row
@@ -86,8 +88,10 @@ section.application-process-section#developer-application-process
           .timeline-row-date = t ".application_timeline.bp_games_date"
           .timeline-row-description = t ".application_timeline.bp_games"
 
-  .container
-    h2.static-page-header.marginBot-xxl Designer Application Process
+  .container.marginTop-xxl#designer-application-process
+    h2.static-page-header.marginBot-sm Designer Application Process
+    / p.static-page-desc.marginBot-lg
+    /   = raw t ".designer_description"
     - if @settings.designer_app_open == 'not_accepting'
       p.static-page-desc = raw t ".application_timeline.designer_not_accepted"
     - else
@@ -138,8 +142,8 @@ section.application-process-section#developer-application-process
             .timeline-row-description = t ".application_timeline.designer_challenge"
   .container.marginTop-xxl#external-application-process
     h2.static-page-header.marginBot-sm External Application Process
-    p.static-page-desc.marginBot-lg
-      = raw t ".external_description"
+    / p.static-page-desc.marginBot-lg
+    /   = raw t ".external_description"
     .student-timeline
       / Infosession
       .timeline-row

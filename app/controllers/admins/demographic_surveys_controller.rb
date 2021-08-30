@@ -8,6 +8,7 @@ module Admins
       )
 
       @developer_count = @demographic_surveys.where(applicant_type: 'developer').count
+      @designer_count = @demographic_surveys.where(applicant_type: 'designer').count
       @external_count = @demographic_surveys.where(applicant_type: 'external').count
 
       @ethnicities = {}

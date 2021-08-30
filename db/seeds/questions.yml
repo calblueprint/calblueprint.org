@@ -29,11 +29,12 @@ sp21_phone:
   hint: If you do not have a US phone number, please put (111)-111-1111 and we'll note it!
 
 phone:
-  title: Phone Number
+  title: What is your phone number?
   question_category: general
   question_type: short_text
-  placeholder: (123) 456-7890
+  placeholder: (555) 555-5555
   input_type: phone
+  hint: If you do not have a US phone number, please put (555)-555-5555 and we'll note it!
 
 sp21_email:
   title: What is your email?
@@ -44,7 +45,7 @@ sp21_email:
   input_type: email
 
 email:
-  title: Email
+  title: What is your email?
   hint: Please use your Berkeley email
   question_category: general
   question_type: short_text
@@ -57,17 +58,17 @@ year:
   question_type: multiple_choice_radio
   choices: 1st,2nd,3rd,4th,5th+
 
-sp21_major:
+major:
   title: What is your major(s)? What is your minor(s)?
   question_category: general
   question_type: short_text
   hint: If undeclared, please indicate what major(s)/minor(s) you are interested in
 
-sp21_minor:
-  title: What is your minor?
+sp21_major:
+  title: What is your major(s)? What is your minor(s)?
   question_category: general
   question_type: short_text
-  hint: If undeclared, please indicate what major(s) you are interested in
+  hint: If undeclared, please indicate what major(s)/minor(s) you are interested in
 
 applied_before:
   title: Have you applied to Blueprint before?
@@ -75,6 +76,13 @@ applied_before:
   question_type: multiple_choice_radio
   choices: Yes,No
   required: yes
+
+semesters_applied_before:
+  title: What semester(s) have you applied?
+  question_category: general
+  question_type: short_text
+  hint: "Please write as [Spring/Fall] [Year], ex: Spring 2020, Fall 2018"
+  required: false
 
 sp21_semesters_applied_before:
   title: What semester(s) have you applied?
@@ -99,21 +107,29 @@ time_commitment_acknowledgement:
   question_category: more_questions
   question_type: checkbox
 
-# Designer/Dev application type
+# Developers, designer, external application type
+application_type_dev_des_ex:
+  title: What positions are you applying to this semester?
+  hint:
+    "You may apply to more than one, but if you get accepted for more than one, you must make a decision for which
+    application to continue by September 6 at 11:59 PM PST. You only need to fill out one application regardless of how many positions you apply for."
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External
+
+preferred_role:
+  title: Which of the three roles do you prefer?
+  hint: If you apply for any of the three roles, you will be considered for all of them. You may be moved forward for only one role, and if moved forward for multiple, you will have to select one to continue with. This ranking helps us making decisions without assuming your preferences.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Developer,Designer,External
+  required: false
 
 sp21_application_type:
   title: What position(s) are you applying to this semester?
   question_category: general
   question_type: multiple_choice_radio
   choices: Developer,External,Developer/External
-
-preferred_role:
-  title: Which of the two roles do you prefer?
-  hint: If you apply for both, you will be considered for both. You may be moved forward for only one role, and if moved forward for both, you will have to select one to continue with. This ranking helps us making decisions without assuming your preferences.
-  question_category: general
-  question_type: multiple_choice_radio
-  choices: Developer,External
-  required: false
 
 fa20_application_type:
   title: What positions are you applying to this semester?
@@ -145,11 +161,11 @@ sp21_available_for_bp_games:
   required: true
 
 available_for_bp_games:
-  title: If you are a developer, are you be able to attend at least one of the Blueprint Games sessions?
-  hint: "Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.<br/><br/>There will be 3 sessions: Sept 11 6-8PM PST, Sept 12 10-12PM PST, Sept 12 12-2PM PST."
+  title: If you are a developer applicant, are you be able to attend at least one of the Blueprint Games sessions?
+  hint: Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
   question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Yes,No,N/A - not applying as a developer
+  choices: Saturday - Sept 11th 1PM-3PM PST,Saturday - Sept 11th 3PM-5PM PST,Both,Neither work for me,N/A - not applying as a developer
   required: true
 
 available_for_bwbp:
@@ -169,11 +185,11 @@ sp21_availability_for_meet_the_club:
   required: true
 
 available_for_meet_the_club:
-  title: Are you be able to attend at least one of the Meet the Club sessions?
-  hint: "Meet the Club is an event in our recruitment process that you may be invited to after application decisions are released. This gives you and us an opportunity to get to know each other.<br/><br/>There will be 2 sessions: September 9th 6:30-8 PM PST and September 10th 6:30-8 PM PST."
+  title: Will you be able to attend one of the Meet the Club sessions?
+  hint: Meet the Club is where you get to casually chat with our members and learn more about our team culture! This is an invite-only event. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
   question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Yes,No
+  choices: Wednesday - Sept 8 from 8-10 PM PST,Thursday - Sept 9 from 8-10PM PST,Both,Neither work for me
   required: true
 
 design_portfolio:
@@ -188,21 +204,21 @@ design_portfolio:
 
 # Word limit extended for external + design/developer applicants
 
-sp21_mission_first:
-  title: If you could pick any cause to work on during the next 5 years, what would it be and how would you work towards it? Why do you care about it?
+fa21_mission_first:
+  title: If you were given the opportunity to work on any cause, what would it be and how would you work towards it? Why do you care about it?
   hint: You don't necessarily need to have done something or had a single transformative moment — we want to know why you care, whether that's due to your experiences, perspectives, background, or anything else. This also does NOT need to relate to one of Blueprint's current or past projects, or to a cause that is directly tech-aligned. (200 words max)
   question_category: short_answer
   question_type: long_text
   word_limit: 200
 
-sp21_perpetual_growth:
-  title: How do you want to grow personally right now? What's motivating you, and what actions do you want to take towards this growth?
+fa21_perpetual_growth:
+  title: In what specific ways do you want to grow personally right now? What's motivating you? What actions do you want to take towards this growth?
   hint: Please do not write about purely technical growth, our role descriptions, or Blueprint's mission statement. By applying, we know you want to grow in these areas. (200 words max)
   question_category: short_answer
   question_type: long_text
   word_limit: 200
 
-sp21_always_innovate:
+fa21_always_innovate:
   title: Tell us about a project or experience that you're proud of creating! It does not have to be technical in nature. Feel free to explain it using bullet points if you'd like.
   hint: Don't include a link to your project in this section, there will be space for that later. Please only discuss ONE project or experience — do not treat this as a resume section. (150 words max)
   question_category: short_answer
@@ -211,22 +227,13 @@ sp21_always_innovate:
 
 # Background
 
-sp21_background_question:
+fa21_background_question:
   title: "[Optional] Is there any additional information or circumstances we should know about to understand you better?"
   hint: This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives. (200 words max)
   question_category: background
   required: false
   question_type: long_text
   word_limit: 200
-
-sp21_project_link:
-  title: "[Optional] Submit a link to something you've worked on."
-  hint: Our intentions are to be as equitable as possible in this process, and we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else! If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio.
-  question_category: background
-  required: false
-  question_type: short_text
-  placeholder: "https://...."
-
 
 
   # Additional Info
@@ -294,7 +301,7 @@ fa20_heard_from:
 
 heard_from:
   title: How did you first hear about Blueprint?
-  hint: Whether it’s through social media, through a friend, through classes, through Sproul, etc.
+  hint: Whether it’s through social media, through a friend, through classes, through Sproul or Memorial Glade, etc.
   question_category: more_questions
   question_type: short_text
 
@@ -306,6 +313,43 @@ add_to_newsletter:
   choices: Yes,No
 
 # ===== PREVIOUS SEMESTER QUESTIONS =====
+
+sp21_mission_first:
+  title: If you could pick any cause to work on during the next 5 years, what would it be and how would you work towards it? Why do you care about it?
+  hint: You don't necessarily need to have done something or had a single transformative moment — we want to know why you care, whether that's due to your experiences, perspectives, background, or anything else. This also does NOT need to relate to one of Blueprint's current or past projects, or to a cause that is directly tech-aligned. (200 words max)
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+sp21_perpetual_growth:
+  title: How do you want to grow personally right now? What's motivating you, and what actions do you want to take towards this growth?
+  hint: Please do not write about purely technical growth, our role descriptions, or Blueprint's mission statement. By applying, we know you want to grow in these areas. (200 words max)
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+sp21_always_innovate:
+  title: Tell us about a project or experience that you're proud of creating! It does not have to be technical in nature. Feel free to explain it using bullet points if you'd like.
+  hint: Don't include a link to your project in this section, there will be space for that later. Please only discuss ONE project or experience — do not treat this as a resume section. (150 words max)
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 150
+
+sp21_background_question:
+  title: "[Optional] Is there any additional information or circumstances we should know about to understand you better?"
+  hint: This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives. (200 words max)
+  question_category: background
+  required: false
+  question_type: long_text
+  word_limit: 200
+
+sp21_project_link:
+  title: "[Optional] Submit a link to something you've worked on."
+  hint: Our intentions are to be as equitable as possible in this process, and we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else! If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio.
+  question_category: background
+  required: false
+  question_type: short_text
+  placeholder: "https://...."
 
 fa20_mission_first:
   title: "What does social good mean to you? (200 Words)"
@@ -348,13 +392,6 @@ be_humble:
   question_category: short_answer
   question_type: long_text
   word_limit: 100
-
-fa20_mission_first:
-  title: "What does social good mean to you? (200 Words)"
-  hint: "If you're applying for a Developer or Designer position, please include: Why do you want to build/design applications in the social impact space?<br/><br/>If you're applying for an External position, please include: Why do you want to promote tech for social good?<br/><br/>Do not use this space to talk about Blueprint — we want to hear about you! Please limit your response to 200 words. If you're applying to both an external and a developer/designer position, feel free to use up to 250 words to answer both questions."
-  question_category: short_answer
-  question_type: long_text
-  word_limit: 250
 
 unique_experiences:
   title: What unique experiences, skills, or other aspects of your identity have shaped your worldview, and how have those perspectives led you to want to be a part of Blueprint?

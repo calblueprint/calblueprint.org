@@ -15,7 +15,7 @@
   p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
-    strong.apply-page-due< Friday, January 29th at 11:59 pm PST.
+    strong.apply-page-due< Friday, September 3rd at 11:59 pm PST.
 
   p.static-page-desc.marginBot-md
     = raw t ".developer_info"
@@ -52,6 +52,7 @@
 
         - if @student_application.responses.select {|r| r.question.question_category == "more_questions"}.count > 0
           h3.apply-page-more-questions Additional Info
+          p.static-page-desc All recruitment events will offer both in-person and remote options.
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
         h3.apply-page-more-questions Thanks so much for taking the time to complete our application! We look forward to learning more about you.
@@ -60,7 +61,7 @@
 
 javascript:
   $('.student_application_responses_preferred_role').hide();
-  $('.student_application_responses_sp21_semesters_applied_before').hide();
+  $('.student_application_responses_semesters_applied_before').hide();
   $('.student_application_responses_why_no_bp_games').hide();
   $('.student_application_responses_why_no_retreat').hide();
   $('.student_application_responses_why_no_bwbp').hide();
@@ -87,21 +88,21 @@ javascript:
    // $BPGamesTrue.click(toggleBPGames);
   // $BPGamesFalse.click(toggleBPGames);
 
-  // Toggle Which of the two roles do you prefer? question
-  $("input[type=radio][name='student_application[responses][sp21_application_type]']").change(function() {
-    if ($(this).val() == 'Developer/External') {
-      $('.student_application_responses_preferred_role').show()
-    } else {
+  // Toggle Which of the many roles do you prefer? question
+  $("input[type=radio][name='student_application[responses][application_type_dev_des_ex]']").change(function() {
+    if ($(this).val() == 'Developer' || $(this).val() == 'Designer' || $(this).val() == 'External') {
       $('.student_application_responses_preferred_role').hide()
+    } else {
+      $('.student_application_responses_preferred_role').show()
     }
   });
 
   // Toggle What semester(s) have you applied? question
   $("input[type=radio][name='student_application[responses][applied_before]']").change(function() {
     if ($(this).val() == 'Yes') {
-      $('.student_application_responses_sp21_semesters_applied_before').show()
+      $('.student_application_responses_semesters_applied_before').show()
     } else {
-      $('.student_application_responses_sp21_semesters_applied_before').hide()
+      $('.student_application_responses_semesters_applied_before').hide()
     }
   });
 

@@ -68,17 +68,9 @@ namespace :npo do
         airtable_npo["Project Summary"] = app.short_summary
         airtable_npo["Project Current Resources"] = app.current_resources
         airtable_npo["Project Key Features"] = app.key_features
-<<<<<<< HEAD
-        # airtable_npo["Project Goals and Audience"] = app.goals
         airtable_npo["Project Problem History"] = app.history
         airtable_npo["Project Future Plans"] = app.future_plans
         airtable_npo["Project Sustainability and Relevance"] = app.target_audience
-        # airtable_npo["NPO Inclusivity"] = app.inclusivity
-=======
-        airtable_npo["Project Problem History"] = app.history
-        airtable_npo["Project Future Plans"] = app.future_plans
-        airtable_npo["Project Sustainability and Relevance"] = app.target_audience
->>>>>>> daad785733a258330f3ac655b44c34100279a737
         airtable_npo["Point of Contact"] = app.legal
         airtable_npo["Unlocked Phase 2"] = true
 

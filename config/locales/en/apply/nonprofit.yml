@@ -28,15 +28,15 @@ en:
           The Interest Form is a short form for us to get to know your organization
           and mission better.
         phone_screen: >
-          One of our Project Leaders will reach out to you to schedule a 15 - 30 minute informational phone call that will help you get to know the work we do, and vice versa! We'll also be able to answer any questions you have about the application process. If you decide that you'd like to potentially work with us and we feel our services could fit your needs, we'll open up the second part of our application.
+          One of our Project Managers will reach out to you to schedule a 15 - 30 minute informational phone call that will help you get to know the work we do, and vice versa! We'll also be able to answer any questions you have about the application process. If you decide that you'd like to potentially work with us and we feel our services could fit your needs, we'll open up the second part of our application.
         second_round: >
           The second part of our application helps us understand what you need from Blueprint. You'll have the opportunity to explain why our services could be helpful to your organization, identify any pain points within your current operations, and expand on what you'd like us to build for you. If your proposed project sounds like something we can build, we'll be in touch for a final interview.
         interviews: >
-          The final interview will be with a handful of our Project Leaders and Designers. Together, we'll dive into more detail about your proposed project, discuss how it could be designed to best fit your needs, and leave room for any remaining questions.
+          The final interview will be with a handful of our Project Managers and Designers. Together, we'll dive into more detail about your proposed project, discuss how it could be designed to best fit your needs, and leave room for any remaining questions.
         final_decisions: >
           We'll reach out and let you know whether your organization has been selected to work with Blueprint!
         project_scoping: >
-          If selected, your organization will have the opportunity to work with us on a project over the course of the school year (August - May). Each Project Leader and Designer will choose an organization, and over the course of August, they will work with you to finalize the plans for your project.
+          If selected, your organization will have the opportunity to work with us on a project over the course of the school year (August - May). Each Project Manager and Designer will choose an organization, and over the course of August, they will work with you to finalize the plans for your project.
       decision_criteria:
         description: >
           We want to help as many organizations as we possibly can. Unfortunately, we cannot take every
@@ -57,8 +57,8 @@ en:
         q1:
           question: How often do project teams and nonprofits meet?
           answer: >
-            The client and the project leader meet on a weekly or biweekly basis to ensure the
-            project’s progress. There are project scoping meetings with the project leader
+            The client and the project manager meet on a weekly or biweekly basis to ensure the
+            project’s progress. There are project scoping meetings with the project manager
             at the project start, a formal midpoint presentation, and a final presentation where the project
             is delivered.
         q2:

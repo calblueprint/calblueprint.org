@@ -8,13 +8,13 @@ The Blueprint Website
 
 ### Dependencies
 
-- Ruby `v2.5.6`
+- Ruby `v2.6.5`
 - Rails `v5.2.0`
 
 ## Installation
 
 1. Install RVM [Instructions for mac](https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) and [Homebrew](https://brew.sh/) (if on mac)
-2. Go to codebase folder, switch to ruby 2.6.5: `rvm use 2.5.6`  (You'll have to do this everytime you open terminal in this folder)
+2. Go to codebase folder, switch to ruby 2.6.5: `rvm use 2.6.5`  (You'll have to do this everytime you open terminal in this folder)
 3. Install Postgresql locally, on mac `brew install postgresql`. (If errors, try [this article on completely reinstalling](https://medium.com/@bitadj/completely-uninstall-and-reinstall-psql-on-osx-551390904b86))
 
 ### Setup

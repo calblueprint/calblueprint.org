@@ -41,8 +41,8 @@ section.application-process-section
   .container.marginBot-lg#developer-application-process
     h2.static-page-header.marginBot-sm Developer Application Process
     / TODO: uncomment after updating doc
-    / p.static-page-desc.marginBot-lg
-    /   = raw t ".developer_description"
+    p.static-page-desc.marginBot-lg
+      = raw t ".developer_description"
     .student-timeline
       / Infosession
       .timeline-row
@@ -92,8 +92,8 @@ section.application-process-section
   .container.marginTop-xxl#designer-application-process
     h2.static-page-header.marginBot-sm Designer Application Process
     / TODO: uncomment after updating doc
-    / p.static-page-desc.marginBot-lg
-    /   = raw t ".designer_description"
+    p.static-page-desc.marginBot-lg
+      = raw t ".designer_description"
     - if @settings.designer_app_open == 'not_accepting'
       p.static-page-desc = raw t ".application_timeline.designer_not_accepted"
     - else
@@ -145,8 +145,8 @@ section.application-process-section
   .container.marginTop-xxl#external-application-process
     h2.static-page-header.marginBot-sm External Application Process
     / TODO: uncomment after updating doc
-    / p.static-page-desc.marginBot-lg
-    /   = raw t ".external_description"
+    p.static-page-desc.marginBot-lg
+      = raw t ".external_description"
     .student-timeline
       / Infosession
       .timeline-row

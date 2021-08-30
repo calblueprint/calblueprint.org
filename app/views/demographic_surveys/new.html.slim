@@ -60,7 +60,7 @@
 
       .form-group
         h3 Applied Roles
-        = f.input :applicant_type, as: :radio_buttons, collection:[['developer', 'Developer'], ['external', 'External']], label_method: :second, value_method: :first
+        = f.input :applicant_type, as: :radio_buttons, collection:[['developer', 'Developer'], ['designer', 'Designer'], ['external', 'External']], label_method: :second, value_method: :first
 
       div
         = f.button :submit, 'Submit Survey', class: "bp-btn btn-lg marginRight-sm"

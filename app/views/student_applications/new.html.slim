@@ -52,6 +52,7 @@
 
         - if @student_application.responses.select {|r| r.question.question_category == "more_questions"}.count > 0
           h3.apply-page-more-questions Additional Info
+          p.static-page-desc All recruitment events will offer both in-person and remote options.
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
         h3.apply-page-more-questions Thanks so much for taking the time to complete our application! We look forward to learning more about you.

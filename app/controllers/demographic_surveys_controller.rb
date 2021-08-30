@@ -1,17 +1,14 @@
 class DemographicSurveysController < ApplicationController
-  before_action :verify_from_app
 
   def new
+    verify_from_app
     @demographic_survey = DemographicSurvey.new
   end
 
   def create
     @demographic_survey = DemographicSurvey.new demographic_survey_params
 
-    @demographic_survey.applicant_type = session[:applicant_type]
-
     if @demographic_survey.save
-      session.delete(:applicant_type)
       redirect_to students_apply_path, flash: { success: t('demographic_surveys.create.success') }
     else
       render "new"
@@ -22,17 +19,9 @@ end
 private
 
 def verify_from_app
-  session[:applicant_type] = 0
-  return
-  if session[:applicant_type]
-    return
-  elsif request.referrer
+  if request.referrer
     referrer = URI(request.referrer).path
     if referrer == url_for(new_student_application_path)
-      session[:applicant_type] = 0
-      return
-    elsif referrer == url_for(new_external_application_path)
-      session[:applicant_type] = 2
       return
     end
   end

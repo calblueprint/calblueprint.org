@@ -10,28 +10,30 @@ namespace :students do
 
     air_emails = air_apps.map { |app| app[:email] }
 
+    # options: application_type_dev_des_ex
+    application_roles = "application_type_dev_des_ex"
+
     db_apps.each do |app|
       app_params = {
         "App ID": app.id,
         "Name": app.response_to("name"),
         "Pronouns": app.response_to("pronouns"),
-        "Email": app.response_to("sp21_email"),
-        "Phone Number": app.response_to("sp21_phone"),
+        "Email": app.response_to("email"),
+        "Phone Number": app.response_to("phone"),
         "Year": app.response_to("year"),
-        "Major": app.response_to("sp21_major"),
+        "Major": app.response_to("major"),
         "Applied before?": app.response_to("applied_before") == "Yes" ? "Yes" : "No",
-        "Semesters applied": app.response_to("sp21_semesters_applied_before").present? ? app.response_to("sp21_semesters_applied_before") : "n/a",
-        "Application type": app.response_to("sp21_application_type"),
-        "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to("sp21_application_type"),
+        "Semesters applied": app.response_to("semesters_applied_before").present? ? app.response_to("semesters_applied_before") : "n/a",
+        "Application type": app.response_to(application_roles),
+        "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
         "Time Commitment Acknowledgement": app.response_to("time_commitment_acknowledgement") && "Yes",
-        "MTC Availability": app.response_to("sp21_availability_for_meet_the_club").strip,
-        "BP Games Availability": app.response_to("sp21_available_for_bp_games").strip,
-        "Mission First": app.response_to("sp21_mission_first"),
-        "Perpetual Growth": app.response_to("sp21_perpetual_growth"),
-        "Always Innovate": app.response_to("sp21_always_innovate"),
-        "Optional Background Question": app.response_to("sp21_background_question"),
-        "Optional Project Link": app.response_to("sp21_project_link"),
-        "Heard about Blueprint from": app.response_to("sp21_heard_from"),
+        "MTC Availability": app.response_to("available_for_meet_the_club").strip,
+        "BP Games Availability": app.response_to("available_for_bp_games").strip,
+        "Mission First": app.response_to("fa21_mission_first"),
+        "Perpetual Growth": app.response_to("fa21_perpetual_growth"),
+        "Always Innovate": app.response_to("fa21_always_innovate"),
+        "Optional Background Question": app.response_to("fa21_background_question"),
+        "Heard about Blueprint from": app.response_to("heard_from"),
         "Survey Notice": app.response_to("survey_notice"),
       }
 

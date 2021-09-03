@@ -51,6 +51,7 @@ def demographic_survey_params
     :questioning_or_unsure,
     :same_gender_loving,
     :straight,
+    :decline_sexual_identity_orientation,
     :other_sexual_identity_orientation,
     :applicant_type,
     ethnicity_ids: []

@@ -1,4 +1,5 @@
 genders = ['Male', 'Female', 'Nonbinary', 'Transgender', 'Intersex', 'Two Spirit', 'Gender Nonconforming', 'Decline Gender'].freeze
+sexual_ids = ['Asexual', 'Bisexual', 'Gay', 'Lesbian', 'Pansexual', 'Queer', 'Questioning Or Unsure', 'Same Gender Loving', 'Straight', 'Other Sexual Identity Orientation', 'Decline Sexual Identity Orientation'].freeze
 namespace :demographics do
   desc "Demographic survey-related tasks to be run by Heroku Scheduler"
   task sync: :environment do
@@ -19,11 +20,17 @@ namespace :demographics do
         races << race.name
       end
 
+      applicant_type = app.applicant_type.capitalize if app.applicant_type.respond_to? :capitalize
+
       app_params = {
         "ID": app.id,
         "Race / Ethnicity Group": race_group.uniq,
         "Race / Ethnicity": races,
         "Gender": genders.select { |gender| app[gender.parameterize(separator: '_').to_sym] },
+        "Sexual Identity / Orientation": sexual_ids.select { |si| app[si.parameterize(separator: '_').to_sym] },
+        "Applicant Type": applicant_type,
+        "Gender Notes": app.additional_gender_notes,
+        "Sexual ID Notes": app.additional_sexual_identity_orientation_notes
       }
 
       if app.other_gender.present?

@@ -45,6 +45,7 @@ en:
           same_gender_loving: Same Gender Loving
           straight: Straight
           other_sexual_identity_orientation: Other (elaborate below)
+          decline_sexual_identity_orientation: Decline to State
           additional_sexual_identity_orientation_notes: Additional notes on sexual identity/orientation
     create:
       success: Thank you for filling out our diversity survey!

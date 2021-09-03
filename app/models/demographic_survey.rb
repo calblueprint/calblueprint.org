@@ -36,7 +36,7 @@ class DemographicSurvey < ApplicationRecord
   end
 
   def at_least_one_sexual_identity_orientation
-    if (not [self.asexual, self.bisexual, self.gay, self.lesbian, self.pansexual, self.queer, self.questioning_or_unsure, self.same_gender_loving, self.straight, self.other_sexual_identity_orientation].include? true)
+    if (not [self.asexual, self.bisexual, self.gay, self.lesbian, self.pansexual, self.queer, self.questioning_or_unsure, self.same_gender_loving, self.straight, self.other_sexual_identity_orientation, self.decline_sexual_identity_orientation].include? true)
       errors[:base] << ("Please choose at least one for the Sexual Identity/Orientation section.")
     end
   end

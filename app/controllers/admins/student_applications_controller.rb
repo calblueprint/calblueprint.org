@@ -20,6 +20,10 @@ module Admins
       @app = StudentApplication.find(params[:id])
     end
 
+    def details
+      @app = StudentApplication.find(params[:student_application_id])
+    end
+
     def remaining
       @student_applications = StudentApplication.remaining.reorder(wins_count: :desc, losses_count: :asc)
       respond_to do |format|

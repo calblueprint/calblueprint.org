@@ -21,9 +21,9 @@
         th ID
         th Grade
         th Semester
-        th Category
-        th Wins
-        th Losses
+        / th Category
+        / th Wins
+        / th Losses
         th Actions
     tbody
       - @student_applications.includes(:applicant, :semester).each do |app|
@@ -31,7 +31,11 @@
           td = app.id
           td = app.response_to 'year'
           td = "#{app.semester.season.capitalize} #{app.semester.year}"
-          td = app.current_category[0..11] if not app.current_category.nil?
-          td = app.wins_count
-          td = app.losses_count
-          td = link_to "Details", admin_student_application_path(app.id)
+          / td = app.current_category[0..11] if not app.current_category.nil?
+          / td = app.wins_count
+          / td = app.losses_count
+          td
+            .marginRight-xs
+              = link_to "Read", admin_student_application_path(app.id)
+            .marginRight-xs
+              = link_to "Details", admin_student_application_details_path(app.id), method: :get

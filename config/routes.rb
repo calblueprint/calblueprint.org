@@ -49,7 +49,9 @@ Rails.application.routes.draw do
 
   # Admin
   namespace :admins, as: :admin do
-    resources :student_applications, only: [:index, :show]
+    resources :student_applications, only: [:index, :show] do
+      get "details"
+    end
     get "remaining", to: "student_applications#remaining"
 
     resources :nonprofit_applications, only: [:show, :index, :destroy]

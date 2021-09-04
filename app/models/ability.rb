@@ -10,9 +10,9 @@ class Ability
         can [:read, :remaining], StudentApplication
         can :read, ExternalApplication
         can :read, Settings
-        can [:create, :read], Comparison
         can :read, Admin
       elsif user.super_admin?
+        can [:create, :read], Comparison
         can :manage, :all
       end
     end

@@ -80,6 +80,7 @@ h2 {
 // Nonprofit show page
 .admins-nonprofit_applications-show,
 .admins-student_applications-show,
+.admins-student_applications-details,
 .admins-external_applications-show {
   .container {
     max-width: 900px;
@@ -110,6 +111,36 @@ h2 {
       color: $dark-gray-80;
       font-size: 17px;
       line-height: 1.7;
+    }
+  }
+}
+
+.admins-student_applications-show {
+  .container {
+    max-width: unset;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .view-height {
+    height: calc(100vh - 85px);
+  }
+
+  @media screen and (min-width: 992px) {
+    .column {
+      min-width: 400px;
+      width: 50%;
+      padding: 0 10px;
+    }
+
+    .sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
     }
   }
 }

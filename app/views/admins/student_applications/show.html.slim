@@ -1,30 +1,36 @@
 .container
-  h1.admin-page-header = "Application ID: " + @app.id.to_s
-  p = "<a href=\"https://airtable.com/shrqn1vxdI5vw8GgB\">Grading Form</a>".html_safe
-  p = "<a href=\"https://www.notion.so/App-Reading-Guide-c0b3c4389e6c49d2b346860fa97913a8\">App Reading Guide</a>".html_safe
+  .column
+    h1.admin-page-header = "Application ID: " + @app.id.to_s
+    p = "<a href=\"https://go.calblueprint.org/app-reading-form\">Grading Form</a>".html_safe
+    p = "<a href=\"https://go.calblueprint.org/app-reading\">App Reading Guide</a>".html_safe
 
-  - @app.sorted_filtered_responses.each do |r|
-    div.app-row
-      h3.row-left = r.question.title
-      - if r.question.question_type == "attachment"
-        - if r.file_file_size
+    - @app.sorted_filtered_responses.each do |r|
+      div.app-row
+        h3.row-left = r.question.title
+        - if r.question.question_type == "attachment"
+          - if r.file_file_size
+            div.row-right
+              p = link_to "View Attachment", r.file.url, target: '_blank'
+          - else
+            div.row-right
+              p = "No Attachment"
+        - elsif r and r.answer
           div.row-right
-            p = link_to "View Attachment", r.file.url, target: '_blank'
+            p = auto_link(r.answer.gsub(/\n/, '<br/>').html_safe)
         - else
-          div.row-right
-            p = "No Attachment"
-      - elsif r and r.answer
-        div.row-right
-          p = auto_link(r.answer.gsub(/\n/, '<br/>').html_safe)
-      - else
-        - puts "Response answer was empty for question #{r.question.title}"
+          - puts "Response answer was empty for question #{r.question.title}"
 
-
+  .column.sticky.view-height
+    h1.admin-page-header = "Application ID: " + @app.id.to_s
+    
+    == '<iframe class="airtable-embed" src="https://airtable.com/embed/shrzSbIudBRGQVWUk?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="90%" style="background: transparent; border: 1px solid #ccc;"></iframe>'
+  
   .student-app-nav-buttons.marginTopBot-md
-    - if StudentApplication.where("id < ?", @app.id).last
-      = link_to 'Previous', admin_student_application_path(StudentApplication.where("id < ?", @app.id).last), class: "bp-btn"
+      - if StudentApplication.where("id < ?", @app.id).last
+        = link_to 'Previous', admin_student_application_path(StudentApplication.where("id < ?", @app.id).last), class: "bp-btn"
 
-    = link_to 'All Student Applications', admin_student_applications_path, class: "bp-btn marginLeftRight-sm"
+      = link_to 'All Student Applications', admin_student_applications_path, class: "bp-btn marginLeftRight-sm"
 
-    - if StudentApplication.where("id > ?", @app.id).first
-      = link_to 'Next', admin_student_application_path(StudentApplication.where("id > ?", @app.id).first), class: "bp-btn"
+      - if StudentApplication.where("id > ?", @app.id).first
+        = link_to 'Next', admin_student_application_path(StudentApplication.where("id > ?", @app.id).first), class: "bp-btn"
+

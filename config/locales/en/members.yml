@@ -1058,6 +1058,8 @@ en:
     - first_name: "Noah"
       last_name: "Gilmore"
       email: "noah.w.gilmore@gmail.com"
+      linkedin: "noahgilmore"
+      website: "noahgilmore.com"
       <<: *leader
 
     - first_name: "Harrison"

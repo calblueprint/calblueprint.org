@@ -90,6 +90,7 @@ en:
     - first_name: "Sonja" #vpt
       last_name: "Johanson"
       email: "johanson@berkeley.edu"
+      linkedin: "sonjajohanson"
       <<: *president
 
     - first_name: "Cindy" #pm
@@ -100,6 +101,7 @@ en:
     - first_name: "Nick" #ivp
       last_name: "Wong"
       email: "nickwong@berkeley.edu"
+      linkedin: "nickwongio"
       <<: *external
 
     - first_name: "Divi" #pm
@@ -110,6 +112,7 @@ en:
     - first_name: "Tiffany" 
       last_name: "Wang"
       email: "tiffanywang@berkeley.edu"
+      linkedin: "wtiffany"
       <<: *tech
 
     - first_name: "Ace" #president

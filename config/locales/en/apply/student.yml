@@ -86,7 +86,9 @@ en:
         q1:
           question: What is Blueprint's structure?
           answer: >
-            Blueprint's project structure consists of 4 project teams, each with a Project Manager, a Tech Lead, a designer, and 4-5 developers. Each project team is dedicated to one of our nonprofit and community partners and works closely with our points of contact to create equitable solutions through design and development. Blueprint's External team consists of 4-5 directors and a team lead. External works to inspire students outside of Cal Blueprint about creating change in communities through tech an design through chapter expansion, public events, new programs, and more. An executive team of 6 students supports the club and all members as a whole.
+            Blueprint's project structure consists of 4 project teams, each with a Project Manager, a Tech Lead, a designer, and 4-5 developers. Each project team is dedicated to one of our nonprofit and community partners and works closely with our points of contact to create equitable solutions through design and development.
+            <br /><br />
+            Blueprint's External team consists of 4-5 directors and a team lead. External works to inspire students outside of Cal Blueprint about creating change in communities through tech an design through chapter expansion, public events, new programs, and more. An executive team of 6 students supports the club and all members as a whole.
         q2:
           question: What are nonprofit and community partner relationships like?
           answer: >
@@ -95,6 +97,7 @@ en:
             and more, it's important to note that each partner relationship looks a little different. Broadly speaking,
             these meetings help ensure that our partners are on the same page as our project teams, and that the solutions
             we design and develop will actually be able to help the partner and communities in the best possible ways.
+            <br /><br />
             At a more detailed level, we hold project scoping meeting(s) with each partner and their Project Leader at
             the start of the Fall semester to create a clear path for Blueprint is able to deliver. At the end of each
             semester, we hold a final meeting to present what was accomplished during the semester
@@ -108,6 +111,7 @@ en:
             and designers through our technical onboarding processes and make sure there is always space to ask for help,
             no matter how large or small the task. Project Managers and our External lead also ensure project success
             through organized timelines that make tasks and expectations as clear as possible throughout the semester.
+            <br /><br />
             On top of everything, Blueprint is full of people who naturally want to help each other - on any given day or night,
             it's easy to find members squashing bugs together, holding informal critique sessions, DMing teammates for insight
             into other parts of Blueprint, or lending a listening ear.

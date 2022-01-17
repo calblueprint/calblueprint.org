@@ -20,7 +20,7 @@ section.static-page-hero.student-apply-hero
       - elsif @settings.external_app_open
         = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - if !@settings.dev_app_open && @settings.designer_app_open != 'open' && !@settings.external_app_open
-        p.hero-desc = t ".applications_closed"
+        p.hero-desc = raw t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
 
   div.page-nav

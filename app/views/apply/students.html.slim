@@ -64,10 +64,18 @@ section.application-process-section
               = link_to "Start Application", new_student_application_path, class: "bp-btn"
             - else
               .timeline-row-notice = raw t ".application_timeline.application_notice"
-      / Build with Blueprint
+      / Blueprint Games
       .timeline-row
         .num-col
           .timeline-num 03
+        .text-col
+          .timeline-row-title Blueprint Games
+          .timeline-row-date = t ".application_timeline.bp_games_date"
+          .timeline-row-description = t ".application_timeline.bp_games"
+      / Build with Blueprint
+      .timeline-row
+        .num-col
+          .timeline-num 04
         .text-col
           .timeline-row-title Build with Blueprint
           .timeline-row-date = t ".application_timeline.tech_round_date"
@@ -75,19 +83,11 @@ section.application-process-section
       / Meet the Club
       .timeline-row
         .num-col
-          .timeline-num 04
+          .timeline-num 05
         .text-col
           .timeline-row-title Meet the Club
           .timeline-row-date = t ".application_timeline.meet_the_club_date"
           .timeline-row-description = raw t ".application_timeline.meet_the_club"
-      / Blueprint Games
-      .timeline-row
-        .num-col
-          .timeline-num 05
-        .text-col
-          .timeline-row-title Blueprint Games
-          .timeline-row-date = t ".application_timeline.bp_games_date"
-          .timeline-row-description = t ".application_timeline.bp_games"
 
   .container.marginTop-xxl#designer-application-process
     h2.static-page-header.marginBot-sm Designer Application Process

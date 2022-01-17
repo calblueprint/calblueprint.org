@@ -11,7 +11,7 @@ en:
         As a member, you will join a family of fellow students working to use our education
         and skills to make the world a better place.
       applications_closed: >
-        Our application is now closed for the Fall 2021 semester. We will be recruiting again next semester! Sign up for our mailing list to stay up to date.
+        Our application will open for the Spring 2022 semester on Wednesday, January 19th and close on Friday, January 28th at 11:59 PM PDT. Sign up for our mailing list or follow our facebook page to stay up to date!
       developer_description: Learn what it means to be a developer <strong>👉 <a href="https://go.calblueprint.org/developer-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/developer-role</a> 👈</strong>
       designer_description: Learn what it means to be a designer <strong>👉 <a href="https://go.calblueprint.org/designer-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/designer-role</a> 👈</strong>
       external_description: Learn what it means to be on external <strong>👉 <a href="https://go.calblueprint.org/external-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/external-role</a> 👈</strong>
@@ -19,53 +19,46 @@ en:
         infosession:
           title: Infosession Series
           description: >
-            There will be multiple virtual infosessions from 8/28 to 9/3 with at least one in-person infosession.
-            These sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
+            There will be multiple virtual infosessions from Sunday, 1/23 to Wednesday, 1/26. These sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
             <strong>Check back for more details!</strong>
           detail: >
             Visit 👉 bit.ly/bp-infosessions-about 👈 to sign up and learn more!
           notice: Infosession Facebook event will be posted soon!
-        application_date: Sept 3, 11:59 PM PDT
+        application_date: Friday, January 28th, 11:59 PM PDT
         application: >
           The application includes 3 short response questions to help us understand your connection to
-          Blueprint's mission. Decisions will be emailed after this round on Sept 5 by 10 PM.
-          <strong>The application is due on September 3rd at 11:59 PM PST.</strong>
+          Blueprint's mission.
+          <strong>The application is due on January 28th, 11:59 PM PDT.</strong>
+          Decisions will be emailed after this round on September 30th by 10 PM.
         application_notice: >
-          Student applications will be open by Sunday August 29. Follow our
-          <a href="https://www.facebook.com/calblueprint" target="_blank" rel="noopener noreferrer">Facebook page</a> to stay updated!
-        meet_the_club_date: Sept 8 - 9
-        meet_the_club: >
-          Meet the Club is an event for you to get to know and chat with
-          <a href="/about#team">our membership</a> in a casual setting! This event
-          is by invitation only.
-        tech_round_date: Sept 6 - 10
-        tech_round: >
-          A small exercise to give you a chance to showcase your technical resourcefulness, growth, and adaptability.
-          It will be kicked off with an introductory workshop followed by a small project.
-          This round is by invitation only.
-        bp_games_date: Sept 10 - 11
+          Student applications will be open on Wednesday, January 19.
+        bp_games_date: January 31st
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
           critically.
           It will simulate working on a Blueprint project team and the collaborative nature of being a developer.
           This round is by invitation only. Time and location will be emailed to invited candidates.
-        designer_interviews_date: Sept 6 - 7
+          Decisions after this round will be emailed on February 1st by midnight.
+        tech_round_date: February 3rd & 4th
+        tech_round: >
+          A short interview to give you a chance to showcase your technical resourcefulness, growth, and adaptability. It will be kicked off with an introductory workshop.
+          This round is by invitation only.
+        meet_the_club_date: February 3rd & 4th
+        meet_the_club: >
+          Meet the Club is an event for you to get to know and chat with
+          <a href="/about#team">our membership</a> in a casual setting! This event
+          is by invitation only.
+        designer_interviews_date: February 1st & 2nd
         designer_interviews: >
-          We will ask you to brainstorm with us and sketch out low-fidelity solutions in response to a
-          design challenge. After the interview, you will have a chance to refine your solutions and
-          submit a final, high-fidelity version on Friday, September 11. Invited candidates will receive
-          an interview sign-up link via email.
-        designer_challenge_date: Sept 10, 10:00 PM PDT
+          We will ask you to brainstorm with us and sketch out low-fidelity solutions in a design challenge. After the interview, you will have a chance to refine your solutions and submit a final, higher-fidelity version by Friday, February 4. This round is by invitation only. Invited candidates will receive an interview sign-up link via email.
+        designer_challenge_date: February 4th, 10:00 PM PDT
         designer_challenge: >
-          Building on top of your solution from the interview, this continuation will give you a chance to
-          showcase your abilities to iterate upon a sketch and create a more polished product. The prompt
-          will be introduced in the interview.
+          Building on top of your work from the interview, this submission will give you a chance to showcase your ability to iterate and your visual design skills. The prompt will be covered during the interview.
         designer_not_accepted: >
-          We are not accepting any designers this semester 😞<br>Check back next semester!
-        external_interviews_date: Sept 8 - 10
+          We are not accepting any designers this semester 😞. Check back next semester!
+        external_interviews_date: January 31st - February 4th
         external_interviews: >
-          We will be conducting interviews for the external team throughout the entire week. Invited candidates will receive
-          an interview sign-up link via email.
+          We will be conducting interviews for the external team throughout the entire week. Invited candidates will receive an interview sign-up link via email.
         interview_date: None
         interview: >
           The final step in the application process &mdash; we really want to feel your passion for social
@@ -93,12 +86,7 @@ en:
         q1:
           question: What is Blueprint's structure?
           answer: >
-            Blueprint's project structure consists of 4 project teams, each with a Project Manager, a Tech Lead, a designer,
-            and 4-5 developers. Each project team is dedicated to one of our nonprofit and community partners
-            and works closely with our points of contact to create equitable solutions through design and development.<br>
-            Blueprint's External team consists of 4-5 directors and a team lead. External works to inspire students outside
-            of Cal Blueprint about creating change in communities through tech an design through chapter expansion,
-            public events, new programs, and more. An executive team of 6 students supports the club and all members as a whole.
+            Blueprint's project structure consists of 4 project teams, each with a Project Manager, a Tech Lead, a designer, and 4-5 developers. Each project team is dedicated to one of our nonprofit and community partners and works closely with our points of contact to create equitable solutions through design and development. Blueprint's External team consists of 4-5 directors and a team lead. External works to inspire students outside of Cal Blueprint about creating change in communities through tech an design through chapter expansion, public events, new programs, and more. An executive team of 6 students supports the club and all members as a whole.
         q2:
           question: What are nonprofit and community partner relationships like?
           answer: >
@@ -119,7 +107,7 @@ en:
             actively seeks out constructive feedback and holds periodic one-on-ones with members. We also guide all new developers
             and designers through our technical onboarding processes and make sure there is always space to ask for help,
             no matter how large or small the task. Project Managers and our External lead also ensure project success
-            through organized timelines that make tasks and expectations as clear as possible throughout the semester.<br>
+            through organized timelines that make tasks and expectations as clear as possible throughout the semester.
             On top of everything, Blueprint is full of people who naturally want to help each other - on any given day or night,
             it's easy to find members squashing bugs together, holding informal critique sessions, DMing teammates for insight
             into other parts of Blueprint, or lending a listening ear.

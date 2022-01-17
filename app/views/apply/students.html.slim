@@ -20,7 +20,7 @@ section.static-page-hero.student-apply-hero
       - elsif @settings.external_app_open
         = link_to "Apply to External Team", new_external_application_path, class: "bp-btn btn-white marginRight-xs marginBot-xxs"
       - if !@settings.dev_app_open && @settings.designer_app_open != 'open' && !@settings.external_app_open
-        p.hero-desc = t ".applications_closed"
+        p.hero-desc = raw t ".applications_closed"
         = render "newsletter_subscribe", list_id: "STUDENT_LIST_ID", btnClass: "btn-white"
 
   div.page-nav
@@ -64,10 +64,18 @@ section.application-process-section
               = link_to "Start Application", new_student_application_path, class: "bp-btn"
             - else
               .timeline-row-notice = raw t ".application_timeline.application_notice"
-      / Build with Blueprint
+      / Blueprint Games
       .timeline-row
         .num-col
           .timeline-num 03
+        .text-col
+          .timeline-row-title Blueprint Games
+          .timeline-row-date = t ".application_timeline.bp_games_date"
+          .timeline-row-description = t ".application_timeline.bp_games"
+      / Build with Blueprint
+      .timeline-row
+        .num-col
+          .timeline-num 04
         .text-col
           .timeline-row-title Build with Blueprint
           .timeline-row-date = t ".application_timeline.tech_round_date"
@@ -75,19 +83,11 @@ section.application-process-section
       / Meet the Club
       .timeline-row
         .num-col
-          .timeline-num 04
+          .timeline-num 05
         .text-col
           .timeline-row-title Meet the Club
           .timeline-row-date = t ".application_timeline.meet_the_club_date"
           .timeline-row-description = raw t ".application_timeline.meet_the_club"
-      / Blueprint Games
-      .timeline-row
-        .num-col
-          .timeline-num 05
-        .text-col
-          .timeline-row-title Blueprint Games
-          .timeline-row-date = t ".application_timeline.bp_games_date"
-          .timeline-row-description = t ".application_timeline.bp_games"
 
   .container.marginTop-xxl#designer-application-process
     h2.static-page-header.marginBot-sm Designer Application Process
@@ -224,11 +224,11 @@ section.application-faqs-section#faqs
   .container
     h2.static-page-header.marginBot-xl = t ".faq.title"
     h3 = t ".faq.q1.question"
-    p = t ".faq.q1.answer"
+    p = raw t ".faq.q1.answer"
     h3 = t ".faq.q2.question"
-    p = t ".faq.q2.answer"
+    p = raw t ".faq.q2.answer"
     h3 = t ".faq.q3.question"
-    p = t ".faq.q3.answer"
+    p = raw t ".faq.q3.answer"
 
 / Get Involved
 section.application-newsletter

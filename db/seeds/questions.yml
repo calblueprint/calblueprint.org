@@ -167,11 +167,11 @@ sp21_available_for_bp_games:
   required: true
 
 available_for_bp_games:
-  title: "[Developer Applicants] Please select your availability between 2pm and 10pm on Monday, 1/31."
+  title: "[Required for Developer Applicants] Please select your availability between 2pm and 10pm on Monday, 1/31."
   hint: Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released. If you are only able to provide one or zero 2-hour chunks of time that you are available, it will not impact our decision in you moving onto the next round of the application process. We will be prioritizing sessions from 6-8 and 8-10.
   question_category: more_questions
-  question_type: multiple_choice_radio
-  choices: 2PM - 4PM PDT,4PM - 6PM PDT,6PM - 8PM PDT,8PM - 10PM PDT
+  question_type: multiple_choice_checkbox
+  choices: "2pm|2PM - 4PM PDT,4pm|4PM - 6PM PDT,6pm|6PM - 8PM PDT,8pm|8PM - 10PM PDT"
   required: false
 
 available_for_bwbp:
@@ -212,14 +212,13 @@ design_portfolio:
 
 sp22_mission_first:
   title: Talk about a social cause or problem that is important to you. What makes this cause challenging to address and why do you care about it? (200 words max)
-  hint: This also does NOT need to relate to one of Blueprint's current or past projects, or to a cause that is directly tech-aligned.
+  hint: This does NOT need to relate to one of Blueprint's current or past projects, or to a cause that is directly tech-aligned.
   question_category: short_answer
   question_type: long_text
   word_limit: 200
 
 sp22_perpetual_growth:
-  title: Tell us about a time that somebody changed your mind about something you believed in or felt strongly about. How has that impacted you? (200 words max)
-  hint: Please do not write about purely technical growth, our role descriptions, or Blueprint's mission statement. By applying, we know you want to grow in these areas.
+  title: Tell us about a time something/somebody changed your mind about something you believed in or felt strongly about. How has that impacted you? (200 words max)
   question_category: short_answer
   question_type: long_text
   word_limit: 200
@@ -232,7 +231,7 @@ sp22_always_innovate:
   word_limit: 200
 
 sp22_designer_question:
-  title: "[Designer Applicants] Please briefly describe any prior relevant experience in UI/UX, visual, or other design disciplines that might prepare you for this role. (100 words max)"
+  title: "[Required for Designer Applicants] Please briefly describe any prior relevant experience in UI/UX, visual, or other design disciplines that might prepare you for this role. (100 words max)"
   hint: This semester is our first time recruiting a new designer halfway through our project cycle, meaning that you’ll be taking on a project that is already in progress. Because of this unique case, we are looking for someone with some experience with design skills and tools (particularly Figma). Feel free to use bullet points, but do not include links or a portfolio in this question. (For more information, visit <a href="https://go.calblueprint.org/designer-role">here</a>.)
   question_category: short_answer
   required: false

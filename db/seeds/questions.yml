@@ -167,12 +167,12 @@ sp21_available_for_bp_games:
   required: true
 
 available_for_bp_games:
-  title: If you are a developer applicant, are you be able to attend at least one of the Blueprint Games sessions?
-  hint: Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
+  title: "[Developer Applicants] Please select your availability between 2pm and 10pm on Monday, 1/31."
+  hint: Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released. If you are only able to provide one or zero 2-hour chunks of time that you are available, it will not impact our decision in you moving onto the next round of the application process. We will be prioritizing sessions from 6-8 and 8-10.
   question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Monday - January 31st 6PM-8PM PDT,Monday - January 31st 8PM-10PM PST,Both,Neither work for me,N/A - not applying as a developer
-  required: true
+  choices: 2PM - 4PM PDT,4PM - 6PM PDT,6PM - 8PM PDT,8PM - 10PM PDT
+  required: false
 
 available_for_bwbp:
   title: Which Build with Blueprint workshop section are you able to attend?

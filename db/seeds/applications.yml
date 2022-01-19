@@ -181,17 +181,17 @@ sp22:
     - major
     - applied_before
     - semesters_applied_before
-    - application_type_dev_des_ex
+    - sp22_application_type
     - preferred_role
 
     - time_commitment_acknowledgement
     - available_for_bp_games
-    - available_for_meet_the_club
 
-    - fa21_mission_first
-    - fa21_perpetual_growth
-    - fa21_always_innovate
+    - sp22_mission_first
+    - sp22_perpetual_growth
+    - sp22_always_innovate
 
+    - sp22_designer_question
     - fa21_background_question
 
     - heard_from

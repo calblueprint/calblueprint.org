@@ -140,6 +140,12 @@ fa20_application_type:
   question_type: multiple_choice_radio
   choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External
 
+sp22_application_type:
+  title: What position are you applying to this semester?
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Developer,Designer,External
+
 application_type:
   title: Are you applying as a developer or as a designer (or both)?
   hint: "You may apply to both positions, but you must make a decision for which
@@ -165,7 +171,7 @@ available_for_bp_games:
   hint: Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
   question_category: more_questions
   question_type: multiple_choice_radio
-  choices: Saturday - Sept 11th 1PM-3PM PST,Saturday - Sept 11th 3PM-5PM PST,Both,Neither work for me,N/A - not applying as a developer
+  choices: Monday - January 31st 6PM-8PM PDT,Monday - January 31st 8PM-10PM PST,Both,Neither work for me,N/A - not applying as a developer
   required: true
 
 available_for_bwbp:
@@ -204,26 +210,34 @@ design_portfolio:
 
 # Word limit extended for external + design/developer applicants
 
-fa21_mission_first:
-  title: If you were given the opportunity to work on any cause, what would it be and how would you work towards it? Why do you care about it?
-  hint: You don't necessarily need to have done something or had a single transformative moment — we want to know why you care, whether that's due to your experiences, perspectives, background, or anything else. This also does NOT need to relate to one of Blueprint's current or past projects, or to a cause that is directly tech-aligned. (200 words max)
+sp22_mission_first:
+  title: Talk about a social cause or problem that is important to you. What makes this cause challenging to address and why do you care about it? (200 words max)
+  hint: This also does NOT need to relate to one of Blueprint's current or past projects, or to a cause that is directly tech-aligned.
   question_category: short_answer
   question_type: long_text
   word_limit: 200
 
-fa21_perpetual_growth:
-  title: In what specific ways do you want to grow personally right now? What's motivating you? What actions do you want to take towards this growth?
-  hint: Please do not write about purely technical growth, our role descriptions, or Blueprint's mission statement. By applying, we know you want to grow in these areas. (200 words max)
+sp22_perpetual_growth:
+  title: Tell us about a time that somebody changed your mind about something you believed in or felt strongly about. How has that impacted you? (200 words max)
+  hint: Please do not write about purely technical growth, our role descriptions, or Blueprint's mission statement. By applying, we know you want to grow in these areas.
   question_category: short_answer
   question_type: long_text
   word_limit: 200
 
-fa21_always_innovate:
-  title: Tell us about a project or experience that you're proud of creating! It does not have to be technical in nature. Feel free to explain it using bullet points if you'd like.
-  hint: Don't include a link to your project in this section, there will be space for that later. Please only discuss ONE project or experience — do not treat this as a resume section. (150 words max)
+sp22_always_innovate:
+  title: Tell us about something you’re proud of creating or doing! What was the process like and what were the difficulties? What was the best part? It does not have to be technical in nature. (200 words max)
+  hint: Don't include a link to your project in this section, there will be space for that later. Please only discuss ONE thing you’re proud of — do not treat this as a resume section.
   question_category: short_answer
   question_type: long_text
-  word_limit: 150
+  word_limit: 200
+
+sp22_designer_question:
+  title: "[Designer Applicants] Please briefly describe any prior relevant experience in UI/UX, visual, or other design disciplines that might prepare you for this role. (100 words max)"
+  hint: This semester is our first time recruiting a new designer halfway through our project cycle, meaning that you’ll be taking on a project that is already in progress. Because of this unique case, we are looking for someone with some experience with design skills and tools (particularly Figma). Feel free to use bullet points, but do not include links or a portfolio in this question. (For more information, visit <a href="https://go.calblueprint.org/designer-role">here</a>.)
+  question_category: short_answer
+  required: false
+  question_type: long_text
+  word_limit: 200
 
 # Background
 
@@ -236,7 +250,7 @@ fa21_background_question:
   word_limit: 200
 
 
-  # Additional Info
+# Additional Info
 
 survey_notice:
   title: Once you submit your application, you will be redirected to an optional demographic survey. This information is NOT attached to your application in any way.
@@ -313,6 +327,27 @@ add_to_newsletter:
   choices: Yes,No
 
 # ===== PREVIOUS SEMESTER QUESTIONS =====
+
+fa21_mission_first:
+  title: If you were given the opportunity to work on any cause, what would it be and how would you work towards it? Why do you care about it?
+  hint: You don't necessarily need to have done something or had a single transformative moment — we want to know why you care, whether that's due to your experiences, perspectives, background, or anything else. This also does NOT need to relate to one of Blueprint's current or past projects, or to a cause that is directly tech-aligned. (200 words max)
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+fa21_perpetual_growth:
+  title: In what specific ways do you want to grow personally right now? What's motivating you? What actions do you want to take towards this growth?
+  hint: Please do not write about purely technical growth, our role descriptions, or Blueprint's mission statement. By applying, we know you want to grow in these areas. (200 words max)
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+fa21_always_innovate:
+  title: Tell us about a project or experience that you're proud of creating! It does not have to be technical in nature. Feel free to explain it using bullet points if you'd like.
+  hint: Don't include a link to your project in this section, there will be space for that later. Please only discuss ONE project or experience — do not treat this as a resume section. (150 words max)
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 150
 
 sp21_mission_first:
   title: If you could pick any cause to work on during the next 5 years, what would it be and how would you work towards it? Why do you care about it?

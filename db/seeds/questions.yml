@@ -168,7 +168,7 @@ sp21_available_for_bp_games:
 
 available_for_bp_games:
   title: "[Required for Developer Applicants only] I acknowledge that I have filled out the form below to indicate my availability on Monday, 1/31 for Blueprint Games."
-  hint: <a href="https://go.calblueprint.org/games-availability">Fill out the form here</a>. Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.
+  hint: Fill out the form at <a href="https://go.calblueprint.org/games-availability">https://go.calblueprint.org/games-availability</a>. Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.
   question_category: more_questions
   question_type: checkbox
   required: false

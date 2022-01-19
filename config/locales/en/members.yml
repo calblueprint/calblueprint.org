@@ -164,7 +164,7 @@ en:
       <<: *external_team
 
     - first_name: "Tanya"
-      last_name: "Kirshan"
+      last_name: "Krishan"
       email: "tanyakrishan@berkeley.edu"
       <<: *external_team
 

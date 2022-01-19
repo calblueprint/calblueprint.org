@@ -27,9 +27,8 @@
     = raw t ".designer_info"
 
   p.static-page-desc
-    | If you have any questions, please contact us
-    span< = link_to "here", new_contact_form_path
-    |. Good luck!
+    | If you have any questions, please contact us at <a href="team@calblueprint.org">team@calblueprint.org</a>.
+    | Good luck!
 
   .application-form.marginTop-xl
     = render "form_errors", obj: @student_application

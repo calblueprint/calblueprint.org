@@ -5,9 +5,49 @@ en:
       subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
+      # 2021-22
+      alemany:
+        status: current
+        title: Friends of Alemany Farm
+        short_summary: >
+          Alemany Farm is an unassuming urban farm tucked away in San Francisco. By growing 20,000lbs of food annually and making it available to food-insecure individuals for free, Alemany Farm enhances the food security of its local community. The farm employs sustainable farming practices and emphasizes the importance of respecting the biodiversity of its land.
+        org_link: http://www.alemanyfarm.org/
+        color: 85c99a
+        banner_image: projects/alemany.png
+        full_description: |
+          Our Project
+          -----------
+          We are building a mobile app to allow orchard staff and volunteers to record and view a tree's location and history so that they can better provide for the community.
+
+      siren:
+        status: current
+        title: SIREN
+        short_summary: >
+          Services, Immigrant Rights and Education Network (SIREN) is a nonprofit organization committed to empowering low-income immigrants and refugees through community education and organizing, leadership development, policy advocacy, and civic engagement and legal services. Their work hopes to foster a new America where immigrants and refugees are successfully integrated to society and where the human rights of all people are honored. 
+        org_link: https://www.sirenimmigrantrights.org/
+        color: d43535
+        banner_image: projects/siren.png
+        full_description: |
+          Our Project
+          -----------
+          We are building a multilingual mobile application that allows immigrant and refugees to upload and access their legal information. The project seeks to support the day to day operations of SIREN staff and attorneys for handling potential clients.
+      
+      sundayfriends:
+        status: current
+        title: Sunday Friends
+        short_summary: >
+          Sunday Friends is a nonprofit providing programs for families in need in San Jose. Sunday Friends empowers families to break the generational cycle of poverty by fostering positive development in children while educating and guiding parents to support their children’s life success. They offer a unique, supportive economic environment in which families work together to earn basic necessities, discover inner strengths and self-worth, and know the satisfaction that comes from contributing to their community.
+        org_link: https://www.sundayfriends.org/
+        color: 7287ed
+        banner_image: projects/sundayfriends.png
+        full_description: |
+          Our Project
+          -----------
+          We are creating a web platform and mobile app for Sunday Friends that allow families to better track their progress and help staff to more effectively guide families towards economic mobility.
+
       # 2020-21
       ogsc:
-        status: current
+        status: past
         title: Oakland Genesis Soccer Club
         short_summary: >
           Oakland Genesis Soccer Club is a Bay Area based nonprofit that provides socially and economically disadvantaged youth with free academic support and athletic programs. Their three main services involve free access to club soccer programs, free academic support and college advising to players, and free transportation to and from team practices and games.
@@ -20,7 +60,7 @@ en:
           We are building an online portal allowing Oakland Genesis staff to track participants’ personal progress and communicate with all stakeholders (participants, parents, volunteers, donors) on student progress and activities.
 
       nbjc:
-        status: current
+        status: past
         title: National Black Justice Coalition
         short_summary: >
           National Black Justice Coalition (NBJC) is a civil rights organization based in Washington, D.C. dedicated to empowering Black LGBTQ/SGL plus people and people living with HIV/AIDS by making it their mission to end racism, homophobia, and LGBTQ/SGL bias and stigma through federal public policy advocacy. They have a number of different initiatives they are advocating ranging from employment non-discrimination to criminal justice.
@@ -33,7 +73,7 @@ en:
           We’re building a web platform for NBJC that will enable people to easily find and engage with various organizations that focus on helping Black LGBTQ/SGL and other marginalized communities.
 
       meepanyar:
-        status: current
+        status: past
         title: Mee Panyar
         short_summary: >
           Mee Panyar supports rural communities in Myanmar in the operation and maintenance of decentralized solar mini-grids that provide reliable, sustainable energy. This work aims to not only help rural electricians transition from diesel to solar (reducing carbon emissions by 60% and electricity prices by 50%) but to ensure long-term maintenance and proper operation of these new systems through the provision of formal education and support to rural electricians.
@@ -46,7 +86,7 @@ en:
           We’re building an instructional mobile app with offline functionality for local technicians/engineers in rural areas to help them operate and maintain decentralized solar mini-grids that provide reliable, sustainable energy.
 
       wecaresolar:
-        status: current
+        status: past
         title: We Care Solar
         short_summary: >
           We Care Solar is a nonprofit saving lives in childbirth through the design, delivery, and installation of rugged, compact solar suitcases. Hundreds of thousands of health facilities lack reliable electricity, and the consequences are often tragic. The organization works closely with partners such as the Ministries of Health, UN agencies, and international non-government organizations to promote clean energy for safe motherhood.
@@ -59,7 +99,7 @@ en:
           We’re building a low-bandwidth friendly mobile app for health workers to access educational resources, important communications, and personalized support so they can make the most impact with each solar suitcase.
 
       kamehamehaschools:
-        status: current
+        status: past
         title: Kamehameha Schools
         short_summary: >
           Kamehameha Schools (KS) is more than just a network of schools, but an active player in shaping the socio-economic landscape in the Hawaiian islands. KS leverages it’s massive land-ownership in Hawai’i to fund early education programs, support agricultural endeavors, operate retail spaces, and more. KS is a complex conglomerate — a mix of global diversified financial assets and an educational network for native Hawaiians.

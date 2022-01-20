@@ -168,7 +168,7 @@ sp21_available_for_bp_games:
 
 available_for_bp_games:
   title: "[Required for Developer Applicants only] I acknowledge that I have filled out the form below to indicate my availability on Monday, 1/31 for Blueprint Games."
-  hint: Fill out the form at <a href="https://go.calblueprint.org/games-availability">https://go.calblueprint.org/games-availability</a>. Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.
+  hint: Fill out the form at <a href="https://go.calblueprint.org/games-availability" target="_blank">https://go.calblueprint.org/games-availability</a>. Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.
   question_category: more_questions
   question_type: checkbox
   required: false
@@ -231,7 +231,7 @@ sp22_always_innovate:
 
 sp22_designer_question:
   title: "[Required for Designer Applicants only] Please briefly describe any prior relevant experience in UI/UX, visual, or other design disciplines that might prepare you for this role. (100 words max)"
-  hint: This semester is our first time recruiting a new designer halfway through our project cycle, meaning that you’ll be taking on a project that is already in progress. Because of this unique case, we are looking for someone with some experience with design skills and tools (particularly Figma). Feel free to use bullet points, but do not include links or a portfolio in this question. (For more information, visit <a href="https://go.calblueprint.org/designer-role">https://go.calblueprint.org/designer-role</a>.)
+  hint: This semester is our first time recruiting a new designer halfway through our project cycle, meaning that you’ll be taking on a project that is already in progress. Because of this unique case, we are looking for someone with some experience with design skills and tools (particularly Figma). Feel free to use bullet points, but do not include links or a portfolio in this question. (For more information, visit <a href="https://go.calblueprint.org/designer-role" target="_blank">https://go.calblueprint.org/designer-role</a>.)
   question_category: short_answer
   required: false
   question_type: long_text

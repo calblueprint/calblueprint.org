@@ -15,7 +15,7 @@
   p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
-    strong.apply-page-due< Friday, September 3rd at 11:59 pm PST.
+    strong.apply-page-due< Friday, January 28th at 11:59 pm.
 
   p.static-page-desc.marginBot-md
     = raw t ".developer_info"
@@ -58,6 +58,7 @@
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
         h3.apply-page-more-questions Thanks so much for taking the time to complete our application! We look forward to learning more about you.
+        p. If the button below is greyed out, please make sure you’re filled out or checked all required fields (marked with a red asterisk).
       div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 

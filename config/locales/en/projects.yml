@@ -13,7 +13,7 @@ en:
           Alemany Farm is an unassuming urban farm tucked away in San Francisco. By growing 20,000lbs of food annually and making it available to food-insecure individuals for free, Alemany Farm enhances the food security of its local community. The farm employs sustainable farming practices and emphasizes the importance of respecting the biodiversity of its land.
         org_link: http://www.alemanyfarm.org/
         color: 85c99a
-        banner_image: projects/alemany.jpeg
+        banner_image: projects/alemany.png
         full_description: |
           Our Project
           -----------
@@ -39,7 +39,7 @@ en:
           Sunday Friends is a nonprofit providing programs for families in need in San Jose. Sunday Friends empowers families to break the generational cycle of poverty by fostering positive development in children while educating and guiding parents to support their children’s life success. They offer a unique, supportive economic environment in which families work together to earn basic necessities, discover inner strengths and self-worth, and know the satisfaction that comes from contributing to their community.
         org_link: https://www.sundayfriends.org/
         color: 7287ed
-        banner_image: projects/sundayfriends.jpeg
+        banner_image: projects/sundayfriends.png
         full_description: |
           Our Project
           -----------

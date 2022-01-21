@@ -142,9 +142,10 @@ fa20_application_type:
 
 sp22_application_type:
   title: What position are you applying to this semester?
+  hint: The option to apply to External will open Saturday at noon.
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,External
+  choices: Developer,Designer
 
 application_type:
   title: Are you applying as a developer or as a designer (or both)?

@@ -120,7 +120,7 @@ sp22_designer_question:
 
 sp22_external_role_question:
   title: "[Required for External Applicants only] What position within External are you applying for this semester?"
-  hint: Each member on External will specialize in a role such as Designer, Marketer, and Event Planner, and will also be the lead organizer for an External hosted event. Please select the role that you think best suits your existing skillset and interests. For those who may not have much experience in these roles or who are interested in a variety of them, we encourage you to still apply and demonstrate why you would like to join External and the value you would bring to the team. More info at <a href="go.calblueprint.org/external-role">https://go.calblueprint.org/external-role</a>.
+  hint: Each member on External will specialize in a role such as Designer, Marketer, and Event Planner, and will also be the lead organizer for an External hosted event. Please select the role that you think best suits your existing skillset and interests. For those who may not have much experience in these roles or who are interested in a variety of them, we encourage you to still apply and demonstrate why you would like to join External and the value you would bring to the team. (For more information, visit <a href="go.calblueprint.org/external-role">https://go.calblueprint.org/external-role</a>.)
   question_category: general
   question_type: multiple_choice_radio
   choices: Designer,Marketer,Event Planner

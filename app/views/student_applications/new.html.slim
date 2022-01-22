@@ -58,7 +58,6 @@
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
         h3.apply-page-more-questions Thanks so much for taking the time to complete our application! We look forward to learning more about you.
-        p. If the button below is greyed out, please make sure you’re filled out or checked all required fields (marked with a red asterisk).
       div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 
@@ -68,8 +67,15 @@ javascript:
   $('.student_application_responses_sp22_designer_question').hide()
   $('.student_application_responses_sp22_external_role_question').hide()
   $('.student_application_responses_sp22_external_experience_question').hide()
-
+  
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_time_commitment_acknowledgement').is(':checked'));
+
+  var devOption = $('#student_application_responses_application_type_developer');
+  var designOption = $('#student_application_responses_application_type_designer');
+  var combinedOption = $('#student_application_responses_application_type_developer_and_designer');
+
+  $BPGamesTrue = $("#student_application_responses_available_for_bp_games_yes");
+  $BPGamesFalse = $("#student_application_responses_available_for_bp_games_no");
 
   $SemesterAppliedBeforeTrue = $("#student_application_responses_applied_before_yes");
   $SemesterAppliedBeforeFalse = $("#student_application_responses_applied_before_no");

@@ -97,6 +97,7 @@ preferred_role:
 
 application_type:
   title: What position are you applying to this semester?
+  hint:
   question_category: general
   question_type: multiple_choice_radio
   choices: Developer,Designer,External

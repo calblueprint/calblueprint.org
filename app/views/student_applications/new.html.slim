@@ -58,22 +58,22 @@
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
         h3.apply-page-more-questions Thanks so much for taking the time to complete our application! We look forward to learning more about you.
-        p. If the button below is greyed out, please make sure you’re filled out or checked all required fields (marked with a red asterisk).
       div.marginTop-lg
         = f.button :submit, 'Submit Application', disabled: true, class: "bp-btn btn-lg"
 
 javascript:
-  $('.student_application_responses_preferred_role').hide();
-  $('.student_application_responses_semesters_applied_before').hide();
-  $('.student_application_responses_why_no_bp_games').hide();
-  $('.student_application_responses_why_no_retreat').hide();
-  $('.student_application_responses_why_no_bwbp').hide();
-  $('.student_application_responses_why_no_meet_the_club').hide();
+  $('.student_application_responses_semesters_applied_before').hide()
+  $('.student_application_responses_sp22_available_for_bp_games').hide()
+  $('.student_application_responses_sp22_designer_question').hide()
+  $('.student_application_responses_sp22_external_role_question').hide()
+  $('.student_application_responses_sp22_external_experience_question').hide()
+  
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_time_commitment_acknowledgement').is(':checked'));
 
   var devOption = $('#student_application_responses_application_type_developer');
   var designOption = $('#student_application_responses_application_type_designer');
   var combinedOption = $('#student_application_responses_application_type_developer_and_designer');
+
   $BPGamesTrue = $("#student_application_responses_available_for_bp_games_yes");
   $BPGamesFalse = $("#student_application_responses_available_for_bp_games_no");
 
@@ -82,23 +82,11 @@ javascript:
 
   function toggleBPGames() {
     if ($BPGamesTrue.prop("checked") || designOption.prop("checked")) {
-      $('.student_application_responses_why_no_bp_games').hide();
+      $('.student_application_responses_why_no_bp_games').hide()
     } else if ($BPGamesFalse.prop("checked")) {
-      $('.student_application_responses_why_no_bp_games').show();
+      $('.student_application_responses_why_no_bp_games').show()
     }
   }
-
-   // $BPGamesTrue.click(toggleBPGames);
-  // $BPGamesFalse.click(toggleBPGames);
-
-  // Toggle Which of the many roles do you prefer? question
-  $("input[type=radio][name='student_application[responses][application_type_dev_des_ex]']").change(function() {
-    if ($(this).val() == 'Developer' || $(this).val() == 'Designer' || $(this).val() == 'External') {
-      $('.student_application_responses_preferred_role').hide()
-    } else {
-      $('.student_application_responses_preferred_role').show()
-    }
-  });
 
   // Toggle What semester(s) have you applied? question
   $("input[type=radio][name='student_application[responses][applied_before]']").change(function() {
@@ -109,12 +97,22 @@ javascript:
     }
   });
 
-  // Toggle why no BWBP question
-  $("input[type=radio][name='student_application[responses][available_for_bwbp]']").change(function() {
-    if ($(this).val() == 'Neither') {
-      $('.student_application_responses_why_no_bwbp').show()
+  $("input[type=radio][name='student_application[responses][application_type]']").change(function() {
+    if ($(this).val() == 'Developer') {
+      $('.student_application_responses_sp22_available_for_bp_games').show()
+      $('.student_application_responses_sp22_designer_question').hide()
+    $('.student_application_responses_sp22_external_role_question').hide()
+      $('.student_application_responses_sp22_external_experience_question').hide()
+    } else if ($(this).val() == 'Designer') {
+      $('.student_application_responses_sp22_designer_question').show()
+      $('.student_application_responses_sp22_available_for_bp_games').hide()
+      $('.student_application_responses_sp22_external_role_question').hide()
+      $('.student_application_responses_sp22_external_experience_question').hide()
     } else {
-      $('.student_application_responses_why_no_bwbp').hide()
+      $('.student_application_responses_sp22_external_role_question').show()
+      $('.student_application_responses_sp22_external_experience_question').show()
+      $('.student_application_responses_sp22_designer_question').hide()
+      $('.student_application_responses_sp22_available_for_bp_games').hide()
     }
   });
 

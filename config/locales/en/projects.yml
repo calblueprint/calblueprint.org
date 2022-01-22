@@ -47,7 +47,7 @@ en:
 
       iteam:
         status: current
-        title: I-Team
+        title: Integration
         short_summary: >
           Integration (”I-team”) is a team dedicated to ensuring the success of project delivery. Our goal is to make sure all of Blueprint's projects make it into production! I-team works with non-profits from past projects to support their transition towards the ability to independently maintain their newly built applications. I-team also creates sustainable practice for app deployment in current and future projects.
         color: 945ebd

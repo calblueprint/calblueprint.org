@@ -20,14 +20,6 @@ pronouns:
   question_category: general
   question_type: short_text
 
-sp21_phone:
-  title: What is your phone number?
-  question_category: general
-  question_type: short_text
-  placeholder: (123) 456-7890
-  input_type: phone
-  hint: If you do not have a US phone number, please put (111)-111-1111 and we'll note it!
-
 phone:
   title: What is your phone number?
   question_category: general
@@ -35,14 +27,6 @@ phone:
   placeholder: (555) 555-5555
   input_type: phone
   hint: If you do not have a US phone number, please put (555)-555-5555 and we'll note it!
-
-sp21_email:
-  title: What is your email?
-  hint: Please use your Berkeley email
-  question_category: general
-  question_type: short_text
-  placeholder: example@berkeley.edu
-  input_type: email
 
 email:
   title: What is your email?
@@ -64,12 +48,6 @@ major:
   question_type: short_text
   hint: If undeclared, please indicate what major(s)/minor(s) you are interested in
 
-sp21_major:
-  title: What is your major(s)? What is your minor(s)?
-  question_category: general
-  question_type: short_text
-  hint: If undeclared, please indicate what major(s)/minor(s) you are interested in
-
 applied_before:
   title: Have you applied to Blueprint before?
   question_category: general
@@ -83,14 +61,6 @@ semesters_applied_before:
   question_type: short_text
   hint: "Please write as [Spring/Fall] [Year], ex: Spring 2020, Fall 2018"
   required: false
-
-sp21_semesters_applied_before:
-  title: What semester(s) have you applied?
-  question_category: general
-  question_type: short_text
-  hint: "Please write as [Spring/Fall] [Year], ex: Spring 2020, Fall 2018"
-  required: false
-
 
 # Time Commitments
 
@@ -125,90 +95,46 @@ preferred_role:
   choices: Developer,Designer,External
   required: false
 
-sp21_application_type:
-  title: What position(s) are you applying to this semester?
-  question_category: general
-  question_type: multiple_choice_radio
-  choices: Developer,External,Developer/External
-
-fa20_application_type:
-  title: What positions are you applying to this semester?
-  hint:
-    "You may apply to more than one, but if you get accepted for more than one, you must make a decision for which
-    application to continue by September 6 at 11:59 PM PST. You only need to fill out one application regardless of how many positions you apply for."
-  question_category: general
-  question_type: multiple_choice_radio
-  choices: Developer,Designer,External,Developer/Designer,Developer/External,Designer/External,Developer/Designer/External
-
-sp22_application_type:
-  title: What position are you applying to this semester?
-  hint: The option to apply to External will open Saturday at noon.
-  question_category: general
-  question_type: multiple_choice_radio
-  choices: Developer,Designer
-
 application_type:
-  title: Are you applying as a developer or as a designer (or both)?
-  hint: "You may apply to both positions, but you must make a decision for which
-    application to continue by September 8 at 11:59 PM PST.\n\n
-    Interview requests for designers will be sent out on September 7, and initial
-    application results for developers will be sent out on September 8 at 10 PM PST.
-    If you applied to both and we do not hear from you, we will assume you will be
-    continuing with your developer application."
+  title: What position are you applying to this semester?
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,Developer and designer
+  choices: Developer,Designer,External
 
-sp21_available_for_bp_games:
-  title: If you are a developer applicant, are you be able to attend at least one of the Blueprint Games sessions?
-  hint: Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
-  question_category: more_questions
-  question_type: multiple_choice_radio
-  choices: Saturday - February 6th 10AM-12PM PST,Saturday - February 6th 12PM-2PM PST,Both,Neither work for me
-  required: true
+# Spring 22 role-specific questions
 
-available_for_bp_games:
+sp22_available_for_bp_games:
   title: "[Required for Developer Applicants only] I acknowledge that I have filled out the form below to indicate my availability on Monday, 1/31 for Blueprint Games."
   hint: Fill out the form at <a href="https://go.calblueprint.org/games-availability" target="_blank">https://go.calblueprint.org/games-availability</a>. Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.
-  question_category: more_questions
+  question_category: general
   question_type: checkbox
   required: false
 
-available_for_bwbp:
-  title: Which Build with Blueprint workshop section are you able to attend?
-  hint: Build with BP workshop is an event in our application process that you may be invited to after application decisions are released. You only need to attend one section.
-  question_category: more_questions
-  question_type: multiple_choice_radio
-  choices: February 3rd 7-8:30 PM PST,February 4th 7-8:30 PM PST,Both,Neither
-  required: true
-
-sp21_availability_for_meet_the_club:
-  title: Will you be able to attend one of the Meet the Club sessions?
-  hint: Meet the Club is where you get to casually chat with our members and learn more about our team culture! This is an invite-only event. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
-  question_category: more_questions
-  question_type: multiple_choice_radio
-  choices: Wednesday - Feb 3 from 6-8 PM PST,Thursday - Feb 4 from 6-8PM PST,Both,Neither work for me
-  required: true
-
-available_for_meet_the_club:
-  title: Will you be able to attend one of the Meet the Club sessions?
-  hint: Meet the Club is where you get to casually chat with our members and learn more about our team culture! This is an invite-only event. Selecting "Neither work for me" will not impact our decision in you moving onto the next round of the application process.
-  question_category: more_questions
-  question_type: multiple_choice_radio
-  choices: Wednesday - Sept 8 from 8-10 PM PST,Thursday - Sept 9 from 8-10PM PST,Both,Neither work for me
-  required: true
-
-design_portfolio:
-  title: Design Portfolio (REQUIRED for designer applicants)
-  hint: Attach your design portfolio. If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
+sp22_designer_question:
+  title: "[Required for Designer Applicants only] Please briefly describe any prior relevant experience in UI/UX, visual, or other design disciplines that might prepare you for this role. (100 words max)"
+  hint: This semester is our first time recruiting a new designer halfway through our project cycle, meaning that you’ll be taking on a project that is already in progress. Because of this unique case, we are looking for someone with some experience with design skills and tools (particularly Figma). Feel free to use bullet points, but do not include links or a portfolio in this question. (For more information, visit <a href="https://go.calblueprint.org/designer-role" target="_blank">https://go.calblueprint.org/designer-role</a>.)
   question_category: general
-  question_type: attachment
+  question_type: long_text
   required: false
-  file_size_limit: 10 #MB
+  word_limit: 100
+
+sp22_external_role_question:
+  title: "[Required for External Applicants only] What position within External are you applying for this semester?"
+  hint: Each member on External will specialize in a role such as Designer, Marketer, and Event Planner, and will also be the lead organizer for an External hosted event. Please select the role that you think best suits your existing skillset and interests. For those who may not have much experience in these roles or who are interested in a variety of them, we encourage you to still apply and demonstrate why you would like to join External and the value you would bring to the team. More info at <a href="go.calblueprint.org/external-role">https://go.calblueprint.org/external-role</a>.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Designer,Marketer,Event Planner
+  required: false
+
+sp22_external_experience_question:
+  title: "[Required for External Applicants only] Please briefly describe any prior relevant experience in the role you have selected. (100 words max)"
+  hint: For Designers, feel free to share any experience in UI/UX, visual, or other design disciplines. For Marketers, feel free to share any experience in copywriting, social media marketing, and outreach. For Event Planners, feel free to share any experience planning and hosting events and the impact of those events.
+  question_category: general
+  question_type: long_text
+  required: false
+  word_limit: 100
 
 # Short answer questions
-
-# Word limit extended for external + design/developer applicants
 
 sp22_mission_first:
   title: Talk about a social cause or problem that is important to you. What makes this cause challenging to address and why do you care about it? (200 words max)
@@ -230,17 +156,9 @@ sp22_always_innovate:
   question_type: long_text
   word_limit: 200
 
-sp22_designer_question:
-  title: "[Required for Designer Applicants only] Please briefly describe any prior relevant experience in UI/UX, visual, or other design disciplines that might prepare you for this role. (100 words max)"
-  hint: This semester is our first time recruiting a new designer halfway through our project cycle, meaning that you’ll be taking on a project that is already in progress. Because of this unique case, we are looking for someone with some experience with design skills and tools (particularly Figma). Feel free to use bullet points, but do not include links or a portfolio in this question. (For more information, visit <a href="https://go.calblueprint.org/designer-role" target="_blank">https://go.calblueprint.org/designer-role</a>.)
-  question_category: short_answer
-  required: false
-  question_type: long_text
-  word_limit: 200
-
 # Background
 
-fa21_background_question:
+background_question:
   title: "[Optional] Is there any additional information or circumstances we should know about to understand you better?"
   hint: This can be anything related to your identity, current/previous access to relevant resources, a personal situation due to COVID, etc. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives. (200 words max)
   question_category: background
@@ -475,6 +393,14 @@ fa20_project_link:
   placeholder: "https://...."
 
 # More Questions
+
+design_portfolio:
+  title: Design Portfolio (REQUIRED for designer applicants)
+  hint: Attach your design portfolio. If you have a website that demonstrates your work, feel free to submit a PDF with a link to your website (10 MB size limit).
+  question_category: general
+  question_type: attachment
+  required: false
+  file_size_limit: 10 #MB
 
 experience:
   title: Please list and briefly describe past work experience or extracurricular activities.

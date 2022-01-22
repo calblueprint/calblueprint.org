@@ -164,7 +164,7 @@ fa21:
     - fa21_perpetual_growth
     - fa21_always_innovate
 
-    - fa21_background_question
+    - background_question
 
     - heard_from
     - survey_notice
@@ -181,18 +181,20 @@ sp22:
     - major
     - applied_before
     - semesters_applied_before
-    - sp22_application_type
-    - preferred_role
+    - application_type
+
+    - sp22_available_for_bp_games
+    - sp22_designer_question
+    - sp22_external_role_question
+    - sp22_external_experience_question
 
     - time_commitment_acknowledgement
-    - available_for_bp_games
-    
+
     - sp22_mission_first
     - sp22_perpetual_growth
     - sp22_always_innovate
 
-    - sp22_designer_question
-    - fa21_background_question
+    - background_question
     - sp21_project_link
 
     - heard_from

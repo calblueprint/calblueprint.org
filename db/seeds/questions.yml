@@ -100,7 +100,7 @@ application_type:
   hint:
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer
+  choices: Developer,Designer,External
 
 # Spring 22 role-specific questions
 

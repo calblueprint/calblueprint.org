@@ -97,9 +97,10 @@ preferred_role:
 
 application_type:
   title: What position are you applying to this semester?
+  hint: The option to apply to External will open Saturday at noon.
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,External
+  choices: Developer,Designer
 
 # Spring 22 role-specific questions
 

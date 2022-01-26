@@ -86,8 +86,9 @@ class StudentApplication < ActiveRecord::Base
   end
 
   def sorted_responses
-    cur_semester = Settings.instance.current_semester
-    self.responses.sort_by {|r| QuestionSemester.find_by(question: r.question, semester: cur_semester).question_order}
+    #cur_semester = Settings.instance.current_semester
+    #self.responses.sort_by {|r| QuestionSemester.find_by(question: r.question, semester: cur_semester).question_order}
+    self.responses
   end
 
   def sorted_filtered_responses

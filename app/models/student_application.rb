@@ -91,8 +91,10 @@ class StudentApplication < ActiveRecord::Base
   end
 
   def sorted_filtered_responses
+    puts "HELLO"
     cur_semester = Settings.instance.current_semester
-    r = self.responses.sort_by {|r| QuestionSemester.find_by(question: r.question, semester: cur_semester).question_order}
+    # r = self.responses.sort_by {|r| QuestionSemester.find_by(question: r.question, semester: cur_semester).question_order}
+    r = self.responses
     r.select {|r| !(['name', 'pronouns','email', 'phone', 'applied_before','semesters_applied_before', 'survey_notice', 'available_for_bp_games','available_for_meet_the_club', 'time_commitment_acknowledgement', 'application_type_dev_des_ex', 'preferred_role', 'heard_from'].include? r.question.tag) }
   end
 

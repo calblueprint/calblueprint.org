@@ -147,6 +147,11 @@ en:
       email: "bry_gavino01@berkeley.edu"
       <<: *tl
 
+    - first_name: "Andrew"
+      last_name: "Wang"
+      email: "awang4@berkeley.edu"
+      <<: *tl
+
     # External Team
     - first_name: "Anu"
       last_name: "Thirunarayanan"
@@ -200,12 +205,7 @@ en:
       last_name: "Yong"
       email: "micahtyong@berkeley.edu"
       <<: *developer
-    
-    - first_name: "Gabe" #tl
-      last_name: "Tiu"
-      email: "gabriel.je@berkeley.edu"
-      <<: *developer
-
+  
     - first_name: "Karina" #evp
       last_name: "Nguyen"
       email: "karinanguyen@berkeley.edu"
@@ -214,11 +214,6 @@ en:
     - first_name: "Albert"
       last_name: "Liu"
       email: "alberliu@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Andrew"
-      last_name: "Wang"
-      email: "awang4@berkeley.edu"
       <<: *developer
 
     - first_name: "Danashi"
@@ -271,6 +266,11 @@ en:
     # Other positions:
 
   alumni:
+    - first_name: "Gabe" #tl
+      last_name: "Tiu"
+      email: "gabriel.je@berkeley.edu"
+      <<: *tl
+
     - first_name: "Jen"
       last_name: "Hoang"
       email: "jenhoang@berkeley.edu"
@@ -324,7 +324,7 @@ en:
     - first_name: "Annie" #pl projects
       last_name: "Wang"
       email: "wangannie@berkeley.edu"
-      <<: *developer
+      <<: *projects
 
     - first_name: "Kenny" #pl projects
       last_name: "Chi"

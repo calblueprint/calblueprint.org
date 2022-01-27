@@ -24,7 +24,7 @@ namespace :students do
         "Major": app.response_to("major"),
         "Applied before?": app.response_to("applied_before") == "Yes" ? "Yes" : "No",
         "Semesters applied": app.response_to("semesters_applied_before").present? ? app.response_to("semesters_applied_before") : "n/a",
-        "Application type": app.response_to(application_roles),
+        "Application type": app.response_to("application_type"),
         # "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
         
         # "BP Games Availability": app.response_to("sp22_available_for_bp_games") == "Yes" ? "Yes" : "No",

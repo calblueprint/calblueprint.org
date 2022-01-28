@@ -27,7 +27,7 @@ namespace :students do
         "Application type": app.response_to(application_roles),
         # "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
         
-        "BP Games Availability": "Yes", #app.response_to("sp22_available_for_bp_games") && "Yes",
+        "BP Games Availability": "Both", #app.response_to("sp22_available_for_bp_games") && "Yes",
         # "MTC Availability": app.response_to("available_for_meet_the_club").strip,
         "[Designer Only] Background": "", #app.response_to("sp22_designer_question"),
         "[External Only] Role": "Designer", #app.response_to("sp22_external_role_question"),

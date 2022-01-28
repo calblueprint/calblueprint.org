@@ -27,22 +27,22 @@ namespace :students do
         "Application type": app.response_to(application_roles),
         # "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
         
-        "BP Games Availability": app.response_to("sp22_available_for_bp_games") && "Yes",
+        "BP Games Availability": "Yes" #app.response_to("sp22_available_for_bp_games") && "Yes",
         # "MTC Availability": app.response_to("available_for_meet_the_club").strip,
-        "[Designer Only] Background": app.response_to("sp22_designer_question"),
-        "[External Only] Role": app.response_to("sp22_external_role_question"),
-        "[External Only] Background": app.response_to("sp22_external_experience_question"),
+        "[Designer Only] Background": "" #app.response_to("sp22_designer_question"),
+        "[External Only] Role": "Designer" #app.response_to("sp22_external_role_question"),
+        "[External Only] Background": "" #app.response_to("sp22_external_experience_question"),
 
         "Time Commitment Acknowledgement": app.response_to("time_commitment_acknowledgement") && "Yes",
         
-        "Mission First": app.response_to("sp22_mission_first"),
-        "Perpetual Growth": app.response_to("sp22_perpetual_growth"),
-        "Always Innovate": app.response_to("sp22_always_innovate"),
+        "Mission First": "" #app.response_to("sp22_mission_first"),
+        "Perpetual Growth": "" #app.response_to("sp22_perpetual_growth"),
+        "Always Innovate": "" #app.response_to("sp22_always_innovate"),
 
-        "Optional Background Question": app.response_to("background_question"),
-        "Project Link": app.response_to("sp21_project_link"),
+        "Optional Background Question": "" #app.response_to("background_question"),
+        "Project Link": "" #app.response_to("sp21_project_link"),
 
-        "Heard about Blueprint from": app.response_to("heard_from"),
+        "Heard about Blueprint from": "" #app.response_to("heard_from"),
         "Survey Notice": app.response_to("survey_notice"),
       }
 

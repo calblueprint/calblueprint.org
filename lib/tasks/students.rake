@@ -30,7 +30,7 @@ namespace :students do
         # "BP Games Availability": "Yes", #app.response_to("sp22_available_for_bp_games") && "Yes",
         # "MTC Availability": app.response_to("available_for_meet_the_club").strip,
         "[Designer Only] Background": app.response_to("sp22_designer_question"),
-        "[External Only] Role": app.response_to("sp22_external_role_question"),
+        "[External Only] Role": "Designer", #app.response_to("sp22_external_role_question"),
         "[External Only] Background": app.response_to("sp22_external_experience_question"),
 
         "Time Commitment Acknowledgement": app.response_to("time_commitment_acknowledgement") && "Yes",

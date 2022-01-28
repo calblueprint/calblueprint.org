@@ -27,10 +27,10 @@ namespace :students do
         "Application type": app.response_to(application_roles),
         # "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
         
-        # "BP Games Availability": "Yes", #app.response_to("sp22_available_for_bp_games") && "Yes",
+        "BP Games Availability": app.response_to("sp22_available_for_bp_games") == true ? "Yes" : "No",
         # "MTC Availability": app.response_to("available_for_meet_the_club").strip,
         "[Designer Only] Background": app.response_to("sp22_designer_question"),
-        "[External Only] Role": app.response_to("sp22_external_role_question").strip,
+        #"[External Only] Role": app.response_to("sp22_external_role_question"),
         "[External Only] Background": app.response_to("sp22_external_experience_question"),
 
         "Time Commitment Acknowledgement": app.response_to("time_commitment_acknowledgement") && "Yes",
@@ -45,6 +45,10 @@ namespace :students do
         "Heard about Blueprint from": app.response_to("heard_from"),
         "Survey Notice": app.response_to("survey_notice"),
       }
+
+      if app.response_to("sp22_external_role_question").present?
+        app_params["[External Only] Role"] = app.response_to("sp22_external_role_question")
+      end
 
       # ComparisonCategory.where(semester: settings.current_semester).each do |category|
       #   puts "Finding apps with category #{category}"

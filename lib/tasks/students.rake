@@ -11,7 +11,7 @@ namespace :students do
     air_emails = air_apps.map { |app| app[:email] }
 
     # options: application_type_dev_des_ex, application_type
-    application_roles = "application_type_dev_des_ex"
+    application_roles = "application_type"
 
     db_apps.each do |app|
       app_params = {
@@ -29,7 +29,6 @@ namespace :students do
         
         # "MTC Availability": app.response_to("available_for_meet_the_club").strip,
         "[Designer Only] Background": app.response_to("sp22_designer_question"),
-        "[External Only] Role": app.response_to("sp22_external_role_question"),
         "[External Only] Background": app.response_to("sp22_external_experience_question"),
 
         "Time Commitment Acknowledgement": app.response_to("time_commitment_acknowledgement") && "Yes",
@@ -44,6 +43,14 @@ namespace :students do
         "Heard about Blueprint from": app.response_to("heard_from"),
         "Survey Notice": app.response_to("survey_notice"),
       }
+
+      if app.response_to("sp22_available_for_bp_games") == true
+        app_params["BP Games Availability"] = "Yes"
+      end
+
+      if app.response_to("sp22_external_role_question").present?
+        app_params["[External Only] Role"] = app.response_to("sp22_external_role_question")
+      end
 
       # ComparisonCategory.where(semester: settings.current_semester).each do |category|
       #   puts "Finding apps with category #{category}"
@@ -74,3 +81,5 @@ namespace :students do
       sleep 0.5
     end
   end
+
+end

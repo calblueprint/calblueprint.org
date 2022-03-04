@@ -168,7 +168,7 @@ en:
       email: "eileen-liu@berkeley.edu"
       <<: *external_team
 
-        - first_name: "Cecilia"
+    - first_name: "Cecilia"
       last_name: "Gao"
       email: "cecilia.gao3@berkeley.edu"
       <<: *external_team

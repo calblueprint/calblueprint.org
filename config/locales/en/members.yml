@@ -158,24 +158,24 @@ en:
       email: "nitanu32@berkeley.edu"
       <<: *external_team
 
+    - first_name: "James"
+      last_name: "Gersbach"
+      email: "jgersbach@berkeley.edu"
+      <<: *external_team
+
     - first_name: "Jay"
       last_name: "Kudva"
       email: "jkudva@berkeley.edu"
       <<: *external_team
 
+    - first_name: "Tanya"
+      last_name: "Krishan"
+      email: "tanyakrishan@berkeley.edu"
+      <<: *external_team
+
     - first_name: "Eileen"
       last_name: "Liu"
       email: "eileen-liu@berkeley.edu"
-      <<: *external_team
-
-        - first_name: "Cecilia"
-      last_name: "Gao"
-      email: "cecilia.gao3@berkeley.edu"
-      <<: *external_team
-
-    - first_name: "Annie"
-      last_name: "Huo"
-      email: "anniehuo@berkeley.edu"
       <<: *external_team
 
     # Designers
@@ -200,15 +200,15 @@ en:
       email: "nerissahsieh@berkeley.edu"
       <<: *designer
 
-    - first_name: "Danielle"
-      last_name: "Wong"
-      email: "daniellenwong@berkeley.edu"
-      <<: *design
-
     # Developers
     - first_name: "Micah" #vpt
       last_name: "Yong"
       email: "micahtyong@berkeley.edu"
+      <<: *developer
+  
+    - first_name: "Karina" #evp
+      last_name: "Nguyen"
+      email: "karinanguyen@berkeley.edu"
       <<: *developer
 
     - first_name: "Albert"
@@ -261,66 +261,11 @@ en:
       email: "whuang7000@berkeley.edu"
       <<: *developer
 
-    - first_name: "Gregoria"
-      last_name: "Millensifer"
-      email: "gregoriiaaa@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Akshay"
-      last_name: "Thakur"
-      email: "gakshaythakur@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Kenneth"
-      last_name: "Martinez"
-      email: "kenmartinez@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Suraj"
-      last_name: "Rao"
-      email: "suraj_rao@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Andrei"
-      last_name: "Tan"
-      email: "ManTan.875@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Sofia"
-      last_name: "Howard-Jimenez"
-      email: "howard.sofia@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Charles"
-      last_name: "Ming"
-      email: "charlesming@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Yulin"
-      last_name: "Li"
-      email: "yulinli@berkeley.edu"
-      <<: *developer
-
-    - first_name: "James"
-      last_name: "Gersbach"
-      email: "jgersbach@berkeley.edu"
-      <<: *developer
-
     # Mentors
 
     # Other positions:
 
   alumni:
-    - first_name: "Tanya"
-      last_name: "Krishan"
-      email: "tanyakrishan@berkeley.edu"
-      <<: *external_team
-
-    - first_name: "Karina" #evp
-      last_name: "Nguyen"
-      email: "karinanguyen@berkeley.edu"
-      <<: *external
-
     - first_name: "Gabe" #tl
       last_name: "Tiu"
       email: "gabriel.je@berkeley.edu"

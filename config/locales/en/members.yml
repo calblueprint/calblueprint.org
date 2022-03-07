@@ -203,7 +203,7 @@ en:
     - first_name: "Danielle"
       last_name: "Wong"
       email: "daniellenwong@berkeley.edu"
-      <<: *design
+      <<: *designer
 
     # Developers
     - first_name: "Micah" #vpt

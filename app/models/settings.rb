@@ -51,7 +51,7 @@ class Settings < ActiveRecord::Base
                     dev_app_open: false,
                     designer_app_open: 1,
                     external_app_open: false,
-                    current_semester_id: Semester.first_or_create(season: :spring, year: '2020').id,
+                    current_semester_id: Semester.first_or_create(season: :fall, year: '2022').id,
                     notify_bar_active: false,
                     infosession_one: false,
                     infosession_two: false,

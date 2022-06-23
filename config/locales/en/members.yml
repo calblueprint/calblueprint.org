@@ -174,6 +174,11 @@ en:
       <<: *designer
 
     # Developers
+    - first_name: "Sami" #external-team
+      last_name: "Oh"
+      email: "sami_oh@berkeley.edu"
+      <<: *developer
+
     - first_name: "Tiffany" #tech
       last_name: "Wang"
       email: "tiffanywang@berkeley.edu"
@@ -361,11 +366,6 @@ en:
     - first_name: "Calvin" #pl
       last_name: "Chen"
       email: "chencalvin99@berkeley.edu"
-      <<: *external_team
-
-    - first_name: "Sami"
-      last_name: "Oh"
-      email: "sami_oh@berkeley.edu"
       <<: *external_team
 
     - first_name: "Stefania"

@@ -92,9 +92,6 @@ section.application-process-section#application-process
           .timeline-row-date June 27 - July 6
           .timeline-row-description
             = raw t ".application_timeline.submission"
-          .timeline-row-btn
-            - if @settings.npo_app_open
-              = link_to "View Application", nonprofit_applications_path, class: "bp-btn"
 
       .timeline-row
         .num-col
@@ -113,6 +110,9 @@ section.application-process-section#application-process
           .timeline-row-date July 29
           .timeline-row-description
             = t ".application_timeline.second_round"
+          .timeline-row-btn
+            - if @settings.npo_app_open
+              = link_to "View Application", nonprofit_applications_path, class: "bp-btn"
 
       .timeline-row
         .num-col

@@ -95,6 +95,17 @@
   }
 }
 
+.main-banner {
+  animation: slideLeft 500ms both;
+  animation-delay: 370ms;
+  color: $dark-gray-80;
+  font-weight: 500;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .homepage-mission-statement {
   color: $dark-gray-80;
   font-family: $bptext-font;

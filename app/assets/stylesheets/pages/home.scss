@@ -113,6 +113,8 @@
 }
 
 .banner-link {
+  animation: slideLeft 500ms both;
+  animation-delay: 370ms;
   color: $bp-blue;
   font-size: 22px;
   font-weight: 500;

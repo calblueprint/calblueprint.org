@@ -95,15 +95,30 @@
   }
 }
 
+.banner-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
+
 .main-banner {
   animation: slideLeft 500ms both;
   animation-delay: 370ms;
   color: $dark-gray-80;
   font-weight: 500;
   font-size: 22px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-right: 20px;
   text-align: center;
+}
+
+.banner-link {
+  color: $bp-blue;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 300ms;
+  height: 35px;
 }
 
 .homepage-mission-statement {

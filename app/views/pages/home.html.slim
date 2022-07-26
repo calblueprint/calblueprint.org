@@ -30,8 +30,12 @@ section.home-section
 
 section.banner-section
   .container
-    p.main-banner
-      = t ".banner"
+    div.banner-row
+      p.main-banner
+        = t ".banner"
+      = link_to apply_path, class: "banner-link"
+        | Apply 
+        span.fa.fa-angle-right
 
 section.about-section
   .container

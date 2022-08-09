@@ -22,6 +22,9 @@ en:
     design: &design
       role: "VP of Design"
 
+    ops: &ops
+      role: "VP of Operations"
+
     leader: &leader #kept for legacy circa 2021
       role: "Project Leader"
 
@@ -117,6 +120,11 @@ en:
       email: "hukellyy@berkeley.edu"
       <<: *design
 
+    - first_name: "Jared"
+      last_name: "Keating"
+      email: "jkeating0002@berkeley.edu"
+      <<: *ops
+
     # Project Managers
     - first_name: "Albert" #developer
       last_name: "Liu"
@@ -151,11 +159,6 @@ en:
       email: "kennychi@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Cecilia"
-      last_name: "Gao"
-      email: "cecilia.gao3@berkeley.edu"
-      <<: *external_team
-
     - first_name: "Annie"
       last_name: "Huo"
       email: "anniehuo@berkeley.edu"
@@ -173,16 +176,15 @@ en:
       email: "daniellenwong@berkeley.edu"
       <<: *designer
 
+    - first_name: "Cecilia" #external-team
+      last_name: "Gao"
+      email: "cecilia.gao3@berkeley.edu"
+      <<: *designer
+
     # Developers
     - first_name: "Sami" #external-team
       last_name: "Oh"
       email: "sami_oh@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Tiffany" #tech
-      last_name: "Wang"
-      email: "tiffanywang@berkeley.edu"
-      linkedin: "wtiffany"
       <<: *developer
 
     - first_name: "Danashi"
@@ -267,10 +269,10 @@ en:
       email: "divi@berkeley.edu"
       <<: *projects
 
-    - first_name: "Ace" #president
+    - first_name: "Ace" #vpd
       last_name: "Chen"
       email: "12aschen@berkeley.edu"
-      <<: *design
+      <<: *president
 
     - first_name: "Grace" #Big G internal
       last_name: "Ng"
@@ -291,7 +293,7 @@ en:
     - first_name: "Sydney" #pl
       last_name: "Bui"
       email: "sydbui@berkeley.edu"
-      <<: *developer
+      <<: *pm
 
     - first_name: "William"
       last_name: "Huang"
@@ -303,10 +305,11 @@ en:
       email: "22szavala@berkeley.edu"
       <<: *developer
 
-    - first_name: "Jared"
-      last_name: "Keating"
-      email: "jkeating0002@berkeley.edu"
-      <<: *pm
+    - first_name: "Tiffany" #tech
+      last_name: "Wang"
+      email: "tiffanywang@berkeley.edu"
+      linkedin: "wtiffany"
+      <<: *tech
 
     - first_name: "Jay"
       last_name: "Kudva"
@@ -318,10 +321,10 @@ en:
       email: "nerissahsieh@berkeley.edu"
       <<: *designer
 
-    - first_name: "Micah" #vpt
+    - first_name: "Micah" #developer
       last_name: "Yong"
       email: "micahtyong@berkeley.edu"
-      <<: *developer
+      <<: *tech
 
     - first_name: "Eileen"
       last_name: "Liu"
@@ -423,7 +426,7 @@ en:
       last_name: "He"
       email: "rlhe1307@berkeley.edu"
       linkedin: "rachel-he-543081158"
-      <<: *designer
+      <<: *external
 
     - first_name: "Jinsu"
       last_name: "Elhance"
@@ -433,7 +436,7 @@ en:
     - first_name: "Joelene" #project leader design
       last_name: "Latief"
       email: "joelenelatief@berkeley.edu"
-      <<: *leader
+      <<: *design
 
     - first_name: "Kyle"
       last_name: "Hua"
@@ -455,20 +458,20 @@ en:
       last_name: "Ma"
       email: "springma@berkeley.edu"
       linkedin: "spring-ma"
-      <<: *designer
+      <<: *external
 
     - first_name: "Kevin" # tech
       last_name: "Li"
       email: "kevintli98@gmail.com"
       linkedin: "kevintli"
       website: "kevintli.com"
-      <<: *developer
+      <<: *tech
 
     - first_name: "Fang"
       last_name: "Shuo Deng"
       email: "dfs.arthur@berkeley.edu"
       linkedin: "dfangshuo"
-      <<: *designer
+      <<: *pm
 
     - first_name: "Gibson"
       last_name: "Chu"

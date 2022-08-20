@@ -10,19 +10,11 @@
     | Hi #{current_user.organization_name}!
     / =< t(".subtitle")
     |  The Interest Form will close on
-    strong.apply-page-due< July 17th, 2021, 11:59pm,
-    |  but submissions will be reviewed on a rolling basis.
-    =<> link_to "Contact us", new_contact_form_path, target: "_blank"
-    | if you have any questions.
-
-  br
-  p.static-page-desc
-    | We understand that COVID-19 has affected nonprofits in many ways. If, for any reason, 
-    | you think your organization may be better fit to partner with Blueprint in a future cycle instead, 
-    strong make a note in the box below 
-    | where you describe your organization. We will make sure to reach out 
-    | again the next time our application cycle opens.
-
+    strong.apply-page-due< July 6th, 2022, 11:59pm,
+    |  but submissions will be reviewed on a rolling basis. 
+    /=<> link_to "Contact us", new_contact_form_path, target: "_blank"
+    a href='mailto:projects@calblueprint.org' target='mailto:projects@calblueprint.org' Contact us
+    |  if you have any questions.
 
   br
   p.static-page-desc.marginBot-md

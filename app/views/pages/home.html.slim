@@ -1,4 +1,13 @@
-= render "navbar", className: "nav-white", animate: true
+section.banner-section
+  .banner-container
+    div.banner-row
+      p.main-banner
+        = t ".banner"
+      = link_to nonprofits_apply_path, class: "banner-link"
+        | Apply 
+        span.fa.fa-angle-right
+
+= render "navbar", className: "nav-home", animate: true
 = render "with_mailchimp_js"
 
 /! Facebook Pixel Code

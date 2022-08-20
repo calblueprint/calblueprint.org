@@ -95,6 +95,46 @@
   }
 }
 
+.banner-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #F8F8F8;
+}
+
+.banner-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  background-color: #F8F8F8;
+}
+
+.main-banner {
+  animation: slideLeft 500ms both;
+  animation-delay: 370ms;
+  color: $dark-gray-80;
+  font-weight: 500;
+  font-size: 26px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.banner-link {
+  animation: slideLeft 500ms both;
+  animation-delay: 370ms;
+  color: $bp-blue;
+  font-size: 26px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 300ms;
+  height: 30px;
+  z-index: 10;
+}
+
 .homepage-mission-statement {
   color: $dark-gray-80;
   font-family: $bptext-font;

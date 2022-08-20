@@ -89,19 +89,16 @@ section.application-process-section#application-process
           .timeline-num 01
         .text-col
           .timeline-row-title Interest Form Open
-          .timeline-row-date June 20 - July 21
+          .timeline-row-date June 27 - July 6
           .timeline-row-description
             = raw t ".application_timeline.submission"
-          .timeline-row-btn
-            - if @settings.npo_app_open
-              = link_to "View Application", nonprofit_applications_path, class: "bp-btn"
 
       .timeline-row
         .num-col
           .timeline-num 02
         .text-col
           .timeline-row-title Informational Phone Call
-          .timeline-row-date June 20 - July 17
+          .timeline-row-date June 29 - July 22
           .timeline-row-description
             = raw t ".application_timeline.phone_screen"
 
@@ -110,16 +107,19 @@ section.application-process-section#application-process
           .timeline-num 03
         .text-col
           .timeline-row-title Written Application Due
-          .timeline-row-date July 21
+          .timeline-row-date July 29
           .timeline-row-description
             = t ".application_timeline.second_round"
+          .timeline-row-btn
+            - if @settings.npo_app_open
+              = link_to "View Application", nonprofit_applications_path, class: "bp-btn"
 
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
           .timeline-row-title Final Interviews
-          .timeline-row-date July 25 - August 6
+          .timeline-row-date August 1 - August 5
           .timeline-row-description
             = raw t ".application_timeline.interviews"
 
@@ -137,7 +137,7 @@ section.application-process-section#application-process
           .timeline-num 06
         .text-col
           .timeline-row-title Project Scoping
-          .timeline-row-date August 8 - August 24
+          .timeline-row-date August 8 - August 31
           .timeline-row-description
             = t ".application_timeline.project_scoping"
 

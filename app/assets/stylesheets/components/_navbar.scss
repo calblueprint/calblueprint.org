@@ -91,6 +91,42 @@ nav.bp-nav {
   }
 }
 
+nav.bp-nav.nav-home {
+  margin-top: 60px;
+  .logo-container {
+    a {
+      color: $white;
+    }
+  }
+
+  .mobile-nav-show {
+    color: white;
+  }
+
+  .logo {
+    background-image: image_url("logo-white.png");
+  }
+
+  .link-container {
+    li {
+      color: $white-80;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .admin-dropdown {
+    li {
+      color: inherit;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+}
 
 // For use on dark or colored backgrounds
 nav.bp-nav.nav-white {
@@ -133,7 +169,7 @@ nav.bp-nav.nav-white {
 .static-page-nav {
   left: 0;
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 100%;
 }
 

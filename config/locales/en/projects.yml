@@ -5,9 +5,62 @@ en:
       subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
+      # 2022-23
+      cnsc:
+        status: current
+        title: Chinese Newcomers Service Center
+        short_summary: >
+          Chinese Newcomers Service Center (CNSC) provides multilingual services that help Chinese Immigrants adapt to life in the United States. CNSC Serves as a bridge between the two cultures, enhancing the physical, mental, social, and economic well-being of immigrants, thus facilitating their efforts to become self-sufficient members of the community.
+        org_link: https://chinesenewcomers.org/en/category/about-en/
+        color: ca2027
+        banner_image: projects/cnsc.png
+        full_description: |
+          Our Project
+          -----------
+          This project involves building a multilingual mobile application that allows Chinese immigrants to browse and apply to jobs. The app will also support employer and admin permissions for posting and updating opportunities. We aim to reduce the limitations of WeChat and spreadsheets currently used by CNSC. 
+
+      v4v:
+        status: current
+        title: Vouchers 4 Veggies
+        short_summary: >
+          Vouchers 4 Veggies (V4V) is a San Francisco based food program that aims to increase access to healthy and affordable foods for low-income individuals and families by providing free vouchers for fruit and vegetables. V4V partners with dozens of local grocers and farmers markets to address the unique food insecurity issues in San Francisco.
+        org_link: https://eatsfvoucher.org/about-us/
+        color: 6e9b43
+        banner_image: projects/v4v.png
+        full_description: |
+          Our Project
+          -----------
+          The project involves building a mobile application that allows vendors to submit voucher data via QR code. This app will allow administrators to see voucher data and update vendor invoices. This project will help streamline logistical operations for vendors and V4V admin, letting them better focus on people facing food insecurity. 
+
+      culturalsurvival:
+        status: current
+        title: Cultural Survival
+        short_summary: >
+          Cultural Survival is an Indigenous-led NGO that advocates for Indigenous Peoples' rights and supports Indigenous communities’ self-determination, cultures, and political resilience. For the past 50 years, Cultural Survival has partnered with Indigenous communities across 70+ countries, providing support through grants, advocacy, and community building.
+        org_link: https://www.culturalsurvival.org/about
+        color: c54701
+        banner_image: projects/culturalsurvival.png
+        full_description: |
+          Our Project
+          -----------
+          The goal of our project is to build an offline-friendly mobile application to store indigenous audio content and community resources. The app will allow users to search, download, and listen to podcasts in their chosen language, aiming to replace Cultural Survival’s current method of distributing podcasts via USBs. 
+
+      bsc:
+        status: current
+        title: Berkeley Student Cooperative
+        short_summary: >
+          For nearly 90 years, the Berkeley Student Cooperative (BSC) has provided a quality, low-cost, cooperative housing community to university students who might not otherwise be able to afford a university education. BSC strongly prompts the values of anti-discrimination and access to education; it currently provides meals and/or housing to over 1300 Berkeley students.
+        org_link: https://bsc.coop/about-us/our-mission
+        color: 7287ed
+        banner_image: projects/bsc.png
+        full_description: |
+          Our Project
+          -----------
+          The goal of our project is to build a work shift management mobile application that will allow Cal co-op students to submit their shift preferences, view assigned tasks, and submit proof upon completion. It will also allow admin to assign tasks to students and track their progress. We aim to streamline BSC’s task tracking to replace an outdated process and reduce their logistical burden. 
+
       # 2021-22
       alemany:
-        status: current
+        status: past
         title: Friends of Alemany Farm
         short_summary: >
           Alemany Farm is an unassuming urban farm tucked away in San Francisco. By growing 20,000lbs of food annually and making it available to food-insecure individuals for free, Alemany Farm enhances the food security of its local community. The farm employs sustainable farming practices and emphasizes the importance of respecting the biodiversity of its land.
@@ -20,7 +73,7 @@ en:
           We are building a mobile app to allow orchard staff and volunteers to record and view a tree's location and history so that they can better provide for the community.
 
       siren:
-        status: current
+        status: past
         title: SIREN
         short_summary: >
           Services, Immigrant Rights and Education Network (SIREN) is a nonprofit organization committed to empowering low-income immigrants and refugees through community education and organizing, leadership development, policy advocacy, and civic engagement and legal services. Their work hopes to foster a new America where immigrants and refugees are successfully integrated to society and where the human rights of all people are honored. 
@@ -33,7 +86,7 @@ en:
           We are building a multilingual mobile application that allows immigrant and refugees to upload and access their legal information. The project seeks to support the day to day operations of SIREN staff and attorneys for handling potential clients.
       
       sundayfriends:
-        status: current
+        status: past
         title: Sunday Friends
         short_summary: >
           Sunday Friends is a nonprofit providing programs for families in need in San Jose. Sunday Friends empowers families to break the generational cycle of poverty by fostering positive development in children while educating and guiding parents to support their children’s life success. They offer a unique, supportive economic environment in which families work together to earn basic necessities, discover inner strengths and self-worth, and know the satisfaction that comes from contributing to their community.
@@ -46,7 +99,7 @@ en:
           We are creating a web platform and mobile app for Sunday Friends that allow families to better track their progress and help staff to more effectively guide families towards economic mobility.
 
       iteam:
-        status: current
+        status: past
         title: Integration
         short_summary: >
           Integration (”I-team”) is a team dedicated to ensuring the success of project delivery. Our goal is to make sure all of Blueprint's projects make it into production! I-team works with non-profits from past projects to support their transition towards the ability to independently maintain their newly built applications. I-team also creates sustainable practice for app deployment in current and future projects.

@@ -72,22 +72,22 @@ section.application-process-section
           .timeline-row-title Blueprint Games
           .timeline-row-date = t ".application_timeline.bp_games_date"
           .timeline-row-description = t ".application_timeline.bp_games"
-      / Build with Blueprint
+      / Meet the Club
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
-          .timeline-row-title Build with Blueprint
-          .timeline-row-date = t ".application_timeline.tech_round_date"
-          .timeline-row-description = t ".application_timeline.tech_round"
-      / Meet the Club
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+      / Build with Blueprint
       .timeline-row
         .num-col
           .timeline-num 05
         .text-col
-          .timeline-row-title Meet the Club
-          .timeline-row-date = t ".application_timeline.meet_the_club_date"
-          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+          .timeline-row-title Build with Blueprint
+          .timeline-row-date = t ".application_timeline.tech_round_date"
+          .timeline-row-description = t ".application_timeline.tech_round"
 
   .container.marginTop-xxl#designer-application-process
     h2.static-page-header.marginBot-sm Designer Application Process
@@ -169,23 +169,23 @@ section.application-process-section
                 = link_to "Start Application", new_student_application_path, class: "bp-btn"
               - else
                 .timeline-row-notice = raw t ".application_timeline.application_notice"
-
-      / Meet the Club
+      / Interview
       .timeline-row
         .num-col
           .timeline-num 03
         .text-col
-          .timeline-row-title Meet the Club
-          .timeline-row-date = t ".application_timeline.meet_the_club_date"
-          .timeline-row-description = raw t ".application_timeline.meet_the_club"
-      / Interview
+          .timeline-row-title External Interviews
+          .timeline-row-date = t ".application_timeline.external_interviews_date"
+          .timeline-row-description = raw t ".application_timeline.external_interviews"
+      / Meet the Club
       .timeline-row
         .num-col
           .timeline-num 04
         .text-col
-          .timeline-row-title External Interviews
-          .timeline-row-date = t ".application_timeline.external_interviews_date"
-          .timeline-row-description = raw t ".application_timeline.external_interviews"
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+        
 
 / Decision Criteria
 section.application-decision-criteria-section#decision-criteria

@@ -11,7 +11,7 @@ namespace :students do
     air_emails = air_apps.map { |app| app[:email] }
 
     # options: application_type_dev_des_ex, application_type
-    application_roles = "application_type"
+    application_roles = "application_type_dev_des_ex"
 
     db_apps.each do |app|
       app_params = {
@@ -25,26 +25,26 @@ namespace :students do
         "Applied before?": app.response_to("applied_before") == "Yes" ? "Yes" : "No",
         "Semesters applied": app.response_to("semesters_applied_before").present? ? app.response_to("semesters_applied_before") : "n/a",
         "Application type": app.response_to(application_roles),
-        # "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
+        "Preferred role": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
         
         # "MTC Availability": app.response_to("available_for_meet_the_club").strip,
-        "[Designer Only] Background": app.response_to("sp22_designer_question"),
-        "[External Only] Background": app.response_to("sp22_external_experience_question"),
+        # "[Designer Only] Background": app.response_to("sp22_designer_question"),
+        "[External Only] Background": app.response_to("fa22_external_experience_question"),
 
         "Time Commitment Acknowledgement": app.response_to("time_commitment_acknowledgement") && "Yes",
         
-        "Mission First": app.response_to("sp22_mission_first"),
-        "Perpetual Growth": app.response_to("sp22_perpetual_growth"),
-        "Always Innovate": app.response_to("sp22_always_innovate"),
+        "Mission First": app.response_to("fa22_mission_first"),
+        "Perpetual Growth": app.response_to("fa22_perpetual_growth"),
+        "Always Innovate": app.response_to("fa22_always_innovate"),
 
         "Optional Background Question": app.response_to("background_question"),
-        "Project Link": app.response_to("sp21_project_link"),
+        "Project Link": app.response_to("fa22_project_link"),
 
         "Heard about Blueprint from": app.response_to("heard_from"),
         "Survey Notice": app.response_to("survey_notice"),
       }
 
-      if app.response_to("sp22_available_for_bp_games") == true
+      if app.response_to("fa22_available_for_bp_games") == true
         app_params["BP Games Availability"] = "Yes"
       end
 

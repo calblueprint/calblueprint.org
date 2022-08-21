@@ -1,13 +1,4 @@
-section.banner-section
-  .banner-container
-    div.banner-row
-      p.main-banner
-        = t ".banner"
-      = link_to nonprofits_apply_path, class: "banner-link"
-        | Apply 
-        span.fa.fa-angle-right
-
-= render "navbar", className: "nav-home", animate: true
+= render "navbar", className: "nav-white", animate: true
 = render "with_mailchimp_js"
 
 /! Facebook Pixel Code
@@ -56,21 +47,26 @@ section.projects-section
       span.fa.fa-angle-right
 
   .projects-container
-    = link_to project_path("alemany")
-      .project-item#alemany
-        .project-img.img-container: img src=image_url("projects/alemany.png") alt="" /
-        h4 Friends of Alemany Farm
-        p Growing food security and educating San Francisco residents about how they can become their own food producers.
-    = link_to project_path("siren")
-      .project-item#siren
-        .project-img.img-container: img src=image_url("projects/siren.png") alt="" /
-        h4 SIREN
-        p Empowering low-income immigrants and refugees through legal services and community education.
-    = link_to project_path("sundayfriends")
-      .project-item#sundayfriends
-        .project-img.img-container: img src=image_url("projects/sundayfriends.png") alt="" /
-        h4 Sunday Friends
-        p Seeking to end the generational cycle of poverty through a unique educational model.
+    = link_to project_path("cnsc")
+      .project-item#cnsc
+        .project-img.img-container: img src=image_url("projects/cnsc.png") alt="" /
+        h4 Chinese Newcomers Service Center
+        p Providing multilingual services that help Chinese Immigrants adapt to life in the United States.
+    = link_to project_path("v4v")
+      .project-item#v4v
+        .project-img.img-container: img src=image_url("projects/v4v.png") alt="" /
+        h4 Vouchers for Veggies
+        p Increasing access to healthy and affordable foods for low-income individuals and families by providing free vouchers for fruit and vegetables.
+    = link_to project_path("culturalsurvival")
+      .project-item#culturalsurvival
+        .project-img.img-container: img src=image_url("projects/culturalsurvival.png") alt="" /
+        h4 Cultural Survival
+        p Advocating for Indigenous Peoples' rights and supporting Indigenous communities’ self-determination, cultures, and political resilience.
+    = link_to project_path("bsc")
+      .project-item#bsc
+        .project-img.img-container: img src=image_url("projects/bsc.png") alt="" /
+        h4 Berkeley Student Cooperative
+        p Providing a quality, low-cost, cooperative housing community to university students who might not otherwise be able to afford a university education.
 
 section.involve-section
   .container
@@ -84,7 +80,7 @@ section.involve-section
           | Learn More
           span.fa.fa-angle-right
       .image.img-container.marginLeftRight-xl
-        img src=image_url("home/group_photo_2019.jpg") alt=""/
+        img src=image_url("home/group_photo_2021.jpg") alt=""/
 
     .involve-container.npo-involve
       .image.img-container.marginLeftRight-xl

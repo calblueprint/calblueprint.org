@@ -15,16 +15,16 @@
   p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
-    strong.apply-page-due< Friday, January 28th at 11:59 pm.
+    strong.apply-page-due< Thursday, September 1st at 11:59 pm.
 
   p.static-page-desc.marginBot-md
     = raw t ".developer_info"
 
   p.static-page-desc.marginBot-md
-    = raw t ".external_info"
+    = raw t ".designer_info"
 
   p.static-page-desc.marginBot-md
-    = raw t ".designer_info"
+    = raw t ".external_info"
 
   p.static-page-desc
     | If you have any questions, please contact us at <a href="team@calblueprint.org">team@calblueprint.org</a>.
@@ -42,6 +42,7 @@
 
         h3.apply-page-more-questions Short Answer Questions
         p.static-page-desc These questions help us get to know you and your connection to our mission!
+        p.static-page-desc Note: Please do not copy/paste your college essays.
 
         -  @student_application.responses.select {|r| r.question.question_category == "short_answer"}.each do |r|
           = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
@@ -54,7 +55,7 @@
 
         - if @student_application.responses.select {|r| r.question.question_category == "more_questions"}.count > 0
           h3.apply-page-more-questions Additional Info
-          p.static-page-desc All recruitment events will offer both in-person and remote options.
+          / p.static-page-desc All recruitment events will offer both in-person and remote options.
           -  @student_application.responses.select {|r| r.question.question_category == "more_questions"}.each do |r|
             = render partial: 'questions/' + r.question.question_type, locals: {response: r, question: r.question, form: form}
         h3.apply-page-more-questions Thanks so much for taking the time to complete our application! We look forward to learning more about you.
@@ -63,10 +64,8 @@
 
 javascript:
   $('.student_application_responses_semesters_applied_before').hide()
-  $('.student_application_responses_sp22_available_for_bp_games').hide()
-  $('.student_application_responses_sp22_designer_question').hide()
-  $('.student_application_responses_sp22_external_role_question').hide()
-  $('.student_application_responses_sp22_external_experience_question').hide()
+  $('.student_application_responses_fa22_available_for_bp_games').hide()
+  $('.student_application_responses_fa22_external_experience_question').hide()
   
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_time_commitment_acknowledgement').is(':checked'));
 
@@ -97,22 +96,38 @@ javascript:
     }
   });
 
+  // Role single select
   $("input[type=radio][name='student_application[responses][application_type]']").change(function() {
     if ($(this).val() == 'Developer') {
-      $('.student_application_responses_sp22_available_for_bp_games').show()
-      $('.student_application_responses_sp22_designer_question').hide()
-    $('.student_application_responses_sp22_external_role_question').hide()
-      $('.student_application_responses_sp22_external_experience_question').hide()
+      $('.student_application_responses_fa22_available_for_bp_games').show()
+      $('.student_application_responses_fa22_external_experience_question').hide()
     } else if ($(this).val() == 'Designer') {
       $('.student_application_responses_sp22_designer_question').show()
-      $('.student_application_responses_sp22_available_for_bp_games').hide()
+      $('.student_application_responses_fa22_available_for_bp_games').hide()
       $('.student_application_responses_sp22_external_role_question').hide()
-      $('.student_application_responses_sp22_external_experience_question').hide()
+      $('.student_application_responses_fa22_external_experience_question').hide()
     } else {
       $('.student_application_responses_sp22_external_role_question').show()
-      $('.student_application_responses_sp22_external_experience_question').show()
+      $('.student_application_responses_fa22_external_experience_question').show()
       $('.student_application_responses_sp22_designer_question').hide()
-      $('.student_application_responses_sp22_available_for_bp_games').hide()
+      $('.student_application_responses_fa22_available_for_bp_games').hide()
+    }
+  });
+
+  // Role Multiselect
+  $("input[type=radio][name='student_application[responses][application_type_dev_des_ex]']").change(function() {
+    if ($(this).val().includes('Developer')) {
+      $('.student_application_responses_fa22_available_for_bp_games').show()
+    } else {
+      $('.student_application_responses_fa22_available_for_bp_games').hide()
+    }
+    if ($(this).val().includes('External')) {
+      $('.student_application_responses_fa22_external_experience_question').show()
+    } else {
+      $('.student_application_responses_fa22_external_experience_question').hide()
+    }
+    if ($(this).val().includes('External')) {
+      // no applicable design question FA2022.
     }
   });
 

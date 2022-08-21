@@ -25,10 +25,10 @@ en:
     ops: &ops
       role: "VP of Operations"
 
-    leader: &leader #kept for legacy circa 2021
+    leader: &leader #returned to "Project Leaders" with the phasing out of Tech Leads Fa2022
       role: "Project Leader"
 
-    pm: &pm
+    pm: &pm #kept for legacy Sp 2022
       role: "Project Manager"
 
     tl: &tl
@@ -125,26 +125,26 @@ en:
       email: "jkeating0002@berkeley.edu"
       <<: *ops
 
-    # Project Managers
+    # Project Leads
     - first_name: "Albert" #developer
       last_name: "Liu"
       email: "alberliu@berkeley.edu"
-      <<: *pm
+      <<: *leader
 
     - first_name: "Noah" #developer
       last_name: "Hernandez"
       email: "noahh_@berkeley.edu"
-      <<: *pm
+      <<: *leader
 
     - first_name: "Gregoria" #developer
       last_name: "Millensifer"
       email: "gregoriiaaa@berkeley.edu"
-      <<: *pm
+      <<: *leader
 
     - first_name: "Sofia" #developer
       last_name: "Howard-Jimenez"
       email: "howard.sofia@berkeley.edu"
-      <<: *pm
+      <<: *leader
 
     # Tech Leads
 
@@ -209,7 +209,7 @@ en:
 
     - first_name: "Akshay"
       last_name: "Thakur"
-      email: "gakshaythakur@berkeley.edu"
+      email: "akshaythakur@berkeley.edu"
       <<: *developer
 
     - first_name: "Kenneth"

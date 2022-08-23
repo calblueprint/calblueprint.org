@@ -159,9 +159,9 @@ en:
       email: "kennychi@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Annie"
-      last_name: "Huo"
-      email: "anniehuo@berkeley.edu"
+    - first_name: "Jay"
+      last_name: "Kudva"
+      email: "jkudva@berkeley.edu"
       <<: *external_team
 
     - first_name: "Andrew" #tl
@@ -242,6 +242,11 @@ en:
       email: "jgersbach@berkeley.edu"
       <<: *developer
 
+    - first_name: "Annie"
+      last_name: "Huo"
+      email: "anniehuo@berkeley.edu"
+      <<: *developer
+
     # Mentors
 
     # Other positions:
@@ -310,11 +315,6 @@ en:
       email: "tiffanywang@berkeley.edu"
       linkedin: "wtiffany"
       <<: *tech
-
-    - first_name: "Jay"
-      last_name: "Kudva"
-      email: "jkudva@berkeley.edu"
-      <<: *external_team
 
     - first_name: "Nerissa"
       last_name: "Hsieh"

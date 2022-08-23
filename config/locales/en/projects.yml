@@ -56,7 +56,7 @@ en:
         full_description: |
           Our Project
           -----------
-          The goal of our project is to build a work shift management mobile application that will allow Cal co-op students to submit their shift preferences, view assigned tasks, and submit proof upon completion. It will also allow admin to assign tasks to students and track their progress. We aim to streamline BSC’s task tracking to replace an outdated process and reduce their logistical burden. 
+          The goal of our project is to build a work shift management web application that will allow co-op students to submit their shift preferences, view assigned tasks, and submit proof upon completion. It will also allow admin to assign tasks to students and track their progress. We aim to streamline BSC’s task tracking to replace an outdated process and reduce their logistical burden. 
 
       # 2021-22
       alemany:

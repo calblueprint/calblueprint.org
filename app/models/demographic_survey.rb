@@ -23,7 +23,7 @@ class DemographicSurvey < ApplicationRecord
   belongs_to :semester
   has_and_belongs_to_many :ethnicities
 
-  enum applicant_type: { developer: 0, designer: 1, external: 2 }
+  enum applicant_type: { Developer: 0, Designer: 1, External: 2, DevDes: 3, DevEx: 4, DesEx: 5, DevDesEx: 6 }
 
   validate :at_least_one_gender
   validate :at_least_one_race

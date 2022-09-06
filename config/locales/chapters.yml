@@ -31,8 +31,8 @@ en:
           url: "https://website.sdwight.workers.dev/"
           image: "chapters/alabama.png"
         - name: University of Colorado Boulder
-          description: We are currently in the process of establishing in CU Boulder 💕
-          url: ""
+          description: Blueprint Boulder is our first chapter in the Rockies, established in 2020 💕
+          url: "https://blueprintboulder.org"
           image: "chapters/colorado.png"
 
       why-blueprint:

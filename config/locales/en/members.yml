@@ -169,6 +169,16 @@ en:
       email: "awang4@berkeley.edu"
       <<: *external_team
 
+    - first_name: "Sarah"
+      last_name: "Peng"
+      email: "sarah.peng@berkeley.edu"
+      <<: *external_team
+
+    - first_name: "Katy"
+      last_name: "Nguyen"
+      email: "katynguyen@berkeley.edu"
+      <<: *external_team
+
     # Designers
 
     - first_name: "Danielle"
@@ -181,6 +191,21 @@ en:
       email: "cecilia.gao3@berkeley.edu"
       <<: *designer
 
+    - first_name: "Esther"
+      last_name: "Lee"
+      email: "estherlee@berkeley.edu"
+      <<: *designer
+
+    - first_name: "Manan"
+      last_name: "Singh"
+      email: "manansingh08_@berkeley.edu"
+      <<: *designer
+
+    - first_name: "Evan"
+      last_name: "Quan"
+      email: "evan.quan@berkeley.edu"
+      <<: *designer
+
     # Developers
     - first_name: "Sami" #external-team
       last_name: "Oh"
@@ -190,11 +215,6 @@ en:
     - first_name: "Danashi"
       last_name: "Messele"
       email: "danashimessele@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Manaal"
-      last_name: "Siddiqui"
-      email: "manaal@berkeley.edu"
       <<: *developer
 
     - first_name: "Nikki"
@@ -224,17 +244,12 @@ en:
 
     - first_name: "Andrei"
       last_name: "Tan"
-      email: "ManTan.875@berkeley.edu"
+      email: "mantan.875@berkeley.edu"
       <<: *developer
 
     - first_name: "Charles"
       last_name: "Ming"
       email: "charlesming@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Yulin"
-      last_name: "Li"
-      email: "yulinli@berkeley.edu"
       <<: *developer
 
     - first_name: "James"
@@ -245,6 +260,61 @@ en:
     - first_name: "Annie"
       last_name: "Huo"
       email: "anniehuo@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Miha"
+      last_name: "Bhaskaran"
+      email: "athmiha@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Allison"
+      last_name: "Hong"
+      email: "allisonhong1023@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Steven"
+      last_name: "Huang"
+      email: "huangsteven@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Mia"
+      last_name: "Chou"
+      email: "Miachou@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Emily"
+      last_name: "Sunaryo"
+      email: "eadorasunaryo@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Folasade"
+      last_name: "Oloye"
+      email: "foloye@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Stephanie"
+      last_name: "Wong"
+      email: "stwong2@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Alvaro"
+      last_name: "Ortiz"
+      email: "varortz@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Ethan"
+      last_name: "Auyeung"
+      email: "ethanauyeung@berkeley.edu"
+      <<: *developer
+
+    - first_name: "David"
+      last_name: "Qing"
+      email: "davidqing@berkeley.edu"
+      <<: *developer
+    
+    - first_name: "Sauhard"
+      last_name: "Jain"
+      email: "sauhard@berkeley.edu"
       <<: *developer
 
     # Mentors
@@ -325,6 +395,16 @@ en:
       last_name: "Yong"
       email: "micahtyong@berkeley.edu"
       <<: *tech
+
+    - first_name: "Yulin"
+      last_name: "Li"
+      email: "yulinli@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Manaal"
+      last_name: "Siddiqui"
+      email: "manaal@berkeley.edu"
+      <<: *developer
 
     - first_name: "Eileen"
       last_name: "Liu"

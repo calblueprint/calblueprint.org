@@ -279,7 +279,7 @@ en:
 
     - first_name: "Mia"
       last_name: "Chou"
-      email: "Miachou@berkeley.edu"
+      email: "miachou@berkeley.edu"
       <<: *developer
 
     - first_name: "Emily"

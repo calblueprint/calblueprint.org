@@ -169,6 +169,13 @@ en:
       email: "awang4@berkeley.edu"
       <<: *external_team
 
+    - first_name: "Franco" #tech project leader i-team developer tech
+      last_name: "Monterrosa"
+      email: "francotorium@gmail.com"
+      linkedin: "christopherfm"
+      website: "christopher.fm"
+      <<: *external_team
+
     - first_name: "Sarah"
       last_name: "Peng"
       email: "sarah.peng@berkeley.edu"
@@ -470,13 +477,6 @@ en:
       last_name: "Novales"
       email: "allynovales@berkeley.edu"
       <<: *external
-
-    - first_name: "Franco" #tech project leader i-team developer
-      last_name: "Monterrosa"
-      email: "francotorium@gmail.com"
-      linkedin: "christopherfm"
-      website: "christopher.fm"
-      <<: *tech
 
     - first_name: "Susan" #project leader
       last_name: "Lin"

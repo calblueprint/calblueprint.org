@@ -169,13 +169,6 @@ en:
       email: "awang4@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Franco" #tech project leader i-team developer tech
-      last_name: "Monterrosa"
-      email: "francotorium@gmail.com"
-      linkedin: "christopherfm"
-      website: "christopher.fm"
-      <<: *external_team
-
     - first_name: "Sarah"
       last_name: "Peng"
       email: "sarah.peng@berkeley.edu"
@@ -222,11 +215,6 @@ en:
     - first_name: "Danashi"
       last_name: "Messele"
       email: "danashimessele@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Nikki"
-      last_name: "Suzani"
-      email: "nikkisuzani@berkeley.edu"
       <<: *developer
 
     - first_name: "Selene"
@@ -329,6 +317,18 @@ en:
     # Other positions:
 
   alumni:
+    - first_name: "Franco" #tech project leader i-team developer tech
+      last_name: "Monterrosa"
+      email: "francotorium@gmail.com"
+      linkedin: "christopherfm"
+      website: "christopher.fm"
+      <<: *external_team
+
+    - first_name: "Nikki"
+      last_name: "Suzani"
+      email: "nikkisuzani@berkeley.edu"
+      <<: *developer
+
     - first_name: "Sonja" #vpt
       last_name: "Johanson"
       email: "johanson@berkeley.edu"

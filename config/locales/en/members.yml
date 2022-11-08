@@ -247,11 +247,6 @@ en:
       email: "charlesming@berkeley.edu"
       <<: *developer
 
-    - first_name: "James"
-      last_name: "Gersbach"
-      email: "jgersbach@berkeley.edu"
-      <<: *developer
-
     - first_name: "Annie"
       last_name: "Huo"
       email: "anniehuo@berkeley.edu"
@@ -327,6 +322,11 @@ en:
     - first_name: "Nikki"
       last_name: "Suzani"
       email: "nikkisuzani@berkeley.edu"
+      <<: *developer
+
+    - first_name: "James"
+      last_name: "Gersbach"
+      email: "jgersbach@berkeley.edu"
       <<: *developer
 
     - first_name: "Sonja" #vpt

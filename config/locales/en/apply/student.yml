@@ -11,7 +11,7 @@ en:
         As a member, you will join a family of fellow students working to use our education
         and skills to make the world a better place.
       applications_closed: >
-        Our student application for the Fall 2022 semester is now closed. Sign up for our mailing list or follow our <a href="https://www.facebook.com/CalBlueprint/" target="_blank" rel="noopener noreferrer">Facebook page</a> to stay up to date on next semester’s applications!
+        Our student application for the Spring 2023 semester will open on Wednesday, January 18th, and close on Thursday, January 26th at 11:59 AM PDT (noon, NOT midnight). Sign up for our mailing list or follow our <a href="https://www.facebook.com/CalBlueprint/" target="_blank" rel="noopener noreferrer">Facebook page</a> to stay up to date!
       developer_description: Learn what it means to be a developer <strong>👉 <a href="https://go.calblueprint.org/developer-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/developer-role</a> 👈</strong>
       designer_description: Learn what it means to be a designer <strong>👉 <a href="https://go.calblueprint.org/designer-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/designer-role</a> 👈</strong>
       external_description: Learn what it means to be on external <strong>👉 <a href="https://go.calblueprint.org/external-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/external-role</a> 👈</strong>
@@ -19,34 +19,34 @@ en:
         infosession:
           title: Infosession Series
           description: >
-            There will be multiple virtual infosessions from Saturday, August 27th to Wednesday, August 31st. These sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
-            Take a look at our <a href="https://calblueprint.notion.site/Blueprint-Fall-22-Infosession-7657db9ac3f6407999576977b60ab5a3">infosession schedule</a>.
+            We will host a general in-person infosession on Friday 1/20, and there will be multiple virtual infosessions on Saturday 1/21 and Sunday 1/22. These sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
+            Take a look at our <a href="https://go.calblueprint.org/infosession">infosession schedule</a>.
           detail: >
             Visit 👉 bit.ly/bp-infosessions-about 👈 to sign up and learn more!
           notice: Infosession Facebook event will be posted soon!
-        application_date: Thursday, September 1st, 11:59 PM PDT
+        application_date: Thursday January 26th, 11:59 AM PDT
         application: >
-          The application includes 3 short response questions to help us understand your connection to
-          Blueprint's mission.
-          <strong>The application is due on September 1st, 11:59 PM PDT.</strong>
-          Decisions will be emailed after this round on September 3rd by 10 PM.
+          The application includes 3 short response questions to help us understand your connection to Blueprint's mission and values.
+          <strong>The application is due on January 26th, 11:59 AM PDT (noon, NOT midnight).</strong>
+          Decisions will be released via email on January 27th by 11 PM.
+          Note that all applications are reviewed after the deadline, so there's no advantage to submitting early.
         application_notice: >
-          Student applications will be open on Wednesday, August 24.
-        bp_games_date: September 4th
+          Student applications will be open on Wednesday, January 18th.
+        bp_games_date: Saturday, January 28th
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
           critically.
           It will simulate working on a Blueprint project team and the collaborative nature of being a developer.
           This round is by invitation only. Time and location will be emailed to invited candidates.
-          Decisions after this round will be emailed on September 5th by midnight.
-        tech_round_date: September 7th & 8th
+          Decisions after this round will be released via email on January 29th by midnight.
+        tech_round_date: February 1st - 3rd
         tech_round: >
-          A 1 hour technical challenge to give you a chance to showcase your technical resourcefulness, growth, and adaptability. It will be kicked off with an introductory workshop on September 6th.
+          A 1-hour technical challenge to give you a chance to showcase your technical resourcefulness, growth, and adaptability.
           This round is by invitation only.
-        meet_the_club_date: September 6th & 7th
+        meet_the_club_date: Tuesday, January 31st & Wednesday, February 1st
         meet_the_club: >
           Meet the Club is an event for you to get to know and chat with
-          <a href="/about#team">our membership</a> in a casual setting! This event
+          <a href="/about#team">our members</a> in a casual setting! This event
           is by invitation only.
         designer_interviews_date: September 6th & 7th
         designer_interviews: >
@@ -56,9 +56,9 @@ en:
           Building on top of your work from the interview, this submission will give you a chance to showcase your ability to iterate and your visual design skills. The prompt will be covered during the interview.
         designer_not_accepted: >
           We are not accepting any designers this semester 😞. Check back next semester!
-        external_interviews_date: September 5th - September 8th
+        external_interviews_date: January 29th - February 2nd
         external_interviews: >
-          We will be conducting interviews for the external team throughout the entire week. Invited candidates will receive an interview sign-up link via email.
+          We will be conducting interviews for the external team throughout the entire week. This event is by invitation only. Invited candidates will receive an interview sign-up link via email.
         interview_date: None
         interview: >
           The final step in the application process &mdash; we really want to feel your passion for social

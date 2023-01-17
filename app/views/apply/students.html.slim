@@ -28,10 +28,10 @@ section.static-page-hero.student-apply-hero
       ul
         li.page-nav-link section-name="developer-application-process"
           | Developer
-        li.page-nav-link section-name="designer-application-process"
-          | Designer
         li.page-nav-link section-name="external-application-process"
           | External
+        li.page-nav-link section-name="designer-application-process"
+          | Designer
         li.page-nav-link section-name="decision-criteria"
           = t ".decision_criteria.title"
         li.page-nav-link section-name="faqs"
@@ -89,6 +89,50 @@ section.application-process-section
           .timeline-row-date = t ".application_timeline.tech_round_date"
           .timeline-row-description = t ".application_timeline.tech_round"
 
+  .container.marginTop-xxl#external-application-process
+    h2.static-page-header.marginBot-sm External Application Process
+    / TODO: uncomment after updating doc
+    p.static-page-desc.marginBot-lg
+      = raw t ".external_description"
+    .student-timeline
+      / Infosession
+      .timeline-row
+        .num-col
+          .timeline-num 01
+        .text-col
+          .timeline-row-title #{t ".application_timeline.infosession.title"}
+          .timeline-row-description = raw t ".application_timeline.infosession.description"
+      / Application
+      .timeline-row
+        .num-col
+          .timeline-num 02
+        .text-col
+          .timeline-row-title Applications Due
+          .timeline-row-date = t ".application_timeline.application_date"
+          .timeline-row-description = raw t ".application_timeline.application"
+          .timeline-row-btn
+            .timeline-row-btn
+              - if @settings.dev_app_open
+                = link_to "Start Application", new_student_application_path, class: "bp-btn"
+              - else
+                .timeline-row-notice = raw t ".application_timeline.application_notice"
+      / Interview
+      .timeline-row
+        .num-col
+          .timeline-num 03
+        .text-col
+          .timeline-row-title External Interviews
+          .timeline-row-date = t ".application_timeline.external_interviews_date"
+          .timeline-row-description = raw t ".application_timeline.external_interviews"
+      / Meet the Club
+      .timeline-row
+        .num-col
+          .timeline-num 04
+        .text-col
+          .timeline-row-title Meet the Club
+          .timeline-row-date = t ".application_timeline.meet_the_club_date"
+          .timeline-row-description = raw t ".application_timeline.meet_the_club"
+        
   .container.marginTop-xxl#designer-application-process
     h2.static-page-header.marginBot-sm Designer Application Process
     / TODO: uncomment after updating doc
@@ -142,50 +186,6 @@ section.application-process-section
             .timeline-row-title Design Challenge Due
             .timeline-row-date = t ".application_timeline.designer_challenge_date"
             .timeline-row-description = t ".application_timeline.designer_challenge"
-  .container.marginTop-xxl#external-application-process
-    h2.static-page-header.marginBot-sm External Application Process
-    / TODO: uncomment after updating doc
-    p.static-page-desc.marginBot-lg
-      = raw t ".external_description"
-    .student-timeline
-      / Infosession
-      .timeline-row
-        .num-col
-          .timeline-num 01
-        .text-col
-          .timeline-row-title #{t ".application_timeline.infosession.title"}
-          .timeline-row-description = raw t ".application_timeline.infosession.description"
-      / Application
-      .timeline-row
-        .num-col
-          .timeline-num 02
-        .text-col
-          .timeline-row-title Applications Due
-          .timeline-row-date = t ".application_timeline.application_date"
-          .timeline-row-description = raw t ".application_timeline.application"
-          .timeline-row-btn
-            .timeline-row-btn
-              - if @settings.dev_app_open
-                = link_to "Start Application", new_student_application_path, class: "bp-btn"
-              - else
-                .timeline-row-notice = raw t ".application_timeline.application_notice"
-      / Interview
-      .timeline-row
-        .num-col
-          .timeline-num 03
-        .text-col
-          .timeline-row-title External Interviews
-          .timeline-row-date = t ".application_timeline.external_interviews_date"
-          .timeline-row-description = raw t ".application_timeline.external_interviews"
-      / Meet the Club
-      .timeline-row
-        .num-col
-          .timeline-num 04
-        .text-col
-          .timeline-row-title Meet the Club
-          .timeline-row-date = t ".application_timeline.meet_the_club_date"
-          .timeline-row-description = raw t ".application_timeline.meet_the_club"
-        
 
 / Decision Criteria
 section.application-decision-criteria-section#decision-criteria

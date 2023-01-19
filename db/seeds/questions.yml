@@ -197,7 +197,7 @@ fa22_always_innovate:
 
 background_question:
   title: "[Optional] Is there any additional information or circumstances we should know to better understand you? (200 words max)"
-  hint: This can be anything related to your background, identity, current/previous access to relevant resources, etc. In reviewing your application, we want to ensure that we understand and respect your unique background, experiences, and perspectives.
+  hint: This can be anything related to your background, identity, current/previous access to relevant resources, etc. When reviewing your application, we want to ensure that we understand and respect your unique background, experiences, and perspectives.
   question_category: background
   required: false
   question_type: long_text

@@ -229,3 +229,34 @@ fa22:
 
     - heard_from
     - survey_notice
+
+sp23:
+  season: "spring"
+  year: "2023"
+  questions:
+    - name
+    - pronouns
+    - email
+    - phone
+    - year
+    - major
+    - applied_before
+    - semesters_applied_before
+    - application_type_dev_des_ex
+    - preferred_role
+
+    - sp23_available_for_bp_games
+    - sp23_external_role_question
+    - sp23_external_experience_question
+
+
+    - sp23_mission_first
+    - sp23_perpetual_growth
+    - sp23_always_innovate
+
+    - background_question
+    - sp23_project_link
+
+    - time_commitment_acknowledgement
+    - heard_from
+    - survey_notice

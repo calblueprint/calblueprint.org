@@ -15,13 +15,14 @@
   p.static-page-desc.marginBot-md
     = t '.banner'
     | The application is due on
-    strong.apply-page-due< Thursday, September 1st at 11:59 pm.
+    strong.apply-page-due< Thursday, January 26th at 11:59 AM PDT (noon, NOT midnight).
 
   p.static-page-desc.marginBot-md
     = raw t ".developer_info"
 
-  p.static-page-desc.marginBot-md
-    = raw t ".designer_info"
+  // Designer info hidden for SP23
+  // p.static-page-desc.marginBot-md
+  //  = raw t ".designer_info"
 
   p.static-page-desc.marginBot-md
     = raw t ".external_info"
@@ -64,8 +65,10 @@
 
 javascript:
   $('.student_application_responses_semesters_applied_before').hide()
-  $('.student_application_responses_fa22_available_for_bp_games').hide()
-  $('.student_application_responses_fa22_external_experience_question').hide()
+  $('.student_application_responses_sp23_available_for_bp_games').hide()
+  $('.student_application_responses_sp23_external_role_question').hide()
+  $('.student_application_responses_sp23_external_experience_question').hide()
+  $('.student_application_responses_preferred_role').hide()
   
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_time_commitment_acknowledgement').is(':checked'));
 
@@ -96,7 +99,7 @@ javascript:
     }
   });
 
-  // Role single select
+  // Role single select (DEPRECATED)
   $("input[type=radio][name='student_application[responses][application_type]']").change(function() {
     if ($(this).val() == 'Developer') {
       $('.student_application_responses_fa22_available_for_bp_games').show()
@@ -116,18 +119,25 @@ javascript:
 
   // Role Multiselect
   $("input[type=radio][name='student_application[responses][application_type_dev_des_ex]']").change(function() {
+    if ($(this).val().includes('/')) {
+      $('.student_application_responses_preferred_role').show()
+    } else {
+      $('.student_application_responses_preferred_role').hide()
+    }
     if ($(this).val().includes('Developer')) {
-      $('.student_application_responses_fa22_available_for_bp_games').show()
+      $('.student_application_responses_sp23_available_for_bp_games').show()
     } else {
-      $('.student_application_responses_fa22_available_for_bp_games').hide()
+      $('.student_application_responses_sp23_available_for_bp_games').hide()
     }
     if ($(this).val().includes('External')) {
-      $('.student_application_responses_fa22_external_experience_question').show()
+      $('.student_application_responses_sp23_external_experience_question').show()
+      $('.student_application_responses_sp23_external_role_question').show()
     } else {
-      $('.student_application_responses_fa22_external_experience_question').hide()
+      $('.student_application_responses_sp23_external_experience_question').hide()
+      $('.student_application_responses_sp23_external_role_question').hide()
     }
-    if ($(this).val().includes('External')) {
-      // no applicable design question FA2022.
+    if ($(this).val().includes('Designer')) {
+      // no applicable design question SP23.
     }
   });
 

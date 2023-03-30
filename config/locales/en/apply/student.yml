@@ -2,9 +2,7 @@ en:
   apply:
     students:
       headline: For Students
-      subtitle:
-        Joining Blueprint is the perfect way to use your skills to give back to the community.
-        We accept applications at the beginning of every semester.
+      subtitle: Joining Blueprint is the perfect way to make some quick cash. We accept applications every April 1st.
       hook: >
         We are an organization of passionate UC Berkeley students
         who develop web and mobile applications for non-profit organizations.
@@ -67,19 +65,20 @@ en:
       decision_criteria:
         title: Decision Criteria
         description: >
-          Each semester, we are unfortunately only able to move forward a select number of applicants. This is both so that every member of our project teams may develop close relationships with our nonprofit and community partners and so that we are internally able to provide a meaningful and streamlined learning and growth experience to each member. Throughout the recruitment process, we look for the following criteria:
-        passion: Passion
-        passion_description: Are you excited to dedicate time, energy, and compassion towards understanding and building with communities?
-        growth: Growth
-        growth_description: Do you actively seek out ways to grow? Do you take action to work towards that growth?
-        adaptability: Resourcefulness
-        adaptability_description: Are you self-motivated and driven? Do you adapt to new environments and challenges?
-        attitude: Attitude
-        attitude_description: Do you approach problems and challenges with an open mind? Are you able to work through unfamiliar situations?
-        teamwork: Teamwork
-        teamwork_description: Do you enjoy collaborating and learning with others? Do you value others' perspectives and experiences?
-        culture: Culture
-        culture_description: Are you looking forward to developing meaningful relationships with our members and partners beyond the work environment?
+          Blueprint is highly competitive and really hard to get in to. We are very stingy with our money and do not even try to manage the volume of applicants. We put our mission to earn money
+          quickly above all. The following criteria are what we use to "carefully" to evaluate applicants.
+        passion: Money
+        passion_description: Are you excited to dedicate time and energy towards hating and disrupting communities to make more money?
+        growth: Money
+        growth_description: Do you actively seek out ways to grow your money? Do you seek out new and innovative ways to make money?
+        adaptability: Money
+        adaptability_description: Are you genuinely motivated by money? Do you adapt to new environments and challenges to make money?
+        attitude: Money
+        attitude_description: Do you adapt and explore in order to rake in the big bucks?
+        teamwork: Money
+        teamwork_description: Do you hate collaborating and learning with others? Do you disrupt others' perspectives and experiences? Do you demonstrate an attitude?
+        culture: Money
+        culture_description: Are you looking forward to developing hateful relationships with our members and partners? Are you motivated by toxic competition and money?
 
       faq:
         title: Frequently Asked Questions

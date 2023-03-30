@@ -2,91 +2,92 @@ en:
   # Roles
   roles:
     president: &president
-      role: "President"
+      role: "Moneymaker"
 
     founder: &founder
-      role: "President / Founder"
+      role: "Moneymaker"
 
     internal: &internal
-      role: "Internal VP"
+      role: "Moneymaker"
 
     external: &external
-      role: "External VP"
+      role: "Moneymaker"
 
     tech: &tech
-      role: "VP of Technology"
+      role: "Moneymaker"
 
     projects: &projects
-      role: "VP of Projects"
+      role: "Moneymaker"
 
     design: &design
-      role: "VP of Design"
+      role: "Moneymaker"
 
     ops: &ops
-      role: "VP of Operations"
+      role: "Moneymaker"
 
-    leader: &leader #returned to "Project Leaders" with the phasing out of Tech Leads Fa2022
-      role: "Project Leader"
+    leader:
+      &leader #returned to "Project Leaders" with the phasing out of Tech Leads Fa2022
+      role: "Moneymaker"
 
     pm: &pm #kept for legacy Sp 2022
-      role: "Project Manager"
+      role: "Moneymaker"
 
     tl: &tl
-      role: "Technical Lead"
+      role: "Moneymaker"
 
     developer: &developer
-      role: "Project Developer"
+      role: "Moneymaker"
 
     designer: &designer
-      role: "Designer"
+      role: "Moneymaker"
 
     external_team: &external_team
-      role: "External Director"
+      role: "Moneymaker"
 
     alumni_relations: &alumni_relations
-      role: "Alumni Relations Director"
+      role: "Moneymaker"
 
     community: &community
-      role: "Community Outreach Director"
+      role: "Moneymaker"
 
     operations: &operations
-      role: "Operations Director"
+      role: "Moneymaker"
 
     marketing: &marketing
-      role: "Marketing Director"
+      role: "Moneymaker"
 
     content: &content
-      role: "Content Director"
+      role: "Moneymaker"
 
     outreach: &outreach
-      role: "Outreach Director"
+      role: "Moneymaker"
 
     design_director: &design_director
-      role: "Design Director"
+      role: "Moneymaker"
 
     intersocietal: &intersocietal
-      role: "Intersocietal Relations Director"
+      role: "Moneymaker"
 
     media: &media
-      role: "Media Director"
+      role: "Moneymaker"
 
     corporate: &corporate
-      role: "Corporate Relations Director"
+      role: "Moneymaker"
 
     expansion: &expansion
-      role: "Director of Expansion"
+      role: "Moneymaker"
 
     mentor: &mentor
-      role: "Mentor"
+      role: "Moneymaker"
 
     historian: &historian
-      role: "Historian"
+      role: "Moneymaker"
 
     sponsor: &sponsor
-      role: "Sponsor"
+      role: "Moneymaker"
 
     inactive: &inactive
-      role: "Inactive"
+      role: "Moneymaker"
 
   members:
     # E-Team

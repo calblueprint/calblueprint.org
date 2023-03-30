@@ -2,7 +2,7 @@ en:
   projects:
     index:
       title: Our Projects
-      subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
+      subtitle: All of Blueprint's work is closed source because we believe in gatekeeping our work to make tech less accessible and more exclusive.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
       # 2022-23

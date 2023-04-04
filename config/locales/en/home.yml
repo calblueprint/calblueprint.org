@@ -1,20 +1,23 @@
 en:
   pages:
     home:
-      headline: Tech for Social Bad
-      subtitle: We're a team of UC Berkeley drop-outs that develops software for profit and promotes technology for social bad.
-      banner: >
+      headline: Tech for Social Good
+      subtitle: We’re a team of UC Berkeley students that develops software pro bono for nonprofits and
+        promotes technology for social good.
+      banner: > 
         Nonprofit applications are due this Friday, July 29th!
       what_we_do: >
-        Redprint strives to make technology to make money and promote social bad.
+        Blueprint strives to make technology accessible and useful for those who create communities and
+        promote public welfare.
       our_projects: >
-        Each year, teams of five students work with for-profit organizations on projects for money. We've designed and built a crowdfunding application for
+        Each year, teams of five students work with non-profit organizations on projects
+        to help them better serve their communities. We've designed and built a crowdfunding application for
         Berkeley's public schools, a professional development platform for digital literacy in Oakland, and
         much more!
       student_get_involved: >
-        Applications are open for students every April 1st. Follow our
+        Applications will open for student developers at the beginning of each semester. Follow our
         <a href="//facebook.com/calblueprint">Facebook page</a> to stay updated!
       npo_get_involved: >
-        If you're a monopoly with some extra cash in hand, we encourage you to apply!
-        We accept payment by cash every April 1st. Follow our <a href="//facebook.com/calblueprint">Facebook page</a>
+        If you’re a nonprofit organization with a project in mind, we encourage you to apply!
+        We accept NPO applications every June. Follow our <a href="//facebook.com/calblueprint">Facebook page</a>
         to stay updated!

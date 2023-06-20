@@ -169,6 +169,26 @@ en:
       email: "katynguyen@berkeley.edu"
       <<: *external_team
 
+    - first_name: "Haroon"
+      last_name: "Muwonge"
+      email: "haroonm@berkeley.edu"
+      <<: *external_team
+
+    - first_name: "Gina"
+      last_name: "Choi"
+      email: "ginac@berkeley.edu"
+      <<: *external_team
+
+    - first_name: "Joshua"
+      last_name: "Chou"
+      email: "joshchou@berkeley.edu"
+      <<: *external_team
+
+    - first_name: "Rahi"
+      last_name: "Hazra"
+      email: "rahi.hazra@gmail.com"
+      <<: *external_team
+
     # Designers
 
     - first_name: "Danielle"
@@ -192,6 +212,11 @@ en:
       <<: *designer
 
     # Developers
+    - first_name: "Albert" # leader
+      last_name: "Liu"
+      email: "alberliu@berkeley.edu"
+      <<: *developer
+
     - first_name: "Sami" #external-team
       last_name: "Oh"
       email: "sami_oh@berkeley.edu"
@@ -210,11 +235,6 @@ en:
     - first_name: "Akshay"
       last_name: "Thakur"
       email: "akshaythakur@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Kenneth"
-      last_name: "Martinez"
-      email: "kenmartinez@berkeley.edu"
       <<: *developer
 
     - first_name: "Andrei"
@@ -267,20 +287,48 @@ en:
       email: "ethanauyeung@berkeley.edu"
       <<: *developer
 
-    # Mentors
-    - first_name: "Albert" # leader
-      last_name: "Liu"
-      email: "alberliu@berkeley.edu"
-      <<: *mentor
+    - first_name: "Casey"
+      last_name: "Lei"
+      email: "caseylei@berkeley.edu"
+      <<: *developer
 
-    - first_name: "Jacob" # tech
-      last_name: "Kim"
-      email: "jacobjk01@berkeley.edu"
-      <<: *mentor
+    - first_name: "Celine"
+      last_name: "Choi"
+      email: "celinejwchoi@berkeley.edu"
+      <<: *developer
 
+    - first_name: "Kevin"
+      last_name: "Cai"
+      email: "kevincai@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Marcos"
+      last_name: "Hernandez"
+      email: "marcosh@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Pragya"
+      last_name: "Kallanagoudar"
+      email: "pkallanagoudar@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Ronnie"
+      last_name: "Beggs"
+      email: "ronald.beggs@berkeley.edu"
+      <<: *developer
     # Other positions:
 
   alumni:
+    - first_name: "Jacob" # tech
+      last_name: "Kim"
+      email: "jacobjk01@berkeley.edu"
+      <<: *tech
+
+    - first_name: "Kenneth"
+      last_name: "Martinez"
+      email: "kenmartinez@berkeley.edu"
+      <<: *developer
+      
     - first_name: "Noah" #developer
       last_name: "Hernandez"
       email: "noahh_@berkeley.edu"

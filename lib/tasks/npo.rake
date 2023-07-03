@@ -70,7 +70,6 @@ namespace :npo do
         airtable_npo["Project Key Features"] = app.key_features
         airtable_npo["Project Problem History"] = app.history
         airtable_npo["Project Future Plans"] = app.future_plans
-        airtable_npo["Project Sustainability and Relevance"] = app.target_audience
         airtable_npo["Point of Contact"] = app.legal
         airtable_npo["Unlocked Phase 2"] = true
 

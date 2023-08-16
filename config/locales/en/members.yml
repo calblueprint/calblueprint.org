@@ -317,10 +317,10 @@ en:
       email: "miachou@berkeley.edu"
       <<: *designer
 
-    - first_name: "Albert" # leader
+    - first_name: "Albert" # leader, developer
       last_name: "Liu"
       email: "alberliu@berkeley.edu"
-      <<: *developer
+      <<: *leader
 
     - first_name: "Sami" #external-team
       last_name: "Oh"

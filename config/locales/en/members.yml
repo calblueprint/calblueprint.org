@@ -259,38 +259,38 @@ en:
       <<: *developer
 
     # Social Members (Established Fa23 for members not graduated but "inactive")
-    - first_name: "Kabir" #pm designer
+    - first_name: "Kabir" #vpp pm designer
       last_name: "Goel"
       email: "kabirgoel@berkeley.edu"
       <<: *social
 
-    - first_name: "Charles" #developer
+    - first_name: "Charles" #vpo developer
       last_name: "Ming"
       email: "charlesming@berkeley.edu"
       <<: *social
 
-    - first_name: "Esther"
+    - first_name: "Esther" #designer
       last_name: "Lee"
       email: "estherlee@berkeley.edu"
       <<: *social
 
-    - first_name: "Mia" #developer
+    - first_name: "Mia" #developer designer
       last_name: "Chou"
       email: "miachou@berkeley.edu"
       <<: *social
 
-    - first_name: "Selene"
+    - first_name: "Selene" #developer
       last_name: "Huang"
       email: "selene.huang@berkeley.edu"
       <<: *social
 
-    - first_name: "Tiffany" #tech
+    - first_name: "Tiffany" #vpt
       last_name: "Wang"
       email: "tiffanywang@berkeley.edu"
       linkedin: "wtiffany"
       <<: *social
 
-    - first_name: "Nikki"
+    - first_name: "Nikki" #developer
       last_name: "Suzani"
       email: "nikkisuzani@berkeley.edu"
       <<: *social
@@ -338,10 +338,10 @@ en:
       email: "jkudva@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Albert" # leader
+    - first_name: "Albert" # developer
       last_name: "Liu"
       email: "alberliu@berkeley.edu"
-      <<: *developer
+      <<: *leader
 
     - first_name: "Sami" #external-team
       last_name: "Oh"

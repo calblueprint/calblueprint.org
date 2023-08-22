@@ -89,6 +89,9 @@ en:
     inactive: &inactive
       role: "Inactive"
 
+    social: &social
+      role: "Social"
+
   members:
     # E-Team
     - first_name: "Kelly" #design vpd
@@ -254,6 +257,44 @@ en:
       last_name: "Beggs"
       email: "ronald.beggs@berkeley.edu"
       <<: *developer
+
+    # Social Members (Established Fa23 for members not graduated but "inactive")
+    - first_name: "Kabir" #vpp pm designer
+      last_name: "Goel"
+      email: "kabirgoel@berkeley.edu"
+      <<: *social
+
+    - first_name: "Charles" #vpo developer
+      last_name: "Ming"
+      email: "charlesming@berkeley.edu"
+      <<: *social
+
+    - first_name: "Esther" #designer
+      last_name: "Lee"
+      email: "estherlee@berkeley.edu"
+      <<: *social
+
+    - first_name: "Mia" #developer designer
+      last_name: "Chou"
+      email: "miachou@berkeley.edu"
+      <<: *social
+
+    - first_name: "Selene" #developer
+      last_name: "Huang"
+      email: "selene.huang@berkeley.edu"
+      <<: *social
+
+    - first_name: "Tiffany" #vpt
+      last_name: "Wang"
+      email: "tiffanywang@berkeley.edu"
+      linkedin: "wtiffany"
+      <<: *social
+
+    - first_name: "Nikki" #developer
+      last_name: "Suzani"
+      email: "nikkisuzani@berkeley.edu"
+      <<: *social
+
     # Other positions:
 
   alumni:
@@ -277,16 +318,6 @@ en:
       email: "jkeating0002@berkeley.edu"
       <<: *internal
 
-    - first_name: "Kabir" #pm designer
-      last_name: "Goel"
-      email: "kabirgoel@berkeley.edu"
-      <<: *projects
-
-    - first_name: "Charles" #developer
-      last_name: "Ming"
-      email: "charlesming@berkeley.edu"
-      <<: *ops
-
     - first_name: "Evan"
       last_name: "Quan"
       email: "evan.quan@berkeley.edu"
@@ -307,17 +338,7 @@ en:
       email: "jkudva@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Esther"
-      last_name: "Lee"
-      email: "estherlee@berkeley.edu"
-      <<: *designer
-
-    - first_name: "Mia" #developer
-      last_name: "Chou"
-      email: "miachou@berkeley.edu"
-      <<: *designer
-
-    - first_name: "Albert" # leader, developer
+    - first_name: "Albert" # developer
       last_name: "Liu"
       email: "alberliu@berkeley.edu"
       <<: *leader
@@ -325,11 +346,6 @@ en:
     - first_name: "Sami" #external-team
       last_name: "Oh"
       email: "sami_oh@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Selene"
-      last_name: "Huang"
-      email: "selene.huang@berkeley.edu"
       <<: *developer
 
     - first_name: "Kenneth"
@@ -368,11 +384,6 @@ en:
       linkedin: "christopherfm"
       website: "christopher.fm"
       <<: *external_team
-
-    - first_name: "Nikki"
-      last_name: "Suzani"
-      email: "nikkisuzani@berkeley.edu"
-      <<: *developer
 
     - first_name: "James"
       last_name: "Gersbach"
@@ -436,12 +447,6 @@ en:
       last_name: "Zavala"
       email: "22szavala@berkeley.edu"
       <<: *developer
-
-    - first_name: "Tiffany" #tech
-      last_name: "Wang"
-      email: "tiffanywang@berkeley.edu"
-      linkedin: "wtiffany"
-      <<: *tech
 
     - first_name: "Nerissa"
       last_name: "Hsieh"

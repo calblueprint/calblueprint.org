@@ -84,7 +84,7 @@ application_type_dev_des_ex:
   hint: "Your written application will be considered for all roles selected, but you will be moved forward for only one role."
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,External,Developer/External
+  choices: Developer,Designer,External,Developer/External,Developer/Designer,Designer/External
 
 preferred_role:
   title: Which of the selected roles do you prefer?

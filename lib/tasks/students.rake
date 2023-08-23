@@ -28,27 +28,27 @@ namespace :students do
         "[Preferred] Application type": app.response_to("preferred_role").present? ? app.response_to("preferred_role") : app.response_to(application_roles),
         
         # "MTC Availability": app.response_to("available_for_meet_the_club").strip,
-        # "[Designer Only] Background": app.response_to("sp22_designer_question"),
-        "[External Only] Background": app.response_to("sp23_external_experience_question"),
+        "[Designer Only] Background": app.response_to("fa23_designer_question"),
+        "[External Only] Background": app.response_to("fa23_external_experience_question"),
 
         "Time Commitment Acknowledgement": app.response_to("time_commitment_acknowledgement") && "Yes",
         
-        "Mission First": app.response_to("sp23_mission_first"),
-        "Perpetual Growth": app.response_to("sp23_perpetual_growth"),
-        "Always Innovate": app.response_to("sp23_always_innovate"),
+        "Mission First": app.response_to("fa23_mission_first"),
+        "Perpetual Growth": app.response_to("fa23_perpetual_growth"),
+        "Always Innovate": app.response_to("fa23_always_innovate"),
 
-        "Optional Background Question": app.response_to("background_question"),
-        "Project Link": app.response_to("sp23_project_link"),
+        "Optional Background Question": app.response_to("fa23_background_question"),
+        "Project Link": app.response_to("fa23_project_link"),
 
         "Heard about Blueprint from": app.response_to("heard_from"),
         "Survey Notice": app.response_to("survey_notice"),
       }
 
-      if app.response_to("sp23_available_for_bp_games") == true
+      if app.response_to("fa23_available_for_bp_games") == true
         app_params["BP Games Availability"] = "Yes"
       end
 
-      if app.response_to("sp23_external_role_question").present?
+      if app.response_to("fa23_external_role_question").present?
         app_params["[External Only] Position"] = app.response_to("sp23_external_role_question")
       end
 

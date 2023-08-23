@@ -31,7 +31,7 @@ en:
         inclusivity: |
           How is your organization working to be inclusive, both internally and externally? How is your organization supporting, encouraging, and respecting diverse voices and perspectives?
         key_features: |
-          What are some of the key features of a project that you believe would solve this problem? Walk us through the flow of someone using this project.
+          What are some of the key features of a project that you believe would solve this problem? Consider the flow of someone using this project.
         legal: Do you have at least one point of contact within your organization who will consistently work with our project teams throughout the year?
         purpose: What is your organization’s mission statement?
         short_summary: To begin, please give us a two sentence summary of a project you'd like Blueprint to build for your organization.
@@ -46,6 +46,6 @@ en:
     "no": "No"
     required:
       html: <span class="required-symbol" title="required">*</span>
-      mark: '*'
+      mark: "*"
       text: required
     "yes": "Yes"

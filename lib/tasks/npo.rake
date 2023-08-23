@@ -13,7 +13,7 @@ namespace :npo do
     db_forms = NonprofitInterestForm.where(semester: settings.current_semester)
     db_apps = NonprofitApplication.where(semester: settings.current_semester, state: "submitted")
     db_npos = db_forms.map { |form| form.nonprofit }
-    db_npos_signedup = Nonprofit.where(created_at: settings.current_semester.created_at..Date.today)
+    db_npos_signedup = Nonprofit.where(created_at: settings.current_semester.created_at..DateTime.now)
     db_npos = (db_npos + db_npos_signedup).uniq
 
     airtable_npos_emails = airtable_npos.map { |npo| npo[:email] }
@@ -70,7 +70,6 @@ namespace :npo do
         airtable_npo["Project Key Features"] = app.key_features
         airtable_npo["Project Problem History"] = app.history
         airtable_npo["Project Future Plans"] = app.future_plans
-        airtable_npo["Project Sustainability and Relevance"] = app.target_audience
         airtable_npo["Point of Contact"] = app.legal
         airtable_npo["Unlocked Phase 2"] = true
 

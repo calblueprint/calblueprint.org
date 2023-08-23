@@ -84,7 +84,7 @@ application_type_dev_des_ex:
   hint: "Your written application will be considered for all roles selected, but you will be moved forward for only one role."
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,External,Developer/External
+  choices: Developer,Designer,External,Developer/External
 
 preferred_role:
   title: Which of the selected roles do you prefer?
@@ -99,6 +99,75 @@ application_type:
   question_category: general
   question_type: multiple_choice_radio
   choices: Developer,Designer,External
+
+# Fall 23 Questions
+fa23_available_for_bp_games:
+  title: "[Required for Developer Applicants only] I acknowledge that I have filled out the form below to indicate my availability on Sunday, September 3rd for Blueprint Games."
+  hint: Fill out the form at <a href="https://go.calblueprint.org/games-availability" target="_blank">https://go.calblueprint.org/games-availability</a>. Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.
+  question_category: general
+  question_type: checkbox
+  required: false
+
+fa23_mission_first:
+  title: Discuss a social cause or problem you care about and the challenges surrounding this problem. What makes it difficult to address and why is it meaningful to you? (200 words max)
+  hint: "This does NOT need to relate to one of Blueprint’s current or past projects, or to a cause that is directly tech-aligned. While we don’t discourage talking about personal experiences, please note that your responses will be read by various members during our application process."
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+fa23_perpetual_growth:
+  title: In what specific ways do you want to grow as a person right now and what do you hope to gain? How are you moving towards this growth? Have there been challenges you have faced along the way? (200 words max)
+  hint: ""
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+fa23_always_innovate:
+  title: "Tell us about something you’re proud of accomplishing. What was the process like and what were the difficulties? What was the best part? Feel free to think outside the box - this can be about literally anything. (200 words max)"
+  hint: "This does not have to be technical in nature. Don’t include project links in this section—there will be space for that later. Please don’t treat this prompt like a resume section!"
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 150
+
+fa23_background_question:
+  title: "[Optional] Is there any additional information or circumstances we should know about to understand you better? (200 words max)"
+  hint: This can be anything related to your identity or current/previous access to relevant resources. In reading your application, we want to ensure that we understand and respect your background, experiences, and perspectives.
+  question_category: background
+  required: false
+  question_type: long_text
+  word_limit: 200
+
+fa23_designer_question:
+  title: "[Required for Designer Applicants only] Please briefly describe any prior relevant experience in UI/UX, visual, or other design disciplines that might prepare you for this role. (100 words max)"
+  hint: This semester, we are looking for applicants with some experience with design skills and tools (particularly Figma). Feel free to use bullet points, but do not include links or a portfolio in this question. (For more information, visit <a href="https://go.calblueprint.org/designer-role" target="_blank">https://go.calblueprint.org/designer-role</a>.)
+  question_category: general
+  question_type: long_text
+  required: false
+  word_limit: 100
+
+fa23_external_role_question:
+  title: "[Required for External Applicants only] What position within External are you applying for this semester?"
+  hint: You will be considered for both types of positions, but please choose your preferred position. We will slightly adjust the focus of your interview based on your preferred position.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Design & Marketing
+  required: false
+
+fa23_external_experience_question:
+  title: "[Required for External Applicants only] Please briefly describe any prior relevant experience in the role you have selected. (100 words max)"
+  hint: For Design & Marketing, feel free to share any experience in UI/UX, graphic design, social media marketing, etc. Bullet points are okay!
+  question_category: general
+  question_type: long_text
+  required: false
+  word_limit: 100
+
+fa23_project_link:
+  title: "[Optional] Submit a link to something you've worked on."
+  hint: We want to be as equitable as possible in this process, and we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else! If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio.
+  question_category: background
+  required: false
+  question_type: short_text
+  placeholder: "https://...."
 
 # Spring 23 questions
 sp23_available_for_bp_games:

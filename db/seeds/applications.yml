@@ -249,7 +249,6 @@ sp23:
     - sp23_external_role_question
     - sp23_external_experience_question
 
-
     - sp23_mission_first
     - sp23_perpetual_growth
     - sp23_always_innovate
@@ -260,3 +259,35 @@ sp23:
     - time_commitment_acknowledgement
     - heard_from
     - survey_notice
+
+fa23:
+  season: "fall"
+  year: "2023"
+  questions:
+    - name
+    - pronouns
+    - email
+    - phone
+    - year
+    - major
+    - applied_before
+    - semesters_applied_before
+    - application_type_dev_des_ex
+    - preferred_role
+
+    - fa23_available_for_bp_games
+    - fa23_external_role_question
+    - fa23_external_experience_question
+    - fa23_designer_question
+
+    - fa23_mission_first
+    - fa23_perpetual_growth
+    - fa23_always_innovate
+
+    - fa23_background_question
+    - fa23_project_link
+
+    - time_commitment_acknowledgement
+    - heard_from
+    - survey_notice
+

@@ -90,7 +90,7 @@ preferred_role:
   title: Which of the selected roles do you prefer?
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,External
+  choices: Developer,External
   required: false
 
 application_type:

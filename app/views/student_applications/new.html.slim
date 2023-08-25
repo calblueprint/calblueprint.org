@@ -67,8 +67,8 @@ javascript:
   $('.student_application_responses_fa23_available_for_bp_games').hide()
   $('.student_application_responses_fa23_external_role_question').hide()
   $('.student_application_responses_fa23_external_experience_question').hide()
+  $('.student_application_responses_fa23_designer_question').hide()
   $('.student_application_responses_preferred_role').hide()
-  $('.student_application_responses_preferred_role').c
   
   $('input[type="submit"]').prop("disabled", !$('#student_application_responses_time_commitment_acknowledgement').is(':checked'));
 
@@ -126,18 +126,21 @@ javascript:
     }
     if ($(this).val().includes('Developer')) {
       $('.student_application_responses_fa23_available_for_bp_games').show()
+      $('label[for="student_application_responses_preferred_role_developer"]').show()
     } else {
       $('.student_application_responses_fa23_available_for_bp_games').hide()
     }
     if ($(this).val().includes('External')) {
       $('.student_application_responses_fa23_external_experience_question').show()
       $('.student_application_responses_fa23_external_role_question').show()
+      $('label[for="student_application_responses_preferred_role_external"]').show()
     } else {
       $('.student_application_responses_fa23_external_experience_question').hide()
       $('.student_application_responses_fa23_external_role_question').hide()
     }
     if ($(this).val().includes('Designer')) {
       $('.student_application_responses_fa23_designer_question').show()
+      $('label[for="student_application_responses_preferred_role_designer"]').show()
     } else {
       $('.student_application_responses_fa23_designer_question').hide()
     }

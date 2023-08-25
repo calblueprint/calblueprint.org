@@ -5,9 +5,75 @@ en:
       subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
+      # 2023-24
+      impactfund:
+        status: current
+        title: Impact Fund
+        short_summary: >
+          Impact fund is a Berkeley based NPO that provides grants, advocacy, and education to support impact litigation on behalf of communities seeking economic, environmental, racial, and social justice.
+        org_link: https://www.impactfund.org/aboutus/
+        color: EE0024
+        banner_image: projects/impactfund.png
+        full_description: |
+          Our Project
+          -----------
+          The project involves creating a mobile application that equips lower-income Americans with class action lawsuit information, guidance through claims, and legal rights details. Once a user receives a class action, the app will allow them to navigate case-related information, track updates, learn about their rights, and engage with important legal processes. We will also create an admin facing web application to allow administrators to upload new cases and update current case information. The project hopes to break the disconnect between lower income Americans and critical class action proceedings and their legal rights by making such information readily available through a mobile application!
+
+      phs:
+        status: current
+        title: Peninsula Humane Society & SPCA
+        short_summary: >
+          Peninsula Humane Society & SCPA is dedicated to animal welfare and is one of the largest humane organizations in the US. PHS/SPCA supports animal rescue, rehabilitation, and adoption.
+        org_link: https://phs-spca.org/about/
+        color: "407300"
+        banner_image: projects/phs.png
+        full_description: |
+          Our Project
+          -----------
+          We will be building a companion application for their upcoming wildlife care facility. PHS/SPCA will use this to promote the facility to at-home users while also improving the in-person experience. The project will draw attention to their facility by allowing users to access press releases and videos on sick animals, experience virtual tours of the wildlife hospital, learn about their on-site endangered animal breeding programs, and be notified of seasonal events, volunteer opportunities, and docent tours.
+
+      shantiproject:
+        status: current
+        title: Shanti Project
+        short_summary: >
+          Shanti Project is a nonprofit organization that offers support to underserved communities throughout the city of San Francisco. For over 50 years, Shanti Project has provided dozens of systems and programs centered around health and quality of life to ensure that those in need are not isolated and have someone to rely on.
+        org_link: https://www.shanti.org/about-us/
+        color: 005283
+        banner_image: projects/shantiproject.png
+        full_description: |
+          Our Project
+          -----------
+          Our project aims to support the PAWS program: a program for those in need to receive support for their pets. We will build a client-facing e-commerce web application with accessibility features for users to purchase and schedule product deliveries. This application will streamline the purchase and delivery of products to those in need and allow admins to keep track of inventory and order statuses, significantly improving the current system and increasing the availability of services throughout the Bay Area.
+
+      gwn:
+        status: current
+        title: Girls Write Now
+        short_summary: >
+          Girls Write Now (GWN) is a national nonprofit that breaks down barriers of gender, race, age and poverty to mentor and train the next generation of writers and leaders for life.
+        org_link: https://girlswritenow.org/about/
+        color: FF3721
+        banner_image: projects/gwn.png
+        full_description: |
+          Our Project
+          -----------
+          The project involves creating a mobile application to make GWN’s archive of thousands of stories accessible to their wider community. The app will allow users to browse the latest published stories, get personalized recommendations, and engage with other readers over content. We aim to utilize personalization and a sleek user experience to boost the public’s engagement with the incredible work GWN’s mentees produce.
+
+      ijp:
+        status: current
+        title: ABA Immigration Justice Project
+        short_summary: >
+          The Immigration Justice Project (IJP) provides pro bono legal services to those in active immigration proceedings in San Diego, who do not have the right to government-funded counsel (by Section 292 of the Immigration and Nationality Act).
+        org_link: https://www.americanbar.org/groups/public_interest/immigration/projects_initiatives/immigration-justice-project/
+        color: 00B2E3
+        banner_image: projects/ijp.png
+        full_description: |
+          Our Project
+          -----------
+          The project is building a web portal for pro-bono attorneys and volunteers (translators) to be matched to active cases being handled by the IJP. Attorneys and volunteers will use the portal to browse through cases and indicate their interest, and IJP administrators will create and delete cases, and assign interested attorneys and volunteers to them. The portal will also handle onboarding the attorneys and volunteers, which includes signing confidentiality forms and agreements, scheduling interviews, and training with LegalServer.
+
       # 2022-23
       cnsc:
-        status: current
+        status: past
         title: Chinese Newcomers Service Center
         short_summary: >
           Chinese Newcomers Service Center (CNSC) provides multilingual services that help Chinese Immigrants adapt to life in the United States. CNSC Serves as a bridge between the two cultures, enhancing the physical, mental, social, and economic well-being of immigrants, thus facilitating their efforts to become self-sufficient members of the community.
@@ -17,10 +83,10 @@ en:
         full_description: |
           Our Project
           -----------
-          This project involves building a multilingual mobile application that allows Chinese immigrants to browse and apply to jobs. The app will also support employer and admin permissions for posting and updating opportunities. We aim to reduce the limitations of WeChat and spreadsheets currently used by CNSC. 
+          This project involves building a multilingual mobile application that allows Chinese immigrants to browse and apply to jobs. The app will also support employer and admin permissions for posting and updating opportunities. We aim to reduce the limitations of WeChat and spreadsheets currently used by CNSC.
 
       v4v:
-        status: current
+        status: past
         title: Vouchers 4 Veggies
         short_summary: >
           Vouchers 4 Veggies (V4V) is a San Francisco based food program that aims to increase access to healthy and affordable foods for low-income individuals and families by providing free vouchers for fruit and vegetables. V4V partners with dozens of local grocers and farmers markets to address the unique food insecurity issues in San Francisco.
@@ -30,10 +96,10 @@ en:
         full_description: |
           Our Project
           -----------
-          The project involves building a mobile application that allows vendors to submit voucher data via QR code. This app will allow administrators to see voucher data and update vendor invoices. This project will help streamline logistical operations for vendors and V4V admin, letting them better focus on people facing food insecurity. 
+          The project involves building a mobile application that allows vendors to submit voucher data via QR code. This app will allow administrators to see voucher data and update vendor invoices. This project will help streamline logistical operations for vendors and V4V admin, letting them better focus on people facing food insecurity.
 
       culturalsurvival:
-        status: current
+        status: past
         title: Cultural Survival
         short_summary: >
           Cultural Survival is an Indigenous-led NGO that advocates for Indigenous Peoples' rights and supports Indigenous communities’ self-determination, cultures, and political resilience. For the past 50 years, Cultural Survival has partnered with Indigenous communities across 70+ countries, providing support through grants, advocacy, and community building.
@@ -43,10 +109,10 @@ en:
         full_description: |
           Our Project
           -----------
-          The goal of our project is to build an offline-friendly mobile application to store indigenous audio content and community resources. The app will allow users to search, download, and listen to podcasts in their chosen language, aiming to replace Cultural Survival’s current method of distributing podcasts via USBs. 
+          The goal of our project is to build an offline-friendly mobile application to store indigenous audio content and community resources. The app will allow users to search, download, and listen to podcasts in their chosen language, aiming to replace Cultural Survival’s current method of distributing podcasts via USBs.
 
       bsc:
-        status: current
+        status: past
         title: Berkeley Student Cooperative
         short_summary: >
           For nearly 90 years, the Berkeley Student Cooperative (BSC) has provided a quality, low-cost, cooperative housing community to university students who might not otherwise be able to afford a university education. BSC strongly prompts the values of anti-discrimination and access to education; it currently provides meals and/or housing to over 1300 Berkeley students.
@@ -56,7 +122,7 @@ en:
         full_description: |
           Our Project
           -----------
-          The goal of our project is to build a work shift management web application that will allow co-op students to submit their shift preferences, view assigned tasks, and submit proof upon completion. It will also allow admin to assign tasks to students and track their progress. We aim to streamline BSC’s task tracking to replace an outdated process and reduce their logistical burden. 
+          The goal of our project is to build a work shift management web application that will allow co-op students to submit their shift preferences, view assigned tasks, and submit proof upon completion. It will also allow admin to assign tasks to students and track their progress. We aim to streamline BSC’s task tracking to replace an outdated process and reduce their logistical burden.
 
       # 2021-22
       alemany:
@@ -76,7 +142,7 @@ en:
         status: past
         title: SIREN
         short_summary: >
-          Services, Immigrant Rights and Education Network (SIREN) is a nonprofit organization committed to empowering low-income immigrants and refugees through community education and organizing, leadership development, policy advocacy, and civic engagement and legal services. Their work hopes to foster a new America where immigrants and refugees are successfully integrated to society and where the human rights of all people are honored. 
+          Services, Immigrant Rights and Education Network (SIREN) is a nonprofit organization committed to empowering low-income immigrants and refugees through community education and organizing, leadership development, policy advocacy, and civic engagement and legal services. Their work hopes to foster a new America where immigrants and refugees are successfully integrated to society and where the human rights of all people are honored.
         org_link: https://www.sirenimmigrantrights.org/
         color: d43535
         banner_image: projects/siren.png
@@ -84,7 +150,7 @@ en:
           Our Project
           -----------
           We are building a multilingual mobile application that allows immigrant and refugees to upload and access their legal information. The project seeks to support the day to day operations of SIREN staff and attorneys for handling potential clients.
-      
+
       sundayfriends:
         status: past
         title: Sunday Friends

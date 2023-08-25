@@ -49,7 +49,7 @@ namespace :students do
       end
 
       if app.response_to("fa23_external_role_question").present?
-        app_params["[External Only] Position"] = app.response_to("sp23_external_role_question")
+        app_params["[External Only] Position"] = app.response_to("fa23_external_role_question")
       end
 
       # ComparisonCategory.where(semester: settings.current_semester).each do |category|

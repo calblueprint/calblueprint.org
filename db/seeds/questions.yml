@@ -127,7 +127,7 @@ fa23_always_innovate:
   hint: "This does not have to be technical in nature. Don’t include project links in this section—there will be space for that later. Please don’t treat this prompt like a resume section!"
   question_category: short_answer
   question_type: long_text
-  word_limit: 150
+  word_limit: 200
 
 fa23_background_question:
   title: "[Optional] Is there any additional information or circumstances we should know about to understand you better? (200 words max)"

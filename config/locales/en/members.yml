@@ -164,9 +164,9 @@ en:
 
     # External Team
 
-    - first_name: "Sarah"
-      last_name: "Peng"
-      email: "sarah.peng@berkeley.edu"
+    - first_name: "Allison" #developer
+      last_name: "Hong"
+      email: "allisonhong1023@berkeley.edu"
       <<: *external_team
 
     - first_name: "Haroon"
@@ -179,14 +179,14 @@ en:
       email: "ginac@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Rahi"
-      last_name: "Hazra"
-      email: "rahi.hazra@gmail.com"
+    - first_name: "Kyrene"
+      last_name: "Tam"
+      email: "kyrenetam@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Allison" #developer
-      last_name: "Hong"
-      email: "allisonhong1023@berkeley.edu"
+    - first_name: "Iris"
+      last_name: "Myung"
+      email: "irismyung@berkeley.edu"
       <<: *external_team
 
     # Designers
@@ -204,6 +204,16 @@ en:
     - first_name: "Katy" #external
       last_name: "Nguyen"
       email: "katynguyen@berkeley.edu"
+      <<: *designer
+
+    - first_name: "Brenda"
+      last_name: "Vuong"
+      email: "bqvuong30@berkeley.edu"
+      <<: *designer
+
+    - first_name: "Claire"
+      last_name: "Wang"
+      email: "clairee_wang@berkeley.edu"
       <<: *designer
 
     # Developers
@@ -255,7 +265,57 @@ en:
 
     - first_name: "Ronnie"
       last_name: "Beggs"
-      email: "ronald.beggs@berkeley.edu"
+      email: "rbeggs@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Sarah" #external
+      last_name: "Peng"
+      email: "sarah.peng@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Rahi" #external
+      last_name: "Hazra"
+      email: "rahi.hazra@gmail.com"
+      <<: *developer
+
+    - first_name: "Chris"
+      last_name: "Torres"
+      email: "christophertorres@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Buyankhuu"
+      last_name: "Tsolmonkhuu"
+      email: "buyankhuuts@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Catherine"
+      last_name: "Tan"
+      email: "ccatherinetan100222@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Jinkang"
+      last_name: "Fang"
+      email: "jinkang.fang@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Melissa"
+      last_name: "Liu"
+      email: "meiliu.13@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Philip"
+      last_name: "Ye"
+      email: "philipye@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Aditya"
+      last_name: "Pawar"
+      email: "apawar@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Inaya"
+      last_name: "Yusuf"
+      email: "inayayusuf29@berkeley.edu"
       <<: *developer
 
     # Social Members (Established Fa23 for members not graduated but "inactive")

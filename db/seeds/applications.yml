@@ -291,3 +291,34 @@ fa23:
     - heard_from
     - survey_notice
 
+sp24:
+  season: "spring"
+  year: "2024"
+  questions:
+    - name
+    - pronouns
+    - email
+    - phone
+    - year
+    - major
+    - applied_before
+    - semesters_applied_before
+    - application_type_dev_des_ex
+    - preferred_role
+
+    - sp24_available_for_bp_games
+    - sp24_external_role_question
+    - sp24_external_experience_question
+
+    - sp24_mission_first
+    - sp24_perpetual_growth
+    - sp24_always_innovate
+
+
+    - background_question
+    - sp24_project_link
+
+    - time_commitment_acknowledgement
+    - heard_from
+    - survey_notice
+

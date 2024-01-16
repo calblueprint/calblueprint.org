@@ -84,13 +84,13 @@ application_type_dev_des_ex:
   hint: "Your written application will be considered for all roles selected, but you will be moved forward for only one role."
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,Designer,External,Developer/External,Developer/Designer,Designer/External
+  choices: Developer,External,Developer/External
 
 preferred_role:
   title: Which of the selected roles do you prefer?
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,External,Designer
+  choices: Developer,External
   required: false
 
 application_type:
@@ -99,6 +99,59 @@ application_type:
   question_category: general
   question_type: multiple_choice_radio
   choices: Developer,Designer,External
+
+# Spring 24 Questions
+sp24_available_for_bp_games:
+  title: "[Required for Developer Applicants only] I acknowledge that I have filled out the form below to indicate my availability on Sunday, January 28 for Blueprint Games."
+  hint: Fill out the form at <a href="https://go.calblueprint.org/games-availability" target="_blank">https://go.calblueprint.org/games-availability</a>. Blueprint Games is an event in our developer recruitment process that you may be invited to after application decisions are released.
+  question_category: general
+  question_type: checkbox
+  required: false
+
+sp24_mission_first:
+  title: Discuss a social cause or problem and why it is meaningful to you. Why is it challenging to address this issue? (200 words max)
+  hint: "This does NOT need to relate to one of Blueprint’s current of past projects, or to a cause that is directly tech-aligned. For essays on more sensitive topics, please include a trigger warning for our application readers."
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+sp24_perpetual_growth:
+  title: In what specific ways do you want to grow as a person right now and what do you hope to gain? Have there been pivotal moments that have helped you grow? Feel free to talk about past growth and future aspirations. (200 words max)
+  hint: "We want to hear you be genuine and introspective! Please don’t feel limited to only writing about academic/career-related achievements."
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+sp24_always_innovate:
+  title: Tell us about a time that you thought outside of the box or adapted to an unfamiliar situation. What were the difficulties and what did you learn? (200 words max)
+  hint: "This does not have to be technical in nature. Feel free to talk about anything! Don’t include project links in this section—there will be space for that later. Please don’t treat this prompt like a resume section!"
+  question_category: short_answer
+  question_type: long_text
+  word_limit: 200
+
+sp24_external_role_question:
+  title: "[Required for External Applicants only] What position within External are you applying for this semester?"
+  hint: You will be considered for both types of positions, but please choose your preferred position. We will slightly adjust the focus of your interview based on your preferred position.
+  question_category: general
+  question_type: multiple_choice_radio
+  choices: Design + Marketing,Outreach + Event Planning
+  required: false
+
+sp24_external_experience_question:
+  title: "[Required for External Applicants only] Please briefly describe any prior design, marketing, outreach, and/or event planning experience. (100 words max)"
+  hint: Such experience could include graphic design, social media marketing, journalism, outreach, and more. Experience is not required, but we would like to know if you have any.
+  question_category: general
+  question_type: long_text
+  required: false
+  word_limit: 100
+
+sp24_project_link:
+  title: "[Optional] Submit a link to something you've worked on."
+  hint: We want to be as equitable as possible in this process, and we also want you to have an opportunity to submit an example of your favorite work. Feel free to link to one thing that showcases what you love to do — a favorite piece of art you've made, a past project, a SoundCloud track you created, or anything else! If you choose to link to a personal website that showcases your portfolio or technical projects, we will view the website itself as a project and not look into your full portfolio.
+  question_category: background
+  required: false
+  question_type: short_text
+  placeholder: "https://...."
 
 # Fall 23 Questions
 fa23_available_for_bp_games:

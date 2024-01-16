@@ -11,7 +11,7 @@ en:
         As a member, you will join a family of fellow students working to use our education
         and skills to make the world a better place.
       applications_closed: >
-        Our student applications for the Spring 2023 semester are now closed. Sign up for our mailing list or follow our <a href="https://www.facebook.com/CalBlueprint/" target="_blank" rel="noopener noreferrer">Facebook page</a> to stay up to date on Fall 2023 applications!
+        Our student applications for the Spring 2024 semester will open Tuesday, January 16th, and close on Thursday, January 25th at 11:59 PM PDT (midnight). Sign up for our mailing list or follow our <a href="https://www.facebook.com/CalBlueprint/" target="_blank" rel="noopener noreferrer">Facebook page</a> to stay up to date!
       developer_description: Learn what it means to be a developer <strong>👉 <a href="https://go.calblueprint.org/developer-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/developer-role</a> 👈</strong>
       designer_description: Learn what it means to be a designer <strong>👉 <a href="https://go.calblueprint.org/designer-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/designer-role</a> 👈</strong>
       external_description: Learn what it means to be on external <strong>👉 <a href="https://go.calblueprint.org/external-role" target="_blank" rel="noopener noreferrer">go.calblueprint.org/external-role</a> 👈</strong>
@@ -19,31 +19,31 @@ en:
         infosession:
           title: Infosession Series
           description: >
-            We will host a general in-person infosession on Tuesday 8/29, and there will be multiple virtual infosessions on Saturday 8/26 and Sunday 8/27. These sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
-            Take a look at our <a href="https://go.calblueprint.org/infosession">infosession schedule</a>.
+            We will host a general in-person infosession on Tuesday 1/23, and there will be multiple virtual infosessions on Saturday 1/21 and Sunday 1/22. These sessions will give you a chance to ask questions and talk to our members in a comfortable setting!
+            Take a look at our <a href="https://go.calblueprint.org/infosession">infosession schedule</a> for time and location updates.
           detail: >
             Visit 👉 bit.ly/bp-infosessions-about 👈 to sign up and learn more!
           notice: Infosession Facebook event will be posted soon!
-        application_date: Thursday August 31st, 11:59 PM PDT
+        application_date: Thursday January 25th, 11:59 PM PDT
         application: >
           The application includes 3 short response questions to help us understand your connection to Blueprint's mission and values.
-          <strong>The application is due on August 31st, 11:59 PM PDT (midnight).</strong>
-          Decisions will be released via email on September 2nd by midnight.
+          <strong>The application is due on January 25th, 11:59 PM PDT (midnight).</strong>
+          Decisions will be released via email on January 27th by midnight.
           Note that all applications are reviewed after the deadline, so there's no advantage to submitting early.
         application_notice: >
-          Student applications will be open on Wednesday, January 18th.
-        bp_games_date: Sunday, September 3rd
+          Student applications will be open on Tuesday, January 16th.
+        bp_games_date: Saturday, January 28th
         bp_games: >
           A fun, interactive teamwork session involving a series of challenges and puzzles that make you think
           critically.
           It will simulate working on a Blueprint project team and the collaborative nature of being a developer.
           This round is by invitation only. Time and location will be emailed to invited candidates.
-          Decisions after this round will be released via email on September 4th by midnight.
-        tech_round_date: September 5th - 7th
+          Decisions after this round will be released via email on January 29th by midnight.
+        tech_round_date: February 1st - 3rd
         tech_round: >
           A 1-hour technical challenge to give you a chance to showcase your technical resourcefulness, growth, and adaptability.
           This round is by invitation only.
-        meet_the_club_date: Tuesday, September 5th & Wednesday, September 6th
+        meet_the_club_date: Wednesday, January 31st & Thursday, February 1st
         meet_the_club: >
           Meet the Club is an event for you to get to know and chat with
           <a href="/about#team">our members</a> in a casual setting! This event
@@ -56,7 +56,7 @@ en:
           Building on top of your work from the interview, this submission will give you a chance to showcase your ability to iterate and your visual design skills. The prompt will be covered during the interview.
         designer_not_accepted: >
           We are not accepting any designers this semester 😞. Check back next semester!
-        external_interviews_date: September 4th - September 7th
+        external_interviews_date: January 31st - Februrary 2nd
         external_interviews: >
           We will be conducting interviews for the external team throughout the entire week. This event is by invitation only. Invited candidates will receive an interview sign-up link via email.
         interview_date: None

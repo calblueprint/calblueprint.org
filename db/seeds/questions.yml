@@ -134,7 +134,7 @@ sp24_external_role_question:
   hint: You will be considered for both types of positions, but please choose your preferred position. We will slightly adjust the focus of your interview based on your preferred position.
   question_category: general
   question_type: multiple_choice_radio
-  choices: Design + Marketing,Outreach + Event Planning
+  choices: Design/Marketing,Outreach/Event Planning
   required: false
 
 sp24_external_experience_question:

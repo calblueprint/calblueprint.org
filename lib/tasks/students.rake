@@ -40,10 +40,6 @@ namespace :students do
         "Optional Background Question": app.response_to("background_question"),
         "Project Link": app.response_to("sp24_project_link"),
 
-        "Identity Groups": app.response_to("sp24_identity_groups"),
-        "Hispanic or Latino descent": app.response_to("sp24_ethnicity"),
-        "Race": app.response_to("sp24_race"),
-
         "Heard about Blueprint from": app.response_to("heard_from"),
         "Survey Notice": app.response_to("survey_notice"),
       }

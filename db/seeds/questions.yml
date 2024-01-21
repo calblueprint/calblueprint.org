@@ -153,6 +153,29 @@ sp24_project_link:
   question_type: short_text
   placeholder: "https://...."
 
+# Spring 24 – we included a few demographics questions within the main application
+sp24_identity_groups:
+  title: "Blueprint is committed to creating an inclusive space for applicants of all backgrounds. Please select any group(s) below that you identify with."
+  question_category: background
+  required: false
+  question_type: multiple_choice_checkbox
+  choices: I am a first-generation college student,I identify as LGBTQ+ I am a transfer student,I am a veteran,I am from a low-income household
+
+
+sp24_ethnicity:
+  title: "Are you of Hispanic or Latino descent? (Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture)"
+  question_category: background
+  required: false
+  question_type: multiple_choice_radio
+  choices: Yes,No
+
+sp24_race:
+  title: "Regardless of your answer to the previous question, please select one or more of the following groups of which you identify."
+  question_category: background
+  required: false
+  question_type: multiple_choice_checkbox
+  choices: American Indian or Alaska Native,Asian,Black or African American,Native Hawaiian or Other Pacific Islander,White
+
 # Fall 23 Questions
 fa23_available_for_bp_games:
   title: "[Required for Developer Applicants only] I acknowledge that I have filled out the form below to indicate my availability on Sunday, September 3rd for Blueprint Games."

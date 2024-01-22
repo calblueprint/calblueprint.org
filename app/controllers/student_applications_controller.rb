@@ -52,6 +52,11 @@ class StudentApplicationsController < ApplicationController
 
   def student_application_params
     allowed_response_types = QuestionSemester.where(semester: @settings.current_semester).map {|x| x.question.tag.to_sym}
+    identity_groups = params['student_application']['responses']['sp24_identity_groups']
+    params['student_application']['responses']['sp24_identity_groups'] = identity_groups.join(',')
+    race = params['student_application']['responses']['sp24_race']
+    params['student_application']['responses']['sp24_race'] = race.join(',')
+    puts params
     params.require(:student_application).permit(responses: allowed_response_types).merge(
         semester: @settings.current_semester
       )

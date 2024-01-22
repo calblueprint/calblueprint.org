@@ -37,9 +37,9 @@ namespace :students do
         "Perpetual Growth": app.response_to("sp24_perpetual_growth"),
         "Always Innovate": app.response_to("sp24_always_innovate"),
 
-        "Identity Groups": app.response_to("sp24_identity_groups"),
+        "Identity Groups": app.response_to("sp24_identity_groups").split(',')[1..-1],
         "Hispanic or Latino descent": app.response_to("sp24_ethnicity"),
-        "Race": app.response_to("sp24_race"),
+        "Race": app.response_to("sp24_race").split(',')[1..-1],
         "Optional Background Question": app.response_to("background_question"),
         "Project Link": app.response_to("sp24_project_link"),
 

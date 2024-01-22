@@ -37,9 +37,6 @@ namespace :students do
         "Perpetual Growth": app.response_to("sp24_perpetual_growth"),
         "Always Innovate": app.response_to("sp24_always_innovate"),
 
-        "Identity Groups": app.response_to("sp24_identity_groups").present? ? app.response_to("sp24_identity_groups") : 'n/a',
-        "Hispanic or Latino descent": app.response_to("sp24_ethnicity").present? ? app.response_to("sp24_ethnicity") : 'n/a',
-        "Race": app.response_to("sp24_race").present? ? app.response_to("sp24_race") : 'n/a',
         "Optional Background Question": app.response_to("background_question"),
         "Project Link": app.response_to("sp24_project_link"),
 
@@ -54,6 +51,20 @@ namespace :students do
       if app.response_to("sp24_external_role_question").present?
         app_params["[External Only] Position"] = app.response_to("sp24_external_role_question")
       end
+      
+      # Added these questions later into app – putting fields directly into app_params -> rake error
+      if app.response_to("sp24_identity_groups").present?
+        app_params["Identity Groups"] = app.response_to("sp24_identity_groups")
+      end
+
+      if app.response_to("sp24_ethnicity").present?
+        app_params["Ethnicity"] = app.response_to("sp24_ethnicity")
+      end
+
+      if app.response_to("sp24_race").present?
+        app_params["Race"] = app.response_to("sp24_race")
+      end
+      
 
       # ComparisonCategory.where(semester: settings.current_semester).each do |category|
       #   puts "Finding apps with category #{category}"

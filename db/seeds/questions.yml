@@ -90,7 +90,7 @@ preferred_role:
   title: Which of the selected roles do you prefer?
   question_category: general
   question_type: multiple_choice_radio
-  choices: Developer,External
+  choices: Developer,External,Designer
   required: false
 
 application_type:
@@ -152,6 +152,28 @@ sp24_project_link:
   required: false
   question_type: short_text
   placeholder: "https://...."
+
+sp24_identity_groups:
+  title: "Blueprint is committed to creating an inclusive space for applicants of all backgrounds. Please select any group(s) below that you identify with."
+  required: false
+  choices: "first_gen|I am a first-generation college student,lgbtq|I identify as LGBTQ+,disability|I have a disability, transfer|I am a transfer student,veteran|I am a veteran,low_income_household|I am from a low-income household,underrepresented_race_ethnicity|I am from a historically underrepresented race or ethnicity within tech, underrepresented_gender|I am from a historically underrepresented gender within tech"
+  question_type: multiple_choice_checkbox
+  question_category: background
+
+
+sp24_ethnicity:
+  title: "Are you of Hispanic or Latino descent? (Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture)"
+  required: false
+  choices: Yes,No
+  question_type: multiple_choice_radio
+  question_category: background
+
+sp24_race:
+  title: "Regardless of your answer to the previous question, please select one or more of the following groups of which you identify."
+  choices: "american_indian_alaska_native|American Indian or Alaska Native,asian|Asian,black_african_american|Black or African American,hawaiian_pi|Native Hawaiian or Other Pacific Islander,white|White"
+  required: false
+  question_type: multiple_choice_checkbox
+  question_category: background
 
 # Fall 23 Questions
 fa23_available_for_bp_games:

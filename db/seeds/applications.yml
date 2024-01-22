@@ -314,11 +314,12 @@ sp24:
     - sp24_perpetual_growth
     - sp24_always_innovate
 
-
+    - sp24_identity_groups
+    - sp24_ethnicity
+    - sp24_race
     - background_question
     - sp24_project_link
 
     - time_commitment_acknowledgement
     - heard_from
     - survey_notice
-

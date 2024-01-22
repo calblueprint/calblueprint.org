@@ -54,15 +54,15 @@ namespace :students do
       
       # Added these questions later into app – putting fields directly into app_params -> rake error
       if app.response_to("sp24_identity_groups").present?
-        app_params["Identity Groups"] = app.response_to("sp24_identity_groups")
+        app_params["Identity Groups"] = app.response_to("sp24_identity_groups").split(',')[1..-1]
       end
 
       if app.response_to("sp24_ethnicity").present?
-        app_params["Ethnicity"] = app.response_to("sp24_ethnicity")
+        app_params["Ethnicity"] = app.response_to("sp24_ethnicity").split(',')[1..-1]
       end
 
       if app.response_to("sp24_race").present?
-        app_params["Race"] = app.response_to("sp24_race")
+        app_params["Race"] = app.response_to("sp24_race").split(',')[1..-1]
       end
       
 

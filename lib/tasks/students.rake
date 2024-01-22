@@ -58,7 +58,7 @@ namespace :students do
       end
 
       if app.response_to("sp24_ethnicity").present?
-        app_params["Hispanic or Latino descent"] = app.response_to("sp24_ethnicity").split(',')[1..-1]
+        app_params["Hispanic or Latino descent"] = app.response_to("sp24_ethnicity") == "Yes" ? "Yes" : "No"
       end
 
       if app.response_to("sp24_race").present?

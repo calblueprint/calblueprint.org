@@ -156,7 +156,7 @@ sp24_project_link:
 sp24_identity_groups:
   title: "Blueprint is committed to creating an inclusive space for applicants of all backgrounds. Please select any group(s) below that you identify with."
   required: false
-  choices: "first_gen|I am a first-generation college student,lgbtq|I identify as LGBTQ+,disability|I have a disability, transfer|I am a transfer student,veteran|I am a veteran,low_income_household|I am from a low-income household,underrepresented_race_ethnicity|I am from a historically underrepresented race or ethnicity within tech, underrepresented_gender|I am from a historically underrepresented gender within tech"
+  choices: "first_gen|I am a first-generation college student,lgbtq|I identify as LGBTQ+,disability|I have a disability,transfer|I am a transfer student,veteran|I am a veteran,low_income_household|I am from a low-income household,underrepresented_race_ethnicity|I am from a historically underrepresented race or ethnicity within tech,underrepresented_gender|I am from a historically underrepresented gender within tech"
   question_type: multiple_choice_checkbox
   question_category: background
 

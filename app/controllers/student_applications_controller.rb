@@ -43,7 +43,9 @@ class StudentApplicationsController < ApplicationController
       if @student_application.save
         applicant.update_attributes(name: @student_application.name)
         SendStudentApplicationEmail.execute @student_application
-        redirect_to new_demographic_survey_path, flash: { success: t('student_applications.create.success') }
+        #sp24: added demographic questions -> main
+        # redirect_to new_demographic_survey_path, flash: { success: t('student_applications.create.success') }
+        redirect_to root_path, flash: { success: t('student_applications.create.success') }
       else
         render "new"
       end

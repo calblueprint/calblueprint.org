@@ -93,107 +93,101 @@ en:
       role: "Social"
 
   members:
-    # E-Team
-    - first_name: "Kelly" #design vpd
-      last_name: "Hu"
-      email: "hukellyy@berkeley.edu"
-      <<: *president
-
-    - first_name: "Suraj" #pl developer
-      last_name: "Rao"
-      email: "suraj_rao@berkeley.edu"
-      <<: *tech
-
-    - first_name: "Annie" #developer
-      last_name: "Huo"
-      email: "anniehuo@berkeley.edu"
-      <<: *internal
-
-    - first_name: "Danashi" #developer
-      last_name: "Messele"
-      email: "danashimessele@berkeley.edu"
-      <<: *internal
-
-    - first_name: "Andrew" #tl
+    - first_name: "Andrew" #tl, external, vp external
       last_name: "Wang"
       email: "awang4@berkeley.edu"
+      <<: *president
+    
+    - first_name: "Noah" #pl developer external
+      last_name: "Hernandez"
+      email: "noahh_@berkeley.edu"
+      linkedin: "noahhernandez"
+      <<: *tech
+
+    - first_name: "Iris" #external
+      last_name: "Myung"
+      email: "irismyung@berkeley.edu"
+      <<: *internal
+
+    - first_name: "Allison" #developer external
+      last_name: "Hong"
+      email: "allisonhong1023@berkeley.edu"
       <<: *external
 
-    - first_name: "Sauhard" #developer
-      last_name: "Jain"
-      email: "sauhard@berkeley.edu"
+    - first_name: "David" # pl, developer, designer
+      last_name: "Qing"
+      email: "davidqing@berkeley.edu"
       <<: *projects
 
-    - first_name: "Steven" #developer
-      last_name: "Huang"
-      email: "huangsteven@berkeley.edu"
+    - first_name: "Celine" #developer
+      last_name: "Choi"
+      email: "celinejwchoi@berkeley.edu"
       <<: *ops
 
-    - first_name: "Danielle" #designer
-      last_name: "Wong"
-      email: "daniellenwong@berkeley.edu"
+    - first_name: "Esther" #designer
+      last_name: "Lee"
+      email: "estherlee@berkeley.edu"
       <<: *design
 
     # Project Leads
-    - first_name: "Akshay" #developer
-      last_name: "Thakur"
-      email: "akshaythakur@berkeley.edu"
+    - first_name: "Aditya"
+      last_name: "Pawar"
+      email: "apawar@berkeley.edu"
       <<: *leader
 
-    - first_name: "Andrei" #developer
-      last_name: "Tan"
-      email: "mantan.875@berkeley.edu"
+    - first_name: "Sarah" #external developer
+      last_name: "Peng"
+      email: "sarah.peng@berkeley.edu"
       <<: *leader
 
-    - first_name: "Stephanie" #developer
-      last_name: "Wong"
-      email: "stwong2@berkeley.edu"
+    - first_name: "Ronnie"
+      last_name: "Beggs"
+      email: "rbeggs@berkeley.edu"
       <<: *leader
 
-    - first_name: "Pragya" #developer
-      last_name: "Kallanagoudar"
-      email: "pkallanagoudar@berkeley.edu"
+    - first_name: "Alvaro"
+      last_name: "Ortiz"
+      email: "varortz@berkeley.edu"
       <<: *leader
 
-    - first_name: "Ethan" #developer
-      last_name: "Auyeung"
-      email: "ethanauyeung@berkeley.edu"
+    - first_name: "Buyankhuu"
+      last_name: "Tsolmonkhuu"
+      email: "buyankhuuts@berkeley.edu"
       <<: *leader
 
     # Tech Leads
 
     # External Team
-
-    - first_name: "Allison" #developer
-      last_name: "Hong"
-      email: "allisonhong1023@berkeley.edu"
+    - first_name: "Piper"
+      last_name: "Yu"
+      email: "piperyu@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Haroon"
-      last_name: "Muwonge"
-      email: "haroonm@berkeley.edu"
+    - first_name: "Sarah"
+      last_name: "Mou"
+      email: "sarahmou@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Gina"
-      last_name: "Choi"
-      email: "ginac@berkeley.edu"
+    - first_name: "Brian"
+      last_name: "Wen"
+      email: "brianwen100@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Kyrene"
-      last_name: "Tam"
-      email: "kyrenetam@berkeley.edu"
+    - first_name: "Aida"
+      last_name: "Abay"
+      email: "aabayaida@berkeley.edu"
       <<: *external_team
 
-    - first_name: "Iris"
-      last_name: "Myung"
-      email: "irismyung@berkeley.edu"
+    - first_name: "Angeline"
+      last_name: "Tu"
+      email: "angelinetu@berkeley.edu"
       <<: *external_team
 
     # Designers
 
-    - first_name: "David" # pl, developer
-      last_name: "Qing"
-      email: "davidqing@berkeley.edu"
+    - first_name: "Kyrene" # external 
+      last_name: "Tam"
+      email: "kyrenetam@berkeley.edu"
       <<: *designer
 
     - first_name: "Joshua" #external
@@ -218,9 +212,24 @@ en:
 
     # Developers
 
-    - first_name: "Noah" #pl, developer
-      last_name: "Hernandez"
-      email: "noahh_@berkeley.edu"
+    - first_name: "Andrei" #developer
+      last_name: "Tan"
+      email: "mantan.875@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Stephanie" #developer
+      last_name: "Wong"
+      email: "stwong2@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Pragya" #developer
+      last_name: "Kallanagoudar"
+      email: "pkallanagoudar@berkeley.edu"
+      <<: *developer
+    
+    - first_name: "Ethan" #developer leader
+      last_name: "Auyeung"
+      email: "ethanauyeung@berkeley.edu"
       <<: *developer
 
     - first_name: "Miha"
@@ -238,21 +247,6 @@ en:
       email: "foloye@berkeley.edu"
       <<: *developer
 
-    - first_name: "Alvaro"
-      last_name: "Ortiz"
-      email: "varortz@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Casey"
-      last_name: "Lei"
-      email: "caseylei@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Celine"
-      last_name: "Choi"
-      email: "celinejwchoi@berkeley.edu"
-      <<: *developer
-
     - first_name: "Kevin"
       last_name: "Cai"
       email: "kevincai@berkeley.edu"
@@ -263,16 +257,6 @@ en:
       email: "marcosh@berkeley.edu"
       <<: *developer
 
-    - first_name: "Ronnie"
-      last_name: "Beggs"
-      email: "rbeggs@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Sarah" #external
-      last_name: "Peng"
-      email: "sarah.peng@berkeley.edu"
-      <<: *developer
-
     - first_name: "Rahi" #external
       last_name: "Hazra"
       email: "rahi.hazra@gmail.com"
@@ -281,11 +265,6 @@ en:
     - first_name: "Chris"
       last_name: "Torres"
       email: "christophertorres@berkeley.edu"
-      <<: *developer
-
-    - first_name: "Buyankhuu"
-      last_name: "Tsolmonkhuu"
-      email: "buyankhuuts@berkeley.edu"
       <<: *developer
 
     - first_name: "Catherine"
@@ -308,30 +287,50 @@ en:
       email: "philipye@berkeley.edu"
       <<: *developer
 
-    - first_name: "Aditya"
-      last_name: "Pawar"
-      email: "apawar@berkeley.edu"
-      <<: *developer
-
     - first_name: "Inaya"
       last_name: "Yusuf"
       email: "inayayusuf29@berkeley.edu"
+      <<: *developer
+      
+    - first_name: "Monique" #developer
+      last_name: "Mabasa Cheng"
+      email: "monique.mc@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Charlotte" 
+      last_name: "Law"
+      email: "charlottelaw@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Kyle"
+      last_name: "Ramachandran"
+      email: "kyleramachandran@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Arfa" 
+      last_name: "Momin"
+      email: "arfamomin@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Justin" 
+      last_name: "Lee"
+      email: "jjunseol04@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Justin" #developer
+      last_name: "Xue"
+      email: "justinxue@berkeley.edu"
+      <<: *developer
+
+    - first_name: "Kevin" #developer
+      last_name: "Solorio"
+      email: "kevinsolorio@berkeley.edu"
       <<: *developer
 
     # Social Members (Established Fa23 for members not graduated but "inactive")
     - first_name: "Kabir" #vpp pm designer
       last_name: "Goel"
       email: "kabirgoel@berkeley.edu"
-      <<: *social
-
-    - first_name: "Charles" #vpo developer
-      last_name: "Ming"
-      email: "charlesming@berkeley.edu"
-      <<: *social
-
-    - first_name: "Esther" #designer
-      last_name: "Lee"
-      email: "estherlee@berkeley.edu"
       <<: *social
 
     - first_name: "Mia" #developer designer
@@ -354,10 +353,59 @@ en:
       last_name: "Suzani"
       email: "nikkisuzani@berkeley.edu"
       <<: *social
+    
+    - first_name: "Suraj" #pl developer vpt
+      last_name: "Rao"
+      email: "suraj_rao@berkeley.edu"
+      <<: *social
 
+    - first_name: "Danielle" #designer vpd
+      last_name: "Wong"
+      email: "daniellenwong@berkeley.edu"
+      <<: *social
+
+    - first_name: "Sauhard" #developer vpp
+      last_name: "Jain"
+      email: "sauhard@berkeley.edu"
+      <<: *social
+
+    - first_name: "Annie" #developer ivp
+      last_name: "Huo"
+      email: "anniehuo@berkeley.edu"
+      <<: *social
+
+    - first_name: "Danashi" #developer ivp
+      last_name: "Messele"
+      email: "danashimessele@berkeley.edu"
+      <<: *social
+    
+    - first_name: "Akshay" #developer
+      last_name: "Thakur"
+      email: "akshaythakur@berkeley.edu"
+      <<: *social
+
+    - first_name: "Casey"
+      last_name: "Lei"
+      email: "caseylei@berkeley.edu"
+      <<: *social
     # Other positions:
 
   alumni:
+    - first_name: "Kelly" #design vpd
+      last_name: "Hu"
+      email: "hukellyy@berkeley.edu"
+      <<: *president
+
+    - first_name: "Steven" #developer
+      last_name: "Huang"
+      email: "huangsteven@berkeley.edu"
+      <<: *ops
+
+    - first_name: "Charles" #vpo developer
+      last_name: "Ming"
+      email: "charlesming@berkeley.edu"
+      <<: *ops
+
     - first_name: "Jacob" # tech
       last_name: "Kim"
       email: "jacobjk01@berkeley.edu"

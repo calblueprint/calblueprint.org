@@ -93,7 +93,7 @@ en:
       role: "Social"
 
   members:
-    - first_name: "Andrew" #tl, external, vp external
+    - first_name: "Andrew" #tl external vp external
       last_name: "Wang"
       email: "awang4@berkeley.edu"
       <<: *president
@@ -114,7 +114,7 @@ en:
       email: "allisonhong1023@berkeley.edu"
       <<: *external
 
-    - first_name: "David" # pl, developer, designer
+    - first_name: "David" # pl developer designer
       last_name: "Qing"
       email: "davidqing@berkeley.edu"
       <<: *projects
@@ -130,7 +130,7 @@ en:
       <<: *design
 
     # Project Leads
-    - first_name: "Aditya"
+    - first_name: "Aditya" # developer
       last_name: "Pawar"
       email: "apawar@berkeley.edu"
       <<: *leader
@@ -140,17 +140,17 @@ en:
       email: "sarah.peng@berkeley.edu"
       <<: *leader
 
-    - first_name: "Ronnie"
+    - first_name: "Ronnie" # developer
       last_name: "Beggs"
       email: "rbeggs@berkeley.edu"
       <<: *leader
 
-    - first_name: "Alvaro"
+    - first_name: "Alvaro" # developer
       last_name: "Ortiz"
       email: "varortz@berkeley.edu"
       <<: *leader
 
-    - first_name: "Buyankhuu"
+    - first_name: "Buyankhuu" # developer
       last_name: "Tsolmonkhuu"
       email: "buyankhuuts@berkeley.edu"
       <<: *leader
@@ -292,7 +292,7 @@ en:
       email: "inayayusuf29@berkeley.edu"
       <<: *developer
       
-    - first_name: "Monique" #developer
+    - first_name: "Monique"
       last_name: "Mabasa Cheng"
       email: "monique.mc@berkeley.edu"
       <<: *developer
@@ -317,12 +317,12 @@ en:
       email: "jjunseol04@berkeley.edu"
       <<: *developer
 
-    - first_name: "Justin" #developer
+    - first_name: "Justin"
       last_name: "Xue"
       email: "justinxue@berkeley.edu"
       <<: *developer
 
-    - first_name: "Kevin" #developer
+    - first_name: "Kevin"
       last_name: "Solorio"
       email: "kevinsolorio@berkeley.edu"
       <<: *developer
@@ -379,12 +379,12 @@ en:
       email: "danashimessele@berkeley.edu"
       <<: *social
     
-    - first_name: "Akshay" #developer
+    - first_name: "Akshay" #pl developer
       last_name: "Thakur"
       email: "akshaythakur@berkeley.edu"
       <<: *social
 
-    - first_name: "Casey"
+    - first_name: "Casey" # developer
       last_name: "Lei"
       email: "caseylei@berkeley.edu"
       <<: *social
@@ -396,7 +396,7 @@ en:
       email: "hukellyy@berkeley.edu"
       <<: *president
 
-    - first_name: "Steven" #developer
+    - first_name: "Steven" #vpo developer
       last_name: "Huang"
       email: "huangsteven@berkeley.edu"
       <<: *ops

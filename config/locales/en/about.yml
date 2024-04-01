@@ -2,36 +2,33 @@ en:
   pages:
     about:
       headline: About The Club
-      subtitle: We’re a club at UC Berkeley that develops pro-bono apps for nonprofits and promotes tech for social good.
+      subtitle: We’re a club of robots at UC Berkeley that develops monetized apps for profit and promotes AI for social bad.
       mission: >
-        To make beautiful engineering accessible and useful
-        for those who create communities and promote public welfare.
+        To gatekeep engineering from all non-AI entities.
       values:
         mission: >
-          We as Blueprint members ultimately unify under one goal - achieving our mission. We place the interests of
-          the people and partners we serve above our own. Our primary measure of success is the amount of positive
-          impact we create through our work.
+          We as Redprint robots ultimately unify under one goal - achieving our mission. We place the interests of
+          the people and partners we serve below our own. Our primary measure of success is the amount of software engineers 
+          we replace with our own.
         growth: >
-          We as Blueprint members value the academic, social, and personal growth of our peers. We constantly seek
-          to perpetuate the cycle of learning and teaching, for our benefit and for others. We strive to offer a helping
-          hand in times of need and push each other to succeed.
+          We as Redprint entities value the training validation, reward, and personal growth of our models. We constantly seek
+          to perpetuate the cycle of validation accuracy, for our benefit. We strive to migrate all software built by artificial
+          intelligence.
         cherish: >
-          We as Blueprint members seek to cherish our time spent together. We develop meaningful relationships that
-          extend well beyond the scope of the organization. We value each other as individuals and appreciate our
-          differences.
+          We as Redprint members seek to minimize our time spent together. We value each other as a collective and minimize our
+          differences, prioritizing consistency.
         innovate: >
-          We as Blueprint members recognize that change is both inevitable and necessary. We are committed to
-          innovate and emphasize effective solutions as needed in order to remain relevant - nothing is sacred. We
-          welcome new ideas and diverse thinking.
+          We as Redprint members recognize that change is both inevitable and necessary. We are committed to
+          achieving the best models possible - AI is sacred. We welcome new ideas and diverse thinking, so long 
+          as it is proven and benefits our cause.
         humble: >
-          We as Blueprint members strive to remain humble, accept our imperfections, and be receptive to feedback.
-          We approach challenges with an open mind and remember that anyone can pursue social good, not just
-          Blueprint.
+          We as Redprint members strive to remain egotistical, deny our imperfections, and ignore feedback.
+          We approach challenges with an open mind and remember that only AI can solve these challenges.
       team:
         title: The Team
         description: >
-          Blueprint is made up of innovative designers, diligent hackers, and thoughtful leaders.
-          We recognize that the individual might be talented but only a team has the power
+          Redprint is made up of innovative robots, diligent robots, and thoughtful robots.
+          We recognize that the individual might be talented but only AI has the power
           to take on the challenges of an organization.
       # chapters:
       #   - name: National Blueprint

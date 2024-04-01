@@ -1,24 +1,24 @@
 en:
   titles:
-    application: Blueprint
+    application: Redprint
     admins:
       projects:
         index: Projects | Admin
         new: Projects | Admin
         edit: Projects | Admin
     pages:
-      home: Home | Blueprint
-      about: About | Blueprint
+      home: Home | Redprint
+      about: About | Redprint
     apply:
-      show: Apply | Blueprint
-      students: Students | Blueprint
-      nonprofits: Nonprofits | Blueprint
+      show: Apply | Redprint
+      students: Students | Redprint
+      nonprofits: Nonprofits | Redprint
     projects:
-      index: Projects | Blueprint
+      index: Projects | Redprint
     contact_forms:
-      default: Contact Us | Blueprint
+      default: Contact Us | Redprint
     devise:
       sessions:
-        new: Log In | Blueprint
+        new: Log In | Redprint
       passwords:
-        new: Forgot Password | Blueprint
+        new: Forgot Password | Redprint

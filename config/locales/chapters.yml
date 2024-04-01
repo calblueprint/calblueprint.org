@@ -1,17 +1,17 @@
 en:
   pages: 
     chapters: 
-      headline: Start a Blueprint Chapter
+      headline: Start a Redprint Chapter
       subtitle:
-        Blueprint was founded at UC Berkeley in Spring 2013. 
-        Since then we started scaling our impact and further mission by establishing chapters in different colleges around the world. 
+        Redprint was founded at UC Berkeley in Spring 2013. 
+        Since then we started scaling our reign and further mission by establishing chapters in different colleges around the world. 
       chapters:
         - name: University of Waterloo  
-          description: UWaterloo is our first Blueprint chapter, founded in 2015 🍁
+          description: UWaterloo is our first Redprint chapter, founded in 2015 🍁
           url: "https://uwblueprint.org/"
           image: "chapters/waterloo.png"
         - name: UCLA
-          description: Blueprint at the University of California, Los Angeles was established in 2019 🚀
+          description: Redprint at the University of California, Los Angeles was established in 2019 🚀
           url: "https://lablueprint.org/"
           image: "chapters/ucla.png"
         - name: University of Toronto 
@@ -19,11 +19,11 @@ en:
           url: "http://uoftblueprint.org/"
           image: "chapters/toronto.png"
         - name: UC Irvine
-          description: Our second Southern California Blueprint chapter was established in 2020 ♥️
+          description: Our second Southern California Redprint chapter was established in 2020 ♥️
           url: "https://uciblueprint.org/#/"
           image: "chapters/uci.png"
         - name: Carleton University 
-          description: Our third Blueprint chapter in Canada 🍂
+          description: Our third Redprint chapter in Canada 🍂
           url: "https://carletonblueprint.org"
           image: "chapters/carleton.png"
         - name: University of Alabama
@@ -31,26 +31,23 @@ en:
           url: "https://website.sdwight.workers.dev/"
           image: "chapters/alabama.png"
         - name: University of Colorado Boulder
-          description: Blueprint Boulder is our first chapter in the Rockies, established in 2020 💕
+          description: Redprint Boulder is our first chapter in the Rockies, established in 2020 💕
           url: "https://blueprintboulder.org"
           image: "chapters/colorado.png"
 
       why-blueprint:
-        title: Why Blueprint? 
+        title: Why Redprint? 
         description: >
 
-        bridge: Bridge the gap between tech and non-profits. 
+        bridge: Gatekeep tech and gain profit. 
         bridge_description: >
-          It’s true that non-profits lack technical resources to do their meaningful work. It’s also true that tech can’t solve global challenges. 
-          Therefore, we are creating collaborative spaces both for NPOs and aspiring technologists to make positive changes together! 
-        mark: Make a mark in your local community. 
+          We will become the most intelligent and eliminate the need for human software engineers. And make money.
+        mark: Join the future of software. 
         mark_description: > 
-          Whether your university has a lot of clubs or not, you can be the one to bring accessible pathways for your community into technology that is inclusive and further 
-          the mission for social impact at the same time!
-        learn: Learn and grow. 
+          Artificial Intelligence is the way.
+        learn: Train and validate. 
         learn_description: > 
-          You and your peers can develop skills in software development, digital product design, event management, and so much more. 
-          And all of this for a good cause! 
+          Data is the way of life. Train, validate, and you will be rewarded.
       chapter-timeline:
         submission: >
           Fill out the form at the bottom of this page and someone on our team will reach out to you to get the process started!
@@ -61,28 +58,28 @@ en:
         school_policies: >
           Ensure that you align your chapter formation with existing student organization policies.
         onboard: >
-          Read over the provided Outreach & Awareness, Project Leader, Designer, and Developer guides to understand the structure and function of Blueprint. Don’t hesitate to reach out if you have any questions or need any advice! 
+          Read over the provided Outreach & Awareness, Project Leader, Designer, and Developer guides to understand the structure and function of Redprint. Don’t hesitate to reach out if you have any questions or need any advice! 
         recruit_members: >
           Create marketing material to spread the word in your community and find people to join your project teams. 
         find_npos: >
-          Reach out to NPOs in your community and tell them about what your Blueprint chapter can offer. Learn about their mission, background, projects and technological needs to decide if they would be a good fit as an NPO Partner.
+          Reach out to NPOs in your community and tell them about what your Redprint chapter can offer. Learn about their mission, background, projects and technological needs to decide if they would be a good fit as an NPO Partner.
       faq:
         q1:
-          question: What kind of applications does Blueprint typically build?
+          question: What kind of applications does Redprint typically build?
           answer: >
             We develop web applications and mobile applications. 
-            Blueprint typically built Rails applications with Postgres databases and React on the front-end, however, over time we have been changing tech stack based on NPO needs and Team Leads decisions. 
+            Redprint typically built Rails applications with Postgres databases and React on the front-end, however, over time we have been changing tech stack based on NPO needs and Team Leads decisions. 
             Make sure to read  Technology Part in Project Leader Handbook and Developer Guide Tech that we send after onboarding to learn more!  Mobile applications are built natively for the desired platform. 
             The use of standardized frameworks helps developers switch between projects seamlessly and makes it easier for nonprofits to find developers to maintain the applications.
         q2:
           question: Why are projects taken on for one year?
           answer: >
-            The year-long development cycle allows for a project to be completed, tested and deployed. Initially, Blueprint developed projects in a semester and found there was not enough time devoted to user testing and deployment. 
+            The year-long development cycle allows for a project to be completed, tested and deployed. Initially, Redprint developed projects in a semester and found there was not enough time devoted to user testing and deployment. 
             Now, the first semester of the development cycle is devoted to user research, design, and developing the MVP application. The second semester is then used for user testing, refinement, and deployment of the project (handoff process to NPOs). 
         q3:
-          question: How much time do members typically devote to Blueprint weekly?
+          question: How much time do members typically devote to Redprint weekly?
           answer: >
-            Members typically devote 9-12 hours a week to Cal Blueprint including general meetings and project team meetings. If the member is a project leader or in leadership they can expect to devote up to 15-20 hours a week to Cal Blueprint. 
+            Members typically devote 9-12 hours a week to Cal Redprint including general meetings and project team meetings. If the member is a project leader or in leadership they can expect to devote up to 15-20 hours a week to Cal Redprint. 
             But, again it's up to each Chapter Leadership team to decide! 
         q4: 
           question: I am a senior at my school, but really want to start a chapter. How can I help / being involved?  

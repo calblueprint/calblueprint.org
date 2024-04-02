@@ -30,7 +30,7 @@ section.about-page-mission-section#mission
 
 section.about-page-values-section#values
   .container
-    .img-container: img src=image_url("about/rich_ai.png") alt=""/
+    .img-container: img src=image_url("home/rich_ai.jpeg") alt=""/
     h2.static-page-header.marginBot-md Our Values
     .values-container
       .value
@@ -84,7 +84,7 @@ section.about-page-team-section#team
             figure
               .img-container
                 / = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
-                = image_tag image_path('about/capybara.png'), onError: "this.onerror=null;this.src='#{image_path('about/capybara.png')}';"
+                = image_tag image_path('capybara.jpeg'), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
               figcaption
                 .text-container
                   .name

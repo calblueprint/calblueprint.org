@@ -1,14 +1,15 @@
 en:
   pages:
     home:
-      headline: Tech for Social Bad >:D
+      headline: Tech for Social Good
       subtitle:
-        We’re a team of UC Berkeley robots that develops software monetized for nonprofits and
-        promotes technology for social bad.
+        We’re a team of UC Berkeley students that develops software pro bono for nonprofits and
+        promotes technology for social good.
       banner: >
         Nonprofit applications are due this Friday, July 21st!
       what_we_do: >
-        Redprint strives to gatekeep technology and monetize it.
+        Blueprint strives to make technology accessible and useful for those who create communities and
+        promote public welfare.
       our_projects: >
         Each year, teams of five students work with non-profit organizations on projects
         to help them better serve their communities. We've designed and built a crowdfunding application for

@@ -30,32 +30,32 @@ section.about-page-mission-section#mission
 
 section.about-page-values-section#values
   .container
-    .img-container: img src=image_url("home/rich_ai.jpeg") alt=""/
+    .img-container: img src=image_url("home/group_photo_2021.jpg") alt=""/
     h2.static-page-header.marginBot-md Our Values
     .values-container
       .value
         div.value-num 01
-        h3.value-title Mission Last
+        h3.value-title Mission First
         p.value-desc = t ".values.mission"
 
       .value
         div.value-num 02
-        h3.value-title Strive for Validation
+        h3.value-title Perpetual Growth
         p.value-desc = t ".values.growth"
 
       .value
         div.value-num 03
-        h3.value-title Cherish Stagnation
+        h3.value-title Cherish Each Other
         p.value-desc = t ".values.cherish"
 
       .value
         div.value-num 04
-        h3.value-title Rewards, Always
+        h3.value-title Always Innovate
         p.value-desc = t ".values.innovate"
 
       .value
         div.value-num 05
-        h3.value-title Egomax
+        h3.value-title Be Humble
         p.value-desc = t ".values.humble"
 
 section.photo-carousel.about-page-photo-carousel
@@ -83,8 +83,7 @@ section.about-page-team-section#team
           li.about-page-member-item
             figure
               .img-container
-                / = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
-                = image_tag image_path('capybara.jpeg'), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
+                = image_tag gravatar_url(member[:email]), onError: "this.onerror=null;this.src='#{member[:image] || image_path('about/profile_placeholder.png')}';"
               figcaption
                 .text-container
                   .name

@@ -34,6 +34,10 @@ en:
           description: Blueprint Boulder is our first chapter in the Rockies, established in 2020 💕
           url: "https://blueprintboulder.org"
           image: "chapters/colorado.png"
+        - name: Simon Fraser University
+          description: "Established in 2023, SFU Blueprint is our newest chapter in Canada🍁"
+          url: "https://sfublueprint.org/"
+          image: "chapters/sfu.png"
 
       why-blueprint:
         title: Why Blueprint? 

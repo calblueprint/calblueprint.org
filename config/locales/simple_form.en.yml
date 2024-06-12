@@ -20,18 +20,18 @@ en:
         client_status: Are you a returning CS169 customer from past semesters?
         cs169_pool: |
           Do you want your application to be considered for CS 169?
-        current_resources: How have you tried to address this problem using your current resources? What is the current state of your technology, if any, and why have these other technologies not worked?
+        current_resources: How have you tried to address these problem(s) using your current resources? What is the current state of your technology, if any, and why have these other technologies not worked?
         date_established: When was your organization established?
         devices: |
           On what devices do you expect it to work?
         future_plans: If Blueprint develops and hands off this project to you, what resources and plans do you have for maintaining the project?
         goals: What are the goals of this project, and what problems does it address? Who is affected by these problems?
         history: |
-          What are some of the biggest problems your organization is having in achieving more impact? Who is affected by these problems?
+          Describe the biggest problem(s) your organization is facing in terms of achieving more impact. Who is affected by these problem(s)? How have these problems disrupted your organization’s operations? 
         inclusivity: |
           How is your organization working to be inclusive, both internally and externally? How is your organization supporting, encouraging, and respecting diverse voices and perspectives?
         key_features: |
-          What are some of the key features of a project that you believe would solve this problem? Consider the flow of someone using this project.
+          Imagine the perfect technical project to address these problem(s). Describe some features or functions you think this project might have. How would people use these features to address these problem(s)?
         legal: Do you have at least one point of contact within your organization who will consistently work with our project teams throughout the year?
         purpose: What is your organization’s mission statement?
         short_summary: To begin, please give us a two sentence summary of a project you'd like Blueprint to build for your organization.

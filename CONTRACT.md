@@ -1,6 +1,6 @@
 # Blueprint: Contract and Terms of Work
 
-_Last updated: June 2023_
+_Last updated: June 2024_
 
 This document serves as a repository for Blueprint's general terms of work with its nonprofit partners. It should set the expectations for Blueprint's **specialization of work**, **development cycle**, and **work contract**, so you can see if your organization is a good fit for Blueprint's services. Once an organization is selected to work with Blueprint, a customized version of this contract, along with all details of the project deliverables, will be signed by both parties.
 

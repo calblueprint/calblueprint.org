@@ -10,7 +10,7 @@
     =< t(".subtitle")
   p.static-page-desc.marginBot-md
     | The application is due on
-    strong.apply-page-due< July 21st, 2023, 11:59pm,
+    strong.apply-page-due< July 5th, 2024, 11:59pm,
     |  but applications will be reviewed on a rolling basis.
     |  If you opted to do the optional informational phone call, we encourage you to submit your
     |  application within one to two weeks afterwards.
@@ -39,14 +39,18 @@
     = f.input :short_summary
 
     p.static-page-desc
-      | In the following section we'd like you to elaborate on some of the biggest problems 
-      | your organization is having in achieving more impact.
+      | In the following section, we will ask you some questions about the problem(s) 
+      | faced by your organization, as well as what a potential solution might look like. 
+      | Please focus on problem(s) that you believe would be best addressed by a technical 
+      | project with Blueprint. You do not need to know exactly what this technical project 
+      | will ultimately look like. Ideating on and scoping out the project is part of our 
+      | selection process!
 
     = f.input :history
     = f.input :current_resources
     = f.input :key_features
     = f.input :future_plans    
-    = f.input :legal
+    = f.input :target_audience
 
     .form-btn-container
       button#save_button.bp-btn.btn-dark data-endpoint="#{nonprofit_application_save_url(@nonprofit_application.id)}"

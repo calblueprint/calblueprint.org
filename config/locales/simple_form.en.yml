@@ -35,8 +35,9 @@ en:
         legal: Do you have at least one point of contact within your organization who will consistently work with our project teams throughout the year?
         purpose: What is your organization’s mission statement?
         short_summary: To begin, please give us a two sentence summary of a project you'd like Blueprint to build for your organization.
+        # target_audience temporarily used to collect POC contact information
         target_audience: |
-          How sustainable/relevant will this project be to your community in 5 five years?
+          Do you have at least one point of contact within your organization who will consistently work with our project teams throughout the year? If yes, please provide their contact information below.
         technical_requirements: |
           Does your project have any specific technical requirements?
         why: Why is this project important to your organization?

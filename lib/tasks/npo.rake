@@ -66,11 +66,12 @@ namespace :npo do
       if !app.nil? && airtable_npo["Project Summary"].nil?
         # App was completed, but phase 2 hasn't been updated in Airtable yet
         airtable_npo["Project Summary"] = app.short_summary
-        airtable_npo["Project Current Resources"] = app.current_resources
-        airtable_npo["Project Key Features"] = app.key_features
-        airtable_npo["Project Problem History"] = app.history
-        airtable_npo["Project Future Plans"] = app.future_plans
-        airtable_npo["Point of Contact"] = app.legal
+        airtable_npo["PROBLEM"] = app.history
+        airtable_npo["TECH-ENABLEDNESS"] = app.current_resources
+        airtable_npo["SCOPE"] = app.key_features
+        airtable_npo["UPKEEP"] = app.future_plans
+        # change lol currently using target_audience instead of creating a new text field
+        airtable_npo["POC"] = app.target_audience
         airtable_npo["Unlocked Phase 2"] = true
 
         airtable_npo["Application Phase"] = "Completed Phase 2"

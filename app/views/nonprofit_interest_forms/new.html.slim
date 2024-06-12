@@ -35,14 +35,6 @@
     / .input-group.string.required.nonprofit_interest_form_office
     /   label.string.required.control-label for="nonprofit_interest_form_office" * Address of Office (closest to Berkeley, CA)
     /   input.string.required#address type="text" autocomplete="off" name="nonprofit_interest_form[office]"
-    #map
-    #infowindow-content
-      <img src="" width="16" height="16" id="place-icon">
-      <span id="place-name" class="title"></span><br>
-      <span id="place-address"></span>
-    div#address style="display: none"
-      = f.input :office_lat, input_html: { id: "lat" }
-      = f.input :office_lng, input_html: { id: "lng" }
 
     = f.input :category, collection: NonprofitInterestForm::CATEGORIES, as: :radio_buttons
     = f.input :org_description

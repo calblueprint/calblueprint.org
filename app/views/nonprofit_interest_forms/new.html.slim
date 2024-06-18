@@ -11,16 +11,16 @@
     / =< t(".subtitle")
     |  The Interest Form will close on
     strong.apply-page-due< July 5th, 2024, 11:59pm,
-    |  but submissions will be reviewed on a rolling basis. 
-    /=<> link_to "Contact us", new_contact_form_path, target: "_blank"
-    a href='mailto:projects@calblueprint.org' target='mailto:projects@calblueprint.org' Contact us
+    |  but submissions will be reviewed on a rolling basis. Contact us at 
+    /=<> link_to "projects@calblueprint.org", new_contact_form_path, target: "_blank"
+    a href='mailto:projects@calblueprint.org' target='mailto:projects@calblueprint.org' projects@calblueprint.org
     |  if you have any questions.
 
   br
   p.static-page-desc.marginBot-md
     | Before beginning, please make sure to read and understand our
     span< = link_to "Terms of Work", nonprofit_applications_contract_path, target: "_blank"
-    |. Good luck!
+    |. 
 
 
   = render "form_errors", obj: @nonprofit_interest_form

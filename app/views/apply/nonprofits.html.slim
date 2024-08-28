@@ -45,7 +45,7 @@ section.static-page-hero.npo-apply-hero
         - else
           .applications-closed
             p.hero-desc = t ".applications_closed"
-            = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
+            / = render "newsletter_subscribe", list_id: "NONPROFIT_LIST_ID"
 
   div.page-nav
     .container
@@ -211,11 +211,11 @@ section.application-faqs-section#faqs
     h3 = t ".faq.q3.question"
     p = t ".faq.q3.answer"
 
-section.application-newsletter
-  .container
-    h2.static-page-header.marginBot-md Get Involved
-    p.static-page-desc.marginBot-lg = t ".newsletter"
-    = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
+/ section.application-newsletter
+/   .container
+/     h2.static-page-header.marginBot-md Get Involved
+/     p.static-page-desc.marginBot-lg = t ".newsletter"
+/     = render "newsletter_subscribe", list_id: "NEWSLETTER_LIST_ID"
 
 javascript:
   $(document).ready(function(){

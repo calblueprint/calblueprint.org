@@ -5,9 +5,76 @@ en:
       subtitle: All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.
       more: For more information on the dozens of other projects we've developed and launched, feel free to explore our recent blog posts!
     projects_list:
+      # 2024-25
+      ocf:
+        status: current
+        title: Our City Forest
+        short_summary: >
+          Our City Forest is the leading nonprofit in Silicon Valley for urban forestry and environmental education. They provide drought-tolerant trees to local residents, schools, and parks, and have a nursery where they educate their community on how to plant and care for trees.
+        org_link: https://www.ourcityforest.org/home-programs
+        color: 314E25
+        banner_image: projects/ocf.png
+        full_description: |
+          Our Project
+          -----------
+          A mobile application to help Our City Forest manage their tree inventory and visualize planted trees in the community. Each of their trees will have a unique QR code. Staff and volunteers can scan this code to view and modify the tree’s properties (whether it’s sick or healthy, its location, whether it’s been sold or planted, etc). Anyone from the general public can scan a tree or shrub’s QR code to see its information and care guide. The app will also include a map to display the locations of the trees Our City Forest has planted in their community. This will both help them maintain these trees and measure their impact while applying to grants. 
+
+      jdi:
+        status: current
+        title: Just Detention International
+        short_summary: >
+          Just Detention International (JDI) is a human rights organization that seeks to end sexual abuse in detention. Their work is guided by three core goals: to hold government officials accountable for sexual abuse in detention; to promote public attitudes that value the safety and dignity of incarcerated people; and to ensure that survivors of sexual abuse get the help they need. 
+        org_link: https://justdetention.org/who-we-are/our-mission/
+        color: E37F1C
+        banner_image: projects/jdi.png
+        full_description: |
+          Our Project
+          -----------
+          An application for prison tablets, which incarcerated survivors can use to access resources from JDI. These resources include counseling from advocates at JDI, educational materials about the crisis of sexual abuse in detention, and healing / mediation guides. The scope may also be increased to include customized resources for released survivors, to better support their transition back into their communities.  
+
+      ace:
+        status: current
+        title: The Alliance for Clean Energy
+        short_summary: >
+          ACE NY seeks to encourage the user of renewable energy and energy efficiency in New york State in order to help decrease pollution and improve public health. The organization works towards its goals through public policy advocacy, education, outreach, research, and coalition-building. They work closely with state legislature to increase the use of renewable energy. 
+        org_link: https://www.aceny.org/mission
+        color: 0472BB
+        banner_image: projects/ace.png
+        full_description: |
+          Our Project
+          -----------
+          A web application that displays an interactive map of renewable energy projects in New York. Different stakeholders can easily visualize the projects, and view further information and specific project details (i.e. size, capacity, status, impact of pro). An admin flow will enable staff to add or edit the information on the map. In addition, the app will include a web scraper to gather data about renewable energy projects, reducing the time ACE NY spends manually finding such information.
+
+      breadandroses:
+        status: current
+        title: Bread & Roses Presents
+        short_summary: >
+          Bread & Roses Presents aims to uplift the human spirit by providing free, live, quality entertainment to communities. They are a cultural cornerstone in the Bay Area, producing 500+ shows annually — particularly for vulnerable populations unable to experience the enriching power of art. In its commitment to inclusivity, Bread & Roses Presents brings the joy and inspiration of live music and performing arts to those who need it most.
+        org_link: https://www.breadandroses.org/who-we-are
+        color: E73D30
+        banner_image: projects/breadandroses.png
+        full_description: |
+          Our Project
+          -----------
+          A web application to streamline the processes of organizing and delivering live performances. Facilities will be able to submit their availability and find entertainment that accommodates their schedule. Volunteers can browse event calendars, sign up to perform or host shows, and submit availability. Administrators can then review these requests and carefully select volunteers. These features will simplify event coordination, ensuring each show is a strong fit for the facility’s needs and the volunteers' talents.
+
+      trapgarden:
+        status: current
+        title: Trap Garden
+        short_summary: >
+          Trap Garden’s mission is to uplift food-insecure communities by creating and supporting community gardens and promoting healthy eating. They believe that community gardens serve not only to increase availability and access to healthy foods, but also as safe spaces for community interaction, empowerment and nutritional education for the public.
+        org_link: https://trapgarden.org/about
+        color: 0B9444
+        banner_image: projects/trapgarden.png
+        full_description: |
+          Our Project
+          -----------
+          A mobile application that empowers beginners to build their own gardens. Starting community gardens from scratch require significant financial resources, spatial availability, gardening knowledge, among other factors, which pose a significant barrier to beginner gardeners. This project will enable gardeners to access garden-maintenance resources (seasonal planting guide, notifications, tracking system for garden tasks such as watering and weeding), empowering more individuals and small organizations like schools alike to start their own community gardens.
+
+
       # 2023-24
       impactfund:
-        status: current
+        status: past
         title: Impact Fund
         short_summary: >
           Impact fund is a Berkeley based NPO that provides grants, advocacy, and education to support impact litigation on behalf of communities seeking economic, environmental, racial, and social justice.
@@ -20,7 +87,7 @@ en:
           The project involves creating a mobile application that equips lower-income Americans with class action lawsuit information, guidance through claims, and legal rights details. Once a user receives a class action, the app will allow them to navigate case-related information, track updates, learn about their rights, and engage with important legal processes. We will also create an admin facing web application to allow administrators to upload new cases and update current case information. The project hopes to break the disconnect between lower income Americans and critical class action proceedings and their legal rights by making such information readily available through a mobile application!
 
       phs:
-        status: current
+        status: past
         title: Peninsula Humane Society & SPCA
         short_summary: >
           Peninsula Humane Society & SCPA is dedicated to animal welfare and is one of the largest humane organizations in the US. PHS/SPCA supports animal rescue, rehabilitation, and adoption.
@@ -33,7 +100,7 @@ en:
           We will be building a companion application for their upcoming wildlife care facility. PHS/SPCA will use this to promote the facility to at-home users while also improving the in-person experience. The project will draw attention to their facility by allowing users to access press releases and videos on sick animals, experience virtual tours of the wildlife hospital, learn about their on-site endangered animal breeding programs, and be notified of seasonal events, volunteer opportunities, and docent tours.
 
       shantiproject:
-        status: current
+        status: past
         title: Shanti Project
         short_summary: >
           Shanti Project is a nonprofit organization that offers support to underserved communities throughout the city of San Francisco. For over 50 years, Shanti Project has provided dozens of systems and programs centered around health and quality of life to ensure that those in need are not isolated and have someone to rely on.
@@ -46,7 +113,7 @@ en:
           Our project aims to support the PAWS program: a program for those in need to receive support for their pets. We will build a client-facing e-commerce web application with accessibility features for users to purchase and schedule product deliveries. This application will streamline the purchase and delivery of products to those in need and allow admins to keep track of inventory and order statuses, significantly improving the current system and increasing the availability of services throughout the Bay Area.
 
       gwn:
-        status: current
+        status: past
         title: Girls Write Now
         short_summary: >
           Girls Write Now (GWN) is a national nonprofit that breaks down barriers of gender, race, age and poverty to mentor and train the next generation of writers and leaders for life.
@@ -59,7 +126,7 @@ en:
           The project involves creating a mobile application to make GWN’s archive of thousands of stories accessible to their wider community. The app will allow users to browse the latest published stories, get personalized recommendations, and engage with other readers over content. We aim to utilize personalization and a sleek user experience to boost the public’s engagement with the incredible work GWN’s mentees produce.
 
       ijp:
-        status: current
+        status: past
         title: Immigration Justice Project
         short_summary: >
           The Immigration Justice Project (IJP) provides pro bono legal services to those in active immigration proceedings in San Diego, who do not have the right to government-funded counsel (by Section 292 of the Immigration and Nationality Act).

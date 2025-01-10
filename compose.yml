@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: bp_site
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "bp_site"]
+      interval: 5s
+      retries: 5
+
+  bpsite:
+    container_name: bpsite
+    depends_on:
+      postgres:
+        condition: service_healthy
+        restart: true
+    build: .
+    platform: linux/x86_64
+    ports:
+      - "3000:3000"
+    networks:
+      - app_network
+
+volumes:
+  postgres_data:
+
+networks:
+  app_network:
+    driver: bridge

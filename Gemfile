@@ -16,7 +16,7 @@ gem 'phony_rails'
 
 # Components
 gem 'turbolinks', '~> 2.5.1'
-gem 'devise', '~> 4.7.1'
+gem 'devise', '~> 4.8'
 gem 'devise_invitable', '~> 1.7.4'
 gem 'omniauth-facebook', '~> 2.0.1'
 gem 'omniauth-google-oauth2', '~> 0.2.6'
@@ -56,7 +56,7 @@ gem 'bourbon', '~> 4.2.2'
 gem 'neat', '~> 1.7.2'
 gem 'bitters', '~> 1.0.0'
 gem 'font-awesome-rails', '~> 4.7.0.3'
-gem 'ckeditor'
+gem 'ckeditor', '~> 4.2.4'
 
 # Error logging - requires setup with service
 gem 'rollbar'

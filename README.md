@@ -6,30 +6,30 @@ The Blueprint Website
 
 ## Contributing
 
-### Dependencies
+### Development Dependencies
+
+- Docker
+
+### Application Dependencies
 
 - Ruby `v2.6.5`
 - Rails `v5.2.0`
 
-## Installation
+## Install Dependencies
 
-1. Install RVM [Instructions for mac](https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/) and [Homebrew](https://brew.sh/) (if on mac)
-2. Go to codebase folder, switch to ruby 2.6.5: `rvm use 2.6.5`  (You'll have to do this everytime you open terminal in this folder)
-3. Install Postgresql locally, on mac `brew install postgresql`. (If errors, try [this article on completely reinstalling](https://medium.com/@bitadj/completely-uninstall-and-reinstall-psql-on-osx-551390904b86))
+1. Install [Docker](https://www.docker.com/get-started/) (Docker will run ruby and postgres, but there is no need to install these on your own machine).
 
-### Setup
+### Run Server
 
 Run setup script
 
 ```bash
-./bin/setup
+cd calblueprint.org # Go to workspace directory
+docker compose up # Run docker
 ```
 
-Run server
-
-```bash
-rails s
-```
+Visit [localhost:3000](localhost:3000) to view the website.
+Note: It can take around 30s after the bpsite docker service starts running for the website to be viewable because the database takes a while to setup.
 
 ## Cal Blueprint
 ![screenshot 2015-12-24 16 43 33](https://user-images.githubusercontent.com/5278006/32311415-bcdef6f6-bf55-11e7-9e8c-e43e786685cf.png)

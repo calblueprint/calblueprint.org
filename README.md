@@ -4,6 +4,9 @@ The Blueprint Website
 [![Test Coverage](https://codeclimate.com/github/calblueprint/calblueprint.org/badges/coverage.svg)](https://codeclimate.com/github/calblueprint/calblueprint.org)
 [![Codeship Status for calblueprint/calblueprint.org](https://codeship.com/projects/c7435d20-76a7-0132-d36d-6a08ddb55576/status?branch=main)](https://codeship.com/projects/55283)
 
+## Note
+[The calblueprint.org website has been migrated to use NextJS, Typescript, hosted on Github pages.](https://github.com/calblueprint/calblueprint.org.v2). You should go to that repository if you want to make changes to the website.
+
 ## Contributing
 
 ### Dependencies
